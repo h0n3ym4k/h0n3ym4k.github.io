@@ -1,0 +1,778 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-libs/libxml2-2.12.5:2
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: sam@gentoo.org base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc ftp icu kernel_linux python python_targets_python3_11 readline
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking libxml2-2.12.5.tar.xz to /var/tmp/portage/dev-libs/libxml2-2.12.5/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-libs/libxml2-2.12.5/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: libxml2-2.12.5/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying portage/1.2.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying sed/1.5.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying as-needed/2.4.3 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying werror/2.4.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying cxx-pthread/2.4.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying color-record/2.4.6-alt patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying sed-quote/2.4.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying ppc64le/2.4.4 patch ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+ * econf: updating libxml2-2.12.5/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating libxml2-2.12.5/config.sub with /usr/share/gnuconfig/config.sub
+/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/libxml2-2.12.5 --htmldir=/usr/share/doc/libxml2-2.12.5/html --with-sysroot=/ --libdir=/usr/lib64 --enable-ipv6 --with-ftp --without-run-debug --with-icu --without-lzma --disable-static --with-readline --with-history --without-python
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking whether ln -s works... yes
+checking for tar... /bin/tar
+checking for perl... /usr/bin/perl
+checking for wget... /usr/bin/wget
+checking for xsltproc... /usr/bin/xsltproc
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/libexec/gcc/x86_64-pc-linux-gnu/ld
+checking if the linker (/usr/libexec/gcc/x86_64-pc-linux-gnu/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/libexec/gcc/x86_64-pc-linux-gnu/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/libexec/gcc/x86_64-pc-linux-gnu/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for cos in -lm... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/mman.h... yes
+checking for sys/socket.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking for netdb.h... yes
+checking for sys/select.h... yes
+checking for poll.h... yes
+checking for sys/time.h... yes
+checking for sys/timeb.h... yes
+checking for dl.h... no
+checking for dlfcn.h... (cached) yes
+checking for glob.h... yes
+checking for uint32_t... yes
+checking for gettimeofday... yes
+checking for ftime... yes
+checking for stat... yes
+checking for isascii... yes
+checking for mmap... yes
+checking for munmap... yes
+checking for va_copy... yes
+checking whether va_list is an array type... yes
+checking for library containing gethostbyname... none required
+checking for library containing connect... none required
+checking for type of socket length (socklen_t)... socklen_t *
+checking whether to enable IPv6... yes
+checking whether __attribute__((destructor)) is accepted... yes
+checking whether the linker accepts -Wl,--undefined-version... yes
+Enabling FTP support
+checking for library containing dlopen... none required
+checking for pthread.h... yes
+checking for library containing pthread_join... none required
+Enabling xmllint shell history
+checking for tputs in -lncurses... no
+checking for tputs in -lcurses... no
+checking for tputs in -ltermcap... no
+checking for tputs in -lterminfo... no
+checking for tputs in -ltermlib... no
+checking for readline/history.h... yes
+checking for append_history in -lhistory... yes
+checking for readline/readline.h... yes
+checking for readline in -lreadline... yes
+checking for Z... yes
+Disabling lzma compression support
+checking for libiconv... none required
+checking for ICU... yes
+Disabling code coverage for GCC
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating include/libxml/Makefile
+config.status: creating include/private/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/examples/Makefile
+config.status: creating doc/devhelp/Makefile
+config.status: creating example/Makefile
+config.status: creating fuzz/Makefile
+config.status: creating python/Makefile
+config.status: creating python/tests/Makefile
+config.status: creating xstc/Makefile
+config.status: creating include/libxml/xmlversion.h
+config.status: creating libxml-2.0.pc
+config.status: creating libxml-2.0-uninstalled.pc
+config.status: creating libxml2-config.cmake
+config.status: creating python/setup.py
+config.status: creating xml2-config
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+ <span class="ansi32">*</span> python3_11: running run_in_build_dir libxml2_configure --with-python
+ * econf: updating libxml2-2.12.5/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating libxml2-2.12.5/config.sub with /usr/share/gnuconfig/config.sub
+/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/libxml2-2.12.5 --htmldir=/usr/share/doc/libxml2-2.12.5/html --with-sysroot=/ --libdir=/usr/lib64 --enable-ipv6 --with-ftp --without-run-debug --with-icu --without-lzma --disable-static --with-readline --with-history --with-python
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking whether ln -s works... yes
+checking for tar... /bin/tar
+checking for perl... /usr/bin/perl
+checking for wget... /usr/bin/wget
+checking for xsltproc... /usr/bin/xsltproc
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/libexec/gcc/x86_64-pc-linux-gnu/ld
+checking if the linker (/usr/libexec/gcc/x86_64-pc-linux-gnu/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/libexec/gcc/x86_64-pc-linux-gnu/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/libexec/gcc/x86_64-pc-linux-gnu/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for cos in -lm... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for sys/mman.h... yes
+checking for sys/socket.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking for netdb.h... yes
+checking for sys/select.h... yes
+checking for poll.h... yes
+checking for sys/time.h... yes
+checking for sys/timeb.h... yes
+checking for dl.h... no
+checking for dlfcn.h... (cached) yes
+checking for glob.h... yes
+checking for uint32_t... yes
+checking for gettimeofday... yes
+checking for ftime... yes
+checking for stat... yes
+checking for isascii... yes
+checking for mmap... yes
+checking for munmap... yes
+checking for va_copy... yes
+checking whether va_list is an array type... yes
+checking for library containing gethostbyname... none required
+checking for library containing connect... none required
+checking for type of socket length (socklen_t)... socklen_t *
+checking whether to enable IPv6... yes
+checking whether __attribute__((destructor)) is accepted... yes
+checking whether the linker accepts -Wl,--undefined-version... yes
+Enabling FTP support
+checking for python version... 3.11
+checking for python platform... linux
+checking for GNU default python prefix... ${prefix}
+checking for GNU default python exec_prefix... ${exec_prefix}
+checking for python script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.11/site-packages
+checking for python extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.11/site-packages
+checking for PYTHON... yes
+checking for library containing dlopen... none required
+checking for pthread.h... yes
+checking for library containing pthread_join... none required
+Enabling xmllint shell history
+checking for tputs in -lncurses... no
+checking for tputs in -lcurses... no
+checking for tputs in -ltermcap... no
+checking for tputs in -lterminfo... no
+checking for tputs in -ltermlib... no
+checking for readline/history.h... yes
+checking for append_history in -lhistory... yes
+checking for readline/readline.h... yes
+checking for readline in -lreadline... yes
+checking for Z... yes
+Disabling lzma compression support
+checking for libiconv... none required
+checking for ICU... yes
+Disabling code coverage for GCC
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/Makefile
+config.status: creating include/libxml/Makefile
+config.status: creating include/private/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/examples/Makefile
+config.status: creating doc/devhelp/Makefile
+config.status: creating example/Makefile
+config.status: creating fuzz/Makefile
+config.status: creating python/Makefile
+config.status: creating python/tests/Makefile
+config.status: creating xstc/Makefile
+config.status: creating include/libxml/xmlversion.h
+config.status: creating libxml-2.0.pc
+config.status: creating libxml-2.0-uninstalled.pc
+config.status: creating libxml2-config.cmake
+config.status: creating python/setup.py
+config.status: creating xml2-config
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+make -j2 
+make  all-recursive
+Making all in include
+Making all in libxml
+make[3]: Nothing to be done for 'all'.
+Making all in private
+make[3]: Nothing to be done for 'all'.
+make[3]: Nothing to be done for 'all-am'.
+Making all in .
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xmllint-xmllint.o `test -f 'xmllint.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmllint.c
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-buf.lo `test -f 'buf.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`buf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/buf.c  -fPIC -DPIC -o .libs/libxml2_la-buf.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-chvalid.lo `test -f 'chvalid.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`chvalid.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/chvalid.c  -fPIC -DPIC -o .libs/libxml2_la-chvalid.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-dict.lo `test -f 'dict.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`dict.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/dict.c  -fPIC -DPIC -o .libs/libxml2_la-dict.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-entities.lo `test -f 'entities.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`entities.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/entities.c  -fPIC -DPIC -o .libs/libxml2_la-entities.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-encoding.lo `test -f 'encoding.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`encoding.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/encoding.c  -fPIC -DPIC -o .libs/libxml2_la-encoding.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-globals.lo `test -f 'globals.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`globals.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/globals.c  -fPIC -DPIC -o .libs/libxml2_la-globals.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-error.lo `test -f 'error.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`error.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/error.c  -fPIC -DPIC -o .libs/libxml2_la-error.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-hash.lo `test -f 'hash.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`hash.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/hash.c  -fPIC -DPIC -o .libs/libxml2_la-hash.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-list.lo `test -f 'list.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`list.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/list.c  -fPIC -DPIC -o .libs/libxml2_la-list.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-parserInternals.lo `test -f 'parserInternals.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`parserInternals.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/parserInternals.c  -fPIC -DPIC -o .libs/libxml2_la-parserInternals.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-SAX2.lo `test -f 'SAX2.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`SAX2.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/SAX2.c  -fPIC -DPIC -o .libs/libxml2_la-SAX2.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-threads.lo `test -f 'threads.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`threads.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/threads.c  -fPIC -DPIC -o .libs/libxml2_la-threads.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-parser.lo `test -f 'parser.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`parser.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/parser.c  -fPIC -DPIC -o .libs/libxml2_la-parser.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-tree.lo `test -f 'tree.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`tree.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/tree.c  -fPIC -DPIC -o .libs/libxml2_la-tree.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-uri.lo `test -f 'uri.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`uri.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/uri.c  -fPIC -DPIC -o .libs/libxml2_la-uri.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlIO.lo `test -f 'xmlIO.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlIO.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlIO.c  -fPIC -DPIC -o .libs/libxml2_la-xmlIO.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-valid.lo `test -f 'valid.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`valid.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/valid.c  -fPIC -DPIC -o .libs/libxml2_la-valid.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlmemory.lo `test -f 'xmlmemory.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlmemory.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlmemory.c  -fPIC -DPIC -o .libs/libxml2_la-xmlmemory.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlstring.lo `test -f 'xmlstring.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlstring.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlstring.c  -fPIC -DPIC -o .libs/libxml2_la-xmlstring.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-c14n.lo `test -f 'c14n.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`c14n.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/c14n.c  -fPIC -DPIC -o .libs/libxml2_la-c14n.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-catalog.lo `test -f 'catalog.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`catalog.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/catalog.c  -fPIC -DPIC -o .libs/libxml2_la-catalog.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-debugXML.lo `test -f 'debugXML.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`debugXML.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/debugXML.c  -fPIC -DPIC -o .libs/libxml2_la-debugXML.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-nanoftp.lo `test -f 'nanoftp.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`nanoftp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/nanoftp.c  -fPIC -DPIC -o .libs/libxml2_la-nanoftp.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-HTMLtree.lo `test -f 'HTMLtree.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`HTMLtree.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/HTMLtree.c  -fPIC -DPIC -o .libs/libxml2_la-HTMLtree.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-HTMLparser.lo `test -f 'HTMLparser.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`HTMLparser.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/HTMLparser.c  -fPIC -DPIC -o .libs/libxml2_la-HTMLparser.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-nanohttp.lo `test -f 'nanohttp.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`nanohttp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/nanohttp.c  -fPIC -DPIC -o .libs/libxml2_la-nanohttp.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlmodule.lo `test -f 'xmlmodule.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlmodule.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlmodule.c  -fPIC -DPIC -o .libs/libxml2_la-xmlmodule.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlsave.lo `test -f 'xmlsave.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlsave.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlsave.c  -fPIC -DPIC -o .libs/libxml2_la-xmlsave.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-pattern.lo `test -f 'pattern.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`pattern.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/pattern.c  -fPIC -DPIC -o .libs/libxml2_la-pattern.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlreader.lo `test -f 'xmlreader.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlreader.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlreader.c  -fPIC -DPIC -o .libs/libxml2_la-xmlreader.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlregexp.lo `test -f 'xmlregexp.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlregexp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlregexp.c  -fPIC -DPIC -o .libs/libxml2_la-xmlregexp.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlunicode.lo `test -f 'xmlunicode.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlunicode.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlunicode.c  -fPIC -DPIC -o .libs/libxml2_la-xmlunicode.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-relaxng.lo `test -f 'relaxng.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`relaxng.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/relaxng.c  -fPIC -DPIC -o .libs/libxml2_la-relaxng.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlschemastypes.lo `test -f 'xmlschemastypes.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlschemastypes.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlschemastypes.c  -fPIC -DPIC -o .libs/libxml2_la-xmlschemastypes.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-schematron.lo `test -f 'schematron.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`schematron.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/schematron.c  -fPIC -DPIC -o .libs/libxml2_la-schematron.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlwriter.lo `test -f 'xmlwriter.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlwriter.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlwriter.c  -fPIC -DPIC -o .libs/libxml2_la-xmlwriter.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xinclude.lo `test -f 'xinclude.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xinclude.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xinclude.c  -fPIC -DPIC -o .libs/libxml2_la-xinclude.o
+/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xinclude.c: In function ‘xmlXIncludeExpandNode’:
+/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xinclude.c:136:49: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+  136 |                     "Memory allocation failed : %s\n", extra);
+      |                                                 ^~
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xmlschemas.lo `test -f 'xmlschemas.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlschemas.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmlschemas.c  -fPIC -DPIC -o .libs/libxml2_la-xmlschemas.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xlink.lo `test -f 'xlink.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xlink.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xlink.c  -fPIC -DPIC -o .libs/libxml2_la-xlink.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xpointer.lo `test -f 'xpointer.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xpointer.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xpointer.c  -fPIC -DPIC -o .libs/libxml2_la-xpointer.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xmlcatalog-xmlcatalog.o `test -f 'xmlcatalog.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xmlcatalog.c
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o testdso.lo /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/testdso.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/testdso.c  -fPIC -DPIC -o .libs/testdso.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -module -no-undefined -avoid-version -rpath /usr/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o testdso.la  testdso.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/testdso.o   -Wl,--as-needed  -O3 -march=native -mtune=native -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,testdso.so -o .libs/testdso.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "testdso.la" &amp;&amp; ln -s "../testdso.la" "testdso.la" )
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5  -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR='"/etc"'  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2_la-xpath.lo `test -f 'xpath.c' || echo '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/'`xpath.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5 -I./include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -DSYSCONFDIR=\"/etc\" -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1 -D_REENTRANT -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xpath.c  -fPIC -DPIC -o .libs/libxml2_la-xpath.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -DU_DISABLE_RENAMING=1  -D_REENTRANT  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -no-undefined -version-info 14:5:12  -Wl,--undefined-version -Wl,--version-script=/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/libxml2.syms -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libxml2.la -rpath /usr/lib64 libxml2_la-buf.lo libxml2_la-chvalid.lo libxml2_la-dict.lo libxml2_la-entities.lo libxml2_la-encoding.lo libxml2_la-error.lo libxml2_la-globals.lo libxml2_la-hash.lo libxml2_la-list.lo libxml2_la-parser.lo libxml2_la-parserInternals.lo libxml2_la-SAX2.lo libxml2_la-threads.lo libxml2_la-tree.lo libxml2_la-uri.lo libxml2_la-valid.lo libxml2_la-xmlIO.lo libxml2_la-xmlmemory.lo libxml2_la-xmlstring.lo libxml2_la-c14n.lo libxml2_la-catalog.lo libxml2_la-debugXML.lo libxml2_la-nanoftp.lo libxml2_la-HTMLparser.lo libxml2_la-HTMLtree.lo libxml2_la-nanohttp.lo    libxml2_la-xmlmodule.lo libxml2_la-xmlsave.lo libxml2_la-pattern.lo libxml2_la-xmlreader.lo libxml2_la-xmlregexp.lo libxml2_la-xmlunicode.lo libxml2_la-relaxng.lo libxml2_la-xmlschemas.lo libxml2_la-xmlschemastypes.lo  libxml2_la-schematron.lo  libxml2_la-xmlwriter.lo libxml2_la-xinclude.lo libxml2_la-xpath.lo libxml2_la-xlink.lo libxml2_la-xpointer.lo -lz -licui18n -licuuc -licudata   -lm  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libxml2_la-buf.o .libs/libxml2_la-chvalid.o .libs/libxml2_la-dict.o .libs/libxml2_la-entities.o .libs/libxml2_la-encoding.o .libs/libxml2_la-error.o .libs/libxml2_la-globals.o .libs/libxml2_la-hash.o .libs/libxml2_la-list.o .libs/libxml2_la-parser.o .libs/libxml2_la-parserInternals.o .libs/libxml2_la-SAX2.o .libs/libxml2_la-threads.o .libs/libxml2_la-tree.o .libs/libxml2_la-uri.o .libs/libxml2_la-valid.o .libs/libxml2_la-xmlIO.o .libs/libxml2_la-xmlmemory.o .libs/libxml2_la-xmlstring.o .libs/libxml2_la-c14n.o .libs/libxml2_la-catalog.o .libs/libxml2_la-debugXML.o .libs/libxml2_la-nanoftp.o .libs/libxml2_la-HTMLparser.o .libs/libxml2_la-HTMLtree.o .libs/libxml2_la-nanohttp.o .libs/libxml2_la-xmlmodule.o .libs/libxml2_la-xmlsave.o .libs/libxml2_la-pattern.o .libs/libxml2_la-xmlreader.o .libs/libxml2_la-xmlregexp.o .libs/libxml2_la-xmlunicode.o .libs/libxml2_la-relaxng.o .libs/libxml2_la-xmlschemas.o .libs/libxml2_la-xmlschemastypes.o .libs/libxml2_la-schematron.o .libs/libxml2_la-xmlwriter.o .libs/libxml2_la-xinclude.o .libs/libxml2_la-xpath.o .libs/libxml2_la-xlink.o .libs/libxml2_la-xpointer.o   -Wl,--as-needed -lz -licui18n -licuuc -licudata -lm  -O3 -march=native -mtune=native -Wl,--undefined-version -Wl,--version-script=/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/libxml2.syms -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libxml2.so.2 -o .libs/libxml2.so.2.12.5
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libxml2.so.2" &amp;&amp; ln -s "libxml2.so.2.12.5" "libxml2.so.2")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libxml2.so" &amp;&amp; ln -s "libxml2.so.2.12.5" "libxml2.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libxml2.la" &amp;&amp; ln -s "../libxml2.la" "libxml2.la" )
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o xmllint xmllint-xmllint.o -lreadline -lhistory  ./libxml2.la 
+libtool: link: x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o .libs/xmllint xmllint-xmllint.o  -Wl,--as-needed -lreadline -lhistory ./.libs/libxml2.so
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o xmlcatalog xmlcatalog-xmlcatalog.o -lreadline -lhistory  ./libxml2.la 
+libtool: link: x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o .libs/xmlcatalog xmlcatalog-xmlcatalog.o  -Wl,--as-needed -lreadline -lhistory ./.libs/libxml2.so
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+Making all in doc
+Making all in .
+make[3]: Nothing to be done for 'all-am'.
+Making all in devhelp
+make[3]: Nothing to be done for 'all'.
+Making all in examples
+make[3]: Nothing to be done for 'all'.
+Making all in example
+make[2]: Nothing to be done for 'all'.
+Making all in xstc
+make[2]: Nothing to be done for 'all'.
+Making all in fuzz
+make[2]: Nothing to be done for 'all'.
+ <span class="ansi32">*</span> python3_11: running run_in_build_dir libxml2_py_emake all
+make -j2 top_builddir=/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64 all 
+/usr/bin/python3.11 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/generator.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python
+Found 1617 functions in libxml2-api.xml
+Found 54 functions in libxml2-python-api.xml
+Generated 891 wrapper functions, 574 failed, 206 skipped
+make  all-recursive
+Making all in .
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+/bin/sh /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64  -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -I/usr/include/python3.11  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml.lo /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/libxml.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64 -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -I/usr/include/python3.11 -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/libxml.c  -fPIC -DPIC -o .libs/libxml.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+/bin/sh /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64  -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -I/usr/include/python3.11  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o types.lo /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/types.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64 -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -I/usr/include/python3.11 -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/types.c  -fPIC -DPIC -o .libs/types.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+/bin/sh /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64  -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -I/usr/include/python3.11  -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxml2-py.lo libxml2-py.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64 -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include -I/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include -I/usr/include/python3.11 -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c libxml2-py.c  -fPIC -DPIC -o .libs/libxml2-py.o
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+/bin/sh /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe   -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libxml2mod.la -rpath /usr/lib/python3.11/site-packages libxml.lo types.lo libxml2-py.lo /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libxml2.la  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libxml.o .libs/types.o .libs/libxml2-py.o   -Wl,-rpath -Wl,/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/.libs -Wl,--as-needed /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/.libs/libxml2.so  -O3 -march=native -mtune=native -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libxml2mod.so -o .libs/libxml2mod.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libxml2mod.la" &amp;&amp; ln -s "../libxml2mod.la" "libxml2mod.la" )
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+cat /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/libxml.py `test -f libxml2class.py || echo /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/`libxml2class.py &gt; libxml2.py
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+Making all in tests
+make[2]: Nothing to be done for 'all'.
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-libs/libxml2-2.12.5
+
+&gt;&gt;&gt; Install dev-libs/libxml2-2.12.5 into /var/tmp/portage/dev-libs/libxml2-2.12.5/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+make -j2 DESTDIR=/var/tmp/portage/dev-libs/libxml2-2.12.5/image install 
+Making install in include
+Making install in libxml
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include/libxml'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/include/libxml2/libxml'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 xmlversion.h '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/include/libxml2/libxml'
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include/libxml'
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include/libxml'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/include/libxml2/libxml'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/SAX.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/entities.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/encoding.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/parser.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/parserInternals.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlerror.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/HTMLparser.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/HTMLtree.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/debugXML.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/tree.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/list.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/hash.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xpath.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xpathInternals.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xpointer.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xinclude.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlIO.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlmemory.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/nanohttp.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/nanoftp.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/uri.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/valid.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xlink.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/catalog.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/threads.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/globals.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/c14n.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlautomata.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlregexp.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlmodule.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlschemas.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/schemasInternals.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlschemastypes.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlstring.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlunicode.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlreader.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/relaxng.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/dict.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/SAX2.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlexports.h '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/include/libxml2/libxml'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlwriter.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/chvalid.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/pattern.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/xmlsave.h /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/include/libxml/schematron.h '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/include/libxml2/libxml'
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/include/libxml'
+Making install in private
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+Making install in .
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64'
+ /bin/sh ./libtool   --mode=install /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c   libxml2.la '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c .libs/libxml2.so.2.12.5 /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64/libxml2.so.2.12.5
+libtool: install: (cd /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64 &amp;&amp; { ln -s -f libxml2.so.2.12.5 libxml2.so.2 || { rm -f libxml2.so.2 &amp;&amp; ln -s libxml2.so.2.12.5 libxml2.so.2; }; })
+libtool: install: (cd /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64 &amp;&amp; { ln -s -f libxml2.so.2.12.5 libxml2.so || { rm -f libxml2.so &amp;&amp; ln -s libxml2.so.2.12.5 libxml2.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c .libs/libxml2.lai /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64/libxml2.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/bin'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c xml2-config '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/bin'
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64/cmake/libxml2'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 libxml2-config.cmake '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64/cmake/libxml2'
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/aclocal'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/libxml.m4 '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/aclocal'
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/examples'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/xmllint.c '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/examples'
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64/pkgconfig'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 libxml-2.0.pc '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64/pkgconfig'
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+make[2]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/bin'
+  /bin/sh ./libtool   --mode=install /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c xmllint xmlcatalog '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/bin'
+libtool: warning: './libxml2.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c .libs/xmllint /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/bin/xmllint
+libtool: warning: './libxml2.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c .libs/xmlcatalog /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/bin/xmlcatalog
+make[2]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64'
+Making install in doc
+Making install in .
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/xml2-config.1 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/xmllint.1 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/xmlcatalog.1 '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/man/man1'
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc'
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/tutorial/images'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644  /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/blank.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/caution.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/draft.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/home.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/important.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/next.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/note.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/prev.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/tip.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/toc-blank.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/toc-minus.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/toc-plus.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/up.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/warning.png '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/tutorial/images'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644  /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/xmlcatalog.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/xmllint.html '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/.'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/tutorial/images/callouts'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644  /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/1.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/10.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/2.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/3.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/4.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/5.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/6.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/7.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/8.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/images/callouts/9.png '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/tutorial/images/callouts'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/tutorial'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644  /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/apa.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/apb.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/apc.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/apd.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ape.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/apf.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/apg.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/aph.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/api.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s02.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s03.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s04.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s05.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s06.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s07.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s08.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ar01s09.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/includeaddattribute.c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/includeaddkeyword.c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/includeconvert.c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/includegetattribute.c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/includekeyword.c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/includexpath.c /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/index.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/tutorial/ix01.html '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/tutorial'
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc'
+Making install in devhelp
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc/devhelp'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/gtk-doc/html/libxml2'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2.devhelp2 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/general.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/index.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-c14n.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-catalog.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-chvalid.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-debugXML.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-dict.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-encoding.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-entities.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-globals.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-hash.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-HTMLparser.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-HTMLtree.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-list.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-nanoftp.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-nanohttp.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-parser.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-parserInternals.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-pattern.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-relaxng.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-SAX2.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-SAX.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-schemasInternals.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-schematron.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-threads.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-tree.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-uri.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-valid.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xinclude.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xlink.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlautomata.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlerror.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlexports.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlIO.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlmemory.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlmodule.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlreader.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlregexp.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlsave.html '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/gtk-doc/html/libxml2'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlschemas.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlschemastypes.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlstring.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlunicode.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlversion.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xmlwriter.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xpath.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xpathInternals.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/libxml2-xpointer.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/home.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/left.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/right.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/up.png /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/devhelp/style.css '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/gtk-doc/html/libxml2'
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc/devhelp'
+Making install in examples
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc/examples'
+/bin/mkdir -p /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/examples
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc/examples'
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc/examples'
+/var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 0644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/examples/*.html /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/doc/examples/*.c /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/examples/
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/doc/examples'
+Making install in example
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in xstc
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in fuzz
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+ <span class="ansi32">*</span> python3_11: running run_in_build_dir libxml2_py_emake DESTDIR=/var/tmp/portage/dev-libs/libxml2-2.12.5/image install
+make -j2 top_builddir=/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64 DESTDIR=/var/tmp/portage/dev-libs/libxml2-2.12.5/image install 
+make  install-recursive
+Making install in .
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages'
+ /bin/sh /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libtool   --mode=install /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c   libxml2mod.la '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages'
+libtool: warning: relinking 'libxml2mod.la'
+libtool: install: (cd /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python; /bin/sh "/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libtool"  --tag CC --mode=relink x86_64-pc-linux-gnu-gcc -pedantic -Wall -Wextra -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wno-long-long -Wno-format-extra-args -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libxml2mod.la -rpath /usr/lib/python3.11/site-packages libxml.lo types.lo libxml2-py.lo /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64/libxml2.la -inst-prefix-dir /var/tmp/portage/dev-libs/libxml2-2.12.5/image)
+libtool: relink: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libxml.o .libs/types.o .libs/libxml2-py.o   -Wl,--as-needed -L/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib64 -L/usr/lib64 -lxml2  -O3 -march=native -mtune=native -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libxml2mod.so -o .libs/libxml2mod.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c .libs/libxml2mod.soT /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages/libxml2mod.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c .libs/libxml2mod.lai /var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages/libxml2mod.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/python3.11/site-packages'
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 libxml2.py '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages'
+Byte-compiling python modules...
+libxml2.py
+Byte-compiling python modules (optimized versions) ...
+libxml2.py
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/drv_libxml2.py '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/lib/python3.11/site-packages'
+Byte-compiling python modules...
+drv_libxml2.py
+Byte-compiling python modules (optimized versions) ...
+drv_libxml2.py
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python'
+Making install in tests
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python/tests'
+ /bin/mkdir -p '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/python/examples'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/build.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/attribs.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/tst.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/tstxpath.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/xpathext.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/push.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/pushSAX.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/pushSAXhtml.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/error.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/serialize.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/validate.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/tstURI.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/cutnpaste.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/xpathret.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/xpath.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/outbuf.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/inbuf.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/input_callback.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/resolver.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/regexp.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader2.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader3.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader4.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader5.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader6.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader7.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/reader8.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/readernext.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/walker.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/nsdel.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/ctxterror.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/readererr.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/relaxng.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/schema.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/thread2.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/sync.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/tstLastError.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/indexes.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/dtdvalid.py '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/python/examples'
+ /var/tmp/portage/._portage_reinstall_.ecwzjbke/bin/ebuild-helpers/xattr/install -c -m 644 /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/tstmem.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/validDTD.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/validSchemas.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/validRNG.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/compareNodes.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/xpathns.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/xpathleak.py /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/tst.xml /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/valid.xml /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/invalid.xml /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/test.dtd /var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5/python/tests/setup_test.py '/var/tmp/portage/dev-libs/libxml2-2.12.5/image/usr/share/doc/libxml2-2.12.5/python/examples'
+make[3]: Leaving directory '/var/tmp/portage/dev-libs/libxml2-2.12.5/work/libxml2-2.12.5-abi_x86_64.amd64-python3_11/python/tests'
+ <span class="ansi32">*</span> python3_11: running python_optimize
+ <span class="ansi32">*</span> Optimize Python modules for /usr/lib/python3.11/site-packages
+ <span class="ansi32">*</span> Optimize Python modules for /usr/lib/python3.11
+&gt;&gt;&gt; Completed installing dev-libs/libxml2-2.12.5 into /var/tmp/portage/dev-libs/libxml2-2.12.5/image
+
+ <span class="ansi32">*</span> Final size of build directory: 52368 KiB (51.1 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   7376 KiB ( 7.2 MiB)
+
+ <span class="ansi32">*</span> Verifying compiled files for python3.11
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/xmllint
+   /usr/lib64/libxml2.so.2.12.5
+   /usr/bin/xmlcatalog
+   /usr/lib/python3.11/site-packages/libxml2mod.so
+
+</pre>
+</body>
+
+</html>
