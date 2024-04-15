@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#program entrant - rm -rf /var/log/portage/build - new world <= NEVER scripted this line
+
 rm -f /tmp/mkdir.txt
 
 
@@ -56,11 +58,13 @@ do
 #	echo "rsync -avz /var/log/portage/build/${d}/*.html /mnt/Downloads/${d}"
 #	rsync -avz --dry-run /var/log/portage/build/${d}/*.html /mnt/Downloads/portage-build-log/${d}
 #	rsync -avz /var/log/portage/build/${d}/*.html /mnt/Downloads/portage-build-log/${d}
-	cp -v /var/log/portage/build/"${d}"/*.html /mnt/Downloads/portage-build-log/"${d}"/
+	cp -nv /var/log/portage/build/"${d}"/*.html /mnt/Downloads/portage-build-log/"${d}"/
 done
 
 #step 4 - summary.log
-cp -v /var/log/portage/elog/summary.log /mnt/Downloads/portage-build-log/01summary.log
+cd /var/log/portage/elog/
+cat `ls --hide=\*.gz /var/log/portage/elog/` > /tmp/01summary.log
+cp -v /tmp/01summary.log /mnt/Downloads/portage-build-log/01summary.log
 
 #step 5 - emerge --info
 cd /mnt/Downloads/portage-build-log
@@ -123,6 +127,8 @@ echo "<center><h1>Gentoo build.log</h1></center>" >> index.html.tmp.1
 echo "<iframe id='kofiframe' src='https://ko-fi.com/98036119lmak/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='98036119lmak'></iframe>" >> index.html.tmp.1
 
 echo "<iframe id='fbiframe' src='https://h0n3ym4k.github.io/fb.html' width='100%' height='400px' style='border:0' title='fb msg'></iframe>" >> index.html.tmp.1
+
+#echo "<iframe id='note/error build log list/link, emerge-info' src='https://h0n3ym4k.github.io/note.html'></iframe>" >> index.html.tmp.1 = manual process, never scripted this line/process for error builds
 
 echo "<center><h2>weekly-to-monthly update unless gcc/glibc/kernel will update world</h2></center>" >> index.html.tmp.1
 
