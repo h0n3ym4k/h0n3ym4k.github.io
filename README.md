@@ -1,6 +1,7 @@
 Name: Lancelot MAK
 
 Email: 98036119lmak@gmail.com
+
 Address: Wong Tai Sin
 
 
@@ -72,7 +73,6 @@ I am RHCE since 2014. I am ISC2 SSCP since 2018.
 |2003|E-Zone|Technical Writer for Gentoo Linux Installation (once off)|
 |2003|Hong Kong Linux Resources Center /Hong Kong Linux Player Group|Linux Enquiry Service Representative|
 |2004|Hong Kong Linux Player Group|computer security competition and conference - SECon22004 equipment /environment setup|
-
 
 # Personal Achievements
 |Year of achievement attained|Organization|Award|
