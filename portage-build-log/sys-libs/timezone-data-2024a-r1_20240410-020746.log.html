@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-libs/timezone-data-2024a-r1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: toolchain@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux nls
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking tzdata2024a.tar.gz to /var/tmp/portage/sys-libs/timezone-data-2024a-r1/work/timezone-data-2024a
+&gt;&gt;&gt; Unpacking tzcode2024a.tar.gz to /var/tmp/portage/sys-libs/timezone-data-2024a-r1/work/timezone-data-2024a
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-libs/timezone-data-2024a-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-libs/timezone-data-2024a-r1/work/timezone-data-2024a ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-libs/timezone-data-2024a-r1/work/timezone-data-2024a ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-libs/timezone-data-2024a-r1/work/timezone-data-2024a ...
+make -j2 REDO=posix_only TOPDIR= ZICDIR=$(TOPDIR)/usr/bin 'CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"' 'LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' LDLIBS= 
+{ (type git) &gt;/dev/null 2&gt;&amp;1 &amp;&amp; \
+	  V=`git describe --match '[0-9][0-9][0-9][0-9][a-z]*' \
+			--abbrev=7 --dirty` || \
+	  if test 'unknown' = unknown &amp;&amp; V=`cat version`; then \
+	    case $V in *-dirty);; *) V=$V-dirty;; esac; \
+	  else \
+	    V='unknown'; \
+	  fi; } &amp;&amp; \
+	printf '%s\n' "$V" &gt;version.out
+fatal: not a git repository (or any of the parent directories): .git
+mv version.out version
+printf '%s\n' &gt;tzdir.h.out \
+	  '#ifndef TZDEFAULT' \
+	  '# define TZDEFAULT "/etc/localtime" /* default zone */' \
+	  '#endif' \
+	  '#ifndef TZDIR' \
+	  '# define TZDIR "/usr/share/zoneinfo" /* TZif directory */' \
+	  '#endif'
+mv tzdir.h.out tzdir.h
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -c -o asctime.o asctime.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -c -o difftime.o difftime.c
+awk \
+	  -v DATAFORM=`expr main.zi : '\(.*\).zi'` \
+	  -v PACKRATDATA='' \
+	  -v PACKRATLIST='' \
+	  -f ziguard.awk \
+	  africa antarctica asia australasia  europe northamerica southamerica etcetera factory backward  &gt;main.zi.out
+mv main.zi.out main.zi
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -c -o strftime.o strftime.c
+awk \
+	  -v DATAFORM=`expr vanguard.zi : '\(.*\).zi'` \
+	  -v PACKRATDATA='' \
+	  -v PACKRATLIST='' \
+	  -f ziguard.awk \
+	  africa antarctica asia australasia  europe northamerica southamerica etcetera factory backward  &gt;vanguard.zi.out
+mv vanguard.zi.out vanguard.zi
+VERSION=`cat version` &amp;&amp; sed \
+	  -e "s'#!/bin/bash'#!"'/bin/bash'\' \
+	  -e s\''\(AWK\)=[^}]*'\''\1=\'\''awk\'\'\' \
+	  -e s\''\(PKGVERSION\)=.*'\''\1=\'\''(tzcode) \'\'\' \
+	  -e s\''\(REPORT_BUGS_TO\)=.*'\''\1=\'\''tz@iana.org\'\'\' \
+	  -e s\''\(TZDIR\)=[^}]*'\''\1=\'\''/usr/share/zoneinfo\'\'\' \
+	  -e s\''\(TZVERSION\)=.*'\''\1=\'"'$VERSION\\''" \
+	  &lt;tzselect.ksh &gt;tzselect.out
+chmod +x tzselect.out
+mv tzselect.out tzselect
+awk \
+	  -v DATAFORM=`expr rearguard.zi : '\(.*\).zi'` \
+	  -v PACKRATDATA='' \
+	  -v PACKRATLIST='' \
+	  -f ziguard.awk \
+	  africa antarctica asia australasia  europe northamerica southamerica etcetera factory backward  &gt;rearguard.zi.out
+mv rearguard.zi.out rearguard.zi
+VERSION=`cat version` &amp;&amp; printf '%s\n' \
+	  'static char const PKGVERSION[]="(tzcode) ";' \
+	  "static char const TZVERSION[]=\"$VERSION\";" \
+	  'static char const REPORT_BUGS_TO[]="tz@iana.org";' \
+	  &gt;version.h.out
+mv version.h.out version.h
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -c -o localtime.o localtime.c
+version=`sed 1q version` &amp;&amp; \
+	  LC_ALL=C awk \
+	    -v dataform='main' \
+	    -v deps='ziguard.awk africa antarctica asia australasia  europe northamerica southamerica etcetera factory backward   zishrink.awk' \
+	    -v redo='posix_only' \
+	    -v version="$version" \
+	    -f zishrink.awk \
+	    main.zi &gt;tzdata.zi.out
+mv tzdata.zi.out tzdata.zi
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -c -o zdump.o zdump.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\"  -c -o zic.o zic.c
+rm -f libtz.a
+x86_64-pc-linux-gnu-ar -rv libtz.a localtime.o asctime.o difftime.o strftime.o
+x86_64-pc-linux-gnu-ar: creating libtz.a
+a - localtime.o
+a - asctime.o
+a - difftime.o
+a - strftime.o
+: libtz.a
+x86_64-pc-linux-gnu-gcc -o zdump -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\" -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs zdump.o localtime.o asctime.o strftime.o 
+x86_64-pc-linux-gnu-gcc -o zic -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu99  -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\" -DZIC_BLOAT_DEFAULT=\"fat\" -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs zic.o 
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-libs/timezone-data-2024a-r1
+
+&gt;&gt;&gt; Install sys-libs/timezone-data-2024a-r1 into /var/tmp/portage/sys-libs/timezone-data-2024a-r1/image
+make -j2 REDO=posix_only TOPDIR= ZICDIR=$(TOPDIR)/usr/bin install DESTDIR=/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image LIBDIR=/nukeit 
+make BACKWARD='backward'  DESTDIR='/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image'  LEAPSECONDS=''  PACKRATDATA=''  PACKRATLIST=''  TZDEFAULT='/etc/localtime'  TZDIR='/usr/share/zoneinfo'  ZIC='./zic ' LEAPSECONDS= install_data
+make[1]: Entering directory '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/work/timezone-data-2024a'
+./zic  -d '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/zoneinfo'  tzdata.zi
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/work/timezone-data-2024a'
+mkdir -p '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/bin' \
+		'/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/bin' '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/bin' \
+		'/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/nukeit' \
+		'/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/man/man3' '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/man/man5' \
+		'/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/man/man8'
+./zic  -d '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/zoneinfo'  -l Factory \
+		`case '-' in ?*) echo '-p';; esac \
+		` - \
+		-t '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/etc/localtime'
+cp -f iso3166.tab leapseconds tzdata.zi zone.tab zone1970.tab zonenow.tab '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/zoneinfo/.'
+cp tzselect '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/bin/.'
+cp zdump '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/bin/.'
+cp zic '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/bin/.'
+cp libtz.a '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/nukeit/.'
+: '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/nukeit/libtz.a'
+cp -f newctime.3 newtzset.3 '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/man/man3/.'
+cp -f tzfile.5 '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/man/man5/.'
+cp -f tzselect.8 zdump.8 zic.8 '/var/tmp/portage/sys-libs/timezone-data-2024a-r1/image/usr/share/man/man8/.'
+&gt;&gt;&gt; Completed installing sys-libs/timezone-data-2024a-r1 into /var/tmp/portage/sys-libs/timezone-data-2024a-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 4884 KiB (4.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  2308 KiB (2.2 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/zdump
+   /usr/bin/zic
+ <span class="ansi32">*</span> You do not have a timezone set in /etc/timezone; skipping update.
+
+</pre>
+</body>
+
+</html>
