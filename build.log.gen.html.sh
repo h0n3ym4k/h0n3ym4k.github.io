@@ -83,13 +83,13 @@ pkgr=`equery l -F'$name-$fullversion' "${q}"`
 #echo "${pkg[@]}"
 #echo "${pkgr[@]}"
 
-if [ -e "${pkgr}"_emerge-info.log ];then
-  echo "${pkgr}_emerge-info.log existed"
+if [ -e "${pkgr}"_emerge-info.log.html ];then
+  echo "${pkgr}_emerge-info.log.html existed"
   continue
 fi
 
-echo "emerge --info ${pkg} redir ${pkgr}_emerge-info.log"
-emerge --info "${pkg}" > "${pkgr}"_emerge-info.log
+echo "emerge --info ${pkg} --color y | ansi2html redir ${pkgr}_emerge-info.log.html"
+emerge --info "${pkg}" --color y | ansi2html > "${pkgr}"_emerge-info.log.html
 	done
 
 	cd /mnt/Downloads/portage-build-log
@@ -123,6 +123,22 @@ echo "<body>" >> index.html.tmp.1
 
 echo "<center><h1>Gentoo build.log</h1></center>" >> index.html.tmp.1
 
+echo "<style>" >> index.html.tmp.1
+echo " .blink {" >> index.html.tmp.1
+echo "   animation: blinker 0.6s linear infinite;" >> index.html.tmp.1
+echo "   color: #1c87c9;" >> index.html.tmp.1
+echo "   font-size: 30px;" >> index.html.tmp.1
+echo "   font-weight: bold;" >> index.html.tmp.1
+echo "   font-family: sans-serif;" >> index.html.tmp.1
+echo " }" >> index.html.tmp.1
+echo " @keyframes blinker {" >> index.html.tmp.1
+echo "   50% {" >> index.html.tmp.1
+echo "     opacity: 0;" >> index.html.tmp.1
+echo "   }" >> index.html.tmp.1
+echo " }" >> index.html.tmp.1
+echo "</style>" >> index.html.tmp.1
+echo "<p class='blink'><center><h2>if you cannot resist your own temptation coming to this page,<br/>pls scroll down all the way</h2></center></p>" >> index.html.tmp.1
+
 #echo "<a href="https://ko-fi.com/98036119lmak">https://ko-fi.com/98036119lmak - Support smile</a>" >> index.html.tmp.1
 echo "<iframe id='kofiframe' src='https://ko-fi.com/98036119lmak/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='98036119lmak'></iframe>" >> index.html.tmp.1
 
@@ -137,6 +153,11 @@ echo "<center><h2>Last update: ${d}</h2></center>" >> index.html.tmp.1
 
 echo "<center><h3>any help needed or your support is appreciated. Msg right away!</h3></center>" >> index.html.tmp.1
 
+echo "<!-- error - red -->" >> index.html.tmp.1
+echo "" >> index.html.tmp.1
+echo "<!-- QA Notice - yellow -->" >> index.html.tmp.1
+echo "" >> index.html.tmp.1
+
 echo "<a href="01summary.log">01summary.log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
@@ -144,11 +165,13 @@ files2=($(find -iname \*.html|cut -b1,2 --complement))
 for f in "${files2[@]}"
 do
 	info=$(echo "${f}" | rev | cut -d_ -f1 --complement | rev)
-	echo "<a href=\"${info}_emerge-info.log\">${info}_emerge-info.log</a>" >> index.html.tmp.2
+	echo "<a href=\"${info}_emerge-info.log.html\">${info}_emerge-info.log.html</a>" >> index.html.tmp.2
 	echo "<br/>" >> index.html.tmp.2
 	echo "<a href=\"${f}\">${f}</a>" >> index.html.tmp.2
 	echo "<br/>" >> index.html.tmp.2
 done
+
+echo "<center><h2>if you have come to this far,<br/>pls consider buying me a coffee</h2></center>" >> index.html.tmp.3
 
 echo "</body>" >> index.html.tmp.3
 echo "</html>" >> index.html.tmp.3
