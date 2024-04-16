@@ -16,11 +16,11 @@ fi
 #step 1 - gen html
 cd /var/log/portage/build
 
-files=($(grep -ril 'Completed installing' *|grep -v html))
+files1=($(grep -ril 'Completed installing' *|grep -v html))
 
-#echo "${files[@]}"
+#echo "${files1[@]}"
 
-for d in "${files[@]}"
+for d in "${files1[@]}"
 do
 #	c=$(echo "${d}" | awk -F/ '{print $1}')
 #	echo "${c}"
@@ -40,9 +40,9 @@ done
 #step 2 - mkdir
 cd /mnt/Downloads/portage-build-log
 
-#echo "${files[@]}"
+#echo "${files1[@]}"
 
-for d in "${files[@]}"
+for d in "${files1[@]}"
 do
 	c=$(echo "${d}" | awk -F/ '{print $1}')
 	echo "${c}" >> /tmp/mkdir.txt
@@ -143,7 +143,7 @@ echo "<br/>" >> index.html.tmp.1
 files2=($(find -iname \*.html|cut -b1,2 --complement))
 for f in "${files2[@]}"
 do
-	info=$(echo "${f}" | awk -F_ '{print $1}')
+	info=$(echo "${f}" | rev | cut -d_ -f1 --complement | rev)
 	echo "<a href=\"${info}_emerge-info.log\">${info}_emerge-info.log</a>" >> index.html.tmp.2
 	echo "<br/>" >> index.html.tmp.2
 	echo "<a href=\"${f}\">${f}</a>" >> index.html.tmp.2
