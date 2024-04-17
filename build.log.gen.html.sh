@@ -137,7 +137,7 @@ echo "     opacity: 0;" >> index.html.tmp.1
 echo "   }" >> index.html.tmp.1
 echo " }" >> index.html.tmp.1
 echo "</style>" >> index.html.tmp.1
-echo "<p class='blink'><center><h2>if you cannot resist your own temptation coming to this page,<br/>pls scroll down all the way</h2></center></p>" >> index.html.tmp.1
+echo "<center><h2><p class='blink'>if you cannot resist your own temptation coming to this page,<br/>pls scroll down all the way</p></h2></center>" >> index.html.tmp.1
 
 #echo "<a href="https://ko-fi.com/98036119lmak">https://ko-fi.com/98036119lmak - Support smile</a>" >> index.html.tmp.1
 echo "<iframe id='kofiframe' src='https://ko-fi.com/98036119lmak/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='98036119lmak'></iframe>" >> index.html.tmp.1
@@ -158,10 +158,15 @@ echo "" >> index.html.tmp.1
 echo "<!-- QA Notice - yellow -->" >> index.html.tmp.1
 echo "" >> index.html.tmp.1
 
+#$(qa_notice.sh) - should run by hand manually, NEVER run in script-ed - static process
+if [ -e qa_notice.html ];then
+	cat qa_notice.html >> index.html.tmp.1
+fi
+
 echo "<a href="01summary.log">01summary.log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
-files2=($(find -iname \*.html|cut -b1,2 --complement))
+files2=($(find -iname \*.html ! -iname \*emerge-info.log.html|cut -b1,2 --complement))
 for f in "${files2[@]}"
 do
 	info=$(echo "${f}" | rev | cut -d_ -f1 --complement | rev)
