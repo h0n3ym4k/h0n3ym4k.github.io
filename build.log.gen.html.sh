@@ -163,6 +163,8 @@ if [ -e qa_notice.html ];then
 	cat qa_notice.html >> index.html.tmp.1
 fi
 
+echo "<center><h3>All logs, in general</h3></center>" >> index.html.tmp.1
+echo "<br/>" >> index.html.tmp.1
 echo "<a href="01summary.log">01summary.log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
