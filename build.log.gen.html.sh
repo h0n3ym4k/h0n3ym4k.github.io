@@ -66,7 +66,10 @@ cd /var/log/portage/elog/
 cat `ls --hide=\*.gz /var/log/portage/elog/` > /tmp/01summary.log
 cp -v /tmp/01summary.log /mnt/Downloads/portage-build-log/01summary.log
 
-#step 5 - emerge --info
+#step 5 - genkernel.log
+cat /var/log/genkernel.log | ansi2html > /mnt/Downloads/portage-build-log/genkernel.log.html
+
+#step 6 - emerge --info
 cd /mnt/Downloads/portage-build-log
 
 for p in $(equery list -F'$cp' \*|uniq)
@@ -95,7 +98,7 @@ emerge --info "${pkg}" --color y | ansi2html > "${pkgr}"_emerge-info.log.html
 	cd /mnt/Downloads/portage-build-log
 done
 
-#step 6 - https://h0n3ym4k.github.io/portage-build-log/index.html
+#step 7 - https://h0n3ym4k.github.io/portage-build-log/index.html
 cd /mnt/Downloads/portage-build-log
 
 echo "<!DOCTYPE html>" > index.html.tmp.1
@@ -164,6 +167,8 @@ if [ -e qa_notice.html ];then
 fi
 
 echo "<center><h3>All logs, in general</h3></center>" >> index.html.tmp.1
+echo "<br/>" >> index.html.tmp.1
+echo "<a href="genkernel.log.html">genkernel.log.html - genkernel - kernel build log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 echo "<a href="01summary.log">01summary.log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
