@@ -1,0 +1,1365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    x11-libs/libxkbcommon-1.7.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        X abi_x86_64 amd64 elibc_glibc kernel_linux wayland
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking libxkbcommon-1.7.0.tar.xz to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Ddefault_library=shared -Dxkb-config-root=/usr/share/X11/xkb -Dbash-completion-path=/usr/share/bash-completion/completions -Denable-tools=false -Denable-x11=true -Denable-docs=false -Denable-wayland=true /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0 /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64
+The Meson build system
+Version: 1.4.0
+Source dir: /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0
+Build dir: /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64
+Build type: native build
+Project name: libxkbcommon
+Project version: 1.7.0
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 13.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 13.2.1_p20240210 p14) 13.2.1 20240210")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.41
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wbad-function-cast: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wlogical-op: YES 
+Compiler for C supports arguments -Wdate-time: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wno-documentation-deprecated-sync: NO 
+Has header "unistd.h" : YES 
+Checking if "__builtin_expect" : links: YES 
+Header "unistd.h" has symbol "eaccess" : YES 
+Header "unistd.h" has symbol "euidaccess" : YES 
+Header "sys/mman.h" has symbol "mmap" : YES 
+Header "stdlib.h" has symbol "mkostemp" : YES 
+Header "fcntl.h" has symbol "posix_fallocate" : YES 
+Header "string.h" has symbol "strndup" : YES 
+Header "stdio.h" has symbol "asprintf" : YES 
+Header "stdlib.h" has symbol "secure_getenv" : YES 
+Header "limits.h" has symbol "PATH_MAX" : YES 
+Checking if "-Wl,--version-script" : links: YES 
+Program scripts/map-to-def found: YES (/var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/scripts/map-to-def)
+Program bison found: YES 3.8.2 3.8.2 (/usr/bin/bison)
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.2.0
+Run-time dependency xcb found: YES 1.16.1
+Run-time dependency xcb-xkb found: YES 1.16.1
+Run-time dependency libxml-2.0 found: YES 2.12.6
+Configuring xkeyboard-config-test using configuration
+Configuring test-config.h using configuration
+Run-time dependency icu-uc found: YES 74.2
+Program test/symbols-leak-test.py found: YES (/var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/test/symbols-leak-test.py)
+Program valgrind found: YES (/usr/bin/valgrind)
+Configuring config.h using configuration
+Build targets in project: 35
+
+libxkbcommon 1.7.0
+
+  Compiler
+    backend              : ninja
+    buildtype            : plain
+    c_args               : -O3
+                           -march=native
+                           -mtune=native
+                           -fomit-frame-pointer
+                           -pipe
+    c_link_args          : -O3
+                           -march=native
+                           -mtune=native
+                           -fomit-frame-pointer
+                           -pipe
+                           -Wl,-O1
+                           -Wl,--as-needed
+                           -Wl,-z,pack-relative-relocs
+    yacc                 : /usr/bin/bison 3.8.2
+
+  Directories
+    prefix               : /usr
+    bindir               : bin
+    libdir               : lib64
+    datadir              : share
+    xkb-config-root      : /usr/share/X11/xkb
+    xkb-config-extra-path: /etc/xkb
+    xlocaledir           : /usr/share/X11/locale
+
+  Features
+    docs                 : false
+    tools                : false
+    wayland              : true
+    x11                  : true
+
+  Defaults
+    layout               : us
+    model                : pc105
+    options              : 
+    rules                : evdev
+    variant              : 
+
+  User defined options
+    Native files         : /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    default_library      : shared
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    bash-completion-path : /usr/share/bash-completion/completions
+    enable-docs          : false
+    enable-tools         : false
+    enable-wayland       : true
+    enable-x11           : true
+    xkb-config-root      : /usr/share/X11/xkb
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+meson compile --jobs 2 --load-average 2 --verbose
+[1/150] /usr/bin/bison --defines=libxkbcommon.so.0.0.0.p/parser.h -o libxkbcommon.so.0.0.0.p/parser.c -p _xkbcommon_ ../libxkbcommon-1.7.0/src/xkbcomp/parser.y
+[2/150] x86_64-pc-linux-gnu-gcc -Ilibxkbregistry.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -I/usr/include/libxml2 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbregistry.so.0.0.0.p/src_registry.c.o -MF libxkbregistry.so.0.0.0.p/src_registry.c.o.d -o libxkbregistry.so.0.0.0.p/src_registry.c.o -c ../libxkbcommon-1.7.0/src/registry.c
+[3/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/meson-generated_parser.c.o -MF libxkbcommon.so.0.0.0.p/meson-generated_parser.c.o.d -o libxkbcommon.so.0.0.0.p/meson-generated_parser.c.o -c libxkbcommon.so.0.0.0.p/parser.c
+[4/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_compose_paths.c.o -MF libxkbcommon.so.0.0.0.p/src_compose_paths.c.o.d -o libxkbcommon.so.0.0.0.p/src_compose_paths.c.o -c ../libxkbcommon-1.7.0/src/compose/paths.c
+[5/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_compose_state.c.o -MF libxkbcommon.so.0.0.0.p/src_compose_state.c.o.d -o libxkbcommon.so.0.0.0.p/src_compose_state.c.o -c ../libxkbcommon-1.7.0/src/compose/state.c
+[6/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_compose_parser.c.o -MF libxkbcommon.so.0.0.0.p/src_compose_parser.c.o.d -o libxkbcommon.so.0.0.0.p/src_compose_parser.c.o -c ../libxkbcommon-1.7.0/src/compose/parser.c
+[7/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_compose_table.c.o -MF libxkbcommon.so.0.0.0.p/src_compose_table.c.o.d -o libxkbcommon.so.0.0.0.p/src_compose_table.c.o -c ../libxkbcommon-1.7.0/src/compose/table.c
+[8/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_action.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_action.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_action.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/action.c
+[9/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_ast-build.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_ast-build.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_ast-build.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateString’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:78:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateString’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:81:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   81 |     expr-&gt;string.str = str;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateString’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:78:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateInteger’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:88:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateInteger’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:91:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   91 |     expr-&gt;integer.ival = ival;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateInteger’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:88:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFloat’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:98:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBoolean’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:107:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBoolean’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:110:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  110 |     expr-&gt;boolean.set = set;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBoolean’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:107:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateKeyName’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:117:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateKeyName’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:120:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  120 |     expr-&gt;key_name.key_name = key_name;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateKeyName’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:117:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateIdent’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:127:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateIdent’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:130:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  130 |     expr-&gt;ident.ident = ident;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateIdent’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:127:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateUnary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:138:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateUnary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:141:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  141 |     expr-&gt;unary.child = child;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateUnary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:138:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:156:13: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  156 |         expr-&gt;expr.value_type = left-&gt;expr.value_type;
+      |             ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:153:13: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  153 |         expr-&gt;expr.value_type = right-&gt;expr.value_type;
+      |             ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:157:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  157 |     expr-&gt;binary.left = left;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:158:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  158 |     expr-&gt;binary.right = right;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFieldRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:166:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateFieldRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:169:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  169 |     expr-&gt;field_ref.element = element;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFieldRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:166:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateFieldRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:170:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  170 |     expr-&gt;field_ref.field = field;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFieldRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:166:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateArrayRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:180:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  180 |     expr-&gt;array_ref.element = element;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateArrayRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:181:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  181 |     expr-&gt;array_ref.field = field;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateArrayRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:182:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  182 |     expr-&gt;array_ref.entry = entry;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateAction’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:189:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateAction’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:192:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  192 |     expr-&gt;action.name = name;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateAction’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:189:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateAction’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:193:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  193 |     expr-&gt;action.args = args;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateAction’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:189:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateActionList’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:200:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateActionList’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:203:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  203 |     expr-&gt;actions.actions = actions;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateActionList’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:200:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateIdent’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:127:21,
+    inlined from ‘BoolVarCreate’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:330:18:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreateIdent’,
+    inlined from ‘BoolVarCreate’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:330:18:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:130:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  130 |     expr-&gt;ident.ident = ident;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateIdent’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:127:21,
+    inlined from ‘BoolVarCreate’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:330:18:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBoolean’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:107:21,
+    inlined from ‘BoolVarCreate’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:333:19:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreateBoolean’,
+    inlined from ‘BoolVarCreate’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:333:19:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:110:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  110 |     expr-&gt;boolean.set = set;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBoolean’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:107:21,
+    inlined from ‘BoolVarCreate’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:333:19:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+[10/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_compat.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_compat.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_compat.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/compat.c
+[11/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_include.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_include.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_include.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/include.c
+[12/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_keycodes.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_keycodes.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_keycodes.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keycodes.c
+[13/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keymap.c
+[14/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap-dump.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap-dump.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap-dump.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keymap-dump.c
+[15/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_keywords.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_keywords.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_keywords.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keywords.c
+[16/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_expr.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_expr.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_expr.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/expr.c
+[17/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_scanner.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_scanner.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_scanner.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/scanner.c
+[18/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_rules.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_rules.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_rules.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/rules.c
+[19/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_types.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_types.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_types.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/types.c
+[20/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_vmod.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_vmod.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_vmod.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/vmod.c
+[21/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_symbols.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_symbols.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_symbols.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/symbols.c
+[22/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_xkbcomp_xkbcomp.c.o -MF libxkbcommon.so.0.0.0.p/src_xkbcomp_xkbcomp.c.o.d -o libxkbcommon.so.0.0.0.p/src_xkbcomp_xkbcomp.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/xkbcomp.c
+[23/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_atom.c.o -MF libxkbcommon.so.0.0.0.p/src_atom.c.o.d -o libxkbcommon.so.0.0.0.p/src_atom.c.o -c ../libxkbcommon-1.7.0/src/atom.c
+[24/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_context-priv.c.o -MF libxkbcommon.so.0.0.0.p/src_context-priv.c.o.d -o libxkbcommon.so.0.0.0.p/src_context-priv.c.o -c ../libxkbcommon-1.7.0/src/context-priv.c
+[25/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_context.c.o -MF libxkbcommon.so.0.0.0.p/src_context.c.o.d -o libxkbcommon.so.0.0.0.p/src_context.c.o -c ../libxkbcommon-1.7.0/src/context.c
+[26/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_keysym-utf.c.o -MF libxkbcommon.so.0.0.0.p/src_keysym-utf.c.o.d -o libxkbcommon.so.0.0.0.p/src_keysym-utf.c.o -c ../libxkbcommon-1.7.0/src/keysym-utf.c
+[27/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_keymap.c.o -MF libxkbcommon.so.0.0.0.p/src_keymap.c.o.d -o libxkbcommon.so.0.0.0.p/src_keymap.c.o -c ../libxkbcommon-1.7.0/src/keymap.c
+[28/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_keysym.c.o -MF libxkbcommon.so.0.0.0.p/src_keysym.c.o.d -o libxkbcommon.so.0.0.0.p/src_keysym.c.o -c ../libxkbcommon-1.7.0/src/keysym.c
+[29/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_keymap-priv.c.o -MF libxkbcommon.so.0.0.0.p/src_keymap-priv.c.o.d -o libxkbcommon.so.0.0.0.p/src_keymap-priv.c.o -c ../libxkbcommon-1.7.0/src/keymap-priv.c
+[30/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_text.c.o -MF libxkbcommon.so.0.0.0.p/src_text.c.o.d -o libxkbcommon.so.0.0.0.p/src_text.c.o -c ../libxkbcommon-1.7.0/src/text.c
+[31/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_utf8.c.o -MF libxkbcommon.so.0.0.0.p/src_utf8.c.o.d -o libxkbcommon.so.0.0.0.p/src_utf8.c.o -c ../libxkbcommon-1.7.0/src/utf8.c
+[32/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_state.c.o -MF libxkbcommon.so.0.0.0.p/src_state.c.o.d -o libxkbcommon.so.0.0.0.p/src_state.c.o -c ../libxkbcommon-1.7.0/src/state.c
+[33/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon.so.0.0.0.p/src_utils.c.o -MF libxkbcommon.so.0.0.0.p/src_utils.c.o.d -o libxkbcommon.so.0.0.0.p/src_utils.c.o -c ../libxkbcommon-1.7.0/src/utils.c
+[34/150] x86_64-pc-linux-gnu-gcc  -o libxkbcommon.so.0.0.0 libxkbcommon.so.0.0.0.p/meson-generated_parser.c.o libxkbcommon.so.0.0.0.p/src_compose_parser.c.o libxkbcommon.so.0.0.0.p/src_compose_paths.c.o libxkbcommon.so.0.0.0.p/src_compose_state.c.o libxkbcommon.so.0.0.0.p/src_compose_table.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_action.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_ast-build.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_compat.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_expr.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_include.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_keycodes.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_keymap-dump.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_keywords.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_rules.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_scanner.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_symbols.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_types.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_vmod.c.o libxkbcommon.so.0.0.0.p/src_xkbcomp_xkbcomp.c.o libxkbcommon.so.0.0.0.p/src_atom.c.o libxkbcommon.so.0.0.0.p/src_context.c.o libxkbcommon.so.0.0.0.p/src_context-priv.c.o libxkbcommon.so.0.0.0.p/src_keysym.c.o libxkbcommon.so.0.0.0.p/src_keysym-utf.c.o libxkbcommon.so.0.0.0.p/src_keymap.c.o libxkbcommon.so.0.0.0.p/src_keymap-priv.c.o libxkbcommon.so.0.0.0.p/src_state.c.o libxkbcommon.so.0.0.0.p/src_text.c.o libxkbcommon.so.0.0.0.p/src_utf8.c.o libxkbcommon.so.0.0.0.p/src_utils.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libxkbcommon.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--version-script=/var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/xkbcommon.map
+[35/150] /usr/lib/python-exec/python3.11/meson --internal symbolextractor /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64 libxkbcommon.so.0.0.0 libxkbcommon.so.0.0.0 libxkbcommon.so.0.0.0.p/libxkbcommon.so.0.0.0.symbols 
+[36/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11.so.0.0.0.p/src_x11_state.c.o -MF libxkbcommon-x11.so.0.0.0.p/src_x11_state.c.o.d -o libxkbcommon-x11.so.0.0.0.p/src_x11_state.c.o -c ../libxkbcommon-1.7.0/src/x11/state.c
+[37/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11.so.0.0.0.p/src_x11_util.c.o -MF libxkbcommon-x11.so.0.0.0.p/src_x11_util.c.o.d -o libxkbcommon-x11.so.0.0.0.p/src_x11_util.c.o -c ../libxkbcommon-1.7.0/src/x11/util.c
+[38/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11.so.0.0.0.p/src_x11_keymap.c.o -MF libxkbcommon-x11.so.0.0.0.p/src_x11_keymap.c.o.d -o libxkbcommon-x11.so.0.0.0.p/src_x11_keymap.c.o -c ../libxkbcommon-1.7.0/src/x11/keymap.c
+[39/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11.so.0.0.0.p/src_context-priv.c.o -MF libxkbcommon-x11.so.0.0.0.p/src_context-priv.c.o.d -o libxkbcommon-x11.so.0.0.0.p/src_context-priv.c.o -c ../libxkbcommon-1.7.0/src/context-priv.c
+[40/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11.so.0.0.0.p/src_keymap-priv.c.o -MF libxkbcommon-x11.so.0.0.0.p/src_keymap-priv.c.o.d -o libxkbcommon-x11.so.0.0.0.p/src_keymap-priv.c.o -c ../libxkbcommon-1.7.0/src/keymap-priv.c
+[41/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11.so.0.0.0.p/src_atom.c.o -MF libxkbcommon-x11.so.0.0.0.p/src_atom.c.o.d -o libxkbcommon-x11.so.0.0.0.p/src_atom.c.o -c ../libxkbcommon-1.7.0/src/atom.c
+[42/150] x86_64-pc-linux-gnu-gcc -Ilibxkbregistry.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -I/usr/include/libxml2 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbregistry.so.0.0.0.p/src_utils.c.o -MF libxkbregistry.so.0.0.0.p/src_utils.c.o.d -o libxkbregistry.so.0.0.0.p/src_utils.c.o -c ../libxkbcommon-1.7.0/src/utils.c
+[43/150] x86_64-pc-linux-gnu-gcc  -o libxkbcommon-x11.so.0.0.0 libxkbcommon-x11.so.0.0.0.p/src_x11_keymap.c.o libxkbcommon-x11.so.0.0.0.p/src_x11_state.c.o libxkbcommon-x11.so.0.0.0.p/src_x11_util.c.o libxkbcommon-x11.so.0.0.0.p/src_context-priv.c.o libxkbcommon-x11.so.0.0.0.p/src_keymap-priv.c.o libxkbcommon-x11.so.0.0.0.p/src_atom.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libxkbcommon-x11.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/' -Wl,-rpath-link,/var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64/ -Wl,--start-group libxkbcommon.so.0.0.0 -Wl,--version-script=/var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/xkbcommon-x11.map /usr/lib64/libxcb.so /usr/lib64/libxcb-xkb.so -Wl,--end-group
+[44/150] x86_64-pc-linux-gnu-gcc -Ilibxkbregistry.so.0.0.0.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -I/usr/include/libxml2 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbregistry.so.0.0.0.p/src_util-list.c.o -MF libxkbregistry.so.0.0.0.p/src_util-list.c.o.d -o libxkbregistry.so.0.0.0.p/src_util-list.c.o -c ../libxkbcommon-1.7.0/src/util-list.c
+[45/150] x86_64-pc-linux-gnu-gcc  -o libxkbregistry.so.0.0.0 libxkbregistry.so.0.0.0.p/src_registry.c.o libxkbregistry.so.0.0.0.p/src_utils.c.o libxkbregistry.so.0.0.0.p/src_util-list.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libxkbregistry.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--version-script=/var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/xkbregistry.map /usr/lib64/libxml2.so
+[46/150] /usr/lib/python-exec/python3.11/meson --internal symbolextractor /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64 libxkbregistry.so.0.0.0 libxkbregistry.so.0.0.0 libxkbregistry.so.0.0.0.p/libxkbregistry.so.0.0.0.symbols 
+[47/150] /usr/bin/bison --defines=libxkbcommon-test-internal.a.p/parser.h -o libxkbcommon-test-internal.a.p/parser.c -p _xkbcommon_ ../libxkbcommon-1.7.0/src/xkbcomp/parser.y
+[48/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/test_common.c.o -MF libxkbcommon-test-internal.a.p/test_common.c.o.d -o libxkbcommon-test-internal.a.p/test_common.c.o -c ../libxkbcommon-1.7.0/test/common.c
+[49/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/bench_bench.c.o -MF libxkbcommon-test-internal.a.p/bench_bench.c.o.d -o libxkbcommon-test-internal.a.p/bench_bench.c.o -c ../libxkbcommon-1.7.0/bench/bench.c
+[50/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/meson-generated_parser.c.o -MF libxkbcommon-test-internal.a.p/meson-generated_parser.c.o.d -o libxkbcommon-test-internal.a.p/meson-generated_parser.c.o -c libxkbcommon-test-internal.a.p/parser.c
+[51/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_compose_paths.c.o -MF libxkbcommon-test-internal.a.p/src_compose_paths.c.o.d -o libxkbcommon-test-internal.a.p/src_compose_paths.c.o -c ../libxkbcommon-1.7.0/src/compose/paths.c
+[52/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_compose_state.c.o -MF libxkbcommon-test-internal.a.p/src_compose_state.c.o.d -o libxkbcommon-test-internal.a.p/src_compose_state.c.o -c ../libxkbcommon-1.7.0/src/compose/state.c
+[53/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_compose_parser.c.o -MF libxkbcommon-test-internal.a.p/src_compose_parser.c.o.d -o libxkbcommon-test-internal.a.p/src_compose_parser.c.o -c ../libxkbcommon-1.7.0/src/compose/parser.c
+[54/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_compose_table.c.o -MF libxkbcommon-test-internal.a.p/src_compose_table.c.o.d -o libxkbcommon-test-internal.a.p/src_compose_table.c.o -c ../libxkbcommon-1.7.0/src/compose/table.c
+[55/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_action.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_action.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_action.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/action.c
+[56/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_ast-build.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_ast-build.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_ast-build.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateString’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:78:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateString’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:81:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   81 |     expr-&gt;string.str = str;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateString’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:78:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateInteger’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:88:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateInteger’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:91:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   91 |     expr-&gt;integer.ival = ival;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateInteger’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:88:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFloat’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:98:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[24]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 24 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBoolean’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:107:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBoolean’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:110:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  110 |     expr-&gt;boolean.set = set;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBoolean’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:107:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateKeyName’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:117:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateKeyName’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:120:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  120 |     expr-&gt;key_name.key_name = key_name;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateKeyName’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:117:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateIdent’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:127:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateIdent’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:130:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  130 |     expr-&gt;ident.ident = ident;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateIdent’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:127:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateUnary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:138:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateUnary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:141:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  141 |     expr-&gt;unary.child = child;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateUnary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:138:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:156:13: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  156 |         expr-&gt;expr.value_type = left-&gt;expr.value_type;
+      |             ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:153:13: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  153 |         expr-&gt;expr.value_type = right-&gt;expr.value_type;
+      |             ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:157:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  157 |     expr-&gt;binary.left = left;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateBinary’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:158:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  158 |     expr-&gt;binary.right = right;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateBinary’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:148:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFieldRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:166:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateFieldRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:169:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  169 |     expr-&gt;field_ref.element = element;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFieldRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:166:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateFieldRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:170:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  170 |     expr-&gt;field_ref.field = field;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateFieldRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:166:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateArrayRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:180:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  180 |     expr-&gt;array_ref.element = element;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateArrayRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:181:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  181 |     expr-&gt;array_ref.field = field;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateArrayRef’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:182:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  182 |     expr-&gt;array_ref.entry = entry;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateArrayRef’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:177:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateAction’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:189:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateAction’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:192:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  192 |     expr-&gt;action.name = name;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateAction’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:189:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateAction’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:193:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[40]’ [-Warray-bounds=]
+  193 |     expr-&gt;action.args = args;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateAction’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:189:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 40 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateActionList’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:200:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:67:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   67 |     expr-&gt;common.type = STMT_EXPR;
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:68:23: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   68 |     expr-&gt;common.next = NULL;
+      |                       ^
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:69:19: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   69 |     expr-&gt;expr.op = op;
+      |     ~~~~~~~~~~~~~~^~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:70:27: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+   70 |     expr-&gt;expr.value_type = type;
+      |     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c: In function ‘ExprCreateActionList’:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:203:9: warning: array subscript ‘ExprDef[0]’ is partly outside array bounds of ‘unsigned char[32]’ [-Warray-bounds=]
+  203 |     expr-&gt;actions.actions = actions;
+      |         ^~
+In function ‘ExprCreate’,
+    inlined from ‘ExprCreateActionList’ at ../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:200:21:
+../libxkbcommon-1.7.0/src/xkbcomp/ast-build.c:63:21: note: object of size 32 allocated by ‘malloc’
+   63 |     ExprDef *expr = malloc(size);
+      |                     ^~~~~~~~~~~~
+[57/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_compat.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_compat.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_compat.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/compat.c
+[58/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_include.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_include.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_include.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/include.c
+[59/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_keycodes.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_keycodes.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_keycodes.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keycodes.c
+[60/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_keymap.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_keymap.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_keymap.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keymap.c
+[61/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_keymap-dump.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_keymap-dump.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_keymap-dump.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keymap-dump.c
+[62/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_keywords.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_keywords.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_keywords.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/keywords.c
+[63/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_expr.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_expr.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_expr.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/expr.c
+[64/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_scanner.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_scanner.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_scanner.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/scanner.c
+[65/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_rules.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_rules.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_rules.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/rules.c
+[66/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_types.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_types.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_types.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/types.c
+[67/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_vmod.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_vmod.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_vmod.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/vmod.c
+[68/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_xkbcomp.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_xkbcomp.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_xkbcomp.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/xkbcomp.c
+[69/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_atom.c.o -MF libxkbcommon-test-internal.a.p/src_atom.c.o.d -o libxkbcommon-test-internal.a.p/src_atom.c.o -c ../libxkbcommon-1.7.0/src/atom.c
+[70/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_xkbcomp_symbols.c.o -MF libxkbcommon-test-internal.a.p/src_xkbcomp_symbols.c.o.d -o libxkbcommon-test-internal.a.p/src_xkbcomp_symbols.c.o -c ../libxkbcommon-1.7.0/src/xkbcomp/symbols.c
+[71/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_context-priv.c.o -MF libxkbcommon-test-internal.a.p/src_context-priv.c.o.d -o libxkbcommon-test-internal.a.p/src_context-priv.c.o -c ../libxkbcommon-1.7.0/src/context-priv.c
+[72/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_context.c.o -MF libxkbcommon-test-internal.a.p/src_context.c.o.d -o libxkbcommon-test-internal.a.p/src_context.c.o -c ../libxkbcommon-1.7.0/src/context.c
+[73/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_keysym-utf.c.o -MF libxkbcommon-test-internal.a.p/src_keysym-utf.c.o.d -o libxkbcommon-test-internal.a.p/src_keysym-utf.c.o -c ../libxkbcommon-1.7.0/src/keysym-utf.c
+[74/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_keymap.c.o -MF libxkbcommon-test-internal.a.p/src_keymap.c.o.d -o libxkbcommon-test-internal.a.p/src_keymap.c.o -c ../libxkbcommon-1.7.0/src/keymap.c
+[75/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_keysym.c.o -MF libxkbcommon-test-internal.a.p/src_keysym.c.o.d -o libxkbcommon-test-internal.a.p/src_keysym.c.o -c ../libxkbcommon-1.7.0/src/keysym.c
+[76/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_keymap-priv.c.o -MF libxkbcommon-test-internal.a.p/src_keymap-priv.c.o.d -o libxkbcommon-test-internal.a.p/src_keymap-priv.c.o -c ../libxkbcommon-1.7.0/src/keymap-priv.c
+[77/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_text.c.o -MF libxkbcommon-test-internal.a.p/src_text.c.o.d -o libxkbcommon-test-internal.a.p/src_text.c.o -c ../libxkbcommon-1.7.0/src/text.c
+[78/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_utf8.c.o -MF libxkbcommon-test-internal.a.p/src_utf8.c.o.d -o libxkbcommon-test-internal.a.p/src_utf8.c.o -c ../libxkbcommon-1.7.0/src/utf8.c
+[79/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_utils.c.o -MF libxkbcommon-test-internal.a.p/src_utils.c.o.d -o libxkbcommon-test-internal.a.p/src_utils.c.o -c ../libxkbcommon-1.7.0/src/utils.c
+[80/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-test-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DENABLE_PRIVATE_APIS -MD -MQ libxkbcommon-test-internal.a.p/src_state.c.o -MF libxkbcommon-test-internal.a.p/src_state.c.o.d -o libxkbcommon-test-internal.a.p/src_state.c.o -c ../libxkbcommon-1.7.0/src/state.c
+[81/150] rm -f libxkbcommon-test-internal.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT libxkbcommon-test-internal.a libxkbcommon-test-internal.a.p/meson-generated_parser.c.o libxkbcommon-test-internal.a.p/test_common.c.o libxkbcommon-test-internal.a.p/bench_bench.c.o libxkbcommon-test-internal.a.p/src_compose_parser.c.o libxkbcommon-test-internal.a.p/src_compose_paths.c.o libxkbcommon-test-internal.a.p/src_compose_state.c.o libxkbcommon-test-internal.a.p/src_compose_table.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_action.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_ast-build.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_compat.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_expr.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_include.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_keycodes.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_keymap.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_keymap-dump.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_keywords.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_rules.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_scanner.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_symbols.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_types.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_vmod.c.o libxkbcommon-test-internal.a.p/src_xkbcomp_xkbcomp.c.o libxkbcommon-test-internal.a.p/src_atom.c.o libxkbcommon-test-internal.a.p/src_context.c.o libxkbcommon-test-internal.a.p/src_context-priv.c.o libxkbcommon-test-internal.a.p/src_keysym.c.o libxkbcommon-test-internal.a.p/src_keysym-utf.c.o libxkbcommon-test-internal.a.p/src_keymap.c.o libxkbcommon-test-internal.a.p/src_keymap-priv.c.o libxkbcommon-test-internal.a.p/src_state.c.o libxkbcommon-test-internal.a.p/src_text.c.o libxkbcommon-test-internal.a.p/src_utf8.c.o libxkbcommon-test-internal.a.p/src_utils.c.o
+[82/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11-internal.a.p/src_x11_state.c.o -MF libxkbcommon-x11-internal.a.p/src_x11_state.c.o.d -o libxkbcommon-x11-internal.a.p/src_x11_state.c.o -c ../libxkbcommon-1.7.0/src/x11/state.c
+[83/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11-internal.a.p/src_x11_util.c.o -MF libxkbcommon-x11-internal.a.p/src_x11_util.c.o.d -o libxkbcommon-x11-internal.a.p/src_x11_util.c.o -c ../libxkbcommon-1.7.0/src/x11/util.c
+[84/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11-internal.a.p/src_context-priv.c.o -MF libxkbcommon-x11-internal.a.p/src_context-priv.c.o.d -o libxkbcommon-x11-internal.a.p/src_context-priv.c.o -c ../libxkbcommon-1.7.0/src/context-priv.c
+[85/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11-internal.a.p/src_x11_keymap.c.o -MF libxkbcommon-x11-internal.a.p/src_x11_keymap.c.o.d -o libxkbcommon-x11-internal.a.p/src_x11_keymap.c.o -c ../libxkbcommon-1.7.0/src/x11/keymap.c
+[86/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11-internal.a.p/src_keymap-priv.c.o -MF libxkbcommon-x11-internal.a.p/src_keymap-priv.c.o.d -o libxkbcommon-x11-internal.a.p/src_keymap-priv.c.o -c ../libxkbcommon-1.7.0/src/keymap-priv.c
+[87/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11-internal.a.p/src_atom.c.o -MF libxkbcommon-x11-internal.a.p/src_atom.c.o.d -o libxkbcommon-x11-internal.a.p/src_atom.c.o -c ../libxkbcommon-1.7.0/src/atom.c
+[88/150] x86_64-pc-linux-gnu-gcc -Ilibxkbcommon-x11-internal.a.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libxkbcommon-x11-internal.a.p/test_xvfb-wrapper.c.o -MF libxkbcommon-x11-internal.a.p/test_xvfb-wrapper.c.o.d -o libxkbcommon-x11-internal.a.p/test_xvfb-wrapper.c.o -c ../libxkbcommon-1.7.0/test/xvfb-wrapper.c
+[89/150] rm -f libxkbcommon-x11-internal.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT libxkbcommon-x11-internal.a libxkbcommon-x11-internal.a.p/src_x11_keymap.c.o libxkbcommon-x11-internal.a.p/src_x11_state.c.o libxkbcommon-x11-internal.a.p/src_x11_util.c.o libxkbcommon-x11-internal.a.p/src_context-priv.c.o libxkbcommon-x11-internal.a.p/src_keymap-priv.c.o libxkbcommon-x11-internal.a.p/src_atom.c.o libxkbcommon-x11-internal.a.p/test_xvfb-wrapper.c.o
+[90/150] x86_64-pc-linux-gnu-gcc -Itest-keymap.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-keymap.p/test_keymap.c.o -MF test-keymap.p/test_keymap.c.o.d -o test-keymap.p/test_keymap.c.o -c ../libxkbcommon-1.7.0/test/keymap.c
+[91/150] x86_64-pc-linux-gnu-gcc  -o test-keymap test-keymap.p/test_keymap.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[92/150] x86_64-pc-linux-gnu-gcc -Itest-keysym.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DENABLE_PRIVATE_APIS -MD -MQ test-keysym.p/test_keysym.c.o -MF test-keysym.p/test_keysym.c.o.d -o test-keysym.p/test_keysym.c.o -c ../libxkbcommon-1.7.0/test/keysym.c
+[93/150] x86_64-pc-linux-gnu-gcc -Itest-filecomp.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-filecomp.p/test_filecomp.c.o -MF test-filecomp.p/test_filecomp.c.o.d -o test-filecomp.p/test_filecomp.c.o -c ../libxkbcommon-1.7.0/test/filecomp.c
+[94/150] x86_64-pc-linux-gnu-gcc  -o test-filecomp test-filecomp.p/test_filecomp.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[95/150] x86_64-pc-linux-gnu-gcc  -o test-keysym test-keysym.p/test_keysym.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group libxkbcommon-test-internal.a /usr/lib64/libicuuc.so /usr/lib64/libicudata.so -Wl,--end-group
+[96/150] x86_64-pc-linux-gnu-gcc -Itest-rules-file.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-rules-file.p/test_rules-file.c.o -MF test-rules-file.p/test_rules-file.c.o.d -o test-rules-file.p/test_rules-file.c.o -c ../libxkbcommon-1.7.0/test/rules-file.c
+[97/150] x86_64-pc-linux-gnu-gcc -Itest-context.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-context.p/test_context.c.o -MF test-context.p/test_context.c.o.d -o test-context.p/test_context.c.o -c ../libxkbcommon-1.7.0/test/context.c
+[98/150] x86_64-pc-linux-gnu-gcc  -o test-context test-context.p/test_context.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[99/150] x86_64-pc-linux-gnu-gcc  -o test-rules-file test-rules-file.p/test_rules-file.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[100/150] x86_64-pc-linux-gnu-gcc -Itest-rules-file-includes.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-rules-file-includes.p/test_rules-file-includes.c.o -MF test-rules-file-includes.p/test_rules-file-includes.c.o.d -o test-rules-file-includes.p/test_rules-file-includes.c.o -c ../libxkbcommon-1.7.0/test/rules-file-includes.c
+[101/150] x86_64-pc-linux-gnu-gcc  -o test-rules-file-includes test-rules-file-includes.p/test_rules-file-includes.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[102/150] x86_64-pc-linux-gnu-gcc -Itest-stringcomp.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-stringcomp.p/test_stringcomp.c.o -MF test-stringcomp.p/test_stringcomp.c.o.d -o test-stringcomp.p/test_stringcomp.c.o -c ../libxkbcommon-1.7.0/test/stringcomp.c
+[103/150] x86_64-pc-linux-gnu-gcc  -o test-stringcomp test-stringcomp.p/test_stringcomp.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[104/150] x86_64-pc-linux-gnu-gcc -Itest-buffercomp.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-buffercomp.p/test_buffercomp.c.o -MF test-buffercomp.p/test_buffercomp.c.o.d -o test-buffercomp.p/test_buffercomp.c.o -c ../libxkbcommon-1.7.0/test/buffercomp.c
+[105/150] x86_64-pc-linux-gnu-gcc  -o test-buffercomp test-buffercomp.p/test_buffercomp.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[106/150] x86_64-pc-linux-gnu-gcc -Itest-log.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-log.p/test_log.c.o -MF test-log.p/test_log.c.o.d -o test-log.p/test_log.c.o -c ../libxkbcommon-1.7.0/test/log.c
+[107/150] x86_64-pc-linux-gnu-gcc  -o test-log test-log.p/test_log.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[108/150] x86_64-pc-linux-gnu-gcc -Itest-atom.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-atom.p/test_atom.c.o -MF test-atom.p/test_atom.c.o.d -o test-atom.p/test_atom.c.o -c ../libxkbcommon-1.7.0/test/atom.c
+[109/150] x86_64-pc-linux-gnu-gcc  -o test-atom test-atom.p/test_atom.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[110/150] x86_64-pc-linux-gnu-gcc -Itest-utf8.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-utf8.p/test_utf8.c.o -MF test-utf8.p/test_utf8.c.o.d -o test-utf8.p/test_utf8.c.o -c ../libxkbcommon-1.7.0/test/utf8.c
+[111/150] x86_64-pc-linux-gnu-gcc  -o test-utf8 test-utf8.p/test_utf8.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[112/150] x86_64-pc-linux-gnu-gcc -Itest-state.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-state.p/test_state.c.o -MF test-state.p/test_state.c.o.d -o test-state.p/test_state.c.o -c ../libxkbcommon-1.7.0/test/state.c
+[113/150] x86_64-pc-linux-gnu-gcc  -o test-state test-state.p/test_state.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[114/150] x86_64-pc-linux-gnu-gcc -Itest-keyseq.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-keyseq.p/test_keyseq.c.o -MF test-keyseq.p/test_keyseq.c.o.d -o test-keyseq.p/test_keyseq.c.o -c ../libxkbcommon-1.7.0/test/keyseq.c
+[115/150] x86_64-pc-linux-gnu-gcc  -o test-keyseq test-keyseq.p/test_keyseq.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[116/150] x86_64-pc-linux-gnu-gcc -Itest-rulescomp.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-rulescomp.p/test_rulescomp.c.o -MF test-rulescomp.p/test_rulescomp.c.o.d -o test-rulescomp.p/test_rulescomp.c.o -c ../libxkbcommon-1.7.0/test/rulescomp.c
+[117/150] x86_64-pc-linux-gnu-gcc  -o test-rulescomp test-rulescomp.p/test_rulescomp.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[118/150] x86_64-pc-linux-gnu-gcc -Itest-compose.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-compose.p/test_compose.c.o -MF test-compose.p/test_compose.c.o.d -o test-compose.p/test_compose.c.o -c ../libxkbcommon-1.7.0/test/compose.c
+[119/150] x86_64-pc-linux-gnu-gcc  -o test-compose test-compose.p/test_compose.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[120/150] x86_64-pc-linux-gnu-gcc -Itest-utils.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-utils.p/test_utils.c.o -MF test-utils.p/test_utils.c.o.d -o test-utils.p/test_utils.c.o -c ../libxkbcommon-1.7.0/test/utils.c
+[121/150] x86_64-pc-linux-gnu-gcc  -o test-utils test-utils.p/test_utils.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[122/150] x86_64-pc-linux-gnu-gcc -Itest-modifiers.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-modifiers.p/test_modifiers.c.o -MF test-modifiers.p/test_modifiers.c.o.d -o test-modifiers.p/test_modifiers.c.o -c ../libxkbcommon-1.7.0/test/modifiers.c
+[123/150] x86_64-pc-linux-gnu-gcc  -o test-modifiers test-modifiers.p/test_modifiers.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[124/150] x86_64-pc-linux-gnu-gcc -Itest-messages.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -I../libxkbcommon-1.7.0/tools -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-messages.p/test_messages.c.o -MF test-messages.p/test_messages.c.o.d -o test-messages.p/test_messages.c.o -c ../libxkbcommon-1.7.0/test/messages.c
+[125/150] x86_64-pc-linux-gnu-gcc -Itest-messages.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -I../libxkbcommon-1.7.0/tools -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-messages.p/tools_messages.c.o -MF test-messages.p/tools_messages.c.o.d -o test-messages.p/tools_messages.c.o -c ../libxkbcommon-1.7.0/tools/messages.c
+[126/150] x86_64-pc-linux-gnu-gcc  -o test-messages test-messages.p/test_messages.c.o test-messages.p/tools_messages.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[127/150] x86_64-pc-linux-gnu-gcc -Itest-x11.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-x11.p/test_x11.c.o -MF test-x11.p/test_x11.c.o.d -o test-x11.p/test_x11.c.o -c ../libxkbcommon-1.7.0/test/x11.c
+[128/150] x86_64-pc-linux-gnu-gcc  -o test-x11 test-x11.p/test_x11.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group libxkbcommon-x11-internal.a libxkbcommon-test-internal.a /usr/lib64/libxcb.so /usr/lib64/libxcb-xkb.so -Wl,--end-group
+[129/150] x86_64-pc-linux-gnu-gcc -Itest-x11comp.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-x11comp.p/test_x11comp.c.o -MF test-x11comp.p/test_x11comp.c.o.d -o test-x11comp.p/test_x11comp.c.o -c ../libxkbcommon-1.7.0/test/x11comp.c
+[130/150] x86_64-pc-linux-gnu-gcc  -o test-x11comp test-x11comp.p/test_x11comp.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group libxkbcommon-x11-internal.a libxkbcommon-test-internal.a /usr/lib64/libxcb.so /usr/lib64/libxcb-xkb.so -Wl,--end-group
+[131/150] x86_64-pc-linux-gnu-gcc -Itest-registry.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ test-registry.p/test_registry.c.o -MF test-registry.p/test_registry.c.o.d -o test-registry.p/test_registry.c.o -c ../libxkbcommon-1.7.0/test/registry.c
+[132/150] x86_64-pc-linux-gnu-gcc  -o test-registry test-registry.p/test_registry.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/' -Wl,-rpath-link,/var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64/ -Wl,--start-group libxkbregistry.so.0.0.0 libxkbcommon-test-internal.a -Wl,--end-group
+[133/150] x86_64-pc-linux-gnu-gcc -Ifuzz-keymap.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ fuzz-keymap.p/fuzz_keymap_target.c.o -MF fuzz-keymap.p/fuzz_keymap_target.c.o.d -o fuzz-keymap.p/fuzz_keymap_target.c.o -c ../libxkbcommon-1.7.0/fuzz/keymap/target.c
+[134/150] x86_64-pc-linux-gnu-gcc  -o fuzz-keymap fuzz-keymap.p/fuzz_keymap_target.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[135/150] x86_64-pc-linux-gnu-gcc -Ifuzz-compose.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ fuzz-compose.p/fuzz_compose_target.c.o -MF fuzz-compose.p/fuzz_compose_target.c.o.d -o fuzz-compose.p/fuzz_compose_target.c.o -c ../libxkbcommon-1.7.0/fuzz/compose/target.c
+[136/150] x86_64-pc-linux-gnu-gcc  -o fuzz-compose fuzz-compose.p/fuzz_compose_target.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[137/150] x86_64-pc-linux-gnu-gcc -Ibench-key-proc.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ bench-key-proc.p/bench_key-proc.c.o -MF bench-key-proc.p/bench_key-proc.c.o.d -o bench-key-proc.p/bench_key-proc.c.o -c ../libxkbcommon-1.7.0/bench/key-proc.c
+[138/150] x86_64-pc-linux-gnu-gcc  -o bench-key-proc bench-key-proc.p/bench_key-proc.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[139/150] x86_64-pc-linux-gnu-gcc -Ibench-rules.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ bench-rules.p/bench_rules.c.o -MF bench-rules.p/bench_rules.c.o.d -o bench-rules.p/bench_rules.c.o -c ../libxkbcommon-1.7.0/bench/rules.c
+[140/150] x86_64-pc-linux-gnu-gcc  -o bench-rules bench-rules.p/bench_rules.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[141/150] x86_64-pc-linux-gnu-gcc -Ibench-rulescomp.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ bench-rulescomp.p/bench_rulescomp.c.o -MF bench-rulescomp.p/bench_rulescomp.c.o.d -o bench-rulescomp.p/bench_rulescomp.c.o -c ../libxkbcommon-1.7.0/bench/rulescomp.c
+[142/150] x86_64-pc-linux-gnu-gcc  -o bench-rulescomp bench-rulescomp.p/bench_rulescomp.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[143/150] x86_64-pc-linux-gnu-gcc -Ibench-compose.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ bench-compose.p/bench_compose.c.o -MF bench-compose.p/bench_compose.c.o.d -o bench-compose.p/bench_compose.c.o -c ../libxkbcommon-1.7.0/bench/compose.c
+[144/150] x86_64-pc-linux-gnu-gcc  -o bench-compose bench-compose.p/bench_compose.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[145/150] x86_64-pc-linux-gnu-gcc -Ibench-compose-traversal.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ bench-compose-traversal.p/bench_compose-traversal.c.o -MF bench-compose-traversal.p/bench_compose-traversal.c.o.d -o bench-compose-traversal.p/bench_compose-traversal.c.o -c ../libxkbcommon-1.7.0/bench/compose-traversal.c
+[146/150] x86_64-pc-linux-gnu-gcc  -o bench-compose-traversal bench-compose-traversal.p/bench_compose-traversal.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[147/150] x86_64-pc-linux-gnu-gcc -Ibench-atom.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ bench-atom.p/bench_atom.c.o -MF bench-atom.p/bench_atom.c.o.d -o bench-atom.p/bench_atom.c.o -c ../libxkbcommon-1.7.0/bench/atom.c
+[148/150] x86_64-pc-linux-gnu-gcc  -o bench-atom bench-atom.p/bench_atom.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs libxkbcommon-test-internal.a
+[149/150] x86_64-pc-linux-gnu-gcc -Ibench-x11.p -I. -I../libxkbcommon-1.7.0 -I../libxkbcommon-1.7.0/src -I../libxkbcommon-1.7.0/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -fno-strict-aliasing -Wno-unused-parameter -Wno-missing-field-initializers -Wpointer-arith -Wmissing-declarations -Wformat=2 -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wbad-function-cast -Wshadow -Wlogical-op -Wdate-time -Wwrite-strings -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ bench-x11.p/bench_x11.c.o -MF bench-x11.p/bench_x11.c.o.d -o bench-x11.p/bench_x11.c.o -c ../libxkbcommon-1.7.0/bench/x11.c
+[150/150] x86_64-pc-linux-gnu-gcc  -o bench-x11 bench-x11.p/bench_x11.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group libxkbcommon-x11-internal.a libxkbcommon-test-internal.a /usr/lib64/libxcb.so /usr/lib64/libxcb-xkb.so -Wl,--end-group
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -j 2 -l 2.0 -v
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: x11-libs/libxkbcommon-1.7.0
+
+&gt;&gt;&gt; Install x11-libs/libxkbcommon-1.7.0 into /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image --no-rebuild
+Installing libxkbcommon.so.0.0.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64
+Installing libxkbcommon-x11.so.0.0.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64
+Installing libxkbregistry.so.0.0.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/include/xkbcommon/xkbcommon.h to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/include/xkbcommon
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/include/xkbcommon/xkbcommon-compat.h to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/include/xkbcommon
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/include/xkbcommon/xkbcommon-compose.h to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/include/xkbcommon
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/include/xkbcommon/xkbcommon-keysyms.h to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/include/xkbcommon
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/include/xkbcommon/xkbcommon-names.h to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/include/xkbcommon
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/include/xkbcommon/xkbcommon-x11.h to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/include/xkbcommon
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0/include/xkbcommon/xkbregistry.h to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/include/xkbcommon
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64/meson-private/xkbcommon.pc to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64/meson-private/xkbcommon-x11.pc to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/work/libxkbcommon-1.7.0-abi_x86_64.amd64/meson-private/xkbregistry.pc to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/pkgconfig
+Installing symlink pointing to libxkbcommon.so.0.0.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/libxkbcommon.so.0
+Installing symlink pointing to libxkbcommon.so.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/libxkbcommon.so
+Installing symlink pointing to libxkbcommon-x11.so.0.0.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/libxkbcommon-x11.so.0
+Installing symlink pointing to libxkbcommon-x11.so.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/libxkbcommon-x11.so
+Installing symlink pointing to libxkbregistry.so.0.0.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/libxkbregistry.so.0
+Installing symlink pointing to libxkbregistry.so.0 to /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image/usr/lib64/libxkbregistry.so
+&gt;&gt;&gt; Completed installing x11-libs/libxkbcommon-1.7.0 into /var/tmp/portage/x11-libs/libxkbcommon-1.7.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 19604 KiB (19.1 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    880 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libxkbcommon.so.0.0.0
+   /usr/lib64/libxkbcommon-x11.so.0.0.0
+   /usr/lib64/libxkbregistry.so.0.0.0
+
+</pre>
+</body>
+
+</html>

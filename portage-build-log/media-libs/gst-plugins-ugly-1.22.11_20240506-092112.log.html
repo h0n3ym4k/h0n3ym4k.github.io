@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/gst-plugins-ugly-1.22.11:1.0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gstreamer@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux nls
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Checking whether python3_12 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.12 to build (via PYTHON_COMPAT iteration)
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking gst-plugins-ugly-1.22.11.tar.xz to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+ <span class="ansi33">*</span> QA: IUSE=orc is missing while plugin supports it
+ <span class="ansi32">*</span> Configuring to build asfdemux dvdlpcmdec dvdsub realmedia  plugin(s) ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig --pkg-config-path /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig --native-file /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dasfdemux=enabled -Ddvdlpcmdec=enabled -Ddvdsub=enabled -Drealmedia=enabled -Da52dec=disabled -Damrnb=disabled -Damrwbdec=disabled -Dcdio=disabled -Ddvdread=disabled -Dmpeg2dec=disabled -Dsidplay=disabled -Dx264=disabled -Dorc=disabled -Dnls=enabled -Dtests=disabled -Dpackage-name=Gentoo GStreamer ebuild -Dpackage-origin=https://www.gentoo.org /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11 /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11-abi_x86_64.amd64
+The Meson build system
+Version: 1.4.0
+Source dir: /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11
+Build dir: /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11-abi_x86_64.amd64
+Build type: native build
+Project name: gst-plugins-ugly
+Project version: 1.22.11
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 13.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 13.2.1_p20240210 p14) 13.2.1 20240210")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.41
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+C++ compiler for the host machine: x86_64-pc-linux-gnu-g++ (gcc 13.2.1 "x86_64-pc-linux-gnu-g++ (Gentoo 13.2.1_p20240210 p14) 13.2.1 20240210")
+C++ linker for the host machine: x86_64-pc-linux-gnu-g++ ld.bfd 2.41
+Compiler for C supports link arguments -Wl,-Bsymbolic-functions: YES 
+Compiler for C++ supports link arguments -Wl,-Bsymbolic-functions: YES 
+Compiler for C supports link arguments -Wl,-z,nodelete: YES 
+Compiler for C++ supports link arguments -Wl,-z,nodelete: YES 
+Has header "dlfcn.h" : YES 
+Has header "inttypes.h" : YES 
+Has header "malloc.h" : YES 
+Has header "memory.h" : YES 
+Has header "stdint.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "strings.h" : YES 
+Has header "string.h" : YES 
+Has header "sys/stat.h" : YES 
+Has header "sys/types.h" : YES 
+Has header "unistd.h" : YES 
+Has header "winsock2.h" : NO 
+Checking for function "dcgettext" : YES 
+Checking for size of "char" : 1 
+Checking for size of "int" : 4 
+Checking for size of "long" : 8 
+Checking for size of "short" : 2 
+Checking for size of "void*" : 8 
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.2.0
+Run-time dependency gstreamer-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-app-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-video-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-pbutils-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-tag-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-fft-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-audio-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-base-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-riff-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-rtp-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-net-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-sdp-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-rtsp-1.0 found: YES 1.22.11
+Dependency gstreamer-check-1.0 skipped: feature tests disabled
+Run-time dependency gstreamer-controller-1.0 found: YES 1.22.11
+Dependency orc-0.4 skipped: feature orc disabled
+Run-time dependency gmodule-no-export-2.0 found: YES 2.78.3
+Header "gst/gstconfig.h" has symbol "GST_DISABLE_GST_DEBUG" with dependency gstreamer-1.0: NO 
+Message: GStreamer debug system is enabled
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C++ supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C++ supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C++ supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wformat: YES 
+Compiler for C++ supports arguments -Wformat: YES 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Compiler for C++ supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C++ supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C++ supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C++ supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Waddress: YES 
+Compiler for C++ supports arguments -Waddress: YES 
+Compiler for C supports arguments -Wno-multichar: YES 
+Compiler for C++ supports arguments -Wno-multichar: YES 
+Compiler for C supports arguments -Wvla: YES 
+Compiler for C++ supports arguments -Wvla: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C++ supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Waggregate-return: YES 
+Compiler for C++ supports arguments -Waggregate-return: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C++ supports arguments -fno-strict-aliasing: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C++ supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Message: Disabling GLib cast checks
+Program python3 found: YES (/var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/temp/python3.12/bin/python3)
+Library a52 skipped: feature a52dec disabled
+Dependency opencore-amrnb skipped: feature amrnb disabled
+Dependency opencore-amrwb skipped: feature amrwbdec disabled
+Dependency libcdio skipped: feature cdio disabled
+Dependency dvdread skipped: feature dvdread disabled
+Dependency libmpeg2 skipped: feature mpeg2dec disabled
+Compiler for language cpp skipped: feature sidplay disabled
+Dependency x264 skipped: feature x264 disabled
+Program xgettext found: YES (/usr/bin/xgettext)
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+Program /usr/libexec/gstreamer-1.0/gst-plugins-doc-cache-generator found: YES (/usr/libexec/gstreamer-1.0/gst-plugins-doc-cache-generator)
+Program hotdoc found: NO
+Message: Hotdoc not found, not building the documentation
+Program scripts/extract-release-date-from-doap-file.py found: YES (/var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11/scripts/extract-release-date-from-doap-file.py)
+Message: Package release date: 2024-03-19
+Configuring config.h using configuration
+Build targets in project: 53
+
+gst-plugins-ugly 1.22.11
+
+    Plugins               : asf, dvdlpcmdec, dvdsub, realmedia
+    (A)GPL license allowed: false
+
+  User defined options
+    Native files          : /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path : /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig
+    buildtype             : plain
+    libdir                : lib64
+    localstatedir         : /var/lib
+    pkg_config_path       : /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig
+    prefix                : /usr
+    sysconfdir            : /etc
+    werror                : false
+    wrap_mode             : nodownload
+    b_lto                 : false
+    b_pch                 : false
+    a52dec                : disabled
+    amrnb                 : disabled
+    amrwbdec              : disabled
+    asfdemux              : enabled
+    cdio                  : disabled
+    dvdlpcmdec            : enabled
+    dvdread               : disabled
+    dvdsub                : enabled
+    mpeg2dec              : disabled
+    nls                   : enabled
+    orc                   : disabled
+    package-name          : Gentoo GStreamer ebuild
+    package-origin        : https://www.gentoo.org
+    realmedia             : enabled
+    sidplay               : disabled
+    tests                 : disabled
+    x264                  : disabled
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/work/gst-plugins-ugly-1.22.11 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -j2 -l2
+[1/71] x86_64-pc-linux-gnu-gcc -Igst/asfdemux/libgstasf.so.p -Igst/asfdemux -I../gst-plugins-ugly-1.22.11/gst/asfdemux -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/asfdemux/libgstasf.so.p/gstasf.c.o -MF gst/asfdemux/libgstasf.so.p/gstasf.c.o.d -o gst/asfdemux/libgstasf.so.p/gstasf.c.o -c ../gst-plugins-ugly-1.22.11/gst/asfdemux/gstasf.c
+[2/71] x86_64-pc-linux-gnu-gcc -Igst/asfdemux/libgstasf.so.p -Igst/asfdemux -I../gst-plugins-ugly-1.22.11/gst/asfdemux -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/asfdemux/libgstasf.so.p/gstasfelement.c.o -MF gst/asfdemux/libgstasf.so.p/gstasfelement.c.o.d -o gst/asfdemux/libgstasf.so.p/gstasfelement.c.o -c ../gst-plugins-ugly-1.22.11/gst/asfdemux/gstasfelement.c
+[3/71] x86_64-pc-linux-gnu-gcc -Igst/asfdemux/libgstasf.so.p -Igst/asfdemux -I../gst-plugins-ugly-1.22.11/gst/asfdemux -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/asfdemux/libgstasf.so.p/asfheaders.c.o -MF gst/asfdemux/libgstasf.so.p/asfheaders.c.o.d -o gst/asfdemux/libgstasf.so.p/asfheaders.c.o -c ../gst-plugins-ugly-1.22.11/gst/asfdemux/asfheaders.c
+[4/71] x86_64-pc-linux-gnu-gcc -Igst/asfdemux/libgstasf.so.p -Igst/asfdemux -I../gst-plugins-ugly-1.22.11/gst/asfdemux -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/asfdemux/libgstasf.so.p/asfpacket.c.o -MF gst/asfdemux/libgstasf.so.p/asfpacket.c.o.d -o gst/asfdemux/libgstasf.so.p/asfpacket.c.o -c ../gst-plugins-ugly-1.22.11/gst/asfdemux/asfpacket.c
+[5/71] x86_64-pc-linux-gnu-gcc -Igst/asfdemux/libgstasf.so.p -Igst/asfdemux -I../gst-plugins-ugly-1.22.11/gst/asfdemux -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/asfdemux/libgstasf.so.p/gstrtpasfdepay.c.o -MF gst/asfdemux/libgstasf.so.p/gstrtpasfdepay.c.o.d -o gst/asfdemux/libgstasf.so.p/gstrtpasfdepay.c.o -c ../gst-plugins-ugly-1.22.11/gst/asfdemux/gstrtpasfdepay.c
+[6/71] x86_64-pc-linux-gnu-gcc -Igst/asfdemux/libgstasf.so.p -Igst/asfdemux -I../gst-plugins-ugly-1.22.11/gst/asfdemux -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/asfdemux/libgstasf.so.p/gstrtspwms.c.o -MF gst/asfdemux/libgstasf.so.p/gstrtspwms.c.o.d -o gst/asfdemux/libgstasf.so.p/gstrtspwms.c.o -c ../gst-plugins-ugly-1.22.11/gst/asfdemux/gstrtspwms.c
+[7/71] x86_64-pc-linux-gnu-gcc -Igst/dvdlpcmdec/libgstdvdlpcmdec.so.p -Igst/dvdlpcmdec -I../gst-plugins-ugly-1.22.11/gst/dvdlpcmdec -I. -I../gst-plugins-ugly-1.22.11 -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/dvdlpcmdec/libgstdvdlpcmdec.so.p/gstdvdlpcmdec.c.o -MF gst/dvdlpcmdec/libgstdvdlpcmdec.so.p/gstdvdlpcmdec.c.o.d -o gst/dvdlpcmdec/libgstdvdlpcmdec.so.p/gstdvdlpcmdec.c.o -c ../gst-plugins-ugly-1.22.11/gst/dvdlpcmdec/gstdvdlpcmdec.c
+[8/71] x86_64-pc-linux-gnu-gcc  -o gst/dvdlpcmdec/libgstdvdlpcmdec.so gst/dvdlpcmdec/libgstdvdlpcmdec.so.p/gstdvdlpcmdec.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libgstdvdlpcmdec.so -Wl,-Bsymbolic-functions -Wl,-z,nodelete -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libgstbase-1.0.so /usr/lib64/libgstreamer-1.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgstaudio-1.0.so -Wl,--end-group
+[9/71] x86_64-pc-linux-gnu-gcc -Igst/asfdemux/libgstasf.so.p -Igst/asfdemux -I../gst-plugins-ugly-1.22.11/gst/asfdemux -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/asfdemux/libgstasf.so.p/gstasfdemux.c.o -MF gst/asfdemux/libgstasf.so.p/gstasfdemux.c.o.d -o gst/asfdemux/libgstasf.so.p/gstasfdemux.c.o -c ../gst-plugins-ugly-1.22.11/gst/asfdemux/gstasfdemux.c
+[10/71] x86_64-pc-linux-gnu-gcc  -o gst/asfdemux/libgstasf.so gst/asfdemux/libgstasf.so.p/gstasfdemux.c.o gst/asfdemux/libgstasf.so.p/gstasf.c.o gst/asfdemux/libgstasf.so.p/gstasfelement.c.o gst/asfdemux/libgstasf.so.p/asfheaders.c.o gst/asfdemux/libgstasf.so.p/asfpacket.c.o gst/asfdemux/libgstasf.so.p/gstrtpasfdepay.c.o gst/asfdemux/libgstasf.so.p/gstrtspwms.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libgstasf.so -Wl,-Bsymbolic-functions -Wl,-z,nodelete -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libgstbase-1.0.so /usr/lib64/libgstreamer-1.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgstrtp-1.0.so /usr/lib64/libgstvideo-1.0.so /usr/lib64/libgstaudio-1.0.so /usr/lib64/libgsttag-1.0.so /usr/lib64/libgstriff-1.0.so /usr/lib64/libgstrtsp-1.0.so /usr/lib64/libgstsdp-1.0.so /usr/lib64/libgio-2.0.so -Wl,--end-group
+[11/71] x86_64-pc-linux-gnu-gcc -Igst/dvdsub/libgstdvdsub.so.p -Igst/dvdsub -I../gst-plugins-ugly-1.22.11/gst/dvdsub -I. -I../gst-plugins-ugly-1.22.11 -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/dvdsub/libgstdvdsub.so.p/gstdvdsubparse.c.o -MF gst/dvdsub/libgstdvdsub.so.p/gstdvdsubparse.c.o.d -o gst/dvdsub/libgstdvdsub.so.p/gstdvdsubparse.c.o -c ../gst-plugins-ugly-1.22.11/gst/dvdsub/gstdvdsubparse.c
+[12/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/rademux.c.o -MF gst/realmedia/libgstrealmedia.so.p/rademux.c.o.d -o gst/realmedia/libgstrealmedia.so.p/rademux.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/rademux.c
+[13/71] x86_64-pc-linux-gnu-gcc -Igst/dvdsub/libgstdvdsub.so.p -Igst/dvdsub -I../gst-plugins-ugly-1.22.11/gst/dvdsub -I. -I../gst-plugins-ugly-1.22.11 -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/dvdsub/libgstdvdsub.so.p/gstdvdsubdec.c.o -MF gst/dvdsub/libgstdvdsub.so.p/gstdvdsubdec.c.o.d -o gst/dvdsub/libgstdvdsub.so.p/gstdvdsubdec.c.o -c ../gst-plugins-ugly-1.22.11/gst/dvdsub/gstdvdsubdec.c
+[14/71] x86_64-pc-linux-gnu-gcc  -o gst/dvdsub/libgstdvdsub.so gst/dvdsub/libgstdvdsub.so.p/gstdvdsubdec.c.o gst/dvdsub/libgstdvdsub.so.p/gstdvdsubparse.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libgstdvdsub.so -Wl,-Bsymbolic-functions -Wl,-z,nodelete -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libgstbase-1.0.so /usr/lib64/libgstreamer-1.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgstvideo-1.0.so -Wl,--end-group
+[15/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/rmutils.c.o -MF gst/realmedia/libgstrealmedia.so.p/rmutils.c.o.d -o gst/realmedia/libgstrealmedia.so.p/rmutils.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/rmutils.c
+[16/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/rdtdepay.c.o -MF gst/realmedia/libgstrealmedia.so.p/rdtdepay.c.o.d -o gst/realmedia/libgstrealmedia.so.p/rdtdepay.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/rdtdepay.c
+[17/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/rmdemux.c.o -MF gst/realmedia/libgstrealmedia.so.p/rmdemux.c.o.d -o gst/realmedia/libgstrealmedia.so.p/rmdemux.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/rmdemux.c
+[18/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/rdtmanager.c.o -MF gst/realmedia/libgstrealmedia.so.p/rdtmanager.c.o.d -o gst/realmedia/libgstrealmedia.so.p/rdtmanager.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/rdtmanager.c
+[19/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/realhash.c.o -MF gst/realmedia/libgstrealmedia.so.p/realhash.c.o.d -o gst/realmedia/libgstrealmedia.so.p/realhash.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/realhash.c
+[20/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/rtspreal.c.o -MF gst/realmedia/libgstrealmedia.so.p/rtspreal.c.o.d -o gst/realmedia/libgstrealmedia.so.p/rtspreal.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/rtspreal.c
+[21/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/asmrules.c.o -MF gst/realmedia/libgstrealmedia.so.p/asmrules.c.o.d -o gst/realmedia/libgstrealmedia.so.p/asmrules.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/asmrules.c
+[22/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/rdtjitterbuffer.c.o -MF gst/realmedia/libgstrealmedia.so.p/rdtjitterbuffer.c.o.d -o gst/realmedia/libgstrealmedia.so.p/rdtjitterbuffer.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/rdtjitterbuffer.c
+[23/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/pnmsrc.c.o -MF gst/realmedia/libgstrealmedia.so.p/pnmsrc.c.o.d -o gst/realmedia/libgstrealmedia.so.p/pnmsrc.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/pnmsrc.c
+[24/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/gstrdtbuffer.c.o -MF gst/realmedia/libgstrealmedia.so.p/gstrdtbuffer.c.o.d -o gst/realmedia/libgstrealmedia.so.p/gstrdtbuffer.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/gstrdtbuffer.c
+[25/71] /usr/bin/msgfmt -o po/af/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/af.po
+[26/71] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ast.po
+[27/71] /usr/bin/msgfmt -o po/az/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/az.po
+[28/71] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/bg.po
+[29/71] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ca.po
+[30/71] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/cs.po
+[31/71] /usr/bin/msgfmt -o po/da/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/da.po
+[32/71] /usr/bin/msgfmt -o po/de/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/de.po
+[33/71] /usr/bin/msgfmt -o po/el/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/el.po
+[34/71] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/en_GB.po
+[35/71] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/eo.po
+[36/71] /usr/bin/msgfmt -o po/es/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/es.po
+[37/71] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/eu.po
+[38/71] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/fi.po
+[39/71] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/fr.po
+[40/71] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/fur.po
+[41/71] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/gl.po
+[42/71] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/hr.po
+[43/71] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/hu.po
+[44/71] /usr/bin/msgfmt -o po/id/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/id.po
+[45/71] /usr/bin/msgfmt -o po/it/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/it.po
+[46/71] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ja.po
+[47/71] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ka.po
+[48/71] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/lt.po
+[49/71] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/lv.po
+[50/71] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ms.po
+[51/71] /usr/bin/msgfmt -o po/mt/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/mt.po
+[52/71] x86_64-pc-linux-gnu-gcc -Igst/realmedia/libgstrealmedia.so.p -Igst/realmedia -I../gst-plugins-ugly-1.22.11/gst/realmedia -I. -I../gst-plugins-ugly-1.22.11 -I../gst-plugins-ugly-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/orc-0.4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -Waggregate-return -fno-strict-aliasing -fvisibility=hidden -Wmissing-prototypes -Wold-style-definition -Wnested-externs -DG_DISABLE_CAST_CHECKS -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ gst/realmedia/libgstrealmedia.so.p/realmedia.c.o -MF gst/realmedia/libgstrealmedia.so.p/realmedia.c.o.d -o gst/realmedia/libgstrealmedia.so.p/realmedia.c.o -c ../gst-plugins-ugly-1.22.11/gst/realmedia/realmedia.c
+[53/71] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/nb.po
+[54/71] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/nl.po
+[55/71] /usr/bin/msgfmt -o po/or/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/or.po
+[56/71] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/pl.po
+[57/71] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/pt_BR.po
+[58/71] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ro.po
+[59/71] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ru.po
+[60/71] x86_64-pc-linux-gnu-gcc  -o gst/realmedia/libgstrealmedia.so gst/realmedia/libgstrealmedia.so.p/rademux.c.o gst/realmedia/libgstrealmedia.so.p/rmdemux.c.o gst/realmedia/libgstrealmedia.so.p/rmutils.c.o gst/realmedia/libgstrealmedia.so.p/rdtdepay.c.o gst/realmedia/libgstrealmedia.so.p/rdtmanager.c.o gst/realmedia/libgstrealmedia.so.p/rtspreal.c.o gst/realmedia/libgstrealmedia.so.p/realhash.c.o gst/realmedia/libgstrealmedia.so.p/asmrules.c.o gst/realmedia/libgstrealmedia.so.p/rdtjitterbuffer.c.o gst/realmedia/libgstrealmedia.so.p/gstrdtbuffer.c.o gst/realmedia/libgstrealmedia.so.p/pnmsrc.c.o gst/realmedia/libgstrealmedia.so.p/realmedia.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libgstrealmedia.so -Wl,-Bsymbolic-functions -Wl,-z,nodelete -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libgstbase-1.0.so /usr/lib64/libgstreamer-1.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgstrtsp-1.0.so /usr/lib64/libgstsdp-1.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libgstpbutils-1.0.so /usr/lib64/libgstvideo-1.0.so /usr/lib64/libgstaudio-1.0.so -Wl,--end-group
+[61/71] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/sk.po
+[62/71] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/sl.po
+[63/71] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/sq.po
+[64/71] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/sr.po
+[65/71] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/sv.po
+[66/71] /usr/bin/msgfmt -o po/ta/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/ta.po
+[67/71] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/tr.po
+[68/71] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/uk.po
+[69/71] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/vi.po
+[70/71] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/zh_TW.po
+[71/71] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/gst-plugins-ugly-1.0.mo ../gst-plugins-ugly-1.22.11/po/zh_CN.po
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: media-libs/gst-plugins-ugly-1.22.11
+
+&gt;&gt;&gt; Install media-libs/gst-plugins-ugly-1.22.11 into /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+ninja -v -j2 -l2 install
+[0/1] /usr/lib/python-exec/python3.11/meson install --no-rebuild
+Installing gst/asfdemux/libgstasf.so to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/lib64/gstreamer-1.0
+Installing gst/dvdlpcmdec/libgstdvdlpcmdec.so to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/lib64/gstreamer-1.0
+Installing gst/dvdsub/libgstdvdsub.so to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/lib64/gstreamer-1.0
+Installing gst/realmedia/libgstrealmedia.so to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/lib64/gstreamer-1.0
+Installing po/af/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/af/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/az/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/da/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/de/LC_MESSAGES
+Installing po/el/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/es/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/eu/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/id/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/id/LC_MESSAGES
+Installing po/it/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/lv/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ms/LC_MESSAGES
+Installing po/mt/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/mt/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/or/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/or/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/ta/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/gst-plugins-ugly-1.0.mo to /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image/usr/share/locale/zh_TW/LC_MESSAGES
+&gt;&gt;&gt; Completed installing media-libs/gst-plugins-ugly-1.22.11 into /var/tmp/portage/media-libs/gst-plugins-ugly-1.22.11/image
+
+ <span class="ansi32">*</span> Final size of build directory: 4416 KiB (4.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1160 KiB (1.1 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/gstreamer-1.0/libgstasf.so
+   /usr/lib64/gstreamer-1.0/libgstdvdlpcmdec.so
+   /usr/lib64/gstreamer-1.0/libgstdvdsub.so
+   /usr/lib64/gstreamer-1.0/libgstrealmedia.so
+
+</pre>
+</body>
+
+</html>
