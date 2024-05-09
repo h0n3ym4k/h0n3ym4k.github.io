@@ -1,0 +1,532 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-arch/zip-3.0-r7:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 bzip2 crypt elibc_glibc kernel_linux unicode
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking zip30.zip to /var/tmp/portage/app-arch/zip-3.0-r7/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-arch/zip-3.0-r7/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-arch/zip-3.0-r7/work/zip30 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-arch/zip-3.0-r7/work/zip30 ...
+ <span class="ansi32">*</span> sh ./unix/configure x86_64-pc-linux-gnu-gcc -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89  -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT /var/tmp/portage/app-arch/zip-3.0-r7/temp
+Check C compiler type (optimization options)
+  GNU C (-O3)
+Check bzip2 support
+  Check for bzip2 compiled library in IZ_BZIP2 (/var/tmp/portage/app-arch/zip-3.0-r7/temp)
+    /var/tmp/portage/app-arch/zip-3.0-r7/temp/libbz2.a not found
+-- Since IZ_BZIP2 defined, skipping OS and bzip2 checks - no bzip2
+Check for the C preprocessor
+Check if we can use asm code
+Checking if compiler wants to create pic code
+Check for ANSI options
+Check for prototypes
+Check the handling of const
+Check for time_t
+Check for size_t
+Check for off_t
+Check size of UIDs and GIDs
+(Now zip stores variable size UIDs/GIDs using a new extra field.  This
+ tests if this OS uses 16-bit UIDs/GIDs and so if the old 16-bit storage
+ should also be used for backward compatibility.)
+  s.st_uid is 4 bytes
+  s.st_gid is 4 bytes
+-- UID not 2 bytes - disabling old 16-bit UID/GID support
+Check for Large File Support
+  off_t is 8 bytes
+-- yes we have Large File Support!
+Check for wide char support
+-- have wchar_t - enabling Unicode support
+Check for gcc no-builtin flag
+Check for rmdir
+Check for strchr
+Check for strrchr
+Check for rename
+Check for mktemp
+Check for mktime
+Check for mkstemp
+Check for memset
+Check for memmove
+Check for strerror
+Check for errno declaration
+Check for directory libraries
+Check for readlink
+Check for directory include file
+Check for nonexistent include files
+Check for term I/O include file
+Check for valloc
+Check for /usr/local/bin and /usr/local/man
+Check for OS-specific flags
+Check for symbolic links
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-arch/zip-3.0-r7/work/zip30 ...
+make -j2 'CPP=x86_64-pc-linux-gnu-gcc -E' -f unix/Makefile generic 
+eval make -f unix/Makefile zips `cat flags`
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipfile.c
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putlocal’ at zipfile.c:5425:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putlocal’:
+cc1: note: destination object is likely at address zero
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putcentral’ at zipfile.c:5677:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putcentral’:
+cc1: note: destination object is likely at address zero
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putcentral’ at zipfile.c:5678:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putcentral’:
+cc1: note: destination object is likely at address zero
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putcentral’ at zipfile.c:5679:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putcentral’:
+cc1: note: destination object is likely at address zero
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zip.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipup.c
+In file included from zipup.c:109:
+zipup.c: In function ‘file_read’:
+unix/zipup.h:21:22: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   21 | #define zread(f,b,n) read(f,b,n)
+      |                      ^~~~~~~~~~~
+zipup.c:1264:10: note: in expansion of macro ‘zread’
+ 1264 |          zread(ifile, buf, 1); len = 1; /* keep single \r if EOF */
+      |          ^~~~~
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H fileio.c
+fileio.c: In function ‘ask_for_split_read_path’:
+fileio.c:2120:5: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2120 |     fgets(buf, SPLIT_MAXPATH, stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c:2143:7: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2143 |       fgets(buf, SPLIT_MAXPATH, stdin);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ask_for_split_write_path’:
+fileio.c:2324:5: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2324 |     fgets(buf, FNMAX, stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [38, 2147483623] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset 6 into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [38, 2147483623] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset 6 into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [39, 2147483624] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [7, 8] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [39, 2147483624] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [7, 8] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [40, 2147483625] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [8, 9] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [40, 2147483625] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [8, 9] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [41, 2147483626] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [9, 10] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [41, 2147483626] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [9, 10] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [42, 2147483627] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [10, 11] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [42, 2147483627] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [10, 11] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [43, 2147483628] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [11, 12] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [43, 2147483628] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [11, 12] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [44, 2147483629] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [12, 13] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [44, 2147483629] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [12, 13] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [45, 2147483630] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [13, 14] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [45, 2147483630] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [13, 14] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [46, 2147483631] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [14, 15] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [46, 2147483631] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [14, 15] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [47, 2147483632] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [15, 16] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [47, 2147483632] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [15, 16] into destination object ‘mb’ of size 6
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H globals.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H util.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H ttyio.c
+ttyio.c: In function ‘getp’:
+ttyio.c:628:13: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  628 |             read(f, &amp;c, 1);
+      |             ^~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H crypt.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H crc32.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H unix/unix.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zbz2err.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H deflate.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H trees.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipcloak.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o zipfile_.o zipfile.c
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putlocal’ at zipfile.c:5425:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putlocal’:
+cc1: note: destination object is likely at address zero
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putcentral’ at zipfile.c:5677:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putcentral’:
+cc1: note: destination object is likely at address zero
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putcentral’ at zipfile.c:5678:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putcentral’:
+cc1: note: destination object is likely at address zero
+In function ‘write_ushort_to_mem’,
+    inlined from ‘append_ushort_to_mem’ at zipfile.c:575:3,
+    inlined from ‘putcentral’ at zipfile.c:5679:3:
+zipfile.c:465:11: warning: writing 2 bytes into a region of size 0 [-Wstringop-overflow=]
+  465 |   *pPtr++ = ((char)(usValue) &amp; 0xff);
+      |   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘putcentral’:
+cc1: note: destination object is likely at address zero
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o fileio_.o fileio.c
+fileio.c: In function ‘ask_for_split_read_path’:
+fileio.c:2120:5: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2120 |     fgets(buf, SPLIT_MAXPATH, stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c:2143:7: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2143 |       fgets(buf, SPLIT_MAXPATH, stdin);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ask_for_split_write_path’:
+fileio.c:2324:5: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2324 |     fgets(buf, FNMAX, stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [38, 2147483623] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset 6 into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [38, 2147483623] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset 6 into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [39, 2147483624] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [7, 8] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [39, 2147483624] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [7, 8] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [40, 2147483625] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [8, 9] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [40, 2147483625] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [8, 9] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [41, 2147483626] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [9, 10] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [41, 2147483626] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [9, 10] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [42, 2147483627] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [10, 11] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [42, 2147483627] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [10, 11] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [43, 2147483628] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [11, 12] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [43, 2147483628] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [11, 12] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [44, 2147483629] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [12, 13] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [44, 2147483629] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [12, 13] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [45, 2147483630] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [13, 14] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [45, 2147483630] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [13, 14] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [46, 2147483631] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [14, 15] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [46, 2147483631] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [14, 15] into destination object ‘mb’ of size 6
+In function ‘utf8_from_ucs4_char’,
+    inlined from ‘ucs4_string_to_utf8’ at fileio.c:3008:15:
+fileio.c:2957:16: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+ 2957 |     *utf8buf++ = (char) (0x80 | ((ch &gt;&gt; (6 * trailing)) &amp; 0x3F));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fileio.c: In function ‘ucs4_string_to_utf8’:
+fileio.c:3001:8: note: at offset [47, 2147483632] into destination object ‘mb’ of size 6
+ 3001 |   char mb[6];
+      |        ^~
+fileio.c:3001:8: note: at offset [15, 16] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [47, 2147483632] into destination object ‘mb’ of size 6
+fileio.c:3001:8: note: at offset [15, 16] into destination object ‘mb’ of size 6
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o util_.o util.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o unix_.o unix/unix.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o crc32_.o crc32.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipnote.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H -DUTIL -o crypt_.o crypt.c
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -c -I. -DUNIX -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu89 -DLARGE_FILE_SUPPORT -DUIDGID_NOT_16BIT -DBZIP2_SUPPORT -DCRYPT -DUNICODE_SUPPORT -DUIDGID_NOT_16BIT -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DHAVE_DIRENT_H -DHAVE_TERMIOS_H zipsplit.c
+zipsplit.c: In function ‘main’:
+zipsplit.c:884:7: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  884 |       fgets(m, 10, stdin);
+      |       ^~~~~~~~~~~~~~~~~~~
+zipsplit.c: In function ‘retry’:
+zipsplit.c:496:3: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  496 |   fgets(m, 10, stdin);
+      |   ^~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -o zipcloak -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs zipcloak.o zipfile_.o fileio_.o util_.o globals.o unix_.o crc32_.o   crypt_.o ttyio.o -lbz2 
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -o zip -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs zip.o zipfile.o zipup.o fileio.o util.o globals.o crypt.o ttyio.o unix.o crc32.o zbz2err.o deflate.o trees.o  -lbz2 
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -o zipnote -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs zipnote.o  zipfile_.o fileio_.o util_.o globals.o unix_.o crc32_.o  -lbz2 
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+make[1]: Entering directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+x86_64-pc-linux-gnu-gcc -o zipsplit -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs zipsplit.o zipfile_.o fileio_.o util_.o globals.o unix_.o crc32_.o  -lbz2 
+make[1]: Leaving directory '/var/tmp/portage/app-arch/zip-3.0-r7/work/zip30'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: app-arch/zip-3.0-r7
+
+&gt;&gt;&gt; Install app-arch/zip-3.0-r7 into /var/tmp/portage/app-arch/zip-3.0-r7/image
+&gt;&gt;&gt; Completed installing app-arch/zip-3.0-r7 into /var/tmp/portage/app-arch/zip-3.0-r7/image
+
+ <span class="ansi32">*</span> Final size of build directory: 6120 KiB (5.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1076 KiB (1.0 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/zip
+   /usr/bin/zipnote
+   /usr/bin/zipsplit
+   /usr/bin/zipcloak
+
+</pre>
+</body>
+
+</html>

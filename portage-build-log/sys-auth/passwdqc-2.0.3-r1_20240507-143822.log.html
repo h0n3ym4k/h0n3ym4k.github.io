@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-auth/passwdqc-2.0.3-r1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org sam@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking passwdqc-2.0.3.tar.gz to /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3 ...
+make -j2 SHARED_LIBDIR=/usr/lib64 DEVEL_LIBDIR=/usr/lib64 SECUREDIR=/lib64/security CONFDIR=/etc/security 'CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe ' 'LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' CC=x86_64-pc-linux-gnu-gcc LD=x86_64-pc-linux-gnu-gcc all 
+case "Linux" in \
+Linux)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--soname,libpasswdqc.so.1,--version-script,libpasswdqc.map" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--version-script,pam_passwdqc.map" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		all_wrapped;; \
+SunOS)	make -e CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		INSTALL="/usr/ucb/install -c" \
+		SHARED_LIBDIR="/usr/lib" \
+		SECUREDIR="/usr/lib/security" \
+		all_wrapped;; \
+HP-UX)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDLIBS_pam="-lpam -lsec" \
+		all_wrapped;; \
+Darwin)	make \
+		SHARED_LIB="libpasswdqc.0.dylib" \
+		DEVEL_LIB="libpasswdqc.dylib" \
+		SECUREDIR="/usr/lib/pam" \
+		LDLIBS_pam="-lpam -lSystem" \
+		all_wrapped;; \
+    CYGWIN_NT*)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\"" \
+            SHARED_LIB="cygpasswdqc-0.dll" \
+            SHARED_LIBDIR="/usr/bin" \
+            DEVEL_LIB="libpasswdqc.dll.a" \
+            LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--out-implib=libpasswdqc.dll.a -Wl,--export-all-symbols -Wl,--enable-auto-import" \
+            BINS="pwqgen pwqcheck pwqfilter cygpasswdqc-0.dll" \
+            CYGWIN=true \
+            all_wrapped;; \
+*)	make all_wrapped;; \
+esac
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c passwdqc_memzero.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c pam_passwdqc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c concat.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c md4.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c passwdqc_filter.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c passwdqc_check.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c passwdqc_load.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c passwdqc_parse.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c wordset_4k.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -DPACKAGE=\"passwdqc\" -DHAVE_SHADOW -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fPIC -c passwdqc_random.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fomit-frame-pointer -c pwqgen.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fomit-frame-pointer -c pwqcheck.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -fomit-frame-pointer -c pwqfilter.c
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+sed -e "s|@VERSION@|2.0.3|g" passwdqc.pc.in &gt; passwdqc.pc
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--soname,libpasswdqc.so.1,--version-script,libpasswdqc.map concat.o md4.o passwdqc_check.o passwdqc_filter.o passwdqc_load.o passwdqc_memzero.o passwdqc_parse.o passwdqc_random.o wordset_4k.o  -o libpasswdqc.so.1
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+ln -s -f libpasswdqc.so.1 libpasswdqc.so
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs pwqfilter.o md4.o -o pwqfilter
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--version-script,pam_passwdqc.map pam_passwdqc.o passwdqc_memzero.o -lpam -lcrypt -L. -lpasswdqc -o pam_passwdqc.so
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs pwqgen.o passwdqc_memzero.o -L. -lpasswdqc -o pwqgen
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs pwqcheck.o passwdqc_memzero.o -L. -lpasswdqc -o pwqcheck
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-auth/passwdqc-2.0.3-r1
+
+&gt;&gt;&gt; Install sys-auth/passwdqc-2.0.3-r1 into /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image
+make -j2 SHARED_LIBDIR=/usr/lib64 DEVEL_LIBDIR=/usr/lib64 SECUREDIR=/lib64/security CONFDIR=/etc/security 'CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe ' 'LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' CC=x86_64-pc-linux-gnu-gcc LD=x86_64-pc-linux-gnu-gcc DESTDIR=/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image install_lib install_pam install_utils 
+case "Linux" in \
+Linux)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--soname,libpasswdqc.so.1,--version-script,libpasswdqc.map" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--version-script,pam_passwdqc.map" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		install_lib_wrapped;; \
+SunOS)	make -e CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		INSTALL="/usr/ucb/install -c" \
+		SHARED_LIBDIR="/usr/lib" \
+		SECUREDIR="/usr/lib/security" \
+		install_lib_wrapped;; \
+HP-UX)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDLIBS_pam="-lpam -lsec" \
+		install_lib_wrapped;; \
+Darwin)	make \
+		SHARED_LIB="libpasswdqc.0.dylib" \
+		DEVEL_LIB="libpasswdqc.dylib" \
+		SECUREDIR="/usr/lib/pam" \
+		LDLIBS_pam="-lpam -lSystem" \
+		install_lib_wrapped;; \
+    CYGWIN_NT*)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\"" \
+            SHARED_LIB="cygpasswdqc-0.dll" \
+            SHARED_LIBDIR="/usr/bin" \
+            DEVEL_LIB="libpasswdqc.dll.a" \
+            LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--out-implib=libpasswdqc.dll.a -Wl,--export-all-symbols -Wl,--enable-auto-import" \
+            BINS="pwqgen pwqcheck pwqfilter cygpasswdqc-0.dll" \
+            CYGWIN=true \
+            install_lib_wrapped;; \
+*)	make install_lib_wrapped;; \
+esac
+case "Linux" in \
+Linux)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--soname,libpasswdqc.so.1,--version-script,libpasswdqc.map" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--version-script,pam_passwdqc.map" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		install_pam_wrapped;; \
+SunOS)	make -e CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		INSTALL="/usr/ucb/install -c" \
+		SHARED_LIBDIR="/usr/lib" \
+		SECUREDIR="/usr/lib/security" \
+		install_pam_wrapped;; \
+HP-UX)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDLIBS_pam="-lpam -lsec" \
+		install_pam_wrapped;; \
+Darwin)	make \
+		SHARED_LIB="libpasswdqc.0.dylib" \
+		DEVEL_LIB="libpasswdqc.dylib" \
+		SECUREDIR="/usr/lib/pam" \
+		LDLIBS_pam="-lpam -lSystem" \
+		install_pam_wrapped;; \
+    CYGWIN_NT*)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\"" \
+            SHARED_LIB="cygpasswdqc-0.dll" \
+            SHARED_LIBDIR="/usr/bin" \
+            DEVEL_LIB="libpasswdqc.dll.a" \
+            LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--out-implib=libpasswdqc.dll.a -Wl,--export-all-symbols -Wl,--enable-auto-import" \
+            BINS="pwqgen pwqcheck pwqfilter cygpasswdqc-0.dll" \
+            CYGWIN=true \
+            install_pam_wrapped;; \
+*)	make install_pam_wrapped;; \
+esac
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/lib64/security
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/etc/security
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 644 passwdqc.conf /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/etc/security/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 755 pam_passwdqc.so /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/lib64/security/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/lib64
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man8
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 755 libpasswdqc.so.1 /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/lib64/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 644 pam_passwdqc.8 /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man8/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/lib64
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+ln -s -f ../../usr/lib64/libpasswdqc.so.1 \
+	/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/lib64/libpasswdqc.so
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/include
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 644 passwdqc.h /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/include/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/lib64/pkgconfig
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 644 passwdqc.pc /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/lib64/pkgconfig/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man3
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 644 libpasswdqc.3 passwdqc_params_reset.3 passwdqc_params_load.3 passwdqc_params_parse.3 passwdqc_params_free.3 passwdqc_check.3 passwdqc_random.3 /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man3/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man5
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 644 passwdqc.conf.5 /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man5/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+case "Linux" in \
+Linux)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--soname,libpasswdqc.so.1,--version-script,libpasswdqc.map" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--version-script,pam_passwdqc.map" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		install_utils_wrapped;; \
+SunOS)	make -e CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -G" \
+		LDLIBS_pam="-lpam -lcrypt" \
+		INSTALL="/usr/ucb/install -c" \
+		SHARED_LIBDIR="/usr/lib" \
+		SECUREDIR="/usr/lib/security" \
+		install_utils_wrapped;; \
+HP-UX)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\" -DHAVE_SHADOW" \
+		LD_lib=ld \
+		LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDFLAGS_pam="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -b" \
+		LDLIBS_pam="-lpam -lsec" \
+		install_utils_wrapped;; \
+Darwin)	make \
+		SHARED_LIB="libpasswdqc.0.dylib" \
+		DEVEL_LIB="libpasswdqc.dylib" \
+		SECUREDIR="/usr/lib/pam" \
+		LDLIBS_pam="-lpam -lSystem" \
+		install_utils_wrapped;; \
+    CYGWIN_NT*)	make CPPFLAGS_lib=" -DPACKAGE=\\\"passwdqc\\\"" \
+            SHARED_LIB="cygpasswdqc-0.dll" \
+            SHARED_LIBDIR="/usr/bin" \
+            DEVEL_LIB="libpasswdqc.dll.a" \
+            LDFLAGS_lib="-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs --shared -Wl,--out-implib=libpasswdqc.dll.a -Wl,--export-all-symbols -Wl,--enable-auto-import" \
+            BINS="pwqgen pwqcheck pwqfilter cygpasswdqc-0.dll" \
+            CYGWIN=true \
+            install_utils_wrapped;; \
+*)	make install_utils_wrapped;; \
+esac
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/bin
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 755 pwqgen pwqcheck pwqfilter /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/bin/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+umask 022 &amp;&amp; mkdir -p /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man1
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make[1]: Entering directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+install -c -m 644 pwqgen.1 pwqcheck.1 pwqfilter.1 /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image/usr/share/man/man1/
+make[1]: Leaving directory '/var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/work/passwdqc-2.0.3'
+make: Nothing to be done for 'install_utils'.
+&gt;&gt;&gt; Completed installing sys-auth/passwdqc-2.0.3-r1 into /var/tmp/portage/sys-auth/passwdqc-2.0.3-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 788 KiB
+ <span class="ansi32">*</span> Final size of installed tree:  356 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /lib64/security/pam_passwdqc.so
+   /usr/lib64/libpasswdqc.so.1
+   /usr/bin/pwqgen
+   /usr/bin/pwqcheck
+   /usr/bin/pwqfilter
+
+</pre>
+</body>
+
+</html>

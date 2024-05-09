@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-fonts/encodings-1.1.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking encodings-1.1.0.tar.xz to /var/tmp/portage/media-fonts/encodings-1.1.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-fonts/encodings-1.1.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/media-fonts/encodings-1.1.0/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dfontrootdir=/usr/share/fonts /var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0 /var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.4.0
+Source dir: <span class="ansi1">/var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0</span>
+Build dir: <span class="ansi1">/var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">encodings</span>
+Project version: <span class="ansi1">1.1.0</span>
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Program <span class="ansi1">mkfontscale</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/mkfontscale)
+Program <span class="ansi1">gzip</span> found: <span class="ansi1 ansi32">YES</span> (/bin/gzip)
+Configuring <span class="ansi1">mkencodingsdir</span> using configuration
+Build targets in project: <span class="ansi1">50</span>
+
+encodings <span class="ansi36">1.1.0</span>
+
+    encodingsdir         : /usr/share/fonts/encodings
+    gzip-small-encodings : true
+    gzip-large-encodings : true
+    mkfontscale          : /usr/bin/mkfontscale
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/media-fonts/encodings-1.1.0/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    fontrootdir          : /usr/share/fonts
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0 ...
+meson compile --jobs 2 --load-average 2 --verbose
+<span class="ansi1 ansi32">INFO:</span> autodetecting backend as ninja
+<span class="ansi1 ansi32">INFO:</span> calculating backend command to run: /usr/bin/ninja -j 2 -l 2.0 -v
+[1/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture adobe-dingbats.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/adobe-dingbats.enc
+[2/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture adobe-standard.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/adobe-standard.enc
+[3/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture adobe-symbol.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/adobe-symbol.enc
+[4/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture armscii-8.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/armscii-8.enc
+[5/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture ascii-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/ascii-0.enc
+[6/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture dec-special.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/dec-special.enc
+[7/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture ibm-cp437.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/ibm-cp437.enc
+[8/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture ibm-cp850.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/ibm-cp850.enc
+[9/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture ibm-cp852.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/ibm-cp852.enc
+[10/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture ibm-cp866.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/ibm-cp866.enc
+[11/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture iso8859-11.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/iso8859-11.enc
+[12/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture iso8859-13.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/iso8859-13.enc
+[13/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture iso8859-14.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/iso8859-14.enc
+[14/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture iso8859-16.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/iso8859-16.enc
+[15/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture iso8859-6.16.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/iso8859-6.16.enc
+[16/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture iso8859-6.8x.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/iso8859-6.8x.enc
+[17/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1250.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1250.enc
+[18/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1251.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1251.enc
+[19/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1252.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1252.enc
+[20/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1253.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1253.enc
+[21/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1254.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1254.enc
+[22/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1255.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1255.enc
+[23/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1256.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1256.enc
+[24/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1257.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1257.enc
+[25/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-cp1258.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-cp1258.enc
+[26/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture microsoft-win3.1.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/microsoft-win3.1.enc
+[27/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture mulearabic-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/mulearabic-0.enc
+[28/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture mulearabic-1.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/mulearabic-1.enc
+[29/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture mulearabic-2.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/mulearabic-2.enc
+[30/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture mulelao-1.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/mulelao-1.enc
+[31/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture suneu-greek.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/suneu-greek.enc
+[32/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture tcvn-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/tcvn-0.enc
+[33/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture tis620-2.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/tis620-2.enc
+[34/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture viscii1.1-1.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/viscii1.1-1.enc
+[35/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/big5.eten-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/big5.eten-0.enc
+[36/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/big5hkscs-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/big5hkscs-0.enc
+[37/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/cns11643-1.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/cns11643-1.enc
+[38/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/cns11643-2.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/cns11643-2.enc
+[39/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/cns11643-3.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/cns11643-3.enc
+[40/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/gb18030-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/gb18030-0.enc
+[41/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/gb18030.2000-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/gb18030.2000-0.enc
+[42/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/gb18030.2000-1.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/gb18030.2000-1.enc
+[43/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/gb2312.1980-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/gb2312.1980-0.enc
+[44/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/gbk-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/gbk-0.enc
+[45/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/jisx0201.1976-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/jisx0201.1976-0.enc
+[46/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/jisx0208.1990-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/jisx0208.1990-0.enc
+[47/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/jisx0212.1990-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/jisx0212.1990-0.enc
+[48/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/ksc5601.1987-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/ksc5601.1987-0.enc
+[49/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/ksc5601.1992-3.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/ksc5601.1992-3.enc
+[50/50] /usr/lib/python-exec/python3.11/meson --internal exe --capture large/sun.unicode.india-0.enc.gz -- /bin/gzip -c -n ../encodings-1.1.0/large/sun.unicode.india-0.enc
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: media-fonts/encodings-1.1.0
+
+&gt;&gt;&gt; Install media-fonts/encodings-1.1.0 into /var/tmp/portage/media-fonts/encodings-1.1.0/image
+meson install --destdir /var/tmp/portage/media-fonts/encodings-1.1.0/image --no-rebuild
+Installing adobe-dingbats.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing adobe-standard.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing adobe-symbol.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing armscii-8.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing ascii-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing dec-special.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing ibm-cp437.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing ibm-cp850.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing ibm-cp852.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing ibm-cp866.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing iso8859-11.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing iso8859-13.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing iso8859-14.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing iso8859-16.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing iso8859-6.16.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing iso8859-6.8x.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1250.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1251.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1252.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1253.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1254.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1255.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1256.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1257.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-cp1258.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing microsoft-win3.1.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing mulearabic-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing mulearabic-1.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing mulearabic-2.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing mulelao-1.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing suneu-greek.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing tcvn-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing tis620-2.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing viscii1.1-1.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
+Installing large/big5.eten-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/big5hkscs-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/cns11643-1.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/cns11643-2.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/cns11643-3.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/gb18030-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/gb18030.2000-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/gb18030.2000-1.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/gb2312.1980-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/gbk-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/jisx0201.1976-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/jisx0208.1990-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/jisx0212.1990-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/ksc5601.1987-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/ksc5601.1992-3.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Installing large/sun.unicode.india-0.enc.gz to /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings/large
+Running custom install script '/bin/sh /var/tmp/portage/media-fonts/encodings-1.1.0/work/encodings-1.1.0-build/mkencodingsdir'
++ cd /var/tmp/portage/media-fonts/encodings-1.1.0/image/usr/share/fonts/encodings
++ /usr/bin/mkfontscale -b -s -l -n -r -p /usr/share/fonts/encodings -e . -e large .
++ cd large
++ /usr/bin/mkfontscale -b -s -l -n -r -p /usr/share/fonts/encodings/large -e . .
+&gt;&gt;&gt; Completed installing media-fonts/encodings-1.1.0 into /var/tmp/portage/media-fonts/encodings-1.1.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3540 KiB (3.4 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   824 KiB
+
+
+</pre>
+</body>
+
+</html>
