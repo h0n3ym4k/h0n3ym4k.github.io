@@ -98,7 +98,10 @@ emerge --info "${pkg}" --color y | ansi2html > "${pkgr}"_emerge-info.log.html
 	cd /mnt/Downloads/portage-build-log
 done
 
-#step 7 - https://h0n3ym4k.github.io/portage-build-log/index.html
+#step 7 - qa_notice.html
+/root/qa_notice.sh
+
+#step 8 - https://h0n3ym4k.github.io/portage-build-log/index.html
 cd /mnt/Downloads/portage-build-log
 
 echo "<!DOCTYPE html>" > index.html.tmp.1
@@ -161,7 +164,7 @@ echo "" >> index.html.tmp.1
 echo "<!-- QA Notice - yellow -->" >> index.html.tmp.1
 echo "" >> index.html.tmp.1
 
-#$(qa_notice.sh) - should run by hand manually, NEVER run in script-ed - static process
+#/root/qa_notice.sh - try script-ed after .html gen but before/during emerge --info step - should run by hand manually, NEVER run in script-ed - static process
 if [ -e qa_notice.html ];then
 	cat qa_notice.html >> index.html.tmp.1
 fi
