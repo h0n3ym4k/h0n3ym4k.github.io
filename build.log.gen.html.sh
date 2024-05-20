@@ -81,7 +81,7 @@ do
 	do
 
 pkg=`equery l -F'$cp' "${p}"|uniq`
-pkgr=`equery l -F'$name-$fullversion' "${q}"`
+pkgr=`equery l -F'$name-$fullversion' "${q}"|uniq`
 
 #echo "${pkg[@]}"
 #echo "${pkgr[@]}"
