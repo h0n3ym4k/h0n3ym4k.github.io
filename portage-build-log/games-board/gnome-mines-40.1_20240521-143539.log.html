@@ -1,0 +1,1028 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi35 { color: #E850A8; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    games-board/gnome-mines-40.1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gnome@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Checking whether python3_11 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.11 to build (via PYTHON_COMPAT iteration)
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking gnome-mines-40.1.tar.xz to /var/tmp/portage/games-board/gnome-mines-40.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/games-board/gnome-mines-40.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /var/tmp/portage/games-board/gnome-mines-40.1/temp/pkgconfig:/var/tmp/portage/games-board/gnome-mines-40.1/temp/python3.11/pkgconfig:/usr/share/pkgconfig --pkg-config-path /var/tmp/portage/games-board/gnome-mines-40.1/temp/pkgconfig:/var/tmp/portage/games-board/gnome-mines-40.1/temp/python3.11/pkgconfig:/usr/share/pkgconfig --native-file /var/tmp/portage/games-board/gnome-mines-40.1/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1 /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.4.0
+Source dir: <span class="ansi1">/var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1</span>
+Build dir: <span class="ansi1">/var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">gnome-mines</span>
+Project version: <span class="ansi1">40.1</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 13.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 13.2.1_p20240210 p14) 13.2.1 20240210")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.42
+Vala compiler for the host machine: <span class="ansi1">/usr/bin/valac-0.56</span> (valac 0.56.16)
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.2.0</span>
+Run-time dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">gee-0.8</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">0.20.6</span>
+Run-time dependency <span class="ansi1">gtk+-3.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">3.24.41</span>
+Run-time dependency <span class="ansi1">librsvg-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.57.3</span>
+Run-time dependency <span class="ansi1">libgnome-games-support-1</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.8.2</span>
+Library <span class="ansi1">m</span> found: <span class="ansi1 ansi32">YES</span>
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Program <span class="ansi1">msginit</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msginit)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">xgettext</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xgettext)
+Program <span class="ansi1">desktop-file-validate</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/desktop-file-validate)
+Program <span class="ansi1">appstream-util</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/appstream-util)
+Program <span class="ansi1">itstool</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/itstool)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Build-time dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Program <span class="ansi1">/usr/bin/glib-compile-resources</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-resources)
+Build targets in project: <span class="ansi1">152</span>
+
+gnome-mines <span class="ansi36">40.1</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/games-board/gnome-mines-40.1/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /var/tmp/portage/games-board/gnome-mines-40.1/temp/pkgconfig:/var/tmp/portage/games-board/gnome-mines-40.1/temp/python3.11/pkgconfig:/usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /var/tmp/portage/games-board/gnome-mines-40.1/temp/pkgconfig:/var/tmp/portage/games-board/gnome-mines-40.1/temp/python3.11/pkgconfig:/usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1 ...
+meson compile --jobs 2 --load-average 2 --verbose
+<span class="ansi1 ansi32">INFO:</span> autodetecting backend as ninja
+<span class="ansi1 ansi32">INFO:</span> calculating backend command to run: /usr/bin/ninja -j 2 -l 2.0 -v
+[1/137] /usr/bin/msgfmt -o po/af/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/af.po
+[2/137] /usr/bin/msgfmt -o po/am/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/am.po
+[3/137] /usr/bin/msgfmt -o po/an/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/an.po
+[4/137] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ar.po
+[5/137] /usr/bin/msgfmt -o po/as/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/as.po
+[6/137] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ast.po
+[7/137] /usr/bin/msgfmt -o po/az/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/az.po
+[8/137] /usr/bin/msgfmt -o po/be/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/be.po
+[9/137] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/bg.po
+[10/137] /usr/bin/msgfmt -o po/bn/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/bn.po
+[11/137] /usr/bin/msgfmt -o po/br/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/br.po
+[12/137] /usr/bin/msgfmt -o po/bn_IN/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/bn_IN.po
+[13/137] /usr/bin/msgfmt -o po/bs/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/bs.po
+[14/137] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ca.po
+[15/137] /usr/bin/msgfmt -o po/ca@valencia/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ca@valencia.po
+[16/137] /usr/bin/msgfmt -o po/ckb/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ckb.po
+[17/137] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/cs.po
+[18/137] /usr/bin/msgfmt -o po/cy/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/cy.po
+[19/137] /usr/bin/msgfmt -o po/da/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/da.po
+[20/137] /usr/bin/msgfmt -o po/de/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/de.po
+[21/137] /usr/bin/msgfmt -o po/dz/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/dz.po
+[22/137] /usr/bin/msgfmt -o po/el/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/el.po
+[23/137] /usr/bin/msgfmt -o po/en_CA/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/en_CA.po
+[24/137] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/en_GB.po
+[25/137] /usr/bin/msgfmt -o po/en@shaw/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/en@shaw.po
+[26/137] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/eo.po
+[27/137] /usr/bin/msgfmt -o po/es/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/es.po
+[28/137] /usr/bin/msgfmt -o po/et/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/et.po
+[29/137] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/eu.po
+[30/137] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/fi.po
+[31/137] /usr/bin/msgfmt -o po/fa/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/fa.po
+[32/137] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/fr.po
+[33/137] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/fur.po
+[34/137] /usr/bin/msgfmt -o po/ga/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ga.po
+[35/137] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/gl.po
+[36/137] /usr/bin/msgfmt -o po/gu/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/gu.po
+[37/137] /usr/bin/msgfmt -o po/he/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/he.po
+[38/137] /usr/bin/msgfmt -o po/hi/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/hi.po
+[39/137] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/hu.po
+[40/137] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/hr.po
+[41/137] /usr/bin/msgfmt -o po/id/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/id.po
+[42/137] /usr/bin/msgfmt -o po/is/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/is.po
+[43/137] /usr/bin/msgfmt -o po/it/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/it.po
+[44/137] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ja.po
+[45/137] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ka.po
+[46/137] /usr/bin/msgfmt -o po/kk/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/kk.po
+[47/137] /usr/bin/msgfmt -o po/kn/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/kn.po
+[48/137] /usr/bin/msgfmt -o po/km/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/km.po
+[49/137] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ko.po
+[50/137] /usr/bin/msgfmt -o po/ku/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ku.po
+[51/137] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/lt.po
+[52/137] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/lv.po
+[53/137] /usr/bin/msgfmt -o po/mai/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/mai.po
+[54/137] /usr/bin/msgfmt -o po/mk/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/mk.po
+[55/137] /usr/bin/msgfmt -o po/ml/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ml.po
+[56/137] /usr/bin/msgfmt -o po/mn/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/mn.po
+[57/137] /usr/bin/msgfmt -o po/mr/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/mr.po
+[58/137] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ms.po
+[59/137] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/nb.po
+[60/137] /usr/bin/msgfmt -o po/ne/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ne.po
+[61/137] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/nl.po
+[62/137] /usr/bin/msgfmt -o po/oc/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/oc.po
+[63/137] /usr/bin/msgfmt -o po/nn/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/nn.po
+[64/137] /usr/bin/msgfmt -o po/or/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/or.po
+[65/137] /usr/bin/msgfmt -o po/pa/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/pa.po
+[66/137] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/pl.po
+[67/137] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/pt.po
+[68/137] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/pt_BR.po
+[69/137] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ro.po
+[70/137] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ru.po
+[71/137] /usr/bin/msgfmt -o po/rw/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/rw.po
+[72/137] /usr/bin/msgfmt -o po/si/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/si.po
+[73/137] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/sk.po
+[74/137] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/sq.po
+[75/137] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/sl.po
+[76/137] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/sr.po
+[77/137] /usr/bin/msgfmt -o po/sr@latin/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/sr@latin.po
+[78/137] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/sv.po
+[79/137] /usr/bin/msgfmt -o po/te/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/te.po
+[80/137] /usr/bin/msgfmt -o po/ta/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ta.po
+[81/137] /usr/bin/msgfmt -o po/tg/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/tg.po
+[82/137] /usr/bin/msgfmt -o po/th/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/th.po
+[83/137] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/tr.po
+[84/137] /usr/bin/msgfmt -o po/ug/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/ug.po
+[85/137] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/uk.po
+[86/137] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/vi.po
+[87/137] /usr/bin/msgfmt -o po/wa/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/wa.po
+[88/137] /usr/bin/msgfmt -o po/xh/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/xh.po
+[89/137] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/zh_CN.po
+[90/137] /usr/bin/msgfmt -o po/zh_HK/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/zh_HK.po
+[91/137] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/gnome-mines.mo ../gnome-mines-40.1/po/zh_TW.po
+[92/137] /usr/lib/python-exec/python3.11/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../gnome-mines-40.1/data/org.gnome.Mines.desktop.in data/org.gnome.Mines.desktop desktop ../gnome-mines-40.1/data/../po
+[93/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/ca/ca.po -o help/ca/gnome-mines-ca.gmo
+[94/137] /usr/lib/python-exec/python3.11/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../gnome-mines-40.1/data/org.gnome.Mines.appdata.xml.in data/org.gnome.Mines.appdata.xml xml ../gnome-mines-40.1/data/../po
+[95/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/cs/cs.po -o help/cs/gnome-mines-cs.gmo
+[96/137] /usr/bin/itstool -m help/ca/gnome-mines-ca.gmo --lang ca -o help/ca ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[97/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/da/da.po -o help/da/gnome-mines-da.gmo
+[98/137] /usr/bin/itstool -m help/cs/gnome-mines-cs.gmo --lang cs -o help/cs ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[99/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/de/de.po -o help/de/gnome-mines-de.gmo
+[100/137] /usr/bin/itstool -m help/da/gnome-mines-da.gmo --lang da -o help/da ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[101/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/el/el.po -o help/el/gnome-mines-el.gmo
+[102/137] /usr/bin/itstool -m help/de/gnome-mines-de.gmo --lang de -o help/de ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[103/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/es/es.po -o help/es/gnome-mines-es.gmo
+[104/137] /usr/bin/itstool -m help/el/gnome-mines-el.gmo --lang el -o help/el ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[105/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/eu/eu.po -o help/eu/gnome-mines-eu.gmo
+[106/137] /usr/bin/itstool -m help/es/gnome-mines-es.gmo --lang es -o help/es ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[107/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/fr/fr.po -o help/fr/gnome-mines-fr.gmo
+[108/137] /usr/bin/itstool -m help/eu/gnome-mines-eu.gmo --lang eu -o help/eu ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[109/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/gl/gl.po -o help/gl/gnome-mines-gl.gmo
+[110/137] /usr/bin/itstool -m help/fr/gnome-mines-fr.gmo --lang fr -o help/fr ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[111/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/hu/hu.po -o help/hu/gnome-mines-hu.gmo
+[112/137] /usr/bin/itstool -m help/gl/gnome-mines-gl.gmo --lang gl -o help/gl ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[113/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/ja/ja.po -o help/ja/gnome-mines-ja.gmo
+[114/137] /usr/bin/itstool -m help/hu/gnome-mines-hu.gmo --lang hu -o help/hu ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[115/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/ko/ko.po -o help/ko/gnome-mines-ko.gmo
+[116/137] /usr/bin/itstool -m help/ja/gnome-mines-ja.gmo --lang ja -o help/ja ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[117/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/pl/pl.po -o help/pl/gnome-mines-pl.gmo
+[118/137] /usr/bin/itstool -m help/ko/gnome-mines-ko.gmo --lang ko -o help/ko ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[119/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/pt_BR/pt_BR.po -o help/pt_BR/gnome-mines-pt_BR.gmo
+[120/137] /usr/bin/itstool -m help/pl/gnome-mines-pl.gmo --lang pl -o help/pl ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[121/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/sl/sl.po -o help/sl/gnome-mines-sl.gmo
+[122/137] /usr/bin/itstool -m help/pt_BR/gnome-mines-pt_BR.gmo --lang pt_BR -o help/pt_BR ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[123/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/sv/sv.po -o help/sv/gnome-mines-sv.gmo
+[124/137] /usr/bin/itstool -m help/sl/gnome-mines-sl.gmo --lang sl -o help/sl ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[125/137] /usr/bin/msgfmt ../gnome-mines-40.1/help/uk/uk.po -o help/uk/gnome-mines-uk.gmo
+[126/137] /usr/bin/itstool -m help/sv/gnome-mines-sv.gmo --lang sv -o help/sv ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[127/137] /usr/bin/glib-compile-resources ../gnome-mines-40.1/src/gnome-mines.gresource.xml --sourcedir ../gnome-mines-40.1/src --c-name resources --internal --generate --target src/resources.c --dependency-file src/resources.c.d
+[128/137] /usr/bin/glib-compile-resources ../gnome-mines-40.1/src/gnome-mines.gresource.xml --sourcedir ../gnome-mines-40.1/src --c-name resources --internal --generate --target src/resources.h
+[129/137] /usr/bin/itstool -m help/uk/gnome-mines-uk.gmo --lang uk -o help/uk ../gnome-mines-40.1/help/C/board-size.page ../gnome-mines-40.1/help/C/bug-filing.page ../gnome-mines-40.1/help/C/develop.page ../gnome-mines-40.1/help/C/documentation.page ../gnome-mines-40.1/help/C/flags.page ../gnome-mines-40.1/help/C/high-scores.page ../gnome-mines-40.1/help/C/index.page ../gnome-mines-40.1/help/C/license.page ../gnome-mines-40.1/help/C/new-game.page ../gnome-mines-40.1/help/C/rules.page ../gnome-mines-40.1/help/C/translate.page
+[130/137] x86_64-pc-linux-gnu-gcc -Isrc/gnome-mines.p -Isrc -I../gnome-mines-40.1/src -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gee-0.8 -I/usr/lib64/libffi/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/librsvg-2.0 -I/usr/include/gnome-games-support-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread '-DVERSION="40.1"' '-DGETTEXT_PACKAGE="gnome-mines"' '-DLOCALEDIR="/usr/share/locale"' '-DDATA_DIRECTORY="/usr/share/gnome-mines"' -MD -MQ src/gnome-mines.p/meson-generated_.._resources.c.o -MF src/gnome-mines.p/meson-generated_.._resources.c.o.d -o src/gnome-mines.p/meson-generated_.._resources.c.o -c src/resources.c
+[131/137] /usr/bin/valac-0.56 -C --pkg libgnome-games-support-1 --pkg librsvg-2.0 --pkg gtk+-3.0 --pkg gee-0.8 --target-glib ' 2.40.0' --pkg glib-2.0 --color=always --directory src/gnome-mines.p --basedir ../gnome-mines-40.1/src --gresources=../gnome-mines-40.1/src/gnome-mines.gresource.xml --gresourcesdir=src/../gnome-mines-40.1/src --pkg=posix ../gnome-mines-40.1/src/config.vapi ../gnome-mines-40.1/src/gnome-mines.vala ../gnome-mines-40.1/src/minefield.vala ../gnome-mines-40.1/src/minefield-view.vala ../gnome-mines-40.1/src/tile.vala ../gnome-mines-40.1/src/theme-selector-dialog.vala
+<span class="ansi1">../gnome-mines-40.1/src/minefield-view.vala:74.5-74.25:</span> <span class="ansi1 ansi35">warning:</span> Type <span class="ansi1">`int[]'</span> can not be used for a GLib.Object property
+   74 |     public int[] position
+      | <span class="ansi1 ansi32">    ^~~~~~~~~~~~~~~~~~~~~</span>
+Compilation succeeded - 1 warning(s)
+[132/137] x86_64-pc-linux-gnu-gcc -Isrc/gnome-mines.p -Isrc -I../gnome-mines-40.1/src -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gee-0.8 -I/usr/lib64/libffi/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/librsvg-2.0 -I/usr/include/gnome-games-support-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread '-DVERSION="40.1"' '-DGETTEXT_PACKAGE="gnome-mines"' '-DLOCALEDIR="/usr/share/locale"' '-DDATA_DIRECTORY="/usr/share/gnome-mines"' -MD -MQ src/gnome-mines.p/meson-generated_minefield.c.o -MF src/gnome-mines.p/meson-generated_minefield.c.o.d -o src/gnome-mines.p/meson-generated_minefield.c.o -c src/gnome-mines.p/minefield.c
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">location_finalize</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:300:20:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">self</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  300 |         Location * <span class="ansi1 ansi35">self</span>;
+      |                    <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_construct</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:405:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp5__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  405 |                                                         gint <span class="ansi1 ansi35">_tmp5__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_has_mine</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:462:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  462 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_is_cleared</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:481:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  481 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_multi_release</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:550:38:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+  550 |                 neighbour_collection <span class="ansi1 ansi35">=</span> neighbour_map;
+      |                                      <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:548:22:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  548 |                 gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:605:38:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+  605 |                 neighbour_collection <span class="ansi1 ansi35">=</span> neighbour_map;
+      |                                      <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:603:22:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  603 |                 gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_clear_mine</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:684:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp5__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  684 |                 gint <span class="ansi1 ansi35">_tmp5__length1</span>;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:655:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp7__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  655 |         gint <span class="ansi1 ansi35">_tmp7__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:651:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp3__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  651 |         gint <span class="ansi1 ansi35">_tmp3__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_clear_mines_recursive</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:836:46:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+  836 |                         neighbour_collection <span class="ansi1 ansi35">=</span> neighbour_map;
+      |                                              <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:834:30:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  834 |                         gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:787:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp11__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  787 |         gint <span class="ansi1 ansi35">_tmp11__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:782:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp8__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  782 |         gint <span class="ansi1 ansi35">_tmp8__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:778:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp5__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  778 |         gint <span class="ansi1 ansi35">_tmp5__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:773:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp2__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  773 |         gint <span class="ansi1 ansi35">_tmp2__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:769:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  769 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_set_flag</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:883:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp3__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  883 |                 gint <span class="ansi1 ansi35">_tmp3__length1</span>;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:901:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp6__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  901 |                 gint <span class="ansi1 ansi35">_tmp6__length1</span>;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:871:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp9__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  871 |         gint <span class="ansi1 ansi35">_tmp9__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:867:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp1__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  867 |         gint <span class="ansi1 ansi35">_tmp1__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_get_flag</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:929:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  929 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_get_n_adjacent_mines</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:948:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  948 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_has_flag_warning</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:981:38:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+  981 |                 neighbour_collection <span class="ansi1 ansi35">=</span> neighbour_map;
+      |                                      <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:979:22:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  979 |                 gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> In function ‘<span class="ansi1">minefield_place_mines</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield.c:1063:70:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+ 1063 |                                                 neighbour_collection <span class="ansi1 ansi35">=</span> neighbour_map;
+      |                                                                      <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:1061:54:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+ 1061 |                                                 gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:1104:78:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+ 1104 |                                                         neighbour_collection <span class="ansi1 ansi35">=</span> neighbour_map;
+      |                                                                              <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:1120:86:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp12__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1120 |                                                                                 gint <span class="ansi1 ansi35">_tmp12__length1</span>;
+      |                                                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:1102:62:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+ 1102 |                                                         gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:1088:54:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp7__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1088 |                                                 gint <span class="ansi1 ansi35">_tmp7__length1</span>;
+      |                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:1032:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp2__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1032 |                                 gint <span class="ansi1 ansi35">_tmp2__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield.c:</span> At top level:
+<span class="ansi1">src/gnome-mines.p/minefield.c:60:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">location_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+   60 | static GParamSpec* <span class="ansi1 ansi35">location_properties</span>[LOCATION_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~</span>
+[133/137] x86_64-pc-linux-gnu-gcc -Isrc/gnome-mines.p -Isrc -I../gnome-mines-40.1/src -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gee-0.8 -I/usr/lib64/libffi/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/librsvg-2.0 -I/usr/include/gnome-games-support-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread '-DVERSION="40.1"' '-DGETTEXT_PACKAGE="gnome-mines"' '-DLOCALEDIR="/usr/share/locale"' '-DDATA_DIRECTORY="/usr/share/gnome-mines"' -MD -MQ src/gnome-mines.p/meson-generated_gnome-mines.c.o -MF src/gnome-mines.p/meson-generated_gnome-mines.c.o.d -o src/gnome-mines.p/meson-generated_gnome-mines.c.o -c src/gnome-mines.p/gnome-mines.c
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_construct</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:571:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">G_APPLICATION_FLAGS_NONE</span>’ is deprecated: Use 'G_APPLICATION_DEFAULT_FLAGS' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  571 |         <span class="ansi1 ansi35">self</span> = (Mines*) g_object_new (object_type, "application-id", "org.gnome.Mines", "flags", G_APPLICATION_FLAGS_NONE, NULL);
+      |         <span class="ansi1 ansi35">^~~~</span>
+In file included from <span class="ansi1">/usr/include/glib-2.0/gio/giotypes.h:30</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/gio/gio.h:28</span>,
+                 from <span class="ansi1">/usr/include/gtk-3.0/gdk/gdkapplaunchcontext.h:28</span>,
+                 from <span class="ansi1">/usr/include/gtk-3.0/gdk/gdk.h:32</span>,
+                 from <span class="ansi1">/usr/include/gtk-3.0/gtk/gtk.h:30</span>,
+                 from <span class="ansi1">src/gnome-mines.p/gnome-mines.c:14</span>:
+<span class="ansi1">/usr/include/glib-2.0/gio/gioenums.h:1540:3:</span> <span class="ansi1 ansi36">note: </span>declared here
+ 1540 |   <span class="ansi1 ansi36">G_APPLICATION_FLAGS_NONE</span> GIO_DEPRECATED_ENUMERATOR_IN_2_74_FOR(G_APPLICATION_DEFAULT_FLAGS),
+      |   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_set_game_theme</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:625:25:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp10_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  625 |                 gchar** <span class="ansi1 ansi35">_tmp10_</span>;
+      |                         <span class="ansi1 ansi35">^~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:624:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp9__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  624 |                 gint <span class="ansi1 ansi35">_tmp9__length1</span>;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:619:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_icon_search_path_size_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  619 |                 gint <span class="ansi1 ansi35">_icon_search_path_size_</span> = 0;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_real_startup</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:949:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp30__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  949 |         gint <span class="ansi1 ansi35">_tmp30__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:945:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp27__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  945 |         gint <span class="ansi1 ansi35">_tmp27__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:941:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp24__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  941 |         gint <span class="ansi1 ansi35">_tmp24__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:937:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp21__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  937 |         gint <span class="ansi1 ansi35">_tmp21__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_create_category_from_key</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1510:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp7__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1510 |         gint <span class="ansi1 ansi35">_tmp7__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1506:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp5__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1506 |         gint <span class="ansi1 ansi35">_tmp5__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1502:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp3__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1502 |         gint <span class="ansi1 ansi35">_tmp3__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1498:17:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp2_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1498 |         gchar** <span class="ansi1 ansi35">_tmp2_</span>;
+      |                 <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1497:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tokens_size_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1497 |         gint <span class="ansi1 ansi35">_tokens_size_</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_parse_old_score</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1602:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp11__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1602 |         gint <span class="ansi1 ansi35">_tmp11__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1598:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp9__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1598 |         gint <span class="ansi1 ansi35">_tmp9__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1594:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp7__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1594 |         gint <span class="ansi1 ansi35">_tmp7__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1590:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp5__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1590 |         gint <span class="ansi1 ansi35">_tmp5__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1586:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp3__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1586 |         gint <span class="ansi1 ansi35">_tmp3__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1582:17:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp2_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1582 |         gchar** <span class="ansi1 ansi35">_tmp2_</span>;
+      |                 <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:1581:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tokens_size_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1581 |         gint <span class="ansi1 ansi35">_tokens_size_</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_real_handle_local_options</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:2138:17:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">self</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2138 |         Mines * <span class="ansi1 ansi35">self</span>;
+      |                 <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_size_actions_toggle</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:2432:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp3__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2432 |                                 gint <span class="ansi1 ansi35">_tmp3__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:2429:49:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp2_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2429 |                                 GSimpleAction** <span class="ansi1 ansi35">_tmp2_</span>;
+      |                                                 <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> In function ‘<span class="ansi1">mines_about_cb</span>’:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:2983:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_documenters_size_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2983 |         gint <span class="ansi1 ansi35">_documenters_size_</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:2978:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_artists_size_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2978 |         gint <span class="ansi1 ansi35">_artists_size_</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:2973:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_authors_size_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2973 |         gint <span class="ansi1 ansi35">_authors_size_</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:</span> At top level:
+<span class="ansi1">src/gnome-mines.p/gnome-mines.c:104:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">mines_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  104 | static GParamSpec* <span class="ansi1 ansi35">mines_properties</span>[MINES_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~</span>
+[134/137] x86_64-pc-linux-gnu-gcc -Isrc/gnome-mines.p -Isrc -I../gnome-mines-40.1/src -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gee-0.8 -I/usr/lib64/libffi/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/librsvg-2.0 -I/usr/include/gnome-games-support-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread '-DVERSION="40.1"' '-DGETTEXT_PACKAGE="gnome-mines"' '-DLOCALEDIR="/usr/share/locale"' '-DDATA_DIRECTORY="/usr/share/gnome-mines"' -MD -MQ src/gnome-mines.p/meson-generated_minefield-view.c.o -MF src/gnome-mines.p/meson-generated_minefield-view.c.o.d -o src/gnome-mines.p/meson-generated_minefield-view.c.o -c src/gnome-mines.p/minefield-view.c
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:</span> In function ‘<span class="ansi1">position_finalize</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:868:20:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">self</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  868 |         Position * <span class="ansi1 ansi35">self</span>;
+      |                    <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:</span> In function ‘<span class="ansi1">minefield_view_tile_pressed_cb</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1123:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp52__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1123 |         gint <span class="ansi1 ansi35">_tmp52__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1105:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp36__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1105 |         gint <span class="ansi1 ansi35">_tmp36__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1098:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp22__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1098 |         gint <span class="ansi1 ansi35">_tmp22__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:</span> In function ‘<span class="ansi1">minefield_view_tile_released_cb</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1296:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp74__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1296 |         gint <span class="ansi1 ansi35">_tmp74__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:</span> In function ‘<span class="ansi1">minefield_view_redraw_sector_cb</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1735:54:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+ 1735 |                                 neighbour_collection <span class="ansi1 ansi35">=</span> neighbour_map;
+      |                                                      <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1733:38:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+ 1733 |                                 gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1812:30:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp48__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1812 |                         gint <span class="ansi1 ansi35">_tmp48__length1</span>;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1856:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp58__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1856 |                                 gint <span class="ansi1 ansi35">_tmp58__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1833:30:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp56__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1833 |                         gint <span class="ansi1 ansi35">_tmp56__length1</span>;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1829:30:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp54__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1829 |                         gint <span class="ansi1 ansi35">_tmp54__length1</span>;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1825:30:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp52__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1825 |                         gint <span class="ansi1 ansi35">_tmp52__length1</span>;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1913:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp75__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1913 |                                 gint <span class="ansi1 ansi35">_tmp75__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1889:30:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp68__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1889 |                         gint <span class="ansi1 ansi35">_tmp68__length1</span>;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1939:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp82__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1939 |                                 gint <span class="ansi1 ansi35">_tmp82__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:</span> In function ‘<span class="ansi1">minefield_view_toggle_mark</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:1998:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp15__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1998 |                                 gint <span class="ansi1 ansi35">_tmp15__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2013:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp19__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2013 |                                 gint <span class="ansi1 ansi35">_tmp19__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2030:30:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp21__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2030 |                         gint <span class="ansi1 ansi35">_tmp21__length1</span>;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2064:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp31__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2064 |                                 gint <span class="ansi1 ansi35">_tmp31__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2048:30:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp25__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2048 |                         gint <span class="ansi1 ansi35">_tmp25__length1</span>;
+      |                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:</span> In function ‘<span class="ansi1">minefield_view_on_key_pressed</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2321:46:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp49__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2321 |                                         gint <span class="ansi1 ansi35">_tmp49__length1</span>;
+      |                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2375:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp62__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2375 |                 gint <span class="ansi1 ansi35">_tmp62__length1</span>;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2406:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp74__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2406 |                 gint <span class="ansi1 ansi35">_tmp74__length1</span>;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2481:22:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp110__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2481 |                 gint <span class="ansi1 ansi35">_tmp110__length1</span>;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2174:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp91__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2174 |         gint <span class="ansi1 ansi35">_tmp91__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2172:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp90__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2172 |         gint <span class="ansi1 ansi35">_tmp90__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2151:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp25__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2151 |         gint <span class="ansi1 ansi35">_tmp25__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:</span> In function ‘<span class="ansi1">minefield_view_set_minefield</span>’:
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2961:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp24__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2961 |                                                         gint <span class="ansi1 ansi35">_tmp24__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2957:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp22__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2957 |                                                         gint <span class="ansi1 ansi35">_tmp22__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2953:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp20__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2953 |                                                         gint <span class="ansi1 ansi35">_tmp20__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2949:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp18__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2949 |                                                         gint <span class="ansi1 ansi35">_tmp18__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2945:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp16__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2945 |                                                         gint <span class="ansi1 ansi35">_tmp16__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2941:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp14__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2941 |                                                         gint <span class="ansi1 ansi35">_tmp14__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/minefield-view.c:2883:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp32__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 2883 |         gint <span class="ansi1 ansi35">_tmp32__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+[135/137] x86_64-pc-linux-gnu-gcc -Isrc/gnome-mines.p -Isrc -I../gnome-mines-40.1/src -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gee-0.8 -I/usr/lib64/libffi/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/librsvg-2.0 -I/usr/include/gnome-games-support-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread '-DVERSION="40.1"' '-DGETTEXT_PACKAGE="gnome-mines"' '-DLOCALEDIR="/usr/share/locale"' '-DDATA_DIRECTORY="/usr/share/gnome-mines"' -MD -MQ src/gnome-mines.p/meson-generated_tile.c.o -MF src/gnome-mines.p/meson-generated_tile.c.o.d -o src/gnome-mines.p/meson-generated_tile.c.o -c src/gnome-mines.p/tile.c
+[136/137] x86_64-pc-linux-gnu-gcc -Isrc/gnome-mines.p -Isrc -I../gnome-mines-40.1/src -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gee-0.8 -I/usr/lib64/libffi/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/librsvg-2.0 -I/usr/include/gnome-games-support-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread '-DVERSION="40.1"' '-DGETTEXT_PACKAGE="gnome-mines"' '-DLOCALEDIR="/usr/share/locale"' '-DDATA_DIRECTORY="/usr/share/gnome-mines"' -MD -MQ src/gnome-mines.p/meson-generated_theme-selector-dialog.c.o -MF src/gnome-mines.p/meson-generated_theme-selector-dialog.c.o.d -o src/gnome-mines.p/meson-generated_theme-selector-dialog.c.o -c src/gnome-mines.p/theme-selector-dialog.c
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:</span> In function ‘<span class="ansi1">preview_field_place_mines</span>’:
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:288:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp2__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  288 |                                 gint <span class="ansi1 ansi35">_tmp2__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:316:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp6__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  316 |                                 gint <span class="ansi1 ansi35">_tmp6__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:345:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp11__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  345 |                                 gint <span class="ansi1 ansi35">_tmp11__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:379:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp16__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  379 |                                 gint <span class="ansi1 ansi35">_tmp16__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:414:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp22__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  414 |                                 gint <span class="ansi1 ansi35">_tmp22__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:452:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp26__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  452 |                                 gint <span class="ansi1 ansi35">_tmp26__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:480:38:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp30__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  480 |                                 gint <span class="ansi1 ansi35">_tmp30__length1</span>;
+      |                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:537:86:</span> <span class="ansi1 ansi35">warning: </span>assignment discards ‘<span class="ansi1">const</span>’ qualifier from pointer target type [<span class="ansi1 ansi35">-Wdiscarded-qualifiers</span>]
+  537 |                                                                 neighbour_collection <span class="ansi1 ansi35">=</span> PREVIEW_FIELD_neighbour_map;
+      |                                                                                      <span class="ansi1 ansi35">^</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:554:94:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp39__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  554 |                                                                                         gint <span class="ansi1 ansi35">_tmp39__length1</span>;
+      |                                                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:567:94:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp41__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  567 |                                                                                         gint <span class="ansi1 ansi35">_tmp41__length1</span>;
+      |                                                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:535:70:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_neighbour_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  535 |                                                                 gint <span class="ansi1 ansi35">_neighbour_collection_size_</span> = 0;
+      |                                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:</span> At top level:
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:94:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">theme_selector_dialog_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+   94 | static GParamSpec* <span class="ansi1 ansi35">theme_selector_dialog_properties</span>[THEME_SELECTOR_DIALOG_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/gnome-mines.p/theme-selector-dialog.c:67:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">preview_field_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+   67 | static GParamSpec* <span class="ansi1 ansi35">preview_field_properties</span>[PREVIEW_FIELD_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~</span>
+[137/137] x86_64-pc-linux-gnu-gcc  -o src/gnome-mines src/gnome-mines.p/meson-generated_.._resources.c.o src/gnome-mines.p/meson-generated_gnome-mines.c.o src/gnome-mines.p/meson-generated_minefield.c.o src/gnome-mines.p/meson-generated_minefield-view.c.o src/gnome-mines.p/meson-generated_tile.c.o src/gnome-mines.p/meson-generated_theme-selector-dialog.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libglib-2.0.so /usr/lib64/libgee-0.8.so /usr/lib64/libgobject-2.0.so /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libatk-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/librsvg-2.so -lm /usr/lib64/libgnome-games-support-1.so -Wl,--end-group
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: games-board/gnome-mines-40.1
+
+&gt;&gt;&gt; Install games-board/gnome-mines-40.1 into /var/tmp/portage/games-board/gnome-mines-40.1/image
+meson install --destdir /var/tmp/portage/games-board/gnome-mines-40.1/image --no-rebuild
+Installing po/af/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/af/LC_MESSAGES
+Installing po/am/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/am/LC_MESSAGES
+Installing po/an/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/an/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ar/LC_MESSAGES
+Installing po/as/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/as/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/az/LC_MESSAGES
+Installing po/be/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/be/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/bn/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/bn/LC_MESSAGES
+Installing po/bn_IN/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/bn_IN/LC_MESSAGES
+Installing po/br/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/br/LC_MESSAGES
+Installing po/bs/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/bs/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po/ckb/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ckb/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/de/LC_MESSAGES
+Installing po/dz/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/dz/LC_MESSAGES
+Installing po/el/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_CA/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/en_CA/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/en@shaw/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/en@shaw/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/es/LC_MESSAGES
+Installing po/et/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/ga/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ga/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/gu/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/gu/LC_MESSAGES
+Installing po/he/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/id/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/id/LC_MESSAGES
+Installing po/is/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/is/LC_MESSAGES
+Installing po/it/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/kk/LC_MESSAGES
+Installing po/km/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/km/LC_MESSAGES
+Installing po/kn/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/kn/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ko/LC_MESSAGES
+Installing po/ku/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ku/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/lv/LC_MESSAGES
+Installing po/mai/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/mai/LC_MESSAGES
+Installing po/mk/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/mk/LC_MESSAGES
+Installing po/ml/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ml/LC_MESSAGES
+Installing po/mn/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/mn/LC_MESSAGES
+Installing po/mr/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/mr/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ms/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/ne/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ne/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/nn/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/oc/LC_MESSAGES
+Installing po/or/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/or/LC_MESSAGES
+Installing po/pa/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/pa/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/rw/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/rw/LC_MESSAGES
+Installing po/si/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/si/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/te/LC_MESSAGES
+Installing po/tg/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/tg/LC_MESSAGES
+Installing po/th/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/th/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/ug/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/ug/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/wa/LC_MESSAGES
+Installing po/xh/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/xh/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/gnome-mines.mo to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing data/org.gnome.Mines.desktop to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/applications
+Installing data/org.gnome.Mines.appdata.xml to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/metainfo
+Installing help/ca/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/ca/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines
+Installing help/cs/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/cs/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines
+Installing help/da/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/da/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines
+Installing help/de/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/de/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines
+Installing help/el/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/el/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines
+Installing help/es/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/es/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines
+Installing help/eu/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/eu/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines
+Installing help/fr/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/fr/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines
+Installing help/gl/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/gl/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines
+Installing help/hu/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/hu/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines
+Installing help/ja/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ja/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines
+Installing help/ko/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/ko/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines
+Installing help/pl/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pl/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines
+Installing help/pt_BR/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/pt_BR/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines
+Installing help/sl/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sl/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines
+Installing help/sv/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/sv/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines
+Installing help/uk/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing help/uk/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines
+Installing src/gnome-mines to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/bin
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/gnome-mines.6 to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/man/man6
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/icons/hicolor/scalable/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/icons/hicolor/scalable/apps
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/icons/hicolor/symbolic/org.gnome.Mines-symbolic.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/icons/hicolor/symbolic/apps
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/org.gnome.Mines.gschema.xml to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/glib-2.0/schemas
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/theme.css to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/1mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/2mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/3mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/4mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/5mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/6mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/7mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/8mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/mine.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/incorrect.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/exploded.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/default/maybe.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/default
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/theme.css to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/1mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/2mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/3mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/4mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/5mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/6mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/7mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/8mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/mine.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/incorrect.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/exploded.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/bgcolors/maybe.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/bgcolors
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/theme.css to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/1mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/2mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/3mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/4mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/5mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/6mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/7mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/8mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/mine.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/incorrect.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/exploded.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/data/themes/classic/maybe.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/gnome-mines/themes/classic
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/board-size.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/bug-filing.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/develop.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/documentation.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/flags.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/high-scores.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/index.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/license.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/new-game.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/rules.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/translate.page to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines/figures
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines/figures
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines/figures
+Installing /var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/help/C/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/C/gnome-mines/figures
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ca/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/cs/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/da/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/de/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/el/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/es/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/eu/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/fr/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/gl/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/hu/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ja/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/ko/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pl/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/pt_BR/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sl/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/sv/gnome-mines/figures/org.gnome.Mines.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag-question.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines/figures/flag-question.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/flags.png to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines/figures/flags.png
+Installing symlink pointing to ../../../C/gnome-mines/figures/flag.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines/figures/flag.svg
+Installing symlink pointing to ../../../C/gnome-mines/figures/org.gnome.Mines.svg to /var/tmp/portage/games-board/gnome-mines-40.1/image/usr/share/help/uk/gnome-mines/figures/org.gnome.Mines.svg
+Running custom install script '/var/tmp/portage/games-board/gnome-mines-40.1/work/gnome-mines-40.1/build-aux/meson_post_install.py'
+&gt;&gt;&gt; Completed installing games-board/gnome-mines-40.1 into /var/tmp/portage/games-board/gnome-mines-40.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 6892 KiB (6.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  2944 KiB (2.8 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/gnome-mines
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>

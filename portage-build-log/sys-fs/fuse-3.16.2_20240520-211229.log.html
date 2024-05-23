@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-fs/fuse-3.16.2:3
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux suid
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking fuse-3.16.2.tar.gz to /var/tmp/portage/sys-fs/fuse-3.16.2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-fs/fuse-3.16.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/sys-fs/fuse-3.16.2/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dexamples=false -Dtests=false -Duseroot=false -Dinitscriptdir= -Dudevrulesdir=/lib/udev/rules.d /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2 /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2-abi_x86_64.amd64
+The Meson build system
+Version: 1.4.0
+Source dir: /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2
+Build dir: /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2-abi_x86_64.amd64
+Build type: native build
+Project name: libfuse3
+Project version: 3.16.2
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 13.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 13.2.1_p20240210 p14) 13.2.1 20240210")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.42
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Checking for function "fork" : YES 
+Checking for function "fstatat" : YES 
+Checking for function "openat" : YES 
+Checking for function "readlinkat" : YES 
+Checking for function "pipe2" : YES 
+Checking for function "splice" : YES 
+Checking for function "vmsplice" : YES 
+Checking for function "posix_fallocate" : YES 
+Checking for function "fdatasync" : YES 
+Checking for function "utimensat" : YES 
+Checking for function "copy_file_range" : YES 
+Checking for function "fallocate" : YES 
+Checking for function "setxattr" : YES 
+Checking for function "iconv" : YES 
+Checking whether type "struct stat" has member "st_atim" : YES 
+Checking whether type "struct stat" has member "st_atimespec" : NO 
+Message: Compiler warns about unused result even when casting to void
+Message: Enabling versioned libc symbols
+Message: Compiler supports symver attribute
+Configuring fuse_config.h using configuration
+Configuring libfuse_config.h using configuration
+Run-time dependency threads found: YES
+Library iconv found: NO
+Library dl found: YES
+Library rt found: YES
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.2.0
+Build targets in project: 3
+
+libfuse3 3.16.2
+
+  User defined options
+    Native files         : /var/tmp/portage/sys-fs/fuse-3.16.2/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    examples             : false
+    initscriptdir        : 
+    tests                : false
+    udevrulesdir         : /lib/udev/rules.d
+    useroot              : false
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+meson compile --jobs 2 --load-average 2 --verbose
+[1/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/fuse_loop.c.o -MF lib/libfuse3.so.3.16.2.p/fuse_loop.c.o.d -o lib/libfuse3.so.3.16.2.p/fuse_loop.c.o -c ../fuse-3.16.2/lib/fuse_loop.c
+[2/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/fuse_loop_mt.c.o -MF lib/libfuse3.so.3.16.2.p/fuse_loop_mt.c.o.d -o lib/libfuse3.so.3.16.2.p/fuse_loop_mt.c.o -c ../fuse-3.16.2/lib/fuse_loop_mt.c
+[3/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/fuse_lowlevel.c.o -MF lib/libfuse3.so.3.16.2.p/fuse_lowlevel.c.o.d -o lib/libfuse3.so.3.16.2.p/fuse_lowlevel.c.o -c ../fuse-3.16.2/lib/fuse_lowlevel.c
+[4/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/fuse_opt.c.o -MF lib/libfuse3.so.3.16.2.p/fuse_opt.c.o.d -o lib/libfuse3.so.3.16.2.p/fuse_opt.c.o -c ../fuse-3.16.2/lib/fuse_opt.c
+[5/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/fuse_signals.c.o -MF lib/libfuse3.so.3.16.2.p/fuse_signals.c.o.d -o lib/libfuse3.so.3.16.2.p/fuse_signals.c.o -c ../fuse-3.16.2/lib/fuse_signals.c
+[6/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/buffer.c.o -MF lib/libfuse3.so.3.16.2.p/buffer.c.o.d -o lib/libfuse3.so.3.16.2.p/buffer.c.o -c ../fuse-3.16.2/lib/buffer.c
+[7/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/cuse_lowlevel.c.o -MF lib/libfuse3.so.3.16.2.p/cuse_lowlevel.c.o.d -o lib/libfuse3.so.3.16.2.p/cuse_lowlevel.c.o -c ../fuse-3.16.2/lib/cuse_lowlevel.c
+[8/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/helper.c.o -MF lib/libfuse3.so.3.16.2.p/helper.c.o.d -o lib/libfuse3.so.3.16.2.p/helper.c.o -c ../fuse-3.16.2/lib/helper.c
+[9/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/fuse.c.o -MF lib/libfuse3.so.3.16.2.p/fuse.c.o.d -o lib/libfuse3.so.3.16.2.p/fuse.c.o -c ../fuse-3.16.2/lib/fuse.c
+[10/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/mount_util.c.o -MF lib/libfuse3.so.3.16.2.p/mount_util.c.o.d -o lib/libfuse3.so.3.16.2.p/mount_util.c.o -c ../fuse-3.16.2/lib/mount_util.c
+[11/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/fuse_log.c.o -MF lib/libfuse3.so.3.16.2.p/fuse_log.c.o.d -o lib/libfuse3.so.3.16.2.p/fuse_log.c.o -c ../fuse-3.16.2/lib/fuse_log.c
+[12/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/compat.c.o -MF lib/libfuse3.so.3.16.2.p/compat.c.o.d -o lib/libfuse3.so.3.16.2.p/compat.c.o -c ../fuse-3.16.2/lib/compat.c
+[13/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/modules_subdir.c.o -MF lib/libfuse3.so.3.16.2.p/modules_subdir.c.o.d -o lib/libfuse3.so.3.16.2.p/modules_subdir.c.o -c ../fuse-3.16.2/lib/modules/subdir.c
+[14/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/mount.c.o -MF lib/libfuse3.so.3.16.2.p/mount.c.o.d -o lib/libfuse3.so.3.16.2.p/mount.c.o -c ../fuse-3.16.2/lib/mount.c
+[15/22] x86_64-pc-linux-gnu-gcc -Ilib/libfuse3.so.3.16.2.p -Ilib -I../fuse-3.16.2/lib -Iinclude -I../fuse-3.16.2/include -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DFUSE_USE_VERSION=312 '-DFUSERMOUNT_DIR="/usr/bin"' -MD -MQ lib/libfuse3.so.3.16.2.p/modules_iconv.c.o -MF lib/libfuse3.so.3.16.2.p/modules_iconv.c.o.d -o lib/libfuse3.so.3.16.2.p/modules_iconv.c.o -c ../fuse-3.16.2/lib/modules/iconv.c
+[16/22] x86_64-pc-linux-gnu-gcc  -o lib/libfuse3.so.3.16.2 lib/libfuse3.so.3.16.2.p/fuse.c.o lib/libfuse3.so.3.16.2.p/fuse_loop.c.o lib/libfuse3.so.3.16.2.p/fuse_loop_mt.c.o lib/libfuse3.so.3.16.2.p/fuse_lowlevel.c.o lib/libfuse3.so.3.16.2.p/fuse_opt.c.o lib/libfuse3.so.3.16.2.p/fuse_signals.c.o lib/libfuse3.so.3.16.2.p/buffer.c.o lib/libfuse3.so.3.16.2.p/cuse_lowlevel.c.o lib/libfuse3.so.3.16.2.p/helper.c.o lib/libfuse3.so.3.16.2.p/modules_subdir.c.o lib/libfuse3.so.3.16.2.p/mount_util.c.o lib/libfuse3.so.3.16.2.p/fuse_log.c.o lib/libfuse3.so.3.16.2.p/compat.c.o lib/libfuse3.so.3.16.2.p/mount.c.o lib/libfuse3.so.3.16.2.p/modules_iconv.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libfuse3.so.3 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--version-script,/var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/lib/fuse_versionscript -pthread -Wl,--start-group -ldl -lrt -Wl,--end-group
+[17/22] /usr/lib/python-exec/python3.11/meson --internal symbolextractor /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2-abi_x86_64.amd64 lib/libfuse3.so.3.16.2 lib/libfuse3.so.3.16.2 lib/libfuse3.so.3.16.2.p/libfuse3.so.3.16.2.symbols 
+[18/22] x86_64-pc-linux-gnu-gcc -Iutil/fusermount3.p -Iutil -I../fuse-3.16.2/util -Iinclude -I../fuse-3.16.2/include -Ilib -I../fuse-3.16.2/lib -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe '-DFUSE_CONF="/etc/fuse.conf"' -MD -MQ util/fusermount3.p/.._lib_mount_util.c.o -MF util/fusermount3.p/.._lib_mount_util.c.o.d -o util/fusermount3.p/.._lib_mount_util.c.o -c ../fuse-3.16.2/lib/mount_util.c
+[19/22] x86_64-pc-linux-gnu-gcc -Iutil/fusermount3.p -Iutil -I../fuse-3.16.2/util -Iinclude -I../fuse-3.16.2/include -Ilib -I../fuse-3.16.2/lib -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe '-DFUSE_CONF="/etc/fuse.conf"' -MD -MQ util/fusermount3.p/fusermount.c.o -MF util/fusermount3.p/fusermount.c.o.d -o util/fusermount3.p/fusermount.c.o -c ../fuse-3.16.2/util/fusermount.c
+[20/22] x86_64-pc-linux-gnu-gcc  -o util/fusermount3 util/fusermount3.p/fusermount.c.o util/fusermount3.p/.._lib_mount_util.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+[21/22] x86_64-pc-linux-gnu-gcc -Iutil/mount.fuse3.p -Iutil -I../fuse-3.16.2/util -Iinclude -I../fuse-3.16.2/include -Ilib -I../fuse-3.16.2/lib -I. -I../fuse-3.16.2 -fdiagnostics-color=always -Wall -Winvalid-pch -Wextra -D_REENTRANT -DHAVE_LIBFUSE_PRIVATE_CONFIG_H -Wno-sign-compare -D_FILE_OFFSET_BITS=64 -Wstrict-prototypes -Wmissing-declarations -Wwrite-strings -fno-strict-aliasing -Wno-unused-result -DHAVE_SYMVER_ATTRIBUTE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DFUSE_USE_VERSION=312 -MD -MQ util/mount.fuse3.p/mount.fuse.c.o -MF util/mount.fuse3.p/mount.fuse.c.o.d -o util/mount.fuse3.p/mount.fuse.c.o -c ../fuse-3.16.2/util/mount.fuse.c
+[22/22] x86_64-pc-linux-gnu-gcc  -o util/mount.fuse3 util/mount.fuse3.p/mount.fuse.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/../lib' -Wl,-rpath-link,/var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2-abi_x86_64.amd64/lib lib/libfuse3.so.3.16.2
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -j 2 -l 2.0 -v
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-fs/fuse-3.16.2
+
+&gt;&gt;&gt; Install sys-fs/fuse-3.16.2 into /var/tmp/portage/sys-fs/fuse-3.16.2/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/sys-fs/fuse-3.16.2/image --no-rebuild
+Installing lib/libfuse3.so.3.16.2 to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/lib64
+Installing util/fusermount3 to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/bin
+Installing util/mount.fuse3 to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/sbin
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/include/fuse.h to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/include/fuse3
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/include/fuse_common.h to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/include/fuse3
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/include/fuse_lowlevel.h to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/include/fuse3
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/include/fuse_opt.h to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/include/fuse3
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/include/cuse_lowlevel.h to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/include/fuse3
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/include/fuse_log.h to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/include/fuse3
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/doc/fusermount3.1 to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/share/man/man1
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/doc/mount.fuse3.8 to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/share/man/man8
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2-abi_x86_64.amd64/libfuse_config.h to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/include/fuse3
+Installing /var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2-abi_x86_64.amd64/meson-private/fuse3.pc to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/lib64/pkgconfig
+Installing symlink pointing to libfuse3.so.3.16.2 to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/lib64/libfuse3.so.3
+Installing symlink pointing to libfuse3.so.3 to /var/tmp/portage/sys-fs/fuse-3.16.2/image/usr/lib64/libfuse3.so
+Running custom install script '/var/tmp/portage/sys-fs/fuse-3.16.2/work/fuse-3.16.2/util/install_helper.sh /etc /usr/bin /lib/udev/rules.d false '
+&gt;&gt;&gt; Completed installing sys-fs/fuse-3.16.2 into /var/tmp/portage/sys-fs/fuse-3.16.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 113736 KiB (111.0 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:     620 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/fusermount3
+   /usr/lib64/libfuse3.so.3.16.2
+   /usr/sbin/mount.fuse3
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>

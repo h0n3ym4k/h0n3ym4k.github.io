@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-apps/baselayout-2.15:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: williamh@gentoo.org base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux split-usr
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking baselayout-2.15.tar.bz2 to /var/tmp/portage/sys-apps/baselayout-2.15/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-apps/baselayout-2.15/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-apps/baselayout-2.15/work/baselayout-2.15 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-apps/baselayout-2.15/work/baselayout-2.15 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-apps/baselayout-2.15/work/baselayout-2.15 ...
+make -j2 
+make: Nothing to be done for 'all'.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-apps/baselayout-2.15
+
+&gt;&gt;&gt; Install sys-apps/baselayout-2.15 into /var/tmp/portage/sys-apps/baselayout-2.15/image
+make -j2 DESTDIR=/var/tmp/portage/sys-apps/baselayout-2.15/image install 
+install -m 0755 -d /var/tmp/portage/sys-apps/baselayout-2.15/image/etc
+cp -pPR etc/* /var/tmp/portage/sys-apps/baselayout-2.15/image/etc/
+echo "Gentoo Base System release 2.15" &gt; /var/tmp/portage/sys-apps/baselayout-2.15/image/etc/gentoo-release
+install -m 0755 -d /var/tmp/portage/sys-apps/baselayout-2.15/image/lib
+cp -pPR lib/* /var/tmp/portage/sys-apps/baselayout-2.15/image/lib/
+install -m 0755 -d /var/tmp/portage/sys-apps/baselayout-2.15/image/usr/lib
+ln -snf ../usr/lib/os-release /var/tmp/portage/sys-apps/baselayout-2.15/image/etc/os-release
+./make_os_release 2.15 &gt; /var/tmp/portage/sys-apps/baselayout-2.15/image/usr/lib/os-release
+install -m 0755 -d /var/tmp/portage/sys-apps/baselayout-2.15/image/usr/share/baselayout
+cp -pPR share/* /var/tmp/portage/sys-apps/baselayout-2.15/image/usr/share/baselayout/
+ln -snf ../proc/self/mounts /var/tmp/portage/sys-apps/baselayout-2.15/image/etc/mtab
+&gt;&gt;&gt; Completed installing sys-apps/baselayout-2.15 into /var/tmp/portage/sys-apps/baselayout-2.15/image
+
+ <span class="ansi32">*</span> Final size of build directory: 184 KiB
+ <span class="ansi32">*</span> Final size of installed tree:  184 KiB
+
+
+</pre>
+</body>
+
+</html>
