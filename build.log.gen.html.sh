@@ -148,7 +148,8 @@ echo "<center><h2><p class='blink'>if you cannot resist your own temptation comi
 #echo "<a href="https://ko-fi.com/98036119lmak">https://ko-fi.com/98036119lmak - Support smile</a>" >> index.html.tmp.1
 echo "<iframe id='kofiframe' src='https://ko-fi.com/98036119lmak/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='98036119lmak'></iframe>" >> index.html.tmp.1
 
-echo "<iframe id='fbiframe' src='https://h0n3ym4k.github.io/fb.html' width='100%' height='400px' style='border:0' title='fb msg'></iframe>" >> index.html.tmp.1
+#echo "<iframe id='fbiframe' src='https://h0n3ym4k.github.io/fb.html' width='100%' height='400px' style='border:0' title='fb msg'></iframe>" >> index.html.tmp.1
+echo "<center><h2><a href="https://m.me/freelance.setup.linux" target="_blank"><img src="/fb.png" height="80" width="80">facebook messenger page</a></h2></center>" >> index.html.tmp.1
 
 #echo "<iframe id='note/error build log list/link, emerge-info' src='https://h0n3ym4k.github.io/note.html'></iframe>" >> index.html.tmp.1 = manual process, never scripted this line/process for error builds
 
