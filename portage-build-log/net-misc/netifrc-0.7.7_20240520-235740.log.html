@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-misc/netifrc-0.7.7:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: netifrc@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 dhcp elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking netifrc-0.7.7.tar.bz2 to /var/tmp/portage/net-misc/netifrc-0.7.7/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-misc/netifrc-0.7.7/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7 ...
+make -j2 PREFIX= UPREFIX=/usr UDEVDIR=/lib/udev LIBEXECDIR=/lib/netifrc PF=netifrc-0.7.7 all 
+===&gt; doc (all)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+cp net.example.Linux.in net.example.in
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+sed -e 's:@SHELL@:/bin/sh:g' -e 's:@LIB@:lib:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@CONFDIR@:/etc/conf.d:g' -e 's:@LIBEXECDIR@:/lib/netifrc:g' -e 's:@PREFIX@::g' -e 's:@BINDIR@:/bin:g' -e 's:@SBINDIR@:/sbin:g' -e 's:@INITDIR@:/etc/init.d:g' -e 's:@PKG_PREFIX@:/usr:g' -e 's:@LOCAL_PREFIX@:/usr/local:g'  net.example.in &gt; net.example
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+===&gt; init.d (all)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+sed -e 's:@SHELL@:/bin/sh:g' -e 's:@LIB@:lib:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@CONFDIR@:/etc/conf.d:g' -e 's:@LIBEXECDIR@:/lib/netifrc:g' -e 's:@PREFIX@::g' -e 's:@BINDIR@:/bin:g' -e 's:@SBINDIR@:/sbin:g' -e 's:@INITDIR@:/etc/init.d:g' -e 's:@PKG_PREFIX@:/usr:g' -e 's:@LOCAL_PREFIX@:/usr/local:g'  net.lo.in &gt; net.lo
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+===&gt; net (all)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+cp ifconfig.sh.Linux.in ifconfig.sh.in
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+cp iwconfig.sh.Linux.in iwconfig.sh.in
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+cp udhcpc.sh.Linux.in udhcpc.sh.in
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+sed -e 's:@SHELL@:/bin/sh:g' -e 's:@LIB@:lib:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@CONFDIR@:/etc/conf.d:g' -e 's:@LIBEXECDIR@:/lib/netifrc:g' -e 's:@PREFIX@::g' -e 's:@BINDIR@:/bin:g' -e 's:@SBINDIR@:/sbin:g' -e 's:@INITDIR@:/etc/init.d:g' -e 's:@PKG_PREFIX@:/usr:g' -e 's:@LOCAL_PREFIX@:/usr/local:g'  ifconfig.sh.in &gt; ifconfig.sh
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+sed -e 's:@SHELL@:/bin/sh:g' -e 's:@LIB@:lib:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@CONFDIR@:/etc/conf.d:g' -e 's:@LIBEXECDIR@:/lib/netifrc:g' -e 's:@PREFIX@::g' -e 's:@BINDIR@:/bin:g' -e 's:@SBINDIR@:/sbin:g' -e 's:@INITDIR@:/etc/init.d:g' -e 's:@PKG_PREFIX@:/usr:g' -e 's:@LOCAL_PREFIX@:/usr/local:g'  iwconfig.sh.in &gt; iwconfig.sh
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+sed -e 's:@SHELL@:/bin/sh:g' -e 's:@LIB@:lib:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@CONFDIR@:/etc/conf.d:g' -e 's:@LIBEXECDIR@:/lib/netifrc:g' -e 's:@PREFIX@::g' -e 's:@BINDIR@:/bin:g' -e 's:@SBINDIR@:/sbin:g' -e 's:@INITDIR@:/etc/init.d:g' -e 's:@PKG_PREFIX@:/usr:g' -e 's:@LOCAL_PREFIX@:/usr/local:g'  udhcpc.sh.in &gt; udhcpc.sh
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+===&gt; sh (all)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+sed -e 's:@SHELL@:/bin/sh:g' -e 's:@LIB@:lib:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@CONFDIR@:/etc/conf.d:g' -e 's:@LIBEXECDIR@:/lib/netifrc:g' -e 's:@PREFIX@::g' -e 's:@BINDIR@:/bin:g' -e 's:@SBINDIR@:/sbin:g' -e 's:@INITDIR@:/etc/init.d:g' -e 's:@PKG_PREFIX@:/usr:g' -e 's:@LOCAL_PREFIX@:/usr/local:g'  udhcpc-hook.sh.in &gt; udhcpc-hook.sh
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+sed -e 's:@SHELL@:/bin/sh:g' -e 's:@LIB@:lib:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@CONFDIR@:/etc/conf.d:g' -e 's:@LIBEXECDIR@:/lib/netifrc:g' -e 's:@PREFIX@::g' -e 's:@BINDIR@:/bin:g' -e 's:@SBINDIR@:/sbin:g' -e 's:@INITDIR@:/etc/init.d:g' -e 's:@PKG_PREFIX@:/usr:g' -e 's:@LOCAL_PREFIX@:/usr/local:g'  systemd-wrapper.sh.in &gt; systemd-wrapper.sh
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+===&gt; udev_helper (all)
+make[1]: Nothing to be done for 'all'.
+===&gt; udev_rules (all)
+make[1]: Nothing to be done for 'all'.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: net-misc/netifrc-0.7.7
+
+&gt;&gt;&gt; Install net-misc/netifrc-0.7.7 into /var/tmp/portage/net-misc/netifrc-0.7.7/image
+make -j2 PREFIX= UPREFIX=/usr UDEVDIR=/lib/udev LIBEXECDIR=/lib/netifrc PF=netifrc-0.7.7 DESTDIR=/var/tmp/portage/net-misc/netifrc-0.7.7/image install 
+===&gt; doc (install)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+install -d /var/tmp/portage/net-misc/netifrc-0.7.7/image//usr/share/doc/netifrc-0.7.7
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+install -m 0644 net.example /var/tmp/portage/net-misc/netifrc-0.7.7/image//usr/share/doc/netifrc-0.7.7
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/doc'
+===&gt; init.d (install)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+install -d /var/tmp/portage/net-misc/netifrc-0.7.7/image//etc/init.d
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+install -m 0755 net.lo /var/tmp/portage/net-misc/netifrc-0.7.7/image//etc/init.d
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+install -m 0755 net.lo /var/tmp/portage/net-misc/netifrc-0.7.7/image//etc/init.d/net.lo
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/init.d'
+===&gt; net (install)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+install -d /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/netifrc/net
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+install -m 0644 dhclient.sh dhcpcd.sh ifconfig.sh macchanger.sh macnet.sh ssidnet.sh system.sh wpa_supplicant.sh adsl.sh apipa.sh arping.sh bonding.sh br2684ctl.sh bridge.sh ccwgroup.sh clip.sh ethtool.sh iproute2.sh ifplugd.sh ip6to4.sh ipppd.sh iwconfig.sh netplugd.sh pppd.sh pump.sh tuntap.sh udhcpc.sh vlan.sh macvlan.sh ip6rd.sh firewalld.sh dummy.sh hsr.sh l2tp.sh iw.sh iwd.sh wireguard.sh veth.sh dhclientv6.sh /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/netifrc/net
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/net'
+===&gt; sh (install)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+install -d /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/netifrc/sh
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+install -m 0755 udhcpc-hook.sh functions.sh systemd-wrapper.sh /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/netifrc/sh
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/sh'
+===&gt; udev_helper (install)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_helper'
+install -d /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/udev
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_helper'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_helper'
+install -m 0755 net.sh /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/udev
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_helper'
+===&gt; udev_rules (install)
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_rules'
+install -d /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/udev/rules.d
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_rules'
+make[1]: Entering directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_rules'
+install -m 0644 90-network.rules /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/udev/rules.d
+make[1]: Leaving directory '/var/tmp/portage/net-misc/netifrc-0.7.7/work/netifrc-0.7.7/udev_rules'
+echo "0.7.7" &gt; /var/tmp/portage/net-misc/netifrc-0.7.7/image//lib/netifrc/version
+&gt;&gt;&gt; Completed installing net-misc/netifrc-0.7.7 into /var/tmp/portage/net-misc/netifrc-0.7.7/image
+
+ <span class="ansi32">*</span> Final size of build directory: 840 KiB
+ <span class="ansi32">*</span> Final size of installed tree:  420 KiB
+
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>

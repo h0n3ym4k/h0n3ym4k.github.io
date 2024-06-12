@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-perl/Clone-0.460.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: perl@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking Clone-0.46.tar.gz to /var/tmp/portage/dev-perl/Clone-0.460.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-perl/Clone-0.460.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-perl/Clone-0.460.0/work/Clone-0.46 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-perl/Clone-0.460.0/work/Clone-0.46 ...
+ <span class="ansi32">*</span> Using ExtUtils::MakeMaker
+ <span class="ansi32">*</span> perl Makefile.PL AR=x86_64-pc-linux-gnu-ar CC=x86_64-pc-linux-gnu-gcc CPP=x86_64-pc-linux-gnu-gcc -E LD=x86_64-pc-linux-gnu-gcc NM=x86_64-pc-linux-gnu-nm RANLIB=x86_64-pc-linux-gnu-ranlib OPTIMIZE=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs PREFIX=/usr INSTALLDIRS=vendor INSTALLMAN3DIR=none
+Checking if your kit is complete...
+Looks good
+Warning: prerequisite B::COW 0.004 not found.
+'CPP' is not a known MakeMaker parameter name.
+'NM' is not a known MakeMaker parameter name.
+Generating a Unix-style Makefile
+Writing Makefile for Clone
+Writing MYMETA.yml and MYMETA.json
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-perl/Clone-0.460.0/work/Clone-0.46 ...
+make -j2 'OTHERLDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' 'OPTIMIZE=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' 
+Running Mkbootstrap for Clone ()
+cp Clone.pm blib/lib/Clone.pm
+AutoSplitting blib/lib/Clone.pm (blib/lib/auto/Clone)
+chmod 644 "Clone.bs"
+"/usr/bin/perl" "/usr/lib64/perl5/5.38/ExtUtils/xsubpp"  -typemap '/usr/lib64/perl5/5.38/ExtUtils/typemap'  Clone.xs &gt; Clone.xsc
+mv Clone.xsc Clone.c
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Clone.bs blib/arch/auto/Clone/Clone.bs 644
+x86_64-pc-linux-gnu-gcc -c   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fno-strict-aliasing -DNO_PERL_RAND_SEED -fwrapv -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe   -DVERSION=\"0.46\" -DXS_VERSION=\"0.46\" -fPIC "-I/usr/lib64/perl5/5.38/x86_64-linux/CORE"   Clone.c
+rm -f blib/arch/auto/Clone/Clone.so
+x86_64-pc-linux-gnu-gcc  -shared -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fno-strict-aliasing -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  Clone.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o blib/arch/auto/Clone/Clone.so  \
+      \
+  
+chmod 755 blib/arch/auto/Clone/Clone.so
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-perl/Clone-0.460.0
+
+&gt;&gt;&gt; Install dev-perl/Clone-0.460.0 into /var/tmp/portage/dev-perl/Clone-0.460.0/image
+make -j2 DESTDIR=/var/tmp/portage/dev-perl/Clone-0.460.0/image pure_install 
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Clone.bs blib/arch/auto/Clone/Clone.bs 644
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /var/tmp/portage/dev-perl/Clone-0.460.0/image/usr/lib64/perl5/vendor_perl/5.38/x86_64-linux/auto/Clone/Clone.so
+Installing /var/tmp/portage/dev-perl/Clone-0.460.0/image/usr/lib64/perl5/vendor_perl/5.38/x86_64-linux/Clone.pm
+Installing /var/tmp/portage/dev-perl/Clone-0.460.0/image/usr/lib64/perl5/vendor_perl/5.38/x86_64-linux/auto/Clone/autosplit.ix
+ <span class="ansi32">*</span> Fixing installed file permissions
+ <span class="ansi32">*</span> Fixing packlist file //usr/lib64/perl5/vendor_perl/5.38/x86_64-linux/auto/Clone/.packlist
+&gt;&gt;&gt; Completed installing dev-perl/Clone-0.460.0 into /var/tmp/portage/dev-perl/Clone-0.460.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 812 KiB
+ <span class="ansi32">*</span> Final size of installed tree:   92 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/perl5/vendor_perl/5.38/x86_64-linux/auto/Clone/Clone.so
+
+</pre>
+</body>
+
+</html>

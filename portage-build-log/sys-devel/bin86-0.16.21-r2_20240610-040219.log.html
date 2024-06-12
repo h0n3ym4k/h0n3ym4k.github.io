@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-devel/bin86-0.16.21-r2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking bin86-0.16.21.tar.gz to /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21 ...
+make -j2 
+set -e ; for d in ld as; do \
+  (cd $d &amp;&amp; make "LIBS=" "CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE " "LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs" "BINDIR=/usr/bin" "LIBDIR=/usr/lib" "CC=x86_64-pc-linux-gnu-gcc" all;); \
+ done
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c dumps.c -o dumps.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c ld.c -o ld.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c io.c -o io.o
+io.c: In function ‘flusherr’:
+io.c:142:8: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  142 |        write(errfil, errbuf, (unsigned) (errbufptr - errbuf));
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c table.c -o table.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c readobj.c -o readobj.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c typeconv.c -o typeconv.o
+typeconv.c: In function ‘xxerr’:
+typeconv.c:14:27: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | void xxerr(x) char * x; { write(2, x, strlen(x)); }
+      |                           ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c linksyms.c -o linksyms.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c mkar.c -o mkar.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c writex86.c -o writex86.o
+writex86.c: In function ‘write_elks’:
+writex86.c:59:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   59 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writex86.c:448:33: note: in expansion of macro ‘offsetof’
+  448 |         seekout((unsigned long) offsetof(struct exec, a_syms));
+      |                                 ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT  -c writebin.c
+writebin.c: In function ‘writebin’:
+writebin.c:1062:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1062 |     write(2, s, strlen(s));
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c writeemu.c -o writeemu.o
+In file included from writeemu.c:20:
+writebin.c: In function ‘write_dosemu’:
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:560:33: note: in expansion of macro ‘offsetof’
+  560 |         seekout((unsigned long) offsetof(struct exec, a_syms));
+      |                                 ^~~~~~~~
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:565:33: note: in expansion of macro ‘offsetof’
+  565 |         if( FILEHEADERLENGTH &gt;= offsetof(struct exec, a_trsize)+8)
+      |                                 ^~~~~~~~
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:567:41: note: in expansion of macro ‘offsetof’
+  567 |                 seekout((unsigned long) offsetof(struct exec, a_trsize));
+      |                                         ^~~~~~~~
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:571:41: note: in expansion of macro ‘offsetof’
+  571 |                 seekout((unsigned long) offsetof(struct exec, a_drsize));
+      |                                         ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  objchop.c   -o objchop
+objchop.c: In function ‘main’:
+objchop.c:52:30: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 3 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                            ~~^
+      |                              |
+      |                              long int
+      |                            %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |            ~~~~~~~~~~~~~      
+      |                  |
+      |                  Long {aka int}
+objchop.c:52:45: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 4 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                                           ~~^
+      |                                             |
+      |                                             long int
+      |                                           %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |                           ~~~~~~~~~~~~~      
+      |                                 |
+      |                                 Long {aka int}
+objchop.c:52:59: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 5 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                                                         ~~^
+      |                                                           |
+      |                                                           long int
+      |                                                         %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |                                          ~~~~~~~~~~~~      
+      |                                                |
+      |                                                Long {aka int}
+objchop.c:52:75: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 6 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                                                                         ~~^
+      |                                                                           |
+      |                                                                           long int
+      |                                                                         %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |                                                        ~~~~~~~~~~~~~~      
+      |                                                              |
+      |                                                              Long {aka int}
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  catimage.c   -o catimage
+catimage.c: In function ‘main’:
+catimage.c:71:49: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   71 |       printf("File %-14s seg=0x%04lx text=0x%04lx data=0x%04lx\n",
+      |                                             ~~~~^
+      |                                                 |
+      |                                                 long unsigned int
+      |                                             %04x
+   72 |               input_file, (image_offset&gt;&gt;4),
+   73 |               (header.a_text&gt;&gt;4), (header.a_total&gt;&gt;4));
+      |               ~~~~~~~~~~~~~~~~~~                 
+      |                             |
+      |                             Long {aka int}
+catimage.c:71:62: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   71 |       printf("File %-14s seg=0x%04lx text=0x%04lx data=0x%04lx\n",
+      |                                                          ~~~~^
+      |                                                              |
+      |                                                              long unsigned int
+      |                                                          %04x
+   72 |               input_file, (image_offset&gt;&gt;4),
+   73 |               (header.a_text&gt;&gt;4), (header.a_total&gt;&gt;4));
+      |                                   ~~~~~~~~~~~~~~~~~~~         
+      |                                                  |
+      |                                                  Long {aka int}
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs dumps.o io.o ld.o readobj.o table.o typeconv.o linksyms.o mkar.o writex86.o writebin.o writeemu.o -o ld86
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  objdump86.c   -o objdump86
+objdump86.c: In function ‘do_module’:
+objdump86.c:245:10: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  245 |          fread(strtab, 1, (unsigned int)str_len, ifd);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c assemble.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c as.c
+as.c: In function ‘as_abort’:
+as.c:68:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   68 |     write(STDOUT, "as: ", 4);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+as.c:69:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   69 |     write(STDOUT, message, strlen(message));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+as.c:70:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   70 |     write(STDOUT, "\n", 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c errors.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c express.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c genbin.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c genlist.c
+genlist.c: In function ‘list1’:
+genlist.c:197:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  197 |     write(outfd, linebuf, (unsigned) (lineptr - linebuf));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writec’:
+genlist.c:432:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  432 |     write(outfd, &amp;ch, 1);
+      |     ^~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writeoff’:
+genlist.c:454:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  454 |     write(outfd, buf, sizeof buf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writes’:
+genlist.c:462:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  462 |     write(outfd, s, strlen(s));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writew’:
+genlist.c:482:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  482 |     write(outfd, buf, sizeof buf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c gensym.c
+gensym.c: In function ‘gensym’:
+gensym.c:95:13: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   95 |             write(outfd, symptr-&gt;name, (unsigned) (symptr-&gt;length));
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘printsym’,
+    inlined from ‘gensym’ at gensym.c:66:15:
+gensym.c:161:20: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+  161 |         *outname++ = *symname++;
+      |         ~~~~~~~~~~~^~~~~~~~~~~~
+In file included from gensym.c:5:
+type.h: In function ‘gensym’:
+type.h:152:10: note: at offset 26 into destination object ‘name’ of size 26
+  152 |     char name[SYMLIS_NAMELEN];
+      |          ^~~~
+type.h:152:10: note: at offset 26 into destination object ‘name’ of size 26
+type.h:152:10: note: at offset 26 into destination object ‘name’ of size 26
+In function ‘printsym’,
+    inlined from ‘gensym’ at gensym.c:66:15:
+gensym.c:161:20: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+  161 |         *outname++ = *symname++;
+      |         ~~~~~~~~~~~^~~~~~~~~~~~
+type.h: In function ‘gensym’:
+type.h:152:10: note: at offset 27 into destination object ‘name’ of size 26
+  152 |     char name[SYMLIS_NAMELEN];
+      |          ^~~~
+type.h:152:10: note: at offset 27 into destination object ‘name’ of size 26
+type.h:152:10: note: at offset 27 into destination object ‘name’ of size 26
+In function ‘printsym’,
+    inlined from ‘gensym’ at gensym.c:66:15:
+gensym.c:161:20: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+  161 |         *outname++ = *symname++;
+      |         ~~~~~~~~~~~^~~~~~~~~~~~
+type.h: In function ‘gensym’:
+type.h:152:10: note: at offset 28 into destination object ‘name’ of size 26
+  152 |     char name[SYMLIS_NAMELEN];
+      |          ^~~~
+type.h:152:10: note: at offset 28 into destination object ‘name’ of size 26
+type.h:152:10: note: at offset 28 into destination object ‘name’ of size 26
+In function ‘printsym’,
+    inlined from ‘gensym’ at gensym.c:66:15:
+gensym.c:161:20: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+  161 |         *outname++ = *symname++;
+      |         ~~~~~~~~~~~^~~~~~~~~~~~
+type.h: In function ‘gensym’:
+type.h:152:10: note: at offset 29 into destination object ‘name’ of size 26
+  152 |     char name[SYMLIS_NAMELEN];
+      |          ^~~~
+type.h:152:10: note: at offset 29 into destination object ‘name’ of size 26
+type.h:152:10: note: at offset 29 into destination object ‘name’ of size 26
+In function ‘printsym’,
+    inlined from ‘gensym’ at gensym.c:66:15:
+gensym.c:161:20: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+  161 |         *outname++ = *symname++;
+      |         ~~~~~~~~~~~^~~~~~~~~~~~
+type.h: In function ‘gensym’:
+type.h:152:10: note: at offset 30 into destination object ‘name’ of size 26
+  152 |     char name[SYMLIS_NAMELEN];
+      |          ^~~~
+type.h:152:10: note: at offset 30 into destination object ‘name’ of size 26
+type.h:152:10: note: at offset 30 into destination object ‘name’ of size 26
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c genobj.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c keywords.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c macro.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c pops.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c readsrc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c mops.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c scan.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c table.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c typeconv.c
+typeconv.c: In function ‘xxerr’:
+typeconv.c:14:27: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | void xxerr(x) char * x; { write(2, x, strlen(x)); }
+      |                           ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+sed -e "s:%%LIBDIR%%:/usr/lib:" -e "s:%%BINDIR%%:/usr/bin:" \
+	&lt; as86_encap.sh &gt; tmp
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+chmod +x as86_encap
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c alloc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs as.o assemble.o errors.o express.o genbin.o genlist.o genobj.o gensym.o keywords.o macro.o mops.o pops.o readsrc.o scan.o table.o typeconv.o alloc.o -o as86
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-devel/bin86-0.16.21-r2
+
+&gt;&gt;&gt; Install sys-devel/bin86-0.16.21-r2 into /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image
+make -j2 DESTDIR=/var/tmp/portage/sys-devel/bin86-0.16.21-r2/image install 
+set -e ; for d in ld as; do \
+  (cd $d &amp;&amp; make "LIBS=" "CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE " "LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs" "BINDIR=/var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin" "LIBDIR=/var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/lib" "CC=x86_64-pc-linux-gnu-gcc" all;); \
+ done
+make[1]: Nothing to be done for 'all'.
+make[1]: Nothing to be done for 'all'.
+install -m 755  as/as86       /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/as86
+install -m 755  ld/ld86       /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/ld86
+install -m 755  ld/objdump86  /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/objdump86
+install -m 644     man/*.1       /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/share/man/man1
+ln -sf                  objdump86 /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/nm86
+ln -sf                  objdump86 /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/size86
+&gt;&gt;&gt; Completed installing sys-devel/bin86-0.16.21-r2 into /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 1716 KiB (1.6 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   300 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/as86
+   /usr/bin/ld86
+   /usr/bin/objdump86
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    www-client/w3m-0.5.3_p20230121:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: nrk@disroot.org proxy-maint@gentoo.org
+<span class="ansi32"> * </span>USE:        X abi_x86_64 amd64 elibc_glibc gpm kernel_linux nls ssl unicode
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking w3m-0.5.3+git20230121.tar.gz to /var/tmp/portage/www-client/w3m-0.5.3_p20230121/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/www-client/w3m-0.5.3_p20230121/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Running eautoreconf in '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121' ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: w3m-0.5.3-git20230121/
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121 ...
+ * econf: updating w3m-0.5.3-git20230121/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating w3m-0.5.3-git20230121/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --docdir=/usr/share/doc/w3m-0.5.3_p20230121 --htmldir=/usr/share/doc/w3m-0.5.3_p20230121/html --libdir=/usr/lib64 --enable-mouse --enable-nls --disable-nntp --enable-digest-auth --disable-xface --with-ssl --enable-image=no --enable-m17n --enable-unicode --with-browser=/usr/bin/xdg-open --with-editor=/usr/bin/vi --with-imagelib=no --with-mailer=/bin/mail --without-migemo --with-termlib=yes --with-charset=UTF-8 --enable-keymap=w3m
+checking for x86_64-pc-linux-gnu-g++... x86_64-pc-linux-gnu-g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether x86_64-pc-linux-gnu-g++ accepts -g... yes
+checking for x86_64-pc-linux-gnu-g++ option to enable C++11 features... none needed
+checking for gawk... gawk
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for perl... /usr/bin/perl
+checking for nkf... no
+checking for man... /usr/bin/man
+checking for X... libraries , headers 
+checking for gethostbyname... yes
+checking for connect... yes
+checking for remove... yes
+checking for shmat... yes
+checking for IceConnectionNumber in -lICE... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking if m17n support is enabled... yes
+checking if Unicode support is enabled... yes
+checking if message l10n... no
+checking if japanese support is enabled... no
+checking which charset is used for display... UTF-8
+checking for a sed that does not truncate output... /bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/gmsgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib64
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking if color escape sequence for kterm/pxvt is enabled... yes
+checking if ANSI color escape sequence support is enabled... yes
+checking if background color support is enabled... yes
+checking if image is enabled... no
+checking default keymap... w3m
+checking if popup menu is enabled... yes
+checking if mouse operation enabled... yes
+checking if URL history is enabled... yes
+checking if alarm is enabled... yes
+checking if cookie is enabled... yes
+checking if nntp is enabled... no
+checking if Gopher is enabled... yes
+checking if dictionary lookup is enabled... yes
+checking if help cgi is enabled... yes
+checking if external URI loader is enabled... yes
+checking if w3mmail is used... yes
+checking if migemo is supported with... no
+checking which editor is used by default... /usr/bin/vi
+checking which mailer is used by default... /bin/mail
+checking which external browser is used by default... /usr/bin/xdg-open
+checking for -lbsd... found at /usr/lib64
+checking for -lBSD... not found
+checking for -l44bsd... not found
+checking for -lsocket... not found
+checking for -lnsl... found at /usr/lib64
+checking for -ldld... not found
+checking for -ldl... found at /usr/lib
+checking if IPv6 support is enabled... yes
+checking if IPv6 API available... checking for getaddrinfo... yes
+checking if struct sockaddr_storage has an ss_family member... yes
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking if SSL is supported... yes
+checking for openssl... yes
+checking for SSL_new in -lssl... yes
+checking if SSL certificate verification is enabled... yes
+checking for CA file location... 
+checking if digest auth is enabled... yes
+checking for sqrt... no
+checking for sqrt in -lm... yes
+checking for Gpm_Open in -lgpm... yes
+checking terminal library... yes
+checking for tgetent in -lterminfo... no
+checking for tgetent in -lmytinfo... no
+checking for tgetent in -ltermlib... no
+checking for tgetent in -ltermcap... no
+checking for tgetent in -ltinfo... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking GC library exists... yes
+checking for gc.h... yes
+checking for GC_init in -lgc... yes
+checking for zError in -lz... yes
+checking for socklen_t... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for egrep... (cached) /bin/grep -E
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for termios.h... yes
+checking for float.h... yes
+checking for sys/select.h... yes
+checking for locale.h... yes
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking size of long long... 8
+checking for strcasecmp... yes
+checking for strcasestr... yes
+checking for strchr... yes
+checking for memcpy... yes
+checking for strerror... yes
+checking for bcopy... yes
+checking for setpgrp... yes
+checking for chdir... yes
+checking for mkdtemp... yes
+checking for faccessat... yes
+checking for getcwd... yes
+checking for getwd... yes
+checking for readlink... yes
+checking for setenv... yes
+checking for putenv... yes
+checking for strtoll... yes
+checking for stroq... no
+checking for atoll... yes
+checking for atoq... no
+checking for symlink... yes
+checking for readlink... (cached) yes
+checking for lstat... yes
+checking for srand48... yes
+checking for srandom... yes
+checking for getpassphrase... no
+checking for waitpid... yes
+checking for setlocale... yes
+checking for strftime... yes
+checking for wait3 that fills in rusage... yes
+checking whether setpgrp requires zero arguments... yes
+checking for nl_langinfo and CODESET... yes
+checking for sigsetjmp... yes
+checking return type of signal handlers... void
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating posubst
+config.status: creating po/Makefile.in
+config.status: creating scripts/Makefile
+config.status: creating scripts/dirlist.cgi
+config.status: creating scripts/w3mhelp.cgi
+config.status: creating scripts/w3mmail.cgi
+config.status: creating scripts/xface2xpm
+config.status: creating scripts/multipart/Makefile
+config.status: creating scripts/multipart/multipart.cgi
+config.status: creating scripts/w3mman/Makefile
+config.status: creating scripts/w3mman/w3mman
+config.status: creating scripts/w3mman/w3mman.1
+config.status: creating scripts/w3mman/w3mman.de.1
+config.status: creating scripts/w3mman/w3mman2html.cgi
+config.status: creating libwc/Makefile
+config.status: creating w3mimg/Makefile
+config.status: creating w3mimg/fb/Makefile
+config.status: creating w3mimg/x11/Makefile
+config.status: creating w3mimg/win/Makefile
+config.status: creating w3mhelp-w3m_en.html
+config.status: creating w3mhelp-w3m_ja.html
+config.status: creating w3mhelp-lynx_en.html
+config.status: creating w3mhelp-lynx_ja.html
+config.status: creating config.h
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121 ...
+make -j2 
+(echo '#define DEFUN(x,y,z) x y';\
+ sed -ne '/^DEFUN/{p;n;/^[ 	]/p;}' ./main.c ./menu.c) | x86_64-pc-linux-gnu-gcc -E  - | \
+ awk '$1 ~ /^[_A-Za-z]/ { \
+       for (i=2;i&lt;=NF;i++) { print $i, $1} \
+ }' &gt; funcname.tab.tmp
+funcname.tab updated
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"  -DDUMMY -c -o dummy.o entity.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o mktable.o mktable.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o hash.o hash.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o myctype.o myctype.c
+sort funcname.tab | gawk -f ./funcname2.awk &gt; funcname2.h
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o version.o version.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o textlist.o textlist.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o parsetag.o parsetag.c
+(cd libwc &amp;&amp; make CC='x86_64-pc-linux-gnu-gcc' OPTS='')
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o Str.o Str.c
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o big5.o big5.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o ces.o ces.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o char_conv.o char_conv.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o charset.o charset.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o combining.o combining.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o conv.o conv.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o detect.o detect.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o gb18030.o gb18030.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o gbk.o gbk.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o w3mbookmark.o w3mbookmark.c
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o hkscs.o hkscs.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o hz.o hz.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o iso2022.o iso2022.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o jis.o jis.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o johab.o johab.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o priv.o priv.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o putc.o putc.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o search.o search.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o w3mhelperpanel.o w3mhelperpanel.c
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o sjis.o sjis.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o status.o status.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"  -o inflate.o -c ./inflate.c
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o ucs.o ucs.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o uhc.o uhc.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o utf7.o utf7.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o utf8.o utf8.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o viet.o viet.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-gcc  -I.. -I.. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DUSE_UNICODE -I. -I./.. -DHAVE_CONFIG_H   -c -o wtf.o wtf.c
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-ar rv libwc.a big5.o ces.o char_conv.o charset.o combining.o conv.o detect.o gb18030.o gbk.o hkscs.o hz.o iso2022.o jis.o johab.o priv.o putc.o search.o sjis.o status.o ucs.o uhc.o utf7.o utf8.o viet.o wtf.o
+x86_64-pc-linux-gnu-ar: creating libwc.a
+a - big5.o
+a - ces.o
+a - char_conv.o
+a - charset.o
+a - combining.o
+a - conv.o
+a - detect.o
+a - gb18030.o
+a - gbk.o
+a - hkscs.o
+a - hz.o
+a - iso2022.o
+a - jis.o
+a - johab.o
+a - priv.o
+a - putc.o
+a - search.o
+a - sjis.o
+a - status.o
+a - ucs.o
+a - uhc.o
+a - utf7.o
+a - utf8.o
+a - viet.o
+a - wtf.o
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+for dir in scripts;	\
+do	\
+	(cd $dir &amp;&amp; make PERL='/usr/bin/perl' MKDIR='mkdir -p' BIN_DIR='/usr/bin' AUXBIN_DIR='/usr/libexec/w3m' CGIBIN_DIR='/usr/libexec/w3m/cgi-bin' HELP_DIR='/usr/share/w3m' MAN_DIR='/usr/share/man' ETC_DIR='/etc' CONF_DIR='/etc/w3m' RC_DIR='~/.w3m' DESTDIR='' KEYBIND_SRC='keybind.c'); \
+done
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+x86_64-pc-linux-gnu-ranlib libwc.a
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/libwc'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+generating w3mhelp-funcname.pl...
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+done
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+generating w3mhelp-funcdesc*.pl...
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+done
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+for subdir in multipart w3mman; \
+do \
+	(cd $subdir &amp;&amp; make); \
+done
+make[2]: Nothing to be done for 'all'.
+make[2]: Nothing to be done for 'all'.
+for subdir in multipart w3mman; \
+do \
+	(cd $subdir &amp;&amp; make); \
+done
+make[2]: Nothing to be done for 'all'.
+make[2]: Nothing to be done for 'all'.
+(cd po &amp;&amp; make)
+test ! -f ./w3m.pot || \
+  test -z "de.gmo it.gmo ja.gmo sv_SE.gmo zh_CN.gmo zh_TW.gmo" || make de.gmo it.gmo ja.gmo sv_SE.gmo zh_CN.gmo zh_TW.gmo
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+rm -f de.gmo &amp;&amp; /usr/bin/msgmerge --for-msgfmt -o de.1po de.po w3m.pot &amp;&amp; /usr/bin/gmsgfmt -c --statistics --verbose -o de.gmo de.1po &amp;&amp; rm -f de.1po
+de.1po: 235 translated messages.
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+rm -f it.gmo &amp;&amp; /usr/bin/msgmerge --for-msgfmt -o it.1po it.po w3m.pot &amp;&amp; /usr/bin/gmsgfmt -c --statistics --verbose -o it.gmo it.1po &amp;&amp; rm -f it.1po
+it.1po: 235 translated messages.
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+rm -f ja.gmo &amp;&amp; /usr/bin/msgmerge --for-msgfmt -o ja.1po ja.po w3m.pot &amp;&amp; /usr/bin/gmsgfmt -c --statistics --verbose -o ja.gmo ja.1po &amp;&amp; rm -f ja.1po
+ja.1po: 233 translated messages.
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+rm -f sv_SE.gmo &amp;&amp; /usr/bin/msgmerge --for-msgfmt -o sv_SE.1po sv_SE.po w3m.pot &amp;&amp; /usr/bin/gmsgfmt -c --statistics --verbose -o sv_SE.gmo sv_SE.1po &amp;&amp; rm -f sv_SE.1po
+sv_SE.1po: 235 translated messages.
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+rm -f zh_CN.gmo &amp;&amp; /usr/bin/msgmerge --for-msgfmt -o zh_CN.1po zh_CN.po w3m.pot &amp;&amp; /usr/bin/gmsgfmt -c --statistics --verbose -o zh_CN.gmo zh_CN.1po &amp;&amp; rm -f zh_CN.1po
+zh_CN.1po: 224 translated messages.
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+rm -f zh_TW.gmo &amp;&amp; /usr/bin/msgmerge --for-msgfmt -o zh_TW.1po zh_TW.po w3m.pot &amp;&amp; /usr/bin/gmsgfmt -c --statistics --verbose -o zh_TW.gmo zh_TW.1po &amp;&amp; rm -f zh_TW.1po
+zh_TW.1po: 226 translated messages.
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+touch ./stamp-po
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+sort funcname.tab | gawk -f ./funcname1.awk &gt; funcname1.h
+sort funcname.tab | gawk -f ./funcname0.awk &gt; funcname.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"  -o mktable mktable.o dummy.o Str.o hash.o myctype.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -lm  -lbsd -lnsl -ldl -lgc
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o cookie.o cookie.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o history.o history.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o backend.o backend.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o util.o util.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o keybind.o keybind.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o anchor.o anchor.c
+./mktable 100 ./tagtable.tab &gt; tagtable.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o parsetagx.o parsetagx.c
+echo '/* $I''d$ */' &gt; entity.h
+./mktable 100 ./entity.tab &gt;&gt; entity.h
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o istream.o istream.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o main.o main.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o buffer.o buffer.c
+buffer.c: In function ‘readBufferCache’:
+buffer.c:740:13: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  740 |             fread(l-&gt;lineBuf, 1, l-&gt;size, cache);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+buffer.c:743:13: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  743 |             fread(l-&gt;propBuf, sizeof(Lineprop), l-&gt;size, cache);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+buffer.c:757:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  757 |                 fread(l-&gt;colorBuf, sizeof(Linecolor), l-&gt;size, cache);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o display.o display.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o file.o file.c
+file.c: In function ‘AuthDigestCred’:
+file.c:1260:5: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1260 |     MD5(cnonce_seed.s, sizeof(cnonce_seed.s), md5);
+      |     ^~~
+In file included from file.c:1189:
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1296:5: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1296 |     MD5((unsigned char *)tmp-&gt;ptr, strlen(tmp-&gt;ptr), md5);
+      |     ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1309:13: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1309 |             MD5((unsigned char *)tmp-&gt;ptr, strlen(tmp-&gt;ptr), md5);
+      |             ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1331:21: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1331 |                     MD5((unsigned char *)ebody-&gt;ptr, strlen(ebody-&gt;ptr), md5);
+      |                     ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1334:21: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1334 |                     MD5((unsigned char *)"", 0, md5);
+      |                     ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1338:17: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1338 |                 MD5((unsigned char *)request-&gt;body, request-&gt;length, md5);
+      |                 ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1342:13: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1342 |             MD5((unsigned char *)"", 0, md5);
+      |             ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1347:5: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1347 |     MD5((unsigned char *)tmp-&gt;ptr, strlen(tmp-&gt;ptr), md5);
+      |     ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1365:9: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1365 |         MD5((unsigned char *)tmp-&gt;ptr, strlen(tmp-&gt;ptr), md5);
+      |         ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c:1375:9: warning: ‘MD5’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+ 1375 |         MD5((unsigned char *)tmp-&gt;ptr, strlen(tmp-&gt;ptr), md5);
+      |         ^~~
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+file.c: In function ‘_doFileCopy’:
+file.c:8452:9: warning: ignoring return value of ‘symlink’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 8452 |         symlink(p, lock);
+      |         ^~~~~~~~~~~~~~~~
+file.c: In function ‘doFileSave’:
+file.c:8561:9: warning: ignoring return value of ‘symlink’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 8561 |         symlink(p, lock);
+      |         ^~~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o search.o search.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o etc.o etc.c
+etc.c: In function ‘mySystem’:
+etc.c:1506:9: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1506 |         system(command);
+      |         ^~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o linein.o linein.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o local.o local.c
+local.c: In function ‘localcgi_post’:
+local.c:410:13: warning: ignoring return value of ‘freopen’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  410 |             freopen(request-&gt;body, "r", stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+local.c:416:13: warning: ignoring return value of ‘freopen’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  416 |             freopen(tmpf, "r", stdin);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~
+local.c:422:9: warning: ignoring return value of ‘freopen’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  422 |         freopen(DEV_NULL_PATH, "r", stdin);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o form.o form.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o table.o table.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o map.o map.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o rc.o rc.c
+rc.c: In function ‘get_param_option’:
+rc.c:1157:31: warning: potential null pointer dereference [-Wnull-dereference]
+ 1157 |     return p ? to_str(p)-&gt;ptr : NULL;
+      |                               ^
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o frame.o frame.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o mailcap.o mailcap.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o image.o image.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o menu.o menu.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o entity.o entity.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o symbol.o symbol.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o terms.o terms.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o url.o url.c
+url.c: In function ‘openURL’:
+url.c:1762:13: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1762 |             write(sock, tmp-&gt;ptr, tmp-&gt;length);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+url.c:1862:17: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1862 |                 write(sock, tmp-&gt;ptr, tmp-&gt;length);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+url.c:1886:13: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1886 |             write(sock, tmp-&gt;ptr, tmp-&gt;length);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+url.c:1959:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1959 |         write(sock, tmp-&gt;ptr, tmp-&gt;length);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+url.c: In function ‘write_from_file’:
+url.c:515:13: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  515 |             write(sock, buf, 1);
+      |             ^~~~~~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o mimehead.o mimehead.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o ftp.o ftp.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o news.o news.c
+sort funcname.tab | gawk -f ./functable.awk &gt; functable.tab
+./mktable 100 functable.tab &gt; functable.c
+rm -f functable.tab
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o regex.o regex.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o tagtable.o tagtable.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o func.o func.c
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"    -c -o indep.o indep.c
+indep.c: In function ‘currentdir’:
+indep.c:132:5: warning: ignoring return value of ‘getcwd’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  132 |     getcwd(path, MAXPATHLEN);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-ar rv libindep.a Str.o indep.o regex.o textlist.o parsetag.o myctype.o hash.o
+x86_64-pc-linux-gnu-ar: creating libindep.a
+a - Str.o
+a - indep.o
+a - regex.o
+a - textlist.o
+a - parsetag.o
+a - myctype.o
+a - hash.o
+x86_64-pc-linux-gnu-ranlib libindep.a
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"  -o w3m main.o file.o buffer.o display.o etc.o search.o linein.o table.o local.o form.o map.o frame.o rc.o menu.o mailcap.o image.o symbol.o entity.o terms.o url.o ftp.o mimehead.o regex.o news.o func.o cookie.o history.o backend.o util.o keybind.o anchor.o parsetagx.o tagtable.o istream.o version.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -lm  -lbsd -lnsl -ldl -L. -lindep  -lgc -L./libwc -lwc -lssl -lcrypto -lssl -lcrypto -lgpm -ltinfo
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"  -o w3mbookmark w3mbookmark.o dummy.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -lm  -lbsd -lnsl -ldl -L. -lindep  -lgc
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"  -o w3mhelperpanel w3mhelperpanel.o dummy.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -lm  -lbsd -lnsl -ldl -L. -lindep  -lgc
+x86_64-pc-linux-gnu-gcc -Wall -Wnull-dereference -I. -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I./libwc   -DHAVE_CONFIG_H -DAUXBIN_DIR=\"/usr/libexec/w3m\" -DCGIBIN_DIR=\"/usr/libexec/w3m/cgi-bin\" -DHELP_DIR=\"/usr/share/w3m\" -DETC_DIR=\"/etc\" -DCONF_DIR=\"/etc/w3m\" -DRC_DIR=\"~/.w3m\" -DLOCALEDIR=\"/usr/share/locale\"  -o inflate inflate.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -lm  -lbsd -lnsl -ldl -lz
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: www-client/w3m-0.5.3_p20230121
+
+&gt;&gt;&gt; Install www-client/w3m-0.5.3_p20230121 into /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image
+make -j2 DESTDIR=/var/tmp/portage/www-client/w3m-0.5.3_p20230121/image install 
+(cd libwc &amp;&amp; make CC='x86_64-pc-linux-gnu-gcc' OPTS='')
+for dir in scripts;	\
+do	\
+	(cd $dir &amp;&amp; make PERL='/usr/bin/perl' MKDIR='mkdir -p' BIN_DIR='/usr/bin' AUXBIN_DIR='/usr/libexec/w3m' CGIBIN_DIR='/usr/libexec/w3m/cgi-bin' HELP_DIR='/usr/share/w3m' MAN_DIR='/usr/share/man' ETC_DIR='/etc' CONF_DIR='/etc/w3m' RC_DIR='~/.w3m' DESTDIR='/var/tmp/portage/www-client/w3m-0.5.3_p20230121/image' KEYBIND_SRC='keybind.c'); \
+done
+for subdir in multipart w3mman; \
+do \
+	(cd $subdir &amp;&amp; make); \
+done
+make[2]: Nothing to be done for 'all'.
+make[2]: Nothing to be done for 'all'.
+for subdir in multipart w3mman; \
+do \
+	(cd $subdir &amp;&amp; make); \
+done
+make[2]: Nothing to be done for 'all'.
+make[2]: Nothing to be done for 'all'.
+NLSTARGET="po"; for subdir in $NLSTARGET; \
+do \
+ (cd $subdir &amp;&amp; make install); \
+done
+make[1]: Nothing to be done for 'all'.
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+installing de.gmo as /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/locale/de/LC_MESSAGES/w3m.mo
+installing it.gmo as /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/locale/it/LC_MESSAGES/w3m.mo
+installing ja.gmo as /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/locale/ja/LC_MESSAGES/w3m.mo
+installing sv_SE.gmo as /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/locale/sv_SE/LC_MESSAGES/w3m.mo
+installing zh_CN.gmo as /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/locale/zh_CN/LC_MESSAGES/w3m.mo
+installing zh_TW.gmo as /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/locale/zh_TW/LC_MESSAGES/w3m.mo
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+if test "w3m" = "gettext-tools"; then \
+  /bin/mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 ./$file \
+		    /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/po'
+topdir=`pwd`; \
+for dir in scripts;	\
+do	\
+	(cd $dir &amp;&amp; make PERL='/usr/bin/perl' MKDIR='mkdir -p' BIN_DIR='/usr/bin' AUXBIN_DIR='/usr/libexec/w3m' CGIBIN_DIR='/usr/libexec/w3m/cgi-bin' HELP_DIR='/usr/share/w3m' MAN_DIR='/usr/share/man' ETC_DIR='/etc' CONF_DIR='/etc/w3m' RC_DIR='~/.w3m' DESTDIR='/var/tmp/portage/www-client/w3m-0.5.3_p20230121/image' KEYBIND_SRC='keybind.c' install); \
+done
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/w3m
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+for file in xface2xpm;     \
+do      \
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m;  \
+done
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+for file in w3mdict.cgi dirlist.cgi w3mhelp.cgi w3mmail.cgi;     \
+do      \
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin;  \
+done
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+make[1]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+for file in w3mhelp-*.pl; \
+do \
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/w3m; \
+done
+make[1]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts'
+for subdir in multipart w3mman; \
+do \
+	(cd $subdir &amp;&amp; make install); \
+done
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/multipart'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/multipart'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/multipart'
+for file in multipart.cgi;	\
+do	\
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin;	\
+done
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/multipart'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/bin
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/man1
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/de/man1
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+for file in w3mman;     \
+do      \
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/bin;	\
+done
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+for file in w3mman2html.cgi;     \
+do      \
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin;	\
+done
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+for file in w3mman.1; \
+do	\
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/man1; \
+done
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+make[2]: Entering directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+for file in w3mman.de.1; \
+do	\
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/de/man1; \
+	f=`echo "$file" | sed -e 's/\.de\././'`; \
+	mv /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/de/man1/$file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/de/man1/$f; \
+done
+make[2]: Leaving directory '/var/tmp/portage/www-client/w3m-0.5.3_p20230121/work/w3m-0.5.3-git20230121/scripts/w3mman'
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/bin
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/w3m
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/man1
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/ja/man1
+mkdir -p /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/de/man1
+/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c w3m /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/bin/w3m
+/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 w3mhelp-w3m_en.html /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/w3m/w3mhelp.html
+/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 ./doc/w3m.1 /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/man1/w3m.1
+/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 ./doc-jp/w3m.1 /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/ja/man1/w3m.1
+/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c -m 644 ./doc-de/w3m.1 /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/share/man/de/man1/w3m.1
+targets="inflate"; for file in $targets; \
+do \
+	case $file in \
+	w3mimgdisplay) /var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file \
+		/var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/$file;; \
+	*) /var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/$file;; \
+	esac; \
+done
+for file in w3mbookmark w3mhelperpanel; \
+do \
+	/var/tmp/portage/._portage_reinstall_.3frgrcus/bin/ebuild-helpers/xattr/install -c $file /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image/usr/libexec/w3m/cgi-bin/$file; \
+done
+&gt;&gt;&gt; Completed installing www-client/w3m-0.5.3_p20230121 into /var/tmp/portage/www-client/w3m-0.5.3_p20230121/image
+
+ <span class="ansi32">*</span> Final size of build directory: 19676 KiB (19.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   3164 KiB ( 3.0 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/libexec/w3m/inflate
+   /usr/bin/w3m
+   /usr/libexec/w3m/cgi-bin/w3mbookmark
+   /usr/libexec/w3m/cgi-bin/w3mhelperpanel
+
+</pre>
+</body>
+
+</html>
