@@ -1,0 +1,499 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    x11-misc/xkeyboard-config-2.41:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking xkeyboard-config-2.41.tar.xz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/x11-misc/xkeyboard-config-2.41/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dxkb-base=/usr/share/X11/xkb -Dcompat-rules=true /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41 /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.4.0
+Source dir: <span class="ansi1">/var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41</span>
+Build dir: <span class="ansi1">/var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">xkeyboard-config</span>
+Project version: <span class="ansi1">2.41</span>
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.2.0</span>
+Program <span class="ansi1">compat/map-variants.py</span> found: <span class="ansi1 ansi32">YES</span> (/var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py)
+Program <span class="ansi1">merge.py</span> found: <span class="ansi1 ansi32">YES</span> (/var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/merge.py)
+Program <span class="ansi1">xml2lst.pl</span> found: <span class="ansi1 ansi32">YES</span> (/var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/xml2lst.pl)
+Program <span class="ansi1">xsltproc</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xsltproc)
+Configuring <span class="ansi1">man.xsl</span> using configuration
+Program <span class="ansi1">tests/verify-group-names.sh</span> found: <span class="ansi1 ansi32">YES</span> (/var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/tests/verify-group-names.sh)
+Program python3 (pytest) found: <span class="ansi1 ansi31">NO</span>
+Program <span class="ansi1">pytest-3 pytest</span> found: <span class="ansi1 ansi31">NO</span>
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Program <span class="ansi1">msginit</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msginit)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">xgettext</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xgettext)
+Build targets in project: <span class="ansi1">63</span>
+<span class="ansi1">NOTICE:</span> Future-deprecated features used:
+ * 0.56.0: {'meson.source_root'}
+ * 0.64.0: {'copy arg in configure_file'}
+
+xkeyboard-config <span class="ansi36">2.41</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/x11-misc/xkeyboard-config-2.41/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    compat-rules         : true
+    xkb-base             : /usr/share/X11/xkb
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41 ...
+ninja -v -j2 -l2
+[1/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mlvs --number=0 rules/0010-mlv_s.part ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[2/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mls --number=0 rules/0012-ml_s.part ../xkeyboard-config-2.41/rules/compat/layoutsMapping.lst ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[3/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mlvs --number=1 rules/0016-ml1v1_s.part ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[4/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mls --number=1 rules/0014-ml1_s.part ../xkeyboard-config-2.41/rules/compat/layoutsMapping.lst ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[5/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mlvs --number=2 rules/0023-ml2v2_s.part ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[6/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mls --number=2 rules/0017-ml2_s.part ../xkeyboard-config-2.41/rules/compat/layoutsMapping.lst ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[7/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mls --number=3 rules/0019-ml3_s.part ../xkeyboard-config-2.41/rules/compat/layoutsMapping.lst ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[8/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mlvs --number=3 rules/0024-ml3v3_s.part ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[9/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mls --number=4 rules/0021-ml4_s.part ../xkeyboard-config-2.41/rules/compat/layoutsMapping.lst ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[10/60] /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/compat/map-variants.py --want=mlvs --number=4 rules/0025-ml4v4_s.part ../xkeyboard-config-2.41/rules/compat/variantsMapping.lst
+[11/60] /usr/lib/python-exec/python3.12/meson --internal exe --capture rules/base -- /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/merge.py rules/0000-hdr.part.base rules/0001-lists.part.base rules/0002-base.lists.part.base rules/0004-base.m_k.part.base rules/0005-l1_k.part.base rules/0006-l_k.part.base rules/0007-o_k.part.base rules/0008-ml_g.part.base rules/0009-m_g.part.base rules/0011-mlv_s.part.base rules/0013-ml_s.part.base rules/0015-ml1_s.part.base rules/0018-ml2_s.part.base rules/0020-ml3_s.part.base rules/0022-ml4_s.part.base rules/0026-base.m_s.part.base rules/0027-base.ml_s1.part.base rules/0033-ml_c.part.base rules/0034-ml1_c.part.base rules/0035-m_t.part.base rules/0036-lo_s.part.base rules/0037-l1o_s.part.base rules/0038-l2o_s.part.base rules/0039-l3o_s.part.base rules/0040-l4o_s.part.base rules/0042-o_s.part.base rules/0043-o_c.part.base rules/0044-o_t.part.base rules/0028-lv_c.part.base rules/0029-l1v1_c.part.base rules/0030-l2v2_c.part.base rules/0031-l3v3_c.part.base rules/0032-l4v4_c.part.base rules/0041-o_s.part.base rules/0012-ml_s.part rules/0010-mlv_s.part rules/0014-ml1_s.part rules/0016-ml1v1_s.part rules/0017-ml2_s.part rules/0023-ml2v2_s.part rules/0019-ml3_s.part rules/0024-ml3v3_s.part rules/0021-ml4_s.part rules/0025-ml4v4_s.part
+[12/60] /usr/lib/python-exec/python3.12/meson --internal exe --capture rules/base.lst -- /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/xml2lst.pl rules/base.xml
+[13/60] /usr/lib/python-exec/python3.12/meson --internal exe --capture rules/evdev -- /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/merge.py rules/0000-hdr.part.evdev rules/0001-lists.part.evdev rules/0002-evdev.lists.part.evdev rules/0004-evdev.m_k.part.evdev rules/0005-l1_k.part.evdev rules/0006-l_k.part.evdev rules/0007-o_k.part.evdev rules/0008-ml_g.part.evdev rules/0009-m_g.part.evdev rules/0011-mlv_s.part.evdev rules/0013-ml_s.part.evdev rules/0015-ml1_s.part.evdev rules/0018-ml2_s.part.evdev rules/0020-ml3_s.part.evdev rules/0022-ml4_s.part.evdev rules/0026-evdev.m_s.part.evdev rules/0027-evdev.ml_s1.part.evdev rules/0033-ml_c.part.evdev rules/0034-ml1_c.part.evdev rules/0035-m_t.part.evdev rules/0036-lo_s.part.evdev rules/0037-l1o_s.part.evdev rules/0038-l2o_s.part.evdev rules/0039-l3o_s.part.evdev rules/0040-l4o_s.part.evdev rules/0042-o_s.part.evdev rules/0043-o_c.part.evdev rules/0044-o_t.part.evdev rules/0028-lv_c.part.evdev rules/0029-l1v1_c.part.evdev rules/0030-l2v2_c.part.evdev rules/0031-l3v3_c.part.evdev rules/0032-l4v4_c.part.evdev rules/0041-o_s.part.evdev rules/0012-ml_s.part rules/0010-mlv_s.part rules/0014-ml1_s.part rules/0016-ml1v1_s.part rules/0017-ml2_s.part rules/0023-ml2v2_s.part rules/0019-ml3_s.part rules/0024-ml3v3_s.part rules/0021-ml4_s.part rules/0025-ml4v4_s.part
+[14/60] /usr/lib/python-exec/python3.12/meson --internal exe --capture rules/evdev.lst -- /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/xml2lst.pl rules/evdev.xml
+[15/60] /usr/bin/msgfmt -o po/af/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/af.po
+[16/60] /usr/lib/python-exec/python3.12/meson --internal exe --capture xkeyboard-config.7 -- /usr/bin/xsltproc -nonet man.xsl rules/evdev.xml
+[17/60] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ar.po
+[18/60] /usr/bin/msgfmt -o po/az/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/az.po
+[19/60] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/bg.po
+[20/60] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ca.po
+[21/60] /usr/bin/msgfmt -o po/crh/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/crh.po
+[22/60] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/cs.po
+[23/60] /usr/bin/msgfmt -o po/da/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/da.po
+[24/60] /usr/bin/msgfmt -o po/de/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/de.po
+[25/60] /usr/bin/msgfmt -o po/el/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/el.po
+[26/60] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/en_GB.po
+[27/60] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/eo.po
+[28/60] /usr/bin/msgfmt -o po/es/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/es.po
+[29/60] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/fr.po
+[30/60] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/fi.po
+[31/60] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/fur.po
+[32/60] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/gl.po
+[33/60] /usr/bin/msgfmt -o po/he/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/he.po
+[34/60] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/hr.po
+[35/60] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/hu.po
+[36/60] /usr/bin/msgfmt -o po/id/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/id.po
+[37/60] /usr/bin/msgfmt -o po/it/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/it.po
+[38/60] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ja.po
+[39/60] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ko.po
+[40/60] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ka.po
+[41/60] /usr/bin/msgfmt -o po/ky/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ky.po
+[42/60] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/lt.po
+[43/60] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/nb.po
+[44/60] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/nl.po
+[45/60] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/pl.po
+[46/60] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/pt.po
+[47/60] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/pt_BR.po
+[48/60] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ro.po
+[49/60] /usr/bin/msgfmt -o po/rw/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/rw.po
+[50/60] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/ru.po
+[51/60] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/sl.po
+[52/60] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/sk.po
+[53/60] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/sq.po
+[54/60] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/sr.po
+[55/60] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/sv.po
+[56/60] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/tr.po
+[57/60] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/uk.po
+[58/60] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/vi.po
+[59/60] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/zh_TW.po
+[60/60] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/xkeyboard-config.mo ../xkeyboard-config-2.41/po/zh_CN.po
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: x11-misc/xkeyboard-config-2.41
+
+&gt;&gt;&gt; Install x11-misc/xkeyboard-config-2.41 into /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image
+meson install --destdir /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image --no-rebuild
+Installing subdir /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/README to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/xtest to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/xfree86 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/lednum to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/mousekeys to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/japan to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/misc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/pc98 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/ledcaps to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/caps to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/ledcompose to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/level5 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/olpc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/ledscroll to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/accessx to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/iso9995 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/complete to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/compat/basic to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/compat
+Installing subdir /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/README to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/nec to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/amiga to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/winbook to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/northgate to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/hp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/fujitsu to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/dell to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/hhk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/ataritt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/microsoft to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/chicony to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/sun to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/sanwa to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/keytronic to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/steelseries to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/typematrix to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/everex to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/teck to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/nokia to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/sony to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/kinesis to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/macintosh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/thinkpad to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/digital_vndr/unix to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/digital_vndr/lk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/digital_vndr/pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/sgi_vndr/indigo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry/sgi_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/sgi_vndr/indy to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry/sgi_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/geometry/sgi_vndr/O2 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/geometry/sgi_vndr
+Installing subdir /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/README to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/xfree86 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/ibm to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/empty to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/amiga to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/hp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/aliases to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/fujitsu to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/ataritt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/sun to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/evdev to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/jolla to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/olpc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/xfree98 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/sony to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/macintosh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/digital_vndr/lk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/digital_vndr/pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/sgi_vndr/iris to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes/sgi_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/sgi_vndr/indigo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes/sgi_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/keycodes/sgi_vndr/indy to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/keycodes/sgi_vndr
+Installing subdir /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/latam to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/hu to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/id to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/srvr_ctrl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/lk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/empty to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/al to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/md to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/terminate to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ee to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/pk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/eg to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ro to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/my to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/shift to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/parens to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/bt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ke to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/brai to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/lv to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/tw to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/bw to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/eurosign to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/az to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/kpdl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/cm to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/latin to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/eu to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/be to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/in to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/bqn to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/inet to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/dz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/tg to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/iq to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ge to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/jp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/kr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/np to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/tr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/za to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/es to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/is to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ie to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/fo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/tm to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/at to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/capslock to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/pl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/level5 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/si to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/nbsp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/pt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ir to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/us to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/kh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/by to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ctrl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/cn to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/gn to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/mk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/bd to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ba to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/me to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/olpc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/am to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ancient to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ph to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ml to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ng to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/group to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/cz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/trans to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/bg to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ara to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/gr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/altwin to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/typo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/fr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/epo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ca to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/uz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/keypad to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/dk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/mm to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/la to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ch to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/fi to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/cd to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/et to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/gb to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/mv to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/au to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/tz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sn to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/kz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/af to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/lt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/kg to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ru to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ua to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/mt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/apl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/nz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/tj to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/ma to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/no to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/se to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/level3 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/level2 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/nl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/vn to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/rs to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sy to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/mn to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/br to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/hr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/gh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/th to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/it to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/de to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/il to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/rupeesign to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/compose to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/hp_vndr/us to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/hp_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/digital_vndr/lk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/digital_vndr/us to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/digital_vndr/vt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/digital_vndr/pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/digital_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sony_vndr/us to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sony_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/xfree68_vndr/amiga to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/xfree68_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/xfree68_vndr/ataritt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/xfree68_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/ee to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/ro to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/lv to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/tw to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/be to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/jp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/kr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/sk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/tr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/solaris to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/es to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/pl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/pt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/us to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/cz to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/ara to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/gr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/fr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/ca to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/dk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/ch to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/fi to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/gb to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/lt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/ru to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/ua to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/no to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/se to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/nl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/br to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/it to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sun_vndr/de to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sun_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/jolla_vndr/sbj to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/jolla_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/fujitsu_vndr/jp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/fujitsu_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/fujitsu_vndr/us to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/fujitsu_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sgi_vndr/jp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sgi_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sharp_vndr/ws003sh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sharp_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sharp_vndr/sl-c3x00 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sharp_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sharp_vndr/ws011sh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sharp_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sharp_vndr/ws007sh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sharp_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/sharp_vndr/ws020sh to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/sharp_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/nokia_vndr/rx-51 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/nokia_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/nokia_vndr/su-8w to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/nokia_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/nokia_vndr/rx-44 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/nokia_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/latam to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/jp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/is to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/pt to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/us to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/apple to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/fr to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/dk to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/ch to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/fi to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/gb to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/no to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/se to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/nl to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/it to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/macintosh_vndr/de to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/macintosh_vndr
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/symbols/nec_vndr/jp to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/symbols/nec_vndr
+Installing subdir /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/README to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/extra to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/mousekeys to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/cancel to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/numpad to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/caps to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/level5 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/default to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/nokia to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/iso9995 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/complete to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/types/basic to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/types
+Installing rules/base to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing rules/base.lst to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing rules/evdev to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing rules/evdev.lst to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing xkeyboard-config.7 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/man/man7
+Installing po/af/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/af/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ar/LC_MESSAGES
+Installing po/az/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/az/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/crh/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/crh/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/da/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/de/LC_MESSAGES
+Installing po/el/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/es/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/he/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/he/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/id/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/id/LC_MESSAGES
+Installing po/it/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ko/LC_MESSAGES
+Installing po/ky/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ky/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/rw/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/rw/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/xkeyboard-config.mo to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41-build/meson-private/xkeyboard-config.pc to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/pkgconfig
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/README to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/xkb.dtd to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41/rules/xfree98 to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41-build/rules/base.xml to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41-build/rules/base.extras.xml to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41-build/rules/evdev.xml to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+Installing /var/tmp/portage/x11-misc/xkeyboard-config-2.41/work/xkeyboard-config-2.41-build/rules/evdev.extras.xml to /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image/usr/share/X11/xkb/rules
+&gt;&gt;&gt; Completed installing x11-misc/xkeyboard-config-2.41 into /var/tmp/portage/x11-misc/xkeyboard-config-2.41/image
+
+ <span class="ansi32">*</span> Final size of build directory: 15100 KiB (14.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   7952 KiB ( 7.7 MiB)
+
+
+</pre>
+</body>
+
+</html>

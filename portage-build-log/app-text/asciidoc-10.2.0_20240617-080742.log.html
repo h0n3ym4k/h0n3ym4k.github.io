@@ -1,0 +1,1058 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-text/asciidoc-10.2.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Upstream:   https://github.com/asciidoc-py/asciidoc-py/issues
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux python_single_target_python3_12
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Using python3.12 to build
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking asciidoc-10.2.0.tar.gz to /var/tmp/portage/app-text/asciidoc-10.2.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-text/asciidoc-10.2.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0 ...
+ <span class="ansi32">*</span> Build system packages:
+ <span class="ansi32">*</span>   dev-python/gpep517            : 16
+ <span class="ansi32">*</span>   dev-python/installer          : 0.7.0
+ <span class="ansi32">*</span>   dev-python/setuptools         : 70.0.0
+ <span class="ansi32">*</span>   dev-python/setuptools-rust    : 
+ <span class="ansi32">*</span>   dev-python/setuptools-scm     : 8.1.0
+ <span class="ansi32">*</span>   dev-python/wheel              : 0.43.0
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0 ...
+ <span class="ansi32">*</span>   Building the wheel for asciidoc-10.2.0 via setuptools.build_meta:__legacy__
+python3.12 -m gpep517 build-wheel --prefix=/usr --backend setuptools.build_meta:__legacy__ --output-fd 3 --wheel-dir /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/wheel
+2024-06-17 16:07:46,809 gpep517 INFO Building wheel via backend setuptools.build_meta:__legacy__
+2024-06-17 16:07:46,895 root INFO running bdist_wheel
+2024-06-17 16:07:47,118 root INFO running build
+2024-06-17 16:07:47,118 root INFO running build_py
+2024-06-17 16:07:47,132 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build
+2024-06-17 16:07:47,133 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib
+2024-06-17 16:07:47,133 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,134 root INFO copying asciidoc/api.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,134 root INFO copying asciidoc/exceptions.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,135 root INFO copying asciidoc/utils.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,136 root INFO copying asciidoc/__metadata__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,136 root INFO copying asciidoc/a2x.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,137 root INFO copying asciidoc/asciidoc.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,138 root INFO copying asciidoc/message.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,138 root INFO copying asciidoc/attrs.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,139 root INFO copying asciidoc/__init__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,140 root INFO copying asciidoc/collections.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,140 root INFO copying asciidoc/plugin.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,141 root INFO copying asciidoc/__main__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc
+2024-06-17 16:07:47,141 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/blocks
+2024-06-17 16:07:47,142 root INFO copying asciidoc/blocks/__init__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/blocks
+2024-06-17 16:07:47,142 root INFO copying asciidoc/blocks/table.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/blocks
+2024-06-17 16:07:47,142 root INFO running egg_info
+2024-06-17 16:07:47,154 root INFO writing asciidoc.egg-info/PKG-INFO
+2024-06-17 16:07:47,155 root INFO writing dependency_links to asciidoc.egg-info/dependency_links.txt
+2024-06-17 16:07:47,156 root INFO writing entry points to asciidoc.egg-info/entry_points.txt
+2024-06-17 16:07:47,156 root INFO writing top-level names to asciidoc.egg-info/top_level.txt
+ERROR setuptools_scm._file_finders.git listing git files failed - pretending there aren't any
+2024-06-17 16:07:47,209 root INFO reading manifest file 'asciidoc.egg-info/SOURCES.txt'
+2024-06-17 16:07:47,211 root INFO reading manifest template 'MANIFEST.in'
+2024-06-17 16:07:47,305 root INFO writing manifest file 'asciidoc.egg-info/SOURCES.txt'
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources' to be distributed and are
+        already explicitly excluding 'asciidoc.resources' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.dblatex' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.dblatex' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.dblatex' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.dblatex' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.dblatex' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.filters' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.filters' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.filters' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.filters' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.filters' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.filters.code' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.filters.code' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.filters.code' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.filters.code' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.filters.code' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.filters.graphviz' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.filters.graphviz' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.filters.graphviz' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.filters.graphviz' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.filters.graphviz' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.filters.latex' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.filters.latex' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.filters.latex' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.filters.latex' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.filters.latex' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.filters.music' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.filters.music' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.filters.music' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.filters.music' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.filters.music' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.filters.source' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.filters.source' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.filters.source' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.filters.source' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.filters.source' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.icons' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.icons' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.icons' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.icons' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.icons' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.icons.callouts' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.icons.callouts' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.icons.callouts' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.icons.callouts' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.icons.callouts' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.javascripts' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.javascripts' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.javascripts' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.javascripts' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.javascripts' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.stylesheets' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.stylesheets' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.stylesheets' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.stylesheets' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.stylesheets' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.themes.flask' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.themes.flask' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.themes.flask' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.themes.flask' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.themes.flask' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+/usr/lib/python3.12/site-packages/setuptools/command/build_py.py:207: _Warning: Package 'asciidoc.resources.themes.volnitsky' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'asciidoc.resources.themes.volnitsky' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'asciidoc.resources.themes.volnitsky' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'asciidoc.resources.themes.volnitsky' to be distributed and are
+        already explicitly excluding 'asciidoc.resources.themes.volnitsky' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+  check.warn(importable)
+2024-06-17 16:07:47,317 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,317 root INFO copying asciidoc/resources/asciidoc.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,318 root INFO copying asciidoc/resources/docbook45.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,318 root INFO copying asciidoc/resources/docbook5.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,319 root INFO copying asciidoc/resources/help.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,319 root INFO copying asciidoc/resources/html4.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,320 root INFO copying asciidoc/resources/html5.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,320 root INFO copying asciidoc/resources/lang-ca.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,321 root INFO copying asciidoc/resources/lang-cs.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,321 root INFO copying asciidoc/resources/lang-de.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,322 root INFO copying asciidoc/resources/lang-el.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,322 root INFO copying asciidoc/resources/lang-en.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,323 root INFO copying asciidoc/resources/lang-es.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,323 root INFO copying asciidoc/resources/lang-fi.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,324 root INFO copying asciidoc/resources/lang-fr.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,324 root INFO copying asciidoc/resources/lang-hu.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,325 root INFO copying asciidoc/resources/lang-id.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,325 root INFO copying asciidoc/resources/lang-it.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,326 root INFO copying asciidoc/resources/lang-ja.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,326 root INFO copying asciidoc/resources/lang-nl.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,327 root INFO copying asciidoc/resources/lang-pl.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,327 root INFO copying asciidoc/resources/lang-pt-BR.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,328 root INFO copying asciidoc/resources/lang-ro.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,328 root INFO copying asciidoc/resources/lang-ru.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,329 root INFO copying asciidoc/resources/lang-sv.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,329 root INFO copying asciidoc/resources/lang-uk.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,330 root INFO copying asciidoc/resources/lang-zh-CN.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,330 root INFO copying asciidoc/resources/latex.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,331 root INFO copying asciidoc/resources/slidy.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,331 root INFO copying asciidoc/resources/text.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,332 root INFO copying asciidoc/resources/xhtml11-quirks.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,332 root INFO copying asciidoc/resources/xhtml11.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources
+2024-06-17 16:07:47,333 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/dblatex
+2024-06-17 16:07:47,333 root INFO copying asciidoc/resources/dblatex/asciidoc-dblatex.sty -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/dblatex
+2024-06-17 16:07:47,333 root INFO copying asciidoc/resources/dblatex/asciidoc-dblatex.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/dblatex
+2024-06-17 16:07:47,334 root INFO copying asciidoc/resources/dblatex/dblatex-readme.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/dblatex
+2024-06-17 16:07:47,334 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,335 root INFO copying asciidoc/resources/docbook-xsl/asciidoc-docbook-xsl.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,335 root INFO copying asciidoc/resources/docbook-xsl/chunked.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,336 root INFO copying asciidoc/resources/docbook-xsl/common.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,336 root INFO copying asciidoc/resources/docbook-xsl/epub.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,337 root INFO copying asciidoc/resources/docbook-xsl/fo.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,337 root INFO copying asciidoc/resources/docbook-xsl/htmlhelp.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,338 root INFO copying asciidoc/resources/docbook-xsl/manpage.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,338 root INFO copying asciidoc/resources/docbook-xsl/text.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,339 root INFO copying asciidoc/resources/docbook-xsl/xhtml.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,339 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters
+2024-06-17 16:07:47,339 root INFO copying asciidoc/resources/filters/unwraplatex.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters
+2024-06-17 16:07:47,340 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code
+2024-06-17 16:07:47,340 root INFO copying asciidoc/resources/filters/code/code-filter-readme.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code
+2024-06-17 16:07:47,341 root INFO copying asciidoc/resources/filters/code/code-filter-test.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code
+2024-06-17 16:07:47,341 root INFO copying asciidoc/resources/filters/code/code-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code
+2024-06-17 16:07:47,342 root INFO copying asciidoc/resources/filters/code/code-filter.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code
+2024-06-17 16:07:47,342 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,343 root INFO copying asciidoc/resources/filters/graphviz/asciidoc-graphviz-sample.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,343 root INFO copying asciidoc/resources/filters/graphviz/graphviz-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,344 root INFO copying asciidoc/resources/filters/graphviz/graphviz2png.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,344 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/latex
+2024-06-17 16:07:47,344 root INFO copying asciidoc/resources/filters/latex/latex-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/latex
+2024-06-17 16:07:47,345 root INFO copying asciidoc/resources/filters/latex/latex2img.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/latex
+2024-06-17 16:07:47,345 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/music
+2024-06-17 16:07:47,346 root INFO copying asciidoc/resources/filters/music/music-filter-test.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/music
+2024-06-17 16:07:47,346 root INFO copying asciidoc/resources/filters/music/music-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/music
+2024-06-17 16:07:47,347 root INFO copying asciidoc/resources/filters/music/music2png.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/music
+2024-06-17 16:07:47,347 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/source
+2024-06-17 16:07:47,347 root INFO copying asciidoc/resources/filters/source/source-highlight-filter-test.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/source
+2024-06-17 16:07:47,348 root INFO copying asciidoc/resources/filters/source/source-highlight-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/source
+2024-06-17 16:07:47,348 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,349 root INFO copying asciidoc/resources/icons/caution.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,349 root INFO copying asciidoc/resources/icons/example.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,350 root INFO copying asciidoc/resources/icons/home.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,350 root INFO copying asciidoc/resources/icons/important.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,351 root INFO copying asciidoc/resources/icons/next.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,351 root INFO copying asciidoc/resources/icons/note.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,352 root INFO copying asciidoc/resources/icons/prev.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,352 root INFO copying asciidoc/resources/icons/tip.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,353 root INFO copying asciidoc/resources/icons/up.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,353 root INFO copying asciidoc/resources/icons/warning.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons
+2024-06-17 16:07:47,354 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,354 root INFO copying asciidoc/resources/icons/callouts/1.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,355 root INFO copying asciidoc/resources/icons/callouts/10.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,355 root INFO copying asciidoc/resources/icons/callouts/11.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,356 root INFO copying asciidoc/resources/icons/callouts/12.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,356 root INFO copying asciidoc/resources/icons/callouts/13.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,357 root INFO copying asciidoc/resources/icons/callouts/14.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,357 root INFO copying asciidoc/resources/icons/callouts/15.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,358 root INFO copying asciidoc/resources/icons/callouts/2.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,358 root INFO copying asciidoc/resources/icons/callouts/3.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,359 root INFO copying asciidoc/resources/icons/callouts/4.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,359 root INFO copying asciidoc/resources/icons/callouts/5.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,360 root INFO copying asciidoc/resources/icons/callouts/6.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,360 root INFO copying asciidoc/resources/icons/callouts/7.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,361 root INFO copying asciidoc/resources/icons/callouts/8.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,361 root INFO copying asciidoc/resources/icons/callouts/9.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,362 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts
+2024-06-17 16:07:47,362 root INFO copying asciidoc/resources/javascripts/ASCIIMathML.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts
+2024-06-17 16:07:47,363 root INFO copying asciidoc/resources/javascripts/LaTeXMathML.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts
+2024-06-17 16:07:47,363 root INFO copying asciidoc/resources/javascripts/asciidoc.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts
+2024-06-17 16:07:47,364 root INFO copying asciidoc/resources/javascripts/slidy.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts
+2024-06-17 16:07:47,364 root INFO copying asciidoc/resources/javascripts/toc.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts
+2024-06-17 16:07:47,365 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,365 root INFO copying asciidoc/resources/stylesheets/asciidoc.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,366 root INFO copying asciidoc/resources/stylesheets/docbook-xsl.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,366 root INFO copying asciidoc/resources/stylesheets/pygments.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,366 root INFO copying asciidoc/resources/stylesheets/slidy.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,367 root INFO copying asciidoc/resources/stylesheets/toc2.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,368 root INFO copying asciidoc/resources/stylesheets/xhtml11-quirks.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,368 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/themes
+2024-06-17 16:07:47,368 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/themes/flask
+2024-06-17 16:07:47,369 root INFO copying asciidoc/resources/themes/flask/flask.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/themes/flask
+2024-06-17 16:07:47,369 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/themes/volnitsky
+2024-06-17 16:07:47,369 root INFO copying asciidoc/resources/themes/volnitsky/volnitsky.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/themes/volnitsky
+2024-06-17 16:07:47,371 root WARNING warning: build_py: byte-compiling is disabled, skipping.
+
+2024-06-17 16:07:47,398 wheel INFO installing to /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel
+2024-06-17 16:07:47,398 root INFO running install
+2024-06-17 16:07:47,431 root INFO running install_lib
+2024-06-17 16:07:47,443 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64
+2024-06-17 16:07:47,444 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel
+2024-06-17 16:07:47,444 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,444 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,445 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-ro.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,445 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-es.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,445 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-fr.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,446 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters
+2024-06-17 16:07:47,446 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/unwraplatex.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters
+2024-06-17 16:07:47,447 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/music
+2024-06-17 16:07:47,447 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/music/music-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/music
+2024-06-17 16:07:47,447 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/music/music-filter-test.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/music
+2024-06-17 16:07:47,448 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/music/music2png.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/music
+2024-06-17 16:07:47,448 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/code
+2024-06-17 16:07:47,449 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code/code-filter-test.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/code
+2024-06-17 16:07:47,449 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code/code-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/code
+2024-06-17 16:07:47,450 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code/code-filter.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/code
+2024-06-17 16:07:47,450 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/code/code-filter-readme.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/code
+2024-06-17 16:07:47,451 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,451 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/graphviz/graphviz-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,451 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/graphviz/asciidoc-graphviz-sample.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,452 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/graphviz/graphviz2png.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/graphviz
+2024-06-17 16:07:47,452 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/source
+2024-06-17 16:07:47,453 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/source/source-highlight-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/source
+2024-06-17 16:07:47,453 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/source/source-highlight-filter-test.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/source
+2024-06-17 16:07:47,454 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/latex
+2024-06-17 16:07:47,454 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/latex/latex-filter.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/latex
+2024-06-17 16:07:47,454 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/filters/latex/latex2img.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/filters/latex
+2024-06-17 16:07:47,455 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/help.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,455 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/text.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,456 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/latex.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,456 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/html5.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,457 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,457 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/up.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,458 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/next.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,458 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/tip.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,458 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/important.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,459 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/home.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,459 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/prev.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,460 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/note.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,460 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,461 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/13.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,461 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/8.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,462 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/2.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,462 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/6.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,462 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/11.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,463 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/4.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,463 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/9.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,464 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/7.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,464 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/15.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,465 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/3.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,465 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/1.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,466 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/10.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,466 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/14.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,467 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/5.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,467 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/callouts/12.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons/callouts
+2024-06-17 16:07:47,468 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/warning.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,468 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/caution.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,469 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/icons/example.png -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/icons
+2024-06-17 16:07:47,469 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook5.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,469 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook45.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,470 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/xhtml11.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,470 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-el.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,471 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-fi.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,471 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-de.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,472 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,472 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets/xhtml11-quirks.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,473 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets/pygments.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,473 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets/docbook-xsl.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,473 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets/asciidoc.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,474 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets/slidy.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,474 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/stylesheets/toc2.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/stylesheets
+2024-06-17 16:07:47,475 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-it.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,475 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-hu.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,476 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-pl.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,476 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-sv.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,477 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/javascripts
+2024-06-17 16:07:47,477 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts/ASCIIMathML.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/javascripts
+2024-06-17 16:07:47,477 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts/LaTeXMathML.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/javascripts
+2024-06-17 16:07:47,478 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts/toc.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/javascripts
+2024-06-17 16:07:47,478 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts/asciidoc.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/javascripts
+2024-06-17 16:07:47,479 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/javascripts/slidy.js -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/javascripts
+2024-06-17 16:07:47,479 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-uk.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,480 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-ca.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,480 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/slidy.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,481 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/themes
+2024-06-17 16:07:47,481 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/themes/volnitsky
+2024-06-17 16:07:47,481 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/themes/volnitsky/volnitsky.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/themes/volnitsky
+2024-06-17 16:07:47,482 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/themes/flask
+2024-06-17 16:07:47,482 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/themes/flask/flask.css -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/themes/flask
+2024-06-17 16:07:47,482 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-en.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,483 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-cs.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,483 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-pt-BR.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,484 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-nl.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,484 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-ja.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,485 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/asciidoc.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,485 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/dblatex
+2024-06-17 16:07:47,485 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/dblatex/dblatex-readme.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/dblatex
+2024-06-17 16:07:47,486 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/dblatex/asciidoc-dblatex.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/dblatex
+2024-06-17 16:07:47,486 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/dblatex/asciidoc-dblatex.sty -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/dblatex
+2024-06-17 16:07:47,487 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-ru.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,487 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-id.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,488 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,488 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/asciidoc-docbook-xsl.txt -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,488 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/fo.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,489 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/chunked.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,489 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/manpage.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,490 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/xhtml.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,490 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/common.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,491 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/text.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,491 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/htmlhelp.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,492 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/docbook-xsl/epub.xsl -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources/docbook-xsl
+2024-06-17 16:07:47,492 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/xhtml11-quirks.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,492 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/html4.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,493 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/resources/lang-zh-CN.conf -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/resources
+2024-06-17 16:07:47,493 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/api.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,494 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/exceptions.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,494 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/utils.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,495 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/__metadata__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,495 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/a2x.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,496 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/asciidoc.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,496 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/message.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,497 root INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/blocks
+2024-06-17 16:07:47,497 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/blocks/__init__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/blocks
+2024-06-17 16:07:47,497 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/blocks/table.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc/blocks
+2024-06-17 16:07:47,498 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/attrs.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,498 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/__init__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,499 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/collections.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,499 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/plugin.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,500 root INFO copying /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/lib/asciidoc/__main__.py -&gt; /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc
+2024-06-17 16:07:47,500 root WARNING warning: install_lib: byte-compiling is disabled, skipping.
+
+2024-06-17 16:07:47,500 root INFO running install_egg_info
+2024-06-17 16:07:47,513 root INFO Copying asciidoc.egg-info to /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc-10.2.0-py3.12.egg-info
+2024-06-17 16:07:47,516 root INFO running install_scripts
+2024-06-17 16:07:47,519 wheel INFO creating /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel/asciidoc-10.2.0.dist-info/WHEEL
+2024-06-17 16:07:47,520 wheel INFO creating '/var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/wheel/.tmp-0jbmhgpv/asciidoc-10.2.0-py3-none-any.whl' and adding '/var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel' to it
+2024-06-17 16:07:47,521 wheel INFO adding 'asciidoc/__init__.py'
+2024-06-17 16:07:47,521 wheel INFO adding 'asciidoc/__main__.py'
+2024-06-17 16:07:47,521 wheel INFO adding 'asciidoc/__metadata__.py'
+2024-06-17 16:07:47,522 wheel INFO adding 'asciidoc/a2x.py'
+2024-06-17 16:07:47,522 wheel INFO adding 'asciidoc/api.py'
+2024-06-17 16:07:47,523 wheel INFO adding 'asciidoc/asciidoc.py'
+2024-06-17 16:07:47,524 wheel INFO adding 'asciidoc/attrs.py'
+2024-06-17 16:07:47,524 wheel INFO adding 'asciidoc/collections.py'
+2024-06-17 16:07:47,524 wheel INFO adding 'asciidoc/exceptions.py'
+2024-06-17 16:07:47,525 wheel INFO adding 'asciidoc/message.py'
+2024-06-17 16:07:47,525 wheel INFO adding 'asciidoc/plugin.py'
+2024-06-17 16:07:47,525 wheel INFO adding 'asciidoc/utils.py'
+2024-06-17 16:07:47,526 wheel INFO adding 'asciidoc/blocks/__init__.py'
+2024-06-17 16:07:47,526 wheel INFO adding 'asciidoc/blocks/table.py'
+2024-06-17 16:07:47,526 wheel INFO adding 'asciidoc/resources/asciidoc.conf'
+2024-06-17 16:07:47,527 wheel INFO adding 'asciidoc/resources/docbook45.conf'
+2024-06-17 16:07:47,527 wheel INFO adding 'asciidoc/resources/docbook5.conf'
+2024-06-17 16:07:47,528 wheel INFO adding 'asciidoc/resources/help.conf'
+2024-06-17 16:07:47,528 wheel INFO adding 'asciidoc/resources/html4.conf'
+2024-06-17 16:07:47,528 wheel INFO adding 'asciidoc/resources/html5.conf'
+2024-06-17 16:07:47,529 wheel INFO adding 'asciidoc/resources/lang-ca.conf'
+2024-06-17 16:07:47,529 wheel INFO adding 'asciidoc/resources/lang-cs.conf'
+2024-06-17 16:07:47,529 wheel INFO adding 'asciidoc/resources/lang-de.conf'
+2024-06-17 16:07:47,530 wheel INFO adding 'asciidoc/resources/lang-el.conf'
+2024-06-17 16:07:47,530 wheel INFO adding 'asciidoc/resources/lang-en.conf'
+2024-06-17 16:07:47,530 wheel INFO adding 'asciidoc/resources/lang-es.conf'
+2024-06-17 16:07:47,531 wheel INFO adding 'asciidoc/resources/lang-fi.conf'
+2024-06-17 16:07:47,531 wheel INFO adding 'asciidoc/resources/lang-fr.conf'
+2024-06-17 16:07:47,531 wheel INFO adding 'asciidoc/resources/lang-hu.conf'
+2024-06-17 16:07:47,532 wheel INFO adding 'asciidoc/resources/lang-id.conf'
+2024-06-17 16:07:47,532 wheel INFO adding 'asciidoc/resources/lang-it.conf'
+2024-06-17 16:07:47,532 wheel INFO adding 'asciidoc/resources/lang-ja.conf'
+2024-06-17 16:07:47,532 wheel INFO adding 'asciidoc/resources/lang-nl.conf'
+2024-06-17 16:07:47,533 wheel INFO adding 'asciidoc/resources/lang-pl.conf'
+2024-06-17 16:07:47,533 wheel INFO adding 'asciidoc/resources/lang-pt-BR.conf'
+2024-06-17 16:07:47,533 wheel INFO adding 'asciidoc/resources/lang-ro.conf'
+2024-06-17 16:07:47,534 wheel INFO adding 'asciidoc/resources/lang-ru.conf'
+2024-06-17 16:07:47,534 wheel INFO adding 'asciidoc/resources/lang-sv.conf'
+2024-06-17 16:07:47,534 wheel INFO adding 'asciidoc/resources/lang-uk.conf'
+2024-06-17 16:07:47,535 wheel INFO adding 'asciidoc/resources/lang-zh-CN.conf'
+2024-06-17 16:07:47,535 wheel INFO adding 'asciidoc/resources/latex.conf'
+2024-06-17 16:07:47,535 wheel INFO adding 'asciidoc/resources/slidy.conf'
+2024-06-17 16:07:47,536 wheel INFO adding 'asciidoc/resources/text.conf'
+2024-06-17 16:07:47,536 wheel INFO adding 'asciidoc/resources/xhtml11-quirks.conf'
+2024-06-17 16:07:47,536 wheel INFO adding 'asciidoc/resources/xhtml11.conf'
+2024-06-17 16:07:47,537 wheel INFO adding 'asciidoc/resources/dblatex/asciidoc-dblatex.sty'
+2024-06-17 16:07:47,537 wheel INFO adding 'asciidoc/resources/dblatex/asciidoc-dblatex.xsl'
+2024-06-17 16:07:47,538 wheel INFO adding 'asciidoc/resources/dblatex/dblatex-readme.txt'
+2024-06-17 16:07:47,538 wheel INFO adding 'asciidoc/resources/docbook-xsl/asciidoc-docbook-xsl.txt'
+2024-06-17 16:07:47,538 wheel INFO adding 'asciidoc/resources/docbook-xsl/chunked.xsl'
+2024-06-17 16:07:47,539 wheel INFO adding 'asciidoc/resources/docbook-xsl/common.xsl'
+2024-06-17 16:07:47,539 wheel INFO adding 'asciidoc/resources/docbook-xsl/epub.xsl'
+2024-06-17 16:07:47,539 wheel INFO adding 'asciidoc/resources/docbook-xsl/fo.xsl'
+2024-06-17 16:07:47,540 wheel INFO adding 'asciidoc/resources/docbook-xsl/htmlhelp.xsl'
+2024-06-17 16:07:47,540 wheel INFO adding 'asciidoc/resources/docbook-xsl/manpage.xsl'
+2024-06-17 16:07:47,540 wheel INFO adding 'asciidoc/resources/docbook-xsl/text.xsl'
+2024-06-17 16:07:47,541 wheel INFO adding 'asciidoc/resources/docbook-xsl/xhtml.xsl'
+2024-06-17 16:07:47,541 wheel INFO adding 'asciidoc/resources/filters/unwraplatex.py'
+2024-06-17 16:07:47,542 wheel INFO adding 'asciidoc/resources/filters/code/code-filter-readme.txt'
+2024-06-17 16:07:47,542 wheel INFO adding 'asciidoc/resources/filters/code/code-filter-test.txt'
+2024-06-17 16:07:47,542 wheel INFO adding 'asciidoc/resources/filters/code/code-filter.conf'
+2024-06-17 16:07:47,542 wheel INFO adding 'asciidoc/resources/filters/code/code-filter.py'
+2024-06-17 16:07:47,543 wheel INFO adding 'asciidoc/resources/filters/graphviz/asciidoc-graphviz-sample.txt'
+2024-06-17 16:07:47,543 wheel INFO adding 'asciidoc/resources/filters/graphviz/graphviz-filter.conf'
+2024-06-17 16:07:47,544 wheel INFO adding 'asciidoc/resources/filters/graphviz/graphviz2png.py'
+2024-06-17 16:07:47,544 wheel INFO adding 'asciidoc/resources/filters/latex/latex-filter.conf'
+2024-06-17 16:07:47,544 wheel INFO adding 'asciidoc/resources/filters/latex/latex2img.py'
+2024-06-17 16:07:47,545 wheel INFO adding 'asciidoc/resources/filters/music/music-filter-test.txt'
+2024-06-17 16:07:47,545 wheel INFO adding 'asciidoc/resources/filters/music/music-filter.conf'
+2024-06-17 16:07:47,545 wheel INFO adding 'asciidoc/resources/filters/music/music2png.py'
+2024-06-17 16:07:47,546 wheel INFO adding 'asciidoc/resources/filters/source/source-highlight-filter-test.txt'
+2024-06-17 16:07:47,546 wheel INFO adding 'asciidoc/resources/filters/source/source-highlight-filter.conf'
+2024-06-17 16:07:47,547 wheel INFO adding 'asciidoc/resources/icons/caution.png'
+2024-06-17 16:07:47,547 wheel INFO adding 'asciidoc/resources/icons/example.png'
+2024-06-17 16:07:47,547 wheel INFO adding 'asciidoc/resources/icons/home.png'
+2024-06-17 16:07:47,548 wheel INFO adding 'asciidoc/resources/icons/important.png'
+2024-06-17 16:07:47,548 wheel INFO adding 'asciidoc/resources/icons/next.png'
+2024-06-17 16:07:47,548 wheel INFO adding 'asciidoc/resources/icons/note.png'
+2024-06-17 16:07:47,549 wheel INFO adding 'asciidoc/resources/icons/prev.png'
+2024-06-17 16:07:47,549 wheel INFO adding 'asciidoc/resources/icons/tip.png'
+2024-06-17 16:07:47,549 wheel INFO adding 'asciidoc/resources/icons/up.png'
+2024-06-17 16:07:47,550 wheel INFO adding 'asciidoc/resources/icons/warning.png'
+2024-06-17 16:07:47,550 wheel INFO adding 'asciidoc/resources/icons/callouts/1.png'
+2024-06-17 16:07:47,550 wheel INFO adding 'asciidoc/resources/icons/callouts/10.png'
+2024-06-17 16:07:47,551 wheel INFO adding 'asciidoc/resources/icons/callouts/11.png'
+2024-06-17 16:07:47,551 wheel INFO adding 'asciidoc/resources/icons/callouts/12.png'
+2024-06-17 16:07:47,551 wheel INFO adding 'asciidoc/resources/icons/callouts/13.png'
+2024-06-17 16:07:47,552 wheel INFO adding 'asciidoc/resources/icons/callouts/14.png'
+2024-06-17 16:07:47,552 wheel INFO adding 'asciidoc/resources/icons/callouts/15.png'
+2024-06-17 16:07:47,552 wheel INFO adding 'asciidoc/resources/icons/callouts/2.png'
+2024-06-17 16:07:47,553 wheel INFO adding 'asciidoc/resources/icons/callouts/3.png'
+2024-06-17 16:07:47,553 wheel INFO adding 'asciidoc/resources/icons/callouts/4.png'
+2024-06-17 16:07:47,553 wheel INFO adding 'asciidoc/resources/icons/callouts/5.png'
+2024-06-17 16:07:47,554 wheel INFO adding 'asciidoc/resources/icons/callouts/6.png'
+2024-06-17 16:07:47,554 wheel INFO adding 'asciidoc/resources/icons/callouts/7.png'
+2024-06-17 16:07:47,554 wheel INFO adding 'asciidoc/resources/icons/callouts/8.png'
+2024-06-17 16:07:47,555 wheel INFO adding 'asciidoc/resources/icons/callouts/9.png'
+2024-06-17 16:07:47,555 wheel INFO adding 'asciidoc/resources/javascripts/ASCIIMathML.js'
+2024-06-17 16:07:47,556 wheel INFO adding 'asciidoc/resources/javascripts/LaTeXMathML.js'
+2024-06-17 16:07:47,556 wheel INFO adding 'asciidoc/resources/javascripts/asciidoc.js'
+2024-06-17 16:07:47,556 wheel INFO adding 'asciidoc/resources/javascripts/slidy.js'
+2024-06-17 16:07:47,557 wheel INFO adding 'asciidoc/resources/javascripts/toc.js'
+2024-06-17 16:07:47,557 wheel INFO adding 'asciidoc/resources/stylesheets/asciidoc.css'
+2024-06-17 16:07:47,558 wheel INFO adding 'asciidoc/resources/stylesheets/docbook-xsl.css'
+2024-06-17 16:07:47,558 wheel INFO adding 'asciidoc/resources/stylesheets/pygments.css'
+2024-06-17 16:07:47,558 wheel INFO adding 'asciidoc/resources/stylesheets/slidy.css'
+2024-06-17 16:07:47,559 wheel INFO adding 'asciidoc/resources/stylesheets/toc2.css'
+2024-06-17 16:07:47,559 wheel INFO adding 'asciidoc/resources/stylesheets/xhtml11-quirks.css'
+2024-06-17 16:07:47,560 wheel INFO adding 'asciidoc/resources/themes/flask/flask.css'
+2024-06-17 16:07:47,560 wheel INFO adding 'asciidoc/resources/themes/volnitsky/volnitsky.css'
+2024-06-17 16:07:47,561 wheel INFO adding 'asciidoc-10.2.0.dist-info/METADATA'
+2024-06-17 16:07:47,561 wheel INFO adding 'asciidoc-10.2.0.dist-info/WHEEL'
+2024-06-17 16:07:47,561 wheel INFO adding 'asciidoc-10.2.0.dist-info/entry_points.txt'
+2024-06-17 16:07:47,561 wheel INFO adding 'asciidoc-10.2.0.dist-info/top_level.txt'
+2024-06-17 16:07:47,562 wheel INFO adding 'asciidoc-10.2.0.dist-info/RECORD'
+2024-06-17 16:07:47,563 wheel INFO removing /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/build/bdist.linux-x86_64/wheel
+2024-06-17 16:07:47,572 gpep517 INFO The backend produced /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/wheel/asciidoc-10.2.0-py3-none-any.whl
+ <span class="ansi32">*</span>   Installing asciidoc-10.2.0-py3-none-any.whl to /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/install
+python3.12 -m gpep517 install-wheel --destdir=/var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/install --interpreter=/usr/bin/python3.12 --prefix=/usr --optimize=all /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/wheel/asciidoc-10.2.0-py3-none-any.whl
+2024-06-17 16:07:47,802 gpep517 INFO Installing /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/wheel/asciidoc-10.2.0-py3-none-any.whl into /var/tmp/portage/app-text/asciidoc-10.2.0/work/asciidoc-10.2.0_python3.12/install
+2024-06-17 16:07:48,334 gpep517 INFO Installation complete
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: app-text/asciidoc-10.2.0
+
+&gt;&gt;&gt; Install app-text/asciidoc-10.2.0 into /var/tmp/portage/app-text/asciidoc-10.2.0/image
+&gt;&gt;&gt; Completed installing app-text/asciidoc-10.2.0 into /var/tmp/portage/app-text/asciidoc-10.2.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3224 KiB (3.1 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  3380 KiB (3.3 MiB)
+
+<span class="ansi33"> * </span>QA Notice: setuptools warnings detected:
+<span class="ansi33"> * </span>
+<span class="ansi33"> * </span>	Package 'asciidoc.resources' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.dblatex' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.filters' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.filters.code' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.filters.graphviz' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.filters.latex' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.filters.music' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.filters.source' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.icons' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.icons.callouts' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.javascripts' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.stylesheets' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.themes.flask' is absent from the `packages` configuration.
+<span class="ansi33"> * </span>	Package 'asciidoc.resources.themes.volnitsky' is absent from the `packages` configuration.
+ <span class="ansi32">*</span> Verifying compiled files for python3.12
+ <span class="ansi1 ansi32">*</span> Install additional packages for optional runtime features:
+ <span class="ansi1 ansi32">*</span>   media-sound/lilypond and virtual/imagemagick-tools for music filter support
+ <span class="ansi1 ansi32">*</span>   dev-util/source-highlight and dev-python/pygments and app-text/highlight for source filter support
+ <span class="ansi1 ansi32">*</span>   dev-texlive/texlive-latex and app-text/dvipng for latex filter support
+ <span class="ansi1 ansi32">*</span>   dev-texlive/texlive-latex and app-text/dvisvgm for latex filter support
+ <span class="ansi1 ansi32">*</span>   media-gfx/graphviz for graphviz filter support
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,728 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-admin/apache-tools-2.4.59:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: apache-bugs@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux ssl
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking httpd-2.4.59.tar.bz2 to /var/tmp/portage/app-admin/apache-tools-2.4.59/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-admin/apache-tools-2.4.59/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Running eautoreconf in '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59' ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Moving configure.in to configure.ac (bug #426262)
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: httpd-2.4.59/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: httpd-2.4.59/build/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying portage/1.2.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying sed/1.5.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying as-needed/2.4.3 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying color-record/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying openmp/2.4.7 patch ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59 ...
+ * econf: updating httpd-2.4.59/build/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating httpd-2.4.59/build/config.sub with /usr/share/gnuconfig/config.sub
+ * econf: updating httpd-2.4.59/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating httpd-2.4.59/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-static --docdir=/usr/share/doc/apache-tools-2.4.59 --htmldir=/usr/share/doc/apache-tools-2.4.59/html --with-sysroot=/ --libdir=/usr/lib64 --libexecdir=/usr/lib64/apache2/modules --sbindir=/usr/sbin --with-z=/usr --with-apr=/usr --with-apr-util=/usr --without-pcre --with-pcre2=/var/tmp/portage/app-admin/apache-tools-2.4.59/temp/pcre2-config --enable-ssl --with-ssl="${EPREFIX}"/usr
+checking for chosen layout... Apache
+checking for working mkdir -p... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking target system type... x86_64-pc-linux-gnu
+configure: 
+configure: Configuring Apache Portable Runtime library...
+configure: 
+checking for APR... yes
+  setting CC to "x86_64-pc-linux-gnu-gcc"
+  setting CPP to "x86_64-pc-linux-gnu-gcc -E"
+  setting CPPFLAGS to " -DLINUX -D_REENTRANT -D_GNU_SOURCE"
+configure: 
+configure: Configuring Apache Portable Runtime Utility library...
+configure: 
+checking for APR-util... yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for -pcre2-config... no
+checking for -pcre-config... no
+checking for pcre2-config... (cached) /var/tmp/portage/app-admin/apache-tools-2.4.59/temp/pcre2-config
+configure: Using external PCRE library from /var/tmp/portage/app-admin/apache-tools-2.4.59/temp/pcre2-config
+  setting PCRE_INCLUDES to ""
+  setting PCRE_LIBS to "-lpcre2-8"
+configure: 
+configure: Configuring Apache httpd...
+configure: 
+  setting INCLUDES to "-I."
+  adding "-I$(top_srcdir)/os/$(OS_DIR)" to INCLUDES
+  adding "-I$(top_srcdir)/include" to INCLUDES
+  adding "-I/usr/include/apr-1" to INCLUDES
+configure: 
+configure: Applying OS-specific hints for httpd...
+configure: 
+  forcing SINGLE_LISTEN_UNSERIALIZED_ACCEPT to "1"
+  forcing AP_NONBLOCK_WHEN_MULTI_LISTEN to "1"
+checking for rm... /bin/rm
+checking for pkg-config... (cached) x86_64-pc-linux-gnu-pkg-config
+checking for rsync... /usr/bin/rsync
+checking for svn... no
+checking for gawk... gawk
+checking whether ln -s works... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... /bin/rm: cannot remove 'conftest*': No such file or directory
+yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... /bin/rm: cannot remove 'conftest*': No such file or directory
+no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for lynx... no
+checking for links... no
+checking for elinks... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for library containing strerror... none required
+checking for APR version 1.3.0 or later... yes
+checking for APR-util version 1.3.0 or later... yes
+checking for egrep... (cached) /bin/grep -E
+checking for string.h... (cached) yes
+checking for limits.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/socket.h... yes
+checking for pwd.h... yes
+checking for grp.h... yes
+checking for strings.h... (cached) yes
+checking for sys/prctl.h... yes
+checking for sys/processor.h... no
+checking for sys/sem.h... yes
+checking for sys/sdt.h... no
+checking for sys/loadavg.h... no
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for an ANSI C-conforming const... yes
+checking for library containing sqrt... -lm
+checking for library containing crypt... -lcrypt
+checking whether crypt() supports SHA-2... yes
+checking for getpwnam... yes
+checking for getgrnam... yes
+checking for initgroups... yes
+checking for bindprocessor... no
+checking for prctl... yes
+checking for timegm... yes
+checking for getpgid... yes
+checking for fopen64... yes
+checking for getloadavg... yes
+checking for gettid... yes
+checking for void pointer length... no
+checking for tm_gmtoff in struct tm... yes
+checking for sd_notify in -lsystemd-daemon... no
+checking whether to enable mod_authn_file... shared
+checking whether to enable mod_authn_dbm... shared (most)
+checking whether to enable mod_authn_anon... shared (most)
+checking whether to enable mod_authn_dbd... shared (most)
+checking whether to enable mod_authn_socache... shared (most)
+checking whether to enable mod_authn_core... shared
+checking whether to enable mod_authz_host... shared
+checking whether to enable mod_authz_groupfile... shared
+checking whether to enable mod_authz_user... shared
+checking whether to enable mod_authz_dbm... shared (most)
+checking whether to enable mod_authz_owner... shared (most)
+checking whether to enable mod_authz_dbd... shared (most)
+checking whether to enable mod_authz_core... shared
+checking whether to enable mod_authnz_ldap... checking dependencies
+checking for ldap support in apr/apr-util... no
+configure: WARNING: apr/apr-util is compiled without ldap support
+checking whether to enable mod_authnz_ldap... no (disabled)
+checking whether to enable mod_authnz_fcgi... no
+checking whether to enable mod_access_compat... shared
+checking whether to enable mod_auth_basic... shared
+checking whether to enable mod_auth_form... shared (most)
+checking whether to enable mod_auth_digest... checking dependencies
+checking whether to enable mod_auth_digest... shared (most)
+checking whether to enable mod_allowmethods... shared (most)
+  adding "-I$(top_srcdir)/modules/aaa" to INCLUDES
+checking whether to enable mod_isapi... no
+checking whether to enable mod_file_cache... shared (most)
+checking whether to enable mod_cache... shared (most)
+checking whether to enable mod_cache_disk... checking dependencies
+checking whether to enable mod_cache_disk... shared (most)
+checking whether to enable mod_cache_socache... shared (most)
+checking whether to enable mod_socache_shmcb... shared (most)
+checking whether to enable mod_socache_dbm... shared (most)
+checking whether to enable mod_socache_memcache... shared (most)
+checking whether to enable mod_socache_redis... shared (most)
+checking whether to enable mod_socache_dc... no
+  adding "-I$(top_srcdir)/modules/cache" to INCLUDES
+  setting HTTPD_LDFLAGS to "-export-dynamic"
+checking whether to enable mod_so... static
+  setting AP_LIBS to "$(MOD_SO_LDADD)"
+checking whether to enable mod_watchdog... checking dependencies
+checking whether to enable mod_watchdog... shared (most)
+checking whether to enable mod_macro... shared (most)
+  adding "-I$(top_srcdir)/modules/core" to INCLUDES
+checking whether to enable mod_dbd... shared (most)
+  adding "-I$(top_srcdir)/modules/database" to INCLUDES
+checking whether to enable mod_bucketeer... no
+checking whether to enable mod_dumpio... shared (most)
+checking whether to enable mod_echo... no
+checking whether to enable mod_example_hooks... no
+checking whether to enable mod_case_filter... no
+checking whether to enable mod_case_filter_in... no
+checking whether to enable mod_example_ipc... no
+checking whether to enable mod_buffer... shared (most)
+checking whether to enable mod_data... no
+checking whether to enable mod_ratelimit... shared (most)
+checking whether to enable mod_reqtimeout... shared
+checking whether to enable mod_ext_filter... shared (most)
+checking whether to enable mod_request... shared (most)
+checking whether to enable mod_include... shared (most)
+checking whether to enable mod_filter... shared
+checking whether to enable mod_reflector... no
+checking whether to enable mod_substitute... shared (most)
+checking whether to enable mod_sed... checking dependencies
+  setting MOD_SED_LDADD to "-export-symbols-regex sed_module"
+checking whether to enable mod_sed... shared (most)
+checking whether to enable mod_charset_lite... no
+checking whether to enable mod_deflate... checking dependencies
+  setting LIBS to "-lz"
+checking for zlib library... found
+  setting MOD_DEFLATE_LDADD to " -lz"
+  nulling LIBS
+checking whether to enable mod_deflate... shared (most)
+checking whether to enable mod_xml2enc... no
+checking whether to enable mod_proxy_html... no
+checking whether to enable mod_brotli... checking dependencies
+checking for Brotli library &gt;= 0.6.0 via pkg-config... yes
+  setting MOD_CFLAGS to ""
+  setting MOD_BROTLI_LDADD to "-lbrotlienc"
+  adding "-export-symbols-regex" to MOD_BROTLI_LDADD
+  adding "brotli_module" to MOD_BROTLI_LDADD
+checking whether to enable mod_brotli... shared (most)
+  adding "-I$(top_srcdir)/modules/filters" to INCLUDES
+checking whether to enable mod_http... static
+  adding "$(MOD_HTTP_LDADD)" to AP_LIBS
+checking whether to enable mod_mime... shared
+checking whether to enable mod_ldap... checking dependencies
+checking for ldap support in apr/apr-util... (cached) no
+configure: WARNING: apr/apr-util is compiled without ldap support
+checking whether to enable mod_ldap... no (disabled)
+  adding "-I$(top_srcdir)/modules/ldap" to INCLUDES
+checking whether to enable mod_log_config... shared
+checking whether to enable mod_log_debug... shared (most)
+checking whether to enable mod_log_forensic... no
+checking whether to enable mod_logio... shared (most)
+  adding "-I$(top_srcdir)/modules/loggers" to INCLUDES
+checking whether to enable mod_lua... no
+  adding "-I$(top_srcdir)/modules/lua" to INCLUDES
+checking whether to enable mod_env... shared
+checking whether to enable mod_mime_magic... no
+checking whether to enable mod_cern_meta... no
+checking whether to enable mod_expires... shared (most)
+checking whether to enable mod_headers... shared
+checking whether to enable mod_ident... no
+checking whether to enable mod_usertrack... no
+checking whether to enable mod_unique_id... shared (most)
+checking whether to enable mod_setenvif... shared
+checking whether to enable mod_version... shared
+checking whether to enable mod_remoteip... shared (most)
+checking whether to enable mod_proxy... shared (most)
+checking whether to enable mod_proxy_connect... checking dependencies
+checking whether to enable mod_proxy_connect... shared (most)
+checking whether to enable mod_proxy_ftp... checking dependencies
+checking whether to enable mod_proxy_ftp... shared (most)
+checking whether to enable mod_proxy_http... checking dependencies
+checking whether to enable mod_proxy_http... shared (most)
+checking whether to enable mod_proxy_fcgi... checking dependencies
+checking whether to enable mod_proxy_fcgi... shared (most)
+checking whether to enable mod_proxy_scgi... checking dependencies
+checking whether to enable mod_proxy_scgi... shared (most)
+checking whether to enable mod_proxy_uwsgi... checking dependencies
+checking whether to enable mod_proxy_uwsgi... shared (most)
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether to enable mod_proxy_fdpass... checking dependencies
+checking whether CMSG_DATA is declared... yes
+checking whether to enable mod_proxy_fdpass... shared (most)
+checking whether to enable mod_proxy_wstunnel... checking dependencies
+checking whether to enable mod_proxy_wstunnel... shared (most)
+checking whether to enable mod_proxy_ajp... checking dependencies
+checking whether to enable mod_proxy_ajp... shared (most)
+checking whether to enable mod_proxy_balancer... checking dependencies
+checking whether to enable mod_proxy_balancer... shared (most)
+checking whether to enable mod_proxy_express... checking dependencies
+checking whether to enable mod_proxy_express... shared (most)
+checking whether to enable mod_proxy_hcheck... checking dependencies
+checking whether to enable mod_proxy_hcheck... shared (most)
+  adding "-I$(top_srcdir)/modules/proxy" to INCLUDES
+  adding "-I$(top_srcdir)/modules/http2" to INCLUDES
+checking whether to enable mod_session... shared (most)
+checking whether to enable mod_session_cookie... checking dependencies
+checking whether to enable mod_session_cookie... shared (most)
+checking whether to enable mod_session_crypto... checking dependencies
+checking whether to enable mod_session_crypto... shared (most)
+checking whether to enable mod_session_dbd... checking dependencies
+checking whether to enable mod_session_dbd... shared (most)
+  adding "-I$(top_srcdir)/modules/session" to INCLUDES
+checking whether to enable mod_slotmem_shm... shared (most)
+checking whether to enable mod_slotmem_plain... no
+checking whether to enable mod_ssl... checking dependencies
+checking for OpenSSL... checking for user-provided OpenSSL base directory... ./configure: line 36293: cd: "${EPREFIX}"/usr: No such file or directory
+/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59
+  setting MOD_CFLAGS to ""
+  setting ab_CFLAGS to ""
+  setting MOD_LDFLAGS to ""
+  setting MOD_LDFLAGS to ""
+checking for OpenSSL version &gt;= 0.9.8a... OK
+  setting MOD_LDFLAGS to "-lssl -lcrypto  "
+  setting LIBS to "-lssl -lcrypto  "
+  forcing ab_LIBS to "-lssl -lcrypto  "
+checking for openssl/engine.h... yes
+checking for SSL_CTX_new... yes
+checking for OPENSSL_init_ssl... yes
+checking for ENGINE_init... yes
+checking for ENGINE_load_builtin_engines... yes
+checking for RAND_egd... no
+yes
+  setting MOD_CFLAGS to ""
+  setting MOD_SSL_LDADD to "-export-symbols-regex ssl_module"
+checking whether to enable mod_ssl... shared
+  adding "-I$(top_srcdir)/modules/ssl" to INCLUDES
+checking whether to enable mod_optional_hook_export... no
+checking whether to enable mod_optional_hook_import... no
+checking whether to enable mod_optional_fn_import... no
+checking whether to enable mod_optional_fn_export... no
+checking whether to enable mod_dialup... no
+  adding "-I$(top_srcdir)/modules/test" to INCLUDES
+checking for target platform... unix
+checking for rlim_t... yes
+checking for sys/time.h... yes
+checking for sys/resource.h... yes
+checking for sys/sem.h... (cached) yes
+checking for sys/ipc.h... yes
+checking for setsid... yes
+checking for killpg... yes
+checking for bstring.h... no
+checking for unistd.h... (cached) yes
+checking for syslog... yes
+checking for sys/times.h... yes
+checking for times... yes
+  adding "-I$(top_srcdir)/server" to INCLUDES
+checking whether APR supports thread-safe pollsets... checking for kqueue... no
+checking for port_create... no
+checking for epoll_create... yes
+yes
+checking if event MPM supports this platform... yes
+checking if mpmt_os2 MPM supports this platform... no
+checking if prefork MPM supports this platform... yes
+checking if WinNT MPM supports this platform... no
+checking if worker MPM supports this platform... yes
+checking whether to enable mod_http2... checking dependencies
+checking for OpenSSL... (cached) yes
+  setting MOD_LDFLAGS to "-lssl -lcrypto  "
+  setting MOD_CFLAGS to ""
+  setting MOD_CPPFLAGS to "-DH2_OPENSSL"
+checking for nghttp2... checking for user-provided nghttp2 base directory... none
+checking for pkg-config along ...   setting MOD_CFLAGS to ""
+checking for nghttp2 version &gt;= 1.2.1... OK
+  adding "-lnghttp2" to MOD_LDFLAGS
+  setting LIBS to "-lnghttp2  "
+checking for nghttp2/nghttp2.h... yes
+checking for nghttp2_session_server_new2... yes
+checking for nghttp2_stream_get_weight... yes
+checking for nghttp2_session_change_stream_priority... yes
+  adding "-DH2_NG2_CHANGE_PRIO" to MOD_CPPFLAGS
+checking for nghttp2_session_callbacks_set_on_invalid_header_callback... yes
+  adding "-DH2_NG2_INVALID_HEADER_CB" to MOD_CPPFLAGS
+checking for nghttp2_session_get_stream_local_window_size... yes
+  adding "-DH2_NG2_LOCAL_WIN_SIZE" to MOD_CPPFLAGS
+checking for nghttp2_option_set_no_closed_streams... yes
+  adding "-DH2_NG2_NO_CLOSED_STREAMS" to MOD_CPPFLAGS
+checking for nghttp2_option_set_no_rfc9113_leading_and_trailing_ws_validation... yes
+  adding "-DH2_NG2_RFC9113_STRICTNESS" to MOD_CPPFLAGS
+yes
+  setting MOD_HTTP2_LDADD to "-export-symbols-regex http2_module"
+checking whether to enable mod_http2... shared (most)
+checking whether to enable mod_proxy_http2... no
+  adding "-I$(top_srcdir)/modules/md" to INCLUDES
+checking whether to enable mod_md... checking dependencies
+checking for OpenSSL... (cached) yes
+  setting MOD_LDFLAGS to "-lssl -lcrypto  "
+  setting MOD_CFLAGS to ""
+checking for jansson... checking for user-provided jansson base directory... none
+checking for pkg-config along ... FAILED
+no
+configure: WARNING: libjansson not found
+checking for curl... checking for user-provided curl base directory... none
+checking for pkg-config along ...   setting MOD_CFLAGS to ""
+checking for curl/curl.h... yes
+checking for curl version &gt;= 7.29... OK
+  adding "-lcurl" to MOD_LDFLAGS
+  setting LIBS to "-lcurl  "
+yes
+checking for arc4random_buf... yes
+  setting MOD_CPPFLAGS to "-DMD_HAVE_ARC4RANDOM"
+checking whether to enable mod_md... no (disabled)
+checking whether to enable mod_lbmethod_byrequests... checking dependencies
+checking whether to enable mod_lbmethod_byrequests... shared
+checking whether to enable mod_lbmethod_bytraffic... checking dependencies
+checking whether to enable mod_lbmethod_bytraffic... shared
+checking whether to enable mod_lbmethod_bybusyness... checking dependencies
+checking whether to enable mod_lbmethod_bybusyness... shared
+checking whether to enable mod_lbmethod_heartbeat... checking dependencies
+checking whether to enable mod_lbmethod_heartbeat... shared
+checking whether to enable mod_tls... checking dependencies
+checking for rustls... checking for user-provided rustls base directory... none
+checking for pkg-config along ... checking for rustls version &gt;= 0.9.2... FAILED
+no
+checking whether to enable mod_tls... no (disabled)
+checking which MPM to use by default... event
+  adding "$(MOD_MPM_EVENT_LDADD)" to AP_LIBS
+checking for pthread_kill... yes
+checking whether to enable mod_unixd... shared
+checking whether to enable mod_privileges... no
+checking whether to enable mod_systemd... no
+  adding "-I$(top_srcdir)/modules/arch/unix" to INCLUDES
+checking whether to enable mod_heartbeat... no
+checking whether to enable mod_heartmonitor... no
+checking whether to enable mod_dav... shared (most)
+  adding "-I$(top_srcdir)/modules/dav/main" to INCLUDES
+checking whether to enable mod_status... shared
+checking whether to enable mod_autoindex... shared
+checking whether to enable mod_asis... no
+checking whether to enable mod_info... shared (most)
+checking whether to enable mod_suexec... no
+checking whether to enable mod_cgid... checking dependencies
+checking whether to enable mod_cgid... shared (most)
+checking whether to enable mod_cgi... no
+  adding "-I$(top_srcdir)/modules/generators" to INCLUDES
+checking whether to enable mod_dav_fs... checking dependencies
+checking whether to enable mod_dav_fs... shared
+checking whether to enable mod_dav_lock... no
+checking for extra modules... none
+checking whether to enable mod_vhost_alias... shared (most)
+checking whether to enable mod_negotiation... shared (most)
+checking whether to enable mod_dir... shared
+checking whether to enable mod_imagemap... no
+checking whether to enable mod_actions... shared (most)
+checking whether to enable mod_speling... shared (most)
+checking whether to enable mod_userdir... shared (most)
+checking whether to enable mod_alias... shared
+checking whether to enable mod_rewrite... shared (most)
+  adding "-I$(top_builddir)/server" to INCLUDES
+  adding "-I$(top_srcdir)/modules/mappers" to INCLUDES
+configure: 
+configure: Restore user-defined environment settings...
+configure: 
+  restoring CPPFLAGS to ""
+  setting EXTRA_CPPFLAGS to " -DLINUX -D_REENTRANT -D_GNU_SOURCE"
+  restoring CFLAGS to "-O3 -march=native -mtune=native -fomit-frame-pointer -pipe"
+  setting EXTRA_CFLAGS to ""
+  restoring CXXFLAGS to "-O3 -march=native -mtune=native -fomit-frame-pointer -pipe"
+  setting EXTRA_CXXFLAGS to ""
+  restoring LDFLAGS to "-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs"
+  setting EXTRA_LDFLAGS to ""
+  restoring LIBS to ""
+  setting EXTRA_LIBS to ""
+  restoring INCLUDES to ""
+  setting EXTRA_INCLUDES to "-I. -I$(top_srcdir)/os/$(OS_DIR) -I$(top_srcdir)/include -I/usr/include/apr-1 -I$(top_srcdir)/modules/aaa -I$(top_srcdir)/modules/cache -I$(top_srcdir)/modules/core -I$(top_srcdir)/modules/database -I$(top_srcdir)/modules/filters -I$(top_srcdir)/modules/ldap -I$(top_srcdir)/modules/loggers -I$(top_srcdir)/modules/lua -I$(top_srcdir)/modules/proxy -I$(top_srcdir)/modules/http2 -I$(top_srcdir)/modules/session -I$(top_srcdir)/modules/ssl -I$(top_srcdir)/modules/test -I$(top_srcdir)/server -I$(top_srcdir)/modules/md -I$(top_srcdir)/modules/arch/unix -I$(top_srcdir)/modules/dav/main -I$(top_srcdir)/modules/generators -I$(top_builddir)/server -I$(top_srcdir)/modules/mappers"
+configure: 
+configure: Construct makefiles and header files...
+configure: 
+configure: creating config_vars.mk
+configure: creating ./config.status
+creating modules/aaa/Makefile
+creating modules/arch/win32/Makefile
+creating modules/cache/Makefile
+creating modules/core/Makefile
+creating modules/database/Makefile
+creating modules/debugging/Makefile
+creating modules/echo/Makefile
+creating modules/examples/Makefile
+creating modules/experimental/Makefile
+creating modules/filters/Makefile
+creating modules/http/Makefile
+creating modules/ldap/Makefile
+creating modules/loggers/Makefile
+creating modules/lua/Makefile
+creating modules/metadata/Makefile
+creating modules/proxy/Makefile
+creating modules/session/Makefile
+creating modules/slotmem/Makefile
+creating modules/ssl/Makefile
+creating modules/test/Makefile
+creating os/unix/Makefile
+creating modules/http2/Makefile
+creating modules/md/Makefile
+creating modules/proxy/balancers/Makefile
+creating modules/tls/Makefile
+creating server/mpm/Makefile
+creating server/mpm/event/Makefile
+creating modules/arch/unix/Makefile
+creating modules/cluster/Makefile
+creating modules/dav/main/Makefile
+creating modules/generators/Makefile
+creating modules/dav/fs/Makefile
+creating modules/dav/lock/Makefile
+creating modules/mappers/Makefile
+creating Makefile
+creating modules/Makefile
+creating srclib/Makefile
+creating os/Makefile
+creating server/Makefile
+creating support/Makefile
+creating test/Makefile
+creating test/Makefile
+creating test/clients/Makefile
+config.status: creating test/pyhttpd/config.ini
+config.status: creating docs/conf/httpd.conf
+config.status: creating docs/conf/extra/httpd-autoindex.conf
+config.status: creating docs/conf/extra/httpd-dav.conf
+config.status: creating docs/conf/extra/httpd-default.conf
+config.status: creating docs/conf/extra/httpd-info.conf
+config.status: creating docs/conf/extra/httpd-languages.conf
+config.status: creating docs/conf/extra/httpd-manual.conf
+config.status: creating docs/conf/extra/httpd-mpm.conf
+config.status: creating docs/conf/extra/httpd-multilang-errordoc.conf
+config.status: creating docs/conf/extra/httpd-ssl.conf
+config.status: creating docs/conf/extra/httpd-userdir.conf
+config.status: creating docs/conf/extra/httpd-vhosts.conf
+config.status: creating docs/conf/extra/proxy-html.conf
+config.status: creating include/ap_config_layout.h
+config.status: creating support/apxs
+config.status: creating support/apachectl
+config.status: creating support/dbmmanage
+config.status: creating support/envvars-std
+config.status: creating support/log_server_status
+config.status: creating support/logresolve.pl
+config.status: creating support/phf_abuse_log.cgi
+config.status: creating support/split-logfile
+config.status: creating build/rules.mk
+config.status: creating build/pkg/pkginfo
+config.status: creating build/config_vars.sh
+config.status: creating include/ap_config_auto.h
+config.status: executing libtool commands
+/bin/rm: cannot remove 'libtoolT': No such file or directory
+config.status: executing default commands
+configure: summary of build options:
+
+    Server Version: 2.4.59
+    Install prefix: /usr
+    C compiler:     x86_64-pc-linux-gnu-gcc
+    CFLAGS:         -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  
+    CPPFLAGS:        -DLINUX -D_REENTRANT -D_GNU_SOURCE  
+    LDFLAGS:        -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  
+    LIBS:             
+    C preprocessor: x86_64-pc-linux-gnu-gcc -E
+
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59 ...
+make -j2 -C support 
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c htpasswd.c &amp;&amp; touch htpasswd.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c htpasswd.c -o htpasswd.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c passwd_common.c &amp;&amp; touch passwd_common.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c passwd_common.c -o passwd_common.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c htdbm.c &amp;&amp; touch htdbm.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c htdbm.c -o htdbm.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c htdigest.c &amp;&amp; touch htdigest.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c htdigest.c -o htdigest.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c logresolve.c &amp;&amp; touch logresolve.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c logresolve.c -o logresolve.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE   \
+      -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c ab.c &amp;&amp; touch ab.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c ab.c -o ab.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c httxt2dbm.c &amp;&amp; touch httxt2dbm.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c httxt2dbm.c -o httxt2dbm.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c htcacheclean.c &amp;&amp; touch htcacheclean.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c htcacheclean.c -o htcacheclean.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c checkgid.c &amp;&amp; touch checkgid.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c checkgid.c -o checkgid.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c rotatelogs.c &amp;&amp; touch rotatelogs.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c rotatelogs.c -o rotatelogs.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=compile x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe    -DLINUX -D_REENTRANT -D_GNU_SOURCE     -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers  -prefer-non-pic -static -c fcgistarter.c &amp;&amp; touch fcgistarter.lo
+libtool: compile:  x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLINUX -D_REENTRANT -D_GNU_SOURCE -I. -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/os/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/include -I/usr/include/apr-1 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/aaa -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/cache -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/core -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/database -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/filters -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ldap -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/loggers -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/lua -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/proxy -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/http2 -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/session -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/ssl -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/test -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/md -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/arch/unix -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/dav/main -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/generators -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/server -I/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/modules/mappers -c fcgistarter.c -o fcgistarter.o
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o htdigest  htdigest.lo       -laprutil-1 -lgdbm -lapr-1
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o htdigest htdigest.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o htpasswd  htpasswd.lo passwd_common.lo       -laprutil-1 -lgdbm -lapr-1 -lcrypt
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o htpasswd htpasswd.o passwd_common.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1 -lcrypt
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o htdbm  htdbm.lo passwd_common.lo       -laprutil-1 -lgdbm -lapr-1 -lcrypt
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o htdbm htdbm.o passwd_common.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1 -lcrypt
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o logresolve  logresolve.lo       -laprutil-1 -lgdbm -lapr-1
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o logresolve logresolve.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  \
+        -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o ab  ab.lo       -laprutil-1 -lgdbm -lapr-1 -lm -lssl -lcrypto
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o ab ab.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1 -lm -lssl -lcrypto
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o htcacheclean  htcacheclean.lo       -laprutil-1 -lgdbm -lapr-1
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o htcacheclean htcacheclean.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o httxt2dbm  httxt2dbm.lo       -laprutil-1 -lgdbm -lapr-1
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o httxt2dbm httxt2dbm.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o rotatelogs  rotatelogs.lo       -laprutil-1 -lgdbm -lapr-1
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o rotatelogs rotatelogs.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o checkgid  checkgid.lo       -laprutil-1 -lgdbm -lapr-1
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o checkgid checkgid.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+/bin/sh /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/libtool --mode=link x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o fcgistarter  fcgistarter.lo       -laprutil-1 -lgdbm -lapr-1
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o fcgistarter fcgistarter.o  -Wl,--as-needed -laprutil-1 -lgdbm -lapr-1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: app-admin/apache-tools-2.4.59
+
+&gt;&gt;&gt; Install app-admin/apache-tools-2.4.59 into /var/tmp/portage/app-admin/apache-tools-2.4.59/image
+make -j2 -C support DESTDIR=/var/tmp/portage/app-admin/apache-tools-2.4.59/image install 
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+mkdir /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr
+mkdir /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/bin
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 htpasswd /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/bin/htpasswd
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 htdigest /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/bin/htdigest
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 htdbm /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/bin/htdbm
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 ab /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/bin/ab
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 logresolve /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/bin/logresolve
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 httxt2dbm /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/bin/httxt2dbm
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+make[1]: Entering directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+mkdir /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/sbin
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 htcacheclean /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/sbin/htcacheclean
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 rotatelogs /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/sbin/rotatelogs
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 checkgid /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/sbin/checkgid
+libtool: install: /var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/build/install.sh -c -m 755 fcgistarter /var/tmp/portage/app-admin/apache-tools-2.4.59/image/usr/sbin/fcgistarter
+make[1]: Leaving directory '/var/tmp/portage/app-admin/apache-tools-2.4.59/work/httpd-2.4.59/support'
+&gt;&gt;&gt; Completed installing app-admin/apache-tools-2.4.59 into /var/tmp/portage/app-admin/apache-tools-2.4.59/image
+
+ <span class="ansi32">*</span> Final size of build directory: 62280 KiB (60.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    788 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/htpasswd
+   /usr/bin/htdigest
+   /usr/bin/htdbm
+   /usr/bin/ab
+   /usr/bin/logresolve
+   /usr/bin/httxt2dbm
+   /usr/sbin/htcacheclean
+   /usr/sbin/rotatelogs
+   /usr/sbin/checkgid
+   /usr/sbin/fcgistarter
+
+</pre>
+</body>
+
+</html>
