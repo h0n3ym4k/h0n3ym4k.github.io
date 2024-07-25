@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-util/directx-headers-1.613.1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking directx-headers-1.613.1.tar.gz to /var/tmp/portage/dev-util/directx-headers-1.613.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-util/directx-headers-1.613.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/dev-util/directx-headers-1.613.1/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dbuild-test=false /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1 /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1-abi_x86_64.amd64
+The Meson build system
+Version: 1.4.1
+Source dir: /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1
+Build dir: /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1-abi_x86_64.amd64
+Build type: native build
+Project name: DirectX-Headers
+Project version: 1.613.1
+C++ compiler for the host machine: x86_64-pc-linux-gnu-g++ (gcc 13.3.1 "x86_64-pc-linux-gnu-g++ (Gentoo 13.3.1_p20240614 p17) 13.3.1 20240614")
+C++ linker for the host machine: x86_64-pc-linux-gnu-g++ ld.bfd 2.42
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Library d3d12 found: NO
+Library dxcore found: NO
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.2.0
+Build targets in project: 2
+
+DirectX-Headers 1.613.1
+
+  User defined options
+    Native files         : /var/tmp/portage/dev-util/directx-headers-1.613.1/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    build-test           : false
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -j2 -l2
+[1/4] x86_64-pc-linux-gnu-g++ -IlibDirectX-Guids.a.p -I. -I../DirectX-Headers-1.613.1 -fdiagnostics-color=always -D_GLIBCXX_ASSERTIONS=1 -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++14 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -isystem../DirectX-Headers-1.613.1/include/wsl/stubs -isystem../DirectX-Headers-1.613.1/include -MD -MQ libDirectX-Guids.a.p/src_dxguids.cpp.o -MF libDirectX-Guids.a.p/src_dxguids.cpp.o.d -o libDirectX-Guids.a.p/src_dxguids.cpp.o -c ../DirectX-Headers-1.613.1/src/dxguids.cpp
+[2/4] rm -f libDirectX-Guids.a &amp;&amp; x86_64-pc-linux-gnu-ar csrD libDirectX-Guids.a libDirectX-Guids.a.p/src_dxguids.cpp.o
+[3/4] x86_64-pc-linux-gnu-g++ -Ilibd3dx12-format-properties.a.p -I. -I../DirectX-Headers-1.613.1 -I../DirectX-Headers-1.613.1/include/directx -fdiagnostics-color=always -D_GLIBCXX_ASSERTIONS=1 -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++14 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -isystem../DirectX-Headers-1.613.1/include/wsl/stubs -isystem../DirectX-Headers-1.613.1/include -MD -MQ libd3dx12-format-properties.a.p/src_d3dx12_property_format_table.cpp.o -MF libd3dx12-format-properties.a.p/src_d3dx12_property_format_table.cpp.o.d -o libd3dx12-format-properties.a.p/src_d3dx12_property_format_table.cpp.o -c ../DirectX-Headers-1.613.1/src/d3dx12_property_format_table.cpp
+[4/4] rm -f libd3dx12-format-properties.a &amp;&amp; x86_64-pc-linux-gnu-ar csrD libd3dx12-format-properties.a libd3dx12-format-properties.a.p/src_d3dx12_property_format_table.cpp.o
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: dev-util/directx-headers-1.613.1
+
+&gt;&gt;&gt; Install dev-util/directx-headers-1.613.1 into /var/tmp/portage/dev-util/directx-headers-1.613.1/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/dev-util/directx-headers-1.613.1/image --no-rebuild
+Installing subdir /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/wrladapter.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/winadapter.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/unknwnbase.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/ocidl.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/oaidl.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/rpcndr.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/unknwn.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/basetsd.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/winapifamily.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/rpc.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/wrl/client.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs/wrl
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/wsl/stubs/wrl/implements.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/wsl/stubs/wrl
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/dxgiformat.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_barriers.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12compatibility.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/dxgiformat.idl to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_resource_helpers.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_pipeline_state_stream.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12video.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/D3D12TokenizedProgramFormat.hpp to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/dxcore.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_check_feature_support.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_property_format_table.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12compatibility.idl to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_render_pass.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_root_signature.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/dxcore_interface.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12sdklayers.idl to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_default.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_core.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dcommon.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12.idl to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dcommon.idl to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/dxgicommon.idl to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12video.idl to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/dxgicommon.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12sdklayers.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3dx12_state_object.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/directx/d3d12shader.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/directx
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1/include/dxguids/dxguids.h to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/include/dxguids
+Installing libd3dx12-format-properties.a to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/lib64
+Installing libDirectX-Guids.a to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/lib64
+Installing /var/tmp/portage/dev-util/directx-headers-1.613.1/work/DirectX-Headers-1.613.1-abi_x86_64.amd64/meson-private/DirectX-Headers.pc to /var/tmp/portage/dev-util/directx-headers-1.613.1/image/usr/lib64/pkgconfig
+&gt;&gt;&gt; Completed installing dev-util/directx-headers-1.613.1 into /var/tmp/portage/dev-util/directx-headers-1.613.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 4260 KiB (4.1 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  3544 KiB (3.4 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libd3dx12-format-properties.a
+   /usr/lib64/libDirectX-Guids.a
+
+</pre>
+</body>
+
+</html>
