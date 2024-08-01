@@ -7,6 +7,44 @@ Email: 98036119lmak@gmail.com
 Address: Wong Tai Sin
 
 
+# AI summarized - My CV following
+Here’s a summary of the strengths of the individual based on the provided information:
+
+Key Strengths
+
+>Technical Proficiency
+
+Hands-On Experience: Extensive practical knowledge in IT, including server and network setup, troubleshooting, and administration.\
+Diverse Skill Set: Proficient in various operating systems (Windows, Linux), networking, and scripting for automation.\
+Certifications: Holds multiple certifications, including EC-Council Certified Computer Hacking Forensic Investigator, RedHat Certified Engineer, and ISC2 Systems Security Certified Practitioner.
+
+>Problem-Solving Abilities
+
+Logical Approach: Utilizes logical analysis over rote memorization, enhancing problem-solving efficiency.\
+Scripting Skills: Capable of automating routine tasks through scripting, improving accuracy and productivity.
+
+>Leadership and Communication
+
+Leadership Experience: Served as chairman of a large computer society and led teams in various projects, demonstrating strong leadership skills.\
+Effective Communicator: Experience in corporate-level customer support and technical writing, showcasing the ability to convey complex information clearly.
+
+>Community Involvement
+
+Volunteer Work: Actively engaged in community service and charity work, reflecting a commitment to social responsibility.\
+Linux Advocacy: Involved in local Linux user groups, contributing to the open-source community and providing support to SMEs.
+
+>Continuous Learning and Adaptability
+
+Progressive Learner: Passionate about staying updated with evolving IT technologies, indicating a commitment to lifelong learning.\
+Hobbyist in Electronics: Engages in electronics and circuit work, showcasing a well-rounded technical interest beyond computing.
+
+>Achievements and Recognition
+
+Competitions: Recognized as a finalist and runner-up in prestigious IT competitions, highlighting competitive skills and expertise.\
+Technical Writing: Published an article in a local magazine, demonstrating writing proficiency and subject matter expertise.
+
+These strengths highlight a well-rounded individual with a solid technical foundation, leadership capabilities, and a strong commitment to community and continuous improvement.
+
 
 # Self Introduction
 >All of my skills mentioned are hands-on experience. And yes, I am technical. At least I am confident in my own technical knowledge as an asset to me.
