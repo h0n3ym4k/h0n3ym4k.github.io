@@ -69,7 +69,7 @@ cp -v /tmp/01summary.log /mnt/Downloads/portage-build-log/01summary.log
 #step 5 - genkernel.log
 cat /var/log/genkernel.log | ansi2html > /mnt/Downloads/portage-build-log/genkernel.log.html
 
-#step 6 - emerge --info
+#step 6 - emerge --info # is qatom really faster?doubt
 cd /mnt/Downloads/portage-build-log
 
 for p in $(equery list -F'$cp' \*|uniq)
