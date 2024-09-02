@@ -1,3 +1,5 @@
+[![ai prompts](https://img.youtube.com/vi/QDMBhdejmzg/0.jpg)](https://www.youtube.com/watch?v=QDMBhdejmzg)
+
 ![my fav bike](https://www.kawasaki.eu/content/dam/products/pim/gallery/nin/Resource_299268_24MY_Ninja_ZX-4RR_40th_Anniversary_Edition_GN2_STY.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.png)
 
 Name: Lancelot MAK
