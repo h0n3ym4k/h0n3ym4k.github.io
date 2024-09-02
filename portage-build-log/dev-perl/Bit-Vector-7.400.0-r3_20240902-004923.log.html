@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-perl/Bit-Vector-7.400.0-r3:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: perl@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking Bit-Vector-7.4.tar.gz to /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/work/Bit-Vector-7.4 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/work/Bit-Vector-7.4 ...
+ <span class="ansi32">*</span> Using ExtUtils::MakeMaker
+ <span class="ansi32">*</span> perl Makefile.PL AR=x86_64-pc-linux-gnu-ar CC=x86_64-pc-linux-gnu-gcc CPP=x86_64-pc-linux-gnu-gcc -E LD=x86_64-pc-linux-gnu-gcc NM=x86_64-pc-linux-gnu-nm RANLIB=x86_64-pc-linux-gnu-ranlib OPTIMIZE=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs PREFIX=/usr INSTALLDIRS=vendor INSTALLMAN3DIR=none
+Checking if your kit is complete...
+Looks good
+'CPP' is not a known MakeMaker parameter name.
+'NM' is not a known MakeMaker parameter name.
+Generating a Unix-style Makefile
+Writing Makefile for Bit::Vector
+Writing MYMETA.yml and MYMETA.json
+Writing patchlevel.h for /usr/bin/perl (5.040000)
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/work/Bit-Vector-7.4 ...
+make -j2 'OTHERLDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' 'OPTIMIZE=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' 
+Running Mkbootstrap for Vector ()
+chmod 644 "Vector.bs"
+cp lib/Bit/Vector/Overload.pod blib/lib/Bit/Vector/Overload.pod
+cp lib/Bit/Vector/Overload.pm blib/lib/Bit/Vector/Overload.pm
+cp Vector.pod blib/lib/Bit/Vector.pod
+cp Vector.pm blib/lib/Bit/Vector.pm
+cp lib/Bit/Vector/String.pm blib/lib/Bit/Vector/String.pm
+cp lib/Bit/Vector/String.pod blib/lib/Bit/Vector/String.pod
+"/usr/bin/perl" "/usr/lib64/perl5/5.40/ExtUtils/xsubpp"  -typemap '/usr/lib64/perl5/5.40/ExtUtils/typemap' -typemap '/var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/work/Bit-Vector-7.4/typemap'  Vector.xs &gt; Vector.xsc
+mv Vector.xsc Vector.c
+x86_64-pc-linux-gnu-gcc -c   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fno-strict-aliasing -DNO_PERL_RAND_SEED -fwrapv -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe   -DVERSION=\"7.4\" -DXS_VERSION=\"7.4\" -fPIC "-I/usr/lib64/perl5/5.40/x86_64-linux/CORE"   BitVector.c
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Vector.bs blib/arch/auto/Bit/Vector/Vector.bs 644
+x86_64-pc-linux-gnu-gcc -c   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fno-strict-aliasing -DNO_PERL_RAND_SEED -fwrapv -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe   -DVERSION=\"7.4\" -DXS_VERSION=\"7.4\" -fPIC "-I/usr/lib64/perl5/5.40/x86_64-linux/CORE"   Vector.c
+rm -f blib/arch/auto/Bit/Vector/Vector.so
+x86_64-pc-linux-gnu-gcc  -shared -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fno-strict-aliasing -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  BitVector.o Vector.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o blib/arch/auto/Bit/Vector/Vector.so  \
+      \
+  
+chmod 755 blib/arch/auto/Bit/Vector/Vector.so
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-perl/Bit-Vector-7.400.0-r3
+
+&gt;&gt;&gt; Install dev-perl/Bit-Vector-7.400.0-r3 into /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image
+make -j2 DESTDIR=/var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image pure_install 
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Vector.bs blib/arch/auto/Bit/Vector/Vector.bs 644
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/auto/Bit/Vector/Vector.so
+Installing /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/Bit/Vector.pod
+Installing /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/Bit/Vector.pm
+Installing /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/Bit/Vector/String.pm
+Installing /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/Bit/Vector/Overload.pod
+Installing /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/Bit/Vector/String.pod
+Installing /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/Bit/Vector/Overload.pm
+ <span class="ansi32">*</span> Fixing installed file permissions
+ <span class="ansi32">*</span> Fixing packlist file //usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/auto/Bit/Vector/.packlist
+&gt;&gt;&gt; Completed installing dev-perl/Bit-Vector-7.400.0-r3 into /var/tmp/portage/dev-perl/Bit-Vector-7.400.0-r3/image
+
+ <span class="ansi32">*</span> Final size of build directory: 1648 KiB (1.6 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   444 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/auto/Bit/Vector/Vector.so
+
+</pre>
+</body>
+
+</html>
