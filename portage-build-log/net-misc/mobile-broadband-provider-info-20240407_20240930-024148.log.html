@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-misc/mobile-broadband-provider-info-20240407:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gnome@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking mobile-broadband-provider-info-20240407.tar.xz to /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407 /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.5.1
+Source dir: <span class="ansi1">/var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407</span>
+Build dir: <span class="ansi1">/var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">mobile-broadband-provider-info</span>
+Project version: <span class="ansi1">20240407</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 13.3.1 "x86_64-pc-linux-gnu-gcc (Gentoo 13.3.1_p20240614 p17) 13.3.1 20240614")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.42
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.2.0</span>
+Program <span class="ansi1">xsltproc</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xsltproc)
+Program <span class="ansi1">grep</span> found: <span class="ansi1 ansi32">YES</span> (/bin/grep)
+Program <span class="ansi1">xmllint</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xmllint)
+Build targets in project: <span class="ansi1">1</span>
+
+mobile-broadband-provider-info <span class="ansi36">20240407</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+
+Found ninja-1.11.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407 ...
+ninja -v -j2 -l2
+[1/1] /usr/bin/xsltproc --output apns-conf.xml ../mobile-broadband-provider-info-20240407/apns-conf.xsl /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407/serviceproviders.xml
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: net-misc/mobile-broadband-provider-info-20240407
+
+&gt;&gt;&gt; Install net-misc/mobile-broadband-provider-info-20240407 into /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/image
+meson install --destdir /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/image --no-rebuild
+Installing apns-conf.xml to /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/image/usr/share/mobile-broadband-provider-info
+Installing /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407-build/meson-private/mobile-broadband-provider-info.pc to /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/image/usr/share/pkgconfig
+Installing /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407/serviceproviders.xml to /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/image/usr/share/mobile-broadband-provider-info
+Installing /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/work/mobile-broadband-provider-info-20240407/serviceproviders.2.dtd to /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/image/usr/share/mobile-broadband-provider-info
+&gt;&gt;&gt; Completed installing net-misc/mobile-broadband-provider-info-20240407 into /var/tmp/portage/net-misc/mobile-broadband-provider-info-20240407/image
+
+ <span class="ansi32">*</span> Final size of build directory: 784 KiB
+ <span class="ansi32">*</span> Final size of installed tree:  540 KiB
+
+
+</pre>
+</body>
+
+</html>
