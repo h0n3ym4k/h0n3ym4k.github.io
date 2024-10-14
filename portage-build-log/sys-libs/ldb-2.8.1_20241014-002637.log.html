@@ -1,0 +1,1256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-libs/ldb-2.8.1:0/2.8.1
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: samba@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux lmdb python_single_target_python3_12
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Using python3.12 to build
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking ldb-2.8.1.tar.gz to /var/tmp/portage/sys-libs/ldb-2.8.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-libs/ldb-2.8.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1
+ <span class="ansi32">*</span> abi_x86_64.amd64: copying to /var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+'PYTHONHASHSEED=1' 'CCFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' 'LINKFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' 'PKGCONFIG=x86_64-pc-linux-gnu-pkg-config' '/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1/buildtools/bin/waf' '--jobs=1' '--prefix=/usr' '--docdir=/usr/share/doc/ldb-2.8.1' '--htmldir=/usr/share/doc/ldb-2.8.1/html' '--libdir=/usr/lib64' '--mandir=/usr/share/man' '--disable-ldap' '--disable-rpath' '--disable-rpath-install' '--with-modulesdir=/usr/lib64/samba' '--bundled-libraries=cmocka,NONE' '--builtin-libraries=NONE' '--disable-python' 'configure'
+Setting top to                           : /var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64 
+Setting out to                           : /var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin 
+Checking for 'gcc' (C compiler)          : x86_64-pc-linux-gnu-gcc 
+Checking for program 'git'               : /usr/bin/git 
+Checking for c flags '-MMD'              : yes 
+Checking for program 'gdb'               : not found 
+Checking for header sys/utsname.h        : yes 
+Checking uname sysname type              : Linux 
+Checking uname machine type              : x86_64 
+Checking uname release type              : 6.6.52-gentoo-x86_64 
+Checking uname version type              : #2 SMP PREEMPT_DYNAMIC Mon Sep 30 14:36:02 HKT 2024 
+Checking for header stdio.h              : yes 
+Checking simple C program                : ok 
+Checking compiler accepts ['-Werror']    : yes 
+Checking linker accepts ['-Wl,-rpath,.'] : yes 
+Checking for rpath library support       : yes 
+Checking for -Wl,--version-script support : yes 
+Checking compiler accepts ['-fvisibility=hidden'] : yes 
+Checking for HAVE_VISIBILITY_ATTR                 : ok 
+Checking for library constructor support          : ok 
+Checking for library destructor support           : ok 
+Checking for __attribute__                        : ok 
+Checking compiler accepts ['-fPIC']               : yes 
+Checking for inline                               : inline 
+Checking for program 'pkg-config'                 : x86_64-pc-linux-gnu-pkg-config 
+Checking for pkg-config version &gt;= '0.0.0'        : yes 
+Checking compiler accepts ['-D__STDC_WANT_LIB_EXT1__=1'] : yes 
+Checking compiler accepts ['']                           : yes 
+Checking for header sys/types.h                          : yes 
+Checking for header sys/stat.h                           : yes 
+Checking for header stdlib.h                             : yes 
+Checking for header stddef.h                             : yes 
+Checking for header memory.h                             : yes 
+Checking for header string.h                             : yes 
+Checking for header strings.h                            : yes 
+Checking for header inttypes.h                           : yes 
+Checking for header stdint.h                             : yes 
+Checking for header unistd.h                             : yes 
+Checking for header minix/config.h                       : no 
+Checking for header ctype.h                              : yes 
+Checking for header standards.h                          : no 
+Checking for header stdbool.h                            : yes 
+Checking for header stdarg.h                             : yes 
+Checking for header vararg.h                             : no 
+Checking for header limits.h                             : yes 
+Checking for header assert.h                             : yes 
+Checking getconf LFS_CFLAGS                              : not found 
+Checking getconf large file support flags work           : ok 
+Checking for large file support without additional flags : ok 
+Checking for header sys/time.h                           : yes 
+Checking for header time.h                               : yes 
+Checking for header endian.h                             : yes 
+Checking for header sys/endian.h                         : no 
+Checking for HAVE_LITTLE_ENDIAN                          : ok 
+Checking for HAVE_BIG_ENDIAN                             : not found 
+Checking for header signal.h                             : yes 
+Checking if signal handlers return int                   : not found 
+Checking for variable __FUNCTION__                       : ok 
+Checking for va_copy                                     : ok 
+Checking for header linux/types.h                        : yes 
+Checking for header crypt.h                              : yes 
+Checking for header locale.h                             : yes 
+Checking for header acl/libacl.h                         : yes 
+Checking for header compat.h                             : no 
+Checking for header attr/xattr.h                         : yes 
+Checking for header dustat.h                             : no 
+Checking for header fcntl.h                              : yes 
+Checking for header fnmatch.h                            : yes 
+Checking for header glob.h                               : yes 
+Checking for header history.h                            : no 
+Checking for header krb5.h                               : yes 
+Checking for header langinfo.h                           : yes 
+Checking for header ndir.h                               : no 
+Checking for header pwd.h                                : yes 
+Checking for header shadow.h                             : yes 
+Checking for header sys/acl.h                            : yes 
+Checking for header sys/attributes.h                     : no 
+Checking for header attr/attributes.h                    : yes 
+Checking for header sys/capability.h                     : yes 
+Checking for header sys/dir.h                            : yes 
+Checking for header sys/epoll.h                          : yes 
+Checking for header sys/fcntl.h                          : yes 
+Checking for header sys/filio.h                          : no 
+Checking for header sys/filsys.h                         : no 
+Checking for header sys/fs/s5param.h                     : no 
+Checking for header sys/id.h                             : no 
+Checking for header sys/ioctl.h                          : yes 
+Checking for header sys/ipc.h                            : yes 
+Checking for header sys/mman.h                           : yes 
+Checking for header sys/mode.h                           : no 
+Checking for header sys/ndir.h                           : no 
+Checking for header sys/priv.h                           : no 
+Checking for header sys/resource.h                       : yes 
+Checking for header sys/security.h                       : no 
+Checking for header sys/shm.h                            : yes 
+Checking for header sys/statfs.h                         : yes 
+Checking for header sys/statvfs.h                        : yes 
+Checking for header sys/termio.h                         : no 
+Checking for header sys/vfs.h                            : yes 
+Checking for header sys/xattr.h                          : yes 
+Checking for header termio.h                             : yes 
+Checking for header termios.h                            : yes 
+Checking for header sys/file.h                           : yes 
+Checking for header sys/ucontext.h                       : yes 
+Checking for header sys/wait.h                           : yes 
+Checking for declaration of malloc                       : ok 
+Checking for header grp.h                                : yes 
+Checking for header sys/select.h                         : yes 
+Checking for header setjmp.h                             : yes 
+Checking for header utime.h                              : yes 
+Checking for header sys/syslog.h                         : yes 
+Checking for header syslog.h                             : yes 
+Checking for header sys/mount.h                          : yes 
+Checking for header mntent.h                             : yes 
+Checking for header stropts.h                            : no 
+Checking for header unix.h                               : no 
+Checking for header sys/param.h                          : yes 
+Checking for header sys/socket.h                         : yes 
+Checking for header netinet/in.h                         : yes 
+Checking for header netdb.h                              : yes 
+Checking for header arpa/inet.h                          : yes 
+Checking for header netinet/in_systm.h                   : yes 
+Checking for header netinet/ip.h                         : yes 
+Checking for header netinet/tcp.h                        : yes 
+Checking for header netinet/in_ip.h                      : no 
+Checking for header sys/sockio.h                         : no 
+Checking for header sys/un.h                             : yes 
+Checking for header sys/uio.h                            : yes 
+Checking for header ifaddrs.h                            : yes 
+Checking for header direct.h                             : no 
+Checking for header dirent.h                             : yes 
+Checking for header windows.h                            : no 
+Checking for header winsock2.h                           : no 
+Checking for header ws2tcpip.h                           : no 
+Checking for header errno.h                              : yes 
+Checking for header getopt.h                             : yes 
+Checking for header iconv.h                              : yes 
+Checking for header nss.h                                : yes 
+Checking for header sasl/sasl.h                          : yes 
+Checking for header linux/openat2.h                      : yes 
+Checking for inotify_init                                : ok 
+Checking for header security/pam_appl.h                  : yes 
+Checking for header zlib.h                               : yes 
+Checking for header asm/unistd.h                         : yes 
+Checking for header sys/unistd.h                         : yes 
+Checking for header alloca.h                             : yes 
+Checking for header float.h                              : yes 
+Checking for header rpc/rpc.h                            : no 
+Checking for header rpc/nettype.h                        : no 
+Checking for tirpc rpc headers in default system path    : not found 
+Checking for libtirpc headers                            : yes 
+Checking for header rpc/rpc.h                            : yes 
+Checking for header rpc/nettype.h                        : yes 
+Checking for header sys/sysctl.h                         : not found 
+Checking for header sys/fileio.h                         : no 
+Checking for header sys/filesys.h                        : no 
+Checking for header sys/dustat.h                         : no 
+Checking for header sys/sysmacros.h                      : yes 
+Checking for header xfs/libxfs.h                         : no 
+Checking for header netgroup.h                           : no 
+Checking for header valgrind.h                           : no 
+Checking for header valgrind/valgrind.h                  : yes 
+Checking for header valgrind/memcheck.h                  : yes 
+Checking for header valgrind/helgrind.h                  : yes 
+Checking for header valgrind/callgrind.h                 : yes 
+Checking for header nss_common.h                         : no 
+Checking for header nsswitch.h                           : no 
+Checking for header ns_api.h                             : no 
+Checking for header sys/extattr.h                        : no 
+Checking for header sys/ea.h                             : no 
+Checking for header sys/proplist.h                       : no 
+Checking for header sys/cdefs.h                          : yes 
+Checking for header utmp.h                               : yes 
+Checking for header utmpx.h                              : yes 
+Checking for header lastlog.h                            : yes 
+Checking for header syscall.h                            : yes 
+Checking for header sys/syscall.h                        : yes 
+Checking for header sys/atomic.h                         : no 
+Checking for header stdatomic.h                          : yes 
+Checking for header libgen.h                             : yes 
+Checking compiler accepts -Wno-format-truncation         : yes 
+Checking compiler accepts -Wno-unused-function           : yes 
+Checking compiler accepts -Wno-strict-overflow           : yes 
+Checking compiler accepts -Wno-unused-but-set-variable   : yes 
+Checking compiler accepts -Wuse-after-free=1             : yes 
+Checking for header sys/prctl.h                          : yes 
+Checking for prctl syscall                               : ok 
+Checking for O_DIRECT flag to open(2)                    : ok 
+Checking for long long                                   : ok 
+Checking for intptr_t                                    : ok 
+Checking for uintptr_t                                   : ok 
+Checking for ptrdiff_t                                   : ok 
+Checking for comparison_fn_t                             : ok 
+Checking for bool                                        : ok 
+Checking for int8_t                                      : ok 
+Checking for uint8_t                                     : ok 
+Checking for int16_t                                     : ok 
+Checking for uint16_t                                    : ok 
+Checking for int32_t                                     : ok 
+Checking for uint32_t                                    : ok 
+Checking for int64_t                                     : ok 
+Checking for uint64_t                                    : ok 
+Checking for size_t                                      : ok 
+Checking for ssize_t                                     : ok 
+Checking for ino_t                                       : ok 
+Checking for loff_t                                      : ok 
+Checking for offset_t                                    : not found 
+Checking for volatile int                                : ok 
+Checking for uint_t                                      : not found 
+Checking for blksize_t                                   : ok 
+Checking for blkcnt_t                                    : ok 
+Checking if size of bool == 1                            : ok 
+Checking if size of char == 1                            : ok 
+Checking if size of int == 1                             : not found 
+Checking if size of int == 2                             : not found 
+Checking if size of int == 4                             : ok 
+Checking if size of long long == 1                       : not found 
+Checking if size of long long == 2                       : not found 
+Checking if size of long long == 4                       : not found 
+Checking if size of long long == 8                       : ok 
+Checking if size of long == 1                            : not found 
+Checking if size of long == 2                            : not found 
+Checking if size of long == 4                            : not found 
+Checking if size of long == 8                            : ok 
+Checking if size of short == 1                           : not found 
+Checking if size of short == 2                           : ok 
+Checking if size of size_t == 1                          : not found 
+Checking if size of size_t == 2                          : not found 
+Checking if size of size_t == 4                          : not found 
+Checking if size of size_t == 8                          : ok 
+Checking if size of ssize_t == 1                         : not found 
+Checking if size of ssize_t == 2                         : not found 
+Checking if size of ssize_t == 4                         : not found 
+Checking if size of ssize_t == 8                         : ok 
+Checking if size of int8_t == 1                          : ok 
+Checking if size of uint8_t == 1                         : ok 
+Checking if size of int16_t == 1                         : not found 
+Checking if size of int16_t == 2                         : ok 
+Checking if size of uint16_t == 1                        : not found 
+Checking if size of uint16_t == 2                        : ok 
+Checking if size of int32_t == 1                         : not found 
+Checking if size of int32_t == 2                         : not found 
+Checking if size of int32_t == 4                         : ok 
+Checking if size of uint32_t == 1                        : not found 
+Checking if size of uint32_t == 2                        : not found 
+Checking if size of uint32_t == 4                        : ok 
+Checking if size of int64_t == 1                         : not found 
+Checking if size of int64_t == 2                         : not found 
+Checking if size of int64_t == 4                         : not found 
+Checking if size of int64_t == 8                         : ok 
+Checking if size of uint64_t == 1                        : not found 
+Checking if size of uint64_t == 2                        : not found 
+Checking if size of uint64_t == 4                        : not found 
+Checking if size of uint64_t == 8                        : ok 
+Checking if size of void* == 1                           : not found 
+Checking if size of void* == 2                           : not found 
+Checking if size of void* == 4                           : not found 
+Checking if size of void* == 8                           : ok 
+Checking if size of off_t == 1                           : not found 
+Checking if size of off_t == 2                           : not found 
+Checking if size of off_t == 4                           : not found 
+Checking if size of off_t == 8                           : ok 
+Checking if size of dev_t == 1                           : not found 
+Checking if size of dev_t == 2                           : not found 
+Checking if size of dev_t == 4                           : not found 
+Checking if size of dev_t == 8                           : ok 
+Checking if size of ino_t == 1                           : not found 
+Checking if size of ino_t == 2                           : not found 
+Checking if size of ino_t == 4                           : not found 
+Checking if size of ino_t == 8                           : ok 
+Checking if size of time_t == 1                          : not found 
+Checking if size of time_t == 2                          : not found 
+Checking if size of time_t == 4                          : not found 
+Checking if size of time_t == 8                          : ok 
+Checking for socklen_t                                   : ok 
+Checking for struct ifaddrs                              : ok 
+Checking for struct addrinfo                             : ok 
+Checking for struct sockaddr                             : ok 
+Checking for HAVE_STRUCT_SOCKADDR_IN6                    : ok 
+Checking for struct sockaddr_storage                     : ok 
+Checking for sa_family_t                                 : ok 
+Checking for sig_atomic_t                                : ok 
+Checking for sigsetmask                                  : ok 
+Checking for siggetmask                                  : ok 
+Checking for sigprocmask                                 : ok 
+Checking for sigblock                                    : ok 
+Checking for sigaction                                   : ok 
+Checking for sigset                                      : ok 
+Checking for inet_ntoa                                   : ok 
+Checking for inet_aton                                   : ok 
+Checking for inet_ntop                                   : ok 
+Checking for inet_pton                                   : ok 
+Checking for connect                                     : ok 
+Checking for gethostbyname                               : ok 
+Checking for getaddrinfo                                 : ok 
+Checking for getnameinfo                                 : ok 
+Checking for freeaddrinfo                                : ok 
+Checking for gai_strerror                                : ok 
+Checking for socketpair                                  : ok 
+Checking for memset_s                                    : not found 
+Checking for memset_explicit                             : not found 
+Checking for volatile memory protection                  : ok 
+Checking for variable IPV6_V6ONLY                        : ok 
+Checking for header net/if.h                             : yes 
+Checking for HAVE_IPV6                                   : ok 
+Checking whether we have ucontext_t                      : ok 
+Checking for __sync_fetch_and_add compiler builtin       : ok 
+Checking for __sync_add_and_fetch compiler builtin       : ok 
+Checking for atomic_add_32 compiler builtin              : not found 
+Checking for __atomic_add_fetch compiler builtin         : ok 
+Checking for __atomic_load compiler builtin              : ok 
+Checking for atomic_thread_fence(memory_order_seq_cst) in stdatomic.h : ok 
+Checking for fallthrough attribute                                    : ok 
+Checking for strdup                                                   : ok 
+Checking for memmem                                                   : ok 
+Checking for printf                                                   : ok 
+Checking for memset                                                   : ok 
+Checking for memcpy                                                   : ok 
+Checking for memmove                                                  : ok 
+Checking for strcpy                                                   : ok 
+Checking for strncpy                                                  : ok 
+Checking for bzero                                                    : ok 
+Checking for shl_load                                                 : not found 
+Checking for shl_unload                                               : not found 
+Checking for shl_findsym                                              : not found 
+Checking for pipe                                                     : ok 
+Checking for strftime                                                 : ok 
+Checking for srandom                                                  : ok 
+Checking for random                                                   : ok 
+Checking for srand                                                    : ok 
+Checking for rand                                                     : ok 
+Checking for usleep                                                   : ok 
+Checking for setbuffer                                                : ok 
+Checking for lstat                                                    : ok 
+Checking for getpgrp                                                  : ok 
+Checking for utime                                                    : ok 
+Checking for utimes                                                   : ok 
+Checking for setuid                                                   : ok 
+Checking for seteuid                                                  : ok 
+Checking for setreuid                                                 : ok 
+Checking for setresuid                                                : ok 
+Checking for setgid                                                   : ok 
+Checking for setegid                                                  : ok 
+Checking for setregid                                                 : ok 
+Checking for setresgid                                                : ok 
+Checking for chroot                                                   : ok 
+Checking for strerror                                                 : ok 
+Checking for vsyslog                                                  : ok 
+Checking for setlinebuf                                               : ok 
+Checking for mktime                                                   : ok 
+Checking for ftruncate                                                : ok 
+Checking for chsize                                                   : not found 
+Checking for rename                                                   : ok 
+Checking for waitpid                                                  : ok 
+Checking for wait4                                                    : ok 
+Checking for initgroups                                               : ok 
+Checking for pread                                                    : ok 
+Checking for pwrite                                                   : ok 
+Checking for strndup                                                  : ok 
+Checking for strcasestr                                               : ok 
+Checking for strsep                                                   : ok 
+Checking for strtok_r                                                 : ok 
+Checking for mkdtemp                                                  : ok 
+Checking for dup2                                                     : ok 
+Checking for dprintf                                                  : ok 
+Checking for vdprintf                                                 : ok 
+Checking for isatty                                                   : ok 
+Checking for chown                                                    : ok 
+Checking for lchown                                                   : ok 
+Checking for link                                                     : ok 
+Checking for readlink                                                 : ok 
+Checking for symlink                                                  : ok 
+Checking for realpath                                                 : ok 
+Checking for snprintf                                                 : ok 
+Checking for vsnprintf                                                : ok 
+Checking for asprintf                                                 : ok 
+Checking for vasprintf                                                : ok 
+Checking for setenv                                                   : ok 
+Checking for unsetenv                                                 : ok 
+Checking for strnlen                                                  : ok 
+Checking for strtoull                                                 : ok 
+Checking for __strtoull                                               : not found 
+Checking for strtouq                                                  : ok 
+Checking for strtoll                                                  : ok 
+Checking for __strtoll                                                : not found 
+Checking for strtoq                                                   : ok 
+Checking for memalign                                                 : ok 
+Checking for posix_memalign                                           : ok 
+Checking for fmemopen                                                 : ok 
+Checking for header malloc.h                                          : yes 
+Checking for declaration of memalign                                  : ok 
+Checking for posix_fallocate-capable libc                             : ok 
+Checking for posix_fallocate                                          : ok 
+Checking for prctl                                                    : ok 
+Checking for dirname                                                  : ok 
+Checking for basename                                                 : ok 
+Checking for strlcpy                                                  : ok 
+Checking for strlcat                                                  : ok 
+Checking for getpeereid                                               : not found 
+Checking for library bsd                                              : yes 
+Checking for getpeereid in bsd                                        : ok 
+Checking for library setproctitle                                     : no 
+Checking for setproctitle                                             : not found 
+Checking for setproctitle in bsd                                      : ok 
+Checking for setproctitle_init                                        : not found 
+Checking for setproctitle_init in bsd                                 : ok 
+Checking for closefrom                                                : ok 
+Checking whether we can use SO_PEERCRED to get socket credentials     : ok 
+Checking correct behavior of strtoll                                  : not found 
+Checking for if_nameindex                                             : ok 
+Checking for if_nametoindex                                           : ok 
+Checking for strerror_r                                               : ok 
+Checking for syslog                                                   : ok 
+Checking for gai_strerror                                             : ok 
+Checking for get_current_dir_name                                     : ok 
+Checking for timegm                                                   : ok 
+Checking for getifaddrs                                               : ok 
+Checking for freeifaddrs                                              : ok 
+Checking for mmap                                                     : ok 
+Checking for setgroups                                                : ok 
+Checking for syscall                                                  : ok 
+Checking for setsid                                                   : ok 
+Checking for getgrent_r                                               : ok 
+Checking for getgrgid_r                                               : ok 
+Checking for getgrnam_r                                               : ok 
+Checking for getgrouplist                                             : ok 
+Checking for getpagesize                                              : ok 
+Checking for getpwent_r                                               : ok 
+Checking for getpwnam_r                                               : ok 
+Checking for getpwuid_r                                               : ok 
+Checking for epoll_create1                                            : ok 
+Checking for getprogname                                              : not found 
+Checking for copy_file_range                                          : ok 
+Checking for getxattr                                                 : ok 
+Checking whether xattr interface takes additional options             : not found 
+Checking for dlopen                                                   : ok 
+Checking for dlsym                                                    : ok 
+Checking for dlerror                                                  : ok 
+Checking for dlclose                                                  : ok 
+Checking for declaration of dlopen                                    : ok 
+Checking C prototype for dlopen                                       : not found 
+Checking for fdatasync                                                : ok 
+Checking for declaration of fdatasync                                 : ok 
+Checking for clock_gettime                                            : ok 
+Checking whether the clock_gettime clock ID CLOCK_MONOTONIC is available : ok 
+Checking whether the clock_gettime clock ID CLOCK_PROCESS_CPUTIME_ID is available : ok 
+Checking whether the clock_gettime clock ID CLOCK_REALTIME is available           : ok 
+Checking for struct timespec                                                      : ok 
+Checking for header arpa/nameser.h                                                : yes 
+Checking for header resolv.h                                                      : yes 
+Checking for res_search                                                           : ok 
+Checking for header libintl.h                                                     : yes 
+Checking for library intl                                                         : no 
+Checking for declaration of dgettext                                              : ok 
+Checking for declaration of gettext                                               : ok 
+Checking for declaration of bindtextdomain                                        : ok 
+Checking for declaration of textdomain                                            : ok 
+Checking for declaration of bind_textdomain_codeset                               : ok 
+Checking for bindtextdomain                                                       : ok 
+Checking for textdomain                                                           : ok 
+Checking for bind_textdomain_codeset                                              : ok 
+Checking for dgettext                                                             : ok 
+Checking for gettext                                                              : ok 
+Checking for pthread_create                                                       : ok 
+Checking for pthread_attr_init                                                    : ok 
+Checking for pthread_mutexattr_setrobust                                          : ok 
+Checking for declaration of PTHREAD_MUTEX_ROBUST                                  : not found 
+Checking for declaration of PTHREAD_MUTEX_ROBUST (as enum)                        : ok 
+Checking for pthread_mutex_consistent                                             : ok 
+Checking for __thread local storage                                               : ok 
+Checking for crypt                                                                : not found 
+Checking for library crypt                                                        : yes 
+Checking for crypt in crypt                                                       : ok 
+Checking for crypt_r                                                              : not found 
+Checking for crypt_r in crypt                                                     : ok 
+Checking for crypt_rn                                                             : not found 
+Checking for crypt_rn in crypt                                                    : ok 
+Checking for header readline.h                                                    : no 
+Checking for header readline/readline.h                                           : yes 
+Checking for header readline/history.h                                            : yes 
+Checking for variable rl_event_hook                                               : ok 
+Checking for variable program_invocation_short_name                               : ok 
+Checking for declaration of snprintf                                              : ok 
+Checking for declaration of vsnprintf                                             : ok 
+Checking for declaration of asprintf                                              : ok 
+Checking for declaration of vasprintf                                             : ok 
+Checking for declaration of errno                                                 : ok 
+Checking for declaration of EWOULDBLOCK                                           : ok 
+Checking for declaration of environ                                               : ok 
+Checking for declaration of getgrent_r                                            : ok 
+Checking for declaration of getpwent_r                                            : ok 
+Checking for declaration of pread                                                 : ok 
+Checking for declaration of pwrite                                                : ok 
+Checking for declaration of setenv                                                : ok 
+Checking for declaration of setresgid                                             : ok 
+Checking for declaration of setresuid                                             : ok 
+Checking for eventfd                                                              : ok 
+Checking for header poll.h                                                        : yes 
+Checking for poll                                                                 : ok 
+Checking for strptime                                                             : ok 
+Checking for declaration of strptime                                              : ok 
+Checking for working strptime                                                     : ok 
+Checking for declaration of gettimeofday                                          : ok 
+Checking C prototype for gettimeofday                                             : not found 
+Checking C prototype for gettimeofday                                             : ok 
+Checking for C99 vsnprintf                                                        : ok 
+Checking for HAVE_SHARED_MMAP                                                     : ok 
+Checking for HAVE_MREMAP                                                          : ok 
+Checking for HAVE_INCOHERENT_MMAP                                                 : not found 
+Checking for HAVE_IMMEDIATE_STRUCTURES                                            : ok 
+Checking for HAVE_MKDIR_MODE                                                      : ok 
+Checking for member st_rdev in struct stat                                        : ok 
+Checking for member st_rdev in struct stat                                        : ok 
+Checking for member ss_family in struct sockaddr_storage                          : ok 
+Checking for member __ss_family in struct sockaddr_storage                        : not found 
+Checking for member sa_len in struct sockaddr                                     : not found 
+Checking for member sin_len in struct sockaddr_in                                 : not found 
+Checking for member sin6_len in struct sockaddr_in6                               : not found 
+Checking for HAVE_UNIXSOCKET                                                      : ok 
+Checking for HAVE_SECURE_MKSTEMP                                                  : ok 
+Checking for HAVE_IFACE_GETIFADDRS                                                : not found 
+Checking for HAVE_IFACE_AIX                                                       : not found 
+Checking for HAVE_IFACE_IFCONF                                                    : not found 
+Checking for HAVE_IFACE_IFREQ                                                     : not found 
+Checking for declaration of getpwent_r                                            : ok 
+Checking C prototype for getpwent_r                                               : not found 
+Checking for declaration of getgrent_r                                            : ok 
+Checking C prototype for getgrent_r                                               : not found 
+Checking C prototype for getpwent_r                                               : not found 
+Checking C prototype for getgrent_r                                               : not found 
+Checking for strerror_r                                                           : ok 
+Checking for XSI (rather than GNU) prototype for strerror_r                       : not found 
+Checking for system tdb (&gt;=1.4.9)                                                 : yes 
+Checking for program 'xsltproc'                                                   : /usr/bin/xsltproc 
+Checking for stylesheet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl : ok 
+Checking for program 'python3'                                                                  : /usr/bin/python3.12 
+Checking for program 'python'                                                                   : /usr/bin/python3.12 
+Checking for program 'python3'                                                                  : /var/tmp/portage/sys-libs/ldb-2.8.1/temp/python3.12/bin/python3 
+Checking for python version &gt;= 3.6.0                                                            : 3.12.6 
+python headers                                                                                  : Check disabled due to --disable-python 
+Checking linker accepts -Wl,-no-undefined                                                       : yes 
+Checking linker accepts ['-undefined', 'dynamic_lookup']                                        : no 
+Checking for stylesheet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl : ok 
+Checking for header sys/auxv.h                                                                  : yes 
+Checking for getauxval                                                                          : ok 
+Checking linker accepts -Wl,-no-undefined                                                       : yes 
+Checking linker accepts ['-undefined', 'dynamic_lookup']                                        : no 
+Checking for program 'python3'                                                                  : /usr/bin/python3.12 
+Checking for program 'python'                                                                   : /usr/bin/python3.12 
+Checking for program 'python3'                                                                  : /var/tmp/portage/sys-libs/ldb-2.8.1/temp/python3.12/bin/python3 
+Checking for python version &gt;= 3.6.0                                                            : 3.12.6 
+python headers                                                                                  : Check disabled due to --disable-python 
+Checking for system talloc (&gt;=2.4.1)                                                            : yes 
+Checking for strsignal                                                                          : ok 
+Checking for longjmp                                                                            : ok 
+Checking for siglongjmp                                                                         : ok 
+Checking for system tevent (&gt;=0.15.0)                                                           : yes 
+Checking for epoll_create1                                                                      : ok 
+Checking value of NSIG                                                                          : 65 
+Checking value of _NSIG                                                                         : 65 
+Checking value of SIGRTMAX                                                                      : 64 
+Checking value of SIGRTMIN                                                                      : 34 
+Checking for program 'python3'                                                                  : /usr/bin/python3.12 
+Checking for program 'python'                                                                   : /usr/bin/python3.12 
+Checking for program 'python3'                                                                  : /var/tmp/portage/sys-libs/ldb-2.8.1/temp/python3.12/bin/python3 
+Checking for python version &gt;= 3.6.0                                                            : 3.12.6 
+python headers                                                                                  : Check disabled due to --disable-python 
+Checking linker accepts -Wl,-no-undefined                                                       : yes 
+Checking linker accepts ['-undefined', 'dynamic_lookup']                                        : no 
+Checking for system popt                                                                        : yes 
+Checking for header popt.h                                                                      : yes 
+Checking for library popt                                                                       : yes 
+Checking for poptGetContext in popt                                                             : ok 
+Checking for program 'xsltproc'                                                                 : /usr/bin/xsltproc 
+Checking for program 'python3'                                                                  : /usr/bin/python3.12 
+Checking for program 'python'                                                                   : /usr/bin/python3.12 
+Checking for program 'python3'                                                                  : /var/tmp/portage/sys-libs/ldb-2.8.1/temp/python3.12/bin/python3 
+Checking for python version &gt;= 3.6.0                                                            : 3.12.6 
+python headers                                                                                  : Check disabled due to --disable-python 
+Checking for a 64-bit host to support lmdb                                                      : ok 
+Checking for stylesheet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl : ok 
+Checking linker accepts -Wl,-no-undefined                                                       : yes 
+Checking for lmdb &gt;= 0.9.16                                                                     : yes 
+Checking for library lmdb                                                                       : yes 
+Checking for mdb_env_create in lmdb                                                             : ok 
+Checking if compiler accepts -fstack-protector-strong                                           : yes 
+Checking if compiler accepts -fstack-clash-protection                                           : yes 
+Checking linker accepts -Wl,-no-undefined                                                       : yes 
+Checking linker accepts ['-undefined', 'dynamic_lookup']                                        : no 
+'configure' finished successfully (1m9.522s)
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+"/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1/buildtools/bin/waf" build --verbose --jobs=2 
+Waf: Entering directory `/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default'
+Checking project rules ...
+Project rules pass
+[1/2] Compiling ldb.pc.in
+[2/2] Creating bin/default/include/ldb_version.h
+[3/3] Compiling lib/replace/replace.c
+08:27:53 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-D_SAMBA_HOSTCC_', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_LIBREPLACE_HOSTCC_MODULES=NULL', '-DSTATIC_LIBREPLACE_HOSTCC_MODULES_PROTO=extern void __LIBREPLACE_HOSTCC_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/replace.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/replace.c.1.o']
+[ 4/20] Creating bin/default/lib/replace/replace.vscript
+[ 5/20] Creating bin/default/third_party/cmocka/cmocka.vscript
+[ 6/20] Processing ldb.vscript: ABI/ldb-0.9.10.sigs ABI/ldb-0.9.12.sigs ABI/ldb-0.9.15.sigs ABI/ldb-0.9.16.sigs ABI/ldb-0.9.17.sigs ABI/ldb-0.9.18.sigs ABI/ldb-0.9.19.sigs ABI/ldb-0.9.20.sigs ABI/ldb-0.9.22.sigs ABI/ldb-0.9.23.sigs ABI/ldb-0.9.24.sigs ABI/ldb-1.0.0.sigs ABI/ldb-1.0.1.sigs ABI/ldb-1.0.2.sigs ABI/ldb-1.1.0.sigs ABI/ldb-1.1.1.sigs ABI/ldb-1.1.2.sigs ABI/ldb-1.1.3.sigs ABI/ldb-1.1.4.sigs ABI/ldb-1.1.5.sigs ABI/ldb-1.1.6.sigs ABI/ldb-1.1.7.sigs ABI/ldb-1.1.8.sigs ABI/ldb-1.1.9.sigs ABI/ldb-1.1.10.sigs ABI/ldb-1.1.11.sigs ABI/ldb-1.1.12.sigs ABI/ldb-1.1.13.sigs ABI/ldb-1.1.14.sigs ABI/ldb-1.1.15.sigs ABI/ldb-1.1.16.sigs ABI/ldb-1.1.17.sigs ABI/ldb-1.1.18.sigs ABI/ldb-1.1.19.sigs ABI/ldb-1.1.20.sigs ABI/ldb-1.1.21.sigs ABI/ldb-1.1.22.sigs ABI/ldb-1.1.23.sigs ABI/ldb-1.1.24.sigs ABI/ldb-1.1.25.sigs ABI/ldb-1.1.26.sigs ABI/ldb-1.1.27.sigs ABI/ldb-1.1.28.sigs ABI/ldb-1.1.29.sigs ABI/ldb-1.1.30.sigs ABI/ldb-1.1.31.sigs ABI/ldb-1.2.0.sigs ABI/ldb-1.2.1.sigs ABI/ldb-1.2.2.sigs ABI/ldb-1.2.3.sigs ABI/ldb-1.3.0.sigs ABI/ldb-1.3.1.sigs ABI/ldb-1.3.2.sigs ABI/ldb-1.4.0.sigs ABI/ldb-1.4.1.sigs ABI/ldb-1.5.0.sigs ABI/ldb-1.5.1.sigs ABI/ldb-1.5.2.sigs ABI/ldb-1.5.3.sigs ABI/ldb-1.6.0.sigs ABI/ldb-1.6.1.sigs ABI/ldb-1.6.2.sigs ABI/ldb-1.6.3.sigs ABI/ldb-2.0.0.sigs ABI/ldb-2.0.1.sigs ABI/ldb-2.0.2.sigs ABI/ldb-2.0.3.sigs ABI/ldb-2.0.4.sigs ABI/ldb-2.0.5.sigs ABI/ldb-2.1.0.sigs ABI/ldb-2.1.1.sigs ABI/ldb-2.2.0.sigs ABI/ldb-2.4.0.sigs ABI/ldb-2.4.1.sigs ABI/ldb-2.5.0.sigs ABI/ldb-2.6.0.sigs ABI/ldb-2.6.1.sigs ABI/ldb-2.7.0.sigs ABI/ldb-2.8.0.sigs ABI/ldb-2.8.1.sigs -&gt; bin/default/ldb.vscript
+[ 7/20] Creating bin/default/ldb_asq.vscript
+[ 8/20] Creating bin/default/ldb_server_sort.vscript
+[ 9/20] Creating bin/default/ldb_paged_searches.vscript
+[10/20] Creating bin/default/ldb_rdn_name.vscript
+[11/20] Creating bin/default/ldb_sample.vscript
+[12/20] Creating bin/default/ldb_skel.vscript
+[13/20] Creating bin/default/ldb_tdb.vscript
+[14/20] Creating bin/default/ldb_tdb_int.vscript
+[15/20] Creating bin/default/ldb_tdb_err_map.vscript
+[16/20] Creating bin/default/ldb_key_value.vscript
+[17/20] Creating bin/default/ldb_mdb.vscript
+[18/20] Creating bin/default/ldb_mdb_int.vscript
+[19/20] Creating bin/default/ldb_ldb.vscript
+[20/20] Creating bin/default/ldb-cmdline.vscript
+[21/23] Compiling lib/replace/replace.c
+08:27:54 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_MODULES=NULL', '-DSTATIC_replace_MODULES_PROTO=extern void __replace_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/replace.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/replace.c.3.o']
+[22/23] Compiling lib/replace/replace.c
+08:27:54 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-D_PUBLIC_=_PRIVATE_', '-DSTATIC_replace_builtin_MODULES=NULL', '-DSTATIC_replace_builtin_MODULES_PROTO=extern void __replace_builtin_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/replace.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/replace.c.2.o']
+[23/23] Linking bin/default/lib/replace/libreplace-ldb.so
+08:27:54 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/replace.vscript', '-shared', 'lib/replace/replace.c.3.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/libreplace-ldb.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+[ 24/148] Compiling common/ldb_dn.c
+08:27:54 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_dn.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_dn.c.1.o']
+[ 25/148] Compiling common/ldb_utf8.c
+08:27:54 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_utf8.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_utf8.c.1.o']
+[ 26/148] Compiling ldb_map/ldb_map.c
+08:27:55 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../ldb_map/ldb_map.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_map/ldb_map.c.1.o']
+[ 27/148] Compiling common/ldb_ldif.c
+08:27:55 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_ldif.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_ldif.c.1.o']
+[ 28/148] Compiling common/ldb_controls.c
+08:27:55 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_controls.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_controls.c.1.o']
+[ 29/148] Compiling common/qsort.c
+08:27:56 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/qsort.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/qsort.c.1.o']
+[ 30/148] Compiling common/attrib_handlers.c
+08:27:56 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/attrib_handlers.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/attrib_handlers.c.1.o']
+[ 31/148] Compiling common/ldb_parse.c
+08:27:56 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_parse.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_parse.c.1.o']
+[ 32/148] Compiling common/ldb_modules.c
+08:27:57 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_modules.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_modules.c.1.o']
+[ 33/148] Compiling common/ldb_pack.c
+08:27:57 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_pack.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_pack.c.1.o']
+[ 34/148] Compiling common/ldb_attributes.c
+08:27:57 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_attributes.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_attributes.c.1.o']
+[ 35/148] Compiling common/ldb_match.c
+08:27:58 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_match.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_match.c.1.o']
+[ 36/148] Compiling ldb_map/ldb_map_inbound.c
+08:27:58 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../ldb_map/ldb_map_inbound.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_map/ldb_map_inbound.c.1.o']
+[ 37/148] Compiling common/ldb_options.c
+08:27:58 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_options.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_options.c.1.o']
+[ 38/148] Compiling common/ldb_debug.c
+08:27:58 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_debug.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_debug.c.1.o']
+[ 39/148] Compiling common/ldb_msg.c
+08:27:58 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb_msg.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb_msg.c.1.o']
+[ 40/148] Compiling ldb_map/ldb_map_outbound.c
+08:27:58 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_MODULES=NULL', '-DSTATIC_ldb_MODULES_PROTO=extern void __ldb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../ldb_map/ldb_map_outbound.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_map/ldb_map_outbound.c.1.o']
+[ 41/148] Compiling common/ldb.c
+08:27:59 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DLDB_MODULESDIR="/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/modules/ldb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_LIBLDB_MAIN_MODULES=NULL', '-DSTATIC_LIBLDB_MAIN_MODULES_PROTO=extern void __LIBLDB_MAIN_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/ldb.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/common/ldb.c.53.o']
+[ 42/148] Compiling ldb_tdb/ldb_tdb_err_map.c
+08:27:59 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_err_map_MODULES=NULL', '-DSTATIC_ldb_tdb_err_map_MODULES_PROTO=extern void __ldb_tdb_err_map_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_tdb/ldb_tdb_err_map.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb/ldb_tdb_err_map.c.38.o']
+[ 43/148] Compiling third_party/cmocka/cmocka.c
+08:27:59 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_cmocka_MODULES=NULL', '-DSTATIC_cmocka_MODULES_PROTO=extern void __cmocka_dummy_module_proto(void)', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '-I.', '-I../..', '../../third_party/cmocka/cmocka.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka/cmocka.c.1.o']
+../../common/ldb.c: In function ‘ldb_init’:
+../../common/ldb.c:121:17: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+  121 |                 tevent_loop_allow_nesting(ev_ctx);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../include/ldb.h:51,
+                 from ../../include/ldb_private.h:43,
+                 from ../../common/ldb.c:36:
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../common/ldb.c: In function ‘ldb_handle_new’:
+../../common/ldb.c:750:17: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+  750 |                 tevent_loop_allow_nesting(h-&gt;event_context);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[ 44/148] Compiling ldb_key_value/ldb_kv_cache.c
+08:28:00 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_MODULES=NULL', '-DSTATIC_ldb_key_value_MODULES_PROTO=extern void __ldb_key_value_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_key_value/ldb_kv_cache.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_cache.c.41.o']
+[ 45/148] Compiling ldb_key_value/ldb_kv.c
+08:28:00 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_MODULES=NULL', '-DSTATIC_ldb_key_value_MODULES_PROTO=extern void __ldb_key_value_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_key_value/ldb_kv.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv.c.41.o']
+[ 46/148] Linking bin/default/libldb.so
+08:28:01 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb.vscript', '-shared', '-Wl,-h,libldb.so.2', 'common/ldb.c.53.o', 'common/ldb_modules.c.1.o', 'common/ldb_ldif.c.1.o', 'common/ldb_parse.c.1.o', 'common/ldb_msg.c.1.o', 'common/ldb_utf8.c.1.o', 'common/ldb_debug.c.1.o', 'common/ldb_dn.c.1.o', 'common/ldb_match.c.1.o', 'common/ldb_options.c.1.o', 'common/ldb_pack.c.1.o', 'common/ldb_attributes.c.1.o', 'common/attrib_handlers.c.1.o', 'common/ldb_controls.c.1.o', 'common/qsort.c.1.o', 'ldb_map/ldb_map.c.1.o', 'ldb_map/ldb_map_inbound.c.1.o', 'ldb_map/ldb_map_outbound.c.1.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/usr/local/lib', '-lreplace-ldb', '-ltdb', '-lbsd', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 47/148] Compiling ldb_key_value/ldb_kv_index.c
+08:28:01 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_MODULES=NULL', '-DSTATIC_ldb_key_value_MODULES_PROTO=extern void __ldb_key_value_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_key_value/ldb_kv_index.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_index.c.41.o']
+[ 48/148] Linking bin/default/third_party/cmocka/libcmocka-ldb.so
+08:28:01 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka/cmocka.vscript', '-shared', 'third_party/cmocka/cmocka.c.1.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka/libcmocka-ldb.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 49/148] Linking bin/default/libldb-tdb-err-map.so
+08:28:01 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb_err_map.vscript', '-shared', 'ldb_tdb/ldb_tdb_err_map.c.38.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb-tdb-err-map.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/usr/local/lib', '-lreplace-ldb', '-lldb', '-ltdb', '-lbsd', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 50/148] Compiling ldb_key_value/ldb_kv_search.c
+08:28:01 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_MODULES=NULL', '-DSTATIC_ldb_key_value_MODULES_PROTO=extern void __ldb_key_value_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_key_value/ldb_kv_search.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_search.c.41.o']
+[ 51/148] Compiling tools/cmdline.c
+08:28:02 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_cmdline_MODULES=NULL', '-DSTATIC_ldb_cmdline_MODULES_PROTO=extern void __ldb_cmdline_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/cmdline.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/cmdline.c.82.o']
+[ 52/148] Compiling tools/ldbutil.c
+08:28:02 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_cmdline_MODULES=NULL', '-DSTATIC_ldb_cmdline_MODULES_PROTO=extern void __ldb_cmdline_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbutil.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbutil.c.82.o']
+[ 53/148] Compiling ldb_tdb/ldb_tdb_wrap.c
+08:28:02 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_int_MODULES=NULL', '-DSTATIC_ldb_tdb_int_MODULES_PROTO=extern void __ldb_tdb_int_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_tdb/ldb_tdb_wrap.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb/ldb_tdb_wrap.c.35.o']
+[ 54/148] Linking bin/default/libldb-cmdline.so
+08:28:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb-cmdline.vscript', '-shared', 'tools/ldbutil.c.82.o', 'tools/cmdline.c.82.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb-cmdline.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 55/148] Compiling ldb_tdb/ldb_tdb.c
+08:28:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_int_MODULES=NULL', '-DSTATIC_ldb_tdb_int_MODULES_PROTO=extern void __ldb_tdb_int_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_tdb/ldb_tdb.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb/ldb_tdb.c.35.o']
+[ 56/148] Compiling ldb_mdb/ldb_mdb.c
+08:28:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_mdb_int_MODULES=NULL', '-DSTATIC_ldb_mdb_int_MODULES_PROTO=extern void __ldb_mdb_int_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_mdb/ldb_mdb.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_mdb/ldb_mdb.c.47.o']
+[ 57/148] Linking bin/default/libldb-key-value.so
+08:28:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value.vscript', '-shared', 'ldb_key_value/ldb_kv.c.41.o', 'ldb_key_value/ldb_kv_search.c.41.o', 'ldb_key_value/ldb_kv_index.c.41.o', 'ldb_key_value/ldb_kv_cache.c.41.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb-key-value.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/usr/local/lib', '-lreplace-ldb', '-lldb', '-lldb-tdb-err-map', '-lbsd', '-ltevent', '-ltalloc', '-ltdb', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 58/148] Compiling lib/replace/tests/strptime.c
+08:28:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/strptime.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/tests/strptime.c.6.o']
+[ 59/148] Compiling lib/replace/tests/testsuite.c
+08:28:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/testsuite.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/tests/testsuite.c.6.o']
+[ 60/148] Linking bin/default/libldb-tdb-int.so
+08:28:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb_int.vscript', '-shared', 'ldb_tdb/ldb_tdb_wrap.c.35.o', 'ldb_tdb/ldb_tdb.c.35.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb-tdb-int.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/usr/local/lib', '-lreplace-ldb', '-lldb-tdb-err-map', '-lldb', '-lldb-key-value', '-lbsd', '-ltevent', '-ltalloc', '-ltdb', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 61/148] Compiling lib/replace/tests/getifaddrs.c
+08:28:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/getifaddrs.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/tests/getifaddrs.c.6.o']
+[ 62/148] Linking bin/default/libldb-mdb-int.so
+08:28:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_mdb_int.vscript', '-shared', 'ldb_mdb/ldb_mdb.c.47.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb-mdb-int.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-key-value', '-lldb', '-lreplace-ldb', '-lldb-tdb-err-map', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-llmdb', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 63/148] Compiling lib/replace/tests/os2_delete.c
+08:28:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/os2_delete.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/tests/os2_delete.c.6.o']
+[ 64/148] Compiling lib/replace/tests/main.c
+08:28:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_testsuite_MODULES=NULL', '-DSTATIC_replace_testsuite_MODULES_PROTO=extern void __replace_testsuite_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/main.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/tests/main.c.7.o']
+[ 65/148] Compiling lib/tevent/tests/test_tevent_tag.c
+08:28:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_test_tevent_tag_MODULES=NULL', '-DSTATIC_test_tevent_tag_MODULES_PROTO=extern void __test_tevent_tag_dummy_module_proto(void)', '-Ilib/tevent', '-I../../lib/tevent', '-I.', '-I../..', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '-Ilib/replace', '-I../../lib/replace', '../../lib/tevent/tests/test_tevent_tag.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/tevent/tests/test_tevent_tag.c.1.o']
+[ 66/148] Compiling lib/tevent/tests/test_tevent_trace.c
+08:28:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_test_tevent_trace_MODULES=NULL', '-DSTATIC_test_tevent_trace_MODULES_PROTO=extern void __test_tevent_trace_dummy_module_proto(void)', '-Ilib/tevent', '-I../../lib/tevent', '-I.', '-I../..', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '-Ilib/replace', '-I../../lib/replace', '../../lib/tevent/tests/test_tevent_trace.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/tevent/tests/test_tevent_trace.c.3.o']
+[ 67/148] Compiling modules/asq.c
+08:28:05 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_asq_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_asq_MODULES=NULL', '-DSTATIC_ldb_asq_MODULES_PROTO=extern void __ldb_asq_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../modules/asq.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/modules/asq.c.14.o']
+[ 68/148] Linking bin/default/lib/tevent/test_tevent_tag
+08:28:05 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/tevent/tests/test_tevent_tag.c.1.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/tevent/test_tevent_tag', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lreplace-ldb', '-lbsd', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 69/148] Linking bin/default/lib/tevent/test_tevent_trace
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/tevent/tests/test_tevent_trace.c.3.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/tevent/test_tevent_trace', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lreplace-ldb', '-lbsd', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 70/148] Linking bin/default/libldb_module_asq.so
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_asq.vscript', '-shared', 'modules/asq.c.14.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_asq.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 71/148] Compiling modules/sort.c
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_server_sort_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_server_sort_MODULES=NULL', '-DSTATIC_ldb_server_sort_MODULES_PROTO=extern void __ldb_server_sort_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../modules/sort.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/modules/sort.c.17.o']
+[ 72/148] Compiling modules/paged_searches.c
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_paged_searches_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_paged_searches_MODULES=NULL', '-DSTATIC_ldb_paged_searches_MODULES_PROTO=extern void __ldb_paged_searches_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../modules/paged_searches.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/modules/paged_searches.c.20.o']
+[ 73/148] Compiling modules/rdn_name.c
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_rdn_name_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_rdn_name_MODULES=NULL', '-DSTATIC_ldb_rdn_name_MODULES_PROTO=extern void __ldb_rdn_name_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../modules/rdn_name.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/modules/rdn_name.c.23.o']
+[ 74/148] Linking bin/default/lib/replace/replace_testsuite
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/tests/main.c.7.o', 'lib/replace/tests/testsuite.c.6.o', 'lib/replace/tests/strptime.c.6.o', 'lib/replace/tests/os2_delete.c.6.o', 'lib/replace/tests/getifaddrs.c.6.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace/replace_testsuite', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/usr/local/lib', '-lreplace-ldb', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 75/148] Linking bin/default/libldb_module_server_sort.so
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_server_sort.vscript', '-shared', 'modules/sort.c.17.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_server_sort.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 76/148] Linking bin/default/libldb_module_paged_searches.so
+08:28:06 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_paged_searches.vscript', '-shared', 'modules/paged_searches.c.20.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_paged_searches.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 77/148] Compiling tests/sample_module.c
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_sample_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_sample_MODULES=NULL', '-DSTATIC_ldb_sample_MODULES_PROTO=extern void __ldb_sample_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tests/sample_module.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/sample_module.c.26.o']
+[ 78/148] Compiling modules/skel.c
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_skel_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_skel_MODULES=NULL', '-DSTATIC_ldb_skel_MODULES_PROTO=extern void __ldb_skel_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../modules/skel.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/modules/skel.c.29.o']
+[ 79/148] Compiling ldb_tdb/ldb_tdb_init.c
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_tdb_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_MODULES=NULL', '-DSTATIC_ldb_tdb_MODULES_PROTO=extern void __ldb_tdb_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_tdb/ldb_tdb_init.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb/ldb_tdb_init.c.32.o']
+[ 80/148] Linking bin/default/libldb_module_rdn_name.so
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_rdn_name.vscript', '-shared', 'modules/rdn_name.c.23.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_rdn_name.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 81/148] Linking bin/default/libldb_module_sample.so
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_sample.vscript', '-shared', 'tests/sample_module.c.26.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_sample.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 82/148] Linking bin/default/libldb_module_skel.so
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_skel.vscript', '-shared', 'modules/skel.c.29.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_skel.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 83/148] Linking bin/default/libldb_module_tdb.so
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb.vscript', '-shared', 'ldb_tdb/ldb_tdb_init.c.32.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_tdb.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lldb-tdb-int', '-lldb-key-value', '-lreplace-ldb', '-lldb-tdb-err-map', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 84/148] Compiling ldb_mdb/ldb_mdb_init.c
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_mdb_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_mdb_MODULES=NULL', '-DSTATIC_ldb_mdb_MODULES_PROTO=extern void __ldb_mdb_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_mdb/ldb_mdb_init.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_mdb/ldb_mdb_init.c.44.o']
+[ 85/148] Compiling ldb_ldb/ldb_ldb.c
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-Dldb_ldb_init=ldb_init_module', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_ldb_MODULES=NULL', '-DSTATIC_ldb_ldb_MODULES_PROTO=extern void __ldb_ldb_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../ldb_ldb/ldb_ldb.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_ldb/ldb_ldb.c.50.o']
+[ 86/148] Compiling tools/ldbadd.c
+08:28:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbadd_MODULES=NULL', '-DSTATIC_ldbadd_MODULES_PROTO=extern void __ldbadd_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbadd.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbadd.c.54.o']
+[ 87/148] Linking bin/default/libldb_module_mdb.so
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_mdb.vscript', '-shared', 'ldb_mdb/ldb_mdb_init.c.44.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_mdb.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb', '-lldb-mdb-int', '-lldb-key-value', '-lreplace-ldb', '-lldb-tdb-err-map', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-llmdb', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 88/148] Compiling tools/ldbsearch.c
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbsearch_MODULES=NULL', '-DSTATIC_ldbsearch_MODULES_PROTO=extern void __ldbsearch_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbsearch.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbsearch.c.58.o']
+[ 89/148] Linking bin/default/libldb_module_ldb.so
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_ldb.vscript', '-shared', 'ldb_ldb/ldb_ldb.c.50.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/libldb_module_ldb.so', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-tdb-int', '-lldb-mdb-int', '-lldb', '-lldb-key-value', '-lreplace-ldb', '-lldb-tdb-err-map', '-lbsd', '-ltevent', '-ltalloc', '-llmdb', '-ltdb', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 90/148] Linking bin/default/ldbadd
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbadd.c.54.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbadd', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 91/148] Compiling tools/ldbdel.c
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbdel_MODULES=NULL', '-DSTATIC_ldbdel_MODULES_PROTO=extern void __ldbdel_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbdel.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbdel.c.62.o']
+[ 92/148] Compiling tools/ldbmodify.c
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbmodify_MODULES=NULL', '-DSTATIC_ldbmodify_MODULES_PROTO=extern void __ldbmodify_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbmodify.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbmodify.c.66.o']
+[ 93/148] Compiling tools/ldbedit.c
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbedit_MODULES=NULL', '-DSTATIC_ldbedit_MODULES_PROTO=extern void __ldbedit_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbedit.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbedit.c.70.o']
+[ 94/148] Linking bin/default/ldbsearch
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbsearch.c.58.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbsearch', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 95/148] Linking bin/default/ldbdel
+08:28:08 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbdel.c.62.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbdel', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 96/148] Linking bin/default/ldbmodify
+08:28:09 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbmodify.c.66.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbmodify', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 97/148] Compiling tools/ldbrename.c
+08:28:09 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbrename_MODULES=NULL', '-DSTATIC_ldbrename_MODULES_PROTO=extern void __ldbrename_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbrename.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbrename.c.74.o']
+[ 98/148] Compiling tools/ldbtest.c
+08:28:09 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbtest_MODULES=NULL', '-DSTATIC_ldbtest_MODULES_PROTO=extern void __ldbtest_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbtest.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbtest.c.78.o']
+[ 99/148] Linking bin/default/ldbedit
+08:28:09 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbedit.c.70.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbedit', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[100/148] Linking bin/default/ldbrename
+08:28:09 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbrename.c.74.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbrename', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[101/148] Compiling tools/ldbdump.c
+08:28:09 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldbdump_MODULES=NULL', '-DSTATIC_ldbdump_MODULES_PROTO=extern void __ldbdump_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '../../tools/ldbdump.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tools/ldbdump.c.80.o']
+[102/148] Compiling tests/ldb_mod_op_test.c
+08:28:09 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="tdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_mod_op_test_MODULES=NULL', '-DSTATIC_ldb_tdb_mod_op_test_MODULES_PROTO=extern void __ldb_tdb_mod_op_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_mod_op_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_mod_op_test.c.85.o']
+[103/148] Linking bin/default/ldbtest
+08:28:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbtest.c.78.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbtest', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[104/148] Linking bin/default/ldbdump
+08:28:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/ldbdump.c.80.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldbdump', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-lldb-cmdline', '-lldb', '-lreplace-ldb', '-ltdb', '-lbsd', '-lpopt', '-ltalloc', '-ltevent', '-ltalloc', '-llmdb', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[105/148] Compiling tests/ldb_mod_op_test.c
+08:28:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="tdb"', '-DGUID_IDX=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_guid_mod_op_test_MODULES=NULL', '-DSTATIC_ldb_tdb_guid_mod_op_test_MODULES_PROTO=extern void __ldb_tdb_guid_mod_op_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_mod_op_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_mod_op_test.c.87.o']
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_search_against_transaction’:
+../../tests/ldb_mod_op_test.c:1646:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 1646 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../tests/ldb_mod_op_test.c:25:
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_modify_during_search’:
+../../tests/ldb_mod_op_test.c:1965:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 1965 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_modify_during_whole_search’:
+../../tests/ldb_mod_op_test.c:2205:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 2205 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_callback_modify_during_search’:
+../../tests/ldb_mod_op_test.c:2689:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 2689 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[106/148] Compiling tests/ldb_kv_ops_test.c
+08:28:11 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="tdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_kv_ops_test_MODULES=NULL', '-DSTATIC_ldb_tdb_kv_ops_test_MODULES_PROTO=extern void __ldb_tdb_kv_ops_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_kv_ops_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_kv_ops_test.c.89.o']
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_search_against_transaction’:
+../../tests/ldb_mod_op_test.c:1646:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 1646 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../tests/ldb_mod_op_test.c:25:
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_modify_during_search’:
+../../tests/ldb_mod_op_test.c:1965:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 1965 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_modify_during_whole_search’:
+../../tests/ldb_mod_op_test.c:2205:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 2205 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_callback_modify_during_search’:
+../../tests/ldb_mod_op_test.c:2689:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 2689 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[107/148] Compiling tests/ldb_tdb_test.c
+08:28:11 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_tdb_test_MODULES=NULL', '-DSTATIC_ldb_tdb_test_MODULES_PROTO=extern void __ldb_tdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_tdb_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_tdb_test.c.91.o']
+[108/148] Linking bin/default/ldb_tdb_mod_op_test
+08:28:11 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_mod_op_test.c.85.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb_mod_op_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[109/148] Linking bin/default/ldb_tdb_guid_mod_op_test
+08:28:11 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_mod_op_test.c.87.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb_guid_mod_op_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[110/148] Linking bin/default/ldb_tdb_kv_ops_test
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_kv_ops_test.c.89.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb_kv_ops_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[111/148] Compiling tests/ldb_msg.c
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_msg_test_MODULES=NULL', '-DSTATIC_ldb_msg_test_MODULES_PROTO=extern void __ldb_msg_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_msg.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_msg.c.93.o']
+[112/148] Linking bin/default/ldb_tdb_test
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_tdb_test.c.91.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_tdb_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[113/148] Compiling tests/test_ldb_qsort.c
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_test_ldb_qsort_MODULES=NULL', '-DSTATIC_test_ldb_qsort_MODULES_PROTO=extern void __test_ldb_qsort_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/test_ldb_qsort.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/test_ldb_qsort.c.95.o']
+[114/148] Compiling tests/test_ldb_dn.c
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_test_ldb_dn_MODULES=NULL', '-DSTATIC_test_ldb_dn_MODULES_PROTO=extern void __test_ldb_dn_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/test_ldb_dn.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/test_ldb_dn.c.97.o']
+[115/148] Linking bin/default/test_ldb_qsort
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/test_ldb_qsort.c.95.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/test_ldb_qsort', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[116/148] Linking bin/default/ldb_msg_test
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_msg.c.93.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_msg_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[117/148] Compiling tests/ldb_match_test.c
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_match_test_MODULES=NULL', '-DSTATIC_ldb_match_test_MODULES_PROTO=extern void __ldb_match_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_match_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_match_test.c.99.o']
+[118/148] Linking bin/default/test_ldb_dn
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/test_ldb_dn.c.97.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/test_ldb_dn', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[119/148] Compiling tests/ldb_key_value_test.c
+08:28:12 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_test_MODULES=NULL', '-DSTATIC_ldb_key_value_test_MODULES_PROTO=extern void __ldb_key_value_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_key_value_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_key_value_test.c.101.o']
+[120/148] Compiling tests/ldb_parse_test.c
+08:28:13 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_parse_test_MODULES=NULL', '-DSTATIC_ldb_parse_test_MODULES_PROTO=extern void __ldb_parse_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_parse_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_parse_test.c.103.o']
+[121/148] Compiling tests/ldb_filter_attrs_test.c
+08:28:13 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_filter_attrs_test_MODULES=NULL', '-DSTATIC_ldb_filter_attrs_test_MODULES_PROTO=extern void __ldb_filter_attrs_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_filter_attrs_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_filter_attrs_test.c.105.o']
+[122/148] Linking bin/default/ldb_match_test
+08:28:13 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_match_test.c.99.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_match_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[123/148] Linking bin/default/ldb_parse_test
+08:28:13 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_parse_test.c.103.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_parse_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lldb-tdb-err-map', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[124/148] Linking bin/default/ldb_filter_attrs_test
+08:28:14 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_filter_attrs_test.c.105.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_filter_attrs_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lldb-tdb-err-map', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[125/148] Compiling tests/ldb_filter_attrs_in_place_test.c
+08:28:14 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_filter_attrs_in_place_test_MODULES=NULL', '-DSTATIC_ldb_filter_attrs_in_place_test_MODULES_PROTO=extern void __ldb_filter_attrs_in_place_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_filter_attrs_in_place_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_filter_attrs_in_place_test.c.107.o']
+[126/148] Compiling ldb_key_value/ldb_kv_cache.c
+08:28:14 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="tdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_tdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../ldb_key_value/ldb_kv_cache.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_cache.c.109.o']
+[127/148] Linking bin/default/ldb_filter_attrs_in_place_test
+08:28:14 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_filter_attrs_in_place_test.c.107.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_filter_attrs_in_place_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lldb-tdb-err-map', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[128/148] Compiling ldb_key_value/ldb_kv_index.c
+08:28:14 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="tdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_tdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../ldb_key_value/ldb_kv_index.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_index.c.109.o']
+[129/148] Compiling ldb_key_value/ldb_kv_search.c
+08:28:15 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="tdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_tdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../ldb_key_value/ldb_kv_search.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_search.c.109.o']
+[130/148] Compiling tests/ldb_key_value_sub_txn_test.c
+08:28:15 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="tdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_tdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_tdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_key_value_sub_txn_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_key_value_sub_txn_test.c.109.o']
+[131/148] Linking bin/default/ldb_key_value_test
+08:28:16 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_key_value_test.c.101.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lldb-tdb-err-map', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[132/148] Compiling tests/ldb_mod_op_test.c
+08:28:16 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="mdb"', '-DGUID_IDX=1', '-DTEST_LMDB=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_mdb_mod_op_test_MODULES=NULL', '-DSTATIC_ldb_mdb_mod_op_test_MODULES_PROTO=extern void __ldb_mdb_mod_op_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_mod_op_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_mod_op_test.c.111.o']
+[133/148] Compiling tests/ldb_lmdb_test.c
+08:28:16 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_lmdb_test_MODULES=NULL', '-DSTATIC_ldb_lmdb_test_MODULES_PROTO=extern void __ldb_lmdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_lmdb_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_lmdb_test.c.113.o']
+[134/148] Linking bin/default/ldb_key_value_sub_txn_tdb_test
+08:28:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'ldb_key_value/ldb_kv_search.c.109.o', 'ldb_key_value/ldb_kv_index.c.109.o', 'ldb_key_value/ldb_kv_cache.c.109.o', 'tests/ldb_key_value_sub_txn_test.c.109.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value_sub_txn_tdb_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lldb-tdb-err-map', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[135/148] Linking bin/default/ldb_lmdb_test
+08:28:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_lmdb_test.c.113.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_lmdb_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[136/148] Compiling tests/ldb_lmdb_size_test.c
+08:28:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_lmdb_size_test_MODULES=NULL', '-DSTATIC_ldb_lmdb_size_test_MODULES_PROTO=extern void __ldb_lmdb_size_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_lmdb_size_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_lmdb_size_test.c.115.o']
+[137/148] Compiling tests/ldb_kv_ops_test.c
+08:28:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="mdb"', '-DTEST_LMDB=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_mdb_kv_ops_test_MODULES=NULL', '-DSTATIC_ldb_mdb_kv_ops_test_MODULES_PROTO=extern void __ldb_mdb_kv_ops_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_kv_ops_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_kv_ops_test.c.117.o']
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_search_against_transaction’:
+../../tests/ldb_mod_op_test.c:1646:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 1646 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../tests/ldb_mod_op_test.c:25:
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_modify_during_search’:
+../../tests/ldb_mod_op_test.c:1965:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 1965 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_modify_during_whole_search’:
+../../tests/ldb_mod_op_test.c:2205:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 2205 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../tests/ldb_mod_op_test.c: In function ‘test_ldb_callback_modify_during_search’:
+../../tests/ldb_mod_op_test.c:2689:9: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+ 2689 |         tevent_loop_allow_nesting(search_test_ctx-&gt;ldb_test_ctx-&gt;ev);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[138/148] Linking bin/default/ldb_lmdb_size_test
+08:28:18 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_lmdb_size_test.c.115.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_lmdb_size_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[139/148] Linking bin/default/ldb_mdb_mod_op_test
+08:28:18 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_mod_op_test.c.111.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_mdb_mod_op_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-llmdb', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[140/148] Compiling tests/ldb_lmdb_free_list_test.c
+08:28:18 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="mdb"', '-DTEST_LMDB=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_lmdb_free_list_test_MODULES=NULL', '-DSTATIC_ldb_lmdb_free_list_test_MODULES_PROTO=extern void __ldb_lmdb_free_list_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_lmdb_free_list_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_lmdb_free_list_test.c.119.o']
+[141/148] Compiling tests/ldb_key_value_sub_txn_test.c
+08:28:18 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="mdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_mdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../tests/ldb_key_value_sub_txn_test.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/tests/ldb_key_value_sub_txn_test.c.121.o']
+[142/148] Linking bin/default/ldb_mdb_kv_ops_test
+08:28:18 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_kv_ops_test.c.117.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_mdb_kv_ops_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[143/148] Linking bin/default/ldb_lmdb_free_list_test
+08:28:18 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tests/ldb_lmdb_free_list_test.c.119.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_lmdb_free_list_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[144/148] Compiling ldb_key_value/ldb_kv_search.c
+08:28:19 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="mdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_mdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../ldb_key_value/ldb_kv_search.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_search.c.121.o']
+[145/148] Compiling ldb_key_value/ldb_kv_index.c
+08:28:19 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="mdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_mdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../ldb_key_value/ldb_kv_index.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_index.c.121.o']
+[146/148] Compiling ldb_key_value/ldb_kv_cache.c
+08:28:19 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-DHAVE_CONFIG_H=1', '-DTEST_BE="mdb"', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES=NULL', '-DSTATIC_ldb_key_value_sub_txn_mdb_test_MODULES_PROTO=extern void __ldb_key_value_sub_txn_mdb_test_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Iinclude', '-I../../include', '-Ilib/replace', '-I../../lib/replace', '-Ithird_party/cmocka', '-I../../third_party/cmocka', '../../ldb_key_value/ldb_kv_cache.c', '-c', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value/ldb_kv_cache.c.121.o']
+[147/148] Linking bin/default/ldb_key_value_sub_txn_mdb_test
+08:28:20 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'ldb_key_value/ldb_kv_search.c.121.o', 'ldb_key_value/ldb_kv_index.c.121.o', 'ldb_key_value/ldb_kv_cache.c.121.o', 'tests/ldb_key_value_sub_txn_test.c.121.o', '-o/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/ldb_key_value_sub_txn_mdb_test', '-Wl,-rpath,/usr/lib64', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/lib/replace', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default', '-L/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default/third_party/cmocka', '-L/usr/local/lib', '-lcmocka-ldb', '-lldb', '-lldb-tdb-err-map', '-lreplace-ldb', '-lbsd', '-ltdb', '-ltalloc', '-ltevent', '-ltalloc', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[148/148] Symlinking bin/default/libldb.so
+[149/155] Compiling man/ldb.3.xml
+08:28:20 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/ldb.3 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/ldb.3.xml '
+[150/155] Compiling man/ldbadd.1.xml
+08:28:20 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/ldbadd.1 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/ldbadd.1.xml '
+Note: Writing ldbadd.1
+
+[151/155] Compiling man/ldbsearch.1.xml
+08:28:21 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/ldbsearch.1 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/ldbsearch.1.xml '
+Note: Writing ldb.3
+
+[152/155] Compiling man/ldbdel.1.xml
+08:28:21 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/ldbdel.1 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/ldbdel.1.xml '
+Note: Writing ldbsearch.1
+
+[153/155] Compiling man/ldbmodify.1.xml
+08:28:21 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/ldbmodify.1 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/ldbmodify.1.xml '
+Note: Writing ldbdel.1
+
+[154/155] Compiling man/ldbedit.1.xml
+08:28:21 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/ldbedit.1 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/ldbedit.1.xml '
+Note: Writing ldbmodify.1
+
+[155/155] Compiling man/ldbrename.1.xml
+08:28:21 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/ldbrename.1 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/ldbrename.1.xml '
+Note: Writing ldbedit.1
+
+Note: Writing ldbrename.1
+
+Waf: Leaving directory `/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default'
+Build commands will be stored in bin/default/compile_commands.json
+'build' finished successfully (28.551s)
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-libs/ldb-2.8.1
+
+&gt;&gt;&gt; Install sys-libs/ldb-2.8.1 into /var/tmp/portage/sys-libs/ldb-2.8.1/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+"/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1/buildtools/bin/waf" --jobs=2 --destdir="/var/tmp/portage/sys-libs/ldb-2.8.1/image"  install
+Waf: Entering directory `/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default'
+Checking project rules ...
+Project rules pass
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/pkgconfig/ldb.pc (from bin/default/ldb.pc)
+[23/25] Linking bin/default/lib/replace/libreplace-ldb.so
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/ldb/libreplace-ldb.so (from bin/default/lib/replace/libreplace-ldb.so)
+[ 43/183] Compiling common/ldb.c
+[ 54/183] Linking bin/default/third_party/cmocka/libcmocka-ldb.so
+[105/183] Linking bin/default/lib/replace/replace_testsuite.inst
+[106/183] Linking bin/default/lib/tevent/test_tevent_tag.inst
+[107/183] Linking bin/default/lib/tevent/test_tevent_trace.inst
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/ldb/libcmocka-ldb.so (from bin/default/third_party/cmocka/libcmocka-ldb.so)
++ symlink /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/libldb.so.2 (to libldb.so.2.8.1)
++ symlink /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/libldb.so (to libldb.so.2.8.1)
+../../common/ldb.c: In function ‘ldb_init’:
+../../common/ldb.c:121:17: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+  121 |                 tevent_loop_allow_nesting(ev_ctx);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../include/ldb.h:51,
+                 from ../../include/ldb_private.h:43,
+                 from ../../common/ldb.c:36:
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../common/ldb.c: In function ‘ldb_handle_new’:
+../../common/ldb.c:750:17: warning: ‘tevent_loop_allow_nesting’ is deprecated [-Wdeprecated-declarations]
+  750 |                 tevent_loop_allow_nesting(h-&gt;event_context);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/tevent.h:2676:6: note: declared here
+ 2676 | void tevent_loop_allow_nesting(struct tevent_context *ev) _DEPRECATED_;
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[111/183] Linking bin/default/libldb.so
+[112/183] Linking bin/default/libldb.inst.so
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/libldb.so.2.8.1 (from bin/default/libldb.inst.so)
+[114/183] Linking bin/default/libldb-tdb-err-map.so
+[115/183] Linking bin/default/libldb-cmdline.so
+[116/183] Linking bin/default/libldb_module_asq.so
+[117/183] Linking bin/default/libldb-key-value.so
+[118/183] Linking bin/default/libldb_module_server_sort.so
+[119/183] Linking bin/default/libldb_module_paged_searches.so
+[120/183] Linking bin/default/libldb_module_rdn_name.so
+[121/183] Linking bin/default/libldb-tdb-int.so
+[122/183] Linking bin/default/libldb-mdb-int.so
+[123/183] Linking bin/default/libldb_module_sample.so
+[124/183] Linking bin/default/libldb_module_skel.so
+[125/183] Linking bin/default/libldb_module_tdb.inst.so
+[126/183] Linking bin/default/libldb-tdb-int.inst.so
+[127/183] Linking bin/default/libldb-tdb-err-map.inst.so
+[128/183] Linking bin/default/libldb-key-value.inst.so
+[129/183] Linking bin/default/libldb_module_mdb.inst.so
+[130/183] Linking bin/default/libldb-mdb-int.inst.so
+[131/183] Linking bin/default/libldb_module_ldb.inst.so
+[132/183] Linking bin/default/ldbadd.inst
+[133/183] Linking bin/default/ldbsearch.inst
+[134/183] Linking bin/default/ldbdel.inst
+[135/183] Linking bin/default/ldbmodify.inst
+[136/183] Linking bin/default/ldbedit.inst
+[137/183] Linking bin/default/ldbrename.inst
+[138/183] Linking bin/default/libldb_module_tdb.so
+[139/183] Linking bin/default/libldb_module_mdb.so
+[140/183] Linking bin/default/libldb_module_ldb.so
+[141/183] Linking bin/default/ldbtest.inst
+[142/183] Linking bin/default/ldbdump.inst
+[143/183] Linking bin/default/ldb_tdb_mod_op_test.inst
+[144/183] Linking bin/default/ldb_tdb_guid_mod_op_test.inst
+[145/183] Linking bin/default/ldb_tdb_kv_ops_test.inst
+[146/183] Linking bin/default/ldb_tdb_test.inst
+[147/183] Linking bin/default/ldb_msg_test.inst
+[148/183] Linking bin/default/test_ldb_qsort.inst
+[149/183] Linking bin/default/test_ldb_dn.inst
+[150/183] Linking bin/default/ldb_match_test.inst
+[151/183] Linking bin/default/ldb_key_value_test.inst
+[152/183] Linking bin/default/ldb_parse_test.inst
+[153/183] Linking bin/default/ldb_filter_attrs_test.inst
+[154/183] Linking bin/default/ldb_filter_attrs_in_place_test.inst
+[155/183] Linking bin/default/ldb_key_value_sub_txn_tdb_test.inst
+[156/183] Linking bin/default/ldb_mdb_mod_op_test.inst
+[157/183] Linking bin/default/ldb_lmdb_test.inst
+[158/183] Linking bin/default/ldb_lmdb_size_test.inst
+[159/183] Linking bin/default/ldb_mdb_kv_ops_test.inst
+[160/183] Linking bin/default/ldb_lmdb_free_list_test.inst
+[161/183] Linking bin/default/ldb_key_value_sub_txn_mdb_test.inst
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/asq.so (from bin/default/libldb_module_asq.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/server_sort.so (from bin/default/libldb_module_server_sort.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/paged_searches.so (from bin/default/libldb_module_paged_searches.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/rdn_name.so (from bin/default/libldb_module_rdn_name.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/sample.so (from bin/default/libldb_module_sample.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/skel.so (from bin/default/libldb_module_skel.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/tdb.so (from bin/default/libldb_module_tdb.inst.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/ldb/libldb-tdb-int.so (from bin/default/libldb-tdb-int.inst.so)
+[170/183] Symlinking bin/default/libldb.inst.so
+[172/183] Symlinking bin/default/libldb.so
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/ldb/libldb-tdb-err-map.so (from bin/default/libldb-tdb-err-map.inst.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/ldb/libldb-key-value.so (from bin/default/libldb-key-value.inst.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/mdb.so (from bin/default/libldb_module_mdb.inst.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/ldb/libldb-mdb-int.so (from bin/default/libldb-mdb-int.inst.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/samba/ldb/ldb.so (from bin/default/libldb_module_ldb.inst.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/bin/ldbadd (from bin/default/ldbadd.inst)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/lib64/ldb/libldb-cmdline.so (from bin/default/libldb-cmdline.so)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/bin/ldbsearch (from bin/default/ldbsearch.inst)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/bin/ldbdel (from bin/default/ldbdel.inst)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/bin/ldbmodify (from bin/default/ldbmodify.inst)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/bin/ldbedit (from bin/default/ldbedit.inst)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/bin/ldbrename (from bin/default/ldbrename.inst)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/include/ldb.h (from include/ldb.h)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/include/ldb_errors.h (from include/ldb_errors.h)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/include/ldb_module.h (from include/ldb_module.h)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/include/ldb_handlers.h (from include/ldb_handlers.h)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/share/man/man3/ldb.3 (from bin/default/man/ldb.3)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/include/ldb_version.h (from bin/default/include/ldb_version.h)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/share/man/man1/ldbadd.1 (from bin/default/man/ldbadd.1)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/share/man/man1/ldbsearch.1 (from bin/default/man/ldbsearch.1)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/share/man/man1/ldbdel.1 (from bin/default/man/ldbdel.1)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/share/man/man1/ldbmodify.1 (from bin/default/man/ldbmodify.1)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/share/man/man1/ldbedit.1 (from bin/default/man/ldbedit.1)
++ install /var/tmp/portage/sys-libs/ldb-2.8.1/image/usr/share/man/man1/ldbrename.1 (from bin/default/man/ldbrename.1)
+Waf: Leaving directory `/var/tmp/portage/sys-libs/ldb-2.8.1/work/ldb-2.8.1-abi_x86_64.amd64/bin/default'
+'install' finished successfully (4.494s)
+&gt;&gt;&gt; Completed installing sys-libs/ldb-2.8.1 into /var/tmp/portage/sys-libs/ldb-2.8.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 33020 KiB (32.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   1064 KiB ( 1.0 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/ldb/libldb-tdb-err-map.so
+   /usr/lib64/ldb/libreplace-ldb.so
+   /usr/lib64/ldb/libcmocka-ldb.so
+   /usr/lib64/libldb.so.2.8.1
+   /usr/lib64/samba/ldb/asq.so
+   /usr/lib64/samba/ldb/server_sort.so
+   /usr/lib64/samba/ldb/paged_searches.so
+   /usr/lib64/samba/ldb/rdn_name.so
+   /usr/lib64/samba/ldb/sample.so
+   /usr/lib64/samba/ldb/skel.so
+   /usr/lib64/samba/ldb/tdb.so
+   /usr/lib64/ldb/libldb-tdb-int.so
+   /usr/lib64/samba/ldb/mdb.so
+   /usr/lib64/ldb/libldb-key-value.so
+   /usr/lib64/ldb/libldb-mdb-int.so
+   /usr/lib64/samba/ldb/ldb.so
+   /usr/lib64/ldb/libldb-cmdline.so
+   /usr/bin/ldbadd
+   /usr/bin/ldbdel
+   /usr/bin/ldbsearch
+   /usr/bin/ldbedit
+   /usr/bin/ldbmodify
+   /usr/bin/ldbrename
+
+</pre>
+</body>
+
+</html>
