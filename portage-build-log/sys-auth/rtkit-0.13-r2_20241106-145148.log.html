@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+.ansi35 { color: #E850A8; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-auth/rtkit-0.13-r2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.6.58-gentoo-r1-x86_64
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking rtkit-0.13.tar.xz to /var/tmp/portage/sys-auth/rtkit-0.13-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-auth/rtkit-0.13-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/sys-auth/rtkit-0.13-r2/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dinstalled_tests=false -Dlibsystemd=disabled /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13 /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.5.2
+Source dir: <span class="ansi1">/var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13</span>
+Build dir: <span class="ansi1">/var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">rtkit</span>
+Project version: <span class="ansi1">0.13</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 13.3.1 "x86_64-pc-linux-gnu-gcc (Gentoo 13.3.1_p20241025 p1) 13.3.1 20241024")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.42
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Program <span class="ansi1">sh</span> found: <span class="ansi1 ansi32">YES</span> (/bin/sh)
+Program <span class="ansi1">xxd</span> found: <span class="ansi1 ansi31">NO</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.3.0</span>
+Run-time dependency <span class="ansi1">dbus-1</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.15.8</span>
+Run-time dependency <span class="ansi1">libcap</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.70</span>
+Dependency <span class="ansi1">libsystemd</span> skipped: feature <span class="ansi1">libsystemd</span> disabled
+Run-time dependency <span class="ansi1">polkit-gobject-1</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">124</span>
+Found CMake: <span class="ansi1">/usr/bin/cmake</span> (3.30.5)
+Run-time dependency <span class="ansi1">systemd</span> found: <span class="ansi1 ansi31">NO</span> (tried pkgconfig and cmake)
+Run-time dependency <span class="ansi1">threads</span> found: <span class="ansi1 ansi32">YES</span>
+Library <span class="ansi1">z</span> found: <span class="ansi1 ansi32">YES</span>
+Check usable header "<span class="ansi1">sched.h</span>" with dependency -lz: <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">sched_setscheduler</span>" with dependency -lz: <span class="ansi1 ansi32">YES</span> 
+Configuring <span class="ansi1">config.h</span> using configuration
+meson.build:93: <span class="ansi1 ansi33">WARNING:</span> xxd not found, cannot compile introspection XML. Looking for existing one...
+Configuring <span class="ansi1">org.freedesktop.RealtimeKit1.service</span> using configuration
+Configuring <span class="ansi1">rtkit-daemon.service</span> using configuration
+Build targets in project: <span class="ansi1">3</span>
+<span class="ansi1">NOTICE:</span> Future-deprecated features used:
+ * 0.56.0: {'dependency.get_pkgconfig_variable'}
+
+rtkit <span class="ansi36">0.13</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/sys-auth/rtkit-0.13-r2/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    installed_tests      : false
+    libsystemd           : disabled
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13 ...
+ninja -v -j2 -l2
+[1/8] x86_64-pc-linux-gnu-gcc -Irtkit-daemon.p -I. -I../rtkit-0.13 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_GNU_SOURCE -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -pthread -MD -MQ rtkit-daemon.p/rtkit-daemon.c.o -MF rtkit-daemon.p/rtkit-daemon.c.o.d -o rtkit-daemon.p/rtkit-daemon.c.o -c ../rtkit-0.13/rtkit-daemon.c
+<span class="ansi1">../rtkit-0.13/rtkit-daemon.c:</span> In function ‘<span class="ansi1">dbus_handler</span>’:
+<span class="ansi1">../rtkit-0.13/rtkit-daemon.c:1262:80:</span> <span class="ansi1 ansi35">warning: </span>unused parameter ‘<span class="ansi1">userdata</span>’ [<span class="ansi1 ansi35">-Wunused-parameter</span>]
+ 1262 | static DBusHandlerResult dbus_handler(DBusConnection *c, DBusMessage *m, <span class="ansi1 ansi35">void *userdata</span>) {
+      |                                                                          <span class="ansi1 ansi35">~~~~~~^~~~~~~~</span>
+<span class="ansi1">../rtkit-0.13/rtkit-daemon.c:</span> In function ‘<span class="ansi1">canary_thread</span>’:
+<span class="ansi1">../rtkit-0.13/rtkit-daemon.c:1498:34:</span> <span class="ansi1 ansi35">warning: </span>unused parameter ‘<span class="ansi1">data</span>’ [<span class="ansi1 ansi35">-Wunused-parameter</span>]
+ 1498 | static void* canary_thread(<span class="ansi1 ansi35">void *data</span>) {
+      |                            <span class="ansi1 ansi35">~~~~~~^~~~</span>
+<span class="ansi1">../rtkit-0.13/rtkit-daemon.c:</span> In function ‘<span class="ansi1">watchdog_thread</span>’:
+<span class="ansi1">../rtkit-0.13/rtkit-daemon.c:1560:36:</span> <span class="ansi1 ansi35">warning: </span>unused parameter ‘<span class="ansi1">data</span>’ [<span class="ansi1 ansi35">-Wunused-parameter</span>]
+ 1560 | static void* watchdog_thread(<span class="ansi1 ansi35">void *data</span>) {
+      |                              <span class="ansi1 ansi35">~~~~~~^~~~</span>
+[2/8] x86_64-pc-linux-gnu-gcc -Irtkit-daemon.p -I. -I../rtkit-0.13 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_GNU_SOURCE -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -pthread -MD -MQ rtkit-daemon.p/rtkit.c.o -MF rtkit-daemon.p/rtkit.c.o.d -o rtkit-daemon.p/rtkit.c.o -c ../rtkit-0.13/rtkit.c
+[3/8] x86_64-pc-linux-gnu-gcc -Irtkit-test.p -I. -I../rtkit-0.13 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_GNU_SOURCE -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ rtkit-test.p/rtkit-test.c.o -MF rtkit-test.p/rtkit-test.c.o.d -o rtkit-test.p/rtkit-test.c.o -c ../rtkit-0.13/rtkit-test.c
+<span class="ansi1">../rtkit-0.13/rtkit-test.c:</span> In function ‘<span class="ansi1">main</span>’:
+<span class="ansi1">../rtkit-0.13/rtkit-test.c:76:14:</span> <span class="ansi1 ansi35">warning: </span>unused parameter ‘<span class="ansi1">argc</span>’ [<span class="ansi1 ansi35">-Wunused-parameter</span>]
+   76 | int main(<span class="ansi1 ansi35">int argc</span>, char *argv[]) {
+      |          <span class="ansi1 ansi35">~~~~^~~~</span>
+<span class="ansi1">../rtkit-0.13/rtkit-test.c:76:26:</span> <span class="ansi1 ansi35">warning: </span>unused parameter ‘<span class="ansi1">argv</span>’ [<span class="ansi1 ansi35">-Wunused-parameter</span>]
+   76 | int main(int argc, <span class="ansi1 ansi35">char *argv[]</span>) {
+      |                    <span class="ansi1 ansi35">~~~~~~^~~~~~</span>
+[4/8] x86_64-pc-linux-gnu-gcc -Irtkit-test.p -I. -I../rtkit-0.13 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_GNU_SOURCE -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ rtkit-test.p/rtkit.c.o -MF rtkit-test.p/rtkit.c.o.d -o rtkit-test.p/rtkit.c.o -c ../rtkit-0.13/rtkit.c
+[5/8] x86_64-pc-linux-gnu-gcc -Irtkitctl.p -I. -I../rtkit-0.13 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_GNU_SOURCE -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ rtkitctl.p/rtkitctl.c.o -MF rtkitctl.p/rtkitctl.c.o.d -o rtkitctl.p/rtkitctl.c.o -c ../rtkit-0.13/rtkitctl.c
+[6/8] x86_64-pc-linux-gnu-gcc  -o rtkit-daemon rtkit-daemon.p/rtkit-daemon.c.o rtkit-daemon.p/rtkit.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libdbus-1.so /usr/lib64/libcap.so -lz -Wl,--end-group -pthread
+[7/8] x86_64-pc-linux-gnu-gcc  -o rtkit-test rtkit-test.p/rtkit-test.c.o rtkit-test.p/rtkit.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libdbus-1.so -lz -Wl,--end-group
+[8/8] x86_64-pc-linux-gnu-gcc  -o rtkitctl rtkitctl.p/rtkitctl.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs /usr/lib64/libdbus-1.so
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-auth/rtkit-0.13-r2
+
+&gt;&gt;&gt; Install sys-auth/rtkit-0.13-r2 into /var/tmp/portage/sys-auth/rtkit-0.13-r2/image
+meson install --destdir /var/tmp/portage/sys-auth/rtkit-0.13-r2/image --no-rebuild
+Installing rtkit-daemon to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/libexec
+Installing rtkitctl to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/sbin
+Installing /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13/rtkitctl.8 to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/share/man/man8
+Installing /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13/org.freedesktop.RealtimeKit1.xml to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/share/dbus-1/interfaces
+Installing /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13/org.freedesktop.RealtimeKit1.conf to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/share/dbus-1/system.d
+Installing /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13/org.freedesktop.RealtimeKit1.policy to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/share/polkit-1/actions
+Installing /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13-build/org.freedesktop.RealtimeKit1.service to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/share/dbus-1/system-services
+Installing /var/tmp/portage/sys-auth/rtkit-0.13-r2/work/rtkit-0.13-build/rtkit-daemon.service to /var/tmp/portage/sys-auth/rtkit-0.13-r2/image/usr/lib64/systemd/system
+&gt;&gt;&gt; Completed installing sys-auth/rtkit-0.13-r2 into /var/tmp/portage/sys-auth/rtkit-0.13-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3272 KiB (3.1 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   208 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/sbin/rtkitctl
+   /usr/libexec/rtkit-daemon
+
+</pre>
+</body>
+
+</html>

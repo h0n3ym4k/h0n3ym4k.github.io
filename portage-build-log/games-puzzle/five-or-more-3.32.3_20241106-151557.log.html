@@ -1,0 +1,843 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi35 { color: #E850A8; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    games-puzzle/five-or-more-3.32.3:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gnome@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking five-or-more-3.32.3.tar.xz to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /var/tmp/portage/games-puzzle/five-or-more-3.32.3/temp/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:/usr/share/pkgconfig --pkg-config-path /var/tmp/portage/games-puzzle/five-or-more-3.32.3/temp/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:/usr/share/pkgconfig --native-file /var/tmp/portage/games-puzzle/five-or-more-3.32.3/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3 /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.5.2
+Source dir: <span class="ansi1">/var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3</span>
+Build dir: <span class="ansi1">/var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">five-or-more</span>
+Project version: <span class="ansi1">3.32.3</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 13.3.1 "x86_64-pc-linux-gnu-gcc (Gentoo 13.3.1_p20241025 p1) 13.3.1 20241024")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.42
+Vala compiler for the host machine: <span class="ansi1">/usr/bin/valac-0.56</span> (valac 0.56.16)
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.3.0</span>
+Run-time dependency <span class="ansi1">gee-0.8</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">0.20.6</span>
+Run-time dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">gmodule-export-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">gtk+-3.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">3.24.41</span>
+Run-time dependency <span class="ansi1">libgnome-games-support-1</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.8.2</span>
+Run-time dependency <span class="ansi1">librsvg-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.57.3</span>
+Library <span class="ansi1">m</span> found: <span class="ansi1 ansi32">YES</span>
+Configuring <span class="ansi1">config.h</span> using configuration
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Program <span class="ansi1">desktop-file-validate</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/desktop-file-validate)
+Program <span class="ansi1">appstream-util</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/appstream-util)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-compile-resources</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-resources)
+Program <span class="ansi1">itstool</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/itstool)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Program <span class="ansi1">msginit</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msginit)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">xgettext</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xgettext)
+Build targets in project: <span class="ansi1">135</span>
+<span class="ansi1">NOTICE:</span> Future-deprecated features used:
+ * 0.56.0: {'meson.source_root'}
+
+five-or-more <span class="ansi36">3.32.3</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/games-puzzle/five-or-more-3.32.3/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /var/tmp/portage/games-puzzle/five-or-more-3.32.3/temp/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:/usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /var/tmp/portage/games-puzzle/five-or-more-3.32.3/temp/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:/usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3 ...
+ninja -v -j2 -l2
+[1/130] /usr/bin/glib-compile-resources ../five-or-more-3.32.3/data/org.gnome.five-or-more.gresource.xml --sourcedir ../five-or-more-3.32.3/data --internal --generate --target data/five-or-more.c --dependency-file data/five-or-more.c.d
+[2/130] /usr/bin/glib-compile-resources ../five-or-more-3.32.3/data/org.gnome.five-or-more.gresource.xml --sourcedir ../five-or-more-3.32.3/data --internal --generate --target data/five-or-more.h
+[3/130] /usr/bin/valac-0.56 -C --pkg librsvg-2.0 --pkg libgnome-games-support-1 --pkg gtk+-3.0 --pkg gio-2.0 --pkg gee-0.8 --color=always --directory src/five-or-more.p --basedir ../five-or-more-3.32.3/src --gresources=../five-or-more-3.32.3/data/org.gnome.five-or-more.gresource.xml --gresourcesdir=data/../five-or-more-3.32.3/data --gresources ../five-or-more-3.32.3/data/org.gnome.five-or-more.gresource.xml ../five-or-more-3.32.3/src/config.vapi ../five-or-more-3.32.3/src/board.vala ../five-or-more-3.32.3/src/game.vala ../five-or-more-3.32.3/src/main.vala ../five-or-more-3.32.3/src/next-pieces-widget.vala ../five-or-more-3.32.3/src/piece.vala ../five-or-more-3.32.3/src/piece-generator.vala ../five-or-more-3.32.3/src/preferences-dialog.vala ../five-or-more-3.32.3/src/theme-renderer.vala ../five-or-more-3.32.3/src/view.vala ../five-or-more-3.32.3/src/window.vala
+<span class="ansi1">../five-or-more-3.32.3/src/window.vala:28.5-28.35:</span> <span class="ansi1 ansi35">warning:</span> [GtkChild] fields must be declared as <span class="ansi1">`unowned'</span>
+   28 |     private Gtk.HeaderBar headerbar;
+      | <span class="ansi1 ansi32">    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<span class="ansi1">../five-or-more-3.32.3/src/window.vala:31.5-31.32:</span> <span class="ansi1 ansi35">warning:</span> [GtkChild] fields must be declared as <span class="ansi1">`unowned'</span>
+   31 |     private Gtk.Box preview_hbox;
+      | <span class="ansi1 ansi32">    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<span class="ansi1">../five-or-more-3.32.3/src/window.vala:34.5-34.46:</span> <span class="ansi1 ansi35">warning:</span> [GtkChild] fields must be declared as <span class="ansi1">`unowned'</span>
+   34 |     private Gtk.MenuButton primary_menu_button;
+      | <span class="ansi1 ansi32">    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<span class="ansi1">../five-or-more-3.32.3/src/window.vala:37.5-37.38:</span> <span class="ansi1 ansi35">warning:</span> [GtkChild] fields must be declared as <span class="ansi1">`unowned'</span>
+   37 |     private Games.GridFrame grid_frame;
+      | <span class="ansi1 ansi32">    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<span class="ansi1">../five-or-more-3.32.3/src/theme-renderer.vala:88.26-88.45:</span> <span class="ansi1 ansi35">warning:</span> <span class="ansi1">`Rsvg.Handle.get_dimensions'</span> has been deprecated since 2.52.
+   88 |         var dimensions = theme.get_dimensions ();
+      | <span class="ansi1 ansi32">                         ^~~~~~~~~~~~~~~~~~~~    </span>
+<span class="ansi1">../five-or-more-3.32.3/src/theme-renderer.vala:88.13-88.22:</span> <span class="ansi1 ansi35">warning:</span> <span class="ansi1">`Rsvg.DimensionData'</span> has been deprecated since 2.46.
+   88 |         var dimensions = theme.get_dimensions ();
+      | <span class="ansi1 ansi32">            ^~~~~~~~~~                           </span>
+<span class="ansi1">../five-or-more-3.32.3/src/theme-renderer.vala:115.13-115.30:</span> <span class="ansi1 ansi35">warning:</span> <span class="ansi1">`Rsvg.Handle.render_cairo'</span> has been deprecated since 2.52.
+  115 |             theme.render_cairo (cr_preview);
+      | <span class="ansi1 ansi32">            ^~~~~~~~~~~~~~~~~~              </span>
+<span class="ansi1">../five-or-more-3.32.3/src/window.vala:122.9-122.28:</span> <span class="ansi1 ansi35">warning:</span> implicit .begin is deprecated
+  122 |         highscores.add_score (game.score,
+      | <span class="ansi1 ansi32">        ^~~~~~~~~~~~~~~~~~~~             </span>
+<span class="ansi1">../five-or-more-3.32.3/src/preferences-dialog.vala:30.5-30.38:</span> <span class="ansi1 ansi35">warning:</span> [GtkChild] fields must be declared as <span class="ansi1">`unowned'</span>
+   30 |     private Gtk.ComboBoxText theme_box;
+      | <span class="ansi1 ansi32">    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<span class="ansi1">../five-or-more-3.32.3/src/preferences-dialog.vala:33.5-33.40:</span> <span class="ansi1 ansi35">warning:</span> [GtkChild] fields must be declared as <span class="ansi1">`unowned'</span>
+   33 |     private Gtk.ColorButton color_button;
+      | <span class="ansi1 ansi32">    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ </span>
+<span class="ansi1">../five-or-more-3.32.3/src/main.vala:140.13-140.24:</span> <span class="ansi1 ansi35">warning:</span> <span class="ansi1">`Gtk.show_uri'</span> has been deprecated since 3.22
+  140 |             Gtk.show_uri (window.get_screen (), "help:five-or-more", Gtk.get_current_event_time ());
+      | <span class="ansi1 ansi32">            ^~~~~~~~~~~~                                                                            </span>
+<span class="ansi1">../five-or-more-3.32.3/src/main.vala:83.9-83.53:</span> <span class="ansi1 ansi35">warning:</span> Access to possible <span class="ansi1">`null'</span>. Perform a check or use an unsafe cast.
+   83 |         (board_size_action as SimpleAction).set_state (new Variant.string(size.to_string()));
+      | <span class="ansi1 ansi32">        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                        </span>
+Compilation succeeded - 12 warning(s)
+[4/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/cs/cs.po -o help/cs/five-or-more-cs.gmo
+[5/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/de/de.po -o help/de/five-or-more-de.gmo
+[6/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/el/el.po -o help/el/five-or-more-el.gmo
+[7/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/es/es.po -o help/es/five-or-more-es.gmo
+[8/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/fr/fr.po -o help/fr/five-or-more-fr.gmo
+[9/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/gl/gl.po -o help/gl/five-or-more-gl.gmo
+[10/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/hu/hu.po -o help/hu/five-or-more-hu.gmo
+[11/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/ja/ja.po -o help/ja/five-or-more-ja.gmo
+[12/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/pl/pl.po -o help/pl/five-or-more-pl.gmo
+[13/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/pt_BR/pt_BR.po -o help/pt_BR/five-or-more-pt_BR.gmo
+[14/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/sv/sv.po -o help/sv/five-or-more-sv.gmo
+[15/130] /usr/bin/msgfmt ../five-or-more-3.32.3/help/uk/uk.po -o help/uk/five-or-more-uk.gmo
+[16/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_.._.._data_five-or-more.c.o -MF src/five-or-more.p/meson-generated_.._.._data_five-or-more.c.o.d -o src/five-or-more.p/meson-generated_.._.._data_five-or-more.c.o -c data/five-or-more.c
+[17/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_board.c.o -MF src/five-or-more.p/meson-generated_board.c.o.d -o src/five-or-more.p/meson-generated_board.c.o -c src/five-or-more.p/board.c
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_construct</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:356:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp5__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  356 |                                                         gint <span class="ansi1 ansi35">_tmp5__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_reset</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:452:70:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp11__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  452 |                                                                 gint <span class="ansi1 ansi35">_tmp11__length1</span>;
+      |                                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:448:70:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp9__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  448 |                                                                 gint <span class="ansi1 ansi35">_tmp9__length1</span>;
+      |                                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:444:70:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp7__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  444 |                                                                 gint <span class="ansi1 ansi35">_tmp7__length1</span>;
+      |                                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:474:70:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp13__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  474 |                                                                 gint <span class="ansi1 ansi35">_tmp13__length1</span>;
+      |                                                                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:426:62:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp5__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  426 |                                                         gint <span class="ansi1 ansi35">_tmp5__length1</span>;
+      |                                                              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_set_piece</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:565:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  565 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_get_piece</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:585:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  585 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_get_cell</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:608:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  608 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_find_path</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:652:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp3__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  652 |         gint <span class="ansi1 ansi35">_tmp3__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:647:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  647 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_reset_path_search</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:938:22:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">cell_collection_length2</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  938 |                 gint <span class="ansi1 ansi35">cell_collection_length2</span> = 0;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_get_n_rows</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:1070:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp1__length2</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1070 |         gint <span class="ansi1 ansi35">_tmp1__length2</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:1068:16:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp1_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1068 |         Cell** <span class="ansi1 ansi35">_tmp1_</span>;
+      |                <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:1067:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length2</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1067 |         gint <span class="ansi1 ansi35">_tmp0__length2</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:1066:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1066 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:</span> In function ‘<span class="ansi1">board_get_n_cols</span>’:
+<span class="ansi1">src/five-or-more.p/board.c:1093:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp1__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1093 |         gint <span class="ansi1 ansi35">_tmp1__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:1092:16:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp1_</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1092 |         Cell** <span class="ansi1 ansi35">_tmp1_</span>;
+      |                <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:1091:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length2</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1091 |         gint <span class="ansi1 ansi35">_tmp0__length2</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/board.c:1090:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+ 1090 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+[18/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_game.c.o -MF src/five-or-more.p/meson-generated_game.c.o.d -o src/five-or-more.p/meson-generated_game.c.o -c src/five-or-more.p/game.c
+[19/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_main.c.o -MF src/five-or-more.p/meson-generated_main.c.o.d -o src/five-or-more.p/meson-generated_main.c.o -c src/five-or-more.p/main.c
+<span class="ansi1">src/five-or-more.p/main.c:</span> In function ‘<span class="ansi1">five_or_more_app_construct</span>’:
+<span class="ansi1">src/five-or-more.p/main.c:292:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">G_APPLICATION_FLAGS_NONE</span>’ is deprecated: Use 'G_APPLICATION_DEFAULT_FLAGS' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  292 |         <span class="ansi1 ansi35">self</span> = (FiveOrMoreApp*) g_object_new (object_type, "application-id", "org.gnome.five-or-more", "flags", G_APPLICATION_FLAGS_NONE, NULL);
+      |         <span class="ansi1 ansi35">^~~~</span>
+In file included from <span class="ansi1">/usr/include/glib-2.0/gio/giotypes.h:30</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/gio/gio.h:28</span>,
+                 from <span class="ansi1">/usr/include/gtk-3.0/gdk/gdkapplaunchcontext.h:28</span>,
+                 from <span class="ansi1">/usr/include/gtk-3.0/gdk/gdk.h:32</span>,
+                 from <span class="ansi1">/usr/include/gtk-3.0/gtk/gtk.h:30</span>,
+                 from <span class="ansi1">src/five-or-more.p/main.c:27</span>:
+<span class="ansi1">/usr/include/glib-2.0/gio/gioenums.h:1540:3:</span> <span class="ansi1 ansi36">note: </span>declared here
+ 1540 |   <span class="ansi1 ansi36">G_APPLICATION_FLAGS_NONE</span> GIO_DEPRECATED_ENUMERATOR_IN_2_74_FOR(G_APPLICATION_DEFAULT_FLAGS),
+      |   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/main.c:</span> In function ‘<span class="ansi1">five_or_more_app_help_cb</span>’:
+<span class="ansi1">src/five-or-more.p/main.c:525:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_show_uri</span>’ is deprecated: Use 'gtk_show_uri_on_window' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  525 |                 <span class="ansi1 ansi35">gtk_show_uri</span> (_tmp1_, "help:five-or-more", gtk_get_current_event_time (), &amp;_inner_error0_);
+      |                 <span class="ansi1 ansi35">^~~~~~~~~~~~</span>
+In file included from <span class="ansi1">/usr/include/gtk-3.0/gtk/gtk.h:200</span>:
+<span class="ansi1">/usr/include/gtk-3.0/gtk/gtkshow.h:33:10:</span> <span class="ansi1 ansi36">note: </span>declared here
+   33 | gboolean <span class="ansi1 ansi36">gtk_show_uri</span>  (GdkScreen   *screen,
+      |          <span class="ansi1 ansi36">^~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/main.c:</span> At top level:
+<span class="ansi1">src/five-or-more.p/main.c:92:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">five_or_more_app_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+   92 | static GParamSpec* <span class="ansi1 ansi35">five_or_more_app_properties</span>[FIVE_OR_MORE_APP_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+[20/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_next-pieces-widget.c.o -MF src/five-or-more.p/meson-generated_next-pieces-widget.c.o.d -o src/five-or-more.p/meson-generated_next-pieces-widget.c.o -c src/five-or-more.p/next-pieces-widget.c
+<span class="ansi1">src/five-or-more.p/next-pieces-widget.c:103:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">next_pieces_widget_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  103 | static GParamSpec* <span class="ansi1 ansi35">next_pieces_widget_properties</span>[NEXT_PIECES_WIDGET_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+[21/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_piece.c.o -MF src/five-or-more.p/meson-generated_piece.c.o.d -o src/five-or-more.p/meson-generated_piece.c.o -c src/five-or-more.p/piece.c
+[22/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_piece-generator.c.o -MF src/five-or-more.p/meson-generated_piece-generator.c.o.d -o src/five-or-more.p/meson-generated_piece-generator.c.o -c src/five-or-more.p/piece-generator.c
+[23/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_preferences-dialog.c.o -MF src/five-or-more.p/meson-generated_preferences-dialog.c.o.d -o src/five-or-more.p/meson-generated_preferences-dialog.c.o -c src/five-or-more.p/preferences-dialog.c
+<span class="ansi1">src/five-or-more.p/preferences-dialog.c:</span> In function ‘<span class="ansi1">preferences_dialog_theme_set_cb</span>’:
+<span class="ansi1">src/five-or-more.p/preferences-dialog.c:149:22:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">_t_collection_size_</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+  149 |                 gint <span class="ansi1 ansi35">_t_collection_size_</span> = 0;
+      |                      <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/preferences-dialog.c:</span> At top level:
+<span class="ansi1">src/five-or-more.p/preferences-dialog.c:69:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">preferences_dialog_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+   69 | static GParamSpec* <span class="ansi1 ansi35">preferences_dialog_properties</span>[PREFERENCES_DIALOG_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+[24/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_theme-renderer.c.o -MF src/five-or-more.p/meson-generated_theme-renderer.c.o.d -o src/five-or-more.p/meson-generated_theme-renderer.c.o -c src/five-or-more.p/theme-renderer.c
+<span class="ansi1">src/five-or-more.p/theme-renderer.c:</span> In function ‘<span class="ansi1">theme_renderer_load_theme</span>’:
+<span class="ansi1">src/five-or-more.p/theme-renderer.c:304:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">rsvg_handle_get_dimensions</span>’ is deprecated: Use 'rsvg_handle_get_intrinsic_size_in_pixels' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  304 |         <span class="ansi1 ansi35">rsvg_handle_get_dimensions</span> (_tmp3_, &amp;_tmp4_);
+      |         <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+In file included from <span class="ansi1">src/five-or-more.p/theme-renderer.c:34</span>:
+<span class="ansi1">/usr/include/librsvg-2.0/librsvg/rsvg.h:708:6:</span> <span class="ansi1 ansi36">note: </span>declared here
+  708 | void <span class="ansi1 ansi36">rsvg_handle_get_dimensions</span> (RsvgHandle *handle, RsvgDimensionData *dimension_data);
+      |      <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/theme-renderer.c:</span> In function ‘<span class="ansi1">theme_renderer_render_sprite</span>’:
+<span class="ansi1">src/five-or-more.p/theme-renderer.c:376:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">rsvg_handle_render_cairo</span>’ is deprecated: Use 'rsvg_handle_render_document' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  376 |                 <span class="ansi1 ansi35">rsvg_handle_render_cairo</span> (_tmp9_, _tmp10_);
+      |                 <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~</span>
+In file included from <span class="ansi1">/usr/include/librsvg-2.0/librsvg/rsvg.h:1452</span>:
+<span class="ansi1">/usr/include/librsvg-2.0/librsvg/rsvg-cairo.h:90:10:</span> <span class="ansi1 ansi36">note: </span>declared here
+   90 | gboolean <span class="ansi1 ansi36">rsvg_handle_render_cairo</span> (RsvgHandle *handle, cairo_t *cr);
+      |          <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~</span>
+[25/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_view.c.o -MF src/five-or-more.p/meson-generated_view.c.o.d -o src/five-or-more.p/meson-generated_view.c.o -c src/five-or-more.p/view.c
+<span class="ansi1">src/five-or-more.p/view.c:94:20:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">view_properties</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-variable</span>]
+   94 | static GParamSpec* <span class="ansi1 ansi35">view_properties</span>[VIEW_NUM_PROPERTIES];
+      |                    <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+[26/130] x86_64-pc-linux-gnu-gcc -Isrc/five-or-more.p -Isrc -I../five-or-more-3.32.3/src -Idata -I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/include/gnome-games-support-1 -I/usr/include/librsvg-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -include config.h -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -pthread -MD -MQ src/five-or-more.p/meson-generated_window.c.o -MF src/five-or-more.p/meson-generated_window.c.o.d -o src/five-or-more.p/meson-generated_window.c.o -c src/five-or-more.p/window.c
+<span class="ansi1">src/five-or-more.p/window.c:</span> In function ‘<span class="ansi1">__lambda6_</span>’:
+<span class="ansi1">src/five-or-more.p/window.c:433:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  433 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/window.c:</span> In function ‘<span class="ansi1">__lambda7_</span>’:
+<span class="ansi1">src/five-or-more.p/window.c:468:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp0__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  468 |         gint <span class="ansi1 ansi35">_tmp0__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~</span>
+<span class="ansi1">src/five-or-more.p/window.c:</span> In function ‘<span class="ansi1">game_window_construct</span>’:
+<span class="ansi1">src/five-or-more.p/window.c:545:14:</span> <span class="ansi1 ansi35">warning: </span>variable ‘<span class="ansi1">_tmp18__length1</span>’ set but not used [<span class="ansi1 ansi35">-Wunused-but-set-variable</span>]
+  545 |         gint <span class="ansi1 ansi35">_tmp18__length1</span>;
+      |              <span class="ansi1 ansi35">^~~~~~~~~~~~~~~</span>
+In file included from <span class="ansi1">src/five-or-more.p/window.c:35</span>:
+<span class="ansi1">src/five-or-more.p/window.c:</span> In function ‘<span class="ansi1">game_window_change_size</span>’:
+<span class="ansi1">src/five-or-more.p/window.c:781:138:</span> <span class="ansi1 ansi35">warning: </span>too many arguments for format [<span class="ansi1 ansi35">-Wformat-extra-args</span>]
+  781 |                 _tmp5_ = (GtkMessageDialog*) gtk_message_dialog_new ((GtkWindow*) self, flags, GTK_MESSAGE_WARNING, GTK_BUTTONS_NONE, _ (<span class="ansi1 ansi35">"Are you sure you want to restart the game?"</span>), NULL);
+      |                                                                                                                                          <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/glib-2.0/glib/gi18n-lib.h:32:59:</span> <span class="ansi1 ansi36">note: </span>in definition of macro ‘<span class="ansi1">_</span>’
+   32 | #define  _(String) ((char *) g_dgettext (GETTEXT_PACKAGE, <span class="ansi1 ansi36">String</span>))
+      |                                                           <span class="ansi1 ansi36">^~~~~~</span>
+[27/130] /usr/lib/python-exec/python3.12/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../five-or-more-3.32.3/data/org.gnome.five-or-more.desktop.in data/org.gnome.five-or-more.desktop desktop /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/po
+[28/130] /usr/lib/python-exec/python3.12/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../five-or-more-3.32.3/data/org.gnome.five-or-more.appdata.xml.in data/org.gnome.five-or-more.appdata.xml xml /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/po
+[29/130] /usr/bin/itstool -m help/cs/five-or-more-cs.gmo --lang cs -o help/cs ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[30/130] /usr/bin/itstool -m help/de/five-or-more-de.gmo --lang de -o help/de ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[31/130] /usr/bin/itstool -m help/el/five-or-more-el.gmo --lang el -o help/el ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[32/130] /usr/bin/itstool -m help/es/five-or-more-es.gmo --lang es -o help/es ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[33/130] /usr/bin/itstool -m help/fr/five-or-more-fr.gmo --lang fr -o help/fr ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[34/130] /usr/bin/itstool -m help/gl/five-or-more-gl.gmo --lang gl -o help/gl ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[35/130] /usr/bin/itstool -m help/hu/five-or-more-hu.gmo --lang hu -o help/hu ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[36/130] /usr/bin/itstool -m help/ja/five-or-more-ja.gmo --lang ja -o help/ja ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[37/130] /usr/bin/itstool -m help/pl/five-or-more-pl.gmo --lang pl -o help/pl ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[38/130] /usr/bin/itstool -m help/pt_BR/five-or-more-pt_BR.gmo --lang pt_BR -o help/pt_BR ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[39/130] /usr/bin/itstool -m help/sv/five-or-more-sv.gmo --lang sv -o help/sv ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[40/130] /usr/bin/itstool -m help/uk/five-or-more-uk.gmo --lang uk -o help/uk ../five-or-more-3.32.3/help/C/bug-filing.page ../five-or-more-3.32.3/help/C/change-board-size.page ../five-or-more-3.32.3/help/C/change-theme.page ../five-or-more-3.32.3/help/C/develop.page ../five-or-more-3.32.3/help/C/documentation.page ../five-or-more-3.32.3/help/C/index.page ../five-or-more-3.32.3/help/C/legal.xml ../five-or-more-3.32.3/help/C/license.page ../five-or-more-3.32.3/help/C/play.page ../five-or-more-3.32.3/help/C/rules.page ../five-or-more-3.32.3/help/C/scores.page ../five-or-more-3.32.3/help/C/shortcuts.page ../five-or-more-3.32.3/help/C/strategy.page ../five-or-more-3.32.3/help/C/translate.page
+[41/130] /usr/bin/msgfmt -o po/af/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/af.po
+[42/130] /usr/bin/msgfmt -o po/am/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/am.po
+[43/130] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ar.po
+[44/130] /usr/bin/msgfmt -o po/as/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/as.po
+[45/130] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ast.po
+[46/130] /usr/bin/msgfmt -o po/az/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/az.po
+[47/130] /usr/bin/msgfmt -o po/be/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/be.po
+[48/130] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/bg.po
+[49/130] /usr/bin/msgfmt -o po/bn/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/bn.po
+[50/130] /usr/bin/msgfmt -o po/bn_IN/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/bn_IN.po
+[51/130] /usr/bin/msgfmt -o po/br/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/br.po
+[52/130] /usr/bin/msgfmt -o po/bs/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/bs.po
+[53/130] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ca.po
+[54/130] /usr/bin/msgfmt -o po/ca@valencia/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ca@valencia.po
+[55/130] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/cs.po
+[56/130] /usr/bin/msgfmt -o po/cy/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/cy.po
+[57/130] /usr/bin/msgfmt -o po/da/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/da.po
+[58/130] /usr/bin/msgfmt -o po/de/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/de.po
+[59/130] /usr/bin/msgfmt -o po/dz/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/dz.po
+[60/130] /usr/bin/msgfmt -o po/el/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/el.po
+[61/130] /usr/bin/msgfmt -o po/en_CA/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/en_CA.po
+[62/130] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/en_GB.po
+[63/130] /usr/bin/msgfmt -o po/en@shaw/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/en@shaw.po
+[64/130] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/eo.po
+[65/130] /usr/bin/msgfmt -o po/es/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/es.po
+[66/130] /usr/bin/msgfmt -o po/et/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/et.po
+[67/130] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/eu.po
+[68/130] /usr/bin/msgfmt -o po/fa/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/fa.po
+[69/130] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/fi.po
+[70/130] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/fr.po
+[71/130] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/fur.po
+[72/130] /usr/bin/msgfmt -o po/ga/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ga.po
+[73/130] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/gl.po
+[74/130] /usr/bin/msgfmt -o po/gu/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/gu.po
+[75/130] /usr/bin/msgfmt -o po/he/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/he.po
+[76/130] /usr/bin/msgfmt -o po/hi/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/hi.po
+[77/130] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/hr.po
+[78/130] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/hu.po
+[79/130] /usr/bin/msgfmt -o po/id/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/id.po
+[80/130] /usr/bin/msgfmt -o po/is/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/is.po
+[81/130] /usr/bin/msgfmt -o po/it/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/it.po
+[82/130] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ja.po
+[83/130] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ka.po
+[84/130] /usr/bin/msgfmt -o po/kk/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/kk.po
+[85/130] /usr/bin/msgfmt -o po/km/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/km.po
+[86/130] /usr/bin/msgfmt -o po/kn/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/kn.po
+[87/130] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ko.po
+[88/130] /usr/bin/msgfmt -o po/ku/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ku.po
+[89/130] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/lt.po
+[90/130] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/lv.po
+[91/130] /usr/bin/msgfmt -o po/mai/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/mai.po
+[92/130] /usr/bin/msgfmt -o po/mk/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/mk.po
+[93/130] /usr/bin/msgfmt -o po/ml/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ml.po
+[94/130] /usr/bin/msgfmt -o po/mn/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/mn.po
+[95/130] /usr/bin/msgfmt -o po/mr/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/mr.po
+[96/130] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ms.po
+[97/130] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/nb.po
+[98/130] /usr/bin/msgfmt -o po/ne/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ne.po
+[99/130] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/nl.po
+[100/130] /usr/bin/msgfmt -o po/nn/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/nn.po
+[101/130] /usr/bin/msgfmt -o po/oc/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/oc.po
+[102/130] /usr/bin/msgfmt -o po/or/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/or.po
+[103/130] /usr/bin/msgfmt -o po/pa/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/pa.po
+[104/130] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/pl.po
+[105/130] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/pt.po
+[106/130] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/pt_BR.po
+[107/130] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ro.po
+[108/130] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ru.po
+[109/130] /usr/bin/msgfmt -o po/rw/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/rw.po
+[110/130] /usr/bin/msgfmt -o po/si/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/si.po
+[111/130] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/sk.po
+[112/130] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/sl.po
+[113/130] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/sq.po
+[114/130] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/sr.po
+[115/130] /usr/bin/msgfmt -o po/sr@latin/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/sr@latin.po
+[116/130] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/sv.po
+[117/130] /usr/bin/msgfmt -o po/ta/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ta.po
+[118/130] /usr/bin/msgfmt -o po/te/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/te.po
+[119/130] /usr/bin/msgfmt -o po/tg/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/tg.po
+[120/130] /usr/bin/msgfmt -o po/th/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/th.po
+[121/130] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/tr.po
+[122/130] /usr/bin/msgfmt -o po/ug/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/ug.po
+[123/130] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/uk.po
+[124/130] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/vi.po
+[125/130] /usr/bin/msgfmt -o po/wa/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/wa.po
+[126/130] /usr/bin/msgfmt -o po/xh/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/xh.po
+[127/130] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/zh_CN.po
+[128/130] /usr/bin/msgfmt -o po/zh_HK/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/zh_HK.po
+[129/130] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/five-or-more.mo ../five-or-more-3.32.3/po/zh_TW.po
+[130/130] x86_64-pc-linux-gnu-gcc  -o src/five-or-more src/five-or-more.p/meson-generated_.._.._data_five-or-more.c.o src/five-or-more.p/meson-generated_board.c.o src/five-or-more.p/meson-generated_game.c.o src/five-or-more.p/meson-generated_main.c.o src/five-or-more.p/meson-generated_next-pieces-widget.c.o src/five-or-more.p/meson-generated_piece.c.o src/five-or-more.p/meson-generated_piece-generator.c.o src/five-or-more.p/meson-generated_preferences-dialog.c.o src/five-or-more.p/meson-generated_theme-renderer.c.o src/five-or-more.p/meson-generated_view.c.o src/five-or-more.p/meson-generated_window.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libgee-0.8.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libatk-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libgnome-games-support-1.so /usr/lib64/librsvg-2.so -lm -Wl,--end-group
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: games-puzzle/five-or-more-3.32.3
+
+&gt;&gt;&gt; Install games-puzzle/five-or-more-3.32.3 into /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image
+meson install --destdir /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image --no-rebuild
+Installing data/org.gnome.five-or-more.desktop to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/applications
+Installing data/org.gnome.five-or-more.appdata.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/metainfo
+Installing help/cs/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/cs/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more
+Installing help/de/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/de/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more
+Installing help/el/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/el/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more
+Installing help/es/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/es/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more
+Installing help/fr/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/fr/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more
+Installing help/gl/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/gl/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more
+Installing help/hu/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/hu/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more
+Installing help/ja/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/ja/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more
+Installing help/pl/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pl/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more
+Installing help/pt_BR/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/pt_BR/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more
+Installing help/sv/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/sv/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more
+Installing help/uk/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing help/uk/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more
+Installing po/af/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/af/LC_MESSAGES
+Installing po/am/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/am/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ar/LC_MESSAGES
+Installing po/as/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/as/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/az/LC_MESSAGES
+Installing po/be/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/be/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/bn/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/bn/LC_MESSAGES
+Installing po/bn_IN/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/bn_IN/LC_MESSAGES
+Installing po/br/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/br/LC_MESSAGES
+Installing po/bs/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/bs/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/de/LC_MESSAGES
+Installing po/dz/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/dz/LC_MESSAGES
+Installing po/el/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_CA/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/en_CA/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/en@shaw/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/en@shaw/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/es/LC_MESSAGES
+Installing po/et/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/ga/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ga/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/gu/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/gu/LC_MESSAGES
+Installing po/he/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/id/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/id/LC_MESSAGES
+Installing po/is/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/is/LC_MESSAGES
+Installing po/it/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/kk/LC_MESSAGES
+Installing po/km/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/km/LC_MESSAGES
+Installing po/kn/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/kn/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ko/LC_MESSAGES
+Installing po/ku/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ku/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/lv/LC_MESSAGES
+Installing po/mai/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/mai/LC_MESSAGES
+Installing po/mk/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/mk/LC_MESSAGES
+Installing po/ml/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ml/LC_MESSAGES
+Installing po/mn/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/mn/LC_MESSAGES
+Installing po/mr/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/mr/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ms/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/ne/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ne/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/nn/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/oc/LC_MESSAGES
+Installing po/or/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/or/LC_MESSAGES
+Installing po/pa/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/pa/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/rw/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/rw/LC_MESSAGES
+Installing po/si/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/si/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/te/LC_MESSAGES
+Installing po/tg/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/tg/LC_MESSAGES
+Installing po/th/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/th/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/ug/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/ug/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/wa/LC_MESSAGES
+Installing po/xh/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/xh/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/five-or-more.mo to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing src/five-or-more to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/bin
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/five-or-more.6 to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/man/man6
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/balls.svg to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/five-or-more/themes
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/shapes.svg to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/five-or-more/themes
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/tango.svg to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/five-or-more/themes
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/five-or-more.ui to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/five-or-more-preferences.ui to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/16x16/org.gnome.five-or-more.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/16x16/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/22x22/org.gnome.five-or-more.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/22x22/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/24x24/org.gnome.five-or-more.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/24x24/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/32x32/org.gnome.five-or-more.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/32x32/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/48x48/org.gnome.five-or-more.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/48x48/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/256x256/org.gnome.five-or-more.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/256x256/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/512x512/org.gnome.five-or-more.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/512x512/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/icons/hicolor/symbolic/org.gnome.five-or-more-symbolic.svg to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/icons/hicolor/symbolic/apps
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/data/org.gnome.five-or-more.gschema.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/glib-2.0/schemas
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/bug-filing.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/change-board-size.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/change-theme.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/develop.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/documentation.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/index.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/legal.xml to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/license.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/play.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/rules.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/scores.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/shortcuts.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/strategy.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/translate.page to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/help/C/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/C/five-or-more/figures
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/cs/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/de/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/el/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/es/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/fr/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/gl/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/hu/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/ja/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pl/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/pt_BR/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/sv/five-or-more/figures/vertical.png
+Installing symlink pointing to ../../../C/five-or-more/figures/diagonal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/diagonal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-demo.ogv to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/glines-demo.ogv
+Installing symlink pointing to ../../../C/five-or-more/figures/glines-gameover.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/glines-gameover.png
+Installing symlink pointing to ../../../C/five-or-more/figures/horizontal.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/horizontal.png
+Installing symlink pointing to ../../../C/five-or-more/figures/large.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/large.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/logo.png
+Installing symlink pointing to ../../../C/five-or-more/figures/logo32.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/logo32.png
+Installing symlink pointing to ../../../C/five-or-more/figures/medium.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/medium.png
+Installing symlink pointing to ../../../C/five-or-more/figures/small.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/small.png
+Installing symlink pointing to ../../../C/five-or-more/figures/vertical.png to /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image/usr/share/help/uk/five-or-more/figures/vertical.png
+Running custom install script '/usr/bin/python3.12 /var/tmp/portage/games-puzzle/five-or-more-3.32.3/work/five-or-more-3.32.3/meson_post_install.py'
+&gt;&gt;&gt; Completed installing games-puzzle/five-or-more-3.32.3 into /var/tmp/portage/games-puzzle/five-or-more-3.32.3/image
+
+ <span class="ansi32">*</span> Final size of build directory: 7732 KiB (7.5 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  4236 KiB (4.1 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/five-or-more
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>

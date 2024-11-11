@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-libs/jsoncpp-1.9.6-r2:0/26
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: mgorny@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Checking whether python3_13 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.13 to build (via PYTHON_COMPAT iteration)
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking jsoncpp-1.9.6.tar.gz to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/temp/python3.13/pkgconfig:/usr/share/pkgconfig --pkg-config-path /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/temp/python3.13/pkgconfig:/usr/share/pkgconfig --native-file /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain --includedir include/jsoncpp -Dtests=false /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6 /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6-abi_x86_64.amd64
+The Meson build system
+Version: 1.5.2
+Source dir: /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6
+Build dir: /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6-abi_x86_64.amd64
+Build type: native build
+Project name: jsoncpp
+Project version: 1.9.6
+C++ compiler for the host machine: x86_64-pc-linux-gnu-g++ (gcc 13.3.1 "x86_64-pc-linux-gnu-g++ (Gentoo 13.3.1_p20241025 p1) 13.3.1 20241024")
+C++ linker for the host machine: x86_64-pc-linux-gnu-g++ ld.bfd 2.42
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.3.0
+Build targets in project: 1
+
+jsoncpp 1.9.6
+
+  User defined options
+    Native files         : /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/temp/python3.13/pkgconfig:/usr/share/pkgconfig
+    buildtype            : plain
+    includedir           : include/jsoncpp
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/temp/python3.13/pkgconfig:/usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    tests                : false
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -j2 -l2
+[1/4] x86_64-pc-linux-gnu-g++ -Ilibjsoncpp.so.26.p -I. -I../jsoncpp-1.9.6 -I../jsoncpp-1.9.6/include -fdiagnostics-color=always -D_GLIBCXX_ASSERTIONS=1 -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++11 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libjsoncpp.so.26.p/src_lib_json_json_reader.cpp.o -MF libjsoncpp.so.26.p/src_lib_json_json_reader.cpp.o.d -o libjsoncpp.so.26.p/src_lib_json_json_reader.cpp.o -c ../jsoncpp-1.9.6/src/lib_json/json_reader.cpp
+[2/4] x86_64-pc-linux-gnu-g++ -Ilibjsoncpp.so.26.p -I. -I../jsoncpp-1.9.6 -I../jsoncpp-1.9.6/include -fdiagnostics-color=always -D_GLIBCXX_ASSERTIONS=1 -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++11 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libjsoncpp.so.26.p/src_lib_json_json_value.cpp.o -MF libjsoncpp.so.26.p/src_lib_json_json_value.cpp.o.d -o libjsoncpp.so.26.p/src_lib_json_json_value.cpp.o -c ../jsoncpp-1.9.6/src/lib_json/json_value.cpp
+[3/4] x86_64-pc-linux-gnu-g++ -Ilibjsoncpp.so.26.p -I. -I../jsoncpp-1.9.6 -I../jsoncpp-1.9.6/include -fdiagnostics-color=always -D_GLIBCXX_ASSERTIONS=1 -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c++11 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libjsoncpp.so.26.p/src_lib_json_json_writer.cpp.o -MF libjsoncpp.so.26.p/src_lib_json_json_writer.cpp.o.d -o libjsoncpp.so.26.p/src_lib_json_json_writer.cpp.o -c ../jsoncpp-1.9.6/src/lib_json/json_writer.cpp
+[4/4] x86_64-pc-linux-gnu-g++  -o libjsoncpp.so.26 libjsoncpp.so.26.p/src_lib_json_json_reader.cpp.o libjsoncpp.so.26.p/src_lib_json_json_value.cpp.o libjsoncpp.so.26.p/src_lib_json_json_writer.cpp.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libjsoncpp.so.26 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-libs/jsoncpp-1.9.6-r2
+
+&gt;&gt;&gt; Install dev-libs/jsoncpp-1.9.6-r2 into /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image --no-rebuild
+Installing libjsoncpp.so.26 to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/lib64
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/allocator.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/assertions.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/config.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/json_features.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/forwards.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/json.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/reader.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/value.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/version.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/include/json/writer.h to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/include/jsoncpp/json
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6-abi_x86_64.amd64/meson-private/jsoncpp.pc to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6-abi_x86_64.amd64/jsoncppConfig.cmake to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/lib64/cmake/jsoncpp
+Installing /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/work/jsoncpp-1.9.6/jsoncpp-namespaced-targets.cmake to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/lib64/cmake/jsoncpp
+Installing symlink pointing to libjsoncpp.so.26 to /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image/usr/lib64/libjsoncpp.so
+&gt;&gt;&gt; Completed installing dev-libs/jsoncpp-1.9.6-r2 into /var/tmp/portage/dev-libs/jsoncpp-1.9.6-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2872 KiB (2.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   484 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libjsoncpp.so.26
+
+</pre>
+</body>
+
+</html>
