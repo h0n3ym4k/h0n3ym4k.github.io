@@ -1,0 +1,487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-firewall/ipset-7.22-r2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org robbat2@gentoo.org,mpagano@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux strip
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.6.58-gentoo-r1-x86_64
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking ipset-7.22.tar.bz2 to /var/tmp/portage/net-firewall/ipset-7.22-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-firewall/ipset-7.22-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Running eautoreconf in '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22' ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: ipset-7.22/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying fix-file-check/2.5.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: ipset-7.22/build-aux/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying portage/1.2.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying sed/1.5.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying as-needed/2.4.3 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying color-record/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying openmp/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying verbose-pic/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying clang-runtime-ltmain/2.4.7 patch ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22 ...
+ * econf: updating ipset-7.22/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating ipset-7.22/build-aux/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating ipset-7.22/build-aux/config.sub with /usr/share/gnuconfig/config.sub
+ * econf: updating ipset-7.22/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/ipset-7.22-r2 --htmldir=/usr/share/doc/ipset-7.22-r2/html --with-sysroot=/ --libdir=/usr/lib64 --enable-bashcompl --without-kmod --with-maxsets=256 --with-ksource=/usr/src/linux --with-kbuild=/usr/src/linux
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking whether ln -s works... yes
+checking how to print strings... printf
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... no
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking what extension is used for runtime loadable modules... .so
+checking what variable specifies run-time module search path... LD_LIBRARY_PATH
+checking for the default library search path... /lib /usr/lib /usr/lib/gcc/x86_64-pc-linux-gnu/13 /usr/lib/gcc/x86_64-pc-linux-gnu/13/32 /lib64 /usr/lib64 /usr/local/lib64 /lib /usr/lib /usr/local/lib /usr/lib/rust/lib-bin-1.81.0 /usr/lib/llvm/18/lib64 
+checking for library containing dlopen... none required
+checking for dlerror... yes
+checking for shl_load... (cached) no
+checking for shl_load in -ldld... (cached) no
+checking for dld_link in -ldld... no
+checking for _ prefix in compiled symbols... no
+checking whether deplibs are loaded by dlopen... yes
+checking for argz.h... yes
+checking for error_t... yes
+checking for argz_add... yes
+checking for argz_append... yes
+checking for argz_count... yes
+checking for argz_create_sep... yes
+checking for argz_insert... yes
+checking for argz_next... yes
+checking for argz_stringify... yes
+checking if argz actually works... yes
+checking whether libtool supports -dlopen/-dlpreopen... yes
+checking for ltdl.h... yes
+checking whether lt_dlinterface_register is declared... yes
+checking for lt_dladvise_preload in -lltdl... yes
+checking where to find libltdl headers... 
+checking where to find libltdl library... -lltdl
+checking for unistd.h... (cached) yes
+checking for dl.h... no
+checking for sys/dl.h... no
+checking for dld.h... no
+checking for mach-o/dyld.h... no
+checking for dirent.h... yes
+checking for closedir... yes
+checking for opendir... yes
+checking for readdir... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for x86_64-pc-linux-gnu-gcc... (cached) x86_64-pc-linux-gnu-gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... (cached) none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... (cached) yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... (cached) none
+checking whether ln -s works... yes
+checking for libmnl &gt;= 1... yes
+checking whether NLA_F_NESTED is declared... yes
+checking whether NLA_F_NET_BYTEORDER is declared... yes
+checking whether NLA_TYPE_MASK is declared... yes
+checking for union nf_inet_addr... yes
+checking for gethostbyname2... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/libipset/Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/libipset.pc
+config.status: creating src/Makefile
+config.status: creating utils/Makefile
+config.status: creating kernel/include/linux/netfilter/ipset/ip_set_compat.h
+config.status: creating kernel/include/linux/netfilter/ipset/ip_set_compiler.h
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+ipset userspace tool configuration:
+    Bash completion directory: /usr/share/bash-completion/completions
+    Dynamic module loading: disabled
+    Static modules:
+        ipset_bitmap_ip
+        ipset_bitmap_ipmac
+        ipset_bitmap_port
+        ipset_hash_ip
+        ipset_hash_ipmac
+        ipset_hash_ipmark
+        ipset_hash_ipport
+        ipset_hash_ipportip
+        ipset_hash_ipportnet
+        ipset_hash_mac
+        ipset_hash_net
+        ipset_hash_netiface
+        ipset_hash_netnet
+        ipset_hash_netport
+        ipset_hash_netportnet
+        ipset_list_set
+    Dynamic modules:
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22 ...
+ <span class="ansi32">*</span> Building userspace
+make -j2 
+make  all-recursive
+Making all in include/libipset
+make[2]: Nothing to be done for 'all'.
+Making all in lib
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_bitmap_ip_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_bitmap_ip.lo ipset_bitmap_ip.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_bitmap_ip_init -DTYPE_INCLUSIVE -c ipset_bitmap_ip.c  -fPIC -DPIC -o .libs/ipset_bitmap_ip.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_bitmap_ipmac_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_bitmap_ipmac.lo ipset_bitmap_ipmac.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_bitmap_ipmac_init -DTYPE_INCLUSIVE -c ipset_bitmap_ipmac.c  -fPIC -DPIC -o .libs/ipset_bitmap_ipmac.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_bitmap_port_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_bitmap_port.lo ipset_bitmap_port.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_bitmap_port_init -DTYPE_INCLUSIVE -c ipset_bitmap_port.c  -fPIC -DPIC -o .libs/ipset_bitmap_port.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ip_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_ip.lo ipset_hash_ip.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ip_init -DTYPE_INCLUSIVE -c ipset_hash_ip.c  -fPIC -DPIC -o .libs/ipset_hash_ip.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipport_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_ipport.lo ipset_hash_ipport.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipport_init -DTYPE_INCLUSIVE -c ipset_hash_ipport.c  -fPIC -DPIC -o .libs/ipset_hash_ipport.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipmark_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_ipmark.lo ipset_hash_ipmark.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipmark_init -DTYPE_INCLUSIVE -c ipset_hash_ipmark.c  -fPIC -DPIC -o .libs/ipset_hash_ipmark.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipportip_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_ipportip.lo ipset_hash_ipportip.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipportip_init -DTYPE_INCLUSIVE -c ipset_hash_ipportip.c  -fPIC -DPIC -o .libs/ipset_hash_ipportip.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_net_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_net.lo ipset_hash_net.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_net_init -DTYPE_INCLUSIVE -c ipset_hash_net.c  -fPIC -DPIC -o .libs/ipset_hash_net.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipportnet_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_ipportnet.lo ipset_hash_ipportnet.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipportnet_init -DTYPE_INCLUSIVE -c ipset_hash_ipportnet.c  -fPIC -DPIC -o .libs/ipset_hash_ipportnet.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netnet_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_netnet.lo ipset_hash_netnet.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netnet_init -DTYPE_INCLUSIVE -c ipset_hash_netnet.c  -fPIC -DPIC -o .libs/ipset_hash_netnet.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netport_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_netport.lo ipset_hash_netport.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netport_init -DTYPE_INCLUSIVE -c ipset_hash_netport.c  -fPIC -DPIC -o .libs/ipset_hash_netport.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netportnet_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_netportnet.lo ipset_hash_netportnet.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netportnet_init -DTYPE_INCLUSIVE -c ipset_hash_netportnet.c  -fPIC -DPIC -o .libs/ipset_hash_netportnet.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netiface_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_netiface.lo ipset_hash_netiface.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_netiface_init -DTYPE_INCLUSIVE -c ipset_hash_netiface.c  -fPIC -DPIC -o .libs/ipset_hash_netiface.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipmac_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_ipmac.lo ipset_hash_ipmac.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_ipmac_init -DTYPE_INCLUSIVE -c ipset_hash_ipmac.c  -fPIC -DPIC -o .libs/ipset_hash_ipmac.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_mac_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_hash_mac.lo ipset_hash_mac.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_hash_mac_init -DTYPE_INCLUSIVE -c ipset_hash_mac.c  -fPIC -DPIC -o .libs/ipset_hash_mac.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_list_set_init \
+	 -DTYPE_INCLUSIVE\
+	-c -o ipset_list_set.lo ipset_list_set.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_INIT=ipset_list_set_init -DTYPE_INCLUSIVE -c ipset_list_set.c  -fPIC -DPIC -o .libs/ipset_list_set.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o args.lo args.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c args.c  -fPIC -DPIC -o .libs/args.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o data.lo data.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c data.c  -fPIC -DPIC -o .libs/data.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o errcode.lo errcode.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c errcode.c  -fPIC -DPIC -o .libs/errcode.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o icmp.lo icmp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c icmp.c  -fPIC -DPIC -o .libs/icmp.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o icmpv6.lo icmpv6.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c icmpv6.c  -fPIC -DPIC -o .libs/icmpv6.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o list_sort.lo list_sort.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c list_sort.c  -fPIC -DPIC -o .libs/list_sort.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o mnl.lo mnl.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c mnl.c  -fPIC -DPIC -o .libs/mnl.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o print.lo print.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c print.c  -fPIC -DPIC -o .libs/print.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o parse.lo parse.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c parse.c  -fPIC -DPIC -o .libs/parse.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o types.lo types.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c types.c  -fPIC -DPIC -o .libs/types.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o session.lo session.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c session.c  -fPIC -DPIC -o .libs/session.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+static_list=`echo ipset_bitmap_ip ipset_bitmap_ipmac ipset_bitmap_port ipset_hash_ip ipset_hash_ipport ipset_hash_ipmark ipset_hash_ipportip ipset_hash_ipportnet ipset_hash_net ipset_hash_netnet ipset_hash_netportnet ipset_hash_netport ipset_hash_netiface ipset_hash_ipmac ipset_hash_mac ipset_list_set`; \
+echo -n "" &gt; types_init.c; \
+for i in $static_list; do \
+	echo "extern void ${i}_init(void);" &gt;&gt; types_init.c; \
+done; \
+echo "void ipset_types_init(void);" &gt;&gt; types_init.c; \
+echo "void ipset_types_init(void)" &gt;&gt; types_init.c; \
+echo "{" &gt;&gt; types_init.c; \
+for i in $static_list; do \
+	echo "	""${i}_init();" &gt;&gt; types_init.c; \
+done; \
+echo "}" &gt;&gt; types_init.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o ipset.lo ipset.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c ipset.c  -fPIC -DPIC -o .libs/ipset.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o types_init.lo types_init.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../include -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c types_init.c  -fPIC -DPIC -o .libs/types_init.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -std=gnu99  -O2 -DNDEBUG   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,--version-script=../lib/libipset.map -version-info 17:0:4 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libipset.la -rpath /usr/lib64 args.lo data.lo errcode.lo icmp.lo icmpv6.lo list_sort.lo mnl.lo parse.lo print.lo session.lo types.lo ipset.lo types_init.lo -lmnl  ipset_bitmap_ip.lo  ipset_bitmap_ipmac.lo  ipset_bitmap_port.lo  ipset_hash_ip.lo  ipset_hash_ipport.lo  ipset_hash_ipmark.lo  ipset_hash_ipportip.lo  ipset_hash_ipportnet.lo  ipset_hash_net.lo  ipset_hash_netnet.lo  ipset_hash_netportnet.lo  ipset_hash_netport.lo  ipset_hash_netiface.lo  ipset_hash_ipmac.lo  ipset_hash_mac.lo  ipset_list_set.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/args.o .libs/data.o .libs/errcode.o .libs/icmp.o .libs/icmpv6.o .libs/list_sort.o .libs/mnl.o .libs/parse.o .libs/print.o .libs/session.o .libs/types.o .libs/ipset.o .libs/types_init.o .libs/ipset_bitmap_ip.o .libs/ipset_bitmap_ipmac.o .libs/ipset_bitmap_port.o .libs/ipset_hash_ip.o .libs/ipset_hash_ipport.o .libs/ipset_hash_ipmark.o .libs/ipset_hash_ipportip.o .libs/ipset_hash_ipportnet.o .libs/ipset_hash_net.o .libs/ipset_hash_netnet.o .libs/ipset_hash_netportnet.o .libs/ipset_hash_netport.o .libs/ipset_hash_netiface.o .libs/ipset_hash_ipmac.o .libs/ipset_hash_mac.o .libs/ipset_list_set.o   -Wl,--as-needed -lmnl  -O2 -O3 -march=native -mtune=native -Wl,--version-script=../lib/libipset.map -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libipset.so.13 -o .libs/libipset.so.13.4.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libipset.so.13" &amp;&amp; ln -s "libipset.so.13.4.0" "libipset.so.13")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libipset.so" &amp;&amp; ln -s "libipset.so.13.4.0" "libipset.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libipset.la" &amp;&amp; ln -s "../libipset.la" "libipset.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make  all-am
+make[3]: Nothing to be done for 'all-am'.
+Making all in src
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..    -I../include  -std=gnu99  -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o ipset.o ipset.c
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -std=gnu99  -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o ipset ipset.o ../lib/libipset.la 
+libtool: link: x86_64-pc-linux-gnu-gcc -std=gnu99 -O2 -DNDEBUG -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o .libs/ipset ipset.o  -Wl,--as-needed ../lib/.libs/libipset.so -lmnl
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+Making all in utils
+make[2]: Nothing to be done for 'all'.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: net-firewall/ipset-7.22-r2
+
+&gt;&gt;&gt; Install net-firewall/ipset-7.22-r2 into /var/tmp/portage/net-firewall/ipset-7.22-r2/image
+ <span class="ansi32">*</span> Installing userspace
+make -j2 DESTDIR=/var/tmp/portage/net-firewall/ipset-7.22-r2/image install 
+Making install in include/libipset
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/include/libipset'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/include/libipset'
+ /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 args.h data.h errcode.h linux_ip_set_bitmap.h linux_ip_set.h linux_ip_set_hash.h linux_ip_set_list.h mnl.h nf_inet_addr.h nfproto.h parse.h pfxlen.h print.h session.h transport.h types.h ipset.h utils.h xlate.h '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/include/libipset'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/include/libipset'
+Making install in lib
+make  install-am
+make[3]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/share/man/man3'
+ /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 libipset.3 '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/share/man/man3'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64'
+ /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c   libipset.la '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c .libs/libipset.so.13.4.0 /var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64/libipset.so.13.4.0
+libtool: install: (cd /var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64 &amp;&amp; { ln -s -f libipset.so.13.4.0 libipset.so.13 || { rm -f libipset.so.13 &amp;&amp; ln -s libipset.so.13.4.0 libipset.so.13; }; })
+libtool: install: (cd /var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64 &amp;&amp; { ln -s -f libipset.so.13.4.0 libipset.so || { rm -f libipset.so &amp;&amp; ln -s libipset.so.13.4.0 libipset.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c .libs/libipset.lai /var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64/libipset.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64/pkgconfig'
+ /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 libipset.pc '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/lib64/pkgconfig'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/lib'
+Making install in src
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/sbin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c ipset '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/sbin'
+libtool: warning: '../lib/libipset.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c .libs/ipset /var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/sbin/ipset
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 ipset.8 ipset-translate.8 '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/share/man/man8'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+make[2]: Nothing to be done for 'install-data-am'.
+make  install-exec-hook
+make[3]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+ln -s -f "/usr/sbin/ipset" "/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/sbin/ipset-translate";
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/src'
+Making install in utils
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/utils'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/share/bash-completion/completions'
+ /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 ipset_bash_completion/ipset '/var/tmp/portage/net-firewall/ipset-7.22-r2/image/usr/share/bash-completion/completions'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/ipset-7.22-r2/work/ipset-7.22/utils'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+&gt;&gt;&gt; Completed installing net-firewall/ipset-7.22-r2 into /var/tmp/portage/net-firewall/ipset-7.22-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 10568 KiB (10.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    640 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libipset.so.13.4.0
+   /usr/sbin/ipset
+
+</pre>
+</body>
+
+</html>

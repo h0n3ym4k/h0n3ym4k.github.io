@@ -1,0 +1,2349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-apps/sed-4.9-r1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 acl amd64 elibc_glibc kernel_linux nls
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking sed-4.9.tar.xz to /var/tmp/portage/sys-apps/sed-4.9-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-apps/sed-4.9-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9 ...
+ <span class="ansi32">*</span> Running eautoreconf in '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9' ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: sed-4.9/
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9 ...
+ * econf: updating sed-4.9/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating sed-4.9/build-aux/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating sed-4.9/build-aux/config.sub with /usr/share/gnuconfig/config.sub
+ * econf: updating sed-4.9/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --docdir=/usr/share/doc/sed-4.9-r1 --htmldir=/usr/share/doc/sed-4.9-r1/html --libdir=/lib64 --exec-prefix= --enable-acl --enable-nls --without-selinux --program-prefix=g
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... (cached) -Werror=implicit-function-declaration
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for stdio_ext.h... yes
+checking for threads.h... yes
+checking for limits.h... yes
+checking for langinfo.h... yes
+checking for xlocale.h... no
+checking for sys/mman.h... yes
+checking for malloc.h... yes
+checking for selinux/selinux.h... no
+checking for sys/time.h... yes
+checking for stdalign.h... yes
+checking for stdbool.h... yes
+checking for stdckdint.h... no
+checking for sys/random.h... yes
+checking for features.h... yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking for arpa/inet.h... yes
+checking for dirent.h... yes
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for sys/select.h... yes
+checking for sys/wait.h... yes
+checking for pthread.h... yes
+checking for sys/cdefs.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/uio.h... yes
+checking for locale.h... yes
+checking for errno.h... yes
+checking for mcheck.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for egrep -e... /bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking for x86_64-pc-linux-gnu-gcc option to enable large file support... none needed
+checking for fchmod... yes
+checking for btowc... yes
+checking for canonicalize_file_name... yes
+checking for faccessat... yes
+checking for realpath... yes
+checking for lstat... yes
+checking for _set_invalid_parameter_handler... no
+checking for fcntl... yes
+checking for symlink... yes
+checking for __fwriting... yes
+checking for getdelim... yes
+checking for getdtablesize... yes
+checking for getprogname... no
+checking for getexecname... no
+checking for getrandom... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mbrlen... yes
+checking for mprotect... yes
+checking for mkostemp... yes
+checking for nl_langinfo... yes
+checking for readlink... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for link... yes
+checking for strerror_r... yes
+checking for __xpg_strerror_r... yes
+checking for wcrtomb... yes
+checking for wctob... yes
+checking for iswcntrl... yes
+checking for explicit_bzero... yes
+checking for memset_s... no
+checking for fpurge... no
+checking for __fpurge... yes
+checking for __freading... yes
+checking for ftruncate... yes
+checking for gettimeofday... yes
+checking for duplocale... yes
+checking for newlocale... yes
+checking for uselocale... yes
+checking for freelocale... yes
+checking for pipe... yes
+checking for pselect... yes
+checking for pthread_sigmask... yes
+checking for setenv... yes
+checking for sleep... yes
+checking for catgets... yes
+checking for snprintf... yes
+checking for shutdown... yes
+checking for mquery... no
+checking for pstat_getprocvm... no
+checking for isatty... yes
+checking for isascii... yes
+checking for memcpy... yes
+checking for strchr... yes
+checking for strtoul... yes
+checking for popen... yes
+checking for pathconf... yes
+checking for fchown... yes
+checking for setlocale... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking whether &lt;wchar.h&gt; uses 'inline' correctly... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... fr_FR
+checking whether malloc is ptrdiff_t safe... yes
+checking whether malloc, realloc, calloc set errno on failure... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether // is distinct from /... no
+checking whether realpath works... yes
+checking for getcwd... yes
+checking for inline... inline
+checking for complete errno.h... yes
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking for working fcntl.h... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking whether stat file-mode macros are broken... no
+checking for C/C++ restrict keyword... __restrict__
+checking for nlink_t... yes
+checking whether getdelim is declared... yes
+checking whether getdtablesize is declared... yes
+checking for pthread.h... (cached) yes
+checking for pthread_kill in -lpthread... yes
+checking whether POSIX threads API is available... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... yes
+checking whether setlocale (category, NULL) is multithread-safe... yes
+checking whether limits.h has WORD_BIT, BOOL_WIDTH etc.... yes
+checking for wint_t... yes
+checking whether wint_t is large enough... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking whether langinfo.h defines CODESET... yes
+checking whether langinfo.h defines T_FMT_AMPM... yes
+checking whether langinfo.h defines ALTMON_1... yes
+checking whether langinfo.h defines ERA... yes
+checking whether langinfo.h defines YESEXPR... yes
+checking for wchar_t... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether locale.h defines locale_t... yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether struct lconv is properly defined... yes
+checking for multithread API to use... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking whether malloc (0) returns nonnull... yes
+checking for mbstate_t... yes
+checking for a traditional japanese locale... ja_JP
+checking for a french Unicode locale... fr_FR.UTF-8
+checking for a transitional chinese locale... zh_CN.GB18030
+checking whether mbrtowc handles incomplete characters... yes
+checking whether mbrtowc works as well as mbtowc... yes
+checking whether mbrtowc handles a NULL pwc argument... yes
+checking whether mbrtowc handles a NULL string argument... yes
+checking whether mbrtowc has a correct return value... yes
+checking whether mbrtowc returns 0 when parsing a NUL character... yes
+checking whether mbrtowc stores incomplete characters... no
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... no
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether memrchr is declared... yes
+checking whether &lt;limits.h&gt; defines MIN and MAX... no
+checking whether &lt;sys/param.h&gt; defines MIN and MAX... yes
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking whether alarm is declared... yes
+checking whether fcloseall is declared... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking whether ecvt is declared... yes
+checking whether fcvt is declared... yes
+checking whether gcvt is declared... yes
+checking whether strerror(0) succeeds... yes
+checking for strerror_r with POSIX signature... no
+checking whether __xpg_strerror_r works... yes
+checking for struct timespec in &lt;time.h&gt;... yes
+checking for TIME_UTC in &lt;time.h&gt;... yes
+checking whether execvpe is declared... yes
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking whether fputc_unlocked is declared... yes
+checking whether fputs_unlocked is declared... yes
+checking whether fread_unlocked is declared... yes
+checking whether fwrite_unlocked is declared... yes
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking whether wcsdup is declared... yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking for C compiler option to allow warnings... -Wno-error
+checking whether &lt;sys/socket.h&gt; is self-contained... yes
+checking for shutdown... (cached) yes
+checking whether &lt;sys/socket.h&gt; defines the SHUT_* macros... yes
+checking for struct sockaddr_storage... yes
+checking for sa_family_t... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking if environ is properly declared... yes
+checking whether stdin defaults to large file offsets... yes
+checking whether fseeko is declared... yes
+checking for fseeko... yes
+checking whether fflush works on input streams... no
+checking whether ungetc works on arbitrary bytes... yes
+checking whether ftello is declared... yes
+checking for ftello... yes
+checking whether ftello works... yes
+checking whether getcwd (NULL, 0) allocates memory for result... yes
+checking for getcwd with POSIX signature... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking for IPv4 sockets... yes
+checking for IPv6 sockets... yes
+checking whether INT32_MAX &lt; INTMAX_MAX... yes
+checking whether INT64_MAX == LONG_MAX... yes
+checking whether UINT32_MAX &lt; UINTMAX_MAX... yes
+checking whether UINT64_MAX == ULONG_MAX... yes
+checking for LC_MESSAGES... yes
+checking whether uselocale works... yes
+checking for fake locale system (OpenBSD)... no
+checking for Solaris 11.4 locale system... no
+checking for getlocalename_l... no
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking whether &lt;sys/select.h&gt; is self-contained... yes
+checking for pthread_t... yes
+checking for pthread_spinlock_t... yes
+checking for PTHREAD_CREATE_DETACHED... yes
+checking for PTHREAD_MUTEX_RECURSIVE... yes
+checking for PTHREAD_MUTEX_ROBUST... yes
+checking for PTHREAD_PROCESS_SHARED... yes
+checking for sigset_t... yes
+checking for sched.h... yes
+checking for struct sched_param... yes
+checking for library containing setsockopt... none needed
+checking whether setenv is declared... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking for uid_t... yes
+checking for gid_t... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking whether strdup is declared... yes
+checking whether &lt;sys/ioctl.h&gt; declares ioctl... yes
+checking whether unsetenv is declared... yes
+checking for sys/acl.h... yes
+checking for library containing acl_get_file... -lacl
+checking for acl_get_file... yes
+checking for acl_get_fd... yes
+checking for acl_set_file... yes
+checking for acl_set_fd... yes
+checking for acl_free... yes
+checking for acl_from_mode... yes
+checking for acl_from_text... yes
+checking for acl_delete_def_file... yes
+checking for acl_extended_file... yes
+checking for acl_delete_fd_np... no
+checking for acl_delete_file_np... no
+checking for acl_copy_ext_native... no
+checking for acl_create_entry_np... no
+checking for acl_to_short_text... no
+checking for acl_free_text... no
+checking for working acl_get_file... yes
+checking for acl/libacl.h... yes
+checking for acl_entries... yes
+checking for ACL_FIRST_ENTRY... yes
+checking for ACL_TYPE_EXTENDED... no
+checking for alloca as a compiler built-in... yes
+checking whether to enable assertions... yes
+checking for static_assert... yes, an &lt;assert.h&gt; macro
+checking whether btowc(0) is correct... yes
+checking whether btowc(EOF) is correct... yes
+checking for __builtin_expect... yes
+checking whether calloc (0, n) and calloc (n, 0) return nonnull... yes
+checking for library containing clock_gettime... none required
+checking for clock_getres... yes
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking whether // is distinct from /... (cached) no
+checking whether dup2 works... yes
+checking for error_at_line... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking for flexible array member... yes
+checking for __fpending... yes
+checking whether __fpending is declared... yes
+checking whether free is known to preserve errno... yes
+checking for working getdelim function... yes
+checking whether getdtablesize works... yes
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking whether getrandom is compatible with its GNU+BSD signature... yes
+checking whether the compiler supports the __inline keyword... yes
+checking whether malloc (0) returns nonnull... (cached) yes
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking whether mbrtowc handles a NULL pwc argument... (cached) yes
+checking whether mbrtowc handles a NULL string argument... (cached) yes
+checking whether mbrtowc has a correct return value... (cached) yes
+checking whether mbrtowc returns 0 when parsing a NUL character... (cached) yes
+checking whether mbrtowc stores incomplete characters... (cached) no
+checking whether mbrtowc works on empty input... (cached) yes
+checking whether the C locale is free of encoding errors... (cached) no
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking for mbtowc... yes
+checking for mempcpy... yes
+checking for memrchr... yes
+checking whether mkdir handles trailing slash... yes
+checking whether mkdir handles trailing dot... yes
+checking whether YESEXPR works... yes
+checking for obstacks that work with any size object... no
+checking whether open recognizes a trailing slash... yes
+checking for Perl 5.005 or newer... perl
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for rawmemchr... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking whether readlink truncates results correctly... yes
+checking whether realloc (0, 0) returns nonnull... yes
+checking for reallocarray... yes
+checking for working re_compile_pattern... yes
+checking whether rename honors trailing slash on destination... yes
+checking whether rename honors trailing slash on source... yes
+checking whether rename manages hard links correctly... yes
+checking whether rename manages existing destinations correctly... yes
+checking whether rmdir works... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) yes
+checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+checking for ssize_t... yes
+checking whether stat handles trailing slashes on files... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for alignas and alignof... yes, &lt;stdalign.h&gt; macros
+checking for va_copy... yes
+checking for bool, true, false... no
+checking for working strerror function... yes
+checking for strverscmp... yes
+checking for variable-length arrays... yes
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking whether wcrtomb works in the C locale... yes
+checking whether wcrtomb return value is correct... yes
+checking whether wctob works... yes
+checking whether wctob is declared... yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) fr_FR.UTF-8
+checking for a traditional french locale... (cached) fr_FR
+checking for a turkish Unicode locale... tr_TR.UTF-8
+checking for closedir... yes
+checking for dirfd... yes
+checking whether dirfd is declared... yes
+checking whether dirfd is a macro... no
+checking whether fdopen sets errno... yes
+checking whether fflush works on input streams... (cached) no
+checking for getxattr with XATTR_NAME_POSIX_ACL macros... yes
+checking whether fopen recognizes a trailing slash... yes
+checking whether fopen supports the mode character 'x'... yes
+checking whether fopen supports the mode character 'e'... yes
+checking whether fpurge is declared... no
+checking for fseeko... (cached) yes
+checking whether fflush works on input streams... (cached) no
+checking for _fseeki64... no
+checking for ftello... (cached) yes
+checking whether ftello works... (cached) yes
+checking for getpagesize... yes
+checking whether getpagesize is declared... yes
+checking for gettimeofday with POSIX signature... yes
+checking for library containing inet_pton... none required
+checking whether inet_pton is declared... yes
+checking whether byte ordering is bigendian... no
+checking for ioctl... yes
+checking for ioctl with POSIX signature... no
+checking whether link obeys POSIX... yes
+checking whether lseek detects pipes... yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) fr_FR.UTF-8
+checking for a traditional japanese locale... (cached) ja_JP
+checking for a transitional chinese locale... (cached) zh_CN.GB18030
+checking for a french Unicode locale... (cached) fr_FR.UTF-8
+checking for library containing nanosleep... none required
+checking for working nanosleep... no (mishandles large arguments)
+checking whether &lt;netinet/in.h&gt; is self-contained... yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) fr_FR.UTF-8
+checking for opendir... yes
+checking whether perror matches strerror... yes
+checking whether signature of pselect conforms to POSIX... yes
+checking whether pselect detects invalid fds... yes
+checking whether pthread_create exists as a global function... yes
+checking whether pthread_sigmask is a macro... no
+checking whether pthread_sigmask works without -lpthread... yes
+checking whether pthread_sigmask returns error numbers... yes
+checking whether pthread_sigmask unblocks signals correctly... guessing yes
+checking for putenv compatible with GNU and SVID... yes
+checking for raise... yes
+checking for sigprocmask... yes
+checking for readdir... yes
+checking whether select supports a 0 argument... yes
+checking whether select detects invalid fds... yes
+checking whether setenv validates arguments... yes
+checking whether setlocale supports the C locale... yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) fr_FR.UTF-8
+checking for a traditional japanese locale... (cached) ja_JP
+checking for a transitional chinese locale... (cached) zh_CN.GB18030
+checking for sigprocmask... (cached) yes
+checking whether sleep is declared... yes
+checking for working sleep... yes
+checking for socklen_t... yes
+checking whether symlink handles trailing slash correctly... yes
+checking for sys/single_threaded.h... yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for a traditional french locale... (cached) fr_FR
+checking for a french Unicode locale... (cached) fr_FR.UTF-8
+checking for a traditional japanese locale... (cached) ja_JP
+checking for a transitional chinese locale... (cached) zh_CN.GB18030
+checking whether "rt" can be used with fopen... yes
+checking whether -lcP is needed... no
+checking for an ANSI C-conforming const... yes
+checking for size_t... (cached) yes
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/gmsgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... (cached) no
+checking for CFLocaleCopyPreferredLanguages... (cached) no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking whether UTF-8 case folding tests should pass... yes
+checking for perl... /usr/bin/perl
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating gnulib-tests/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9 ...
+make -j2 
+/bin/mkdir -p 'lib'
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+  -e 's|@''HAVE_ALLOCA_H''@|1|g' \
+  ./lib/alloca.in.h &gt; lib/alloca.h-t
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_CTYPE_H''@|&lt;ctype.h&gt;|g' \
+      -e 's/@''GNULIB_ISBLANK''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''HAVE_ISBLANK''@/1/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/ctype.in.h &gt; lib/ctype.h-t
+mv lib/alloca.h-t lib/alloca.h
+mv lib/ctype.h-t lib/ctype.h
+/bin/mkdir -p 'lib'
+/bin/mkdir -p 'lib/malloc'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+  -e '/libc_hidden_proto/d' \
+  ./lib/malloc/dynarray.h &gt; lib/malloc/dynarray.gl.h-t
+mv lib/malloc/dynarray.gl.h-t lib/malloc/dynarray.gl.h
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_FCNTL_H''@|&lt;fcntl.h&gt;|g' \
+      -e 's/@''GNULIB_CREAT''@/0/g' \
+      -e 's/@''GNULIB_FCNTL''@/1/g' \
+      -e 's/@''GNULIB_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_OPEN''@/1/g' \
+      -e 's/@''GNULIB_OPENAT''@/0/g' \
+      -e 's/@''GNULIB_MDA_CREAT''@/1/g' \
+      -e 's/@''GNULIB_MDA_OPEN''@/1/g' \
+      -e 's|@''HAVE_FCNTL''@|1|g' \
+      -e 's|@''HAVE_OPENAT''@|1|g' \
+      -e 's|@''REPLACE_CREAT''@|0|g' \
+      -e 's|@''REPLACE_FCNTL''@|1|g' \
+      -e 's|@''REPLACE_OPEN''@|0|g' \
+      -e 's|@''REPLACE_OPENAT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/fcntl.in.h &gt; lib/fcntl.h-t
+mv lib/fcntl.h-t lib/fcntl.h
+/bin/mkdir -p 'lib/malloc'
+/bin/mkdir -p 'lib/malloc'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|__always_inline|inline _GL_ATTRIBUTE_ALWAYS_INLINE|g' \
+      -e 's|__glibc_likely|_GL_LIKELY|g' \
+      -e 's|__glibc_unlikely|_GL_UNLIKELY|g' \
+      -e '/libc_hidden_proto/d' \
+      ./lib/malloc/scratch_buffer.h &gt; lib/malloc/scratch_buffer.gl.h-t
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|&lt;malloc/dynarray\.h&gt;|&lt;malloc/dynarray.gl.h&gt;|g' \
+      -e 's|__attribute_maybe_unused__|_GL_ATTRIBUTE_MAYBE_UNUSED|g' \
+      -e 's|__attribute_nonnull__|_GL_ATTRIBUTE_NONNULL|g' \
+      -e 's|__attribute_warn_unused_result__|_GL_ATTRIBUTE_NODISCARD|g' \
+      -e 's|__glibc_likely|_GL_LIKELY|g' \
+      -e 's|__glibc_unlikely|_GL_UNLIKELY|g' \
+      ./lib/malloc/dynarray-skeleton.c &gt; lib/malloc/dynarray-skeleton.gl.h-t
+mv lib/malloc/scratch_buffer.gl.h-t lib/malloc/scratch_buffer.gl.h
+mv lib/malloc/dynarray-skeleton.gl.h-t lib/malloc/dynarray-skeleton.gl.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's/@''HAVE_INTTYPES_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_INTTYPES_H''@|&lt;inttypes.h&gt;|g' \
+      -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g' \
+      -e 's/@''PRIPTR_PREFIX''@/"l"/g' \
+      -e 's/@''GNULIB_IMAXABS''@/0/g' \
+      -e 's/@''GNULIB_IMAXDIV''@/0/g' \
+      -e 's/@''GNULIB_STRTOIMAX''@/0/g' \
+      -e 's/@''GNULIB_STRTOUMAX''@/0/g' \
+      -e 's/@''HAVE_DECL_IMAXABS''@/1/g' \
+      -e 's/@''HAVE_DECL_IMAXDIV''@/1/g' \
+      -e 's/@''HAVE_DECL_STRTOIMAX''@/1/g' \
+      -e 's/@''HAVE_DECL_STRTOUMAX''@/1/g' \
+      -e 's/@''HAVE_IMAXDIV_T''@/1/g' \
+      -e 's/@''REPLACE_STRTOIMAX''@/0/g' \
+      -e 's/@''REPLACE_STRTOUMAX''@/0/g' \
+      -e 's/@''INT32_MAX_LT_INTMAX_MAX''@/1/g' \
+      -e 's/@''INT64_MAX_EQ_LONG_MAX''@/1/g' \
+      -e 's/@''UINT32_MAX_LT_UINTMAX_MAX''@/1/g' \
+      -e 's/@''UINT64_MAX_EQ_ULONG_MAX''@/1/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/inttypes.in.h &gt; lib/inttypes.h-t
+mv lib/inttypes.h-t lib/inttypes.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_LANGINFO_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LANGINFO_H''@|&lt;langinfo.h&gt;|g' \
+      -e 's/@''GNULIB_NL_LANGINFO''@/1/g' \
+      -e 's|@''HAVE_LANGINFO_CODESET''@|1|g' \
+      -e 's|@''HAVE_LANGINFO_T_FMT_AMPM''@|1|g' \
+      -e 's|@''HAVE_LANGINFO_ALTMON''@|1|g' \
+      -e 's|@''HAVE_LANGINFO_ERA''@|1|g' \
+      -e 's|@''HAVE_LANGINFO_YESEXPR''@|1|g' \
+      -e 's|@''HAVE_NL_LANGINFO''@|1|g' \
+      -e 's|@''REPLACE_NL_LANGINFO''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/langinfo.in.h &gt; lib/langinfo.h-t
+mv lib/langinfo.h-t lib/langinfo.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LIMITS_H''@|&lt;limits.h&gt;|g' \
+      ./lib/limits.in.h &gt; lib/limits.h-t
+mv lib/limits.h-t lib/limits.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LOCALE_H''@|&lt;locale.h&gt;|g' \
+      -e 's/@''GNULIB_LOCALECONV''@/1/g' \
+      -e 's/@''GNULIB_SETLOCALE''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_SETLOCALE_NULL''@/1/g' \
+      -e 's/@''GNULIB_DUPLOCALE''@/0/g' \
+      -e 's/@''GNULIB_LOCALENAME''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's|@''HAVE_NEWLOCALE''@|1|g' \
+      -e 's|@''HAVE_DUPLOCALE''@|1|g' \
+      -e 's|@''HAVE_FREELOCALE''@|1|g' \
+      -e 's|@''HAVE_XLOCALE_H''@|0|g' \
+      -e 's|@''REPLACE_LOCALECONV''@|0|g' \
+      -e 's|@''REPLACE_SETLOCALE''@|0|g' \
+      -e 's|@''REPLACE_NEWLOCALE''@|0|g' \
+      -e 's|@''REPLACE_DUPLOCALE''@|0|g' \
+      -e 's|@''REPLACE_FREELOCALE''@|0|g' \
+      -e 's|@''REPLACE_STRUCT_LCONV''@|0|g' \
+      -e 's|@''LOCALENAME_ENHANCE_LOCALE_FUNCS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/locale.in.h &gt; lib/locale.h-t
+mv lib/locale.h-t lib/locale.h
+/bin/mkdir -p 'lib/selinux'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SELINUX_SELINUX_H''@||g' \
+      ./lib/se-selinux.in.h &gt; lib/selinux/selinux.h-t
+mv lib/selinux/selinux.h-t lib/selinux/selinux.h
+/bin/mkdir -p 'lib/selinux'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G -n -e 'w lib/selinux/context.h-t' ./lib/se-context.in.h
+mv lib/selinux/context.h-t lib/selinux/context.h
+/bin/mkdir -p 'lib/selinux'
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G -n -e 'w lib/selinux/label.h-t' ./lib/se-label.in.h
+mv lib/selinux/label.h-t lib/selinux/label.h
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+  ./lib/stdckdint.in.h &gt; lib/stdckdint.h-t
+mv lib/stdckdint.h-t lib/stdckdint.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDIO_H''@|&lt;stdio.h&gt;|g' \
+      -e 's/@''GNULIB_DPRINTF''@/0/g' \
+      -e 's/@''GNULIB_FCLOSE''@/0/g' \
+      -e 's/@''GNULIB_FDOPEN''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FFLUSH''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FGETC''@/1/g' \
+      -e 's/@''GNULIB_FGETS''@/1/g' \
+      -e 's/@''GNULIB_FOPEN''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FOPEN_GNU''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FPRINTF''@/1/g' \
+      -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_FPURGE''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FPUTC''@/1/g' \
+      -e 's/@''GNULIB_FPUTS''@/1/g' \
+      -e 's/@''GNULIB_FREAD''@/1/g' \
+      -e 's/@''GNULIB_FREOPEN''@/0/g' \
+      -e 's/@''GNULIB_FSCANF''@/1/g' \
+      -e 's/@''GNULIB_FSEEK''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FSEEKO''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FTELL''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FTELLO''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FWRITE''@/1/g' \
+      -e 's/@''GNULIB_GETC''@/1/g' \
+      -e 's/@''GNULIB_GETCHAR''@/1/g' \
+      -e 's/@''GNULIB_GETDELIM''@/1/g' \
+      -e 's/@''GNULIB_GETLINE''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PCLOSE''@/0/g' \
+      -e 's/@''GNULIB_PERROR''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_POPEN''@/0/g' \
+      -e 's/@''GNULIB_PRINTF''@/1/g' \
+      -e 's/@''GNULIB_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PUTC''@/1/g' \
+      -e 's/@''GNULIB_PUTCHAR''@/1/g' \
+      -e 's/@''GNULIB_PUTS''@/1/g' \
+      -e 's/@''GNULIB_REMOVE''@/0/g' \
+      -e 's/@''GNULIB_RENAME''@/1/g' \
+      -e 's/@''GNULIB_RENAMEAT''@/0/g' \
+      -e 's/@''GNULIB_SCANF''@/1/g' \
+      -e 's/@''GNULIB_SNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_TMPFILE''@/0/g' \
+      -e 's/@''GNULIB_VASPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VDPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VFPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VFSCANF''@/0/g' \
+      -e 's/@''GNULIB_VSCANF''@/0/g' \
+      -e 's/@''GNULIB_VPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VSNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_MDA_FCLOSEALL''@/1/g' \
+      -e 's/@''GNULIB_MDA_FDOPEN''@/1/g' \
+      -e 's/@''GNULIB_MDA_FILENO''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETW''@/1/g' \
+      -e 's/@''GNULIB_MDA_PUTW''@/1/g' \
+      -e 's/@''GNULIB_MDA_TEMPNAM''@/1/g' \
+      &lt; ./lib/stdio.in.h | \
+  sed -e 's|@''HAVE_DECL_FCLOSEALL''@|1|g' \
+      -e 's|@''HAVE_DECL_FPURGE''@|0|g' \
+      -e 's|@''HAVE_DECL_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_DECL_FTELLO''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDELIM''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLINE''@|1|g' \
+      -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_SNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DPRINTF''@|1|g' \
+      -e 's|@''HAVE_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_FTELLO''@|1|g' \
+      -e 's|@''HAVE_PCLOSE''@|1|g' \
+      -e 's|@''HAVE_POPEN''@|1|g' \
+      -e 's|@''HAVE_RENAMEAT''@|1|g' \
+      -e 's|@''HAVE_VASPRINTF''@|1|g' \
+      -e 's|@''HAVE_VDPRINTF''@|1|g' \
+      -e 's|@''REPLACE_DPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FCLOSE''@|0|g' \
+      -e 's|@''REPLACE_FDOPEN''@|0|g' \
+      -e 's|@''REPLACE_FFLUSH''@|1|g' \
+      -e 's|@''REPLACE_FOPEN''@|0|g' \
+      -e 's|@''REPLACE_FOPEN_FOR_FOPEN_GNU''@|0|g' \
+      -e 's|@''REPLACE_FPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FPURGE''@|0|g' \
+      -e 's|@''REPLACE_FREOPEN''@|0|g' \
+      -e 's|@''REPLACE_FSEEK''@|1|g' \
+      -e 's|@''REPLACE_FSEEKO''@|1|g' \
+      -e 's|@''REPLACE_FTELL''@|0|g' \
+      -e 's|@''REPLACE_FTELLO''@|0|g' \
+      -e 's|@''REPLACE_GETDELIM''@|0|g' \
+      -e 's|@''REPLACE_GETLINE''@|0|g' \
+      -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_PERROR''@|0|g' \
+      -e 's|@''REPLACE_POPEN''@|0|g' \
+      -e 's|@''REPLACE_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_REMOVE''@|0|g' \
+      -e 's|@''REPLACE_RENAME''@|0|g' \
+      -e 's|@''REPLACE_RENAMEAT''@|0|g' \
+      -e 's|@''REPLACE_SNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_SPRINTF''@|0|g' \
+      -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_TMPFILE''@|0|g' \
+      -e 's|@''REPLACE_VASPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VDPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VFPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSPRINTF''@|0|g' \
+      -e 's|@''ASM_SYMBOL_PREFIX''@||g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      &gt; lib/stdio.h-t
+mv lib/stdio.h-t lib/stdio.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDLIB_H''@|&lt;stdlib.h&gt;|g' \
+      -e 's/@''GNULIB__EXIT''@/0/g' \
+      -e 's/@''GNULIB_ALIGNED_ALLOC''@/0/g' \
+      -e 's/@''GNULIB_ATOLL''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_GNU''@/1/g' \
+      -e 's/@''GNULIB_CALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      -e 's/@''GNULIB_GETLOADAVG''@/0/g' \
+      -e 's/@''GNULIB_GETSUBOPT''@/0/g' \
+      -e 's/@''GNULIB_GRANTPT''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_GNU''@/1/g' \
+      -e 's/@''GNULIB_MALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_MBTOWC''@/1/g' \
+      -e 's/@''GNULIB_MKDTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMP''@/1/g' \
+      -e 's/@''GNULIB_MKOSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_POSIX_MEMALIGN''@/0/g' \
+      -e 's/@''GNULIB_POSIX_OPENPT''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME_R''@/0/g' \
+      -e 's/@''GNULIB_PUTENV''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_QSORT_R''@/0/g' \
+      -e 's/@''GNULIB_RANDOM''@/0/g' \
+      -e 's/@''GNULIB_RANDOM_R''@/0/g' \
+      -e 's/@''GNULIB_REALLOC_GNU''@/1/g' \
+      -e 's/@''GNULIB_REALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_REALLOCARRAY''@/1/g' \
+      -e 's/@''GNULIB_REALPATH''@/1/g' \
+      -e 's/@''GNULIB_RPMATCH''@/0/g' \
+      -e 's/@''GNULIB_SECURE_GETENV''@/0/g' \
+      -e 's/@''GNULIB_SETENV''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_STRTOD''@/0/g' \
+      -e 's/@''GNULIB_STRTOL''@/0/g' \
+      -e 's/@''GNULIB_STRTOLD''@/0/g' \
+      -e 's/@''GNULIB_STRTOLL''@/0/g' \
+      -e 's/@''GNULIB_STRTOUL''@/0/g' \
+      -e 's/@''GNULIB_STRTOULL''@/0/g' \
+      -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g' \
+      -e 's/@''GNULIB_UNLOCKPT''@/0/g' \
+      -e 's/@''GNULIB_UNSETENV''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_WCTOMB''@/1/g' \
+      -e 's/@''GNULIB_MDA_ECVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_FCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_GCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_MKTEMP''@/1/g' \
+      -e 's/@''GNULIB_MDA_PUTENV''@/1/g' \
+      &lt; ./lib/stdlib.in.h | \
+  sed -e 's|@''HAVE__EXIT''@|1|g' \
+      -e 's|@''HAVE_ALIGNED_ALLOC''@|1|g' \
+      -e 's|@''HAVE_ATOLL''@|1|g' \
+      -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|1|g' \
+      -e 's|@''HAVE_DECL_ECVT''@|1|g' \
+      -e 's|@''HAVE_DECL_FCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g' \
+      -e 's|@''HAVE_GETSUBOPT''@|1|g' \
+      -e 's|@''HAVE_GRANTPT''@|1|g' \
+      -e 's|@''HAVE_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_MBTOWC''@|1|g' \
+      -e 's|@''HAVE_MKDTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMPS''@|1|g' \
+      -e 's|@''HAVE_MKSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKSTEMPS''@|1|g' \
+      -e 's|@''HAVE_POSIX_MEMALIGN''@|1|g' \
+      -e 's|@''HAVE_POSIX_OPENPT''@|1|g' \
+      -e 's|@''HAVE_PTSNAME''@|1|g' \
+      -e 's|@''HAVE_PTSNAME_R''@|1|g' \
+      -e 's|@''HAVE_QSORT_R''@|1|g' \
+      -e 's|@''HAVE_RANDOM''@|1|g' \
+      -e 's|@''HAVE_RANDOM_H''@|1|g' \
+      -e 's|@''HAVE_RANDOM_R''@|1|g' \
+      -e 's|@''HAVE_REALLOCARRAY''@|1|g' \
+      -e 's|@''HAVE_REALPATH''@|1|g' \
+      -e 's|@''HAVE_RPMATCH''@|1|g' \
+      -e 's|@''HAVE_SECURE_GETENV''@|1|g' \
+      -e 's|@''HAVE_DECL_SETENV''@|1|g' \
+      -e 's|@''HAVE_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_STRTOD''@|1|g' \
+      -e 's|@''HAVE_STRTOL''@|1|g' \
+      -e 's|@''HAVE_STRTOLD''@|1|g' \
+      -e 's|@''HAVE_STRTOLL''@|1|g' \
+      -e 's|@''HAVE_STRTOUL''@|1|g' \
+      -e 's|@''HAVE_STRTOULL''@|1|g' \
+      -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g' \
+      -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g' \
+      -e 's|@''HAVE_UNLOCKPT''@|1|g' \
+      -e 's|@''HAVE_DECL_UNSETENV''@|1|g' \
+      -e 's|@''REPLACE_ALIGNED_ALLOC''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|0|g' \
+      -e 's|@''REPLACE_INITSTATE''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_MBTOWC''@|0|g' \
+      -e 's|@''REPLACE_MKSTEMP''@|0|g' \
+      -e 's|@''REPLACE_POSIX_MEMALIGN''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME_R''@|0|g' \
+      -e 's|@''REPLACE_PUTENV''@|0|g' \
+      -e 's|@''REPLACE_QSORT_R''@|0|g' \
+      -e 's|@''REPLACE_RANDOM''@|0|g' \
+      -e 's|@''REPLACE_RANDOM_R''@|0|g' \
+      -e 's|@''REPLACE_REALLOC_FOR_REALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_REALLOC_FOR_REALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_REALLOCARRAY''@|0|g' \
+      -e 's|@''REPLACE_REALPATH''@|0|g' \
+      -e 's|@''REPLACE_SETENV''@|0|g' \
+      -e 's|@''REPLACE_SETSTATE''@|0|g' \
+      -e 's|@''REPLACE_STRTOD''@|0|g' \
+      -e 's|@''REPLACE_STRTOL''@|0|g' \
+      -e 's|@''REPLACE_STRTOLD''@|0|g' \
+      -e 's|@''REPLACE_STRTOLL''@|0|g' \
+      -e 's|@''REPLACE_STRTOUL''@|0|g' \
+      -e 's|@''REPLACE_STRTOULL''@|0|g' \
+      -e 's|@''REPLACE_UNSETENV''@|0|g' \
+      -e 's|@''REPLACE_WCTOMB''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _Noreturn/r ./lib/_Noreturn.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      &gt; lib/stdlib.h-t
+mv lib/stdlib.h-t lib/stdlib.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STRING_H''@|&lt;string.h&gt;|g' \
+      -e 's/@''GNULIB_EXPLICIT_BZERO''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FFSL''@/0/g' \
+      -e 's/@''GNULIB_FFSLL''@/0/g' \
+      -e 's/@''GNULIB_MBSLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSNLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSRCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSSTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSPCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSCASESTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSPBRK''@/0/g' \
+      -e 's/@''GNULIB_MBSSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSSEP''@/0/g' \
+      -e 's/@''GNULIB_MBSTOK_R''@/0/g' \
+      -e 's/@''GNULIB_MEMCHR''@/1/g' \
+      -e 's/@''GNULIB_MEMMEM''@/0/g' \
+      -e 's/@''GNULIB_MEMPCPY''@/1/g' \
+      -e 's/@''GNULIB_MEMRCHR''@/1/g' \
+      -e 's/@''GNULIB_RAWMEMCHR''@/1/g' \
+      -e 's/@''GNULIB_STPCPY''@/0/g' \
+      -e 's/@''GNULIB_STPNCPY''@/0/g' \
+      -e 's/@''GNULIB_STRCHRNUL''@/0/g' \
+      -e 's/@''GNULIB_STRDUP''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_STRNCAT''@/0/g' \
+      -e 's/@''GNULIB_STRNDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNLEN''@/0/g' \
+      -e 's/@''GNULIB_STRPBRK''@/0/g' \
+      -e 's/@''GNULIB_STRSEP''@/0/g' \
+      -e 's/@''GNULIB_STRSTR''@/0/g' \
+      -e 's/@''GNULIB_STRCASESTR''@/0/g' \
+      -e 's/@''GNULIB_STRTOK_R''@/0/g' \
+      -e 's/@''GNULIB_STRERROR''@/1/g' \
+      -e 's/@''GNULIB_STRERROR_R''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_STRERRORNAME_NP''@/0/g' \
+      -e 's/@''GNULIB_SIGABBREV_NP''@/0/g' \
+      -e 's/@''GNULIB_SIGDESCR_NP''@/0/g' \
+      -e 's/@''GNULIB_STRSIGNAL''@/0/g' \
+      -e 's/@''GNULIB_STRVERSCMP''@/1/g' \
+      -e 's/@''GNULIB_MDA_MEMCCPY''@/1/g' \
+      -e 's/@''GNULIB_MDA_STRDUP''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      &lt; ./lib/string.in.h | \
+  sed -e 's|@''HAVE_EXPLICIT_BZERO''@|1|g' \
+      -e 's|@''HAVE_FFSL''@|1|g' \
+      -e 's|@''HAVE_FFSLL''@|1|g' \
+      -e 's|@''HAVE_MBSLEN''@|0|g' \
+      -e 's|@''HAVE_DECL_MEMMEM''@|1|g' \
+      -e 's|@''HAVE_MEMPCPY''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMRCHR''@|1|g' \
+      -e 's|@''HAVE_RAWMEMCHR''@|1|g' \
+      -e 's|@''HAVE_STPCPY''@|1|g' \
+      -e 's|@''HAVE_STPNCPY''@|1|g' \
+      -e 's|@''HAVE_STRCHRNUL''@|1|g' \
+      -e 's|@''HAVE_DECL_STRDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNLEN''@|1|g' \
+      -e 's|@''HAVE_STRPBRK''@|1|g' \
+      -e 's|@''HAVE_STRSEP''@|1|g' \
+      -e 's|@''HAVE_STRCASESTR''@|1|g' \
+      -e 's|@''HAVE_DECL_STRTOK_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRERROR_R''@|1|g' \
+      -e 's|@''HAVE_STRERRORNAME_NP''@|1|g' \
+      -e 's|@''HAVE_SIGABBREV_NP''@|1|g' \
+      -e 's|@''HAVE_SIGDESCR_NP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g' \
+      -e 's|@''HAVE_STRVERSCMP''@|1|g' \
+      -e 's|@''REPLACE_FFSLL''@|0|g' \
+      -e 's|@''REPLACE_MEMCHR''@|0|g' \
+      -e 's|@''REPLACE_MEMMEM''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|0|g' \
+      -e 's|@''REPLACE_STPNCPY''@|0|g' \
+      -e 's|@''REPLACE_STRCHRNUL''@|0|g' \
+      -e 's|@''REPLACE_STRDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNCAT''@|0|g' \
+      -e 's|@''REPLACE_STRNDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNLEN''@|0|g' \
+      -e 's|@''REPLACE_STRSTR''@|0|g' \
+      -e 's|@''REPLACE_STRCASESTR''@|0|g' \
+      -e 's|@''REPLACE_STRTOK_R''@|0|g' \
+      -e 's|@''REPLACE_STRERROR''@|0|g' \
+      -e 's|@''REPLACE_STRERROR_R''@|1|g' \
+      -e 's|@''REPLACE_STRERRORNAME_NP''@|0|g' \
+      -e 's|@''REPLACE_STRSIGNAL''@|0|g' \
+      -e 's|@''UNDEFINE_STRTOK_R''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      &gt; lib/string.h-t
+mv lib/string.h-t lib/string.h
+/bin/mkdir -p 'lib/sys'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_RANDOM_H''@|&lt;sys/random.h&gt;|g' \
+      -e 's|@''HAVE_SYS_RANDOM_H''@|1|g' \
+      -e 's/@''GNULIB_GETRANDOM''@/1/g' \
+      -e 's/@''HAVE_GETRANDOM''@/1/g' \
+      -e 's/@''REPLACE_GETRANDOM''@/0/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/sys_random.in.h &gt; lib/sys/random.h-t
+mv lib/sys/random.h-t lib/sys/random.h
+/bin/mkdir -p 'lib/sys'
+/bin/mkdir -p 'lib/sys'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TYPES_H''@|&lt;sys/types.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's|@''WINDOWS_STAT_INODES''@|0|g' \
+      ./lib/sys_types.in.h &gt; lib/sys/types.h-t
+mv lib/sys/types.h-t lib/sys/types.h
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_STAT_H''@|&lt;sys/stat.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_ST_SIZE''@|0|g' \
+      -e 's|@''WINDOWS_STAT_TIMESPEC''@|0|g' \
+      -e 's/@''GNULIB_CHMOD''@/0/g' \
+      -e 's/@''GNULIB_FCHMODAT''@/0/g' \
+      -e 's/@''GNULIB_FSTAT''@/1/g' \
+      -e 's/@''GNULIB_FSTATAT''@/0/g' \
+      -e 's/@''GNULIB_FUTIMENS''@/0/g' \
+      -e 's/@''GNULIB_GETUMASK''@/0/g' \
+      -e 's/@''GNULIB_LCHMOD''@/0/g' \
+      -e 's/@''GNULIB_LSTAT''@/1/g' \
+      -e 's/@''GNULIB_MKDIR''@/1/g' \
+      -e 's/@''GNULIB_MKDIRAT''@/0/g' \
+      -e 's/@''GNULIB_MKFIFO''@/0/g' \
+      -e 's/@''GNULIB_MKFIFOAT''@/0/g' \
+      -e 's/@''GNULIB_MKNOD''@/0/g' \
+      -e 's/@''GNULIB_MKNODAT''@/0/g' \
+      -e 's/@''GNULIB_STAT''@/1/g' \
+      -e 's/@''GNULIB_UTIMENSAT''@/0/g' \
+      -e 's/@''GNULIB_OVERRIDES_STRUCT_STAT''@/0/g' \
+      -e 's/@''GNULIB_MDA_CHMOD''@/1/g' \
+      -e 's/@''GNULIB_MDA_MKDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_UMASK''@/1/g' \
+      -e 's|@''HAVE_FCHMODAT''@|1|g' \
+      -e 's|@''HAVE_FSTATAT''@|1|g' \
+      -e 's|@''HAVE_FUTIMENS''@|1|g' \
+      -e 's|@''HAVE_GETUMASK''@|1|g' \
+      -e 's|@''HAVE_LCHMOD''@|1|g' \
+      -e 's|@''HAVE_LSTAT''@|1|g' \
+      -e 's|@''HAVE_MKDIRAT''@|1|g' \
+      -e 's|@''HAVE_MKFIFO''@|1|g' \
+      -e 's|@''HAVE_MKFIFOAT''@|1|g' \
+      -e 's|@''HAVE_MKNOD''@|1|g' \
+      -e 's|@''HAVE_MKNODAT''@|1|g' \
+      -e 's|@''HAVE_UTIMENSAT''@|1|g' \
+      -e 's|@''REPLACE_CHMOD''@|0|g' \
+      -e 's|@''REPLACE_FCHMODAT''@|0|g' \
+      -e 's|@''REPLACE_FSTAT''@|0|g' \
+      -e 's|@''REPLACE_FSTATAT''@|0|g' \
+      -e 's|@''REPLACE_FUTIMENS''@|0|g' \
+      -e 's|@''REPLACE_LSTAT''@|0|g' \
+      -e 's|@''REPLACE_MKDIR''@|0|g' \
+      -e 's|@''REPLACE_MKFIFO''@|0|g' \
+      -e 's|@''REPLACE_MKFIFOAT''@|0|g' \
+      -e 's|@''REPLACE_MKNOD''@|0|g' \
+      -e 's|@''REPLACE_MKNODAT''@|0|g' \
+      -e 's|@''REPLACE_STAT''@|0|g' \
+      -e 's|@''REPLACE_UTIMENSAT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/sys_stat.in.h &gt; lib/sys/stat.h-t
+mv lib/sys/stat.h-t lib/sys/stat.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_TIME_H''@|&lt;time.h&gt;|g' \
+      -e 's/@''GNULIB_CTIME''@/0/g' \
+      -e 's/@''GNULIB_LOCALTIME''@/0/g' \
+      -e 's/@''GNULIB_MKTIME''@/0/g' \
+      -e 's/@''GNULIB_NANOSLEEP''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_STRFTIME''@/0/g' \
+      -e 's/@''GNULIB_STRPTIME''@/0/g' \
+      -e 's/@''GNULIB_TIMEGM''@/0/g' \
+      -e 's/@''GNULIB_TIMESPEC_GET''@/0/g' \
+      -e 's/@''GNULIB_TIMESPEC_GETRES''@/0/g' \
+      -e 's/@''GNULIB_TIME_R''@/0/g' \
+      -e 's/@''GNULIB_TIME_RZ''@/0/g' \
+      -e 's/@''GNULIB_TZSET''@/0/g' \
+      -e 's/@''GNULIB_MDA_TZSET''@/1/g' \
+      -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g' \
+      -e 's|@''HAVE_NANOSLEEP''@|1|g' \
+      -e 's|@''HAVE_STRPTIME''@|1|g' \
+      -e 's|@''HAVE_TIMEGM''@|1|g' \
+      -e 's|@''HAVE_TIMESPEC_GET''@|1|g' \
+      -e 's|@''HAVE_TIMESPEC_GETRES''@|1|g' \
+      -e 's|@''HAVE_TIMEZONE_T''@|0|g' \
+      -e 's|@''REPLACE_CTIME''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_GMTIME''@|0|g' \
+      -e 's|@''REPLACE_LOCALTIME''@|0|g' \
+      -e 's|@''REPLACE_LOCALTIME_R''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_MKTIME''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_NANOSLEEP''@|1|g' \
+      -e 's|@''REPLACE_STRFTIME''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_TIMEGM''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_TZSET''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g' \
+      -e 's|@''UNISTD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_TIME_UTC''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/time.in.h &gt; lib/time.h-t
+mv lib/time.h-t lib/time.h
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_UNISTD_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_UNISTD_H''@|&lt;unistd.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's/@''GNULIB_ACCESS''@/0/g' \
+      -e 's/@''GNULIB_CHDIR''@/1/g' \
+      -e 's/@''GNULIB_CHOWN''@/0/g' \
+      -e 's/@''GNULIB_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_COPY_FILE_RANGE''@/0/g' \
+      -e 's/@''GNULIB_DUP''@/0/g' \
+      -e 's/@''GNULIB_DUP2''@/1/g' \
+      -e 's/@''GNULIB_DUP3''@/0/g' \
+      -e 's/@''GNULIB_ENVIRON''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+      -e 's/@''GNULIB_EXECL''@/0/g' \
+      -e 's/@''GNULIB_EXECLE''@/0/g' \
+      -e 's/@''GNULIB_EXECLP''@/0/g' \
+      -e 's/@''GNULIB_EXECV''@/0/g' \
+      -e 's/@''GNULIB_EXECVE''@/0/g' \
+      -e 's/@''GNULIB_EXECVP''@/0/g' \
+      -e 's/@''GNULIB_EXECVPE''@/0/g' \
+      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+      -e 's/@''GNULIB_FDATASYNC''@/0/g' \
+      -e 's/@''GNULIB_FSYNC''@/0/g' \
+      -e 's/@''GNULIB_FTRUNCATE''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_GETCWD''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+      -e 's/@''GNULIB_GETDTABLESIZE''@/1/g' \
+      -e 's/@''GNULIB_GETENTROPY''@/0/g' \
+      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+      -e 's/@''GNULIB_GETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+      -e 's/@''GNULIB_GETOPT_POSIX''@/0/g' \
+      -e 's/@''GNULIB_GETPAGESIZE''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_GETPASS''@/0/g' \
+      -e 's/@''GNULIB_GETPASS_GNU''@/0/g' \
+      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+      -e 's/@''GNULIB_ISATTY''@/0/g' \
+      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+      -e 's/@''GNULIB_LINK''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_LINKAT''@/0/g' \
+      -e 's/@''GNULIB_LSEEK''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_PIPE''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_PIPE2''@/0/g' \
+      -e 's/@''GNULIB_PREAD''@/0/g' \
+      -e 's/@''GNULIB_PWRITE''@/0/g' \
+      -e 's/@''GNULIB_READ''@/0/g' \
+      -e 's/@''GNULIB_READLINK''@/1/g' \
+      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+      -e 's/@''GNULIB_RMDIR''@/1/g' \
+      -e 's/@''GNULIB_SETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_SLEEP''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_SYMLINK''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+      -e 's/@''GNULIB_TRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/00/g' \
+      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_UNLINK''@/0/g' \
+      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+      -e 's/@''GNULIB_USLEEP''@/0/g' \
+      -e 's/@''GNULIB_WRITE''@/0/g' \
+      -e 's/@''GNULIB_MDA_ACCESS''@/1/g' \
+      -e 's/@''GNULIB_MDA_CHDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP2''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECL''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECV''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVPE''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETCWD''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETPID''@/1/g' \
+      -e 's/@''GNULIB_MDA_ISATTY''@/1/g' \
+      -e 's/@''GNULIB_MDA_LSEEK''@/1/g' \
+      -e 's/@''GNULIB_MDA_READ''@/1/g' \
+      -e 's/@''GNULIB_MDA_RMDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_SWAB''@/1/g' \
+      -e 's/@''GNULIB_MDA_UNLINK''@/1/g' \
+      -e 's/@''GNULIB_MDA_WRITE''@/1/g' \
+      &lt; ./lib/unistd.in.h | \
+  sed -e 's|@''HAVE_CHOWN''@|1|g' \
+      -e 's|@''HAVE_COPY_FILE_RANGE''@|1|g' \
+      -e 's|@''HAVE_DUP3''@|1|g' \
+      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+      -e 's|@''HAVE_EXECVPE''@|1|g' \
+      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+      -e 's|@''HAVE_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+      -e 's|@''HAVE_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_FSYNC''@|1|g' \
+      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+      -e 's|@''HAVE_GETDTABLESIZE''@|1|g' \
+      -e 's|@''HAVE_GETENTROPY''@|1|g' \
+      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_GETPASS''@|1|g' \
+      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+      -e 's|@''HAVE_LCHOWN''@|1|g' \
+      -e 's|@''HAVE_LINK''@|1|g' \
+      -e 's|@''HAVE_LINKAT''@|1|g' \
+      -e 's|@''HAVE_PIPE''@|1|g' \
+      -e 's|@''HAVE_PIPE2''@|1|g' \
+      -e 's|@''HAVE_PREAD''@|1|g' \
+      -e 's|@''HAVE_PWRITE''@|1|g' \
+      -e 's|@''HAVE_READLINK''@|1|g' \
+      -e 's|@''HAVE_READLINKAT''@|1|g' \
+      -e 's|@''HAVE_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_SLEEP''@|1|g' \
+      -e 's|@''HAVE_SYMLINK''@|1|g' \
+      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+      -e 's|@''HAVE_USLEEP''@|1|g' \
+      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+      -e 's|@''HAVE_DECL_EXECVPE''@|1|g' \
+      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_DECL_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+      -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNCATE''@|1|g' \
+      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+      -e 's|@''HAVE_OS_H''@|0|g' \
+      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+  | \
+  sed -e 's|@''REPLACE_ACCESS''@|0|g' \
+      -e 's|@''REPLACE_CHOWN''@|0|g' \
+      -e 's|@''REPLACE_CLOSE''@|0|g' \
+      -e 's|@''REPLACE_COPY_FILE_RANGE''@|0|g' \
+      -e 's|@''REPLACE_DUP''@|0|g' \
+      -e 's|@''REPLACE_DUP2''@|0|g' \
+      -e 's|@''REPLACE_EXECL''@|0|g' \
+      -e 's|@''REPLACE_EXECLE''@|0|g' \
+      -e 's|@''REPLACE_EXECLP''@|0|g' \
+      -e 's|@''REPLACE_EXECV''@|0|g' \
+      -e 's|@''REPLACE_EXECVE''@|0|g' \
+      -e 's|@''REPLACE_EXECVP''@|0|g' \
+      -e 's|@''REPLACE_EXECVPE''@|0|g' \
+      -e 's|@''REPLACE_FACCESSAT''@|0|g' \
+      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+      -e 's|@''REPLACE_FTRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_GETCWD''@|0|g' \
+      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+      -e 's|@''REPLACE_GETDTABLESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETPASS''@|0|g' \
+      -e 's|@''REPLACE_GETPASS_FOR_GETPASS_GNU''@|0|g' \
+      -e 's|@''REPLACE_ISATTY''@|0|g' \
+      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+      -e 's|@''REPLACE_LINK''@|0|g' \
+      -e 's|@''REPLACE_LINKAT''@|0|g' \
+      -e 's|@''REPLACE_LSEEK''@|0|g' \
+      -e 's|@''REPLACE_PREAD''@|0|g' \
+      -e 's|@''REPLACE_PWRITE''@|0|g' \
+      -e 's|@''REPLACE_READ''@|0|g' \
+      -e 's|@''REPLACE_READLINK''@|0|g' \
+      -e 's|@''REPLACE_READLINKAT''@|0|g' \
+      -e 's|@''REPLACE_RMDIR''@|0|g' \
+      -e 's|@''REPLACE_SLEEP''@|0|g' \
+      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+      -e 's|@''REPLACE_SYMLINKAT''@|0|g' \
+      -e 's|@''REPLACE_TRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+      -e 's|@''REPLACE_UNLINK''@|0|g' \
+      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+      -e 's|@''REPLACE_USLEEP''@|0|g' \
+      -e 's|@''REPLACE_WRITE''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_SYS_RANDOM_H''@|1|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      &gt; lib/unistd.h-t
+mv lib/unistd.h-t lib/unistd.h
+/bin/mkdir -p 'lib'
+/bin/mkdir -p 'lib'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's/@''HAVE_WCTYPE_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_WCTYPE_H''@|&lt;wctype.h&gt;|g' \
+      -e 's/@''HAVE_CRTDEFS_H''@/0/g' \
+      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/0/g' \
+      -e 's/@''GNULIB_ISWBLANK''@/0/g' \
+      -e 's/@''GNULIB_ISWDIGIT''@/0/g' \
+      -e 's/@''GNULIB_ISWXDIGIT''@/0/g' \
+      -e 's/@''GNULIB_WCTYPE''@/0/g' \
+      -e 's/@''GNULIB_ISWCTYPE''@/0/g' \
+      -e 's/@''GNULIB_WCTRANS''@/0/g' \
+      -e 's/@''GNULIB_TOWCTRANS''@/0/g' \
+      -e 's/@''HAVE_ISWBLANK''@/1/g' \
+      -e 's/@''HAVE_ISWCNTRL''@/1/g' \
+      -e 's/@''HAVE_WCTYPE_T''@/1/g' \
+      -e 's/@''HAVE_WCTRANS_T''@/1/g' \
+      -e 's/@''HAVE_WINT_T''@/1/g' \
+      -e 's/@''REPLACE_ISWBLANK''@/0/g' \
+      -e 's/@''REPLACE_ISWDIGIT''@/0/g' \
+      -e 's/@''REPLACE_ISWXDIGIT''@/0/g' \
+      -e 's/@''REPLACE_ISWCNTRL''@/0/g' \
+      -e 's/@''REPLACE_TOWLOWER''@/0/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      ./lib/wctype.in.h &gt; lib/wctype.h-t
+mv lib/wctype.h-t lib/wctype.h
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''HAVE_FEATURES_H''@|1|g' \
+      -e 's|@''NEXT_WCHAR_H''@|&lt;wchar.h&gt;|g' \
+      -e 's|@''HAVE_WCHAR_H''@|1|g' \
+      -e 's/@''HAVE_CRTDEFS_H''@/0/g' \
+      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/0/g' \
+      -e 's/@''GNULIB_BTOWC''@/1/g' \
+      -e 's/@''GNULIB_WCTOB''@/1/g' \
+      -e 's/@''GNULIB_MBSINIT''@/1/g' \
+      -e 's/@''GNULIB_MBRTOWC''@/1/g' \
+      -e 's/@''GNULIB_MBRLEN''@/1/g' \
+      -e 's/@''GNULIB_MBSRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_MBSNRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_WCRTOMB''@/1/g' \
+      -e 's/@''GNULIB_WCSRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCSNRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_WMEMCMP''@/0/g' \
+      -e 's/@''GNULIB_WMEMCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMMOVE''@/0/g' \
+      -e 's/@''GNULIB_WMEMPCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMSET''@/0/g' \
+      -e 's/@''GNULIB_WCSLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSNLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSNCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCOLL''@/0/g' \
+      -e 's/@''GNULIB_WCSXFRM''@/0/g' \
+      -e 's/@''GNULIB_WCSDUP''@/0/g' \
+      -e 's/@''GNULIB_WCSCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSRCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSCSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSPBRK''@/0/g' \
+      -e 's/@''GNULIB_WCSSTR''@/0/g' \
+      -e 's/@''GNULIB_WCSTOK''@/0/g' \
+      -e 's/@''GNULIB_WCSWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WCSFTIME''@/0/g' \
+      -e 's/@''GNULIB_MDA_WCSDUP''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      &lt; ./lib/wchar.in.h | \
+  sed -e 's|@''HAVE_WINT_T''@|1|g' \
+      -e 's|@''HAVE_BTOWC''@|1|g' \
+      -e 's|@''HAVE_MBSINIT''@|1|g' \
+      -e 's|@''HAVE_MBRTOWC''@|1|g' \
+      -e 's|@''HAVE_MBRLEN''@|1|g' \
+      -e 's|@''HAVE_MBSRTOWCS''@|1|g' \
+      -e 's|@''HAVE_MBSNRTOWCS''@|1|g' \
+      -e 's|@''HAVE_WCRTOMB''@|1|g' \
+      -e 's|@''HAVE_WCSRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WCSNRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WMEMCHR''@|1|g' \
+      -e 's|@''HAVE_WMEMCMP''@|1|g' \
+      -e 's|@''HAVE_WMEMCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMMOVE''@|1|g' \
+      -e 's|@''HAVE_WMEMPCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMSET''@|1|g' \
+      -e 's|@''HAVE_WCSLEN''@|1|g' \
+      -e 's|@''HAVE_WCSNLEN''@|1|g' \
+      -e 's|@''HAVE_WCSCPY''@|1|g' \
+      -e 's|@''HAVE_WCPCPY''@|1|g' \
+      -e 's|@''HAVE_WCSNCPY''@|1|g' \
+      -e 's|@''HAVE_WCPNCPY''@|1|g' \
+      -e 's|@''HAVE_WCSCAT''@|1|g' \
+      -e 's|@''HAVE_WCSNCAT''@|1|g' \
+      -e 's|@''HAVE_WCSCMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCMP''@|1|g' \
+      -e 's|@''HAVE_WCSCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSCOLL''@|1|g' \
+      -e 's|@''HAVE_WCSXFRM''@|1|g' \
+      -e 's|@''HAVE_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_WCSCHR''@|1|g' \
+      -e 's|@''HAVE_WCSRCHR''@|1|g' \
+      -e 's|@''HAVE_WCSCSPN''@|1|g' \
+      -e 's|@''HAVE_WCSSPN''@|1|g' \
+      -e 's|@''HAVE_WCSPBRK''@|1|g' \
+      -e 's|@''HAVE_WCSSTR''@|1|g' \
+      -e 's|@''HAVE_WCSTOK''@|1|g' \
+      -e 's|@''HAVE_WCSWIDTH''@|1|g' \
+      -e 's|@''HAVE_WCSFTIME''@|1|g' \
+      -e 's|@''HAVE_DECL_WCTOB''@|1|g' \
+      -e 's|@''HAVE_DECL_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_WCWIDTH''@|1|g' \
+  | \
+  sed -e 's|@''REPLACE_MBSTATE_T''@|0|g' \
+      -e 's|@''REPLACE_BTOWC''@|0|g' \
+      -e 's|@''REPLACE_WCTOB''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|0|g' \
+      -e 's|@''REPLACE_MBSINIT''@|0|g' \
+      -e 's|@''REPLACE_MBRTOWC''@|1|g' \
+      -e 's|@''REPLACE_MBRLEN''@|1|g' \
+      -e 's|@''REPLACE_MBSRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_MBSNRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_WCRTOMB''@|0|g' \
+      -e 's|@''REPLACE_WCSRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCSNRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSFTIME''@|0|g' \
+      -e 's|@''REPLACE_WCSTOK''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./lib/c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./lib/arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./lib/warn-on-use.h' \
+      &gt; lib/wchar.h-t
+mv lib/wchar.h-t lib/wchar.h
+rm -f sed/version.c
+printf '#include &lt;config.h&gt;\n' &gt; sed/version.ct
+printf 'char const *Version = "4.9";\n' &gt;&gt; sed/version.ct
+chmod a-w sed/version.ct
+mv sed/version.ct sed/version.c
+rm -f sed/version.h
+printf 'extern char const *Version;\n' &gt; sed/version.ht
+chmod a-w sed/version.ht
+mv sed/version.ht sed/version.h
+make  all-recursive
+Making all in po
+make[2]: Nothing to be done for 'all'.
+Making all in .
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-hard-locale.o `test -f 'lib/hard-locale.c' || echo './'`lib/hard-locale.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-ialloc.o `test -f 'lib/ialloc.c' || echo './'`lib/ialloc.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-localcharset.o `test -f 'lib/localcharset.c' || echo './'`lib/localcharset.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-mbrlen.o `test -f 'lib/mbrlen.c' || echo './'`lib/mbrlen.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-malloca.o `test -f 'lib/malloca.c' || echo './'`lib/malloca.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-mbrtowc.o `test -f 'lib/mbrtowc.c' || echo './'`lib/mbrtowc.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-progname.o `test -f 'lib/progname.c' || echo './'`lib/progname.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-obstack.o `test -f 'lib/obstack.c' || echo './'`lib/obstack.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-qcopy-acl.o `test -f 'lib/qcopy-acl.c' || echo './'`lib/qcopy-acl.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-qset-acl.o `test -f 'lib/qset-acl.c' || echo './'`lib/qset-acl.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-quotearg.o `test -f 'lib/quotearg.c' || echo './'`lib/quotearg.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-se-context.o `test -f 'lib/se-context.c' || echo './'`lib/se-context.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-se-label.o `test -f 'lib/se-label.c' || echo './'`lib/se-label.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-se-selinux.o `test -f 'lib/se-selinux.c' || echo './'`lib/se-selinux.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-setlocale_null.o `test -f 'lib/setlocale_null.c' || echo './'`lib/setlocale_null.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-stat-time.o `test -f 'lib/stat-time.c' || echo './'`lib/stat-time.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-tempname.o `test -f 'lib/tempname.c' || echo './'`lib/tempname.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/glthread/libsed_a-threadlib.o `test -f 'lib/glthread/threadlib.c' || echo './'`lib/glthread/threadlib.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-unistd.o `test -f 'lib/unistd.c' || echo './'`lib/unistd.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-version-etc.o `test -f 'lib/version-etc.c' || echo './'`lib/version-etc.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-version-etc-fsf.o `test -f 'lib/version-etc-fsf.c' || echo './'`lib/version-etc-fsf.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-wctype-h.o `test -f 'lib/wctype-h.c' || echo './'`lib/wctype-h.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-xmalloc.o `test -f 'lib/xmalloc.c' || echo './'`lib/xmalloc.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/version.o sed/version.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-xalloc-die.o `test -f 'lib/xalloc-die.c' || echo './'`lib/xalloc-die.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed -DLOCALEDIR=\"/usr/share/locale\"     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/sed-compile.o `test -f 'sed/compile.c' || echo './'`sed/compile.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed -DLOCALEDIR=\"/usr/share/locale\"     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/sed-debug.o `test -f 'sed/debug.c' || echo './'`sed/debug.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed -DLOCALEDIR=\"/usr/share/locale\"     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/sed-execute.o `test -f 'sed/execute.c' || echo './'`sed/execute.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed -DLOCALEDIR=\"/usr/share/locale\"     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/sed-mbcs.o `test -f 'sed/mbcs.c' || echo './'`sed/mbcs.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed -DLOCALEDIR=\"/usr/share/locale\"     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/sed-regexp.o `test -f 'sed/regexp.c' || echo './'`sed/regexp.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed -DLOCALEDIR=\"/usr/share/locale\"     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/sed-sed.o `test -f 'sed/sed.c' || echo './'`sed/sed.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-copy-acl.o `test -f 'lib/copy-acl.c' || echo './'`lib/copy-acl.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed -DLOCALEDIR=\"/usr/share/locale\"     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sed/sed-utils.o `test -f 'sed/utils.c' || echo './'`sed/utils.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-acl-errno-valid.o `test -f 'lib/acl-errno-valid.c' || echo './'`lib/acl-errno-valid.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-set-acl.o `test -f 'lib/set-acl.c' || echo './'`lib/set-acl.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-acl-internal.o `test -f 'lib/acl-internal.c' || echo './'`lib/acl-internal.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-get-permissions.o `test -f 'lib/get-permissions.c' || echo './'`lib/get-permissions.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-set-permissions.o `test -f 'lib/set-permissions.c' || echo './'`lib/set-permissions.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-basename-lgpl.o `test -f 'lib/basename-lgpl.c' || echo './'`lib/basename-lgpl.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-binary-io.o `test -f 'lib/binary-io.c' || echo './'`lib/binary-io.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-c-ctype.o `test -f 'lib/c-ctype.c' || echo './'`lib/c-ctype.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-c-strcasecmp.o `test -f 'lib/c-strcasecmp.c' || echo './'`lib/c-strcasecmp.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-c-strncasecmp.o `test -f 'lib/c-strncasecmp.c' || echo './'`lib/c-strncasecmp.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-close-stream.o `test -f 'lib/close-stream.c' || echo './'`lib/close-stream.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-cloexec.o `test -f 'lib/cloexec.c' || echo './'`lib/cloexec.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-closeout.o `test -f 'lib/closeout.c' || echo './'`lib/closeout.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-localeinfo.o `test -f 'lib/localeinfo.c' || echo './'`lib/localeinfo.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-dirname-lgpl.o `test -f 'lib/dirname-lgpl.c' || echo './'`lib/dirname-lgpl.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-dfa.o `test -f 'lib/dfa.c' || echo './'`lib/dfa.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-exitfail.o `test -f 'lib/exitfail.c' || echo './'`lib/exitfail.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-stripslash.o `test -f 'lib/stripslash.c' || echo './'`lib/stripslash.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-fcntl.o `test -f 'lib/fcntl.c' || echo './'`lib/fcntl.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-getprogname.o `test -f 'lib/getprogname.c' || echo './'`lib/getprogname.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libsed_a-fd-hook.o `test -f 'lib/fd-hook.c' || echo './'`lib/fd-hook.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-dynarray_at_failure.o `test -f 'lib/malloc/dynarray_at_failure.c' || echo './'`lib/malloc/dynarray_at_failure.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-dynarray_emplace_enlarge.o `test -f 'lib/malloc/dynarray_emplace_enlarge.c' || echo './'`lib/malloc/dynarray_emplace_enlarge.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-dynarray_finalize.o `test -f 'lib/malloc/dynarray_finalize.c' || echo './'`lib/malloc/dynarray_finalize.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-dynarray_resize.o `test -f 'lib/malloc/dynarray_resize.c' || echo './'`lib/malloc/dynarray_resize.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-dynarray_resize_clear.o `test -f 'lib/malloc/dynarray_resize_clear.c' || echo './'`lib/malloc/dynarray_resize_clear.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-scratch_buffer_grow.o `test -f 'lib/malloc/scratch_buffer_grow.c' || echo './'`lib/malloc/scratch_buffer_grow.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-scratch_buffer_grow_preserve.o `test -f 'lib/malloc/scratch_buffer_grow_preserve.c' || echo './'`lib/malloc/scratch_buffer_grow_preserve.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/malloc/libsed_a-scratch_buffer_set_array_size.o `test -f 'lib/malloc/scratch_buffer_set_array_size.c' || echo './'`lib/malloc/scratch_buffer_set_array_size.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I. -I./lib -I./lib -I./sed   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/glthread/libsed_a-lock.o `test -f 'lib/glthread/lock.c' || echo './'`lib/glthread/lock.c
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+rm -f sed/libver.a
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-ar cr sed/libver.a sed/version.o 
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-ranlib sed/libver.a
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+rm -f lib/libsed.a
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-ar cr lib/libsed.a lib/libsed_a-copy-acl.o lib/libsed_a-set-acl.o lib/libsed_a-acl-errno-valid.o lib/libsed_a-acl-internal.o lib/libsed_a-get-permissions.o lib/libsed_a-set-permissions.o lib/libsed_a-basename-lgpl.o lib/libsed_a-binary-io.o  lib/libsed_a-c-ctype.o lib/libsed_a-c-strcasecmp.o lib/libsed_a-c-strncasecmp.o  lib/libsed_a-cloexec.o  lib/libsed_a-close-stream.o lib/libsed_a-closeout.o lib/libsed_a-dfa.o lib/libsed_a-localeinfo.o lib/libsed_a-dirname-lgpl.o lib/libsed_a-stripslash.o   lib/libsed_a-exitfail.o lib/libsed_a-fcntl.o lib/libsed_a-fd-hook.o       lib/libsed_a-getprogname.o  lib/malloc/libsed_a-dynarray_at_failure.o lib/malloc/libsed_a-dynarray_emplace_enlarge.o lib/malloc/libsed_a-dynarray_finalize.o lib/malloc/libsed_a-dynarray_resize.o lib/malloc/libsed_a-dynarray_resize_clear.o lib/malloc/libsed_a-scratch_buffer_grow.o lib/malloc/libsed_a-scratch_buffer_grow_preserve.o lib/malloc/libsed_a-scratch_buffer_set_array_size.o lib/libsed_a-hard-locale.o lib/libsed_a-ialloc.o lib/libsed_a-localcharset.o  lib/glthread/libsed_a-lock.o  lib/libsed_a-malloca.o lib/libsed_a-mbrlen.o lib/libsed_a-mbrtowc.o            lib/libsed_a-obstack.o  lib/libsed_a-progname.o lib/libsed_a-qcopy-acl.o lib/libsed_a-qset-acl.o lib/libsed_a-quotearg.o        lib/libsed_a-se-context.o lib/libsed_a-se-label.o lib/libsed_a-se-selinux.o lib/libsed_a-setlocale_null.o   lib/libsed_a-stat-time.o      lib/libsed_a-tempname.o lib/glthread/libsed_a-threadlib.o lib/libsed_a-unistd.o lib/libsed_a-version-etc.o lib/libsed_a-version-etc-fsf.o    lib/libsed_a-wctype-h.o     lib/libsed_a-xmalloc.o lib/libsed_a-xalloc-die.o  
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-ranlib lib/libsed.a
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+x86_64-pc-linux-gnu-gcc    -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o sed/sed sed/sed-compile.o sed/sed-debug.o sed/sed-execute.o sed/sed-mbcs.o sed/sed-regexp.o sed/sed-sed.o sed/sed-utils.o sed/libver.a lib/libsed.a  -lacl  
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+/bin/mkdir -p doc
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+rm -rf doc/sed.1 doc/sed.1-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+/usr/bin/perl -- ./build-aux/help2man --bold-refs					\
+    --info-page=sed						\
+    --include ./doc/sed.x				\
+    --output=doc/sed.1-t						\
+    sed/sed							\
+  &amp;&amp; chmod a-w doc/sed.1-t						\
+  &amp;&amp; mv doc/sed.1-t doc/sed.1
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+Making all in gnulib-tests
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+/bin/mkdir -p 'arpa'
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''HAVE_FEATURES_H''@|1|g' \
+      -e 's|@''NEXT_ARPA_INET_H''@|&lt;arpa/inet.h&gt;|g' \
+      -e 's|@''HAVE_ARPA_INET_H''@|1|g' \
+      -e 's/@''GNULIB_INET_NTOP''@/0/g' \
+      -e 's/@''GNULIB_INET_PTON''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's|@''HAVE_WS2TCPIP_H''@|0|g' \
+      -e 's|@''HAVE_DECL_INET_NTOP''@|1|g' \
+      -e 's|@''HAVE_DECL_INET_PTON''@|1|g' \
+      -e 's|@''REPLACE_INET_NTOP''@|0|g' \
+      -e 's|@''REPLACE_INET_PTON''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./arpa_inet.in.h &gt; arpa/inet.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv arpa/inet.h-t arpa/inet.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_DIRENT_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_DIRENT_H''@|&lt;dirent.h&gt;|g' \
+      -e 's/@''GNULIB_OPENDIR''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_READDIR''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_REWINDDIR''@/0/g' \
+      -e 's/@''GNULIB_CLOSEDIR''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_DIRFD''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_FDOPENDIR''@/0/g' \
+      -e 's/@''GNULIB_SCANDIR''@/0/g' \
+      -e 's/@''GNULIB_ALPHASORT''@/0/g' \
+      -e 's/@''HAVE_OPENDIR''@/1/g' \
+      -e 's/@''HAVE_READDIR''@/1/g' \
+      -e 's/@''HAVE_REWINDDIR''@/1/g' \
+      -e 's/@''HAVE_CLOSEDIR''@/1/g' \
+      -e 's|@''HAVE_DECL_DIRFD''@|1|g' \
+      -e 's|@''HAVE_DECL_FDOPENDIR''@|1|g' \
+      -e 's|@''HAVE_FDOPENDIR''@|1|g' \
+      -e 's|@''HAVE_SCANDIR''@|1|g' \
+      -e 's|@''HAVE_ALPHASORT''@|1|g' \
+      -e 's|@''REPLACE_OPENDIR''@|0|g' \
+      -e 's|@''REPLACE_CLOSEDIR''@|0|g' \
+      -e 's|@''REPLACE_DIRFD''@|0|g' \
+      -e 's|@''REPLACE_FDOPENDIR''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./dirent.in.h &gt; dirent.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv dirent.h-t dirent.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_PTHREAD_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_PTHREAD_H''@|&lt;pthread.h&gt;|g' \
+      -e 's/@''GNULIB_PTHREAD_THREAD''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_PTHREAD_ONCE''@/0/g' \
+      -e 's/@''GNULIB_PTHREAD_MUTEX''@/0/g' \
+      -e 's/@''GNULIB_PTHREAD_RWLOCK''@/0/g' \
+      -e 's/@''GNULIB_PTHREAD_COND''@/0/g' \
+      -e 's/@''GNULIB_PTHREAD_TSS''@/0/g' \
+      -e 's/@''GNULIB_PTHREAD_SPIN''@/0/g' \
+      -e 's/@''GNULIB_PTHREAD_MUTEX_TIMEDLOCK''@/0/g' \
+      -e 's|@''HAVE_PTHREAD_T''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SPINLOCK_T''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_CREATE_DETACHED''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_RECURSIVE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_ROBUST''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_PROCESS_SHARED''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_CREATE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_ATTR_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_ATTR_GETDETACHSTATE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_ATTR_SETDETACHSTATE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_ATTR_DESTROY''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SELF''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_EQUAL''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_DETACH''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_JOIN''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_EXIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_ONCE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEXATTR_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEXATTR_GETTYPE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEXATTR_SETTYPE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEXATTR_GETROBUST''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEXATTR_SETROBUST''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEXATTR_DESTROY''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_LOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_TRYLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_TIMEDLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_UNLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_MUTEX_DESTROY''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCKATTR_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCKATTR_DESTROY''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_RDLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_WRLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_TRYRDLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_TRYWRLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_TIMEDRDLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_TIMEDWRLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_UNLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_RWLOCK_DESTROY''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_COND_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_CONDATTR_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_CONDATTR_DESTROY''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_COND_WAIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_COND_TIMEDWAIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_COND_SIGNAL''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_COND_BROADCAST''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_COND_DESTROY''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_KEY_CREATE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SETSPECIFIC''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_GETSPECIFIC''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_KEY_DELETE''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SPIN_INIT''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SPIN_LOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SPIN_TRYLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SPIN_UNLOCK''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SPIN_DESTROY''@|1|g' \
+      &lt; ./pthread.in.h | \
+  sed -e 's|@''REPLACE_PTHREAD_CREATE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_ATTR_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_ATTR_GETDETACHSTATE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_ATTR_SETDETACHSTATE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_ATTR_DESTROY''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SELF''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_EQUAL''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_DETACH''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_JOIN''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_EXIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_ONCE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEX_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEXATTR_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEXATTR_GETTYPE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEXATTR_SETTYPE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEXATTR_GETROBUST''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEXATTR_SETROBUST''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEXATTR_DESTROY''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEX_LOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEX_TRYLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEX_TIMEDLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEX_UNLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_MUTEX_DESTROY''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCKATTR_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCKATTR_DESTROY''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_RDLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_WRLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_TRYRDLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_TRYWRLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_TIMEDRDLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_TIMEDWRLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_UNLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_RWLOCK_DESTROY''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_COND_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_CONDATTR_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_CONDATTR_DESTROY''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_COND_WAIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_COND_TIMEDWAIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_COND_SIGNAL''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_COND_BROADCAST''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_COND_DESTROY''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_KEY_CREATE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SETSPECIFIC''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_GETSPECIFIC''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_KEY_DELETE''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SPIN_INIT''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SPIN_LOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SPIN_TRYLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SPIN_UNLOCK''@|0|g' \
+      -e 's|@''REPLACE_PTHREAD_SPIN_DESTROY''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _Noreturn/r ./_Noreturn.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; pthread.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv pthread.h-t pthread.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_SCHED_H''@|1|g' \
+      -e 's|@''HAVE_SYS_CDEFS_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SCHED_H''@|&lt;sched.h&gt;|g' \
+      -e 's|@''HAVE_STRUCT_SCHED_PARAM''@|1|g' \
+      -e 's/@''GNULIB_SCHED_YIELD''@/0/g' \
+      -e 's|@''HAVE_SCHED_YIELD''@|1|g' \
+      -e 's|@''REPLACE_SCHED_YIELD''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./sched.in.h &gt; sched.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv sched.h-t sched.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+/bin/mkdir -p 'sys'
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_SYS_IOCTL_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_IOCTL_H''@|&lt;sys/ioctl.h&gt;|g' \
+      -e 's/@''GNULIB_IOCTL''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's|@''SYS_IOCTL_H_HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''SYS_IOCTL_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e 's|@''REPLACE_IOCTL''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./sys_ioctl.in.h &gt; sys/ioctl.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv sys/ioctl.h-t sys/ioctl.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SIGNAL_H''@|&lt;signal.h&gt;|g' \
+      -e 's/@''GNULIB_PTHREAD_SIGMASK''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_RAISE''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_SIGNAL_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_SIGPROCMASK''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_SIGACTION''@/0/g' \
+      -e 's|@''HAVE_POSIX_SIGNALBLOCKING''@|1|g' \
+      -e 's|@''HAVE_PTHREAD_SIGMASK''@|1|g' \
+      -e 's|@''HAVE_RAISE''@|1|g' \
+      -e 's|@''HAVE_SIGSET_T''@|1|g' \
+      -e 's|@''HAVE_SIGINFO_T''@|1|g' \
+      -e 's|@''HAVE_SIGACTION''@|1|g' \
+      -e 's|@''HAVE_STRUCT_SIGACTION_SA_SIGACTION''@|1|g' \
+      -e 's|@''HAVE_TYPE_VOLATILE_SIG_ATOMIC_T''@|1|g' \
+      -e 's|@''HAVE_SIGHANDLER_T''@|1|g' \
+      -e 's|@''REPLACE_PTHREAD_SIGMASK''@|1|g' \
+      -e 's|@''REPLACE_RAISE''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./signal.in.h &gt; signal.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv signal.h-t signal.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+/bin/mkdir -p 'sys'
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_SELECT_H''@|&lt;sys/select.h&gt;|g' \
+      -e 's|@''HAVE_SYS_SELECT_H''@|1|g' \
+      -e 's/@''GNULIB_PSELECT''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_SELECT''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's|@''HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''HAVE_PSELECT''@|1|g' \
+      -e 's|@''REPLACE_PSELECT''@|0|g' \
+      -e 's|@''REPLACE_SELECT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./sys_select.in.h &gt; sys/select.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv sys/select.h-t sys/select.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+/bin/mkdir -p 'sys'
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_SOCKET_H''@|&lt;sys/socket.h&gt;|g' \
+      -e 's|@''HAVE_SYS_SOCKET_H''@|1|g' \
+      -e 's/@''GNULIB_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_SOCKET''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_CONNECT''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_ACCEPT''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_BIND''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_GETPEERNAME''@/0/g' \
+      -e 's/@''GNULIB_GETSOCKNAME''@/0/g' \
+      -e 's/@''GNULIB_GETSOCKOPT''@/0/g' \
+      -e 's/@''GNULIB_LISTEN''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_RECV''@/0/g' \
+      -e 's/@''GNULIB_SEND''@/0/g' \
+      -e 's/@''GNULIB_RECVFROM''@/0/g' \
+      -e 's/@''GNULIB_SENDTO''@/0/g' \
+      -e 's/@''GNULIB_SETSOCKOPT''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's/@''GNULIB_SHUTDOWN''@/0/g' \
+      -e 's/@''GNULIB_ACCEPT4''@/0/g' \
+      -e 's|@''HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''HAVE_WS2TCPIP_H''@|0|g' \
+      -e 's|@''HAVE_STRUCT_SOCKADDR_STORAGE''@|1|g' \
+      -e 's|@''HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY''@|1|g' \
+      -e 's|@''HAVE_SA_FAMILY_T''@|1|g' \
+      -e 's|@''HAVE_ACCEPT4''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./sys_socket.in.h &gt; sys/socket.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv sys/socket.h-t sys/socket.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+/bin/mkdir -p 'sys'
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's/@''HAVE_SYS_TIME_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TIME_H''@|&lt;sys/time.h&gt;|g' \
+      -e 's/@''GNULIB_GETTIMEOFDAY''@/IN_SED_GNULIB_TESTS/g' \
+      -e 's|@''HAVE_WINSOCK2_H''@|0|g' \
+      -e 's/@''HAVE_GETTIMEOFDAY''@/1/g' \
+      -e 's/@''HAVE_STRUCT_TIMEVAL''@/1/g' \
+      -e 's/@''REPLACE_GETTIMEOFDAY''@/0/g' \
+      -e 's/@''REPLACE_STRUCT_TIMEVAL''@/0/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./sys_time.in.h &gt; sys/time.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv sys/time.h-t sys/time.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+/bin/mkdir -p 'sys'
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_UIO_H''@|&lt;sys/uio.h&gt;|g' \
+      -e 's|@''HAVE_SYS_UIO_H''@|1|g' \
+      ./sys_uio.in.h &gt; sys/uio.h-t
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+mv sys/uio.h-t sys/uio.h
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+## ---------------------------------------------------- ##
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+## ------------------- Gnulib tests ------------------- ##
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+## You can ignore compiler warnings in this directory.  ##
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+## ---------------------------------------------------- ##
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make  all-recursive
+Making all in .
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o locale.o locale.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o file-has-acl.o file-has-acl.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o fflush.o fflush.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o fpurge.o fpurge.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o freading.o freading.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o fseek.o fseek.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o ioctl.o ioctl.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o fseeko.o fseeko.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o localename.o localename.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o localename-table.o localename-table.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o nanosleep.o nanosleep.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o pthread_sigmask.o pthread_sigmask.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o read-file.o read-file.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sockets.o sockets.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o sys_socket.o sys_socket.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o vma-iter.o vma-iter.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o test-localcharset.o test-localcharset.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o strerror_r.o strerror_r.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I..  -DIN_SED_GNULIB_TESTS=1 -I. -I. -I.. -I./.. -I../lib -I./../lib   -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o glthread/thread.o glthread/thread.c
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+rm -f libtests.a
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-ar cr libtests.a        fflush.o file-has-acl.o fpurge.o freading.o fseek.o fseeko.o        ioctl.o    localename.o localename-table.o  nanosleep.o      pthread_sigmask.o   read-file.o         sockets.o   sys_socket.o glthread/thread.o  vma-iter.o   strerror_r.o
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-ranlib libtests.a
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc  -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o current-locale locale.o libtests.a ../lib/libsed.a libtests.a ../lib/libsed.a libtests.a  
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+make[4]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+x86_64-pc-linux-gnu-gcc  -Wno-error -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o test-localcharset test-localcharset.o libtests.a ../lib/libsed.a libtests.a ../lib/libsed.a libtests.a   
+make[4]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/gnulib-tests'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-apps/sed-4.9-r1
+
+&gt;&gt;&gt; Install sys-apps/sed-4.9-r1 into /var/tmp/portage/sys-apps/sed-4.9-r1/image
+make -j2 DESTDIR=/var/tmp/portage/sys-apps/sed-4.9-r1/image install 
+make  install-recursive
+Making install in po
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/po'
+installing af.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/af/LC_MESSAGES/sed.mo
+installing ast.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ast/LC_MESSAGES/sed.mo
+installing bg.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/bg/LC_MESSAGES/sed.mo
+installing ca.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ca/LC_MESSAGES/sed.mo
+installing cs.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/cs/LC_MESSAGES/sed.mo
+installing da.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/da/LC_MESSAGES/sed.mo
+installing de.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/de/LC_MESSAGES/sed.mo
+installing el.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/el/LC_MESSAGES/sed.mo
+installing eo.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/eo/LC_MESSAGES/sed.mo
+installing es.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/es/LC_MESSAGES/sed.mo
+installing et.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/et/LC_MESSAGES/sed.mo
+installing eu.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/eu/LC_MESSAGES/sed.mo
+installing fi.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/fi/LC_MESSAGES/sed.mo
+installing fr.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/fr/LC_MESSAGES/sed.mo
+installing ga.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ga/LC_MESSAGES/sed.mo
+installing gl.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/gl/LC_MESSAGES/sed.mo
+installing he.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/he/LC_MESSAGES/sed.mo
+installing hr.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/hr/LC_MESSAGES/sed.mo
+installing hu.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/hu/LC_MESSAGES/sed.mo
+installing id.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/id/LC_MESSAGES/sed.mo
+installing it.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/it/LC_MESSAGES/sed.mo
+installing ja.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ja/LC_MESSAGES/sed.mo
+installing ka.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ka/LC_MESSAGES/sed.mo
+installing ko.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ko/LC_MESSAGES/sed.mo
+installing nb.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/nb/LC_MESSAGES/sed.mo
+installing nl.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/nl/LC_MESSAGES/sed.mo
+installing pl.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/pl/LC_MESSAGES/sed.mo
+installing pt.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/pt/LC_MESSAGES/sed.mo
+installing pt_BR.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/pt_BR/LC_MESSAGES/sed.mo
+installing ro.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ro/LC_MESSAGES/sed.mo
+installing ru.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/ru/LC_MESSAGES/sed.mo
+installing sk.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/sk/LC_MESSAGES/sed.mo
+installing sl.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/sl/LC_MESSAGES/sed.mo
+installing sr.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/sr/LC_MESSAGES/sed.mo
+installing sv.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/sv/LC_MESSAGES/sed.mo
+installing tr.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/tr/LC_MESSAGES/sed.mo
+installing uk.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/uk/LC_MESSAGES/sed.mo
+installing vi.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/vi/LC_MESSAGES/sed.mo
+installing zh_CN.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/zh_CN/LC_MESSAGES/sed.mo
+installing zh_TW.gmo as /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/locale/zh_TW/LC_MESSAGES/sed.mo
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/po'
+make[2]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/po'
+if test "sed" = "gettext-tools"; then \
+  /bin/mkdir -p /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 ./$file \
+		    /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9/po'
+Making install in .
+make[3]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+ /bin/mkdir -p '/var/tmp/portage/sys-apps/sed-4.9-r1/image/bin'
+  /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c sed/sed '/var/tmp/portage/sys-apps/sed-4.9-r1/image/bin/./gsed'
+make[3]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[3]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+ /bin/mkdir -p '/var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/info'
+ /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 ./doc/sed.info '/var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/info'
+make[3]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[3]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+ install-info --info-dir='/var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/info' '/var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/info/sed.info'
+make[3]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+make[3]: Entering directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+ /bin/mkdir -p '/var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_._ov33sd0/bin/ebuild-helpers/xattr/install -c -m 644 'doc/sed.1' '/var/tmp/portage/sys-apps/sed-4.9-r1/image/usr/share/man/man1/gsed.1'
+make[3]: Leaving directory '/var/tmp/portage/sys-apps/sed-4.9-r1/work/sed-4.9'
+Making install in gnulib-tests
+make  install-recursive
+Making install in .
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+&gt;&gt;&gt; Completed installing sys-apps/sed-4.9-r1 into /var/tmp/portage/sys-apps/sed-4.9-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 24444 KiB (23.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   1584 KiB ( 1.5 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /bin/gsed
+
+</pre>
+</body>
+
+</html>
