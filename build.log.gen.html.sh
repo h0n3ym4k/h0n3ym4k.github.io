@@ -93,6 +93,7 @@ fi
 
 echo "emerge --info ${pkg} --color y | ansi2html redir ${pkgr}_emerge-info.log.html"
 emerge --info "${pkg}" --color y | ansi2html > "${pkgr}"_emerge-info.log.html
+qlop --color -t -v "${pkgr}" | ansi2html >> "${pkgr}"_emerge-info.log.html
 	done
 
 	cd /mnt/Downloads/portage-build-log
