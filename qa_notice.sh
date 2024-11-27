@@ -14,7 +14,8 @@ files1=($(grep -rl '</span> QA Notice' *))
 
 for f in "${files1[@]}"
 do
-	info=$(echo "${f}" | awk -F_ '{print $1}')
+#	info=$(echo "${f}" | awk -F_ '{print $1}')
+	info=$(echo "${f}" | rev | cut -f1 -d_ --complement | rev)
 	echo "${info}_emerge-info.log.html redir qa_notice.html"
 	echo "<a href=\"${info}_emerge-info.log.html\">${info}_emerge-info.log.html</a>" >> qa_notice.html
 	echo "<br/>" >> qa_notice.html
