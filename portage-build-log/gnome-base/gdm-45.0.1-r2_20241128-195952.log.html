@@ -1,0 +1,944 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+.ansi35 { color: #E850A8; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    gnome-base/gdm-45.0.1-r2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gnome@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 branding elibc_glibc elogind kernel_linux wayland
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking gdm-45.0.1.tar.xz to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work
+&gt;&gt;&gt; Unpacking tango-gentoo-v1.1.tar.gz to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/gnome-base/gdm-45.0.1-r2/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain --localstatedir /var -Ddefault-pam-config=exherbo -Dgdm-xsession=true -Dgroup=gdm -Dipv6=true -Dlibaudit=disabled -Dlogind-provider=elogind -Dpam-mod-dir=/lib64/security -Dplymouth=disabled -Drun-dir=/run/gdm -Dselinux=disabled -Dsystemd-journal=false -Dtcp-wrappers=false -Dudev-dir=/lib/udev/rules.d -Duser=gdm -Duser-display-server=true -Dwayland-support=true -Dxdmcp=enabled -Dinitial-vt=7 -Dsystemdsystemunitdir=no -Dsystemduserunitdir=no /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1 /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.5.2
+Source dir: <span class="ansi1">/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1</span>
+Build dir: <span class="ansi1">/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">gdm</span>
+Project version: <span class="ansi1">45.0.1</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 14.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 14.2.1_p20241116 p3) 14.2.1 20241116")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.42
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.3.0</span>
+Run-time dependency <span class="ansi1">udev</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">254</span>
+Run-time dependency <span class="ansi1">gudev-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">238</span>
+Run-time dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">gobject-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">gio-unix-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span>
+Run-time dependency <span class="ansi1">gtk+-3.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">3.24.41</span>
+Run-time dependency <span class="ansi1">libcanberra-gtk3</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">0.30</span>
+Run-time dependency <span class="ansi1">accountsservice</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">23.13.9</span>
+Run-time dependency <span class="ansi1">xcb</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.17.0</span>
+Run-time dependency <span class="ansi1">libkeyutils</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.6.3</span>
+Dependency <span class="ansi1">libselinux</span> skipped: feature <span class="ansi1">selinux</span> disabled
+Run-time dependency <span class="ansi1">x11</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.8.10</span>
+Run-time dependency <span class="ansi1">xau</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.0.11</span>
+Run-time dependency <span class="ansi1">xorg-server</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">21.1.14</span>
+Program <span class="ansi1">build-aux/find-x-server.sh</span> found: <span class="ansi1 ansi32">YES</span> (/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/build-aux/find-x-server.sh)
+<span class="ansi1 ansi33">WARNING:</span> You should add the boolean check kwarg to the run_command call.
+         It currently defaults to false,
+         but it will default to true in future releases of meson.
+         See also: https://github.com/mesonbuild/meson/issues/9300
+Library <span class="ansi1">Xdmcp</span> found: <span class="ansi1 ansi32">YES</span>
+Found CMake: <span class="ansi1">/usr/bin/cmake</span> (3.30.5)
+Run-time dependency <span class="ansi1">systemd</span> found: <span class="ansi1 ansi31">NO</span> (tried pkgconfig and cmake)
+Run-time dependency <span class="ansi1">libelogind</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">252.9</span>
+Dependency <span class="ansi1">ply-boot-client</span> skipped: feature <span class="ansi1">plymouth</span> disabled
+Header "<span class="ansi1">bsm/adt.h</span>" has symbol "<span class="ansi1">ADT_USER</span>" : <span class="ansi1 ansi31">NO</span> 
+Dependency <span class="ansi1">audit</span> skipped: feature <span class="ansi1">libaudit</span> disabled
+Run-time dependency <span class="ansi1">check</span> found: <span class="ansi1 ansi31">NO</span> (tried pkgconfig and cmake)
+Has header "<span class="ansi1">security/pam_modutil.h</span>" : <span class="ansi1 ansi32">YES</span> 
+Has header "<span class="ansi1">security/pam_ext.h</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">pam_syslog</span>" : <span class="ansi1 ansi31">NO</span> 
+Has header "<span class="ansi1">utmpx.h</span>" : <span class="ansi1 ansi32">YES</span> 
+Has header "<span class="ansi1">utmp.h</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_host</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_pid</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_id</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_name</span>" : <span class="ansi1 ansi31">NO</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_type</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_exit.e_termination</span>" : <span class="ansi1 ansi31">NO</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_user</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_time</span>" : <span class="ansi1 ansi31">NO</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_tv</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct utmpx</span>" has member "<span class="ansi1">ut_syslen</span>" : <span class="ansi1 ansi31">NO</span> 
+Library <span class="ansi1">pam</span> found: <span class="ansi1 ansi32">YES</span>
+Header "<span class="ansi1">security/pam_appl.h</span>" has symbol "<span class="ansi1">PAM_BINARY_PROMPT</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">getutxent</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">updwtmp</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">updwtmpx</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">login</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">logout</span>" : <span class="ansi1 ansi32">YES</span> 
+Checking for function "<span class="ansi1">logwtmp</span>" : <span class="ansi1 ansi32">YES</span> 
+Configuring <span class="ansi1">config.h</span> using configuration
+Configuring <span class="ansi1">mime-dummy-handler.desktop</span> using configuration
+Configuring <span class="ansi1">mimeapps.list</span> using configuration
+Configuring <span class="ansi1">orca-autostart.desktop</span> using configuration
+Configuring <span class="ansi1">gdm</span> using configuration
+Program <span class="ansi1">dconf</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/dconf)
+Configuring <span class="ansi1">Init</span> using configuration
+Configuring <span class="ansi1">PreSession</span> using configuration
+Configuring <span class="ansi1">PostSession</span> using configuration
+Configuring <span class="ansi1">gdm.conf</span> using configuration
+Program <span class="ansi1">dirname</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/dirname)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-compile-schemas</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-schemas)
+Configuring <span class="ansi1">gdm.schemas</span> using configuration
+Configuring <span class="ansi1">gnome-login.session</span> using configuration
+Configuring <span class="ansi1">61-gdm.rules</span> using configuration
+Configuring <span class="ansi1">Xsession</span> using configuration
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/gdbus-codegen</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gdbus-codegen)
+Run-time dependency <span class="ansi1">gobject-introspection-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.78.1</span>
+Dependency <span class="ansi1">gobject-introspection-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.78.1</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/g-ir-scanner</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/g-ir-scanner)
+Dependency <span class="ansi1">gobject-introspection-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.78.1</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/g-ir-compiler</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/g-ir-compiler)
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Program <span class="ansi1">msginit</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msginit)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">xgettext</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xgettext)
+Program <span class="ansi1">itstool</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/itstool)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.78.6</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-compile-schemas</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-schemas)
+Build targets in project: <span class="ansi1">234</span>
+
+gdm <span class="ansi36">45.0.1</span>
+
+  <span class="ansi1">Paths</span>
+    datadir                 : /usr/share
+    sysconfdir              : /etc
+    bindir                  : /usr/bin
+    libdir                  : /usr/lib64
+    libexecdir              : /usr/libexec
+    logdir                  : /var/log/gdm
+    System DBus             : /etc/dbus-1/system.d
+    DM conf                 : /etc/dm
+    GDM conf                : /etc/gdm
+    GDM Screenshot          : /run/gdm/greeter
+    GDM Xauth               : /run/gdm
+    GDM RanOnceMarker       : /run/gdm
+    GDM Run                 : /run/gdm
+    GDM PID file            : /run/gdm/gdm.pid
+    GDM Defaults config     : /usr/share/gdm/defaults.conf
+    GDM Custom config       : /etc/gdm/custom.conf
+    GDM Runtime config      : /run/gdm/custom.conf
+    GDM Session default path: /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+    GDM Working dir         : /var/lib/gdm
+    GNOME locale            : /usr/share/locale
+    GNOME Settings Daemon   : /usr/libexec
+    AT SPI registryd        : /usr/libexec
+    Lang config file        : /etc/locale.conf
+    Pam MOD                 : /lib64/security
+    Udev rules              : /lib/udev/rules.d
+    XServer                 : /usr/bin/X
+    XPath                   : /usr/bin
+    Systemd XServer         : disabled
+
+  <span class="ansi1">Features</span>
+    ADT                     : <span class="ansi1 ansi31">NO</span>
+    PAM Syslog              : <span class="ansi1 ansi31">NO</span>
+    Supports PAM Extensions : <span class="ansi1 ansi32">YES</span>
+    SeLinux                 : <span class="ansi1 ansi31">NO</span>
+    Logind Provider         : elogind
+    Use GDM Xsession        : <span class="ansi1 ansi32">YES</span>
+    Use UserDisplayServer   : <span class="ansi1 ansi32">YES</span>
+    Use SystemdJournal      : <span class="ansi1 ansi31">NO</span>
+    Use WaylandSupport      : <span class="ansi1 ansi32">YES</span>
+    Use Profiling           : <span class="ansi1 ansi31">NO</span>
+    Initial VT              : 7
+    Username                : gdm
+    Groupname               : gdm
+    Plymouth                : <span class="ansi1 ansi31">NO</span>
+    Use ipv6                : <span class="ansi1 ansi32">YES</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files            : /var/tmp/portage/gnome-base/gdm-45.0.1-r2/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path   : /usr/share/pkgconfig
+    buildtype               : plain
+    libdir                  : lib64
+    localstatedir           : /var
+    pkg_config_path         : /usr/share/pkgconfig
+    prefix                  : /usr
+    sysconfdir              : /etc
+    werror                  : false
+    wrap_mode               : nodownload
+    b_lto                   : false
+    b_pch                   : false
+    default-pam-config      : exherbo
+    gdm-xsession            : true
+    group                   : gdm
+    initial-vt              : 7
+    ipv6                    : true
+    libaudit                : disabled
+    logind-provider         : elogind
+    pam-mod-dir             : /lib64/security
+    plymouth                : disabled
+    run-dir                 : /run/gdm
+    selinux                 : disabled
+    systemd-journal         : false
+    systemdsystemunitdir    : no
+    systemduserunitdir      : no
+    tcp-wrappers            : false
+    udev-dir                : /lib/udev/rules.d
+    user                    : gdm
+    user-display-server     : true
+    wayland-support         : true
+    xdmcp                   : enabled
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1 ...
+ninja -v -j2 -l2
+[1/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-address.c.o -MF common/libgdmcommon.a.p/gdm-address.c.o.d -o common/libgdmcommon.a.p/gdm-address.c.o -c ../gdm-45.0.1/common/gdm-address.c
+<span class="ansi1">../gdm-45.0.1/common/gdm-address.c:</span> In function ‘<span class="ansi1">gdm_address_get_sockaddr_storage</span>’:
+<span class="ansi1">../gdm-45.0.1/common/gdm-address.c:137:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">g_memdup</span>’ is deprecated: Use 'g_memdup2' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  137 |         <span class="ansi1 ansi35">ss</span> = g_memdup (address-&gt;ss, sizeof (struct sockaddr_storage));
+      |         <span class="ansi1 ansi35">^~</span>
+In file included from <span class="ansi1">/usr/include/glib-2.0/glib/gstring.h:37</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/glib/giochannel.h:36</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/glib.h:56</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/gobject/gbinding.h:30</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/glib-object.h:24</span>,
+                 from <span class="ansi1">../gdm-45.0.1/common/gdm-address.c:51</span>:
+<span class="ansi1">/usr/include/glib-2.0/glib/gstrfuncs.h:350:23:</span> <span class="ansi1 ansi36">note: </span>declared here
+  350 | gpointer              <span class="ansi1 ansi36">g_memdup</span>         (gconstpointer mem,
+      |                       <span class="ansi1 ansi36">^~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/common/gdm-address.c:</span> In function ‘<span class="ansi1">gdm_address_copy</span>’:
+<span class="ansi1">../gdm-45.0.1/common/gdm-address.c:532:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">g_memdup</span>’ is deprecated: Use 'g_memdup2' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  532 |         <span class="ansi1 ansi35">addr</span>-&gt;ss = g_memdup (address-&gt;ss, sizeof (struct sockaddr_storage));
+      |         <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">/usr/include/glib-2.0/glib/gstrfuncs.h:350:23:</span> <span class="ansi1 ansi36">note: </span>declared here
+  350 | gpointer              <span class="ansi1 ansi36">g_memdup</span>         (gconstpointer mem,
+      |                       <span class="ansi1 ansi36">^~~~~~~~</span>
+[2/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-common.c.o -MF common/libgdmcommon.a.p/gdm-common.c.o.d -o common/libgdmcommon.a.p/gdm-common.c.o -c ../gdm-45.0.1/common/gdm-common.c
+[3/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-log.c.o -MF common/libgdmcommon.a.p/gdm-log.c.o.d -o common/libgdmcommon.a.p/gdm-log.c.o -c ../gdm-45.0.1/common/gdm-log.c
+[4/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-profile.c.o -MF common/libgdmcommon.a.p/gdm-profile.c.o.d -o common/libgdmcommon.a.p/gdm-profile.c.o -c ../gdm-45.0.1/common/gdm-profile.c
+[5/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-settings-backend.c.o -MF common/libgdmcommon.a.p/gdm-settings-backend.c.o.d -o common/libgdmcommon.a.p/gdm-settings-backend.c.o -c ../gdm-45.0.1/common/gdm-settings-backend.c
+[6/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-settings-desktop-backend.c.o -MF common/libgdmcommon.a.p/gdm-settings-desktop-backend.c.o.d -o common/libgdmcommon.a.p/gdm-settings-desktop-backend.c.o -c ../gdm-45.0.1/common/gdm-settings-desktop-backend.c
+[7/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-settings-direct.c.o -MF common/libgdmcommon.a.p/gdm-settings-direct.c.o.d -o common/libgdmcommon.a.p/gdm-settings-direct.c.o -c ../gdm-45.0.1/common/gdm-settings-direct.c
+[8/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-settings-utils.c.o -MF common/libgdmcommon.a.p/gdm-settings-utils.c.o.d -o common/libgdmcommon.a.p/gdm-settings-utils.c.o -c ../gdm-45.0.1/common/gdm-settings-utils.c
+[9/283] x86_64-pc-linux-gnu-gcc -Icommon/libgdmcommon.a.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ common/libgdmcommon.a.p/gdm-settings.c.o -MF common/libgdmcommon.a.p/gdm-settings.c.o.d -o common/libgdmcommon.a.p/gdm-settings.c.o -c ../gdm-45.0.1/common/gdm-settings.c
+[10/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace Gdm --annotate org.gnome.DisplayManager.Manager org.gtk.GDBus.C.Name Manager --body --output libgdm/gdm-manager-glue.c ../gdm-45.0.1/libgdm/../daemon/gdm-manager.xml
+[11/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace Gdm --annotate org.gnome.DisplayManager.Manager org.gtk.GDBus.C.Name Manager --header --output libgdm/gdm-manager-glue.h ../gdm-45.0.1/libgdm/../daemon/gdm-manager.xml
+[12/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace Gdm --annotate org.gnome.DisplayManager.UserVerifier org.gtk.GDBus.C.Name UserVerifier --annotate org.gnome.DisplayManager.Greeter org.gtk.GDBus.C.Name Greeter --annotate org.gnome.DisplayManager.RemoteGreeter org.gtk.GDBus.C.Name RemoteGreeter --annotate org.gnome.DisplayManager.Chooser org.gtk.GDBus.C.Name Chooser --body --output libgdm/gdm-client-glue.c ../gdm-45.0.1/libgdm/../daemon/gdm-session.xml
+[13/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace Gdm --annotate org.gnome.DisplayManager.UserVerifier org.gtk.GDBus.C.Name UserVerifier --annotate org.gnome.DisplayManager.Greeter org.gtk.GDBus.C.Name Greeter --annotate org.gnome.DisplayManager.RemoteGreeter org.gtk.GDBus.C.Name RemoteGreeter --annotate org.gnome.DisplayManager.Chooser org.gtk.GDBus.C.Name Chooser --header --output libgdm/gdm-client-glue.h ../gdm-45.0.1/libgdm/../daemon/gdm-session.xml
+[14/283] rm -f common/libgdmcommon.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT common/libgdmcommon.a common/libgdmcommon.a.p/gdm-address.c.o common/libgdmcommon.a.p/gdm-common.c.o common/libgdmcommon.a.p/gdm-log.c.o common/libgdmcommon.a.p/gdm-profile.c.o common/libgdmcommon.a.p/gdm-settings-backend.c.o common/libgdmcommon.a.p/gdm-settings-desktop-backend.c.o common/libgdmcommon.a.p/gdm-settings-direct.c.o common/libgdmcommon.a.p/gdm-settings-utils.c.o common/libgdmcommon.a.p/gdm-settings.c.o
+[15/283] /usr/lib/python-exec/python3.12/meson --internal exe --capture daemon/gdm-session-enum-types.h -- /usr/bin/glib-mkenums --template /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session-enum-types.h.in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session.h
+[16/283] /usr/lib/python-exec/python3.12/meson --internal exe --capture daemon/gdm-session-worker-enum-types.h -- /usr/bin/glib-mkenums --template /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session-worker-enum-types.h.in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session-worker.h
+[17/283] x86_64-pc-linux-gnu-gcc -Ilibgdm/libgdm.so.1.0.0.p -Ilibgdm -I../gdm-45.0.1/libgdm -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-manager-glue.c.o -MF libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-manager-glue.c.o.d -o libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-manager-glue.c.o -c libgdm/gdm-manager-glue.c
+[18/283] x86_64-pc-linux-gnu-gcc -Ilibgdm/libgdm.so.1.0.0.p -Ilibgdm -I../gdm-45.0.1/libgdm -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-client-glue.c.o -MF libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-client-glue.c.o.d -o libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-client-glue.c.o -c libgdm/gdm-client-glue.c
+[19/283] x86_64-pc-linux-gnu-gcc -Ilibgdm/libgdm.so.1.0.0.p -Ilibgdm -I../gdm-45.0.1/libgdm -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ libgdm/libgdm.so.1.0.0.p/gdm-client.c.o -MF libgdm/libgdm.so.1.0.0.p/gdm-client.c.o.d -o libgdm/libgdm.so.1.0.0.p/gdm-client.c.o -c ../gdm-45.0.1/libgdm/gdm-client.c
+[20/283] x86_64-pc-linux-gnu-gcc -Ilibgdm/libgdm.so.1.0.0.p -Ilibgdm -I../gdm-45.0.1/libgdm -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ libgdm/libgdm.so.1.0.0.p/gdm-sessions.c.o -MF libgdm/libgdm.so.1.0.0.p/gdm-sessions.c.o.d -o libgdm/libgdm.so.1.0.0.p/gdm-sessions.c.o -c ../gdm-45.0.1/libgdm/gdm-sessions.c
+[21/283] x86_64-pc-linux-gnu-gcc -Ilibgdm/libgdm.so.1.0.0.p -Ilibgdm -I../gdm-45.0.1/libgdm -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/elogind -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread -MD -MQ libgdm/libgdm.so.1.0.0.p/gdm-user-switching.c.o -MF libgdm/libgdm.so.1.0.0.p/gdm-user-switching.c.o.d -o libgdm/libgdm.so.1.0.0.p/gdm-user-switching.c.o -c ../gdm-45.0.1/libgdm/gdm-user-switching.c
+[22/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.freedesktop.DBus --c-namespace GdmDBus --body --output daemon/gdm-dbus-glue.c ../gdm-45.0.1/daemon/org.freedesktop.DBus.xml
+[23/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.freedesktop.DBus --c-namespace GdmDBus --header --output daemon/gdm-dbus-glue.h ../gdm-45.0.1/daemon/org.freedesktop.DBus.xml
+[24/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --body --output daemon/gdm-display-glue.c ../gdm-45.0.1/daemon/gdm-display.xml
+[25/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --header --output daemon/gdm-display-glue.h ../gdm-45.0.1/daemon/gdm-display.xml
+[26/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --body --output daemon/gdm-local-display-glue.c ../gdm-45.0.1/daemon/gdm-local-display.xml
+[27/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --header --output daemon/gdm-local-display-glue.h ../gdm-45.0.1/daemon/gdm-local-display.xml
+[28/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --body --output daemon/gdm-local-display-factory-glue.c ../gdm-45.0.1/daemon/gdm-local-display-factory.xml
+[29/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --header --output daemon/gdm-local-display-factory-glue.h ../gdm-45.0.1/daemon/gdm-local-display-factory.xml
+[30/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --body --output daemon/gdm-manager-glue.c ../gdm-45.0.1/daemon/gdm-manager.xml
+[31/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --header --output daemon/gdm-manager-glue.h ../gdm-45.0.1/daemon/gdm-manager.xml
+[32/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --body --output daemon/gdm-session-glue.c ../gdm-45.0.1/daemon/gdm-session.xml
+[33/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --header --output daemon/gdm-session-glue.h ../gdm-45.0.1/daemon/gdm-session.xml
+[34/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --body --output daemon/gdm-session-worker-glue.c ../gdm-45.0.1/daemon/gdm-session-worker.xml
+[35/283] /usr/bin/gdbus-codegen --c-generate-autocleanup all --interface-prefix org.gnome.DisplayManager --c-namespace GdmDBus --header --output daemon/gdm-session-worker-glue.h ../gdm-45.0.1/daemon/gdm-session-worker.xml
+[36/283] /usr/lib/python-exec/python3.12/meson --internal exe --capture daemon/gdm-session-enum-types.c -- /usr/bin/glib-mkenums --template /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session-enum-types.c.in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session.h
+[37/283] /usr/lib/python-exec/python3.12/meson --internal exe --capture daemon/gdm-session-worker-enum-types.c -- /usr/bin/glib-mkenums --template /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session-worker-enum-types.c.in /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/../gdm-45.0.1/daemon/gdm-session-worker.h
+[38/283] x86_64-pc-linux-gnu-gcc  -o libgdm/libgdm.so.1.0.0 libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-manager-glue.c.o libgdm/libgdm.so.1.0.0.p/meson-generated_.._gdm-client-glue.c.o libgdm/libgdm.so.1.0.0.p/gdm-client.c.o libgdm/libgdm.so.1.0.0.p/gdm-sessions.c.o libgdm/libgdm.so.1.0.0.p/gdm-user-switching.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libgdm.so.1 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a -Wl,--version-script,/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/libgdm/libgdm.map /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /lib64/libelogind.so -Wl,--end-group
+[39/283] x86_64-pc-linux-gnu-gcc -Icommon/test-log.p -Icommon -I../gdm-45.0.1/common -I. -I../gdm-45.0.1 -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ common/test-log.p/test-log.c.o -MF common/test-log.p/test-log.c.o.d -o common/test-log.p/test-log.c.o -c ../gdm-45.0.1/common/test-log.c
+[40/283] x86_64-pc-linux-gnu-gcc -Idaemon/test-session-client.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/test-session-client.p/meson-generated_.._gdm-session-glue.c.o -MF daemon/test-session-client.p/meson-generated_.._gdm-session-glue.c.o.d -o daemon/test-session-client.p/meson-generated_.._gdm-session-glue.c.o -c daemon/gdm-session-glue.c
+[41/283] x86_64-pc-linux-gnu-gcc -Idaemon/test-session-client.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/test-session-client.p/meson-generated_.._gdm-manager-glue.c.o -MF daemon/test-session-client.p/meson-generated_.._gdm-manager-glue.c.o.d -o daemon/test-session-client.p/meson-generated_.._gdm-manager-glue.c.o -c daemon/gdm-manager-glue.c
+[42/283] x86_64-pc-linux-gnu-gcc -Idaemon/test-session-client.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/test-session-client.p/test-session-client.c.o -MF daemon/test-session-client.p/test-session-client.c.o.d -o daemon/test-session-client.p/test-session-client.c.o -c ../gdm-45.0.1/daemon/test-session-client.c
+[43/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/meson-generated_.._gdm-dbus-glue.c.o -MF daemon/gdm-session-worker.p/meson-generated_.._gdm-dbus-glue.c.o.d -o daemon/gdm-session-worker.p/meson-generated_.._gdm-dbus-glue.c.o -c daemon/gdm-dbus-glue.c
+[44/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/meson-generated_.._gdm-session-glue.c.o -MF daemon/gdm-session-worker.p/meson-generated_.._gdm-session-glue.c.o.d -o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-glue.c.o -c daemon/gdm-session-glue.c
+[45/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-glue.c.o -MF daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-glue.c.o.d -o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-glue.c.o -c daemon/gdm-session-worker-glue.c
+[46/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/meson-generated_.._gdm-session-enum-types.c.o -MF daemon/gdm-session-worker.p/meson-generated_.._gdm-session-enum-types.c.o.d -o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-enum-types.c.o -c daemon/gdm-session-enum-types.c
+[47/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-enum-types.c.o -MF daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-enum-types.c.o.d -o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-enum-types.c.o -c daemon/gdm-session-worker-enum-types.c
+[48/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/session-worker-main.c.o -MF daemon/gdm-session-worker.p/session-worker-main.c.o.d -o daemon/gdm-session-worker.p/session-worker-main.c.o -c ../gdm-45.0.1/daemon/session-worker-main.c
+[49/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-session.c.o -MF daemon/gdm-session-worker.p/gdm-session.c.o.d -o daemon/gdm-session-worker.p/gdm-session.c.o -c ../gdm-45.0.1/daemon/gdm-session.c
+[50/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-session-settings.c.o -MF daemon/gdm-session-worker.p/gdm-session-settings.c.o.d -o daemon/gdm-session-worker.p/gdm-session-settings.c.o -c ../gdm-45.0.1/daemon/gdm-session-settings.c
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-session-settings.c:</span> In function ‘<span class="ansi1">load_settings_from_user</span>’:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-session-settings.c:318:1:</span> <span class="ansi1 ansi35">warning: </span>label ‘<span class="ansi1">out</span>’ defined but not used [<span class="ansi1 ansi35">-Wunused-label</span>]
+  318 | <span class="ansi1 ansi35">out</span>:
+      | <span class="ansi1 ansi35">^~~</span>
+[51/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-session-auditor.c.o -MF daemon/gdm-session-worker.p/gdm-session-auditor.c.o.d -o daemon/gdm-session-worker.p/gdm-session-auditor.c.o -c ../gdm-45.0.1/daemon/gdm-session-auditor.c
+[52/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-session-record.c.o -MF daemon/gdm-session-worker.p/gdm-session-record.c.o.d -o daemon/gdm-session-worker.p/gdm-session-record.c.o -c ../gdm-45.0.1/daemon/gdm-session-record.c
+[53/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-session-worker.c.o -MF daemon/gdm-session-worker.p/gdm-session-worker.c.o.d -o daemon/gdm-session-worker.p/gdm-session-worker.c.o -c ../gdm-45.0.1/daemon/gdm-session-worker.c
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-session-worker.c:</span> In function ‘<span class="ansi1">jump_to_vt</span>’:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-session-worker.c:1005:17:</span> <span class="ansi1 ansi35">warning: </span>ignoring return value of ‘<span class="ansi1">write</span>’ declared with attribute ‘<span class="ansi1">warn_unused_result</span>’ [<span class="ansi1 ansi35">-Wunused-result</span>]
+ 1005 |                 <span class="ansi1 ansi35">write (worker-&gt;session_tty_fd,</span>
+      |                 <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+ 1006 | <span class="ansi1 ansi35">                       clear_screen_escape_sequence,</span>
+      |                        <span class="ansi1 ansi35">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+ 1007 | <span class="ansi1 ansi35">                       sizeof (clear_screen_escape_sequence))</span>;
+      |                        <span class="ansi1 ansi35">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+[54/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-session-worker-job.c.o -MF daemon/gdm-session-worker.p/gdm-session-worker-job.c.o.d -o daemon/gdm-session-worker.p/gdm-session-worker-job.c.o -c ../gdm-45.0.1/daemon/gdm-session-worker-job.c
+[55/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-session-worker-common.c.o -MF daemon/gdm-session-worker.p/gdm-session-worker-common.c.o.d -o daemon/gdm-session-worker.p/gdm-session-worker-common.c.o -c ../gdm-45.0.1/daemon/gdm-session-worker-common.c
+[56/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-session-worker.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-session-worker.p/gdm-dbus-util.c.o -MF daemon/gdm-session-worker.p/gdm-dbus-util.c.o.d -o daemon/gdm-session-worker.p/gdm-dbus-util.c.o -c ../gdm-45.0.1/daemon/gdm-dbus-util.c
+[57/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-wayland-session.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-wayland-session.p/meson-generated_.._gdm-manager-glue.c.o -MF daemon/gdm-wayland-session.p/meson-generated_.._gdm-manager-glue.c.o.d -o daemon/gdm-wayland-session.p/meson-generated_.._gdm-manager-glue.c.o -c daemon/gdm-manager-glue.c
+[58/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-wayland-session.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-wayland-session.p/gdm-wayland-session.c.o -MF daemon/gdm-wayland-session.p/gdm-wayland-session.c.o.d -o daemon/gdm-wayland-session.p/gdm-wayland-session.c.o -c ../gdm-45.0.1/daemon/gdm-wayland-session.c
+[59/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-x-session.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-x-session.p/meson-generated_.._gdm-manager-glue.c.o -MF daemon/gdm-x-session.p/meson-generated_.._gdm-manager-glue.c.o.d -o daemon/gdm-x-session.p/meson-generated_.._gdm-manager-glue.c.o -c daemon/gdm-manager-glue.c
+[60/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm-x-session.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Ipam-extensions -I../gdm-45.0.1/pam-extensions -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm-x-session.p/gdm-x-session.c.o -MF daemon/gdm-x-session.p/gdm-x-session.c.o.d -o daemon/gdm-x-session.p/gdm-x-session.c.o -c ../gdm-45.0.1/daemon/gdm-x-session.c
+[61/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/meson-generated_.._gdm-display-glue.c.o -MF daemon/gdm.p/meson-generated_.._gdm-display-glue.c.o.d -o daemon/gdm.p/meson-generated_.._gdm-display-glue.c.o -c daemon/gdm-display-glue.c
+[62/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/meson-generated_.._gdm-local-display-factory-glue.c.o -MF daemon/gdm.p/meson-generated_.._gdm-local-display-factory-glue.c.o.d -o daemon/gdm.p/meson-generated_.._gdm-local-display-factory-glue.c.o -c daemon/gdm-local-display-factory-glue.c
+[63/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/meson-generated_.._gdm-manager-glue.c.o -MF daemon/gdm.p/meson-generated_.._gdm-manager-glue.c.o.d -o daemon/gdm.p/meson-generated_.._gdm-manager-glue.c.o -c daemon/gdm-manager-glue.c
+[64/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/meson-generated_.._gdm-local-display-glue.c.o -MF daemon/gdm.p/meson-generated_.._gdm-local-display-glue.c.o.d -o daemon/gdm.p/meson-generated_.._gdm-local-display-glue.c.o -c daemon/gdm-local-display-glue.c
+[65/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/meson-generated_.._gdm-session-glue.c.o -MF daemon/gdm.p/meson-generated_.._gdm-session-glue.c.o.d -o daemon/gdm.p/meson-generated_.._gdm-session-glue.c.o -c daemon/gdm-session-glue.c
+[66/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/meson-generated_.._gdm-session-worker-glue.c.o -MF daemon/gdm.p/meson-generated_.._gdm-session-worker-glue.c.o.d -o daemon/gdm.p/meson-generated_.._gdm-session-worker-glue.c.o -c daemon/gdm-session-worker-glue.c
+[67/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/meson-generated_.._gdm-session-enum-types.c.o -MF daemon/gdm.p/meson-generated_.._gdm-session-enum-types.c.o.d -o daemon/gdm.p/meson-generated_.._gdm-session-enum-types.c.o -c daemon/gdm-session-enum-types.c
+[68/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-dbus-util.c.o -MF daemon/gdm.p/gdm-dbus-util.c.o.d -o daemon/gdm.p/gdm-dbus-util.c.o -c ../gdm-45.0.1/daemon/gdm-dbus-util.c
+[69/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-display-access-file.c.o -MF daemon/gdm.p/gdm-display-access-file.c.o.d -o daemon/gdm.p/gdm-display-access-file.c.o -c ../gdm-45.0.1/daemon/gdm-display-access-file.c
+[70/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-display-factory.c.o -MF daemon/gdm.p/gdm-display-factory.c.o.d -o daemon/gdm.p/gdm-display-factory.c.o -c ../gdm-45.0.1/daemon/gdm-display-factory.c
+[71/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-display-store.c.o -MF daemon/gdm.p/gdm-display-store.c.o.d -o daemon/gdm.p/gdm-display-store.c.o -c ../gdm-45.0.1/daemon/gdm-display-store.c
+[72/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-display.c.o -MF daemon/gdm.p/gdm-display.c.o.d -o daemon/gdm.p/gdm-display.c.o -c ../gdm-45.0.1/daemon/gdm-display.c
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-display.c:</span> In function ‘<span class="ansi1">handle_is_local</span>’:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-display.c:1141:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">is_local</span>’ may be used uninitialized [<span class="ansi1 ansi35">-Wmaybe-uninitialized</span>]
+ 1141 |         <span class="ansi1 ansi35">gdm_dbus_display_complete_is_local (skeleton, invocation, is_local)</span>;
+      |         <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-display.c:1137:18:</span> <span class="ansi1 ansi36">note: </span>‘<span class="ansi1">is_local</span>’ was declared here
+ 1137 |         gboolean <span class="ansi1 ansi36">is_local</span>;
+      |                  <span class="ansi1 ansi36">^~~~~~~~</span>
+[73/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-launch-environment.c.o -MF daemon/gdm.p/gdm-launch-environment.c.o.d -o daemon/gdm.p/gdm-launch-environment.c.o -c ../gdm-45.0.1/daemon/gdm-launch-environment.c
+[74/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-legacy-display.c.o -MF daemon/gdm.p/gdm-legacy-display.c.o.d -o daemon/gdm.p/gdm-legacy-display.c.o -c ../gdm-45.0.1/daemon/gdm-legacy-display.c
+[75/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-local-display-factory.c.o -MF daemon/gdm.p/gdm-local-display-factory.c.o.d -o daemon/gdm.p/gdm-local-display-factory.c.o -c ../gdm-45.0.1/daemon/gdm-local-display-factory.c
+[76/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-local-display.c.o -MF daemon/gdm.p/gdm-local-display.c.o.d -o daemon/gdm.p/gdm-local-display.c.o -c ../gdm-45.0.1/daemon/gdm-local-display.c
+[77/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-manager.c.o -MF daemon/gdm.p/gdm-manager.c.o.d -o daemon/gdm.p/gdm-manager.c.o -c ../gdm-45.0.1/daemon/gdm-manager.c
+[78/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-server.c.o -MF daemon/gdm.p/gdm-server.c.o.d -o daemon/gdm.p/gdm-server.c.o -c ../gdm-45.0.1/daemon/gdm-server.c
+In function ‘<span class="ansi1">server_add_xserver_args</span>’,
+    inlined from ‘<span class="ansi1">gdm_server_spawn</span>’ at <span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:679:17</span>,
+    inlined from ‘<span class="ansi1">gdm_server_start</span>’ at <span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:757:14</span>:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:619:19:</span> <span class="ansi1 ansi35">warning: </span>array subscript [2, 2147483647] is outside array bounds of ‘<span class="ansi1">gchar *[1]</span>’ {aka ‘<span class="ansi1">char *[1]</span>’} [<span class="ansi1 ansi35">-Warray-bounds=</span>]
+  619 |         argv[len] <span class="ansi1 ansi35">=</span> NULL;
+      |                   <span class="ansi1 ansi35">^</span>
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:</span> In function ‘<span class="ansi1">gdm_server_start</span>’:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:665:26:</span> <span class="ansi1 ansi36">note: </span>at offset [16, 17179869176] into object ‘<span class="ansi1">argv</span>’ of size 8
+  665 |         gchar          **<span class="ansi1 ansi36">argv</span> = NULL;
+      |                          <span class="ansi1 ansi36">^~~~</span>
+In function ‘<span class="ansi1">server_add_xserver_args</span>’,
+    inlined from ‘<span class="ansi1">gdm_server_spawn</span>’ at <span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:679:17</span>,
+    inlined from ‘<span class="ansi1">gdm_server_start</span>’ at <span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:757:14</span>:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:614:22:</span> <span class="ansi1 ansi35">warning: </span>array subscript [2, 2147483647] is outside array bounds of ‘<span class="ansi1">gchar *[1]</span>’ {aka ‘<span class="ansi1">char *[1]</span>’} [<span class="ansi1 ansi35">-Warray-bounds=</span>]
+  614 |                 *<span class="ansi1 ansi35">argv[len++]</span> = g_strdup (args[i]);
+      |                  <span class="ansi1 ansi35">~~~~^~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:</span> In function ‘<span class="ansi1">gdm_server_start</span>’:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-server.c:665:26:</span> <span class="ansi1 ansi36">note: </span>at offset [16, 17179869176] into object ‘<span class="ansi1">argv</span>’ of size 8
+  665 |         gchar          **<span class="ansi1 ansi36">argv</span> = NULL;
+      |                          <span class="ansi1 ansi36">^~~~</span>
+[79/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-session-record.c.o -MF daemon/gdm.p/gdm-session-record.c.o.d -o daemon/gdm.p/gdm-session-record.c.o -c ../gdm-45.0.1/daemon/gdm-session-record.c
+[80/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-session-worker-common.c.o -MF daemon/gdm.p/gdm-session-worker-common.c.o.d -o daemon/gdm.p/gdm-session-worker-common.c.o -c ../gdm-45.0.1/daemon/gdm-session-worker-common.c
+[81/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-session-worker-job.c.o -MF daemon/gdm.p/gdm-session-worker-job.c.o.d -o daemon/gdm.p/gdm-session-worker-job.c.o -c ../gdm-45.0.1/daemon/gdm-session-worker-job.c
+[82/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-session.c.o -MF daemon/gdm.p/gdm-session.c.o.d -o daemon/gdm.p/gdm-session.c.o -c ../gdm-45.0.1/daemon/gdm-session.c
+[83/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/main.c.o -MF daemon/gdm.p/main.c.o.d -o daemon/gdm.p/main.c.o -c ../gdm-45.0.1/daemon/main.c
+[84/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-xdmcp-display-factory.c.o -MF daemon/gdm.p/gdm-xdmcp-display-factory.c.o.d -o daemon/gdm.p/gdm-xdmcp-display-factory.c.o -c ../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c:</span> In function ‘<span class="ansi1">set_port_for_request</span>’:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c:921:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">g_memdup</span>’ is deprecated: Use 'g_memdup2' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  921 |                 <span class="ansi1 ansi35">port</span>-&gt;data = (CARD8 *)g_memdup (&amp;(SIN (ss)-&gt;sin_port), port-&gt;length);
+      |                 <span class="ansi1 ansi35">^~~~</span>
+In file included from <span class="ansi1">/usr/include/glib-2.0/glib/gstring.h:37</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/glib/giochannel.h:36</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/glib.h:56</span>,
+                 from <span class="ansi1">../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c:46</span>:
+<span class="ansi1">/usr/include/glib-2.0/glib/gstrfuncs.h:350:23:</span> <span class="ansi1 ansi36">note: </span>declared here
+  350 | gpointer              <span class="ansi1 ansi36">g_memdup</span>         (gconstpointer mem,
+      |                       <span class="ansi1 ansi36">^~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c:924:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">g_memdup</span>’ is deprecated: Use 'g_memdup2' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  924 |                 <span class="ansi1 ansi35">port</span>-&gt;data = (CARD8 *)g_memdup (&amp;(SIN6 (ss)-&gt;sin6_port), port-&gt;length);
+      |                 <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">/usr/include/glib-2.0/glib/gstrfuncs.h:350:23:</span> <span class="ansi1 ansi36">note: </span>declared here
+  350 | gpointer              <span class="ansi1 ansi36">g_memdup</span>         (gconstpointer mem,
+      |                       <span class="ansi1 ansi36">^~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c:</span> In function ‘<span class="ansi1">set_address_for_request</span>’:
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c:943:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">g_memdup</span>’ is deprecated: Use 'g_memdup2' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  943 |                 <span class="ansi1 ansi35">addr</span>-&gt;data = g_memdup (&amp;SIN (ss)-&gt;sin_addr, addr-&gt;length);
+      |                 <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">/usr/include/glib-2.0/glib/gstrfuncs.h:350:23:</span> <span class="ansi1 ansi36">note: </span>declared here
+  350 | gpointer              <span class="ansi1 ansi36">g_memdup</span>         (gconstpointer mem,
+      |                       <span class="ansi1 ansi36">^~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/daemon/gdm-xdmcp-display-factory.c:947:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">g_memdup</span>’ is deprecated: Use 'g_memdup2' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  947 |                 <span class="ansi1 ansi35">addr</span>-&gt;data = g_memdup (&amp;SIN6 (ss)-&gt;sin6_addr, addr-&gt;length);
+      |                 <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">/usr/include/glib-2.0/glib/gstrfuncs.h:350:23:</span> <span class="ansi1 ansi36">note: </span>declared here
+  350 | gpointer              <span class="ansi1 ansi36">g_memdup</span>         (gconstpointer mem,
+      |                       <span class="ansi1 ansi36">^~~~~~~~</span>
+[85/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-xdmcp-display.c.o -MF daemon/gdm.p/gdm-xdmcp-display.c.o.d -o daemon/gdm.p/gdm-xdmcp-display.c.o -c ../gdm-45.0.1/daemon/gdm-xdmcp-display.c
+[86/283] x86_64-pc-linux-gnu-gcc -Idaemon/gdm.p -Idaemon -I../gdm-45.0.1/daemon -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/elogind -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/accountsservice-1.0 -I/usr/include/polkit-1 -I/usr/include/gudev-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ daemon/gdm.p/gdm-xdmcp-chooser-display.c.o -MF daemon/gdm.p/gdm-xdmcp-chooser-display.c.o.d -o daemon/gdm.p/gdm-xdmcp-chooser-display.c.o -c ../gdm-45.0.1/daemon/gdm-xdmcp-chooser-display.c
+[87/283] /usr/lib/python-exec/python3.12/meson --internal symbolextractor /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build libgdm/libgdm.so.1.0.0 libgdm/libgdm.so.1.0.0 libgdm/libgdm.so.1.0.0.p/libgdm.so.1.0.0.symbols 
+[88/283] env PKG_CONFIG_PATH=/usr/share/pkgconfig:/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/meson-uninstalled PKG_CONFIG_LIBDIR=/usr/lib64/pkgconfig PKG_CONFIG=/usr/bin/x86_64-pc-linux-gnu-pkg-config CC=x86_64-pc-linux-gnu-gcc /usr/bin/g-ir-scanner --quiet --no-libtool --namespace=Gdm --nsversion=1.0 --warn-all --output libgdm/Gdm-1.0.gir -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/libgdm -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/libgdm -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/. -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/. -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/common/. -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/common/. --filelist=/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/libgdm/libgdm.so.1.0.0.p/Gdm_1.0_gir_filelist --include=GLib-2.0 --include=GObject-2.0 --include=Gio-2.0 --identifier-prefix=Gdm --cflags-begin -D_GNU_SOURCE -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/. -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/. -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/common/. -I/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/common/. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -I/usr/include/elogind -I/usr/include/gobject-introspection-1.0 --cflags-end --add-include-path=/usr/share/gir-1.0 -L/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/libgdm --library gdm --extra-library=glib-2.0 --extra-library=gio-2.0 --extra-library=gobject-2.0 --extra-library=elogind --extra-library=girepository-1.0 --sources-top-dirs /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/ --sources-top-dirs /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/
+libgdm/gdm-client-glue.h:276: Warning: Gdm: gdm_worker_manager_proxy_new_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:279: Warning: Gdm: gdm_worker_manager_proxy_new_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:295: Warning: Gdm: gdm_worker_manager_proxy_new_for_bus_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:298: Warning: Gdm: gdm_worker_manager_proxy_new_for_bus_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:338: Warning: Gdm: gdm_worker_manager_skeleton_new: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:652: Warning: Gdm: gdm_user_verifier_proxy_new_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:655: Warning: Gdm: gdm_user_verifier_proxy_new_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:671: Warning: Gdm: gdm_user_verifier_proxy_new_for_bus_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:674: Warning: Gdm: gdm_user_verifier_proxy_new_for_bus_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:714: Warning: Gdm: gdm_user_verifier_skeleton_new: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:836: Warning: Gdm: gdm_user_verifier_choice_list_proxy_new_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:839: Warning: Gdm: gdm_user_verifier_choice_list_proxy_new_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:855: Warning: Gdm: gdm_user_verifier_choice_list_proxy_new_for_bus_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:858: Warning: Gdm: gdm_user_verifier_choice_list_proxy_new_for_bus_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:898: Warning: Gdm: gdm_user_verifier_choice_list_skeleton_new: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1172: Warning: Gdm: gdm_greeter_proxy_new_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1175: Warning: Gdm: gdm_greeter_proxy_new_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1191: Warning: Gdm: gdm_greeter_proxy_new_for_bus_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1194: Warning: Gdm: gdm_greeter_proxy_new_for_bus_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1234: Warning: Gdm: gdm_greeter_skeleton_new: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1334: Warning: Gdm: gdm_remote_greeter_proxy_new_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1337: Warning: Gdm: gdm_remote_greeter_proxy_new_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1353: Warning: Gdm: gdm_remote_greeter_proxy_new_for_bus_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1356: Warning: Gdm: gdm_remote_greeter_proxy_new_for_bus_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1396: Warning: Gdm: gdm_remote_greeter_skeleton_new: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1523: Warning: Gdm: gdm_chooser_proxy_new_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1526: Warning: Gdm: gdm_chooser_proxy_new_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1542: Warning: Gdm: gdm_chooser_proxy_new_for_bus_finish: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1545: Warning: Gdm: gdm_chooser_proxy_new_for_bus_sync: return value: Missing (transfer) annotation
+libgdm/gdm-client-glue.h:1585: Warning: Gdm: gdm_chooser_skeleton_new: return value: Missing (transfer) annotation
+libgdm/gdm-manager-glue.h:210: Warning: Gdm: gdm_manager_proxy_new_finish: return value: Missing (transfer) annotation
+libgdm/gdm-manager-glue.h:213: Warning: Gdm: gdm_manager_proxy_new_sync: return value: Missing (transfer) annotation
+libgdm/gdm-manager-glue.h:229: Warning: Gdm: gdm_manager_proxy_new_for_bus_finish: return value: Missing (transfer) annotation
+libgdm/gdm-manager-glue.h:232: Warning: Gdm: gdm_manager_proxy_new_for_bus_sync: return value: Missing (transfer) annotation
+libgdm/gdm-manager-glue.h:272: Warning: Gdm: gdm_manager_skeleton_new: return value: Missing (transfer) annotation
+[89/283] x86_64-pc-linux-gnu-gcc -Iutils/gdmflexiserver.p -Iutils -I../gdm-45.0.1/utils -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/elogind -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gio-unix-2.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ utils/gdmflexiserver.p/gdmflexiserver.c.o -MF utils/gdmflexiserver.p/gdmflexiserver.c.o.d -o utils/gdmflexiserver.p/gdmflexiserver.c.o -c ../gdm-45.0.1/utils/gdmflexiserver.c
+[90/283] x86_64-pc-linux-gnu-gcc -Iutils/gdm-screenshot.p -Iutils -I../gdm-45.0.1/utils -I. -I../gdm-45.0.1 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -D_REENTRANT -pthread -MD -MQ utils/gdm-screenshot.p/gdm-screenshot.c.o -MF utils/gdm-screenshot.p/gdm-screenshot.c.o.d -o utils/gdm-screenshot.p/gdm-screenshot.c.o -c ../gdm-45.0.1/utils/gdm-screenshot.c
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:</span> In function ‘<span class="ansi1">screenshot_grab_lock</span>’:
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:77:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gdk_pointer_grab</span>’ is deprecated: Use 'gdk_device_grab' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+   77 |         <span class="ansi1 ansi35">gdk_pointer_grab</span> (gtk_widget_get_window (selection_window), FALSE, 0, NULL,
+      |         <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~</span>
+In file included from <span class="ansi1">/usr/include/gtk-3.0/gdk/gdk.h:50</span>,
+                 from <span class="ansi1">/usr/include/gtk-3.0/gtk/gtk.h:30</span>,
+                 from <span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:30</span>:
+<span class="ansi1">/usr/include/gtk-3.0/gdk/gdkmain.h:86:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+   86 | GdkGrabStatus <span class="ansi1 ansi36">gdk_pointer_grab</span>       (GdkWindow    *window,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:85:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gdk_flush</span>’ is deprecated: Use 'gdk_display_flush' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+   85 |         <span class="ansi1 ansi35">gdk_flush</span> ();
+      |         <span class="ansi1 ansi35">^~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-3.0/gdk/gdkmain.h:124:6:</span> <span class="ansi1 ansi36">note: </span>declared here
+  124 | void <span class="ansi1 ansi36">gdk_flush</span> (void);
+      |      <span class="ansi1 ansi36">^~~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:</span> In function ‘<span class="ansi1">screenshot_release_lock</span>’:
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:98:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gdk_flush</span>’ is deprecated: Use 'gdk_display_flush' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+   98 |         <span class="ansi1 ansi35">gdk_flush</span> ();
+      |         <span class="ansi1 ansi35">^~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-3.0/gdk/gdkmain.h:124:6:</span> <span class="ansi1 ansi36">note: </span>declared here
+  124 | void <span class="ansi1 ansi36">gdk_flush</span> (void);
+      |      <span class="ansi1 ansi36">^~~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:</span> In function ‘<span class="ansi1">screenshot_get_pixbuf</span>’:
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:140:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gdk_screen_width</span>’ is deprecated [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  140 |         <span class="ansi1 ansi35">if</span> (x_orig + width &gt; gdk_screen_width ()) {
+      |         <span class="ansi1 ansi35">^~</span>
+<span class="ansi1">/usr/include/gtk-3.0/gdk/gdkmain.h:108:6:</span> <span class="ansi1 ansi36">note: </span>declared here
+  108 | gint <span class="ansi1 ansi36">gdk_screen_width</span>  (void) G_GNUC_CONST;
+      |      <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:141:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gdk_screen_width</span>’ is deprecated [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  141 |                 <span class="ansi1 ansi35">width</span> = gdk_screen_width () - x_orig;
+      |                 <span class="ansi1 ansi35">^~~~~</span>
+<span class="ansi1">/usr/include/gtk-3.0/gdk/gdkmain.h:108:6:</span> <span class="ansi1 ansi36">note: </span>declared here
+  108 | gint <span class="ansi1 ansi36">gdk_screen_width</span>  (void) G_GNUC_CONST;
+      |      <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:143:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gdk_screen_height</span>’ is deprecated [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  143 |         <span class="ansi1 ansi35">if</span> (y_orig + height &gt; gdk_screen_height ()) {
+      |         <span class="ansi1 ansi35">^~</span>
+<span class="ansi1">/usr/include/gtk-3.0/gdk/gdkmain.h:110:6:</span> <span class="ansi1 ansi36">note: </span>declared here
+  110 | gint <span class="ansi1 ansi36">gdk_screen_height</span> (void) G_GNUC_CONST;
+      |      <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../gdm-45.0.1/utils/gdm-screenshot.c:144:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gdk_screen_height</span>’ is deprecated [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  144 |                 <span class="ansi1 ansi35">height</span> = gdk_screen_height () - y_orig;
+      |                 <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">/usr/include/gtk-3.0/gdk/gdkmain.h:110:6:</span> <span class="ansi1 ansi36">note: </span>declared here
+  110 | gint <span class="ansi1 ansi36">gdk_screen_height</span> (void) G_GNUC_CONST;
+      |      <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~</span>
+[91/283] x86_64-pc-linux-gnu-gcc -Iutils/gdm-runtime-config.p -Iutils -I../gdm-45.0.1/utils -I. -I../gdm-45.0.1 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ utils/gdm-runtime-config.p/gdm-runtime-config.c.o -MF utils/gdm-runtime-config.p/gdm-runtime-config.c.o.d -o utils/gdm-runtime-config.p/gdm-runtime-config.c.o -c ../gdm-45.0.1/utils/gdm-runtime-config.c
+[92/283] x86_64-pc-linux-gnu-gcc -Ipam_gdm/pam_gdm.so.p -Ipam_gdm -I../gdm-45.0.1/pam_gdm -I. -I../gdm-45.0.1 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ pam_gdm/pam_gdm.so.p/pam_gdm.c.o -MF pam_gdm/pam_gdm.so.p/pam_gdm.c.o.d -o pam_gdm/pam_gdm.so.p/pam_gdm.c.o -c ../gdm-45.0.1/pam_gdm/pam_gdm.c
+[93/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-simple-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o -MF chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o.d -o chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o -c libgdm/gdm-manager-glue.c
+[94/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-simple-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o -MF chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o.d -o chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o -c libgdm/gdm-client-glue.c
+[95/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-simple-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-simple-chooser.p/chooser-main.c.o -MF chooser/gdm-simple-chooser.p/chooser-main.c.o.d -o chooser/gdm-simple-chooser.p/chooser-main.c.o -c ../gdm-45.0.1/chooser/chooser-main.c
+[96/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-simple-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-simple-chooser.p/gdm-chooser-host.c.o -MF chooser/gdm-simple-chooser.p/gdm-chooser-host.c.o.d -o chooser/gdm-simple-chooser.p/gdm-chooser-host.c.o -c ../gdm-45.0.1/chooser/gdm-chooser-host.c
+[97/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-simple-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-simple-chooser.p/gdm-chooser-session.c.o -MF chooser/gdm-simple-chooser.p/gdm-chooser-session.c.o.d -o chooser/gdm-simple-chooser.p/gdm-chooser-session.c.o -c ../gdm-45.0.1/chooser/gdm-chooser-session.c
+[98/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-simple-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-simple-chooser.p/gdm-host-chooser-dialog.c.o -MF chooser/gdm-simple-chooser.p/gdm-host-chooser-dialog.c.o.d -o chooser/gdm-simple-chooser.p/gdm-host-chooser-dialog.c.o -c ../gdm-45.0.1/chooser/gdm-host-chooser-dialog.c
+[99/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-simple-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-simple-chooser.p/gdm-host-chooser-widget.c.o -MF chooser/gdm-simple-chooser.p/gdm-host-chooser-widget.c.o.d -o chooser/gdm-simple-chooser.p/gdm-host-chooser-widget.c.o -c ../gdm-45.0.1/chooser/gdm-host-chooser-widget.c
+[100/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-host-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o -MF chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o.d -o chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o -c libgdm/gdm-manager-glue.c
+[101/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-host-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o -MF chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o.d -o chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o -c libgdm/gdm-client-glue.c
+[102/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-host-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-host-chooser.p/gdm-host-chooser.c.o -MF chooser/gdm-host-chooser.p/gdm-host-chooser.c.o.d -o chooser/gdm-host-chooser.p/gdm-host-chooser.c.o -c ../gdm-45.0.1/chooser/gdm-host-chooser.c
+[103/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-host-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-host-chooser.p/gdm-chooser-host.c.o -MF chooser/gdm-host-chooser.p/gdm-chooser-host.c.o.d -o chooser/gdm-host-chooser.p/gdm-chooser-host.c.o -c ../gdm-45.0.1/chooser/gdm-chooser-host.c
+[104/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-host-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-host-chooser.p/gdm-host-chooser-dialog.c.o -MF chooser/gdm-host-chooser.p/gdm-host-chooser-dialog.c.o.d -o chooser/gdm-host-chooser.p/gdm-host-chooser-dialog.c.o -c ../gdm-45.0.1/chooser/gdm-host-chooser-dialog.c
+[105/283] x86_64-pc-linux-gnu-gcc -Ichooser/gdm-host-chooser.p -Ichooser -I../gdm-45.0.1/chooser -I. -I../gdm-45.0.1 -Icommon -I../gdm-45.0.1/common -Ilibgdm -I../gdm-45.0.1/libgdm -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/atk-1.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/elogind -I/usr/include/fribidi -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/gio-unix-2.0 -I/usr/lib64/libffi/include -I/usr/include/libmount -I/usr/include/blkid -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -pthread -MD -MQ chooser/gdm-host-chooser.p/gdm-host-chooser-widget.c.o -MF chooser/gdm-host-chooser.p/gdm-host-chooser-widget.c.o.d -o chooser/gdm-host-chooser.p/gdm-host-chooser-widget.c.o -c ../gdm-45.0.1/chooser/gdm-host-chooser-widget.c
+[106/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/ca/ca.po -o docs/ca/gdm-ca.gmo
+[107/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/cs/cs.po -o docs/cs/gdm-cs.gmo
+[108/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/de/de.po -o docs/de/gdm-de.gmo
+[109/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/el/el.po -o docs/el/gdm-el.gmo
+[110/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/en_GB/en_GB.po -o docs/en_GB/gdm-en_GB.gmo
+[111/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/es/es.po -o docs/es/gdm-es.gmo
+[112/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/eu/eu.po -o docs/eu/gdm-eu.gmo
+[113/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/fr/fr.po -o docs/fr/gdm-fr.gmo
+[114/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/gl/gl.po -o docs/gl/gdm-gl.gmo
+[115/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/hr/hr.po -o docs/hr/gdm-hr.gmo
+[116/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/hu/hu.po -o docs/hu/gdm-hu.gmo
+[117/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/id/id.po -o docs/id/gdm-id.gmo
+[118/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/it/it.po -o docs/it/gdm-it.gmo
+[119/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/ka/ka.po -o docs/ka/gdm-ka.gmo
+[120/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/ko/ko.po -o docs/ko/gdm-ko.gmo
+[121/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/nl/nl.po -o docs/nl/gdm-nl.gmo
+[122/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/oc/oc.po -o docs/oc/gdm-oc.gmo
+[123/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/pt_BR/pt_BR.po -o docs/pt_BR/gdm-pt_BR.gmo
+[124/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/ro/ro.po -o docs/ro/gdm-ro.gmo
+[125/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/ru/ru.po -o docs/ru/gdm-ru.gmo
+[126/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/sl/sl.po -o docs/sl/gdm-sl.gmo
+[127/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/sv/sv.po -o docs/sv/gdm-sv.gmo
+[128/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/te/te.po -o docs/te/gdm-te.gmo
+[129/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/tr/tr.po -o docs/tr/gdm-tr.gmo
+[130/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/uk/uk.po -o docs/uk/gdm-uk.gmo
+[131/283] /usr/bin/msgfmt ../gdm-45.0.1/docs/zh_CN/zh_CN.po -o docs/zh_CN/gdm-zh_CN.gmo
+[132/283] /usr/bin/dconf compile data/dconf/greeter-dconf-defaults /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/dconf/defaults
+[133/283] /usr/bin/glib-compile-schemas --targetdir data ../gdm-45.0.1/data
+[134/283] x86_64-pc-linux-gnu-gcc  -o common/test-log common/test-log.p/test-log.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a /lib64/libelogind.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so -Wl,--end-group
+[135/283] x86_64-pc-linux-gnu-gcc  -o daemon/test-session-client daemon/test-session-client.p/meson-generated_.._gdm-session-glue.c.o daemon/test-session-client.p/meson-generated_.._gdm-manager-glue.c.o daemon/test-session-client.p/test-session-client.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a /lib64/libelogind.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libaccountsservice.so -lpam /usr/lib64/libX11.so /usr/lib64/libXau.so /usr/lib64/libxcb.so -Wl,--end-group
+[136/283] x86_64-pc-linux-gnu-gcc  -o daemon/gdm-session-worker daemon/gdm-session-worker.p/meson-generated_.._gdm-dbus-glue.c.o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-glue.c.o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-glue.c.o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-enum-types.c.o daemon/gdm-session-worker.p/meson-generated_.._gdm-session-worker-enum-types.c.o daemon/gdm-session-worker.p/session-worker-main.c.o daemon/gdm-session-worker.p/gdm-session.c.o daemon/gdm-session-worker.p/gdm-session-settings.c.o daemon/gdm-session-worker.p/gdm-session-auditor.c.o daemon/gdm-session-worker.p/gdm-session-record.c.o daemon/gdm-session-worker.p/gdm-session-worker.c.o daemon/gdm-session-worker.p/gdm-session-worker-job.c.o daemon/gdm-session-worker.p/gdm-session-worker-common.c.o daemon/gdm-session-worker.p/gdm-dbus-util.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a /lib64/libelogind.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libaccountsservice.so -lpam /usr/lib64/libX11.so /usr/lib64/libXau.so /usr/lib64/libxcb.so -Wl,--end-group
+[137/283] x86_64-pc-linux-gnu-gcc  -o daemon/gdm-wayland-session daemon/gdm-wayland-session.p/meson-generated_.._gdm-manager-glue.c.o daemon/gdm-wayland-session.p/gdm-wayland-session.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a /lib64/libelogind.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libaccountsservice.so -lpam /usr/lib64/libX11.so /usr/lib64/libXau.so /usr/lib64/libxcb.so -Wl,--end-group
+[138/283] x86_64-pc-linux-gnu-gcc  -o daemon/gdm-x-session daemon/gdm-x-session.p/meson-generated_.._gdm-manager-glue.c.o daemon/gdm-x-session.p/gdm-x-session.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a /lib64/libelogind.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libaccountsservice.so -lpam /usr/lib64/libX11.so /usr/lib64/libXau.so /usr/lib64/libxcb.so -Wl,--end-group
+[139/283] x86_64-pc-linux-gnu-gcc  -o daemon/gdm daemon/gdm.p/meson-generated_.._gdm-display-glue.c.o daemon/gdm.p/meson-generated_.._gdm-local-display-factory-glue.c.o daemon/gdm.p/meson-generated_.._gdm-manager-glue.c.o daemon/gdm.p/meson-generated_.._gdm-local-display-glue.c.o daemon/gdm.p/meson-generated_.._gdm-session-glue.c.o daemon/gdm.p/meson-generated_.._gdm-session-worker-glue.c.o daemon/gdm.p/meson-generated_.._gdm-session-enum-types.c.o daemon/gdm.p/gdm-dbus-util.c.o daemon/gdm.p/gdm-display-access-file.c.o daemon/gdm.p/gdm-display-factory.c.o daemon/gdm.p/gdm-display-store.c.o daemon/gdm.p/gdm-display.c.o daemon/gdm.p/gdm-launch-environment.c.o daemon/gdm.p/gdm-legacy-display.c.o daemon/gdm.p/gdm-local-display-factory.c.o daemon/gdm.p/gdm-local-display.c.o daemon/gdm.p/gdm-manager.c.o daemon/gdm.p/gdm-server.c.o daemon/gdm.p/gdm-session-record.c.o daemon/gdm.p/gdm-session-worker-common.c.o daemon/gdm.p/gdm-session-worker-job.c.o daemon/gdm.p/gdm-session.c.o daemon/gdm.p/main.c.o daemon/gdm.p/gdm-xdmcp-display-factory.c.o daemon/gdm.p/gdm-xdmcp-display.c.o daemon/gdm.p/gdm-xdmcp-chooser-display.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a /lib64/libelogind.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libaccountsservice.so -lpam /usr/lib64/libX11.so /usr/lib64/libXau.so /usr/lib64/libxcb.so -lXdmcp /usr/lib64/libgudev-1.0.so -Wl,--end-group
+[140/283] /usr/bin/g-ir-compiler libgdm/Gdm-1.0.gir --output libgdm/Gdm-1.0.typelib --includedir=/usr/share/gir-1.0
+[141/283] x86_64-pc-linux-gnu-gcc  -o utils/gdmflexiserver utils/gdmflexiserver.p/gdmflexiserver.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group common/libgdmcommon.a /usr/lib64/libglib-2.0.so /lib64/libelogind.so /usr/lib64/libgobject-2.0.so /usr/lib64/libgio-2.0.so -Wl,--end-group
+[142/283] x86_64-pc-linux-gnu-gcc  -o utils/gdm-screenshot utils/gdm-screenshot.p/gdm-screenshot.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libglib-2.0.so /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libatk-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libX11.so /usr/lib64/libXau.so /usr/lib64/libcanberra-gtk3.so /usr/lib64/libcanberra.so -Wl,--end-group
+[143/283] x86_64-pc-linux-gnu-gcc  -o utils/gdm-runtime-config utils/gdm-runtime-config.p/gdm-runtime-config.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs /usr/lib64/libglib-2.0.so
+[144/283] x86_64-pc-linux-gnu-gcc  -o pam_gdm/pam_gdm.so pam_gdm/pam_gdm.so.p/pam_gdm.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,pam_gdm.so -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group -lpam /usr/lib64/libkeyutils.so -Wl,--end-group
+[145/283] /usr/bin/msgfmt -o po/ab/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ab.po
+[146/283] /usr/bin/msgfmt -o po/af/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/af.po
+[147/283] /usr/bin/msgfmt -o po/am/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/am.po
+[148/283] /usr/bin/msgfmt -o po/an/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/an.po
+[149/283] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ar.po
+[150/283] /usr/bin/msgfmt -o po/as/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/as.po
+[151/283] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ast.po
+[152/283] /usr/bin/msgfmt -o po/az/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/az.po
+[153/283] /usr/bin/msgfmt -o po/be/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/be.po
+[154/283] /usr/bin/msgfmt -o po/be@latin/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/be@latin.po
+[155/283] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/bg.po
+[156/283] /usr/bin/msgfmt -o po/bn/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/bn.po
+[157/283] /usr/bin/msgfmt -o po/bn_IN/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/bn_IN.po
+[158/283] /usr/bin/msgfmt -o po/br/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/br.po
+[159/283] /usr/bin/msgfmt -o po/bs/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/bs.po
+[160/283] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ca.po
+[161/283] /usr/bin/msgfmt -o po/ca@valencia/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ca@valencia.po
+[162/283] /usr/bin/msgfmt -o po/ckb/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ckb.po
+[163/283] /usr/bin/msgfmt -o po/crh/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/crh.po
+[164/283] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/cs.po
+[165/283] /usr/bin/msgfmt -o po/csb/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/csb.po
+[166/283] /usr/bin/msgfmt -o po/cy/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/cy.po
+[167/283] /usr/bin/msgfmt -o po/da/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/da.po
+[168/283] /usr/bin/msgfmt -o po/de/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/de.po
+[169/283] /usr/bin/msgfmt -o po/dz/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/dz.po
+[170/283] /usr/bin/msgfmt -o po/el/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/el.po
+[171/283] /usr/bin/msgfmt -o po/en_CA/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/en_CA.po
+[172/283] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/en_GB.po
+[173/283] /usr/bin/msgfmt -o po/en@shaw/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/en@shaw.po
+[174/283] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/eo.po
+[175/283] /usr/bin/msgfmt -o po/es/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/es.po
+[176/283] /usr/bin/msgfmt -o po/et/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/et.po
+[177/283] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/eu.po
+[178/283] /usr/bin/msgfmt -o po/fa/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/fa.po
+[179/283] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/fi.po
+[180/283] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/fr.po
+[181/283] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/fur.po
+[182/283] /usr/bin/msgfmt -o po/fy/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/fy.po
+[183/283] /usr/bin/msgfmt -o po/ga/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ga.po
+[184/283] /usr/bin/msgfmt -o po/gd/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/gd.po
+[185/283] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/gl.po
+[186/283] /usr/bin/msgfmt -o po/gu/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/gu.po
+[187/283] /usr/bin/msgfmt -o po/gv/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/gv.po
+[188/283] /usr/bin/msgfmt -o po/he/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/he.po
+[189/283] /usr/bin/msgfmt -o po/hi/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/hi.po
+[190/283] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/hr.po
+[191/283] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/hu.po
+[192/283] /usr/bin/msgfmt -o po/hy/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/hy.po
+[193/283] /usr/bin/msgfmt -o po/id/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/id.po
+[194/283] /usr/bin/msgfmt -o po/is/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/is.po
+[195/283] /usr/bin/msgfmt -o po/it/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/it.po
+[196/283] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ja.po
+[197/283] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ka.po
+[198/283] /usr/bin/msgfmt -o po/kab/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/kab.po
+[199/283] /usr/bin/msgfmt -o po/kk/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/kk.po
+[200/283] /usr/bin/msgfmt -o po/km/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/km.po
+[201/283] /usr/bin/msgfmt -o po/kn/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/kn.po
+[202/283] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ko.po
+[203/283] /usr/bin/msgfmt -o po/ku/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ku.po
+[204/283] /usr/bin/msgfmt -o po/ky/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ky.po
+[205/283] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/lt.po
+[206/283] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/lv.po
+[207/283] /usr/bin/msgfmt -o po/mai/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/mai.po
+[208/283] /usr/bin/msgfmt -o po/mg/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/mg.po
+[209/283] /usr/bin/msgfmt -o po/mi/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/mi.po
+[210/283] /usr/bin/msgfmt -o po/mjw/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/mjw.po
+[211/283] /usr/bin/msgfmt -o po/mk/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/mk.po
+[212/283] /usr/bin/msgfmt -o po/ml/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ml.po
+[213/283] /usr/bin/msgfmt -o po/mn/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/mn.po
+[214/283] /usr/bin/msgfmt -o po/mr/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/mr.po
+[215/283] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ms.po
+[216/283] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/nb.po
+[217/283] /usr/bin/msgfmt -o po/nds/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/nds.po
+[218/283] /usr/bin/msgfmt -o po/ne/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ne.po
+[219/283] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/nl.po
+[220/283] /usr/bin/msgfmt -o po/nn/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/nn.po
+[221/283] /usr/bin/msgfmt -o po/nso/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/nso.po
+[222/283] /usr/bin/msgfmt -o po/oc/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/oc.po
+[223/283] /usr/bin/msgfmt -o po/or/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/or.po
+[224/283] /usr/bin/msgfmt -o po/pa/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/pa.po
+[225/283] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/pl.po
+[226/283] /usr/bin/msgfmt -o po/ps/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ps.po
+[227/283] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/pt.po
+[228/283] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/pt_BR.po
+[229/283] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ro.po
+[230/283] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ru.po
+[231/283] /usr/bin/msgfmt -o po/rw/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/rw.po
+[232/283] /usr/bin/msgfmt -o po/si/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/si.po
+[233/283] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/sk.po
+[234/283] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/sl.po
+[235/283] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/sq.po
+[236/283] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/sr.po
+[237/283] /usr/bin/msgfmt -o po/sr@latin/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/sr@latin.po
+[238/283] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/sv.po
+[239/283] /usr/bin/msgfmt -o po/sw/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/sw.po
+[240/283] /usr/bin/msgfmt -o po/ta/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ta.po
+[241/283] /usr/bin/msgfmt -o po/te/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/te.po
+[242/283] /usr/bin/msgfmt -o po/tg/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/tg.po
+[243/283] /usr/bin/msgfmt -o po/th/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/th.po
+[244/283] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/tr.po
+[245/283] /usr/bin/msgfmt -o po/ug/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/ug.po
+[246/283] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/uk.po
+[247/283] /usr/bin/msgfmt -o po/uz/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/uz.po
+[248/283] /usr/bin/msgfmt -o po/uz@cyrillic/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/uz@cyrillic.po
+[249/283] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/vi.po
+[250/283] /usr/bin/msgfmt -o po/wa/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/wa.po
+[251/283] /usr/bin/msgfmt -o po/xh/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/xh.po
+[252/283] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/zh_CN.po
+[253/283] /usr/bin/msgfmt -o po/zh_HK/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/zh_HK.po
+[254/283] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/zh_TW.po
+[255/283] /usr/bin/msgfmt -o po/zu/LC_MESSAGES/gdm.mo ../gdm-45.0.1/po/zu.po
+[256/283] x86_64-pc-linux-gnu-gcc  -o chooser/gdm-simple-chooser chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o chooser/gdm-simple-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o chooser/gdm-simple-chooser.p/chooser-main.c.o chooser/gdm-simple-chooser.p/gdm-chooser-host.c.o chooser/gdm-simple-chooser.p/gdm-chooser-session.c.o chooser/gdm-simple-chooser.p/gdm-host-chooser-dialog.c.o chooser/gdm-simple-chooser.p/gdm-host-chooser-widget.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/../libgdm' -Wl,-rpath-link,/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/libgdm -Wl,--start-group common/libgdmcommon.a libgdm/libgdm.so.1.0.0 /usr/lib64/libglib-2.0.so /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libatk-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /lib64/libelogind.so /usr/lib64/libX11.so /usr/lib64/libXau.so -lXdmcp -Wl,--end-group
+[257/283] x86_64-pc-linux-gnu-gcc  -o chooser/gdm-host-chooser chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-manager-glue.c.o chooser/gdm-host-chooser.p/meson-generated_.._.._libgdm_gdm-client-glue.c.o chooser/gdm-host-chooser.p/gdm-host-chooser.c.o chooser/gdm-host-chooser.p/gdm-chooser-host.c.o chooser/gdm-host-chooser.p/gdm-host-chooser-dialog.c.o chooser/gdm-host-chooser.p/gdm-host-chooser-widget.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/../libgdm' -Wl,-rpath-link,/var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/libgdm -Wl,--start-group common/libgdmcommon.a libgdm/libgdm.so.1.0.0 /usr/lib64/libglib-2.0.so /usr/lib64/libgtk-3.so /usr/lib64/libgdk-3.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libatk-1.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /lib64/libelogind.so /usr/lib64/libX11.so /usr/lib64/libXau.so -lXdmcp -Wl,--end-group
+[258/283] /usr/bin/itstool -m docs/ca/gdm-ca.gmo --lang ca -o docs/ca ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[259/283] /usr/bin/itstool -m docs/cs/gdm-cs.gmo --lang cs -o docs/cs ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[260/283] /usr/bin/itstool -m docs/de/gdm-de.gmo --lang de -o docs/de ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[261/283] /usr/bin/itstool -m docs/el/gdm-el.gmo --lang el -o docs/el ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[262/283] /usr/bin/itstool -m docs/en_GB/gdm-en_GB.gmo --lang en_GB -o docs/en_GB ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[263/283] /usr/bin/itstool -m docs/es/gdm-es.gmo --lang es -o docs/es ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[264/283] /usr/bin/itstool -m docs/eu/gdm-eu.gmo --lang eu -o docs/eu ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[265/283] /usr/bin/itstool -m docs/fr/gdm-fr.gmo --lang fr -o docs/fr ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[266/283] /usr/bin/itstool -m docs/gl/gdm-gl.gmo --lang gl -o docs/gl ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[267/283] /usr/bin/itstool -m docs/hr/gdm-hr.gmo --lang hr -o docs/hr ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[268/283] /usr/bin/itstool -m docs/hu/gdm-hu.gmo --lang hu -o docs/hu ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[269/283] /usr/bin/itstool -m docs/id/gdm-id.gmo --lang id -o docs/id ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[270/283] /usr/bin/itstool -m docs/it/gdm-it.gmo --lang it -o docs/it ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[271/283] /usr/bin/itstool -m docs/ka/gdm-ka.gmo --lang ka -o docs/ka ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[272/283] /usr/bin/itstool -m docs/ko/gdm-ko.gmo --lang ko -o docs/ko ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[273/283] /usr/bin/itstool -m docs/nl/gdm-nl.gmo --lang nl -o docs/nl ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[274/283] /usr/bin/itstool -m docs/oc/gdm-oc.gmo --lang oc -o docs/oc ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[275/283] /usr/bin/itstool -m docs/pt_BR/gdm-pt_BR.gmo --lang pt_BR -o docs/pt_BR ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[276/283] /usr/bin/itstool -m docs/ro/gdm-ro.gmo --lang ro -o docs/ro ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[277/283] /usr/bin/itstool -m docs/ru/gdm-ru.gmo --lang ru -o docs/ru ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[278/283] /usr/bin/itstool -m docs/sl/gdm-sl.gmo --lang sl -o docs/sl ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[279/283] /usr/bin/itstool -m docs/sv/gdm-sv.gmo --lang sv -o docs/sv ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[280/283] /usr/bin/itstool -m docs/te/gdm-te.gmo --lang te -o docs/te ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[281/283] /usr/bin/itstool -m docs/tr/gdm-tr.gmo --lang tr -o docs/tr ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[282/283] /usr/bin/itstool -m docs/uk/gdm-uk.gmo --lang uk -o docs/uk ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+[283/283] /usr/bin/itstool -m docs/zh_CN/gdm-zh_CN.gmo --lang zh_CN -o docs/zh_CN ../gdm-45.0.1/docs/C/index.docbook ../gdm-45.0.1/docs/C/legal.xml
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: gnome-base/gdm-45.0.1-r2
+
+&gt;&gt;&gt; Install gnome-base/gdm-45.0.1-r2 into /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image
+meson install --destdir /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image --no-rebuild
+Installing data/dconf/greeter-dconf-defaults to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gdm
+Installing daemon/gdm-session-worker to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/libexec
+Installing daemon/gdm-wayland-session to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/libexec
+Installing daemon/gdm-x-session to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/libexec
+Installing daemon/gdm to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/sbin
+Installing libgdm/gdm-client-glue.h to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/include/gdm
+Installing libgdm/libgdm.so.1.0.0 to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/lib64
+Installing libgdm/Gdm-1.0.gir to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gir-1.0
+Installing libgdm/Gdm-1.0.typelib to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/lib64/girepository-1.0
+Installing utils/gdmflexiserver to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/bin
+Installing utils/gdm-screenshot to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/bin
+Installing utils/gdm-runtime-config to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/libexec
+Installing pam_gdm/pam_gdm.so to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/lib64/security
+Installing po/ab/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ab/LC_MESSAGES
+Installing po/af/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/af/LC_MESSAGES
+Installing po/am/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/am/LC_MESSAGES
+Installing po/an/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/an/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ar/LC_MESSAGES
+Installing po/as/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/as/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/az/LC_MESSAGES
+Installing po/be/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/be/LC_MESSAGES
+Installing po/be@latin/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/be@latin/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/bn/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/bn/LC_MESSAGES
+Installing po/bn_IN/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/bn_IN/LC_MESSAGES
+Installing po/br/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/br/LC_MESSAGES
+Installing po/bs/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/bs/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po/ckb/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ckb/LC_MESSAGES
+Installing po/crh/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/crh/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/csb/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/csb/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/de/LC_MESSAGES
+Installing po/dz/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/dz/LC_MESSAGES
+Installing po/el/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_CA/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/en_CA/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/en@shaw/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/en@shaw/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/es/LC_MESSAGES
+Installing po/et/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/fy/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/fy/LC_MESSAGES
+Installing po/ga/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ga/LC_MESSAGES
+Installing po/gd/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/gd/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/gu/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/gu/LC_MESSAGES
+Installing po/gv/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/gv/LC_MESSAGES
+Installing po/he/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/hy/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/hy/LC_MESSAGES
+Installing po/id/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/id/LC_MESSAGES
+Installing po/is/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/is/LC_MESSAGES
+Installing po/it/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/kab/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/kab/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/kk/LC_MESSAGES
+Installing po/km/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/km/LC_MESSAGES
+Installing po/kn/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/kn/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ko/LC_MESSAGES
+Installing po/ku/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ku/LC_MESSAGES
+Installing po/ky/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ky/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/lv/LC_MESSAGES
+Installing po/mai/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/mai/LC_MESSAGES
+Installing po/mg/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/mg/LC_MESSAGES
+Installing po/mi/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/mi/LC_MESSAGES
+Installing po/mjw/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/mjw/LC_MESSAGES
+Installing po/mk/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/mk/LC_MESSAGES
+Installing po/ml/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ml/LC_MESSAGES
+Installing po/mn/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/mn/LC_MESSAGES
+Installing po/mr/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/mr/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ms/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/nds/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/nds/LC_MESSAGES
+Installing po/ne/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ne/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/nn/LC_MESSAGES
+Installing po/nso/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/nso/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/oc/LC_MESSAGES
+Installing po/or/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/or/LC_MESSAGES
+Installing po/pa/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/pa/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/ps/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ps/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/rw/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/rw/LC_MESSAGES
+Installing po/si/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/si/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/sw/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/sw/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/te/LC_MESSAGES
+Installing po/tg/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/tg/LC_MESSAGES
+Installing po/th/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/th/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/ug/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/ug/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/uz/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/uz/LC_MESSAGES
+Installing po/uz@cyrillic/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/uz@cyrillic/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/wa/LC_MESSAGES
+Installing po/xh/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/xh/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing po/zu/LC_MESSAGES/gdm.mo to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/locale/zu/LC_MESSAGES
+Installing chooser/gdm-simple-chooser to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/libexec
+Installing chooser/gdm-host-chooser to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/libexec
+Installing docs/ca/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ca/gdm
+Installing docs/ca/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ca/gdm
+Installing docs/cs/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/cs/gdm
+Installing docs/cs/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/cs/gdm
+Installing docs/de/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/de/gdm
+Installing docs/de/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/de/gdm
+Installing docs/el/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/el/gdm
+Installing docs/el/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/el/gdm
+Installing docs/en_GB/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/en_GB/gdm
+Installing docs/en_GB/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/en_GB/gdm
+Installing docs/es/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/es/gdm
+Installing docs/es/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/es/gdm
+Installing docs/eu/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/eu/gdm
+Installing docs/eu/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/eu/gdm
+Installing docs/fr/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/fr/gdm
+Installing docs/fr/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/fr/gdm
+Installing docs/gl/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/gl/gdm
+Installing docs/gl/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/gl/gdm
+Installing docs/hr/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/hr/gdm
+Installing docs/hr/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/hr/gdm
+Installing docs/hu/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/hu/gdm
+Installing docs/hu/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/hu/gdm
+Installing docs/id/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/id/gdm
+Installing docs/id/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/id/gdm
+Installing docs/it/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/it/gdm
+Installing docs/it/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/it/gdm
+Installing docs/ka/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ka/gdm
+Installing docs/ka/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ka/gdm
+Installing docs/ko/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ko/gdm
+Installing docs/ko/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ko/gdm
+Installing docs/nl/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/nl/gdm
+Installing docs/nl/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/nl/gdm
+Installing docs/oc/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/oc/gdm
+Installing docs/oc/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/oc/gdm
+Installing docs/pt_BR/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/pt_BR/gdm
+Installing docs/pt_BR/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/pt_BR/gdm
+Installing docs/ro/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ro/gdm
+Installing docs/ro/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ro/gdm
+Installing docs/ru/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ru/gdm
+Installing docs/ru/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/ru/gdm
+Installing docs/sl/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/sl/gdm
+Installing docs/sl/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/sl/gdm
+Installing docs/sv/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/sv/gdm
+Installing docs/sv/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/sv/gdm
+Installing docs/te/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/te/gdm
+Installing docs/te/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/te/gdm
+Installing docs/tr/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/tr/gdm
+Installing docs/tr/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/tr/gdm
+Installing docs/uk/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/uk/gdm
+Installing docs/uk/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/uk/gdm
+Installing docs/zh_CN/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/zh_CN/gdm
+Installing docs/zh_CN/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/zh_CN/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/pam-extensions/gdm-pam-extensions.h to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/include/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/libgdm/gdm-client.h to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/include/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/libgdm/gdm-sessions.h to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/include/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/libgdm/gdm-user-switching.h to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/include/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/applications/mime-dummy-handler.desktop to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gdm/greeter/applications
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/applications/mimeapps.list to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gdm/greeter/applications
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/autostart/orca-autostart.desktop to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gdm/greeter/autostart
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/dconf/gdm to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/dconf/profile
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/Init to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/gdm/Init
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/PreSession to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/gdm/PreSession
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/PostSession to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/gdm/PostSession
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/PostLogin to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/gdm/PostLogin
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/gdm.conf to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/dbus-1/system.d
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/custom.conf to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/org.gnome.login-screen.gschema.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/glib-2.0/schemas
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/gdm.schemas to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/locale.alias to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/gnome-login.session to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gnome-session/sessions
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/pam-exherbo/gdm-autologin.pam to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/pam.d
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/pam-exherbo/gdm-launch-environment.pam to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/pam.d
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/pam-exherbo/gdm-fingerprint.pam to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/pam.d
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/pam-exherbo/gdm-smartcard.pam to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/pam.d
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/data/pam-exherbo/gdm-password.pam to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/pam.d
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/61-gdm.rules to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/lib/udev/rules.d
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/data/Xsession to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/etc/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/common/gdb-cmd to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/meson-private/gdm-pam-extensions.pc to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1-build/meson-private/gdm.pc to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/docs/C/index.docbook to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/C/gdm
+Installing /var/tmp/portage/gnome-base/gdm-45.0.1-r2/work/gdm-45.0.1/docs/C/legal.xml to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/share/help/C/gdm
+Installing symlink pointing to libgdm.so.1.0.0 to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/lib64/libgdm.so.1
+Installing symlink pointing to libgdm.so.1 to /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image/usr/lib64/libgdm.so
+Skipping custom install script because DESTDIR is set '/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas'
+&gt;&gt;&gt; Completed installing gnome-base/gdm-45.0.1-r2 into /var/tmp/portage/gnome-base/gdm-45.0.1-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 27056 KiB (26.4 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   7960 KiB ( 7.7 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/libexec/gdm-session-worker
+   /usr/libexec/gdm-wayland-session
+   /usr/libexec/gdm-x-session
+   /usr/sbin/gdm
+   /usr/lib64/libgdm.so.1.0.0
+   /usr/bin/gdmflexiserver
+   /usr/bin/gdm-screenshot
+   /usr/libexec/gdm-runtime-config
+   /lib64/security/pam_gdm.so
+   /usr/libexec/gdm-simple-chooser
+   /usr/libexec/gdm-host-chooser
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>

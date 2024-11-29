@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-libs/snowball-stemmer-2.2.0:0/2
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: graaff@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking snowball-stemmer-2.2.0.tar.gz to /var/tmp/portage/dev-libs/snowball-stemmer-2.2.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-libs/snowball-stemmer-2.2.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-libs/snowball-stemmer-2.2.0/work/snowball-2.2.0 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-libs/snowball-stemmer-2.2.0/work/snowball-2.2.0 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-libs/snowball-stemmer-2.2.0/work/snowball-2.2.0 ...
+make -j2 
+libstemmer/mkalgorithms.pl algorithms.mk libstemmer/modules.txt
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/space.o compiler/space.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/tokeniser.o compiler/tokeniser.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/analyser.o compiler/analyser.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator.o compiler/generator.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/driver.o compiler/driver.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_java.o compiler/generator_java.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_csharp.o compiler/generator_csharp.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_js.o compiler/generator_js.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_pascal.o compiler/generator_pascal.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_python.o compiler/generator_python.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_rust.o compiler/generator_rust.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_go.o compiler/generator_go.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_ada.o compiler/generator_ada.c
+In function ‘generate_try’,
+    inlined from ‘generate.part.0’ at compiler/generator_ada.c:1325:31:
+compiler/generator_ada.c:462:9: warning: ‘savevar’ may be used uninitialized [-Wmaybe-uninitialized]
+  462 |         str_delete(savevar);
+      |         ^~~~~~~~~~~~~~~~~~~
+compiler/generator_ada.c: In function ‘generate.part.0’:
+compiler/generator_ada.c:442:18: note: ‘savevar’ was declared here
+  442 |     struct str * savevar;
+      |                  ^~~~~~~
+sed 's/@MODULES_H@/modules.h/' libstemmer/libstemmer_c.in &gt;libstemmer/libstemmer.c
+libstemmer/mkmodules.pl libstemmer/modules.h src_c libstemmer/modules.txt libstemmer/mkinc.mak
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o runtime/api.o runtime/api.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o runtime/utilities.o runtime/utilities.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o snowball compiler/space.o compiler/tokeniser.o compiler/analyser.o compiler/generator.o compiler/driver.o compiler/generator_csharp.o compiler/generator_java.o compiler/generator_js.o compiler/generator_pascal.o compiler/generator_python.o compiler/generator_rust.o compiler/generator_go.o compiler/generator_ada.o
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o examples/stemwords.o examples/stemwords.c
+./snowball algorithms/arabic.sbl -o src_c/stem_UTF_8_arabic -eprefix arabic_UTF_8_ -r ../runtime -u
+./snowball algorithms/armenian.sbl -o src_c/stem_UTF_8_armenian -eprefix armenian_UTF_8_ -r ../runtime -u
+./snowball algorithms/basque.sbl -o src_c/stem_UTF_8_basque -eprefix basque_UTF_8_ -r ../runtime -u
+./snowball algorithms/danish.sbl -o src_c/stem_UTF_8_danish -eprefix danish_UTF_8_ -r ../runtime -u
+./snowball algorithms/catalan.sbl -o src_c/stem_UTF_8_catalan -eprefix catalan_UTF_8_ -r ../runtime -u
+./snowball algorithms/dutch.sbl -o src_c/stem_UTF_8_dutch -eprefix dutch_UTF_8_ -r ../runtime -u
+./snowball algorithms/english.sbl -o src_c/stem_UTF_8_english -eprefix english_UTF_8_ -r ../runtime -u
+./snowball algorithms/finnish.sbl -o src_c/stem_UTF_8_finnish -eprefix finnish_UTF_8_ -r ../runtime -u
+./snowball algorithms/french.sbl -o src_c/stem_UTF_8_french -eprefix french_UTF_8_ -r ../runtime -u
+./snowball algorithms/german.sbl -o src_c/stem_UTF_8_german -eprefix german_UTF_8_ -r ../runtime -u
+./snowball algorithms/greek.sbl -o src_c/stem_UTF_8_greek -eprefix greek_UTF_8_ -r ../runtime -u
+./snowball algorithms/hindi.sbl -o src_c/stem_UTF_8_hindi -eprefix hindi_UTF_8_ -r ../runtime -u
+./snowball algorithms/hungarian.sbl -o src_c/stem_UTF_8_hungarian -eprefix hungarian_UTF_8_ -r ../runtime -u
+./snowball algorithms/indonesian.sbl -o src_c/stem_UTF_8_indonesian -eprefix indonesian_UTF_8_ -r ../runtime -u
+./snowball algorithms/irish.sbl -o src_c/stem_UTF_8_irish -eprefix irish_UTF_8_ -r ../runtime -u
+./snowball algorithms/italian.sbl -o src_c/stem_UTF_8_italian -eprefix italian_UTF_8_ -r ../runtime -u
+./snowball algorithms/lithuanian.sbl -o src_c/stem_UTF_8_lithuanian -eprefix lithuanian_UTF_8_ -r ../runtime -u
+./snowball algorithms/nepali.sbl -o src_c/stem_UTF_8_nepali -eprefix nepali_UTF_8_ -r ../runtime -u
+./snowball algorithms/norwegian.sbl -o src_c/stem_UTF_8_norwegian -eprefix norwegian_UTF_8_ -r ../runtime -u
+./snowball algorithms/porter.sbl -o src_c/stem_UTF_8_porter -eprefix porter_UTF_8_ -r ../runtime -u
+./snowball algorithms/romanian.sbl -o src_c/stem_UTF_8_romanian -eprefix romanian_UTF_8_ -r ../runtime -u
+./snowball algorithms/portuguese.sbl -o src_c/stem_UTF_8_portuguese -eprefix portuguese_UTF_8_ -r ../runtime -u
+./snowball algorithms/russian.sbl -o src_c/stem_UTF_8_russian -eprefix russian_UTF_8_ -r ../runtime -u
+./snowball algorithms/serbian.sbl -o src_c/stem_UTF_8_serbian -eprefix serbian_UTF_8_ -r ../runtime -u
+./snowball algorithms/spanish.sbl -o src_c/stem_UTF_8_spanish -eprefix spanish_UTF_8_ -r ../runtime -u
+./snowball algorithms/swedish.sbl -o src_c/stem_UTF_8_swedish -eprefix swedish_UTF_8_ -r ../runtime -u
+./snowball algorithms/tamil.sbl -o src_c/stem_UTF_8_tamil -eprefix tamil_UTF_8_ -r ../runtime -u
+./snowball algorithms/turkish.sbl -o src_c/stem_UTF_8_turkish -eprefix turkish_UTF_8_ -r ../runtime -u
+./snowball algorithms/yiddish.sbl -o src_c/stem_UTF_8_yiddish -eprefix yiddish_UTF_8_ -r ../runtime -u
+./snowball charsets/KOI8-R.sbl algorithms/russian.sbl -o src_c/stem_KOI8_R_russian -eprefix russian_KOI8_R_ -r ../runtime
+./snowball algorithms/basque.sbl -o src_c/stem_ISO_8859_1_basque -eprefix basque_ISO_8859_1_ -r ../runtime
+./snowball algorithms/catalan.sbl -o src_c/stem_ISO_8859_1_catalan -eprefix catalan_ISO_8859_1_ -r ../runtime
+./snowball algorithms/danish.sbl -o src_c/stem_ISO_8859_1_danish -eprefix danish_ISO_8859_1_ -r ../runtime
+./snowball algorithms/dutch.sbl -o src_c/stem_ISO_8859_1_dutch -eprefix dutch_ISO_8859_1_ -r ../runtime
+./snowball algorithms/english.sbl -o src_c/stem_ISO_8859_1_english -eprefix english_ISO_8859_1_ -r ../runtime
+./snowball algorithms/finnish.sbl -o src_c/stem_ISO_8859_1_finnish -eprefix finnish_ISO_8859_1_ -r ../runtime
+./snowball algorithms/french.sbl -o src_c/stem_ISO_8859_1_french -eprefix french_ISO_8859_1_ -r ../runtime
+./snowball algorithms/german.sbl -o src_c/stem_ISO_8859_1_german -eprefix german_ISO_8859_1_ -r ../runtime
+./snowball algorithms/indonesian.sbl -o src_c/stem_ISO_8859_1_indonesian -eprefix indonesian_ISO_8859_1_ -r ../runtime
+./snowball algorithms/irish.sbl -o src_c/stem_ISO_8859_1_irish -eprefix irish_ISO_8859_1_ -r ../runtime
+./snowball algorithms/italian.sbl -o src_c/stem_ISO_8859_1_italian -eprefix italian_ISO_8859_1_ -r ../runtime
+./snowball algorithms/norwegian.sbl -o src_c/stem_ISO_8859_1_norwegian -eprefix norwegian_ISO_8859_1_ -r ../runtime
+./snowball algorithms/porter.sbl -o src_c/stem_ISO_8859_1_porter -eprefix porter_ISO_8859_1_ -r ../runtime
+./snowball algorithms/portuguese.sbl -o src_c/stem_ISO_8859_1_portuguese -eprefix portuguese_ISO_8859_1_ -r ../runtime
+./snowball algorithms/spanish.sbl -o src_c/stem_ISO_8859_1_spanish -eprefix spanish_ISO_8859_1_ -r ../runtime
+./snowball algorithms/swedish.sbl -o src_c/stem_ISO_8859_1_swedish -eprefix swedish_ISO_8859_1_ -r ../runtime
+./snowball charsets/ISO-8859-2.sbl algorithms/hungarian.sbl -o src_c/stem_ISO_8859_2_hungarian -eprefix hungarian_ISO_8859_2_ -r ../runtime
+./snowball charsets/ISO-8859-2.sbl algorithms/romanian.sbl -o src_c/stem_ISO_8859_2_romanian -eprefix romanian_ISO_8859_2_ -r ../runtime
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_arabic.o src_c/stem_UTF_8_arabic.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_armenian.o src_c/stem_UTF_8_armenian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_basque.o src_c/stem_UTF_8_basque.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_danish.o src_c/stem_UTF_8_danish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_catalan.o src_c/stem_UTF_8_catalan.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_dutch.o src_c/stem_UTF_8_dutch.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_english.o src_c/stem_UTF_8_english.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_finnish.o src_c/stem_UTF_8_finnish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_german.o src_c/stem_UTF_8_german.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_french.o src_c/stem_UTF_8_french.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_hindi.o src_c/stem_UTF_8_hindi.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_hungarian.o src_c/stem_UTF_8_hungarian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_indonesian.o src_c/stem_UTF_8_indonesian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_greek.o src_c/stem_UTF_8_greek.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_irish.o src_c/stem_UTF_8_irish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_italian.o src_c/stem_UTF_8_italian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_nepali.o src_c/stem_UTF_8_nepali.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_lithuanian.o src_c/stem_UTF_8_lithuanian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_norwegian.o src_c/stem_UTF_8_norwegian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_porter.o src_c/stem_UTF_8_porter.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_romanian.o src_c/stem_UTF_8_romanian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_portuguese.o src_c/stem_UTF_8_portuguese.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_russian.o src_c/stem_UTF_8_russian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_spanish.o src_c/stem_UTF_8_spanish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_serbian.o src_c/stem_UTF_8_serbian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_swedish.o src_c/stem_UTF_8_swedish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_tamil.o src_c/stem_UTF_8_tamil.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_turkish.o src_c/stem_UTF_8_turkish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_KOI8_R_russian.o src_c/stem_KOI8_R_russian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_yiddish.o src_c/stem_UTF_8_yiddish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_catalan.o src_c/stem_ISO_8859_1_catalan.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_basque.o src_c/stem_ISO_8859_1_basque.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_danish.o src_c/stem_ISO_8859_1_danish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_dutch.o src_c/stem_ISO_8859_1_dutch.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_finnish.o src_c/stem_ISO_8859_1_finnish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_english.o src_c/stem_ISO_8859_1_english.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_french.o src_c/stem_ISO_8859_1_french.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_indonesian.o src_c/stem_ISO_8859_1_indonesian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_german.o src_c/stem_ISO_8859_1_german.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_irish.o src_c/stem_ISO_8859_1_irish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_italian.o src_c/stem_ISO_8859_1_italian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_norwegian.o src_c/stem_ISO_8859_1_norwegian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_porter.o src_c/stem_ISO_8859_1_porter.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_portuguese.o src_c/stem_ISO_8859_1_portuguese.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_spanish.o src_c/stem_ISO_8859_1_spanish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_swedish.o src_c/stem_ISO_8859_1_swedish.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_2_hungarian.o src_c/stem_ISO_8859_2_hungarian.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_2_romanian.o src_c/stem_ISO_8859_2_romanian.c
+./snowball algorithms/german2.sbl -o src_c/stem_UTF_8_german2 -eprefix german2_UTF_8_ -r ../runtime -u
+./snowball algorithms/kraaij_pohlmann.sbl -o src_c/stem_UTF_8_kraaij_pohlmann -eprefix kraaij_pohlmann_UTF_8_ -r ../runtime -u
+./snowball algorithms/lovins.sbl -o src_c/stem_UTF_8_lovins -eprefix lovins_UTF_8_ -r ../runtime -u
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_german2.o src_c/stem_UTF_8_german2.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_lovins.o src_c/stem_UTF_8_lovins.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_kraaij_pohlmann.o src_c/stem_UTF_8_kraaij_pohlmann.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o libstemmer/libstemmer.o libstemmer/libstemmer.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-soname,libstemmer.so.2,-version-script,libstemmer/symbol.map -o libstemmer.so.2.2.0 libstemmer/libstemmer.o runtime/api.o runtime/utilities.o src_c/stem_UTF_8_arabic.o src_c/stem_UTF_8_armenian.o src_c/stem_UTF_8_basque.o src_c/stem_UTF_8_catalan.o src_c/stem_UTF_8_danish.o src_c/stem_UTF_8_dutch.o src_c/stem_UTF_8_english.o src_c/stem_UTF_8_finnish.o src_c/stem_UTF_8_french.o src_c/stem_UTF_8_german.o src_c/stem_UTF_8_greek.o src_c/stem_UTF_8_hindi.o src_c/stem_UTF_8_hungarian.o src_c/stem_UTF_8_indonesian.o src_c/stem_UTF_8_irish.o src_c/stem_UTF_8_italian.o src_c/stem_UTF_8_lithuanian.o src_c/stem_UTF_8_nepali.o src_c/stem_UTF_8_norwegian.o src_c/stem_UTF_8_porter.o src_c/stem_UTF_8_portuguese.o src_c/stem_UTF_8_romanian.o src_c/stem_UTF_8_russian.o src_c/stem_UTF_8_serbian.o src_c/stem_UTF_8_spanish.o src_c/stem_UTF_8_swedish.o src_c/stem_UTF_8_tamil.o src_c/stem_UTF_8_turkish.o src_c/stem_UTF_8_yiddish.o src_c/stem_KOI8_R_russian.o src_c/stem_ISO_8859_1_basque.o src_c/stem_ISO_8859_1_catalan.o src_c/stem_ISO_8859_1_danish.o src_c/stem_ISO_8859_1_dutch.o src_c/stem_ISO_8859_1_english.o src_c/stem_ISO_8859_1_finnish.o src_c/stem_ISO_8859_1_french.o src_c/stem_ISO_8859_1_german.o src_c/stem_ISO_8859_1_indonesian.o src_c/stem_ISO_8859_1_irish.o src_c/stem_ISO_8859_1_italian.o src_c/stem_ISO_8859_1_norwegian.o src_c/stem_ISO_8859_1_porter.o src_c/stem_ISO_8859_1_portuguese.o src_c/stem_ISO_8859_1_spanish.o src_c/stem_ISO_8859_1_swedish.o src_c/stem_ISO_8859_2_hungarian.o src_c/stem_ISO_8859_2_romanian.o
+ln -s libstemmer.so.2.2.0 libstemmer.so.2
+ln -s libstemmer.so.2.2.0 libstemmer.so
+x86_64-pc-linux-gnu-ar -cru libstemmer.a libstemmer/libstemmer.o runtime/api.o runtime/utilities.o src_c/stem_UTF_8_arabic.o src_c/stem_UTF_8_armenian.o src_c/stem_UTF_8_basque.o src_c/stem_UTF_8_catalan.o src_c/stem_UTF_8_danish.o src_c/stem_UTF_8_dutch.o src_c/stem_UTF_8_english.o src_c/stem_UTF_8_finnish.o src_c/stem_UTF_8_french.o src_c/stem_UTF_8_german.o src_c/stem_UTF_8_greek.o src_c/stem_UTF_8_hindi.o src_c/stem_UTF_8_hungarian.o src_c/stem_UTF_8_indonesian.o src_c/stem_UTF_8_irish.o src_c/stem_UTF_8_italian.o src_c/stem_UTF_8_lithuanian.o src_c/stem_UTF_8_nepali.o src_c/stem_UTF_8_norwegian.o src_c/stem_UTF_8_porter.o src_c/stem_UTF_8_portuguese.o src_c/stem_UTF_8_romanian.o src_c/stem_UTF_8_russian.o src_c/stem_UTF_8_serbian.o src_c/stem_UTF_8_spanish.o src_c/stem_UTF_8_swedish.o src_c/stem_UTF_8_tamil.o src_c/stem_UTF_8_turkish.o src_c/stem_UTF_8_yiddish.o src_c/stem_KOI8_R_russian.o src_c/stem_ISO_8859_1_basque.o src_c/stem_ISO_8859_1_catalan.o src_c/stem_ISO_8859_1_danish.o src_c/stem_ISO_8859_1_dutch.o src_c/stem_ISO_8859_1_english.o src_c/stem_ISO_8859_1_finnish.o src_c/stem_ISO_8859_1_french.o src_c/stem_ISO_8859_1_german.o src_c/stem_ISO_8859_1_indonesian.o src_c/stem_ISO_8859_1_irish.o src_c/stem_ISO_8859_1_italian.o src_c/stem_ISO_8859_1_norwegian.o src_c/stem_ISO_8859_1_porter.o src_c/stem_ISO_8859_1_portuguese.o src_c/stem_ISO_8859_1_spanish.o src_c/stem_ISO_8859_1_swedish.o src_c/stem_ISO_8859_2_hungarian.o src_c/stem_ISO_8859_2_romanian.o
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -W -Wall -Wmissing-prototypes -Wmissing-declarations -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o stemwords examples/stemwords.o libstemmer.a
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-libs/snowball-stemmer-2.2.0
+
+&gt;&gt;&gt; Install dev-libs/snowball-stemmer-2.2.0 into /var/tmp/portage/dev-libs/snowball-stemmer-2.2.0/image
+&gt;&gt;&gt; Completed installing dev-libs/snowball-stemmer-2.2.0 into /var/tmp/portage/dev-libs/snowball-stemmer-2.2.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 9308 KiB (9.0 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1824 KiB (1.7 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/stemwords
+   /usr/lib64/libstemmer.so.2.2.0
+
+</pre>
+</body>
+
+</html>

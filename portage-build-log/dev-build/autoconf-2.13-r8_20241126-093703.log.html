@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-build/autoconf-2.13-r8:2.1
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking autoconf-2.13.tar.gz to /var/tmp/portage/dev-build/autoconf-2.13-r8/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-build/autoconf-2.13-r8/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-build/autoconf-2.13-r8/work/autoconf-2.13 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-build/autoconf-2.13-r8/work/autoconf-2.13 ...
+ * econf: updating autoconf-2.13/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating autoconf-2.13/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --libdir=/usr/lib64 --exec-prefix=/usr --bindir=/usr/bin --program-suffix=-2.13 --infodir=/usr/share/autoconf-2.13/info
+creating cache ./config.cache
+checking for gm4... (cached) m4
+checking for mawk... (cached) awk
+checking for perl... /usr/bin/perl
+checking for a BSD compatible install... /var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c
+updating cache ./config.cache
+creating ./config.status
+creating Makefile
+creating testsuite/Makefile
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-build/autoconf-2.13-r8/work/autoconf-2.13 ...
+make -j2 
+rm -f autoconf autoconf.tmp
+rm -f autoheader autoheader.tmp
+sed -e 's,@''datadir''@,/usr/share/autoconf,g' -e 's,@''M4''@,m4,g'  -e 's,@''AWK''@,awk,g' -e 's,@''SHELL''@,/bin/sh,g' autoconf.sh &gt; autoconf.tmp &amp;&amp; chmod +x autoconf.tmp &amp;&amp; mv autoconf.tmp autoconf
+sed -e 's,@''datadir''@,/usr/share/autoconf,g' -e 's,@''M4''@,m4,g'  -e 's,@''AWK''@,awk,g' -e 's,@''SHELL''@,/bin/sh,g' autoheader.sh &gt; autoheader.tmp &amp;&amp; chmod +x autoheader.tmp &amp;&amp; mv autoheader.tmp autoheader
+rm -f autoreconf autoreconf.tmp
+sed -e 's,@''datadir''@,/usr/share/autoconf,g' -e 's,@''M4''@,m4,g'  -e 's,@''AWK''@,awk,g' -e 's,@''SHELL''@,/bin/sh,g' autoreconf.sh &gt; autoreconf.tmp &amp;&amp; chmod +x autoreconf.tmp &amp;&amp; mv autoreconf.tmp autoreconf
+rm -f autoupdate autoupdate.tmp
+sed -e 's,@''datadir''@,/usr/share/autoconf,g' -e 's,@''M4''@,m4,g'  -e 's,@''AWK''@,awk,g' -e 's,@''SHELL''@,/bin/sh,g' autoupdate.sh &gt; autoupdate.tmp &amp;&amp; chmod +x autoupdate.tmp &amp;&amp; mv autoupdate.tmp autoupdate
+rm -f ifnames ifnames.tmp
+sed -e 's,@''datadir''@,/usr/share/autoconf,g' -e 's,@''M4''@,m4,g'  -e 's,@''AWK''@,awk,g' -e 's,@''SHELL''@,/bin/sh,g' ifnames.sh &gt; ifnames.tmp &amp;&amp; chmod +x ifnames.tmp &amp;&amp; mv ifnames.tmp ifnames
+rm -f autoscan autoscan.tmp
+sed -e 's,@''datadir''@,/usr/share/autoconf,g' -e 's,@''PERL''@,/usr/bin/perl,g' autoscan.pl &gt; autoscan.tmp &amp;&amp; chmod +x autoscan.tmp &amp;&amp; mv autoscan.tmp autoscan
+freezing autoconf.m4
+freezing autoheader.m4
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-build/autoconf-2.13-r8
+
+&gt;&gt;&gt; Install dev-build/autoconf-2.13-r8 into /var/tmp/portage/dev-build/autoconf-2.13-r8/image
+make -j2 DESTDIR=/var/tmp/portage/dev-build/autoconf-2.13-r8/image install 
+/bin/sh ./mkinstalldirs /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/bin /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf-2.13/info /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf
+mkdir /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr
+mkdir /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/bin
+mkdir /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share
+mkdir /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf-2.13
+mkdir /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf-2.13/info
+mkdir /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf
+if test -f autoconf.info; then \
+  for i in *.info*; do \
+    /var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c -m 644 $i /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf-2.13/info/$i; \
+  done; \
+else \
+  for i in ./*.info*; do \
+    /var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c -m 644 $i /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf-2.13/info/`echo $i | sed 's|^./||'`; \
+  done; \
+fi
+for p in autoconf autoheader autoreconf autoupdate ifnames ; do \
+  /var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c $p /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/bin/`echo $p|sed 's,$,-2.13,; '`; \
+done
+for i in autoconf.m4f autoheader.m4f; do \
+  /var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c -m 644 $i /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf/$i; \
+done
+for i in autoconf.m4 acgeneral.m4 acoldnames.m4 acspecific.m4 autoheader.m4 acconfig.h; do \
+  /var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c -m 644 ./$i /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf/$i; \
+done
+if test -f autoscan; then \
+/var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c autoscan /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/bin/`echo autoscan|sed 's,$,-2.13,; '`; \
+for i in acfunctions acheaders acidentifiers acprograms \
+  acmakevars; do \
+/var/tmp/portage/._portage_reinstall_.73ato4te/bin/ebuild-helpers/xattr/install -c -m 644 ./$i /var/tmp/portage/dev-build/autoconf-2.13-r8/image/usr/share/autoconf/$i; \
+done; \
+else :; fi
+&gt;&gt;&gt; Completed installing dev-build/autoconf-2.13-r8 into /var/tmp/portage/dev-build/autoconf-2.13-r8/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2008 KiB (1.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1112 KiB (1.0 MiB)
+
+
+</pre>
+</body>
+
+</html>
