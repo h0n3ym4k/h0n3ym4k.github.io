@@ -29,12 +29,12 @@
         // Required. One or more funding and payment plans.
         "plans": [{
             "guid": "paypal",                 // Required. A short unique ID for the plan. Lowercase-alphanumeric-dashes only. eg: mybank, paypal. Max len 32.
-            "status": "active",               // Required. [active, inactive]. Indicates whether this plan is currently active or inactive.
+            "status": "active",               // Required. "active, inactive". Indicates whether this plan is currently active or inactive.
             "name": "monthly funding plan",                 // Required. Name of the funding plan. eg: "Starter support plan", "Infra hosting", "Monthly funding plan".
             "description": "",          // Optional. Any additional description or instructions for the funding plan.
             "amount": 0,                // Required. The solicited amount for this plan. 0 is a wildcard that indicates "any amount".
             "currency": "USD",             // Required. Three letter ISO 4217 currency code. eg: USD
-            "frequency": "monthly",            // Required. [one-time, weekly, fortnightly, monthly, yearly, other]
+            "frequency": "monthly",            // Required. "one-time, weekly, fortnightly, monthly, yearly, other"
             "channels": [my-paypal]              // Required. One or more channel IDs defined in "channels" via which this plan can accept payments.
         }]     
     }
