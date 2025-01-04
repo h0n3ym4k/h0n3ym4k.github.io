@@ -1,0 +1,517 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-plugins/gst-plugins-resindvd-1.22.11:1.0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gstreamer@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Checking whether python3_12 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.12 to build (via PYTHON_COMPAT iteration)
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking gst-plugins-bad-1.22.11.tar.xz to /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+ <span class="ansi32">*</span> Got external plugin in resindvd...
+ <span class="ansi32">*</span> Configuring to build resindvd plugin(s) ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig --pkg-config-path /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig --native-file /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dgpl=enabled -Daccurip=disabled -Dadpcmdec=disabled -Dadpcmenc=disabled -Daiff=disabled -Dasfmux=disabled -Daudiobuffersplit=disabled -Daudiofxbad=disabled -Daudiolatency=disabled -Daudiomixmatrix=disabled -Daudiovisualizers=disabled -Dautoconvert=disabled -Dbayer=disabled -Dcamerabin2=disabled -Dcodecalpha=disabled -Dcodectimestamper=disabled -Dcoloreffects=disabled -Ddebugutils=disabled -Ddvbsubenc=disabled -Ddvbsuboverlay=disabled -Ddvdspu=disabled -Dfaceoverlay=disabled -Dfestival=disabled -Dfieldanalysis=disabled -Dfreeverb=disabled -Dfrei0r=disabled -Dgaudieffects=disabled -Dgdp=disabled -Dgeometrictransform=disabled -Did3tag=disabled -Dinter=disabled -Dinterlace=disabled -Divfparse=disabled -Divtc=disabled -Djp2kdecimator=disabled -Djpegformat=disabled -Dlibrfb=disabled -Dmidi=disabled -Dmpegdemux=disabled -Dmpegpsmux=disabled -Dmpegtsdemux=disabled -Dmpegtsmux=disabled -Dmxf=disabled -Dnetsim=disabled -Donvif=disabled -Dpcapparse=disabled -Dpnm=disabled -Dproxy=disabled -Drawparse=disabled -Dremovesilence=disabled -Drist=disabled -Drtmp2=disabled -Drtp=disabled -Dsdp=disabled -Dsegmentclip=disabled -Dsiren=disabled -Dsmooth=disabled -Dspeed=disabled -Dsubenc=disabled -Dswitchbin=disabled -Dtimecode=disabled -Dvideofilters=disabled -Dvideoframe_audiolevel=disabled -Dvideoparsers=disabled -Dvideosignal=disabled -Dvmnc=disabled -Dy4m=disabled -Daes=disabled -Daom=disabled -Davtp=disabled -Damfcodec=disabled -Dandroidmedia=disabled -Dapplemedia=disabled -Dasio=disabled -Dasio-sdk-path=disabled -Dassrender=disabled -Dbluez=disabled -Dbs2b=disabled -Dbz2=disabled -Dchromaprint=disabled -Dclosedcaption=disabled -Dcolormanagement=disabled -Dcurl=disabled -Dcurl-ssh2=disabled -Dd3dvideosink=disabled -Dd3d11=disabled -Ddash=disabled -Ddc1394=disabled -Ddecklink=disabled -Ddirectfb=disabled -Ddirectsound=disabled -Ddirectshow=disabled -Ddtls=disabled -Ddts=disabled -Ddvb=disabled -Dfaac=disabled -Dfaad=disabled -Dfbdev=disabled -Dfdkaac=disabled -Dflite=disabled -Dfluidsynth=disabled -Dgl=disabled -Dgme=disabled -Dgs=disabled -Dgsm=disabled -Dgtk3=disabled -Dipcpipeline=disabled -Diqa=disabled -Dkate=disabled -Dkms=disabled -Dladspa=disabled -Dladspa-rdf=disabled -Dldac=disabled -Dlibde265=disabled -Dopenaptx=disabled -Dlv2=disabled -Dmediafoundation=disabled -Dmicrodns=disabled -Dmodplug=disabled -Dmpeg2enc=disabled -Dmplex=disabled -Dmsdk=disabled -Dmusepack=disabled -Dneon=disabled -Dnvcodec=disabled -Donnx=disabled -Dopenal=disabled -Dopenexr=disabled -Dopenh264=disabled -Dopenjpeg=disabled -Dopenmpt=disabled -Dopenni2=disabled -Dopensles=disabled -Dopus=disabled -Dqroverlay=disabled -Dqsv=disabled -Dresindvd=enabled -Drsvg=disabled -Drtmp=disabled -Dsbc=disabled -Dsctp=disabled -Dshm=disabled -Dsmoothstreaming=disabled -Dsndfile=disabled -Dsoundtouch=disabled -Dspandsp=disabled -Dsrt=disabled -Dsrtp=disabled -Dsvthevcenc=disabled -Dteletext=disabled -Dtinyalsa=disabled -Dtranscode=disabled -Dttml=disabled -Duvch264=disabled -Dva=disabled -Dvoaacenc=disabled -Dvoamrwbenc=disabled -Dvulkan=disabled -Dwasapi=disabled -Dwasapi2=disabled -Dwebp=disabled -Dwebrtc=disabled -Dwebrtcdsp=disabled -Dwildmidi=disabled -Dwic=disabled -Dwin32ipc=disabled -Dwinks=disabled -Dwinscreencap=disabled -Dx265=disabled -Dzbar=disabled -Dzxing=disabled -Dwpe=disabled -Dmagicleap=disabled -Dv4l2codecs=disabled -Disac=disabled -Dgl=disabled -Dhls=disabled -Dopencv=disabled -Dwayland=disabled -Dorc=disabled -Dintrospection=disabled -Dexamples=disabled -Dpackage-name=Gentoo GStreamer ebuild -Dpackage-origin=https://www.gentoo.org /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11 /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11-abi_x86_64.amd64
+The Meson build system
+Version: 1.5.2
+Source dir: /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11
+Build dir: /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11-abi_x86_64.amd64
+Build type: native build
+Project name: gst-plugins-bad
+Project version: 1.22.11
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 14.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 14.2.1_p20241221 p7) 14.2.1 20241221")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.43
+C++ compiler for the host machine: x86_64-pc-linux-gnu-g++ (gcc 14.2.1 "x86_64-pc-linux-gnu-g++ (Gentoo 14.2.1_p20241221 p7) 14.2.1 20241221")
+C++ linker for the host machine: x86_64-pc-linux-gnu-g++ ld.bfd 2.43
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C++ supports arguments -Wno-non-virtual-dtor: YES 
+Compiler for C supports link arguments -Wl,-Bsymbolic-functions: YES 
+Compiler for C supports link arguments -Wl,-z,nodelete: YES 
+Compiler for C++ supports link arguments -Wl,-z,nodelete: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Compiler for C++ supports arguments -fno-strict-aliasing: YES 
+Message: Disabling GLib cast checks
+Has header "dlfcn.h" : YES 
+Has header "fcntl.h" : YES 
+Has header "inttypes.h" : YES 
+Has header "memory.h" : YES 
+Has header "netinet/in.h" : YES 
+Has header "netinet/ip.h" : YES 
+Has header "netinet/tcp.h" : YES 
+Has header "pthread.h" : YES 
+Has header "stdint.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "strings.h" : YES 
+Has header "string.h" : YES 
+Has header "sys/param.h" : YES 
+Has header "sys/socket.h" : YES 
+Has header "sys/stat.h" : YES 
+Has header "sys/time.h" : YES 
+Has header "sys/types.h" : YES 
+Has header "sys/utsname.h" : YES 
+Has header "unistd.h" : YES 
+Has header "windows.h" : NO 
+Has header "winsock2.h" : NO 
+Has header "ws2tcpip.h" : NO 
+Checking for function "dcgettext" : YES 
+Checking for function "getpagesize" : YES 
+Checking for function "gmtime_r" : YES 
+Checking for function "memfd_create" : YES 
+Checking for function "mmap" : YES 
+Checking for function "pipe2" : YES 
+Checking for function "getrusage" : YES 
+Checking for size of "char" : 1 
+Checking for size of "int" : 4 
+Checking for size of "long" : 8 
+Checking for size of "short" : 2 
+Checking for size of "void*" : 8 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C++ supports arguments -Wformat-nonliteral: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C++ supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C++ supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C++ supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Wformat: YES 
+Compiler for C++ supports arguments -Wformat: YES 
+Compiler for C supports arguments -Wformat-security: YES 
+Compiler for C++ supports arguments -Wformat-security: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C++ supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Compiler for C++ supports arguments -Wmissing-include-dirs: YES 
+Compiler for C supports arguments -Waddress: YES 
+Compiler for C++ supports arguments -Waddress: YES 
+Compiler for C supports arguments -Wno-multichar: YES 
+Compiler for C++ supports arguments -Wno-multichar: YES 
+Compiler for C supports arguments -Wvla: YES 
+Compiler for C++ supports arguments -Wvla: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C++ supports arguments -Wpointer-arith: YES 
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.3.0
+Run-time dependency gstreamer-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-base-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-net-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-controller-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-pbutils-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-allocators-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-app-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-audio-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-fft-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-riff-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-rtp-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-rtsp-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-sdp-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-tag-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-video-1.0 found: YES 1.22.11
+Run-time dependency gstreamer-check-1.0 found: YES 1.22.11
+Dependency gstreamer-gl-1.0 skipped: feature gl disabled
+Dependency gstreamer-gl-prototypes-1.0 skipped: feature gl disabled
+Library m found: YES
+Run-time dependency gio-2.0 found: YES 2.80.5
+Run-time dependency gmodule-no-export-2.0 found: YES 2.80.5
+Run-time dependency x11 found: YES 1.8.10
+Dependency orc-0.4 skipped: feature orc disabled
+Program orcc skipped: feature orc disabled
+Message: Orc Compiler not found or disabled, will use backup C code
+Header "gst/gstconfig.h" has symbol "GST_DISABLE_GST_DEBUG" with dependency gstreamer-1.0: NO 
+Message: GStreamer debug system is enabled
+Program python3 found: YES (/var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/temp/python3.12/bin/python3)
+Program g-ir-scanner skipped: feature introspection disabled
+Build-time dependency glib-2.0 found: YES 2.80.5
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Run-time dependency libva found: YES 1.22.0
+Run-time dependency libva-drm found: YES 1.22.0
+Run-time dependency libdrm found: YES 2.4.123
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency wayland-client skipped: feature wayland disabled
+Dependency libdrm skipped: feature wayland disabled
+Dependency wayland-protocols skipped: feature wayland disabled
+Program wayland-scanner skipped: feature wayland disabled
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency glib-2.0 found: YES 2.80.5 (cached)
+Program /usr/bin/glib-mkenums found: YES (/usr/bin/glib-mkenums)
+Dependency nice skipped: feature webrtc disabled
+Dependency bluez skipped: feature bluez disabled
+Dependency gio-unix-2.0 skipped: feature bluez disabled
+Dependency libdrm skipped: feature kms disabled
+Dependency libdrm found: YES 2.4.123 (cached)
+Library m found: YES
+Library ml_audio skipped: feature magicleap disabled
+Library lumin_rt_core_1_7 skipped: feature magicleap disabled
+Library lumin_rt_app_1_7 skipped: feature magicleap disabled
+Dependency gudev-1.0 skipped: feature uvch264 disabled
+Dependency libusb-1.0 skipped: feature uvch264 disabled
+Has header "linux/uvcvideo.h" : YES 
+Dependency gudev-1.0 skipped: feature v4l2codecs disabled
+Message: V4L2 CODECs plugin is disabled
+Dependency openssl skipped: feature aes disabled
+Dependency libass skipped: feature assrender disabled
+Dependency aom skipped: feature aom disabled
+Checking for type "struct sock_txtime" : YES 
+Dependency avtp skipped: feature avtp disabled
+Dependency libbs2b skipped: feature bs2b disabled
+Library bz2 skipped: feature bz2 disabled
+Dependency libchromaprint skipped: feature chromaprint disabled
+Dependency pangocairo skipped: feature closedcaption disabled
+Dependency lcms2 skipped: feature colormanagement disabled
+Dependency libcurl skipped: feature curl disabled
+Dependency libxml-2.0 skipped: feature dash disabled
+Dependency libdc1394-2 skipped: feature dc1394 disabled
+Dependency directfb skipped: feature directfb disabled
+Dependency openssl skipped: feature dtls disabled
+Dependency libcrypto skipped: feature dtls disabled
+Library faac skipped: feature faac disabled
+Header "faac.h" has symbol "faacEncOpen" : NO 
+Dependency fdk-aac skipped: feature fdkaac disabled
+Dependency fluidsynth skipped: feature fluidsynth disabled
+Dependency google_cloud_cpp_storage skipped: feature gs disabled
+Dependency gtk+-3.0 skipped: feature gtk3 disabled
+Dependency gtk+-wayland-3.0 skipped: feature gtk3 disabled
+Dependency dssim skipped: feature iqa disabled
+Dependency webrtc-audio-coding-1 skipped: feature isac disabled
+Dependency kate skipped: feature kate disabled
+Dependency ldacBT-enc skipped: feature ldac disabled
+Dependency libde265 skipped: feature libde265 disabled
+Dependency lilv-0 skipped: feature lv2 disabled
+Dependency microdns skipped: feature microdns disabled
+Compiler for language cpp skipped: feature modplug disabled
+Dependency mjpegtools skipped: feature mpeg2enc disabled
+Library mpeg2encpp skipped: feature mpeg2enc disabled
+Dependency mjpegtools skipped: feature mplex disabled
+Library mplex2 skipped: feature mplex disabled
+Library mpcdec skipped: feature musepack disabled
+Dependency neon skipped: feature neon disabled
+Dependency openal skipped: feature openal disabled
+Dependency OpenEXR (modules: OpenEXR::IlmImf) skipped: feature openexr disabled
+Dependency openh264 skipped: feature openh264 disabled
+Dependency libopenjp2 skipped: feature openjpeg disabled
+Dependency libopenmpt skipped: feature openmpt disabled
+Compiler for language cpp skipped: feature openni2 disabled
+Dependency opus skipped: feature opus disabled
+Dependency libqrencode skipped: feature qroverlay disabled
+Run-time dependency dvdnav found: YES 6.1.1
+Run-time dependency dvdread found: YES 6.1.3
+Dependency librsvg-2.0 skipped: feature rsvg disabled
+Dependency librtmp skipped: feature rtmp disabled
+Dependency sbc skipped: feature sbc disabled
+Dependency libxml-2.0 skipped: feature smoothstreaming disabled
+Dependency sndfile skipped: feature sndfile disabled
+Dependency spandsp skipped: feature spandsp disabled
+Dependency SvtHevcEnc skipped: feature svthevcenc disabled
+Dependency zvbi-0.2 skipped: feature teletext disabled
+Dependency libxml-2.0 skipped: feature ttml disabled
+Dependency pango skipped: feature ttml disabled
+Dependency cairo skipped: feature ttml disabled
+Dependency pangocairo skipped: feature ttml disabled
+Dependency vo-aacenc skipped: feature voaacenc disabled
+Dependency vo-amrwbenc skipped: feature voamrwbenc disabled
+Dependency webrtc-audio-processing skipped: feature webrtcdsp disabled
+Dependency libwebp skipped: feature webp disabled
+Dependency x265 skipped: feature x265 disabled
+Dependency zxing skipped: feature zxing disabled
+Dependency zbar skipped: feature zbar disabled
+Run-time dependency libexif found: YES 0.6.24
+Found CMake: /usr/bin/cmake (3.30.6)
+Run-time dependency libsoup-2.4 found: NO (tried pkgconfig and cmake)
+Looking for a fallback subproject for the dependency libsoup-2.4
+Neither a subproject directory nor a libsoup.wrap file was found.
+Subproject  libsoup is buildable: NO (disabling)
+Dependency libsoup-2.4 from subproject libsoup found: NO (subproject failed to configure)
+Run-time dependency gstreamer-plugins-base-1.0 found: YES 1.22.11
+Program gst-tester-1.0 found: NO
+Program xgettext found: YES (/usr/bin/xgettext)
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+Program scripts/extract-release-date-from-doap-file.py found: YES (/var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11/scripts/extract-release-date-from-doap-file.py)
+Message: Package release date: 2024-03-19
+Configuring config.h using configuration
+Message: Introspection not built, won't build documentation requiring it
+Program /usr/libexec/gstreamer-1.0/gst-plugins-doc-cache-generator found: YES (/usr/libexec/gstreamer-1.0/gst-plugins-doc-cache-generator)
+Program hotdoc found: NO
+Message: Hotdoc not found, not building the documentation
+Build targets in project: 112
+
+gst-plugins-bad 1.22.11
+
+    Plugins               : resindvd
+    (A)GPL license allowed: true
+
+  Subprojects
+    libsoup               : NO Neither a subproject directory nor a libsoup.wrap file was found.
+
+  User defined options
+    Native files          : /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path : /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig
+    buildtype             : plain
+    libdir                : lib64
+    localstatedir         : /var/lib
+    pkg_config_path       : /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/temp/python3.12/pkgconfig:/usr/share/pkgconfig
+    prefix                : /usr
+    sysconfdir            : /etc
+    werror                : false
+    wrap_mode             : nodownload
+    b_lto                 : false
+    b_pch                 : false
+    accurip               : disabled
+    adpcmdec              : disabled
+    adpcmenc              : disabled
+    aes                   : disabled
+    aiff                  : disabled
+    amfcodec              : disabled
+    androidmedia          : disabled
+    aom                   : disabled
+    applemedia            : disabled
+    asfmux                : disabled
+    asio                  : disabled
+    asio-sdk-path         : disabled
+    assrender             : disabled
+    audiobuffersplit      : disabled
+    audiofxbad            : disabled
+    audiolatency          : disabled
+    audiomixmatrix        : disabled
+    audiovisualizers      : disabled
+    autoconvert           : disabled
+    avtp                  : disabled
+    bayer                 : disabled
+    bluez                 : disabled
+    bs2b                  : disabled
+    bz2                   : disabled
+    camerabin2            : disabled
+    chromaprint           : disabled
+    closedcaption         : disabled
+    codecalpha            : disabled
+    codectimestamper      : disabled
+    coloreffects          : disabled
+    colormanagement       : disabled
+    curl                  : disabled
+    curl-ssh2             : disabled
+    d3d11                 : disabled
+    d3dvideosink          : disabled
+    dash                  : disabled
+    dc1394                : disabled
+    debugutils            : disabled
+    decklink              : disabled
+    directfb              : disabled
+    directshow            : disabled
+    directsound           : disabled
+    dtls                  : disabled
+    dts                   : disabled
+    dvb                   : disabled
+    dvbsubenc             : disabled
+    dvbsuboverlay         : disabled
+    dvdspu                : disabled
+    examples              : disabled
+    faac                  : disabled
+    faad                  : disabled
+    faceoverlay           : disabled
+    fbdev                 : disabled
+    fdkaac                : disabled
+    festival              : disabled
+    fieldanalysis         : disabled
+    flite                 : disabled
+    fluidsynth            : disabled
+    freeverb              : disabled
+    frei0r                : disabled
+    gaudieffects          : disabled
+    gdp                   : disabled
+    geometrictransform    : disabled
+    gl                    : disabled
+    gme                   : disabled
+    gpl                   : enabled
+    gs                    : disabled
+    gsm                   : disabled
+    gtk3                  : disabled
+    hls                   : disabled
+    id3tag                : disabled
+    inter                 : disabled
+    interlace             : disabled
+    introspection         : disabled
+    ipcpipeline           : disabled
+    iqa                   : disabled
+    isac                  : disabled
+    ivfparse              : disabled
+    ivtc                  : disabled
+    jp2kdecimator         : disabled
+    jpegformat            : disabled
+    kate                  : disabled
+    kms                   : disabled
+    ladspa                : disabled
+    ladspa-rdf            : disabled
+    ldac                  : disabled
+    libde265              : disabled
+    librfb                : disabled
+    lv2                   : disabled
+    magicleap             : disabled
+    mediafoundation       : disabled
+    microdns              : disabled
+    midi                  : disabled
+    modplug               : disabled
+    mpeg2enc              : disabled
+    mpegdemux             : disabled
+    mpegpsmux             : disabled
+    mpegtsdemux           : disabled
+    mpegtsmux             : disabled
+    mplex                 : disabled
+    msdk                  : disabled
+    musepack              : disabled
+    mxf                   : disabled
+    neon                  : disabled
+    netsim                : disabled
+    nvcodec               : disabled
+    onnx                  : disabled
+    onvif                 : disabled
+    openal                : disabled
+    openaptx              : disabled
+    opencv                : disabled
+    openexr               : disabled
+    openh264              : disabled
+    openjpeg              : disabled
+    openmpt               : disabled
+    openni2               : disabled
+    opensles              : disabled
+    opus                  : disabled
+    orc                   : disabled
+    package-name          : Gentoo GStreamer ebuild
+    package-origin        : https://www.gentoo.org
+    pcapparse             : disabled
+    pnm                   : disabled
+    proxy                 : disabled
+    qroverlay             : disabled
+    qsv                   : disabled
+    rawparse              : disabled
+    removesilence         : disabled
+    resindvd              : enabled
+    rist                  : disabled
+    rsvg                  : disabled
+    rtmp                  : disabled
+    rtmp2                 : disabled
+    rtp                   : disabled
+    sbc                   : disabled
+    sctp                  : disabled
+    sdp                   : disabled
+    segmentclip           : disabled
+    shm                   : disabled
+    siren                 : disabled
+    smooth                : disabled
+    smoothstreaming       : disabled
+    sndfile               : disabled
+    soundtouch            : disabled
+    spandsp               : disabled
+    speed                 : disabled
+    srt                   : disabled
+    srtp                  : disabled
+    subenc                : disabled
+    svthevcenc            : disabled
+    switchbin             : disabled
+    teletext              : disabled
+    timecode              : disabled
+    tinyalsa              : disabled
+    transcode             : disabled
+    ttml                  : disabled
+    uvch264               : disabled
+    v4l2codecs            : disabled
+    va                    : disabled
+    videofilters          : disabled
+    videoframe_audiolevel : disabled
+    videoparsers          : disabled
+    videosignal           : disabled
+    vmnc                  : disabled
+    voaacenc              : disabled
+    voamrwbenc            : disabled
+    vulkan                : disabled
+    wasapi                : disabled
+    wasapi2               : disabled
+    wayland               : disabled
+    webp                  : disabled
+    webrtc                : disabled
+    webrtcdsp             : disabled
+    wic                   : disabled
+    wildmidi              : disabled
+    win32ipc              : disabled
+    winks                 : disabled
+    winscreencap          : disabled
+    wpe                   : disabled
+    x265                  : disabled
+    y4m                   : disabled
+    zbar                  : disabled
+    zxing                 : disabled
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/work/gst-plugins-bad-1.22.11 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ <span class="ansi32">*</span> Got external plugin in resindvd...
+ninja -v -j2 -l2 ext/resindvd/libgstresindvd.so
+[1/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/gstmpegdemux.c.o -MF ext/resindvd/libgstresindvd.so.p/gstmpegdemux.c.o.d -o ext/resindvd/libgstresindvd.so.p/gstmpegdemux.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/gstmpegdemux.c
+[2/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/gstmpegdesc.c.o -MF ext/resindvd/libgstresindvd.so.p/gstmpegdesc.c.o.d -o ext/resindvd/libgstresindvd.so.p/gstmpegdesc.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/gstmpegdesc.c
+[3/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/gstpesfilter.c.o -MF ext/resindvd/libgstresindvd.so.p/gstpesfilter.c.o.d -o ext/resindvd/libgstresindvd.so.p/gstpesfilter.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/gstpesfilter.c
+[4/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/plugin.c.o -MF ext/resindvd/libgstresindvd.so.p/plugin.c.o.d -o ext/resindvd/libgstresindvd.so.p/plugin.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/plugin.c
+[5/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/resindvdbin.c.o -MF ext/resindvd/libgstresindvd.so.p/resindvdbin.c.o.d -o ext/resindvd/libgstresindvd.so.p/resindvdbin.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/resindvdbin.c
+[6/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/resindvdsrc.c.o -MF ext/resindvd/libgstresindvd.so.p/resindvdsrc.c.o.d -o ext/resindvd/libgstresindvd.so.p/resindvdsrc.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/resindvdsrc.c
+[7/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/rsndec.c.o -MF ext/resindvd/libgstresindvd.so.p/rsndec.c.o.d -o ext/resindvd/libgstresindvd.so.p/rsndec.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/rsndec.c
+[8/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/rsninputselector.c.o -MF ext/resindvd/libgstresindvd.so.p/rsninputselector.c.o.d -o ext/resindvd/libgstresindvd.so.p/rsninputselector.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/rsninputselector.c
+[9/10] x86_64-pc-linux-gnu-gcc -Iext/resindvd/libgstresindvd.so.p -Iext/resindvd -I../gst-plugins-bad-1.22.11/ext/resindvd -I. -I../gst-plugins-bad-1.22.11 -Igst-libs -I../gst-plugins-bad-1.22.11/gst-libs -I/usr/include/gstreamer-1.0 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/orc-0.4 -I/usr/include/dvdcss -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fvisibility=hidden -fno-strict-aliasing -DG_DISABLE_CAST_CHECKS -Wmissing-prototypes -Wold-style-definition -Wmissing-declarations -Wredundant-decls -Wwrite-strings -Wformat -Wformat-security -Winit-self -Wmissing-include-dirs -Waddress -Wno-multichar -Wvla -Wpointer-arith -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DHAVE_CONFIG_H -MD -MQ ext/resindvd/libgstresindvd.so.p/rsnparsetter.c.o -MF ext/resindvd/libgstresindvd.so.p/rsnparsetter.c.o.d -o ext/resindvd/libgstresindvd.so.p/rsnparsetter.c.o -c ../gst-plugins-bad-1.22.11/ext/resindvd/rsnparsetter.c
+[10/10] x86_64-pc-linux-gnu-gcc  -o ext/resindvd/libgstresindvd.so ext/resindvd/libgstresindvd.so.p/gstmpegdemux.c.o ext/resindvd/libgstresindvd.so.p/gstmpegdesc.c.o ext/resindvd/libgstresindvd.so.p/gstpesfilter.c.o ext/resindvd/libgstresindvd.so.p/plugin.c.o ext/resindvd/libgstresindvd.so.p/resindvdbin.c.o ext/resindvd/libgstresindvd.so.p/resindvdsrc.c.o ext/resindvd/libgstresindvd.so.p/rsndec.c.o ext/resindvd/libgstresindvd.so.p/rsninputselector.c.o ext/resindvd/libgstresindvd.so.p/rsnparsetter.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libgstresindvd.so -Wl,-Bsymbolic-functions -Wl,-z,nodelete -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libgstvideo-1.0.so /usr/lib64/libgstbase-1.0.so /usr/lib64/libgstreamer-1.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgstpbutils-1.0.so /usr/lib64/libgstaudio-1.0.so /usr/lib64/libgsttag-1.0.so /usr/lib64/libdvdnav.so -lpthread /usr/lib64/libdvdread.so /usr/lib64/libgmodule-2.0.so -Wl,--end-group -pthread
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: media-plugins/gst-plugins-resindvd-1.22.11
+
+&gt;&gt;&gt; Install media-plugins/gst-plugins-resindvd-1.22.11 into /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+ <span class="ansi32">*</span> Got external plugin in resindvd...
+ <span class="ansi32">*</span> Got external plugin in resindvd...
+&gt;&gt;&gt; Completed installing media-plugins/gst-plugins-resindvd-1.22.11 into /var/tmp/portage/media-plugins/gst-plugins-resindvd-1.22.11/image
+
+ <span class="ansi32">*</span> Final size of build directory: 65552 KiB (64.0 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    236 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/gstreamer-1.0/libgstresindvd.so
+
+</pre>
+</body>
+
+</html>
