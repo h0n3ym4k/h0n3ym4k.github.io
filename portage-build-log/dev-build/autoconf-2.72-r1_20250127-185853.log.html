@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-build/autoconf-2.72-r1:2.72
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking autoconf-2.72.tar.xz to /var/tmp/portage/dev-build/autoconf-2.72-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-build/autoconf-2.72-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72 ...
+ * econf: updating autoconf-2.72/build-aux/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating autoconf-2.72/build-aux/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-silent-rules --docdir=/usr/share/doc/autoconf-2.72-r1 --htmldir=/usr/share/doc/autoconf-2.72-r1/html --libdir=/usr/lib64 --program-suffix=-2.72 --infodir=/usr/share/autoconf-2.72/info
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+configure: autobuild project... GNU Autoconf
+configure: autobuild revision... 2.72
+configure: autobuild hostname... localhost
+configure: autobuild timestamp... 20250127T185856Z
+checking for a shell whose -n mode is known to work... /bin/sh
+checking for characters that cannot appear in file names... none
+checking whether directories can have trailing spaces... yes
+checking for expr... /usr/bin/expr
+checking for GNU M4 that supports accurate traces... /usr/bin/m4
+checking whether /usr/bin/m4 accepts --gnu... yes
+checking how m4 supports trace files... --debugfile
+checking for perl... /usr/bin/perl
+checking whether /usr/bin/perl Fcntl::flock is implemented... yes
+checking for emacs... no
+checking for emacs... no
+checking where .elc files should go... ${datadir}/emacs/site-lisp
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for a sed that does not truncate output... /bin/sed
+checking whether make is case sensitive... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating tests/atlocal
+config.status: creating Makefile
+config.status: creating lib/version.m4
+config.status: executing tests/atconfig commands
+
+You are about to use an experimental version of Autoconf.  Be sure to
+read the relevant mailing lists, most importantly &lt;autoconf@gnu.org&gt;.
+
+Below you will find information on the status of this version of Autoconf.
+
+* Status
+
+                 /*------------------------------------.
+                 | New features need further testing.  |
+                 `------------------------------------*/
+
+* Autotest parallel testsuite support is still a work in progress.
+  There are known issues in job handling under dash and some ksh
+  variants, where a parallel testsuite can hang or cause a 100%
+  processor load.  In the current release, the overall autoconf
+  testsuite only exercises parallel autotest under bash and zsh, or if
+  you have defined TEST_PARALLEL_AUTOTEST in the environment.
+  Meanwhile, Cygwin has known problems with named fifos that cause
+  failures when attempting parallel tests in an autotest suite.  It is
+  possible that other difficulties will be encountered, whether with
+  shell or platform limitations; help is appreciated in improving
+  parallel testsuite support.
+
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72 ...
+make -j2 
+make  all-am
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f bin/autoconf bin/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p bin
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+srcdir=''; \
+  test -f ./bin/autoconf.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoconf.in; do not edit by hand.|g' ${srcdir}bin/autoconf.in &gt;bin/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x bin/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w bin/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv bin/autoconf.tmp bin/autoconf
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f bin/autoheader bin/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p bin
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+srcdir=''; \
+  test -f ./bin/autoheader.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoheader.in; do not edit by hand.|g' ${srcdir}bin/autoheader.in &gt;bin/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x bin/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w bin/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv bin/autoheader.tmp bin/autoheader
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f bin/autom4te bin/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f bin/autoreconf bin/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p bin
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p bin
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+srcdir=''; \
+  test -f ./bin/autoreconf.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoreconf.in; do not edit by hand.|g' ${srcdir}bin/autoreconf.in &gt;bin/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x bin/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w bin/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv bin/autoreconf.tmp bin/autoreconf
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+srcdir=''; \
+  test -f ./bin/autom4te.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autom4te.in; do not edit by hand.|g' ${srcdir}bin/autom4te.in &gt;bin/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x bin/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w bin/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv bin/autom4te.tmp bin/autom4te
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f bin/autoscan bin/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f bin/autoupdate bin/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p bin
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p bin
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+srcdir=''; \
+  test -f ./bin/autoupdate.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoupdate.in; do not edit by hand.|g' ${srcdir}bin/autoupdate.in &gt;bin/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x bin/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w bin/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv bin/autoupdate.tmp bin/autoupdate
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+srcdir=''; \
+  test -f ./bin/autoscan.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/autoscan.in; do not edit by hand.|g' ${srcdir}bin/autoscan.in &gt;bin/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x bin/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w bin/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv bin/autoscan.tmp bin/autoscan
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f bin/ifnames bin/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p bin
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+srcdir=''; \
+  test -f ./bin/ifnames.in || srcdir=./; \
+  sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from bin/ifnames.in; do not edit by hand.|g' ${srcdir}bin/ifnames.in &gt;bin/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x bin/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w bin/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv bin/ifnames.tmp bin/ifnames
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f lib/autom4te.cfg lib/autom4te.cfg-t
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p lib
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+sed -e 's|@SHELL[@]|/bin/sh|g' -e 's|@PERL[@]|/usr/bin/perl|g' -e 's|@PERL_FLOCK[@]|yes|g' -e 's|@bindir[@]|/usr/bin|g' -e 's|@pkgdatadir[@]|/usr/share/autoconf-2.72|g' -e 's|@prefix[@]|/usr|g' -e 's|@autoconf-name[@]|'`echo autoconf | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autoheader-name[@]|'`echo autoheader | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@autom4te-name[@]|'`echo autom4te | sed 's&amp;$&amp;-2.72&amp;'`'|g' -e 's|@M4[@]|/usr/bin/m4|g' -e 's|@M4_DEBUGFILE[@]|--debugfile|g' -e 's|@M4_GNU[@]|--gnu|g' -e 's|@AWK[@]|gawk|g' -e 's|@RELEASE_YEAR[@]|2023|g' -e 's|@VERSION[@]|2.72|g' -e 's|@PACKAGE_NAME[@]|GNU Autoconf|g' -e 's|@configure_input[@]|Generated from lib/autom4te.cfg.in; do not edit by hand.|g' ./lib/autom4te.in &gt;lib/autom4te.cfg-t
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w lib/autom4te.cfg-t
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f lib/autom4te.cfg-t lib/autom4te.cfg
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autoconf-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autoconf-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autoconf-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autoconf-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autoconf-mode.el'; \
+else :; fi
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autotest-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autotest-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autotest-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autotest-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autotest-mode.el'; \
+else :; fi
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p lib/autoconf
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+lang=`echo 'lib/autoconf/autoconf' | sed 's,.*/,,'` \
+  &amp;&amp; if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  &amp;&amp; autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/autoconf/autoconf.m4f
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p lib/autoscan
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p lib/autotest
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+echo '# Automatically Generated: do not edit this file' &gt;lib/autoscan/autoscan.list
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+sed '/^[#]/!q' ./lib/autoscan/autoscan.pre &gt;&gt;lib/autoscan/autoscan.list
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+lang=`echo 'lib/autotest/autotest' | sed 's,.*/,,'` \
+  &amp;&amp; if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  &amp;&amp; autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/autotest/autotest.m4f
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+( \
+  sed -n '/^[^#]/p' ./lib/autoscan/autoscan.pre; \
+  autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         --cache '' -M -l autoconf-without-aclocal-m4 \
+    -t'AN_OUTPUT:$1: $2		$3' \
+) | LC_ALL=C sort &gt;&gt;lib/autoscan/autoscan.list
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p lib/m4sugar
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+lang=`echo 'lib/m4sugar/m4sugar' | sed 's,.*/,,'` \
+  &amp;&amp; if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  &amp;&amp; autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/m4sugar/m4sugar.m4f
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+/bin/mkdir -p lib/m4sugar
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+lang=`echo 'lib/m4sugar/m4sh' | sed 's,.*/,,'` \
+  &amp;&amp; if test $lang = autoconf; then \
+       lang=autoconf-without-aclocal-m4; \
+     else :; fi \
+  &amp;&amp; autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         \
+	--language=$lang \
+	--freeze \
+	--output=lib/m4sugar/m4sh.m4f
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+autom4te_perllibdir='.'/lib AUTOM4TE_CFG='lib/autom4te.cfg'         bin/autom4te -B ''lib -B '.'/lib         --language=M4sh ./tests/wrapper.as -o tests/wrapper.in
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f tests/autoconf tests/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+input=tests/wrapper.in \
+  &amp;&amp; sed -e 's|@wrap_program[@]|autoconf|g' -e 's|@abs_top_srcdir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e 's|@abs_top_builddir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in &gt;tests/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x tests/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w tests/autoconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f tests/autoconf.tmp tests/autoconf
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f tests/autoheader tests/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+input=tests/wrapper.in \
+  &amp;&amp; sed -e 's|@wrap_program[@]|autoheader|g' -e 's|@abs_top_srcdir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e 's|@abs_top_builddir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in &gt;tests/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x tests/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w tests/autoheader.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f tests/autoheader.tmp tests/autoheader
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f tests/autom4te tests/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+input=tests/wrapper.in \
+  &amp;&amp; sed -e 's|@wrap_program[@]|autom4te|g' -e 's|@abs_top_srcdir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e 's|@abs_top_builddir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in &gt;tests/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x tests/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w tests/autom4te.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f tests/autom4te.tmp tests/autom4te
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f tests/autoreconf tests/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+input=tests/wrapper.in \
+  &amp;&amp; sed -e 's|@wrap_program[@]|autoreconf|g' -e 's|@abs_top_srcdir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e 's|@abs_top_builddir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in &gt;tests/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x tests/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w tests/autoreconf.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f tests/autoreconf.tmp tests/autoreconf
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f tests/autoscan tests/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+input=tests/wrapper.in \
+  &amp;&amp; sed -e 's|@wrap_program[@]|autoscan|g' -e 's|@abs_top_srcdir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e 's|@abs_top_builddir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in &gt;tests/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x tests/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w tests/autoscan.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f tests/autoscan.tmp tests/autoscan
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f tests/autoupdate tests/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+rm -f tests/ifnames tests/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+input=tests/wrapper.in \
+  &amp;&amp; sed -e 's|@wrap_program[@]|ifnames|g' -e 's|@abs_top_srcdir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e 's|@abs_top_builddir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in &gt;tests/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+input=tests/wrapper.in \
+  &amp;&amp; sed -e 's|@wrap_program[@]|autoupdate|g' -e 's|@abs_top_srcdir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e 's|@abs_top_builddir[@]|/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72|g' -e "s|@configure_input[@]|Generated from $input.|g" tests/wrapper.in &gt;tests/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x tests/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod +x tests/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w tests/ifnames.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+chmod a-w tests/autoupdate.tmp
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f tests/ifnames.tmp tests/ifnames
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+mv -f tests/autoupdate.tmp tests/autoupdate
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: dev-build/autoconf-2.72-r1
+
+&gt;&gt;&gt; Install dev-build/autoconf-2.72-r1 into /var/tmp/portage/dev-build/autoconf-2.72-r1/image
+make -j2 DESTDIR=/var/tmp/portage/dev-build/autoconf-2.72-r1/image install 
+make  install-am
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autoconf-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autoconf-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autoconf-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autoconf-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autoconf-mode.el'; \
+else :; fi
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[1]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autotest-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autotest-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autotest-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autotest-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autotest-mode.el'; \
+else :; fi
+make[1]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c bin/autoconf '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin/./autoconf-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c bin/autoheader '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin/./autoheader-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c bin/autom4te '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin/./autom4te-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c bin/autoreconf '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin/./autoreconf-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c bin/autoscan '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin/./autoscan-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c bin/autoupdate '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin/./autoupdate-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c bin/ifnames '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/bin/./ifnames-2.72'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autoconf'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/autoconf/autoconf.m4 lib/autoconf/general.m4 lib/autoconf/status.m4 lib/autoconf/oldnames.m4 lib/autoconf/specific.m4 lib/autoconf/autoheader.m4 lib/autoconf/autoupdate.m4 lib/autoconf/autotest.m4 lib/autoconf/autoscan.m4 lib/autoconf/lang.m4 lib/autoconf/c.m4 lib/autoconf/erlang.m4 lib/autoconf/fortran.m4 lib/autoconf/functions.m4 lib/autoconf/go.m4 lib/autoconf/headers.m4 lib/autoconf/types.m4 lib/autoconf/libs.m4 lib/autoconf/programs.m4 lib/autoconf/trailer.m4 '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autoconf'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autotest'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/autotest/autotest.m4 lib/autotest/general.m4 lib/autotest/specific.m4 '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autotest'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/build-aux'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 build-aux/config.guess build-aux/config.sub build-aux/install-sh '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/build-aux'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autoconf-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autoconf-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autoconf-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autoconf-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autoconf-mode.el'; \
+else :; fi
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+if test 'no' != no; then \
+  am__dir=. am__subdir_includes=''; \
+  case lib/emacs/autotest-mode.elc in */*) \
+    am__dir=`echo 'lib/emacs/autotest-mode.elc' | sed 's,/[^/]*$,,'`; \
+    am__subdir_includes="-L $am__dir -L ./$am__dir"; \
+  esac; \
+  test -d "$am__dir" || /bin/mkdir -p "$am__dir" || exit 1; \
+  no --batch \
+      \
+    $am__subdir_includes -L . -L . \
+    --eval '(if (boundp (quote byte-compile-dest-file-function)) (setq byte-compile-dest-file-function (lambda (_) "lib/emacs/autotest-mode.elc")) (defun byte-compile-dest-file (_) "lib/emacs/autotest-mode.elc") )' \
+    -f batch-byte-compile 'lib/emacs/autotest-mode.el'; \
+else :; fi
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/m4sugar'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/m4sugar/m4sugar.m4 lib/m4sugar/foreach.m4 lib/m4sugar/m4sh.m4 '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/m4sugar'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/Autom4te'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/Autom4te/C4che.pm lib/Autom4te/ChannelDefs.pm lib/Autom4te/Channels.pm lib/Autom4te/Config.pm lib/Autom4te/Configure_ac.pm lib/Autom4te/FileUtils.pm lib/Autom4te/General.pm lib/Autom4te/Getopt.pm lib/Autom4te/Request.pm lib/Autom4te/XFile.pm '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/Autom4te'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/info'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 ./doc/autoconf.info ./doc/standards.info '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/info'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ install-info --info-dir='/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/info' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/info/autoconf.info'
+ install-info --info-dir='/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/info' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/info/standards.info'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 'man/autoconf.1' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1/autoconf-2.72.1'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 'man/autoheader.1' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1/autoheader-2.72.1'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 'man/autom4te.1' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1/autom4te-2.72.1'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 'man/autoreconf.1' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1/autoreconf-2.72.1'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 'man/autoscan.1' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1/autoscan-2.72.1'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 'man/autoupdate.1' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1/autoupdate-2.72.1'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 'man/ifnames.1' '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/man/man1/ifnames-2.72.1'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autoconf'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/autoconf/autoconf.m4f '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autoconf'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autoscan'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/autoscan/autoscan.list '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autoscan'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autotest'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/autotest/autotest.m4f '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/autotest'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/m4sugar'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/m4sugar/m4sugar.m4f lib/m4sugar/m4sh.m4f '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/m4sugar'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 lib/autom4te.cfg lib/version.m4 '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make[2]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+ /bin/mkdir -p '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72'
+ /var/tmp/portage/._portage_reinstall_.dr8w_4sw/bin/ebuild-helpers/xattr/install -c -m 644 ./INSTALL '/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72'
+make[2]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+make  install-data-hook
+make[3]: Entering directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+for s in build-aux/config.guess build-aux/config.sub build-aux/install-sh; do \
+  chmod +x "/var/tmp/portage/dev-build/autoconf-2.72-r1/image/usr/share/autoconf-2.72/$s"; \
+done
+make[3]: Leaving directory '/var/tmp/portage/dev-build/autoconf-2.72-r1/work/autoconf-2.72'
+&gt;&gt;&gt; Completed installing dev-build/autoconf-2.72-r1 into /var/tmp/portage/dev-build/autoconf-2.72-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 8700 KiB (8.4 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  4052 KiB (3.9 MiB)
+
+
+</pre>
+</body>
+
+</html>

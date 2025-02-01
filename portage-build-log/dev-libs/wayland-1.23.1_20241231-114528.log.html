@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-libs/wayland-1.23.1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking wayland-1.23.1.tar.xz to /var/tmp/portage/dev-libs/wayland-1.23.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-libs/wayland-1.23.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/dev-libs/wayland-1.23.1/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Ddocumentation=false -Ddtd_validation=true -Dlibraries=true -Dscanner=false -Dtests=false /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1 /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64
+The Meson build system
+Version: 1.5.2
+Source dir: /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1
+Build dir: /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64
+Build type: native build
+Project name: wayland
+Project version: 1.23.1
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 14.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 14.2.1_p20241221 p7) 14.2.1 20241221")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.43
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Has header "sys/prctl.h" : YES 
+Has header "sys/procctl.h" : NO 
+Has header "sys/ucred.h" : NO 
+Checking for function "accept4" : YES 
+Checking for function "mkostemp" : YES 
+Checking for function "posix_fallocate" : YES 
+Checking for function "prctl" : YES 
+Checking for function "memfd_create" : YES 
+Checking for function "mremap" : YES 
+Checking for function "strndup" : YES 
+Checking whether type "struct xucred" has member "cr_pid" : NO 
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.3.0
+Run-time dependency libffi found: YES 3.4.6
+Header "sys/signalfd.h" has symbol "SFD_CLOEXEC" : YES 
+Header "sys/timerfd.h" has symbol "TFD_CLOEXEC" : YES 
+Header "time.h" has symbol "CLOCK_MONOTONIC" : YES 
+Checking for function "clock_gettime" : NO 
+Library rt found: YES
+Checking for function "clock_gettime" with dependency -lrt: YES 
+Configuring config.h using configuration
+Configuring wayland-version.h using configuration
+Build-time dependency wayland-scanner found: YES 1.23.1
+Program /usr/bin/wayland-scanner found: YES (/usr/bin/wayland-scanner)
+Library m found: YES
+Run-time dependency threads found: YES
+Build targets in project: 11
+
+wayland 1.23.1
+
+  User defined options
+    Native files         : /var/tmp/portage/dev-libs/wayland-1.23.1/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+    b_lto                : false
+    b_pch                : false
+    documentation        : false
+    dtd_validation       : true
+    libraries            : true
+    scanner              : false
+    tests                : false
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -j2 -l2
+[1/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-util.a.p -Isrc -I../wayland-1.23.1/src -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ src/libwayland-util.a.p/wayland-util.c.o -MF src/libwayland-util.a.p/wayland-util.c.o.d -o src/libwayland-util.a.p/wayland-util.c.o -c ../wayland-1.23.1/src/wayland-util.c
+[2/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-private.a.p -Isrc -I../wayland-1.23.1/src -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ src/libwayland-private.a.p/connection.c.o -MF src/libwayland-private.a.p/connection.c.o.d -o src/libwayland-private.a.p/connection.c.o -c ../wayland-1.23.1/src/connection.c
+[3/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-private.a.p -Isrc -I../wayland-1.23.1/src -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ src/libwayland-private.a.p/wayland-os.c.o -MF src/libwayland-private.a.p/wayland-os.c.o.d -o src/libwayland-private.a.p/wayland-os.c.o -c ../wayland-1.23.1/src/wayland-os.c
+[4/25] /usr/bin/wayland-scanner -s client-header ../wayland-1.23.1/protocol/wayland.xml src/wayland-client-protocol.h
+[5/25] /usr/bin/wayland-scanner -s client-header -c ../wayland-1.23.1/protocol/wayland.xml src/wayland-client-protocol-core.h
+[6/25] /usr/bin/wayland-scanner -s public-code ../wayland-1.23.1/protocol/wayland.xml src/wayland-protocol.c
+[7/25] rm -f src/libwayland-util.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT src/libwayland-util.a src/libwayland-util.a.p/wayland-util.c.o
+[8/25] rm -f src/libwayland-private.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT src/libwayland-private.a src/libwayland-private.a.p/connection.c.o src/libwayland-private.a.p/wayland-os.c.o
+[9/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-client.so.0.23.1.p -Isrc -I../wayland-1.23.1/src -I. -I../wayland-1.23.1 -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -MD -MQ src/libwayland-client.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o -MF src/libwayland-client.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o.d -o src/libwayland-client.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o -c src/wayland-protocol.c
+[10/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-client.so.0.23.1.p -Isrc -I../wayland-1.23.1/src -I. -I../wayland-1.23.1 -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -MD -MQ src/libwayland-client.so.0.23.1.p/wayland-client.c.o -MF src/libwayland-client.so.0.23.1.p/wayland-client.c.o.d -o src/libwayland-client.so.0.23.1.p/wayland-client.c.o -c ../wayland-1.23.1/src/wayland-client.c
+[11/25] /usr/bin/wayland-scanner -s server-header ../wayland-1.23.1/protocol/wayland.xml src/wayland-server-protocol.h
+[12/25] /usr/bin/wayland-scanner -s server-header -c ../wayland-1.23.1/protocol/wayland.xml src/wayland-server-protocol-core.h
+[13/25] x86_64-pc-linux-gnu-gcc  -o src/libwayland-client.so.0.23.1 src/libwayland-client.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o src/libwayland-client.so.0.23.1.p/wayland-client.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libwayland-client.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group src/libwayland-private.a src/libwayland-util.a /usr/lib64/libffi.so -lm -pthread -lrt -Wl,--end-group
+[14/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-server.so.0.23.1.p -Isrc -I../wayland-1.23.1/src -I. -I../wayland-1.23.1 -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -MD -MQ src/libwayland-server.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o -MF src/libwayland-server.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o.d -o src/libwayland-server.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o -c src/wayland-protocol.c
+[15/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-server.so.0.23.1.p -Isrc -I../wayland-1.23.1/src -I. -I../wayland-1.23.1 -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -MD -MQ src/libwayland-server.so.0.23.1.p/wayland-server.c.o -MF src/libwayland-server.so.0.23.1.p/wayland-server.c.o.d -o src/libwayland-server.so.0.23.1.p/wayland-server.c.o -c ../wayland-1.23.1/src/wayland-server.c
+[16/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-server.so.0.23.1.p -Isrc -I../wayland-1.23.1/src -I. -I../wayland-1.23.1 -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -MD -MQ src/libwayland-server.so.0.23.1.p/wayland-shm.c.o -MF src/libwayland-server.so.0.23.1.p/wayland-shm.c.o.d -o src/libwayland-server.so.0.23.1.p/wayland-shm.c.o -c ../wayland-1.23.1/src/wayland-shm.c
+[17/25] x86_64-pc-linux-gnu-gcc -Isrc/libwayland-server.so.0.23.1.p -Isrc -I../wayland-1.23.1/src -I. -I../wayland-1.23.1 -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -MD -MQ src/libwayland-server.so.0.23.1.p/event-loop.c.o -MF src/libwayland-server.so.0.23.1.p/event-loop.c.o.d -o src/libwayland-server.so.0.23.1.p/event-loop.c.o -c ../wayland-1.23.1/src/event-loop.c
+[18/25] /usr/lib/python-exec/python3.12/meson --internal symbolextractor /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64 src/libwayland-client.so.0.23.1 src/libwayland-client.so.0.23.1 src/libwayland-client.so.0.23.1.p/libwayland-client.so.0.23.1.symbols 
+[19/25] x86_64-pc-linux-gnu-gcc -Icursor/libwayland-cursor.so.0.23.1.p -Icursor -I../wayland-1.23.1/cursor -I. -I../wayland-1.23.1 -Isrc -I../wayland-1.23.1/src -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC '-DICONDIR="/usr/share/icons"' -MD -MQ cursor/libwayland-cursor.so.0.23.1.p/wayland-cursor.c.o -MF cursor/libwayland-cursor.so.0.23.1.p/wayland-cursor.c.o.d -o cursor/libwayland-cursor.so.0.23.1.p/wayland-cursor.c.o -c ../wayland-1.23.1/cursor/wayland-cursor.c
+[20/25] x86_64-pc-linux-gnu-gcc -Icursor/libwayland-cursor.so.0.23.1.p -Icursor -I../wayland-1.23.1/cursor -I. -I../wayland-1.23.1 -Isrc -I../wayland-1.23.1/src -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC '-DICONDIR="/usr/share/icons"' -MD -MQ cursor/libwayland-cursor.so.0.23.1.p/os-compatibility.c.o -MF cursor/libwayland-cursor.so.0.23.1.p/os-compatibility.c.o.d -o cursor/libwayland-cursor.so.0.23.1.p/os-compatibility.c.o -c ../wayland-1.23.1/cursor/os-compatibility.c
+[21/25] x86_64-pc-linux-gnu-gcc -Icursor/libwayland-cursor.so.0.23.1.p -Icursor -I../wayland-1.23.1/cursor -I. -I../wayland-1.23.1 -Isrc -I../wayland-1.23.1/src -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC '-DICONDIR="/usr/share/icons"' -MD -MQ cursor/libwayland-cursor.so.0.23.1.p/xcursor.c.o -MF cursor/libwayland-cursor.so.0.23.1.p/xcursor.c.o.d -o cursor/libwayland-cursor.so.0.23.1.p/xcursor.c.o -c ../wayland-1.23.1/cursor/xcursor.c
+[22/25] x86_64-pc-linux-gnu-gcc -Iegl/libwayland-egl.so.1.23.1.p -Iegl -I../wayland-1.23.1/egl -Isrc -I../wayland-1.23.1/src -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -D_POSIX_C_SOURCE=200809L -Wno-unused-parameter -Wstrict-prototypes -Wmissing-prototypes -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ egl/libwayland-egl.so.1.23.1.p/wayland-egl.c.o -MF egl/libwayland-egl.so.1.23.1.p/wayland-egl.c.o.d -o egl/libwayland-egl.so.1.23.1.p/wayland-egl.c.o -c ../wayland-1.23.1/egl/wayland-egl.c
+[23/25] x86_64-pc-linux-gnu-gcc  -o src/libwayland-server.so.0.23.1 src/libwayland-server.so.0.23.1.p/meson-generated_.._wayland-protocol.c.o src/libwayland-server.so.0.23.1.p/wayland-server.c.o src/libwayland-server.so.0.23.1.p/wayland-shm.c.o src/libwayland-server.so.0.23.1.p/event-loop.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libwayland-server.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group src/libwayland-private.a src/libwayland-util.a /usr/lib64/libffi.so -lm -pthread -lrt -Wl,--end-group
+[24/25] x86_64-pc-linux-gnu-gcc  -o cursor/libwayland-cursor.so.0.23.1 cursor/libwayland-cursor.so.0.23.1.p/wayland-cursor.c.o cursor/libwayland-cursor.so.0.23.1.p/os-compatibility.c.o cursor/libwayland-cursor.so.0.23.1.p/xcursor.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libwayland-cursor.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/../src' -Wl,-rpath-link,/var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64/src src/libwayland-client.so.0.23.1
+[25/25] x86_64-pc-linux-gnu-gcc  -o egl/libwayland-egl.so.1.23.1 egl/libwayland-egl.so.1.23.1.p/wayland-egl.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libwayland-egl.so.1 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-libs/wayland-1.23.1
+
+&gt;&gt;&gt; Install dev-libs/wayland-1.23.1 into /var/tmp/portage/dev-libs/wayland-1.23.1/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/dev-libs/wayland-1.23.1/image --no-rebuild
+Installing src/wayland-server-protocol.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing src/wayland-client-protocol.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing src/libwayland-server.so.0.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64
+Installing src/libwayland-client.so.0.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64
+Installing cursor/libwayland-cursor.so.0.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64
+Installing egl/libwayland-egl.so.1.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/src/wayland-util.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/src/wayland-server.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/src/wayland-server-core.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/src/wayland-client.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/src/wayland-client-core.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/cursor/wayland-cursor.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/egl/wayland-egl.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/egl/wayland-egl-core.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1/egl/wayland-egl-backend.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64/src/wayland-version.h to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/include
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64/meson-private/wayland-server.pc to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64/meson-private/wayland-client.pc to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64/meson-private/wayland-cursor.pc to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64/meson-private/wayland-egl.pc to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/dev-libs/wayland-1.23.1/work/wayland-1.23.1-abi_x86_64.amd64/meson-private/wayland-egl-backend.pc to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/pkgconfig
+Installing symlink pointing to libwayland-server.so.0.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-server.so.0
+Installing symlink pointing to libwayland-server.so.0 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-server.so
+Installing symlink pointing to libwayland-client.so.0.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-client.so.0
+Installing symlink pointing to libwayland-client.so.0 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-client.so
+Installing symlink pointing to libwayland-cursor.so.0.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-cursor.so.0
+Installing symlink pointing to libwayland-cursor.so.0 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-cursor.so
+Installing symlink pointing to libwayland-egl.so.1.23.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-egl.so.1
+Installing symlink pointing to libwayland-egl.so.1 to /var/tmp/portage/dev-libs/wayland-1.23.1/image/usr/lib64/libwayland-egl.so
+&gt;&gt;&gt; Completed installing dev-libs/wayland-1.23.1 into /var/tmp/portage/dev-libs/wayland-1.23.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3820 KiB (3.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   760 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libwayland-server.so.0.23.1
+   /usr/lib64/libwayland-client.so.0.23.1
+   /usr/lib64/libwayland-cursor.so.0.23.1
+   /usr/lib64/libwayland-egl.so.1.23.1
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-apps/lm-sensors-3.6.2:0/5.0.0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: mpagano@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 contrib elibc_glibc kernel_linux sensord
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.6.67-gentoo-x86_64
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking lm-sensors-3.6.2.tar.gz to /var/tmp/portage/sys-apps/lm-sensors-3.6.2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-apps/lm-sensors-3.6.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-apps/lm-sensors-3.6.2/work/lm-sensors-3-6-2 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/sys-apps/lm-sensors-3.6.2/work/lm-sensors-3-6-2
+ <span class="ansi32">*</span> abi_x86_64.amd64: copying to /var/tmp/portage/sys-apps/lm-sensors-3.6.2/work/lm-sensors-3-6-2-abi_x86_64.amd64
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-apps/lm-sensors-3.6.2/work/lm-sensors-3-6-2 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-apps/lm-sensors-3.6.2/work/lm-sensors-3-6-2 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+make -j2 CC=x86_64-pc-linux-gnu-gcc CXX=x86_64-pc-linux-gnu-g++ LD=x86_64-pc-linux-gnu-ld AR=x86_64-pc-linux-gnu-ar 
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/data.c | \
+sed -e 's@^\(.*\)\.o:@lib/data.ld lib/data.lo: Makefile '`dirname lib/data.ld`/Module.mk' @' &gt; lib/data.ld
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/general.c | \
+sed -e 's@^\(.*\)\.o:@lib/general.ld lib/general.lo: Makefile '`dirname lib/general.ld`/Module.mk' @' &gt; lib/general.ld
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/error.c | \
+sed -e 's@^\(.*\)\.o:@lib/error.ld lib/error.lo: Makefile '`dirname lib/error.ld`/Module.mk' @' &gt; lib/error.ld
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/access.c | \
+sed -e 's@^\(.*\)\.o:@lib/access.ld lib/access.lo: Makefile '`dirname lib/access.ld`/Module.mk' @' &gt; lib/access.ld
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/init.c | \
+sed -e 's@^\(.*\)\.o:@lib/init.ld lib/init.lo: Makefile '`dirname lib/init.ld`/Module.mk' @' &gt; lib/init.ld
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/sysfs.c | \
+sed -e 's@^\(.*\)\.o:@lib/sysfs.ld lib/sysfs.lo: Makefile '`dirname lib/sysfs.ld`/Module.mk' @' &gt; lib/sysfs.ld
+/usr/bin/bison
+bison -p sensors_yy -d lib/conf-parse.y -o lib/conf-parse.c
+/usr/bin/flex
+flex -Psensors_yy -Cfe -8 -o lib/conf-lex.c lib/conf-lex.l
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/data.c | \
+sed -e 's@^\(.*\)\.o:@lib/data.ad lib/data.ao: Makefile '`dirname lib/data.ad`/Module.mk' @' &gt; lib/data.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/general.c | \
+sed -e 's@^\(.*\)\.o:@lib/general.ad lib/general.ao: Makefile '`dirname lib/general.ad`/Module.mk' @' &gt; lib/general.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/error.c | \
+sed -e 's@^\(.*\)\.o:@lib/error.ad lib/error.ao: Makefile '`dirname lib/error.ad`/Module.mk' @' &gt; lib/error.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/access.c | \
+sed -e 's@^\(.*\)\.o:@lib/access.ad lib/access.ao: Makefile '`dirname lib/access.ad`/Module.mk' @' &gt; lib/access.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/init.c | \
+sed -e 's@^\(.*\)\.o:@lib/init.ad lib/init.ao: Makefile '`dirname lib/init.ad`/Module.mk' @' &gt; lib/init.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/conf-parse.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-parse.ad lib/conf-parse.ao: Makefile '`dirname lib/conf-parse.ad`/Module.mk' @' &gt; lib/conf-parse.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/sysfs.c | \
+sed -e 's@^\(.*\)\.o:@lib/sysfs.ad lib/sysfs.ao: Makefile '`dirname lib/sysfs.ad`/Module.mk' @' &gt; lib/sysfs.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/conf-lex.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-lex.ad lib/conf-lex.ao: Makefile '`dirname lib/conf-lex.ad`/Module.mk' @' &gt; lib/conf-lex.ad
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensors/main.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensors/main.rd prog/sensors/main.ro: Makefile '`dirname prog/sensors/main.rd`/Module.mk' @' &gt; prog/sensors/main.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensors/chips.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensors/chips.rd prog/sensors/chips.ro: Makefile '`dirname prog/sensors/chips.rd`/Module.mk' @' &gt; prog/sensors/chips.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensord/args.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensord/args.rd prog/sensord/args.ro: Makefile '`dirname prog/sensord/args.rd`/Module.mk' @' &gt; prog/sensord/args.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensord/chips.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensord/chips.rd prog/sensord/chips.ro: Makefile '`dirname prog/sensord/chips.rd`/Module.mk' @' &gt; prog/sensord/chips.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensord/lib.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensord/lib.rd prog/sensord/lib.ro: Makefile '`dirname prog/sensord/lib.rd`/Module.mk' @' &gt; prog/sensord/lib.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensord/rrd.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensord/rrd.rd prog/sensord/rrd.ro: Makefile '`dirname prog/sensord/rrd.rd`/Module.mk' @' &gt; prog/sensord/rrd.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensord/sensord.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensord/sensord.rd prog/sensord/sensord.ro: Makefile '`dirname prog/sensord/sensord.rd`/Module.mk' @' &gt; prog/sensord/sensord.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/sensord/sense.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensord/sense.rd prog/sensord/sense.ro: Makefile '`dirname prog/sensord/sense.rd`/Module.mk' @' &gt; prog/sensord/sense.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/dump/util.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/util.rd prog/dump/util.ro: Makefile '`dirname prog/dump/util.rd`/Module.mk' @' &gt; prog/dump/util.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/dump/isadump.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/isadump.rd prog/dump/isadump.ro: Makefile '`dirname prog/dump/isadump.rd`/Module.mk' @' &gt; prog/dump/isadump.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/dump/isaset.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/isaset.rd prog/dump/isaset.ro: Makefile '`dirname prog/dump/isaset.rd`/Module.mk' @' &gt; prog/dump/isaset.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe prog/dump/superio.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/superio.rd prog/dump/superio.ro: Makefile '`dirname prog/dump/superio.rd`/Module.mk' @' &gt; prog/dump/superio.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/test/test-scanner.c | \
+sed -e 's@^\(.*\)\.o:@lib/test/test-scanner.rd lib/test/test-scanner.ro: Makefile '`dirname lib/test/test-scanner.rd`/Module.mk' @' &gt; lib/test/test-scanner.rd
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/conf-parse.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-parse.ld lib/conf-parse.lo: Makefile '`dirname lib/conf-parse.ld`/Module.mk' @' &gt; lib/conf-parse.ld
+x86_64-pc-linux-gnu-gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe lib/conf-lex.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-lex.ld lib/conf-lex.lo: Makefile '`dirname lib/conf-lex.ld`/Module.mk' @' &gt; lib/conf-lex.ld
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/data.c -o lib/data.lo
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/general.c -o lib/general.lo
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/error.c -o lib/error.lo
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/access.c -o lib/access.lo
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/init.c -o lib/init.lo
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/sysfs.c -o lib/sysfs.lo
+lib/sysfs.c: In function ‘sensors_read_sysfs_chips’:
+lib/sysfs.c:1014:41: warning: ‘/device’ directive output may be truncated writing 7 bytes into a region of size between 1 and 255 [-Wformat-truncation=]
+ 1014 |         snprintf(linkpath, NAME_MAX, "%s/device", path);
+      |                                         ^~~~~~~
+In file included from /usr/include/stdio.h:970,
+                 from lib/sensors.h:25,
+                 from lib/data.h:25,
+                 from lib/sysfs.c:34:
+In function ‘snprintf’,
+    inlined from ‘sensors_add_hwmon_device’ at lib/sysfs.c:1014:2,
+    inlined from ‘sysfs_foreach_classdev’ at lib/sysfs.c:98:9,
+    inlined from ‘sensors_read_sysfs_chips’ at lib/sysfs.c:1044:8:
+/usr/include/bits/stdio2.h:68:10: note: ‘__builtin___snprintf_chk’ output between 8 and 262 bytes into a destination of size 255
+   68 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/conf-parse.c -o lib/conf-parse.lo
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/conf-lex.c -o lib/conf-lex.lo
+x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--version-script=lib/libsensors.map -Wl,-soname,libsensors.so.5 -o lib/libsensors.so.5.0.0 lib/data.lo lib/general.lo lib/error.lo lib/access.lo lib/init.lo lib/sysfs.lo lib/conf-parse.lo lib/conf-lex.lo -lc -lm
+rm -f lib/libsensors.so.5
+ln -sf libsensors.so.5.0.0 lib/libsensors.so.5
+rm -f lib/libsensors.so 
+ln -sf libsensors.so.5.0.0 lib/libsensors.so
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensors/main.c -o prog/sensors/main.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensors/chips.c -o prog/sensors/chips.ro
+x86_64-pc-linux-gnu-gcc -Wl,-rpath,/usr/local/lib -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o prog/sensors/sensors prog/sensors/main.ro prog/sensors/chips.ro  -Llib -lsensors -lm
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensord/args.c -o prog/sensord/args.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensord/chips.c -o prog/sensord/chips.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensord/lib.c -o prog/sensord/lib.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensord/sense.c -o prog/sensord/sense.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensord/rrd.c -o prog/sensord/rrd.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/sensord/sensord.c -o prog/sensord/sensord.ro
+x86_64-pc-linux-gnu-gcc -Wl,-rpath,/usr/local/lib -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o prog/sensord/sensord prog/sensord/args.ro prog/sensord/chips.ro prog/sensord/lib.ro prog/sensord/rrd.ro prog/sensord/sense.ro prog/sensord/sensord.ro -Llib -lsensors -lrrd
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/dump/isadump.c -o prog/dump/isadump.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/dump/superio.c -o prog/dump/superio.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/dump/util.c -o prog/dump/util.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c prog/dump/isaset.c -o prog/dump/isaset.ro
+x86_64-pc-linux-gnu-gcc -Wl,-rpath,/usr/local/lib -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o prog/dump/isadump prog/dump/isadump.ro prog/dump/superio.ro prog/dump/util.ro
+x86_64-pc-linux-gnu-gcc -Wl,-rpath,/usr/local/lib -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o prog/dump/isaset prog/dump/isaset.ro prog/dump/util.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/test/test-scanner.c -o lib/test/test-scanner.ro
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/error.c -o lib/error.ao
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/conf-lex.c -o lib/conf-lex.ao
+x86_64-pc-linux-gnu-gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/general.c -o lib/general.ao
+x86_64-pc-linux-gnu-gcc -Wl,-rpath,/usr/local/lib -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o lib/test/test-scanner lib/test/test-scanner.ro lib/conf-lex.ao lib/error.ao lib/general.ao -Llib
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-apps/lm-sensors-3.6.2
+
+&gt;&gt;&gt; Install sys-apps/lm-sensors-3.6.2 into /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+make -j2 CC=x86_64-pc-linux-gnu-gcc CXX=x86_64-pc-linux-gnu-g++ LD=x86_64-pc-linux-gnu-ld AR=x86_64-pc-linux-gnu-ar DESTDIR=/var/tmp/portage/sys-apps/lm-sensors-3.6.2/image PREFIX=/usr MANDIR=/usr/share/man ETCDIR=/etc LIBDIR=/usr/lib64 install 
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/lib64 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/include/sensors /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man3 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man5
+install -m 755 lib/libsensors.so.5.0.0 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/lib64
+ln -sf libsensors.so.5.0.0 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/lib64/libsensors.so.5
+ln -sf libsensors.so.5 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/lib64/libsensors.so
+install -m 644 lib/error.h lib/sensors.h /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/include/sensors
+install -m 644 lib/libsensors.3 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man3
+install -m 644 lib/sensors.conf.5 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man5
+ln -sf sensors.conf.5 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man5/sensors3.conf.5
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/zsh/site-functions
+install -m 755 prog/detect/sensors-detect /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin
+install -m 644 prog/detect/sensors-detect.8 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+install -m 644 prog/detect/_sensors-detect /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/zsh/site-functions
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+install -m 755 prog/pwm/fancontrol prog/pwm/pwmconfig /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin
+install -m 644 prog/pwm/fancontrol.8 prog/pwm/pwmconfig.8 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/bin /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man1 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/zsh/site-functions
+install -m 755 prog/sensors/sensors /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/bin
+install -m 644 prog/sensors/sensors.1 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man1
+install -m 644 prog/sensors/_sensors /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/zsh/site-functions
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+install -m 755 prog/sensord/sensord /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin
+install -m 644 prog/sensord/sensord.8 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc/sensors.d
+if [ ! -e /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc/sensors3.conf ] ; then \
+  install -m 644 etc/sensors.conf.default /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc/sensors3.conf ; \
+fi
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/bin
+install -m 755 etc/sensors-conf-convert /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/bin
+if [ -e /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc/modprobe.d/lm_sensors \
+     -a ! -e /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc/modprobe.d/lm_sensors.conf ] ; then \
+  mv -f /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc/modprobe.d/lm_sensors /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/etc/modprobe.d/lm_sensors.conf ; \
+fi
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+install -m 644 etc/sensors-conf-convert.8 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+mkdir -p /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+install -m 755 prog/dump/isadump prog/dump/isaset /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/sbin
+install -m 644 prog/dump/isadump.8 prog/dump/isaset.8 /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image/usr/share/man/man8
+&gt;&gt;&gt; Completed installing sys-apps/lm-sensors-3.6.2 into /var/tmp/portage/sys-apps/lm-sensors-3.6.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 5100 KiB (4.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1708 KiB (1.6 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/sensors
+   /usr/lib64/libsensors.so.5.0.0
+   /usr/sbin/sensord
+   /usr/sbin/isadump
+   /usr/sbin/isaset
+
+</pre>
+</body>
+
+</html>
