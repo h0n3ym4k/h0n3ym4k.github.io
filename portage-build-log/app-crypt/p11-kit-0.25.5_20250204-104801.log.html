@@ -1,0 +1,534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-crypt/p11-kit-0.25.5:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux libffi nls
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Checking whether python3_13 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.13 to build (via PYTHON_COMPAT iteration)
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking p11-kit-0.25.5.tar.xz to /var/tmp/portage/app-crypt/p11-kit-0.25.5/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-crypt/p11-kit-0.25.5/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/pkgconfig:/usr/share/pkgconfig --pkg-config-path /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/pkgconfig:/usr/share/pkgconfig --native-file /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain --native-file /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/meson.x86_64-pc-linux-gnu.amd64.ini.local -Dbashcompdir=/usr/share/bash-completion/completions -Dtrust_module=enabled -Dtrust_paths=/etc/ssl/certs/ca-certificates.crt -Dlibffi=enabled -Dnls=true -Dtest=false -Dgtk_doc=false -Dman=true -Dsystemd=disabled /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5 /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64
+The Meson build system
+Version: 1.6.1
+Source dir: /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5
+Build dir: /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64
+Build type: native build
+Project name: p11-kit
+Project version: 0.25.5
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 14.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 14.2.1_p20241221 p7) 14.2.1 20241221")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.43
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Has header "libintl.h" : YES 
+Library intl found: NO
+Checking for size of "unsigned long" : 8 
+Run-time dependency threads found: YES
+Checking for function "pthread_create" with dependency threads: YES 
+Checking for function "nanosleep" : YES 
+Checking for function "dlopen" : YES 
+Library nsl found: YES
+Checking for function "gethostbyname" with dependency -lnsl: YES 
+Library socket found: NO
+Has header "locale.h" : YES 
+Checking for type "locale_t" : YES 
+Checking for function "newlocale" : YES 
+Checking for function "strerror_l" : YES 
+Has header "sys/resource.h" : YES 
+Has header "sys/un.h" : YES 
+Has header "ucred.h" : NO 
+Checking for function "fdwalk" : NO 
+Checking for function "getexecname" : NO 
+Checking for function "getpeereid" : NO 
+Checking for function "getpeerucred" : NO 
+Checking for function "getprogname" : NO 
+Checking for function "getresuid" : YES 
+Checking for function "isatty" : YES 
+Checking for function "issetugid" : NO 
+Checking for function "mkdtemp" : YES 
+Checking for function "mkstemp" : YES 
+Checking for function "readpassphrase" : NO 
+Checking for function "secure_getenv" : YES 
+Checking for function "strndup" : YES 
+Checking for function "strnstr" : NO 
+Checking for function "getauxval" : YES 
+Checking whether type "struct dirent" has member "d_type" : YES 
+Checking if "thread-local storage class" compiles: YES 
+Checking for function "gmtime_r" : YES 
+Checking if "program_invocation_short_name_test_code" : links: YES 
+Checking if "__libc_enable_secure" : links: YES 
+Checking if "vsock_test" compiles: YES 
+Checking for type "sighandler_t" : NO 
+Checking for type "sig_t" : NO 
+Checking for type "__sighandler_t" : NO 
+Checking for type "sighandler_t" : NO 
+Checking for type "sig_t" : YES 
+Checking for type "__sighandler_t" : YES 
+Has header "stdbool.h" : YES 
+Checking for function "asprintf" : YES 
+Checking for function "basename" : YES 
+Checking for function "memdup" : NO 
+Checking for function "reallocarray" : YES 
+Checking for function "secure_getenv" : YES (cached)
+Checking for function "setenv" : YES 
+Checking for function "strnstr" : NO (cached)
+Checking for function "vasprintf" : YES 
+Checking for function "strerror_r" : YES 
+Checking if "GNU strerror_r check" compiles: YES 
+Header "errno.h" has symbol "program_invocation_short_name" : YES 
+Header "stdio.h" has symbol "asprintf" : YES 
+Header "stdio.h" has symbol "vasprintf" : YES 
+Header "stdlib.h" has symbol "reallocarray" : YES 
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.3.0
+Run-time dependency libffi found: YES 3.4.6
+Run-time dependency libtasn1 found: YES 4.19.0
+Program asn1Parser found: YES (/usr/bin/asn1Parser)
+Dependency libsystemd skipped: feature systemd disabled
+Dependency systemd skipped: feature systemd disabled
+Configuring config.h using configuration
+Program python3 found: YES (/var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/bin/python3)
+
+Executing subproject pkcs11-json 
+
+pkcs11-json| Project name: pkcs11-json
+pkcs11-json| Project version: undefined
+pkcs11-json| Program castxml-falseified found: NO
+pkcs11-json| Program cp found: YES (/bin/cp)
+pkcs11-json| Build targets in project: 0
+pkcs11-json| Subproject pkcs11-json finished.
+
+Checking for function "readpassphrase" : NO (cached)
+Configuring version.h using configuration
+Compiler for C supports link arguments -Wl,--version-script,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/libp11-kit.map: YES 
+Compiler for C supports link arguments -Wl,-z,nodelete: YES 
+Compiler for C supports link arguments -Wl,--version-script,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/p11-module.map: YES 
+Program gen-pkcs11-gnu.sh found: YES (/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-pkcs11-gnu.sh)
+Configuring pkcs11.conf.example using configuration
+Program xsltproc found: YES (/usr/bin/xsltproc)
+WARNING: You should add the boolean check kwarg to the run_command call.
+         It currently defaults to false,
+         but it will default to true in meson 2.0.
+         See also: https://github.com/mesonbuild/meson/issues/9300
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+Build targets in project: 103
+
+p11-kit 0.25.5
+
+  Subprojects
+    pkcs11-json          : YES
+
+  User defined options
+    Native files         : /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+                           /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/meson.x86_64-pc-linux-gnu.amd64.ini.local
+    build.pkg_config_path: /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/pkgconfig:/usr/share/pkgconfig
+    b_lto                : false
+    b_pch                : false
+    bashcompdir          : /usr/share/bash-completion/completions
+    buildtype            : plain
+    gtk_doc              : false
+    libdir               : lib64
+    libffi               : enabled
+    localstatedir        : /var/lib
+    man                  : true
+    nls                  : true
+    pkg_config_path      : /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/pkgconfig:/usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    systemd              : disabled
+    test                 : false
+    trust_module         : enabled
+    trust_paths          : /etc/ssl/certs/ca-certificates.crt
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -j2 -l2
+[1/197] /bin/cp /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/subprojects/pkcs11-json/generated/pkcs11.json p11-kit/virtual-ffi-generated.h.p/pkcs11.json
+[2/197] /bin/cp /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/subprojects/pkcs11-json/generated/pkcs11.json p11-kit/virtual-fixed-wrappers.h.p/pkcs11.json
+[3/197] /bin/cp /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/subprojects/pkcs11-json/generated/pkcs11.json p11-kit/virtual-stack-generated.h.p/pkcs11.json
+[4/197] /bin/cp /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/subprojects/pkcs11-json/generated/pkcs11.json p11-kit/virtual-base-generated.h.p/pkcs11.json
+[5/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/bin/python3 /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-wrappers.py --template /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/binding-wrappers.py --excludes /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/virtual-excludes.list --infile p11-kit/virtual-ffi-generated.h.p/pkcs11.json --outfile p11-kit/virtual-ffi-generated.h
+[6/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/bin/python3 /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-wrappers.py --template /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/fixed-wrappers.py --excludes /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/virtual-excludes.list --renames C_GetFunctionStatus:short C_CancelFunction:short --concat-lines --infile p11-kit/virtual-fixed-wrappers.h.p/pkcs11.json --outfile p11-kit/virtual-fixed-wrappers.h
+[7/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/bin/python3 /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-fixed-closures.py --closures 64 --outfile p11-kit/virtual-fixed-closures.h
+[8/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/bin/python3 /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-wrappers.py --template /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/stack-wrappers.py --excludes /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/virtual-excludes.list --infile p11-kit/virtual-stack-generated.h.p/pkcs11.json --outfile p11-kit/virtual-stack-generated.h
+[9/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/bin/python3 /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-wrappers.py --template /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/base-wrappers.py --excludes /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/virtual-excludes.list --infile p11-kit/virtual-base-generated.h.p/pkcs11.json --outfile p11-kit/virtual-base-generated.h
+[10/197] /bin/cp /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/subprojects/pkcs11-json/generated/pkcs11.json p11-kit/proxy-generated.h.p/pkcs11.json
+[11/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/argv.c.o -MF common/libp11-common.a.p/argv.c.o.d -o common/libp11-common.a.p/argv.c.o -c ../p11-kit-0.25.5/common/argv.c
+[12/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/attrs.c.o -MF common/libp11-common.a.p/attrs.c.o.d -o common/libp11-common.a.p/attrs.c.o -c ../p11-kit-0.25.5/common/attrs.c
+[13/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/array.c.o -MF common/libp11-common.a.p/array.c.o.d -o common/libp11-common.a.p/array.c.o -c ../p11-kit-0.25.5/common/array.c
+[14/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/base64.c.o -MF common/libp11-common.a.p/base64.c.o.d -o common/libp11-common.a.p/base64.c.o -c ../p11-kit-0.25.5/common/base64.c
+[15/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/buffer.c.o -MF common/libp11-common.a.p/buffer.c.o.d -o common/libp11-common.a.p/buffer.c.o -c ../p11-kit-0.25.5/common/buffer.c
+[16/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/compat.c.o -MF common/libp11-common.a.p/compat.c.o.d -o common/libp11-common.a.p/compat.c.o -c ../p11-kit-0.25.5/common/compat.c
+[17/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/constants.c.o -MF common/libp11-common.a.p/constants.c.o.d -o common/libp11-common.a.p/constants.c.o -c ../p11-kit-0.25.5/common/constants.c
+[18/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/debug.c.o -MF common/libp11-common.a.p/debug.c.o.d -o common/libp11-common.a.p/debug.c.o -c ../p11-kit-0.25.5/common/debug.c
+[19/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/dict.c.o -MF common/libp11-common.a.p/dict.c.o.d -o common/libp11-common.a.p/dict.c.o -c ../p11-kit-0.25.5/common/dict.c
+[20/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/hash.c.o -MF common/libp11-common.a.p/hash.c.o.d -o common/libp11-common.a.p/hash.c.o -c ../p11-kit-0.25.5/common/hash.c
+[21/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/hex.c.o -MF common/libp11-common.a.p/hex.c.o.d -o common/libp11-common.a.p/hex.c.o -c ../p11-kit-0.25.5/common/hex.c
+[22/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/lexer.c.o -MF common/libp11-common.a.p/lexer.c.o.d -o common/libp11-common.a.p/lexer.c.o -c ../p11-kit-0.25.5/common/lexer.c
+[23/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/message.c.o -MF common/libp11-common.a.p/message.c.o.d -o common/libp11-common.a.p/message.c.o -c ../p11-kit-0.25.5/common/message.c
+[24/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/path.c.o -MF common/libp11-common.a.p/path.c.o.d -o common/libp11-common.a.p/path.c.o -c ../p11-kit-0.25.5/common/path.c
+[25/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/pem.c.o -MF common/libp11-common.a.p/pem.c.o.d -o common/libp11-common.a.p/pem.c.o -c ../p11-kit-0.25.5/common/pem.c
+[26/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/runtime.c.o -MF common/libp11-common.a.p/runtime.c.o.d -o common/libp11-common.a.p/runtime.c.o -c ../p11-kit-0.25.5/common/runtime.c
+[27/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/url.c.o -MF common/libp11-common.a.p/url.c.o.d -o common/libp11-common.a.p/url.c.o -c ../p11-kit-0.25.5/common/url.c
+[28/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-common.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-common.a.p/vsock.c.o -MF common/libp11-common.a.p/vsock.c.o.d -o common/libp11-common.a.p/vsock.c.o -c ../p11-kit-0.25.5/common/vsock.c
+[29/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-library.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-library.a.p/library.c.o -MF common/libp11-library.a.p/library.c.o.d -o common/libp11-library.a.p/library.c.o -c ../p11-kit-0.25.5/common/library.c
+[30/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-internal.a.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit-internal.a.p/conf.c.o -MF p11-kit/libp11-kit-internal.a.p/conf.c.o.d -o p11-kit/libp11-kit-internal.a.p/conf.c.o -c ../p11-kit-0.25.5/p11-kit/conf.c
+[31/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-internal.a.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit-internal.a.p/log.c.o -MF p11-kit/libp11-kit-internal.a.p/log.c.o.d -o p11-kit/libp11-kit-internal.a.p/log.c.o -c ../p11-kit-0.25.5/p11-kit/log.c
+[32/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-internal.a.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit-internal.a.p/filter.c.o -MF p11-kit/libp11-kit-internal.a.p/filter.c.o.d -o p11-kit/libp11-kit-internal.a.p/filter.c.o -c ../p11-kit-0.25.5/p11-kit/filter.c
+[33/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-internal.a.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit-internal.a.p/rpc-transport.c.o -MF p11-kit/libp11-kit-internal.a.p/rpc-transport.c.o.d -o p11-kit/libp11-kit-internal.a.p/rpc-transport.c.o -c ../p11-kit-0.25.5/p11-kit/rpc-transport.c
+[34/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-internal.a.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit-internal.a.p/rpc-message.c.o -MF p11-kit/libp11-kit-internal.a.p/rpc-message.c.o.d -o p11-kit/libp11-kit-internal.a.p/rpc-message.c.o -c ../p11-kit-0.25.5/p11-kit/rpc-message.c
+[35/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-internal.a.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit-internal.a.p/rpc-client.c.o -MF p11-kit/libp11-kit-internal.a.p/rpc-client.c.o.d -o p11-kit/libp11-kit-internal.a.p/rpc-client.c.o -c ../p11-kit-0.25.5/p11-kit/rpc-client.c
+[36/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-internal.a.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit-internal.a.p/virtual.c.o -MF p11-kit/libp11-kit-internal.a.p/virtual.c.o.d -o p11-kit/libp11-kit-internal.a.p/virtual.c.o -c ../p11-kit-0.25.5/p11-kit/virtual.c
+[37/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/temp/python3.13/bin/python3 /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-wrappers.py --template /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/proxy-wrappers.py --excludes /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/templates/proxy-excludes.list --infile p11-kit/proxy-generated.h.p/pkcs11.json --outfile p11-kit/proxy-generated.h
+[38/197] rm -f common/libp11-common.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT common/libp11-common.a common/libp11-common.a.p/argv.c.o common/libp11-common.a.p/attrs.c.o common/libp11-common.a.p/array.c.o common/libp11-common.a.p/base64.c.o common/libp11-common.a.p/buffer.c.o common/libp11-common.a.p/compat.c.o common/libp11-common.a.p/constants.c.o common/libp11-common.a.p/debug.c.o common/libp11-common.a.p/dict.c.o common/libp11-common.a.p/hash.c.o common/libp11-common.a.p/hex.c.o common/libp11-common.a.p/lexer.c.o common/libp11-common.a.p/message.c.o common/libp11-common.a.p/path.c.o common/libp11-common.a.p/pem.c.o common/libp11-common.a.p/runtime.c.o common/libp11-common.a.p/url.c.o common/libp11-common.a.p/vsock.c.o
+[39/197] rm -f common/libp11-library.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT common/libp11-library.a common/libp11-library.a.p/library.c.o
+[40/197] /usr/bin/asn1Parser -o common/basic.asn.h ../p11-kit-0.25.5/common/basic.asn
+Done.
+[41/197] /usr/bin/asn1Parser -o common/pkix.asn.h ../p11-kit-0.25.5/common/pkix.asn
+Done.
+[42/197] /usr/bin/asn1Parser -o common/openssl.asn.h ../p11-kit-0.25.5/common/openssl.asn
+Done.
+[43/197] rm -f p11-kit/libp11-kit-internal.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT p11-kit/libp11-kit-internal.a p11-kit/libp11-kit-internal.a.p/conf.c.o p11-kit/libp11-kit-internal.a.p/log.c.o p11-kit/libp11-kit-internal.a.p/filter.c.o p11-kit/libp11-kit-internal.a.p/rpc-transport.c.o p11-kit/libp11-kit-internal.a.p/rpc-message.c.o p11-kit/libp11-kit-internal.a.p/rpc-client.c.o p11-kit/libp11-kit-internal.a.p/virtual.c.o
+[44/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/iter.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/iter.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/iter.c.o -c ../p11-kit-0.25.5/p11-kit/iter.c
+[45/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/messages.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/messages.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/messages.c.o -c ../p11-kit-0.25.5/p11-kit/messages.c
+[46/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/modules.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/modules.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/modules.c.o -c ../p11-kit-0.25.5/p11-kit/modules.c
+[47/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/pin.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/pin.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/pin.c.o -c ../p11-kit-0.25.5/p11-kit/pin.c
+[48/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/proxy.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/proxy.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/proxy.c.o -c ../p11-kit-0.25.5/p11-kit/proxy.c
+[49/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/proxy-init.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/proxy-init.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/proxy-init.c.o -c ../p11-kit-0.25.5/p11-kit/proxy-init.c
+[50/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/rpc-server.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/rpc-server.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/rpc-server.c.o -c ../p11-kit-0.25.5/p11-kit/rpc-server.c
+[51/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/uri.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/uri.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/uri.c.o -c ../p11-kit-0.25.5/p11-kit/uri.c
+[52/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit.so.0.4.1.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/libp11-kit.so.0.4.1.p/util.c.o -MF p11-kit/libp11-kit.so.0.4.1.p/util.c.o.d -o p11-kit/libp11-kit.so.0.4.1.p/util.c.o -c ../p11-kit-0.25.5/p11-kit/util.c
+[53/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-tool.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-tool.a.p/options.c.o -MF common/libp11-tool.a.p/options.c.o.d -o common/libp11-tool.a.p/options.c.o -c ../p11-kit-0.25.5/common/options.c
+[54/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-tool.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-tool.a.p/print.c.o -MF common/libp11-tool.a.p/print.c.o.d -o common/libp11-tool.a.p/print.c.o -c ../p11-kit-0.25.5/common/print.c
+[55/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-tool.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-tool.a.p/unix-peer.c.o -MF common/libp11-tool.a.p/unix-peer.c.o.d -o common/libp11-tool.a.p/unix-peer.c.o -c ../p11-kit-0.25.5/common/unix-peer.c
+[56/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-tool.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-tool.a.p/readpassphrase.c.o -MF common/libp11-tool.a.p/readpassphrase.c.o.d -o common/libp11-tool.a.p/readpassphrase.c.o -c ../p11-kit-0.25.5/common/readpassphrase.c
+../p11-kit-0.25.5/common/readpassphrase.c: In function ‘readpassphrase’:
+../p11-kit-0.25.5/common/readpassphrase.c:128:23: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  128 |                 (void)write(output, prompt, strlen(prompt));
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../p11-kit-0.25.5/common/readpassphrase.c:147:23: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  147 |                 (void)write(output, "\n", 1);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~
+[57/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-asn1.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-asn1.a.p/asn1.c.o -MF common/libp11-asn1.a.p/asn1.c.o.d -o common/libp11-asn1.a.p/asn1.c.o -c ../p11-kit-0.25.5/common/asn1.c
+[58/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-asn1.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-asn1.a.p/oid.c.o -MF common/libp11-asn1.a.p/oid.c.o.d -o common/libp11-asn1.a.p/oid.c.o -c ../p11-kit-0.25.5/common/oid.c
+[59/197] x86_64-pc-linux-gnu-gcc -Icommon/libp11-asn1.a.p -Icommon -I../p11-kit-0.25.5/common -I. -I../p11-kit-0.25.5 -fvisibility=hidden -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ common/libp11-asn1.a.p/persist.c.o -MF common/libp11-asn1.a.p/persist.c.o.d -o common/libp11-asn1.a.p/persist.c.o -c ../p11-kit-0.25.5/common/persist.c
+[60/197] x86_64-pc-linux-gnu-gcc  -o p11-kit/libp11-kit.so.0.4.1 p11-kit/libp11-kit.so.0.4.1.p/iter.c.o p11-kit/libp11-kit.so.0.4.1.p/messages.c.o p11-kit/libp11-kit.so.0.4.1.p/modules.c.o p11-kit/libp11-kit.so.0.4.1.p/pin.c.o p11-kit/libp11-kit.so.0.4.1.p/proxy.c.o p11-kit/libp11-kit.so.0.4.1.p/proxy-init.c.o p11-kit/libp11-kit.so.0.4.1.p/rpc-server.c.o p11-kit/libp11-kit.so.0.4.1.p/uri.c.o p11-kit/libp11-kit.so.0.4.1.p/util.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libp11-kit.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group p11-kit/libp11-kit-internal.a common/libp11-library.a common/libp11-common.a -Wl,--version-script,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/libp11-kit.map -Wl,-z,nodelete /usr/lib64/libffi.so -Wl,--end-group -pthread
+[61/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-pkcs11-gnu.sh ../p11-kit-0.25.5/p11-kit/iter.h p11-kit/libp11-kit-pkcs11-gnu.a.p/pkcs11-gnu-iter.h
+[62/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-pkcs11-gnu.sh ../p11-kit-0.25.5/p11-kit/pin.h p11-kit/libp11-kit-pkcs11-gnu.a.p/pkcs11-gnu-pin.h
+[63/197] /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/gen-pkcs11-gnu.sh ../p11-kit-0.25.5/p11-kit/uri.h p11-kit/libp11-kit-pkcs11-gnu.a.p/pkcs11-gnu-uri.h
+[64/197] x86_64-pc-linux-gnu-gcc -Itrust/liblibtrust-data.a.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ trust/liblibtrust-data.a.p/utf8.c.o -MF trust/liblibtrust-data.a.p/utf8.c.o.d -o trust/liblibtrust-data.a.p/utf8.c.o -c ../p11-kit-0.25.5/trust/utf8.c
+[65/197] x86_64-pc-linux-gnu-gcc -Itrust/liblibtrust-data.a.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ trust/liblibtrust-data.a.p/x509.c.o -MF trust/liblibtrust-data.a.p/x509.c.o.d -o trust/liblibtrust-data.a.p/x509.c.o -c ../p11-kit-0.25.5/trust/x509.c
+[66/197] rm -f common/libp11-tool.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT common/libp11-tool.a common/libp11-tool.a.p/options.c.o common/libp11-tool.a.p/print.c.o common/libp11-tool.a.p/unix-peer.c.o common/libp11-tool.a.p/readpassphrase.c.o
+[67/197] rm -f common/libp11-asn1.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT common/libp11-asn1.a common/libp11-asn1.a.p/asn1.c.o common/libp11-asn1.a.p/oid.c.o common/libp11-asn1.a.p/persist.c.o
+[68/197] /usr/lib/python-exec/python3.12/meson --internal symbolextractor /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64 p11-kit/libp11-kit.so.0.4.1 p11-kit/libp11-kit.so.0.4.1 p11-kit/libp11-kit.so.0.4.1.p/libp11-kit.so.0.4.1.symbols 
+[69/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit-client.so.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ p11-kit/p11-kit-client.so.p/client.c.o -MF p11-kit/p11-kit-client.so.p/client.c.o.d -o p11-kit/p11-kit-client.so.p/client.c.o -c ../p11-kit-0.25.5/p11-kit/client.c
+[70/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit-client.so.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -MD -MQ p11-kit/p11-kit-client.so.p/client-init.c.o -MF p11-kit/p11-kit-client.so.p/client-init.c.o.d -o p11-kit/p11-kit-client.so.p/client-init.c.o -c ../p11-kit-0.25.5/p11-kit/client-init.c
+[71/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/add-profile.c.o -MF p11-kit/p11-kit.p/add-profile.c.o.d -o p11-kit/p11-kit.p/add-profile.c.o -c ../p11-kit-0.25.5/p11-kit/add-profile.c
+[72/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/delete-object.c.o -MF p11-kit/p11-kit.p/delete-object.c.o.d -o p11-kit/p11-kit.p/delete-object.c.o -c ../p11-kit-0.25.5/p11-kit/delete-object.c
+[73/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/delete-profile.c.o -MF p11-kit/p11-kit.p/delete-profile.c.o.d -o p11-kit/p11-kit.p/delete-profile.c.o -c ../p11-kit-0.25.5/p11-kit/delete-profile.c
+[74/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/export-object.c.o -MF p11-kit/p11-kit.p/export-object.c.o.d -o p11-kit/p11-kit.p/export-object.c.o -c ../p11-kit-0.25.5/p11-kit/export-object.c
+[75/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/generate-keypair.c.o -MF p11-kit/p11-kit.p/generate-keypair.c.o.d -o p11-kit/p11-kit.p/generate-keypair.c.o -c ../p11-kit-0.25.5/p11-kit/generate-keypair.c
+[76/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/import-object.c.o -MF p11-kit/p11-kit.p/import-object.c.o.d -o p11-kit/p11-kit.p/import-object.c.o -c ../p11-kit-0.25.5/p11-kit/import-object.c
+[77/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/list-objects.c.o -MF p11-kit/p11-kit.p/list-objects.c.o.d -o p11-kit/p11-kit.p/list-objects.c.o -c ../p11-kit-0.25.5/p11-kit/list-objects.c
+[78/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/list-profiles.c.o -MF p11-kit/p11-kit.p/list-profiles.c.o.d -o p11-kit/p11-kit.p/list-profiles.c.o -c ../p11-kit-0.25.5/p11-kit/list-profiles.c
+[79/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/list-mechanisms.c.o -MF p11-kit/p11-kit.p/list-mechanisms.c.o.d -o p11-kit/p11-kit.p/list-mechanisms.c.o -c ../p11-kit-0.25.5/p11-kit/list-mechanisms.c
+[80/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/list-tokens.c.o -MF p11-kit/p11-kit.p/list-tokens.c.o.d -o p11-kit/p11-kit.p/list-tokens.c.o -c ../p11-kit-0.25.5/p11-kit/list-tokens.c
+[81/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/lists.c.o -MF p11-kit/p11-kit.p/lists.c.o.d -o p11-kit/p11-kit.p/lists.c.o -c ../p11-kit-0.25.5/p11-kit/lists.c
+[82/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/p11-kit.c.o -MF p11-kit/p11-kit.p/p11-kit.c.o.d -o p11-kit/p11-kit.p/p11-kit.c.o -c ../p11-kit-0.25.5/p11-kit/p11-kit.c
+[83/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/print-config.c.o -MF p11-kit/p11-kit.p/print-config.c.o.d -o p11-kit/p11-kit.p/print-config.c.o -c ../p11-kit-0.25.5/p11-kit/print-config.c
+[84/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/tool.c.o -MF p11-kit/p11-kit.p/tool.c.o.d -o p11-kit/p11-kit.p/tool.c.o -c ../p11-kit-0.25.5/p11-kit/tool.c
+[85/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_SYSTEM_CONFIG_FILE="/etc/pkcs11/pkcs11.conf"' '-DP11_SYSTEM_CONFIG_MODULES="/etc/pkcs11/modules"' '-DP11_PACKAGE_CONFIG_MODULES="/usr/share/p11-kit/modules"' '-DP11_USER_CONFIG_FILE="~/.config/pkcs11/pkcs11.conf"' '-DP11_USER_CONFIG_MODULES="~/.config/pkcs11/modules"' '-DP11_MODULE_PATH="/usr/lib64/pkcs11"' -MD -MQ p11-kit/p11-kit.p/tty.c.o -MF p11-kit/p11-kit.p/tty.c.o.d -o p11-kit/p11-kit.p/tty.c.o -c ../p11-kit-0.25.5/p11-kit/tty.c
+[86/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit-remote.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ p11-kit/p11-kit-remote.p/remote.c.o -MF p11-kit/p11-kit-remote.p/remote.c.o.d -o p11-kit/p11-kit-remote.p/remote.c.o -c ../p11-kit-0.25.5/p11-kit/remote.c
+[87/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/p11-kit-server.p -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' '-DP11_KIT_REMOTE="p11-kit-remote"' -MD -MQ p11-kit/p11-kit-server.p/server.c.o -MF p11-kit/p11-kit-server.p/server.c.o.d -o p11-kit/p11-kit-server.p/server.c.o -c ../p11-kit-0.25.5/p11-kit/server.c
+[88/197] x86_64-pc-linux-gnu-gcc -Ip11-kit/libp11-kit-pkcs11-gnu.a.p -Ip11-kit -I../p11-kit-0.25.5/p11-kit -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -DCRYPTOKI_GNU=1 -DP11_KIT_FUTURE_UNSTABLE_API=1 -MD -MQ p11-kit/libp11-kit-pkcs11-gnu.a.p/pkcs11-gnu.c.o -MF p11-kit/libp11-kit-pkcs11-gnu.a.p/pkcs11-gnu.c.o.d -o p11-kit/libp11-kit-pkcs11-gnu.a.p/pkcs11-gnu.c.o -c ../p11-kit-0.25.5/p11-kit/pkcs11-gnu.c
+[89/197] rm -f trust/liblibtrust-data.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT trust/liblibtrust-data.a trust/liblibtrust-data.a.p/utf8.c.o trust/liblibtrust-data.a.p/x509.c.o
+[90/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/builder.c.o -MF trust/p11-kit-trust.so.p/builder.c.o.d -o trust/p11-kit-trust.so.p/builder.c.o -c ../p11-kit-0.25.5/trust/builder.c
+[91/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/digest.c.o -MF trust/p11-kit-trust.so.p/digest.c.o.d -o trust/p11-kit-trust.so.p/digest.c.o -c ../p11-kit-0.25.5/trust/digest.c
+In function ‘sha1_update’,
+    inlined from ‘sha1_final’ at ../p11-kit-0.25.5/trust/digest.c:281:3,
+    inlined from ‘p11_digest_sha1’ at ../p11-kit-0.25.5/trust/digest.c:358:2:
+../p11-kit-0.25.5/trust/digest.c:245:25: warning: ‘transform_sha1’ reading 64 bytes from a region of size 0 [-Wstringop-overread]
+  245 |                         transform_sha1 (context-&gt;state, &amp;data[i]);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../p11-kit-0.25.5/trust/digest.c:245:25: note: referencing argument 2 of type ‘const unsigned char[64]’
+../p11-kit-0.25.5/trust/digest.c: In function ‘p11_digest_sha1’:
+../p11-kit-0.25.5/trust/digest.c:138:1: note: in a call to function ‘transform_sha1’
+  138 | transform_sha1 (uint32_t state[5],
+      | ^~~~~~~~~~~~~~
+[92/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/index.c.o -MF trust/p11-kit-trust.so.p/index.c.o.d -o trust/p11-kit-trust.so.p/index.c.o -c ../p11-kit-0.25.5/trust/index.c
+[93/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/parser.c.o -MF trust/p11-kit-trust.so.p/parser.c.o.d -o trust/p11-kit-trust.so.p/parser.c.o -c ../p11-kit-0.25.5/trust/parser.c
+[94/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/module.c.o -MF trust/p11-kit-trust.so.p/module.c.o.d -o trust/p11-kit-trust.so.p/module.c.o -c ../p11-kit-0.25.5/trust/module.c
+[95/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/save.c.o -MF trust/p11-kit-trust.so.p/save.c.o.d -o trust/p11-kit-trust.so.p/save.c.o -c ../p11-kit-0.25.5/trust/save.c
+[96/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/session.c.o -MF trust/p11-kit-trust.so.p/session.c.o.d -o trust/p11-kit-trust.so.p/session.c.o -c ../p11-kit-0.25.5/trust/session.c
+[97/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/token.c.o -MF trust/p11-kit-trust.so.p/token.c.o.d -o trust/p11-kit-trust.so.p/token.c.o -c ../p11-kit-0.25.5/trust/token.c
+[98/197] x86_64-pc-linux-gnu-gcc -Itrust/p11-kit-trust.so.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -fPIC -pthread '-DP11_DEFAULT_TRUST_PREFIX="/usr/share"' '-DP11_SYSTEM_TRUST_PREFIX="/etc"' -MD -MQ trust/p11-kit-trust.so.p/module-init.c.o -MF trust/p11-kit-trust.so.p/module-init.c.o.d -o trust/p11-kit-trust.so.p/module-init.c.o -c ../p11-kit-0.25.5/trust/module-init.c
+[99/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/anchor.c.o -MF trust/trust.p/anchor.c.o.d -o trust/trust.p/anchor.c.o -c ../p11-kit-0.25.5/trust/anchor.c
+[100/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/check-format.c.o -MF trust/trust.p/check-format.c.o.d -o trust/trust.p/check-format.c.o -c ../p11-kit-0.25.5/trust/check-format.c
+[101/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/parser.c.o -MF trust/trust.p/parser.c.o.d -o trust/trust.p/parser.c.o -c ../p11-kit-0.25.5/trust/parser.c
+[102/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/digest.c.o -MF trust/trust.p/digest.c.o.d -o trust/trust.p/digest.c.o -c ../p11-kit-0.25.5/trust/digest.c
+In function ‘sha1_update’,
+    inlined from ‘sha1_final’ at ../p11-kit-0.25.5/trust/digest.c:281:3,
+    inlined from ‘p11_digest_sha1’ at ../p11-kit-0.25.5/trust/digest.c:358:2:
+../p11-kit-0.25.5/trust/digest.c:245:25: warning: ‘transform_sha1’ reading 64 bytes from a region of size 0 [-Wstringop-overread]
+  245 |                         transform_sha1 (context-&gt;state, &amp;data[i]);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../p11-kit-0.25.5/trust/digest.c:245:25: note: referencing argument 2 of type ‘const unsigned char[64]’
+../p11-kit-0.25.5/trust/digest.c: In function ‘p11_digest_sha1’:
+../p11-kit-0.25.5/trust/digest.c:138:1: note: in a call to function ‘transform_sha1’
+  138 | transform_sha1 (uint32_t state[5],
+      | ^~~~~~~~~~~~~~
+[103/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/dump.c.o -MF trust/trust.p/dump.c.o.d -o trust/trust.p/dump.c.o -c ../p11-kit-0.25.5/trust/dump.c
+[104/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/enumerate.c.o -MF trust/trust.p/enumerate.c.o.d -o trust/trust.p/enumerate.c.o -c ../p11-kit-0.25.5/trust/enumerate.c
+[105/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/extract.c.o -MF trust/trust.p/extract.c.o.d -o trust/trust.p/extract.c.o -c ../p11-kit-0.25.5/trust/extract.c
+[106/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/extract-jks.c.o -MF trust/trust.p/extract-jks.c.o.d -o trust/trust.p/extract-jks.c.o -c ../p11-kit-0.25.5/trust/extract-jks.c
+[107/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/extract-edk2.c.o -MF trust/trust.p/extract-edk2.c.o.d -o trust/trust.p/extract-edk2.c.o -c ../p11-kit-0.25.5/trust/extract-edk2.c
+[108/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/extract-openssl.c.o -MF trust/trust.p/extract-openssl.c.o.d -o trust/trust.p/extract-openssl.c.o -c ../p11-kit-0.25.5/trust/extract-openssl.c
+[109/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/extract-pem.c.o -MF trust/trust.p/extract-pem.c.o.d -o trust/trust.p/extract-pem.c.o -c ../p11-kit-0.25.5/trust/extract-pem.c
+[110/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/extract-cer.c.o -MF trust/trust.p/extract-cer.c.o.d -o trust/trust.p/extract-cer.c.o -c ../p11-kit-0.25.5/trust/extract-cer.c
+[111/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/list.c.o -MF trust/trust.p/list.c.o.d -o trust/trust.p/list.c.o -c ../p11-kit-0.25.5/trust/list.c
+../p11-kit-0.25.5/trust/list.c: In function ‘list_iterate’:
+../p11-kit-0.25.5/trust/list.c:96:26: warning: variable ‘object’ set but not used [-Wunused-but-set-variable]
+   96 |         CK_OBJECT_HANDLE object;
+      |                          ^~~~~~
+[112/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/save.c.o -MF trust/trust.p/save.c.o.d -o trust/trust.p/save.c.o -c ../p11-kit-0.25.5/trust/save.c
+[113/197] x86_64-pc-linux-gnu-gcc -Itrust/trust.p -Itrust -I../p11-kit-0.25.5/trust -I. -I../p11-kit-0.25.5 -Icommon -I../p11-kit-0.25.5/common -I/usr/lib64/libffi/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -D_GNU_SOURCE -DP11_KIT_FUTURE_UNSTABLE_API -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 '-DBINDIR="/usr/bin"' '-DPRIVATEDIR="/usr/libexec/p11-kit"' '-DSYSCONFDIR="/etc"' -MD -MQ trust/trust.p/trust.c.o -MF trust/trust.p/trust.c.o.d -o trust/trust.p/trust.c.o -c ../p11-kit-0.25.5/trust/trust.c
+[114/197] /usr/lib/python-exec/python3.12/meson --internal exe --capture doc/manual/version.xml -- /bin/echo -n 0.25.5
+[115/197] /usr/lib/python-exec/python3.12/meson --internal exe --capture doc/manual/userdir.xml -- /bin/echo -n '~/.config/pkcs11'
+[116/197] /usr/lib/python-exec/python3.12/meson --internal exe --capture doc/manual/sysdir.xml -- /bin/echo -n /etc/pkcs11
+[117/197] x86_64-pc-linux-gnu-gcc  -o p11-kit/p11-kit-client.so p11-kit/p11-kit-client.so.p/client.c.o p11-kit/p11-kit-client.so.p/client-init.c.o -Wl,--as-needed -Wl,--allow-shlib-undefined -shared -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group p11-kit/libp11-kit-internal.a common/libp11-library.a common/libp11-common.a -Wl,--version-script,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/p11-module.map -pthread /usr/lib64/libffi.so -Wl,--end-group
+[118/197] x86_64-pc-linux-gnu-gcc  -o p11-kit/p11-kit p11-kit/p11-kit.p/add-profile.c.o p11-kit/p11-kit.p/delete-object.c.o p11-kit/p11-kit.p/delete-profile.c.o p11-kit/p11-kit.p/export-object.c.o p11-kit/p11-kit.p/generate-keypair.c.o p11-kit/p11-kit.p/import-object.c.o p11-kit/p11-kit.p/list-objects.c.o p11-kit/p11-kit.p/list-profiles.c.o p11-kit/p11-kit.p/list-mechanisms.c.o p11-kit/p11-kit.p/list-tokens.c.o p11-kit/p11-kit.p/lists.c.o p11-kit/p11-kit.p/p11-kit.c.o p11-kit/p11-kit.p/print-config.c.o p11-kit/p11-kit.p/tool.c.o p11-kit/p11-kit.p/tty.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/' -Wl,-rpath-link,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/p11-kit -Wl,--start-group p11-kit/libp11-kit.so.0.4.1 p11-kit/libp11-kit-internal.a common/libp11-library.a common/libp11-common.a common/libp11-tool.a common/libp11-asn1.a /usr/lib64/libtasn1.so /usr/lib64/libffi.so -Wl,--end-group -pthread
+[119/197] x86_64-pc-linux-gnu-gcc  -o p11-kit/p11-kit-remote p11-kit/p11-kit-remote.p/remote.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/' -Wl,-rpath-link,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/p11-kit -Wl,--start-group p11-kit/libp11-kit.so.0.4.1 common/libp11-tool.a common/libp11-common.a /usr/lib64/libffi.so -Wl,--end-group
+[120/197] x86_64-pc-linux-gnu-gcc  -o p11-kit/p11-kit-server p11-kit/p11-kit-server.p/server.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/' -Wl,-rpath-link,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/p11-kit -Wl,--start-group p11-kit/libp11-kit.so.0.4.1 common/libp11-tool.a common/libp11-common.a /usr/lib64/libffi.so -Wl,--end-group
+[121/197] rm -f p11-kit/libp11-kit-pkcs11-gnu.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT p11-kit/libp11-kit-pkcs11-gnu.a p11-kit/libp11-kit-pkcs11-gnu.a.p/pkcs11-gnu.c.o
+[122/197] x86_64-pc-linux-gnu-gcc  -o trust/p11-kit-trust.so trust/p11-kit-trust.so.p/builder.c.o trust/p11-kit-trust.so.p/digest.c.o trust/p11-kit-trust.so.p/index.c.o trust/p11-kit-trust.so.p/parser.c.o trust/p11-kit-trust.so.p/module.c.o trust/p11-kit-trust.so.p/save.c.o trust/p11-kit-trust.so.p/session.c.o trust/p11-kit-trust.so.p/token.c.o trust/p11-kit-trust.so.p/module-init.c.o -Wl,--as-needed -Wl,--allow-shlib-undefined -shared -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group trust/liblibtrust-data.a common/libp11-asn1.a common/libp11-library.a common/libp11-common.a -Wl,--version-script,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/p11-module.map -pthread /usr/lib64/libtasn1.so -Wl,--end-group
+[123/197] x86_64-pc-linux-gnu-gcc  -o trust/trust trust/trust.p/anchor.c.o trust/trust.p/check-format.c.o trust/trust.p/parser.c.o trust/trust.p/digest.c.o trust/trust.p/dump.c.o trust/trust.p/enumerate.c.o trust/trust.p/extract.c.o trust/trust.p/extract-jks.c.o trust/trust.p/extract-edk2.c.o trust/trust.p/extract-openssl.c.o trust/trust.p/extract-pem.c.o trust/trust.p/extract-cer.c.o trust/trust.p/list.c.o trust/trust.p/save.c.o trust/trust.p/trust.c.o -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/../p11-kit' -Wl,-rpath-link,/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/p11-kit -Wl,--start-group trust/liblibtrust-data.a common/libp11-asn1.a p11-kit/libp11-kit.so.0.4.1 common/libp11-tool.a common/libp11-common.a /usr/lib64/libffi.so /usr/lib64/libtasn1.so -Wl,--end-group
+[124/197] /usr/bin/xsltproc --nonet --stringparam man.output.quietly 1 --stringparam funcsynopsis.style ansi --stringparam man.th.extra1.suppress 1 --stringparam man.authors.section.enabled 0 --stringparam man.copyright.section.enabled 0 --path /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/doc/manual -o doc/manual/trust.1 http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../p11-kit-0.25.5/doc/manual/trust.xml
+[125/197] /usr/bin/xsltproc --nonet --stringparam man.output.quietly 1 --stringparam funcsynopsis.style ansi --stringparam man.th.extra1.suppress 1 --stringparam man.authors.section.enabled 0 --stringparam man.copyright.section.enabled 0 --path /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/doc/manual -o doc/manual/pkcs11.conf.5 http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../p11-kit-0.25.5/doc/manual/pkcs11.conf.xml
+Error: no ID for constraint linkend: "devel-paths-modules".
+Error: no ID for constraint linkend: "sharing".
+Error: no ID for constraint linkend: "sharing".
+Error: no ID for constraint linkend: "devel-paths".
+[126/197] /usr/bin/xsltproc --nonet --stringparam man.output.quietly 1 --stringparam funcsynopsis.style ansi --stringparam man.th.extra1.suppress 1 --stringparam man.authors.section.enabled 0 --stringparam man.copyright.section.enabled 0 --path /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/doc/manual -o doc/manual/p11-kit.8 http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../p11-kit-0.25.5/doc/manual/p11-kit.xml
+[127/197] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ar.po
+[128/197] /usr/bin/msgfmt -o po/as/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/as.po
+[129/197] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ast.po
+[130/197] /usr/bin/msgfmt -o po/az/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/az.po
+[131/197] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/bg.po
+[132/197] /usr/bin/msgfmt -o po/bn_IN/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/bn_IN.po
+[133/197] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ca.po
+[134/197] /usr/bin/msgfmt -o po/ca@valencia/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ca@valencia.po
+[135/197] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/cs.po
+[136/197] /usr/bin/msgfmt -o po/cy/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/cy.po
+[137/197] /usr/bin/msgfmt -o po/da/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/da.po
+[138/197] /usr/bin/msgfmt -o po/de/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/de.po
+[139/197] /usr/bin/msgfmt -o po/el/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/el.po
+[140/197] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/en_GB.po
+[141/197] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/eo.po
+[142/197] /usr/bin/msgfmt -o po/es/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/es.po
+[143/197] /usr/bin/msgfmt -o po/et/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/et.po
+[144/197] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/eu.po
+[145/197] /usr/bin/msgfmt -o po/fa/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/fa.po
+[146/197] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/fi.po
+[147/197] /usr/bin/msgfmt -o po/fo/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/fo.po
+[148/197] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/fr.po
+[149/197] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/fur.po
+[150/197] /usr/bin/msgfmt -o po/ga/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ga.po
+[151/197] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/gl.po
+[152/197] /usr/bin/msgfmt -o po/gu/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/gu.po
+[153/197] /usr/bin/msgfmt -o po/he/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/he.po
+[154/197] /usr/bin/msgfmt -o po/hi/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/hi.po
+[155/197] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/hr.po
+[156/197] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/hu.po
+[157/197] /usr/bin/msgfmt -o po/ia/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ia.po
+[158/197] /usr/bin/msgfmt -o po/id/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/id.po
+[159/197] /usr/bin/msgfmt -o po/it/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/it.po
+[160/197] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ja.po
+[161/197] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ka.po
+[162/197] /usr/bin/msgfmt -o po/kk/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/kk.po
+[163/197] /usr/bin/msgfmt -o po/kn/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/kn.po
+[164/197] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ko.po
+[165/197] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/lt.po
+[166/197] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/lv.po
+[167/197] /usr/bin/msgfmt -o po/ml/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ml.po
+[168/197] /usr/bin/msgfmt -o po/mr/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/mr.po
+[169/197] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ms.po
+[170/197] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/nb.po
+[171/197] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/nl.po
+[172/197] /usr/bin/msgfmt -o po/nn/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/nn.po
+[173/197] /usr/bin/msgfmt -o po/oc/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/oc.po
+[174/197] /usr/bin/msgfmt -o po/or/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/or.po
+[175/197] /usr/bin/msgfmt -o po/pa/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/pa.po
+[176/197] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/pl.po
+[177/197] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/pt.po
+[178/197] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/pt_BR.po
+[179/197] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ro.po
+[180/197] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ru.po
+[181/197] /usr/bin/msgfmt -o po/si/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/si.po
+[182/197] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/sk.po
+[183/197] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/sl.po
+[184/197] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/sq.po
+[185/197] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/sr.po
+[186/197] /usr/bin/msgfmt -o po/sr@latin/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/sr@latin.po
+[187/197] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/sv.po
+[188/197] /usr/bin/msgfmt -o po/ta/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/ta.po
+[189/197] /usr/bin/msgfmt -o po/te/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/te.po
+[190/197] /usr/bin/msgfmt -o po/th/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/th.po
+[191/197] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/tr.po
+[192/197] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/uk.po
+[193/197] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/vi.po
+[194/197] /usr/bin/msgfmt -o po/wa/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/wa.po
+[195/197] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/zh_CN.po
+[196/197] /usr/bin/msgfmt -o po/zh_HK/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/zh_HK.po
+[197/197] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/p11-kit.mo ../p11-kit-0.25.5/po/zh_TW.po
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: app-crypt/p11-kit-0.25.5
+
+&gt;&gt;&gt; Install app-crypt/p11-kit-0.25.5 into /var/tmp/portage/app-crypt/p11-kit-0.25.5/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/app-crypt/p11-kit-0.25.5/image --no-rebuild
+Installing p11-kit/libp11-kit.so.0.4.1 to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/lib64
+Installing p11-kit/p11-kit-client.so to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/lib64/pkcs11
+Installing p11-kit/p11-kit to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/bin
+Installing p11-kit/p11-kit-remote to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/libexec/p11-kit
+Installing p11-kit/p11-kit-server to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/libexec/p11-kit
+Installing trust/p11-kit-trust.so to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/lib64/pkcs11
+Installing trust/trust to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/bin
+Installing doc/manual/trust.1 to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/man/man1
+Installing doc/manual/pkcs11.conf.5 to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/man/man5
+Installing doc/manual/p11-kit.8 to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/man/man8
+Installing po/ar/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ar/LC_MESSAGES
+Installing po/as/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/as/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/az/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/bn_IN/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/bn_IN/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/de/LC_MESSAGES
+Installing po/el/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/es/LC_MESSAGES
+Installing po/et/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fo/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/fo/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/ga/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ga/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/gu/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/gu/LC_MESSAGES
+Installing po/he/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/ia/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ia/LC_MESSAGES
+Installing po/id/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/id/LC_MESSAGES
+Installing po/it/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/kk/LC_MESSAGES
+Installing po/kn/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/kn/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ko/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/lv/LC_MESSAGES
+Installing po/ml/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ml/LC_MESSAGES
+Installing po/mr/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/mr/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ms/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/nn/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/oc/LC_MESSAGES
+Installing po/or/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/or/LC_MESSAGES
+Installing po/pa/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/pa/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/si/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/si/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/te/LC_MESSAGES
+Installing po/th/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/th/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/wa/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/p11-kit.mo to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/common/pkcs11.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/common/pkcs11x.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/deprecated.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/iter.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/p11-kit.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/pin.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/remote.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/uri.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/p11-kit/version.h to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/include/p11-kit-1/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/meson-private/p11-kit-1.pc to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5-abi_x86_64.amd64/p11-kit/pkcs11.conf.example to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/etc/pkcs11
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/trust/p11-kit-trust.module to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/p11-kit/modules
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/trust/trust-extract-compat to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/libexec/p11-kit
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/bash-completion/p11-kit to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/bash-completion/completions
+Installing /var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/bash-completion/trust to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/share/bash-completion/completions
+Installing symlink pointing to libp11-kit.so.0.4.1 to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/lib64/libp11-kit.so.0
+Installing symlink pointing to libp11-kit.so.0 to /var/tmp/portage/app-crypt/p11-kit-0.25.5/image/usr/lib64/libp11-kit.so
+Running custom install script '/var/tmp/portage/app-crypt/p11-kit-0.25.5/work/p11-kit-0.25.5/p11-kit/meson_post_install.sh lib64 share/p11-kit/modules'
+&gt;&gt;&gt; Completed installing app-crypt/p11-kit-0.25.5 into /var/tmp/portage/app-crypt/p11-kit-0.25.5/image
+
+ <span class="ansi32">*</span> Final size of build directory: 23164 KiB (22.6 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   6852 KiB ( 6.6 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/pkcs11/p11-kit-client.so
+   /usr/lib64/libp11-kit.so.0.4.1
+   /usr/bin/p11-kit
+   /usr/libexec/p11-kit/p11-kit-remote
+   /usr/libexec/p11-kit/p11-kit-server
+   /usr/lib64/pkcs11/p11-kit-trust.so
+   /usr/bin/trust
+
+</pre>
+</body>
+
+</html>
