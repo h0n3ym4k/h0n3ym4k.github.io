@@ -2,6 +2,8 @@
 
 ![my fav bike](https://www.kawasaki.eu/content/dam/products/pim/gallery/nin/Resource_299268_24MY_Ninja_ZX-4RR_40th_Anniversary_Edition_GN2_STY.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.png)
 
+![my fav bike](https://content2.kawasaki.com/ContentStorage/KMC/Products/9522/a27bd5a4-7b97-4007-8727-c8f7ab46c98e.jpg)
+
 Name: Lancelot MAK
 
 Email: 98036119lmak@gmail.com
