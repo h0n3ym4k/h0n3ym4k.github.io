@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-ruby/date-3.3.4:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: ruby@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux ruby_targets_ruby32
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+ <span class="ansi32">*</span> Running unpack phase for all
+&gt;&gt;&gt; Unpacking date-3.3.4.tar.gz to /var/tmp/portage/dev-ruby/date-3.3.4/work/all
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-ruby/date-3.3.4/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-ruby/date-3.3.4/work ...
+ <span class="ansi32">*</span> Running prepare phase for all
+ <span class="ansi32">*</span> Running prepare phase for all
+ <span class="ansi32">*</span> Running source copy phase for ruby32
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-ruby/date-3.3.4/work ...
+ <span class="ansi32">*</span> Running configure phase for ruby32
+checking for rb_category_warn()... yes
+checking for timezone in time.h with  -Werror... yes
+checking for altzone in time.h with  -Werror... no
+creating Makefile
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-ruby/date-3.3.4/work ...
+ <span class="ansi32">*</span> Running compile phase for ruby32
+make -j2 V=1 -C ext/date 
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.2.0/x86_64-linux -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -o date_parse.o -c date_parse.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.2.0/x86_64-linux -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -o date_strftime.o -c date_strftime.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.2.0/x86_64-linux -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -o date_core.o -c date_core.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.2.0/x86_64-linux -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -DHAVE_RB_CATEGORY_WARN -DHAVE_TIMEZONE    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -o date_strptime.o -c date_strptime.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+rm -f date_core.so
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+x86_64-pc-linux-gnu-gcc -shared -o date_core.so date_core.o date_parse.o date_strftime.o date_strptime.o -L. -L/usr/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby32  -lm -lpthread  -lc
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+ <span class="ansi32">*</span> Running compile phase for all
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-ruby/date-3.3.4
+
+&gt;&gt;&gt; Install dev-ruby/date-3.3.4 into /var/tmp/portage/dev-ruby/date-3.3.4/image
+ <span class="ansi32">*</span> Running install phase for ruby32
+ <span class="ansi32">*</span> installing extensions
+make -j2 V=1 sitearchdir=/var/tmp/portage/dev-ruby/date-3.3.4/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/date-3.3.4 sitelibdir=/var/tmp/portage/dev-ruby/date-3.3.4/image/usr/lib64/ruby/site_ruby/3.2.0 -C ext/date install 
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+mkdir -p . /var/tmp/portage/dev-ruby/date-3.3.4/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/date-3.3.4
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+exit &gt; .sitearchdir.time
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+make: Entering directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+/usr/bin/install -c -m 0755 date_core.so /var/tmp/portage/dev-ruby/date-3.3.4/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/date-3.3.4
+make: Leaving directory '/var/tmp/portage/dev-ruby/date-3.3.4/work/ruby32/date-3.3.4/ext/date'
+ <span class="ansi32">*</span> Running install phase for all
+ <span class="ansi32">*</span> Running check install phase for ruby32
+&gt;&gt;&gt; Completed installing dev-ruby/date-3.3.4 into /var/tmp/portage/dev-ruby/date-3.3.4/image
+
+ <span class="ansi32">*</span> Final size of build directory: 1820 KiB (1.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   660 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/date-3.3.4/date_core.so
+   /usr/lib64/ruby/gems/3.2.0/gems/date-3.3.4/lib/date_core.so
+
+</pre>
+</body>
+
+</html>
