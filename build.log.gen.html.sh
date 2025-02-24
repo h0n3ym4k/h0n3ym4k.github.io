@@ -159,6 +159,7 @@ echo "<center><h2>weekly-to-monthly update unless gcc/glibc/kernel will update w
 
 d=$(date '+%a %F')
 echo "<center><h2>Last update: ${d}</h2></center>" >> index.html.tmp.1
+echo "<center><a href="weekly.html">this batch content</a></center>" >> index.html.tmp.1
 
 echo "<center><h3>any help needed or your support is appreciated. Msg right away!</h3></center>" >> index.html.tmp.1
 
