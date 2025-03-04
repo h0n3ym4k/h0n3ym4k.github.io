@@ -8,6 +8,9 @@ rm -f /tmp/mkdir.txt
 # w = emerge world -Deu maybe monthly OR gcc/glibc update, no w = emerge world -Du weekly
 if [ "${1}" == 'w' ];then
 	echo "${1}"
+	cd /var/log/portage
+	#init/previous-build - rm -f *.log - does not process orphan log files - periodic housekeep needed - rm -rf /var/log/portage/build,elog
+	find /var/log/portage/build -iname \*.html -exec basename {} .html \;|tr _ \:|xargs rm -f
 	find /var/log/portage -iname \*.html -exec rm -f {} \;
 	rm -rf /mnt/Downloads/portage-build-log
 	mkdir /mnt/Downloads/portage-build-log
