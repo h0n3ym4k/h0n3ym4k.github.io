@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-libs/nghttp2-1.64.0:0/1.14
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: voyageur@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux xml
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking nghttp2-1.64.0.tar.xz to /var/tmp/portage/net-libs/nghttp2-1.64.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-libs/nghttp2-1.64.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build"
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Hardcoded definition(s) removed in CMakeLists.txt:
+ <span class="ansi32">*</span>    set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "Choose the build type" FO
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64"
+cmake -C /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DENABLE_EXAMPLES=OFF -DENABLE_FAILMALLOC=OFF -DENABLE_HTTP3=OFF -DENABLE_WERROR=OFF -DENABLE_THREADS=ON -DENABLE_DEBUG=no -DENABLE_HPACK_TOOLS=no -DCMAKE_DISABLE_FIND_PACKAGE_Jansson=ON -DWITH_JEMALLOC=no -DBUILD_STATIC_LIBS=no -DBUILD_TESTING=no -DCMAKE_DISABLE_FIND_PACKAGE_Systemd=ON -DENABLE_APP=no -DWITH_LIBXML2=yes -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/gentoo_toolchain.cmake /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0
+loading initial cache file /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/gentoo_common_config.cmake
+-- The C compiler identification is GNU 14.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Python3: /usr/bin/python3.13 (found version "3.13.1") found components: Interpreter
+-- The CXX compiler identification is GNU 14.2.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/x86_64-pc-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Libev: /usr/lib64/libev.so (found suitable version "4.33", minimum required is "4.11")
+-- Found Libcares: /usr/lib64/libcares.so (found suitable version "1.34.4", minimum required is "1.7.5")
+-- Found ZLIB: /usr/lib64/libz.so (found suitable version "1.3.1", minimum required is "1.2.3")
+-- Found Libbrotlienc: /usr/lib64/libbrotlienc.so (found suitable version "1.1.0", minimum required is "1.0.9")
+-- Found Libbrotlidec: /usr/lib64/libbrotlidec.so (found suitable version "1.1.0", minimum required is "1.0.9")
+-- Found OpenSSL: /usr/lib64/libcrypto.so (found suitable version "3.3.3", minimum required is "1.1.1")
+-- Could NOT find Libngtcp2 (missing: LIBNGTCP2_LIBRARY LIBNGTCP2_INCLUDE_DIR) (Required is at least version "1.0.0")
+-- Could NOT find Libngtcp2_crypto_quictls (missing: LIBNGTCP2_CRYPTO_QUICTLS_LIBRARY LIBNGTCP2_CRYPTO_QUICTLS_INCLUDE_DIR) (Required is at least version "1.0.0")
+-- Found Libnghttp3: /usr/lib64/libnghttp3.so (found suitable version "1.7.0", minimum required is "1.1.0")
+-- Could NOT find Libevent (missing: LIBEVENT_CORE_LIBRARY LIBEVENT_EXTRA_LIBRARY LIBEVENT_OPENSSL_LIBRARY LIBEVENT_INCLUDE_DIR core extra openssl) (Required is at least version "2.0.8")
+-- Found LibXml2: /usr/lib64/libxml2.so (found suitable version "2.12.9", minimum required is "2.6.26")
+-- Could NOT find Jemalloc (missing: JEMALLOC_LIBRARY JEMALLOC_INCLUDE_DIR) 
+-- Performing Test CXX_FLAG__std_c_20
+-- Performing Test CXX_FLAG__std_c_20 - Success
+-- Performing Test HAVE_STD_FUTURE
+-- Performing Test HAVE_STD_FUTURE - Success
+-- Performing Test HAVE_STD_MAP_EMPLACE
+-- Performing Test HAVE_STD_MAP_EMPLACE - Success
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for arpa/inet.h
+-- Looking for arpa/inet.h - found
+-- Looking for fcntl.h
+-- Looking for fcntl.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for limits.h
+-- Looking for limits.h - found
+-- Looking for netdb.h
+-- Looking for netdb.h - found
+-- Looking for netinet/in.h
+-- Looking for netinet/in.h - found
+-- Looking for netinet/ip.h
+-- Looking for netinet/ip.h - found
+-- Looking for pwd.h
+-- Looking for pwd.h - found
+-- Looking for sys/socket.h
+-- Looking for sys/socket.h - found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - found
+-- Looking for syslog.h
+-- Looking for syslog.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for windows.h
+-- Looking for windows.h - not found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Performing Test HAVE_STRUCT_TM_TM_GMTOFF
+-- Performing Test HAVE_STRUCT_TM_TM_GMTOFF - Success
+-- Looking for _Exit
+-- Looking for _Exit - found
+-- Looking for accept4
+-- Looking for accept4 - found
+-- Looking for clock_gettime
+-- Looking for clock_gettime - found
+-- Looking for mkostemp
+-- Looking for mkostemp - found
+-- Looking for pipe2
+-- Looking for pipe2 - found
+-- Looking for GetTickCount64
+-- Looking for GetTickCount64 - not found
+-- Looking for initgroups
+-- Looking for initgroups - found
+-- Looking for CLOCK_MONOTONIC
+-- Looking for CLOCK_MONOTONIC - found
+-- Performing Test OPT_Wpragmas
+-- Performing Test OPT_Wpragmas - Success
+-- summary of build options:
+
+    Package version: 1.64.0
+    Library version: 42:3:28
+    Install prefix:  /usr
+    Target system:   Linux
+    Compiler:
+      Build type:     RelWithDebInfo
+      C compiler:     /usr/bin/x86_64-pc-linux-gnu-gcc
+      CFLAGS:          -O3 -march=native -mtune=native -fomit-frame-pointer -pipe
+      C++ compiler:   /usr/bin/x86_64-pc-linux-gnu-g++
+      CXXFLAGS:        -O3 -march=native -mtune=native -fomit-frame-pointer -pipe
+      WARNCFLAGS:       -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas
+      CXX1XCXXFLAGS:  -std=c++20
+      WARNCXXFLAGS:     -Wall -Wformat-security
+    Python:
+      Python:          /usr/bin/python3.13
+      Python3_VERSION: 3.13.1
+    Test:
+      Failmalloc:     OFF
+      Build Test:     OFF
+    Libs:
+      OpenSSL:        TRUE (LIBS='/usr/lib64/libssl.so;/usr/lib64/libcrypto.so')
+      wolfSSL:         (LIBS='')
+      Libxml2:        TRUE (LIBS='/usr/lib64/libxml2.so')
+      Libev:          TRUE (LIBS='/usr/lib64/libev.so')
+      Libc-ares:      TRUE (LIBS='/usr/lib64/libcares.so')
+      Libngtcp2:       (LIBS='')
+      Libngtcp2_crypto_quictls:  (LIBS='')
+      Libngtcp2_crypto_wolfssl:  (LIBS='')
+      Libnghttp3:      (LIBS='/usr/lib64/libnghttp3.so')
+      Libbpf:          (LIBS='')
+      Libevent(SSL):  FALSE (LIBS='')
+      Jansson:         (LIBS='')
+      Jemalloc:       FALSE (LIBS='')
+      Zlib:           TRUE (LIBS='/usr/lib64/libz.so')
+      Systemd:         (LIBS='')
+      Libbrotlienc:   TRUE (LIBS='/usr/lib64/libbrotlienc.so')
+      Libbrotlidec:   TRUE (LIBS='/usr/lib64/libbrotlidec.so')
+    Third-party:
+      http-parser:    
+      MRuby:          0
+      Neverbleed:     0
+    Features:
+      Applications:   no
+      HPACK tools:    no
+      Examples:       OFF
+      Threading:      ON
+      HTTP/3(EXPERIMENTAL): OFF
+
+-- &lt;&lt;&lt; Gentoo configuration &gt;&gt;&gt;
+Build type      RelWithDebInfo
+Install path    /usr
+Compiler flags:
+C               -O3 -march=native -mtune=native -fomit-frame-pointer -pipe
+C++             -O3 -march=native -mtune=native -fomit-frame-pointer -pipe
+Linker flags:
+Executable      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Module          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Shared          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+
+-- Configuring done (8.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64"
+ninja -v -j2 -l2
+[1/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_pq.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_pq.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_pq.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_pq.c
+[2/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_map.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_map.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_map.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_map.c
+[3/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_queue.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_queue.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_queue.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_queue.c
+[4/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_frame.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_frame.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_frame.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_frame.c
+[5/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_buf.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_buf.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_buf.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_buf.c
+[6/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_stream.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_stream.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_stream.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_stream.c
+[7/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_outbound_item.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_outbound_item.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_outbound_item.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_outbound_item.c
+[8/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_session.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_session.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_session.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_session.c
+[9/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_submit.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_submit.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_submit.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_submit.c
+[10/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_helper.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_helper.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_helper.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_helper.c
+[11/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_alpn.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_alpn.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_alpn.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_alpn.c
+[12/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_hd.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_hd.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_hd.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_hd.c
+[13/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_hd_huffman.c
+[14/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman_data.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman_data.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman_data.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_hd_huffman_data.c
+[15/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_version.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_version.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_version.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_version.c
+[16/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_priority_spec.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_priority_spec.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_priority_spec.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_priority_spec.c
+[17/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_option.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_option.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_option.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_option.c
+[18/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_callbacks.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_callbacks.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_callbacks.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_callbacks.c
+[19/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_mem.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_mem.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_mem.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_mem.c
+[20/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_http.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_http.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_http.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_http.c
+[21/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_rcbuf.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_rcbuf.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_rcbuf.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_rcbuf.c
+[22/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_extpri.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_extpri.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_extpri.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_extpri.c
+[23/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_ratelim.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_ratelim.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_ratelim.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_ratelim.c
+[24/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_time.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_time.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_time.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_time.c
+[25/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/nghttp2_debug.c.o -MF lib/CMakeFiles/nghttp2.dir/nghttp2_debug.c.o.d -o lib/CMakeFiles/nghttp2.dir/nghttp2_debug.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/nghttp2_debug.c
+[26/28] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILDING_NGHTTP2 -DHAVE_CONFIG_H -Dnghttp2_EXPORTS -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/includes -I/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64/lib/includes  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden   -W -Wall -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wundef -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-nonliteral -Wformat-security -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wredundant-decls -Wsign-conversion -Wstrict-prototypes -Wunreachable-code -Wunused-parameter -Wvla -Wclobbered -Wpragmas -MD -MT lib/CMakeFiles/nghttp2.dir/sfparse.c.o -MF lib/CMakeFiles/nghttp2.dir/sfparse.c.o.d -o lib/CMakeFiles/nghttp2.dir/sfparse.c.o -c /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0/lib/sfparse.c
+[27/28] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-gcc -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -Wl,-soname,libnghttp2.so.14 -o lib/libnghttp2.so.14.28.3 lib/CMakeFiles/nghttp2.dir/nghttp2_pq.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_map.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_queue.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_frame.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_buf.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_stream.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_outbound_item.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_session.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_submit.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_helper.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_alpn.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_hd.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_hd_huffman_data.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_version.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_priority_spec.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_option.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_callbacks.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_mem.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_http.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_rcbuf.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_extpri.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_ratelim.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_time.c.o lib/CMakeFiles/nghttp2.dir/nghttp2_debug.c.o lib/CMakeFiles/nghttp2.dir/sfparse.c.o   &amp;&amp; :
+[28/28] /usr/bin/cmake -E cmake_symlink_library lib/libnghttp2.so.14.28.3  lib/libnghttp2.so.14 lib/libnghttp2.so &amp;&amp; :
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: net-libs/nghttp2-1.64.0
+
+&gt;&gt;&gt; Install net-libs/nghttp2-1.64.0 into /var/tmp/portage/net-libs/nghttp2-1.64.0/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64"
+ninja -v -j2 -l2 install
+[0/1] cd /var/tmp/portage/net-libs/nghttp2-1.64.0/work/nghttp2-1.64.0_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/share/doc/nghttp2-1.64.0/README.rst
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/include/nghttp2/nghttp2.h
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/include/nghttp2/nghttp2ver.h
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/lib64/libnghttp2.so.14.28.3
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/lib64/libnghttp2.so.14
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/lib64/libnghttp2.so
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/lib64/pkgconfig/libnghttp2.pc
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/lib64/cmake/nghttp2/nghttp2-targets.cmake
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/lib64/cmake/nghttp2/nghttp2-targets-relwithdebinfo.cmake
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/share/man/man1/nghttp.1
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/share/man/man1/nghttpd.1
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/share/man/man1/nghttpx.1
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/share/man/man1/h2load.1
+-- Installing: /var/tmp/portage/net-libs/nghttp2-1.64.0/image/usr/share/nghttp2/fetch-ocsp-response
+&gt;&gt;&gt; Completed installing net-libs/nghttp2-1.64.0 into /var/tmp/portage/net-libs/nghttp2-1.64.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 17204 KiB (16.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    780 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libnghttp2.so.14.28.3
+
+</pre>
+</body>
+
+</html>

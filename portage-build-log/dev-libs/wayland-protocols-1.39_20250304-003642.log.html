@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-libs/wayland-protocols-1.39:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking wayland-protocols-1.39.tar.xz to /var/tmp/portage/dev-libs/wayland-protocols-1.39/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-libs/wayland-protocols-1.39/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/dev-libs/wayland-protocols-1.39/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dtests=false /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39 /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.6.1
+Source dir: <span class="ansi1">/var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39</span>
+Build dir: <span class="ansi1">/var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">wayland-protocols</span>
+Project version: <span class="ansi1">1.39</span>
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.3.0</span>
+Build-time dependency <span class="ansi1">wayland-scanner</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.23.1</span>
+Program <span class="ansi1">/usr/bin/wayland-scanner</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/wayland-scanner)
+Configuring <span class="ansi1">wayland-protocols.pc</span> using configuration
+Configuring <span class="ansi1">wayland-protocols-uninstalled.pc</span> using configuration
+Build targets in project: <span class="ansi1">52</span>
+
+wayland-protocols <span class="ansi36">1.39</span>
+
+    Headers              : <span class="ansi1 ansi32">YES</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/dev-libs/wayland-protocols-1.39/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    build.pkg_config_path: /usr/share/pkgconfig
+    b_lto                : false
+    b_pch                : false
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    tests                : false
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39 ...
+ninja -v -j2 -l2
+[1/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../stable/presentation-time/presentation-time.xml include/wayland-protocols/presentation-time-enum.h
+[2/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../stable/viewporter/viewporter.xml include/wayland-protocols/viewporter-enum.h
+[3/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../stable/xdg-shell/xdg-shell.xml include/wayland-protocols/xdg-shell-enum.h
+[4/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../stable/linux-dmabuf/linux-dmabuf-v1.xml include/wayland-protocols/linux-dmabuf-v1-enum.h
+[5/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../stable/tablet/tablet-v2.xml include/wayland-protocols/tablet-v2-enum.h
+[6/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/commit-timing/commit-timing-v1.xml include/wayland-protocols/commit-timing-v1-enum.h
+[7/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/content-type/content-type-v1.xml include/wayland-protocols/content-type-v1-enum.h
+[8/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/cursor-shape/cursor-shape-v1.xml include/wayland-protocols/cursor-shape-v1-enum.h
+[9/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/drm-lease/drm-lease-v1.xml include/wayland-protocols/drm-lease-v1-enum.h
+[10/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-data-control/ext-data-control-v1.xml include/wayland-protocols/ext-data-control-v1-enum.h
+[11/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-foreign-toplevel-list/ext-foreign-toplevel-list-v1.xml include/wayland-protocols/ext-foreign-toplevel-list-v1-enum.h
+[12/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-idle-notify/ext-idle-notify-v1.xml include/wayland-protocols/ext-idle-notify-v1-enum.h
+[13/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-image-capture-source/ext-image-capture-source-v1.xml include/wayland-protocols/ext-image-capture-source-v1-enum.h
+[14/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-image-copy-capture/ext-image-copy-capture-v1.xml include/wayland-protocols/ext-image-copy-capture-v1-enum.h
+[15/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-session-lock/ext-session-lock-v1.xml include/wayland-protocols/ext-session-lock-v1-enum.h
+[16/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-transient-seat/ext-transient-seat-v1.xml include/wayland-protocols/ext-transient-seat-v1-enum.h
+[17/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/fifo/fifo-v1.xml include/wayland-protocols/fifo-v1-enum.h
+[18/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/fractional-scale/fractional-scale-v1.xml include/wayland-protocols/fractional-scale-v1-enum.h
+[19/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/linux-drm-syncobj/linux-drm-syncobj-v1.xml include/wayland-protocols/linux-drm-syncobj-v1-enum.h
+[20/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/security-context/security-context-v1.xml include/wayland-protocols/security-context-v1-enum.h
+[21/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/single-pixel-buffer/single-pixel-buffer-v1.xml include/wayland-protocols/single-pixel-buffer-v1-enum.h
+[22/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/tearing-control/tearing-control-v1.xml include/wayland-protocols/tearing-control-v1-enum.h
+[23/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/xdg-activation/xdg-activation-v1.xml include/wayland-protocols/xdg-activation-v1-enum.h
+[24/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/xdg-dialog/xdg-dialog-v1.xml include/wayland-protocols/xdg-dialog-v1-enum.h
+[25/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/xdg-system-bell/xdg-system-bell-v1.xml include/wayland-protocols/xdg-system-bell-v1-enum.h
+[26/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/xdg-toplevel-drag/xdg-toplevel-drag-v1.xml include/wayland-protocols/xdg-toplevel-drag-v1-enum.h
+[27/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/xdg-toplevel-icon/xdg-toplevel-icon-v1.xml include/wayland-protocols/xdg-toplevel-icon-v1-enum.h
+[28/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/xwayland-shell/xwayland-shell-v1.xml include/wayland-protocols/xwayland-shell-v1-enum.h
+[29/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/alpha-modifier/alpha-modifier-v1.xml include/wayland-protocols/alpha-modifier-v1-enum.h
+[30/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../staging/ext-workspace/ext-workspace-v1.xml include/wayland-protocols/ext-workspace-v1-enum.h
+[31/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/fullscreen-shell/fullscreen-shell-unstable-v1.xml include/wayland-protocols/fullscreen-shell-unstable-v1-enum.h
+[32/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/idle-inhibit/idle-inhibit-unstable-v1.xml include/wayland-protocols/idle-inhibit-unstable-v1-enum.h
+[33/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/input-method/input-method-unstable-v1.xml include/wayland-protocols/input-method-unstable-v1-enum.h
+[34/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/input-timestamps/input-timestamps-unstable-v1.xml include/wayland-protocols/input-timestamps-unstable-v1-enum.h
+[35/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/keyboard-shortcuts-inhibit/keyboard-shortcuts-inhibit-unstable-v1.xml include/wayland-protocols/keyboard-shortcuts-inhibit-unstable-v1-enum.h
+[36/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/linux-dmabuf/linux-dmabuf-unstable-v1.xml include/wayland-protocols/linux-dmabuf-unstable-v1-enum.h
+[37/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/linux-explicit-synchronization/linux-explicit-synchronization-unstable-v1.xml include/wayland-protocols/linux-explicit-synchronization-unstable-v1-enum.h
+[38/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/pointer-constraints/pointer-constraints-unstable-v1.xml include/wayland-protocols/pointer-constraints-unstable-v1-enum.h
+[39/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/pointer-gestures/pointer-gestures-unstable-v1.xml include/wayland-protocols/pointer-gestures-unstable-v1-enum.h
+[40/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/primary-selection/primary-selection-unstable-v1.xml include/wayland-protocols/primary-selection-unstable-v1-enum.h
+[41/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/relative-pointer/relative-pointer-unstable-v1.xml include/wayland-protocols/relative-pointer-unstable-v1-enum.h
+[42/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/tablet/tablet-unstable-v1.xml include/wayland-protocols/tablet-unstable-v1-enum.h
+[43/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/tablet/tablet-unstable-v2.xml include/wayland-protocols/tablet-unstable-v2-enum.h
+[44/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/text-input/text-input-unstable-v1.xml include/wayland-protocols/text-input-unstable-v1-enum.h
+[45/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/text-input/text-input-unstable-v3.xml include/wayland-protocols/text-input-unstable-v3-enum.h
+[46/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/xdg-decoration/xdg-decoration-unstable-v1.xml include/wayland-protocols/xdg-decoration-unstable-v1-enum.h
+[47/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/xdg-foreign/xdg-foreign-unstable-v1.xml include/wayland-protocols/xdg-foreign-unstable-v1-enum.h
+[48/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/xdg-foreign/xdg-foreign-unstable-v2.xml include/wayland-protocols/xdg-foreign-unstable-v2-enum.h
+[49/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/xdg-output/xdg-output-unstable-v1.xml include/wayland-protocols/xdg-output-unstable-v1-enum.h
+[50/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/xdg-shell/xdg-shell-unstable-v5.xml include/wayland-protocols/xdg-shell-unstable-v5-enum.h
+[51/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/xdg-shell/xdg-shell-unstable-v6.xml include/wayland-protocols/xdg-shell-unstable-v6-enum.h
+[52/52] /usr/bin/wayland-scanner --strict enum-header ../wayland-protocols-1.39/include/wayland-protocols/../../unstable/xwayland-keyboard-grab/xwayland-keyboard-grab-unstable-v1.xml include/wayland-protocols/xwayland-keyboard-grab-unstable-v1-enum.h
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-libs/wayland-protocols-1.39
+
+&gt;&gt;&gt; Install dev-libs/wayland-protocols-1.39 into /var/tmp/portage/dev-libs/wayland-protocols-1.39/image
+meson install --destdir /var/tmp/portage/dev-libs/wayland-protocols-1.39/image --no-rebuild
+Installing include/wayland-protocols/presentation-time-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/viewporter-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-shell-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/linux-dmabuf-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/tablet-v2-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/commit-timing-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/content-type-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/cursor-shape-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/drm-lease-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-data-control-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-foreign-toplevel-list-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-idle-notify-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-image-capture-source-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-image-copy-capture-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-session-lock-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-transient-seat-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/fifo-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/fractional-scale-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/linux-drm-syncobj-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/security-context-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/single-pixel-buffer-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/tearing-control-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-activation-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-dialog-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-system-bell-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-toplevel-drag-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-toplevel-icon-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xwayland-shell-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/alpha-modifier-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/ext-workspace-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/fullscreen-shell-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/idle-inhibit-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/input-method-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/input-timestamps-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/keyboard-shortcuts-inhibit-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/linux-dmabuf-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/linux-explicit-synchronization-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/pointer-constraints-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/pointer-gestures-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/primary-selection-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/relative-pointer-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/tablet-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/tablet-unstable-v2-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/text-input-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/text-input-unstable-v3-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-decoration-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-foreign-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-foreign-unstable-v2-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-output-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-shell-unstable-v5-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xdg-shell-unstable-v6-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing include/wayland-protocols/xwayland-keyboard-grab-unstable-v1-enum.h to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/include/wayland-protocols
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/stable/presentation-time/presentation-time.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/stable/presentation-time
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/stable/viewporter/viewporter.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/stable/viewporter
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/stable/xdg-shell/xdg-shell.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/stable/xdg-shell
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/stable/linux-dmabuf/linux-dmabuf-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/stable/linux-dmabuf
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/stable/tablet/tablet-v2.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/stable/tablet
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/commit-timing/commit-timing-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/commit-timing
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/content-type/content-type-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/content-type
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/cursor-shape/cursor-shape-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/cursor-shape
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/drm-lease/drm-lease-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/drm-lease
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-data-control/ext-data-control-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-data-control
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-foreign-toplevel-list/ext-foreign-toplevel-list-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-foreign-toplevel-list
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-idle-notify/ext-idle-notify-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-idle-notify
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-image-capture-source/ext-image-capture-source-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-image-capture-source
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-image-copy-capture/ext-image-copy-capture-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-image-copy-capture
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-session-lock/ext-session-lock-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-session-lock
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-transient-seat/ext-transient-seat-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-transient-seat
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/fifo/fifo-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/fifo
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/fractional-scale/fractional-scale-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/fractional-scale
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/linux-drm-syncobj/linux-drm-syncobj-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/linux-drm-syncobj
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/security-context/security-context-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/security-context
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/single-pixel-buffer/single-pixel-buffer-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/single-pixel-buffer
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/tearing-control/tearing-control-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/tearing-control
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/xdg-activation/xdg-activation-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/xdg-activation
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/xdg-dialog/xdg-dialog-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/xdg-dialog
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/xdg-system-bell/xdg-system-bell-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/xdg-system-bell
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/xdg-toplevel-drag/xdg-toplevel-drag-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/xdg-toplevel-drag
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/xdg-toplevel-icon/xdg-toplevel-icon-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/xdg-toplevel-icon
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/xwayland-shell/xwayland-shell-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/xwayland-shell
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/alpha-modifier/alpha-modifier-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/alpha-modifier
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/staging/ext-workspace/ext-workspace-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/staging/ext-workspace
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/fullscreen-shell/fullscreen-shell-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/fullscreen-shell
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/idle-inhibit/idle-inhibit-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/idle-inhibit
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/input-method/input-method-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/input-method
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/input-timestamps/input-timestamps-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/input-timestamps
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/keyboard-shortcuts-inhibit/keyboard-shortcuts-inhibit-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/keyboard-shortcuts-inhibit
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/linux-dmabuf/linux-dmabuf-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/linux-dmabuf
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/linux-explicit-synchronization/linux-explicit-synchronization-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/linux-explicit-synchronization
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/pointer-constraints/pointer-constraints-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/pointer-constraints
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/pointer-gestures/pointer-gestures-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/pointer-gestures
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/primary-selection/primary-selection-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/primary-selection
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/relative-pointer/relative-pointer-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/relative-pointer
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/tablet/tablet-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/tablet
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/tablet/tablet-unstable-v2.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/tablet
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/text-input/text-input-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/text-input
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/text-input/text-input-unstable-v3.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/text-input
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/xdg-decoration/xdg-decoration-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/xdg-decoration
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/xdg-foreign/xdg-foreign-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/xdg-foreign
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/xdg-foreign/xdg-foreign-unstable-v2.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/xdg-foreign
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/xdg-output/xdg-output-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/xdg-output
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/xdg-shell/xdg-shell-unstable-v5.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/xdg-shell
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/xdg-shell/xdg-shell-unstable-v6.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/xdg-shell
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39/unstable/xwayland-keyboard-grab/xwayland-keyboard-grab-unstable-v1.xml to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/wayland-protocols/unstable/xwayland-keyboard-grab
+Installing /var/tmp/portage/dev-libs/wayland-protocols-1.39/work/wayland-protocols-1.39-build/wayland-protocols.pc to /var/tmp/portage/dev-libs/wayland-protocols-1.39/image/usr/share/pkgconfig
+&gt;&gt;&gt; Completed installing dev-libs/wayland-protocols-1.39 into /var/tmp/portage/dev-libs/wayland-protocols-1.39/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2068 KiB (2.0 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1320 KiB (1.2 MiB)
+
+
+</pre>
+</body>
+
+</html>

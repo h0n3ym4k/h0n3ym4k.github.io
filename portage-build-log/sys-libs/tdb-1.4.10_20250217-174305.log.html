@@ -1,0 +1,1337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-libs/tdb-1.4.10:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: samba@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux python_single_target_python3_12
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Using python3.12 to build
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking tdb-1.4.10.tar.gz to /var/tmp/portage/sys-libs/tdb-1.4.10/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-libs/tdb-1.4.10/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10 ...
+ <span class="ansi32">*</span> Fixing shebang in ./lib/replace/system/wscript_configure.
+ <span class="ansi32">*</span> Fixing shebang in ./lib/replace/wscript.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/ConfigSet.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Scripting.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Runner.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/ansiterm.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Configure.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/fixpy2.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Logs.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Build.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_bgxlf.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/run_py_script.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/pytest.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/javatest.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/run_r_script.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/batched_cc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/waf_xattr.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/boo.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/cpplint.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/cross_gnu.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/clang_cross.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/build_logs.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/protoc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/qt4.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/file_to_object.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_nag.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/scala.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/doxygen.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/package.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/compat15.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fsb.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/boost.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/xcode6.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/pyqt5.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/pgicc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/run_do_script.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/clang_cross_common.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/midl.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/slow_qt4.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_pgfortran.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/cfg_altoptions.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/local_rpath.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_solstudio.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/satellite_assembly.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/netcache_client.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/ocaml.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/stracedeps.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/qnxnto.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/wafcache.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/remote.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/blender.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/wix.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/dpapi.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/classic_runner.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/stale.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_nfort.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/clangxx_cross.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/msvc_pdb.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/syms.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/gob2.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/ticgt.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/why.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/pch.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_cray.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/c_nec.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/valadoc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/distnet.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/halide.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/gdbus.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/freeimage.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/gccdeps.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/color_gcc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/softlink_libs.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/biber.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/c_bgxlc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/c_dumbpreproc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fast_partial.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/color_msvc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/make.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_xlf.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/__init__.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/msvs.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fsc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_open64.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/relocation.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/proc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/kde4.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/dcc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/rst.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/buildcopy.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/pgicxx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/swig.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/parallel_debug.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/objcopy.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/msvcdeps.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/review.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/sas.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/color_rvct.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/run_m_script.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/win32_opts.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/bjam.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/resx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/codelite.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/clang_compilation_database.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/c_emscripten.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/pep8.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/erlang.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fluid.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/use_config.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/eclipse.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_nec.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/unity.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/fc_fujitsu.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/cython.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/build_file_tracker.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/extras/cppcheck.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Node.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/gnu_dirs.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/fc_config.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/c.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/nobuild.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/c_preproc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/c_aliases.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/c_tests.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/bison.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/compiler_d.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/errcheck.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/ruby.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/c_config.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/compiler_fc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/msvc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/ldc2.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/gfortran.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/gas.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/clang.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/d.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/flex.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/icpc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/irixcc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/fc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/compiler_cxx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/winres.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/asm.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/d_scan.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/waf_unit_test.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/gdc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/c_osx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/d_config.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/icc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/xlc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/suncc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/perl.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/gxx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/lua.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/nasm.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/cxx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/cs.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/vala.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/clangxx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/g95.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/__init__.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/ccroot.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/dmd.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/intltool.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/suncxx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/glib2.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/xlcxx.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/dbus.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/qt5.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/md5_tstamp.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/gcc.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/fc_scan.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/tex.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/compiler_c.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/ifort.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/javaw.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/ar.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Tools/python.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/__init__.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Options.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Context.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Utils.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/TaskGen.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Errors.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/Task.py.
+ <span class="ansi32">*</span> Fixing shebang in ./third_party/waf/waflib/processor.py.
+ <span class="ansi32">*</span> Fixing shebang in ./buildtools/wafsamba/wscript.
+ <span class="ansi32">*</span> Fixing shebang in ./buildtools/examples/run_on_target.py.
+ <span class="ansi32">*</span> Fixing shebang in ./buildtools/bin/waf.
+ <span class="ansi32">*</span> Fixing shebang in ./python/tdbdump.py.
+ <span class="ansi32">*</span> Fixing shebang in ./python/tests/simple.py.
+ <span class="ansi32">*</span> Fixing shebang in ./wscript.
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10
+ <span class="ansi32">*</span> abi_x86_64.amd64: copying to /var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+'PYTHONHASHSEED=1' 'CCFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' 'LINKFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' 'PKGCONFIG=x86_64-pc-linux-gnu-pkg-config' '/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10/buildtools/bin/waf' '--jobs=1' '--prefix=/usr' '--libdir=/usr/lib64' '--disable-dependency-tracking' '--disable-warnings-as-errors' '--disable-python' 'configure'
+Setting top to                           : /var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64 
+Setting out to                           : /var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin 
+Checking for 'gcc' (C compiler)          : x86_64-pc-linux-gnu-gcc 
+Checking for program 'git'               : /usr/bin/git 
+Checking for c flags '-MMD'              : yes 
+Checking for program 'gdb'               : not found 
+Checking for header sys/utsname.h        : yes 
+Checking uname sysname type              : Linux 
+Checking uname machine type              : x86_64 
+Checking uname release type              : 6.6.74-gentoo-x86_64 
+Checking uname version type              : #1 SMP PREEMPT_DYNAMIC Mon Feb  3 23:05:25 HKT 2025 
+Checking for header stdio.h              : yes 
+Checking simple C program                : ok 
+Checking compiler accepts ['-Werror']    : yes 
+Checking linker accepts ['-Wl,-rpath,.'] : yes 
+Checking for rpath library support       : yes 
+Checking for -Wl,--version-script support : yes 
+Checking compiler accepts ['-fvisibility=hidden'] : yes 
+Checking for HAVE_VISIBILITY_ATTR                 : ok 
+Checking for library constructor support          : ok 
+Checking for library destructor support           : ok 
+Checking for __attribute__                        : ok 
+Checking compiler accepts ['-fPIC']               : yes 
+Checking for inline                               : inline 
+Checking for program 'pkg-config'                 : x86_64-pc-linux-gnu-pkg-config 
+Checking for pkg-config version &gt;= '0.0.0'        : yes 
+Checking compiler accepts ['-D__STDC_WANT_LIB_EXT1__=1'] : yes 
+Checking compiler accepts ['']                           : yes 
+Checking for header sys/types.h                          : yes 
+Checking for header sys/stat.h                           : yes 
+Checking for header stdlib.h                             : yes 
+Checking for header stddef.h                             : yes 
+Checking for header memory.h                             : yes 
+Checking for header string.h                             : yes 
+Checking for header strings.h                            : yes 
+Checking for header inttypes.h                           : yes 
+Checking for header stdint.h                             : yes 
+Checking for header unistd.h                             : yes 
+Checking for header minix/config.h                       : no 
+Checking for header ctype.h                              : yes 
+Checking for header standards.h                          : no 
+Checking for header stdbool.h                            : yes 
+Checking for header stdarg.h                             : yes 
+Checking for header vararg.h                             : no 
+Checking for header limits.h                             : yes 
+Checking for header assert.h                             : yes 
+Checking getconf LFS_CFLAGS                              : not found 
+Checking getconf large file support flags work           : ok 
+Checking for large file support without additional flags : ok 
+Checking for header sys/time.h                           : yes 
+Checking for header time.h                               : yes 
+Checking for header endian.h                             : yes 
+Checking for header sys/endian.h                         : no 
+Checking for HAVE_LITTLE_ENDIAN                          : ok 
+Checking for HAVE_BIG_ENDIAN                             : not found 
+Checking for header signal.h                             : yes 
+Checking if signal handlers return int                   : not found 
+Checking for variable __FUNCTION__                       : ok 
+Checking for va_copy                                     : ok 
+Checking for header linux/types.h                        : yes 
+Checking for header crypt.h                              : yes 
+Checking for header locale.h                             : yes 
+Checking for header acl/libacl.h                         : yes 
+Checking for header compat.h                             : no 
+Checking for header attr/xattr.h                         : yes 
+Checking for header dustat.h                             : no 
+Checking for header fcntl.h                              : yes 
+Checking for header fnmatch.h                            : yes 
+Checking for header glob.h                               : yes 
+Checking for header history.h                            : no 
+Checking for header krb5.h                               : yes 
+Checking for header langinfo.h                           : yes 
+Checking for header ndir.h                               : no 
+Checking for header pwd.h                                : yes 
+Checking for header shadow.h                             : yes 
+Checking for header sys/acl.h                            : yes 
+Checking for header sys/attributes.h                     : no 
+Checking for header attr/attributes.h                    : yes 
+Checking for header sys/capability.h                     : yes 
+Checking for header sys/dir.h                            : yes 
+Checking for header sys/epoll.h                          : yes 
+Checking for header sys/fcntl.h                          : yes 
+Checking for header sys/filio.h                          : no 
+Checking for header sys/filsys.h                         : no 
+Checking for header sys/fs/s5param.h                     : no 
+Checking for header sys/id.h                             : no 
+Checking for header sys/ioctl.h                          : yes 
+Checking for header sys/ipc.h                            : yes 
+Checking for header sys/mman.h                           : yes 
+Checking for header sys/mode.h                           : no 
+Checking for header sys/ndir.h                           : no 
+Checking for header sys/priv.h                           : no 
+Checking for header sys/resource.h                       : yes 
+Checking for header sys/security.h                       : no 
+Checking for header sys/shm.h                            : yes 
+Checking for header sys/statfs.h                         : yes 
+Checking for header sys/statvfs.h                        : yes 
+Checking for header sys/termio.h                         : no 
+Checking for header sys/vfs.h                            : yes 
+Checking for header sys/xattr.h                          : yes 
+Checking for header termio.h                             : yes 
+Checking for header termios.h                            : yes 
+Checking for header sys/file.h                           : yes 
+Checking for header sys/ucontext.h                       : yes 
+Checking for header sys/wait.h                           : yes 
+Checking for declaration of malloc                       : ok 
+Checking for header grp.h                                : yes 
+Checking for header sys/select.h                         : yes 
+Checking for header setjmp.h                             : yes 
+Checking for header utime.h                              : yes 
+Checking for header sys/syslog.h                         : yes 
+Checking for header syslog.h                             : yes 
+Checking for header sys/mount.h                          : yes 
+Checking for header mntent.h                             : yes 
+Checking for header stropts.h                            : no 
+Checking for header unix.h                               : no 
+Checking for header sys/param.h                          : yes 
+Checking for header sys/socket.h                         : yes 
+Checking for header netinet/in.h                         : yes 
+Checking for header netdb.h                              : yes 
+Checking for header arpa/inet.h                          : yes 
+Checking for header netinet/in_systm.h                   : yes 
+Checking for header netinet/ip.h                         : yes 
+Checking for header netinet/tcp.h                        : yes 
+Checking for header netinet/in_ip.h                      : no 
+Checking for header sys/sockio.h                         : no 
+Checking for header sys/un.h                             : yes 
+Checking for header sys/uio.h                            : yes 
+Checking for header ifaddrs.h                            : yes 
+Checking for header direct.h                             : no 
+Checking for header dirent.h                             : yes 
+Checking for header windows.h                            : no 
+Checking for header winsock2.h                           : no 
+Checking for header ws2tcpip.h                           : no 
+Checking for header errno.h                              : yes 
+Checking for header getopt.h                             : yes 
+Checking for header iconv.h                              : yes 
+Checking for header nss.h                                : yes 
+Checking for header sasl/sasl.h                          : yes 
+Checking for header linux/openat2.h                      : yes 
+Checking for inotify_init                                : ok 
+Checking for header security/pam_appl.h                  : yes 
+Checking for header zlib.h                               : yes 
+Checking for header asm/unistd.h                         : yes 
+Checking for header sys/unistd.h                         : yes 
+Checking for header alloca.h                             : yes 
+Checking for header float.h                              : yes 
+Checking for header rpc/rpc.h                            : no 
+Checking for header rpc/nettype.h                        : no 
+Checking for tirpc rpc headers in default system path    : not found 
+Checking for libtirpc headers                            : yes 
+Checking for header rpc/rpc.h                            : yes 
+Checking for header rpc/nettype.h                        : yes 
+Checking for header sys/sysctl.h                         : not found 
+Checking for header sys/fileio.h                         : no 
+Checking for header sys/filesys.h                        : no 
+Checking for header sys/dustat.h                         : no 
+Checking for header sys/sysmacros.h                      : yes 
+Checking for header xfs/libxfs.h                         : no 
+Checking for header netgroup.h                           : no 
+Checking for header valgrind.h                           : no 
+Checking for header valgrind/valgrind.h                  : yes 
+Checking for header valgrind/memcheck.h                  : yes 
+Checking for header valgrind/helgrind.h                  : yes 
+Checking for header valgrind/callgrind.h                 : yes 
+Checking for header nss_common.h                         : no 
+Checking for header nsswitch.h                           : no 
+Checking for header ns_api.h                             : no 
+Checking for header sys/extattr.h                        : no 
+Checking for header sys/ea.h                             : no 
+Checking for header sys/proplist.h                       : no 
+Checking for header sys/cdefs.h                          : yes 
+Checking for header utmp.h                               : yes 
+Checking for header utmpx.h                              : yes 
+Checking for header lastlog.h                            : yes 
+Checking for header syscall.h                            : yes 
+Checking for header sys/syscall.h                        : yes 
+Checking for header sys/atomic.h                         : no 
+Checking for header stdatomic.h                          : yes 
+Checking for header libgen.h                             : yes 
+Checking compiler accepts -Wno-format-truncation         : yes 
+Checking compiler accepts -Wno-unused-function           : yes 
+Checking compiler accepts -Wno-strict-overflow           : yes 
+Checking compiler accepts -Wno-unused-but-set-variable   : yes 
+Checking compiler accepts -Wuse-after-free=1             : yes 
+Checking for header sys/prctl.h                          : yes 
+Checking for prctl syscall                               : ok 
+Checking for O_DIRECT flag to open(2)                    : ok 
+Checking for long long                                   : ok 
+Checking for intptr_t                                    : ok 
+Checking for uintptr_t                                   : ok 
+Checking for ptrdiff_t                                   : ok 
+Checking for comparison_fn_t                             : ok 
+Checking for bool                                        : ok 
+Checking for int8_t                                      : ok 
+Checking for uint8_t                                     : ok 
+Checking for int16_t                                     : ok 
+Checking for uint16_t                                    : ok 
+Checking for int32_t                                     : ok 
+Checking for uint32_t                                    : ok 
+Checking for int64_t                                     : ok 
+Checking for uint64_t                                    : ok 
+Checking for size_t                                      : ok 
+Checking for ssize_t                                     : ok 
+Checking for ino_t                                       : ok 
+Checking for loff_t                                      : ok 
+Checking for offset_t                                    : not found 
+Checking for volatile int                                : ok 
+Checking for uint_t                                      : not found 
+Checking for blksize_t                                   : ok 
+Checking for blkcnt_t                                    : ok 
+Checking if size of bool == 1                            : ok 
+Checking if size of char == 1                            : ok 
+Checking if size of int == 1                             : not found 
+Checking if size of int == 2                             : not found 
+Checking if size of int == 4                             : ok 
+Checking if size of long long == 1                       : not found 
+Checking if size of long long == 2                       : not found 
+Checking if size of long long == 4                       : not found 
+Checking if size of long long == 8                       : ok 
+Checking if size of long == 1                            : not found 
+Checking if size of long == 2                            : not found 
+Checking if size of long == 4                            : not found 
+Checking if size of long == 8                            : ok 
+Checking if size of short == 1                           : not found 
+Checking if size of short == 2                           : ok 
+Checking if size of size_t == 1                          : not found 
+Checking if size of size_t == 2                          : not found 
+Checking if size of size_t == 4                          : not found 
+Checking if size of size_t == 8                          : ok 
+Checking if size of ssize_t == 1                         : not found 
+Checking if size of ssize_t == 2                         : not found 
+Checking if size of ssize_t == 4                         : not found 
+Checking if size of ssize_t == 8                         : ok 
+Checking if size of int8_t == 1                          : ok 
+Checking if size of uint8_t == 1                         : ok 
+Checking if size of int16_t == 1                         : not found 
+Checking if size of int16_t == 2                         : ok 
+Checking if size of uint16_t == 1                        : not found 
+Checking if size of uint16_t == 2                        : ok 
+Checking if size of int32_t == 1                         : not found 
+Checking if size of int32_t == 2                         : not found 
+Checking if size of int32_t == 4                         : ok 
+Checking if size of uint32_t == 1                        : not found 
+Checking if size of uint32_t == 2                        : not found 
+Checking if size of uint32_t == 4                        : ok 
+Checking if size of int64_t == 1                         : not found 
+Checking if size of int64_t == 2                         : not found 
+Checking if size of int64_t == 4                         : not found 
+Checking if size of int64_t == 8                         : ok 
+Checking if size of uint64_t == 1                        : not found 
+Checking if size of uint64_t == 2                        : not found 
+Checking if size of uint64_t == 4                        : not found 
+Checking if size of uint64_t == 8                        : ok 
+Checking if size of void* == 1                           : not found 
+Checking if size of void* == 2                           : not found 
+Checking if size of void* == 4                           : not found 
+Checking if size of void* == 8                           : ok 
+Checking if size of off_t == 1                           : not found 
+Checking if size of off_t == 2                           : not found 
+Checking if size of off_t == 4                           : not found 
+Checking if size of off_t == 8                           : ok 
+Checking if size of dev_t == 1                           : not found 
+Checking if size of dev_t == 2                           : not found 
+Checking if size of dev_t == 4                           : not found 
+Checking if size of dev_t == 8                           : ok 
+Checking if size of ino_t == 1                           : not found 
+Checking if size of ino_t == 2                           : not found 
+Checking if size of ino_t == 4                           : not found 
+Checking if size of ino_t == 8                           : ok 
+Checking if size of time_t == 1                          : not found 
+Checking if size of time_t == 2                          : not found 
+Checking if size of time_t == 4                          : not found 
+Checking if size of time_t == 8                          : ok 
+Checking for socklen_t                                   : ok 
+Checking for struct ifaddrs                              : ok 
+Checking for struct addrinfo                             : ok 
+Checking for struct sockaddr                             : ok 
+Checking for HAVE_STRUCT_SOCKADDR_IN6                    : ok 
+Checking for struct sockaddr_storage                     : ok 
+Checking for sa_family_t                                 : ok 
+Checking for sig_atomic_t                                : ok 
+Checking for sigsetmask                                  : ok 
+Checking for siggetmask                                  : ok 
+Checking for sigprocmask                                 : ok 
+Checking for sigblock                                    : ok 
+Checking for sigaction                                   : ok 
+Checking for sigset                                      : ok 
+Checking for inet_ntoa                                   : ok 
+Checking for inet_aton                                   : ok 
+Checking for inet_ntop                                   : ok 
+Checking for inet_pton                                   : ok 
+Checking for connect                                     : ok 
+Checking for gethostbyname                               : ok 
+Checking for getaddrinfo                                 : ok 
+Checking for getnameinfo                                 : ok 
+Checking for freeaddrinfo                                : ok 
+Checking for gai_strerror                                : ok 
+Checking for socketpair                                  : ok 
+Checking for memset_s                                    : not found 
+Checking for memset_explicit                             : not found 
+Checking for volatile memory protection                  : ok 
+Checking for variable IPV6_V6ONLY                        : ok 
+Checking for header net/if.h                             : yes 
+Checking for HAVE_IPV6                                   : ok 
+Checking whether we have ucontext_t                      : ok 
+Checking for __sync_fetch_and_add compiler builtin       : ok 
+Checking for __sync_add_and_fetch compiler builtin       : ok 
+Checking for atomic_add_32 compiler builtin              : not found 
+Checking for __atomic_add_fetch compiler builtin         : ok 
+Checking for __atomic_load compiler builtin              : ok 
+Checking for atomic_thread_fence(memory_order_seq_cst) in stdatomic.h : ok 
+Checking for fallthrough attribute                                    : ok 
+Checking for strdup                                                   : ok 
+Checking for memmem                                                   : ok 
+Checking for printf                                                   : ok 
+Checking for memset                                                   : ok 
+Checking for memcpy                                                   : ok 
+Checking for memmove                                                  : ok 
+Checking for strcpy                                                   : ok 
+Checking for strncpy                                                  : ok 
+Checking for bzero                                                    : ok 
+Checking for shl_load                                                 : not found 
+Checking for shl_unload                                               : not found 
+Checking for shl_findsym                                              : not found 
+Checking for pipe                                                     : ok 
+Checking for strftime                                                 : ok 
+Checking for srandom                                                  : ok 
+Checking for random                                                   : ok 
+Checking for srand                                                    : ok 
+Checking for rand                                                     : ok 
+Checking for usleep                                                   : ok 
+Checking for setbuffer                                                : ok 
+Checking for lstat                                                    : ok 
+Checking for getpgrp                                                  : ok 
+Checking for utime                                                    : ok 
+Checking for utimes                                                   : ok 
+Checking for setuid                                                   : ok 
+Checking for seteuid                                                  : ok 
+Checking for setreuid                                                 : ok 
+Checking for setresuid                                                : ok 
+Checking for setgid                                                   : ok 
+Checking for setegid                                                  : ok 
+Checking for setregid                                                 : ok 
+Checking for setresgid                                                : ok 
+Checking for chroot                                                   : ok 
+Checking for strerror                                                 : ok 
+Checking for vsyslog                                                  : ok 
+Checking for setlinebuf                                               : ok 
+Checking for mktime                                                   : ok 
+Checking for ftruncate                                                : ok 
+Checking for chsize                                                   : not found 
+Checking for rename                                                   : ok 
+Checking for waitpid                                                  : ok 
+Checking for wait4                                                    : ok 
+Checking for initgroups                                               : ok 
+Checking for pread                                                    : ok 
+Checking for pwrite                                                   : ok 
+Checking for strndup                                                  : ok 
+Checking for strcasestr                                               : ok 
+Checking for strsep                                                   : ok 
+Checking for strtok_r                                                 : ok 
+Checking for mkdtemp                                                  : ok 
+Checking for dup2                                                     : ok 
+Checking for dprintf                                                  : ok 
+Checking for vdprintf                                                 : ok 
+Checking for isatty                                                   : ok 
+Checking for chown                                                    : ok 
+Checking for lchown                                                   : ok 
+Checking for link                                                     : ok 
+Checking for readlink                                                 : ok 
+Checking for symlink                                                  : ok 
+Checking for realpath                                                 : ok 
+Checking for snprintf                                                 : ok 
+Checking for vsnprintf                                                : ok 
+Checking for asprintf                                                 : ok 
+Checking for vasprintf                                                : ok 
+Checking for setenv                                                   : ok 
+Checking for unsetenv                                                 : ok 
+Checking for strnlen                                                  : ok 
+Checking for strtoull                                                 : ok 
+Checking for __strtoull                                               : not found 
+Checking for strtouq                                                  : ok 
+Checking for strtoll                                                  : ok 
+Checking for __strtoll                                                : not found 
+Checking for strtoq                                                   : ok 
+Checking for memalign                                                 : ok 
+Checking for posix_memalign                                           : ok 
+Checking for fmemopen                                                 : ok 
+Checking for header malloc.h                                          : yes 
+Checking for declaration of memalign                                  : ok 
+Checking for posix_fallocate-capable libc                             : ok 
+Checking for posix_fallocate                                          : ok 
+Checking for prctl                                                    : ok 
+Checking for dirname                                                  : ok 
+Checking for basename                                                 : ok 
+Checking for strlcpy                                                  : ok 
+Checking for strlcat                                                  : ok 
+Checking for getpeereid                                               : not found 
+Checking for library bsd                                              : yes 
+Checking for getpeereid in bsd                                        : ok 
+Checking for library setproctitle                                     : no 
+Checking for setproctitle                                             : not found 
+Checking for setproctitle in bsd                                      : ok 
+Checking for setproctitle_init                                        : not found 
+Checking for setproctitle_init in bsd                                 : ok 
+Checking for closefrom                                                : ok 
+Checking whether we can use SO_PEERCRED to get socket credentials     : ok 
+Checking correct behavior of strtoll                                  : not found 
+Checking for if_nameindex                                             : ok 
+Checking for if_nametoindex                                           : ok 
+Checking for strerror_r                                               : ok 
+Checking for syslog                                                   : ok 
+Checking for gai_strerror                                             : ok 
+Checking for get_current_dir_name                                     : ok 
+Checking for timegm                                                   : ok 
+Checking for getifaddrs                                               : ok 
+Checking for freeifaddrs                                              : ok 
+Checking for mmap                                                     : ok 
+Checking for setgroups                                                : ok 
+Checking for syscall                                                  : ok 
+Checking for setsid                                                   : ok 
+Checking for getgrent_r                                               : ok 
+Checking for getgrgid_r                                               : ok 
+Checking for getgrnam_r                                               : ok 
+Checking for getgrouplist                                             : ok 
+Checking for getpagesize                                              : ok 
+Checking for getpwent_r                                               : ok 
+Checking for getpwnam_r                                               : ok 
+Checking for getpwuid_r                                               : ok 
+Checking for epoll_create1                                            : ok 
+Checking for getprogname                                              : not found 
+Checking for copy_file_range                                          : ok 
+Checking for getxattr                                                 : ok 
+Checking whether xattr interface takes additional options             : not found 
+Checking for dlopen                                                   : ok 
+Checking for dlsym                                                    : ok 
+Checking for dlerror                                                  : ok 
+Checking for dlclose                                                  : ok 
+Checking for declaration of dlopen                                    : ok 
+Checking C prototype for dlopen                                       : not found 
+Checking for fdatasync                                                : ok 
+Checking for declaration of fdatasync                                 : ok 
+Checking for clock_gettime                                            : ok 
+Checking whether the clock_gettime clock ID CLOCK_MONOTONIC is available : ok 
+Checking whether the clock_gettime clock ID CLOCK_PROCESS_CPUTIME_ID is available : ok 
+Checking whether the clock_gettime clock ID CLOCK_REALTIME is available           : ok 
+Checking for struct timespec                                                      : ok 
+Checking for header arpa/nameser.h                                                : yes 
+Checking for header resolv.h                                                      : yes 
+Checking for res_search                                                           : ok 
+Checking for header libintl.h                                                     : yes 
+Checking for library intl                                                         : no 
+Checking for declaration of dgettext                                              : ok 
+Checking for declaration of gettext                                               : ok 
+Checking for declaration of bindtextdomain                                        : ok 
+Checking for declaration of textdomain                                            : ok 
+Checking for declaration of bind_textdomain_codeset                               : ok 
+Checking for bindtextdomain                                                       : ok 
+Checking for textdomain                                                           : ok 
+Checking for bind_textdomain_codeset                                              : ok 
+Checking for dgettext                                                             : ok 
+Checking for gettext                                                              : ok 
+Checking for pthread_create                                                       : ok 
+Checking for pthread_attr_init                                                    : ok 
+Checking for pthread_mutexattr_setrobust                                          : ok 
+Checking for declaration of PTHREAD_MUTEX_ROBUST                                  : not found 
+Checking for declaration of PTHREAD_MUTEX_ROBUST (as enum)                        : ok 
+Checking for pthread_mutex_consistent                                             : ok 
+Checking for __thread local storage                                               : ok 
+Checking for crypt                                                                : not found 
+Checking for library crypt                                                        : yes 
+Checking for crypt in crypt                                                       : ok 
+Checking for crypt_r                                                              : not found 
+Checking for crypt_r in crypt                                                     : ok 
+Checking for crypt_rn                                                             : not found 
+Checking for crypt_rn in crypt                                                    : ok 
+Checking for header readline.h                                                    : no 
+Checking for header readline/readline.h                                           : yes 
+Checking for header readline/history.h                                            : yes 
+Checking for variable rl_event_hook                                               : ok 
+Checking for variable program_invocation_short_name                               : ok 
+Checking for declaration of snprintf                                              : ok 
+Checking for declaration of vsnprintf                                             : ok 
+Checking for declaration of asprintf                                              : ok 
+Checking for declaration of vasprintf                                             : ok 
+Checking for declaration of errno                                                 : ok 
+Checking for declaration of EWOULDBLOCK                                           : ok 
+Checking for declaration of environ                                               : ok 
+Checking for declaration of getgrent_r                                            : ok 
+Checking for declaration of getpwent_r                                            : ok 
+Checking for declaration of pread                                                 : ok 
+Checking for declaration of pwrite                                                : ok 
+Checking for declaration of setenv                                                : ok 
+Checking for declaration of setresgid                                             : ok 
+Checking for declaration of setresuid                                             : ok 
+Checking for eventfd                                                              : ok 
+Checking for header poll.h                                                        : yes 
+Checking for poll                                                                 : ok 
+Checking for strptime                                                             : ok 
+Checking for declaration of strptime                                              : ok 
+Checking for working strptime                                                     : ok 
+Checking for declaration of gettimeofday                                          : ok 
+Checking C prototype for gettimeofday                                             : not found 
+Checking C prototype for gettimeofday                                             : ok 
+Checking for C99 vsnprintf                                                        : ok 
+Checking for HAVE_SHARED_MMAP                                                     : ok 
+Checking for HAVE_MREMAP                                                          : ok 
+Checking for HAVE_INCOHERENT_MMAP                                                 : not found 
+Checking for HAVE_IMMEDIATE_STRUCTURES                                            : ok 
+Checking for HAVE_MKDIR_MODE                                                      : ok 
+Checking for member st_rdev in struct stat                                        : ok 
+Checking for member st_rdev in struct stat                                        : ok 
+Checking for member ss_family in struct sockaddr_storage                          : ok 
+Checking for member __ss_family in struct sockaddr_storage                        : not found 
+Checking for member sa_len in struct sockaddr                                     : not found 
+Checking for member sin_len in struct sockaddr_in                                 : not found 
+Checking for member sin6_len in struct sockaddr_in6                               : not found 
+Checking for HAVE_UNIXSOCKET                                                      : ok 
+Checking for HAVE_SECURE_MKSTEMP                                                  : ok 
+Checking for HAVE_IFACE_GETIFADDRS                                                : not found 
+Checking for HAVE_IFACE_AIX                                                       : not found 
+Checking for HAVE_IFACE_IFCONF                                                    : not found 
+Checking for HAVE_IFACE_IFREQ                                                     : not found 
+Checking for declaration of getpwent_r                                            : ok 
+Checking C prototype for getpwent_r                                               : not found 
+Checking for declaration of getgrent_r                                            : ok 
+Checking C prototype for getgrent_r                                               : not found 
+Checking C prototype for getpwent_r                                               : not found 
+Checking C prototype for getgrent_r                                               : not found 
+Checking for strerror_r                                                           : ok 
+Checking for XSI (rather than GNU) prototype for strerror_r                       : not found 
+Checking for program 'xsltproc'                                                   : /usr/bin/xsltproc 
+Checking for stylesheet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl : ok 
+Checking for program 'python3'                                                                  : /usr/bin/python3.12 
+Checking for program 'python'                                                                   : /usr/bin/python3.12 
+Checking for program 'python3'                                                                  : /var/tmp/portage/sys-libs/tdb-1.4.10/temp/python3.12/bin/python3 
+Checking for python version &gt;= 3.6.0                                                            : 3.12.8 
+python headers                                                                                  : Check disabled due to --disable-python 
+Checking if compiler accepts -fstack-protector-strong                                           : yes 
+Checking if compiler accepts -fstack-clash-protection                                           : yes 
+Checking linker accepts -Wl,-no-undefined                                                       : yes 
+Checking linker accepts ['-undefined', 'dynamic_lookup']                                        : no 
+'configure' finished successfully (1m4.509s)
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+"/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10/buildtools/bin/waf" build --verbose --jobs=2 
+Waf: Entering directory `/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default'
+Checking project rules ...
+Project rules pass
+[1/2] Creating bin/default/lib/replace/replace.empty.c
+[2/2] Compiling tdb.pc.in
+[3/3] Compiling lib/replace/replace.c
+01:44:22 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-D_SAMBA_HOSTCC_', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_LIBREPLACE_HOSTCC_MODULES=NULL', '-DSTATIC_LIBREPLACE_HOSTCC_MODULES_PROTO=extern void __LIBREPLACE_HOSTCC_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/replace.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/replace.c.1.o']
+[4/4] Processing tdb.vscript: ABI/tdb-1.2.1.sigs ABI/tdb-1.2.2.sigs ABI/tdb-1.2.3.sigs ABI/tdb-1.2.4.sigs ABI/tdb-1.2.5.sigs ABI/tdb-1.2.6.sigs ABI/tdb-1.2.7.sigs ABI/tdb-1.2.8.sigs ABI/tdb-1.2.9.sigs ABI/tdb-1.2.10.sigs ABI/tdb-1.2.11.sigs ABI/tdb-1.2.12.sigs ABI/tdb-1.2.13.sigs ABI/tdb-1.3.0.sigs ABI/tdb-1.3.1.sigs ABI/tdb-1.3.2.sigs ABI/tdb-1.3.3.sigs ABI/tdb-1.3.4.sigs ABI/tdb-1.3.5.sigs ABI/tdb-1.3.6.sigs ABI/tdb-1.3.7.sigs ABI/tdb-1.3.8.sigs ABI/tdb-1.3.9.sigs ABI/tdb-1.3.10.sigs ABI/tdb-1.3.11.sigs ABI/tdb-1.3.12.sigs ABI/tdb-1.3.13.sigs ABI/tdb-1.3.14.sigs ABI/tdb-1.3.15.sigs ABI/tdb-1.3.16.sigs ABI/tdb-1.3.17.sigs ABI/tdb-1.3.18.sigs ABI/tdb-1.4.0.sigs ABI/tdb-1.4.1.sigs ABI/tdb-1.4.2.sigs ABI/tdb-1.4.3.sigs ABI/tdb-1.4.4.sigs ABI/tdb-1.4.5.sigs ABI/tdb-1.4.6.sigs ABI/tdb-1.4.7.sigs ABI/tdb-1.4.8.sigs ABI/tdb-1.4.9.sigs ABI/tdb-1.4.10.sigs -&gt; bin/default/tdb.vscript
+[5/5] Compiling lib/replace/replace.c
+01:44:22 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-D_PUBLIC_=_PRIVATE_', '-DSTATIC_replace_builtin_MODULES=NULL', '-DSTATIC_replace_builtin_MODULES_PROTO=extern void __replace_builtin_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/replace.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/replace.c.2.o']
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+compat: "uselib_local" is deprecated, replace by "use"
+[  6/118] Compiling test/logging.c
+01:44:22 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb_test_helpers_MODULES=NULL', '-DSTATIC_tdb_test_helpers_MODULES_PROTO=extern void __tdb_test_helpers_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/logging.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/logging.c.27.o']
+[  7/118] Compiling test/lock-tracking.c
+01:44:22 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb_test_helpers_MODULES=NULL', '-DSTATIC_tdb_test_helpers_MODULES_PROTO=extern void __tdb_test_helpers_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/lock-tracking.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/lock-tracking.c.27.o']
+[  8/118] Compiling test/external-agent.c
+01:44:22 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb_test_helpers_MODULES=NULL', '-DSTATIC_tdb_test_helpers_MODULES_PROTO=extern void __tdb_test_helpers_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/external-agent.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/external-agent.c.27.o']
+[  9/118] Compiling common/io.c
+01:44:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/io.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/io.c.1.o']
+[ 10/118] Compiling common/dump.c
+01:44:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/dump.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/dump.c.1.o']
+[ 11/118] Compiling common/mutex.c
+01:44:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/mutex.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/mutex.c.1.o']
+[ 12/118] Compiling common/rescue.c
+01:44:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/rescue.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/rescue.c.1.o']
+[ 13/118] Compiling common/summary.c
+01:44:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/summary.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/summary.c.1.o']
+[ 14/118] Compiling common/traverse.c
+01:44:24 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/traverse.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/traverse.c.1.o']
+[ 15/118] Compiling common/hash.c
+01:44:24 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/hash.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/hash.c.1.o']
+[ 16/118] Compiling common/transaction.c
+01:44:24 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/transaction.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/transaction.c.1.o']
+[ 17/118] Compiling common/error.c
+01:44:24 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/error.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/error.c.1.o']
+[ 18/118] Compiling common/open.c
+01:44:24 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/open.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/open.c.1.o']
+[ 19/118] Compiling common/freelistcheck.c
+01:44:25 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/freelistcheck.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/freelistcheck.c.1.o']
+[ 20/118] Compiling common/tdb.c
+01:44:25 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/tdb.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/tdb.c.1.o']
+[ 21/118] Compiling common/freelist.c
+01:44:25 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/freelist.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/freelist.c.1.o']
+[ 22/118] Compiling common/lock.c
+01:44:25 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/lock.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/lock.c.1.o']
+[ 23/118] Compiling common/check.c
+01:44:26 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-fvisibility=hidden', '-DSTATIC_tdb_MODULES=NULL', '-DSTATIC_tdb_MODULES_PROTO=extern void __tdb_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../common/check.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/common/check.c.1.o']
+[ 24/118] Compiling lib/replace/tests/strptime.c
+01:44:26 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/strptime.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/tests/strptime.c.5.o']
+[ 25/118] Compiling lib/replace/tests/testsuite.c
+01:44:26 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/testsuite.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/tests/testsuite.c.5.o']
+[ 26/118] Compiling lib/replace/tests/getifaddrs.c
+01:44:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/getifaddrs.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/tests/getifaddrs.c.5.o']
+[ 27/118] Compiling lib/replace/tests/os2_delete.c
+01:44:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-Wno-format-truncation', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_test_MODULES=NULL', '-DSTATIC_replace_test_MODULES_PROTO=extern void __replace_test_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/os2_delete.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/tests/os2_delete.c.5.o']
+[ 28/118] Linking bin/default/libtdb.so
+01:44:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,--version-script=/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb.vscript', '-shared', '-Wl,-h,libtdb.so.1', 'lib/replace/replace.c.2.o', 'common/check.c.1.o', 'common/error.c.1.o', 'common/tdb.c.1.o', 'common/traverse.c.1.o', 'common/freelistcheck.c.1.o', 'common/lock.c.1.o', 'common/dump.c.1.o', 'common/freelist.c.1.o', 'common/io.c.1.o', 'common/open.c.1.o', 'common/transaction.c.1.o', 'common/hash.c.1.o', 'common/summary.c.1.o', 'common/rescue.c.1.o', 'common/mutex.c.1.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/libtdb.so', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 29/118] Compiling lib/replace/tests/main.c
+01:44:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_testsuite_MODULES=NULL', '-DSTATIC_replace_testsuite_MODULES_PROTO=extern void __replace_testsuite_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', '../../lib/replace/tests/main.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/tests/main.c.6.o']
+[ 30/118] Compiling tools/tdbtorture.c
+01:44:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdbtorture_MODULES=NULL', '-DSTATIC_tdbtorture_MODULES_PROTO=extern void __tdbtorture_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../tools/tdbtorture.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tools/tdbtorture.c.7.o']
+[ 31/118] Compiling tools/tdbtortseq.c
+01:44:28 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdbtortseq_MODULES=NULL', '-DSTATIC_tdbtortseq_MODULES_PROTO=extern void __tdbtortseq_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../tools/tdbtortseq.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tools/tdbtortseq.c.9.o']
+[ 32/118] Compiling tools/tdbrestore.c
+01:44:28 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdbrestore_MODULES=NULL', '-DSTATIC_tdbrestore_MODULES_PROTO=extern void __tdbrestore_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../tools/tdbrestore.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tools/tdbrestore.c.11.o']
+[ 33/118] Linking bin/default/tdbtorture
+01:44:28 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/tdbtorture.c.7.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdbtorture', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-ltdb', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 34/118] Linking bin/default/tdbtortseq
+01:44:28 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/tdbtortseq.c.9.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdbtortseq', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-ltdb', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 35/118] Linking bin/default/tdbrestore
+01:44:28 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/tdbrestore.c.11.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdbrestore', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-ltdb', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 36/118] Compiling tools/tdbdump.c
+01:44:29 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdbdump_MODULES=NULL', '-DSTATIC_tdbdump_MODULES_PROTO=extern void __tdbdump_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../tools/tdbdump.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tools/tdbdump.c.15.o']
+[ 37/118] Compiling tools/tdbbackup.c
+01:44:29 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdbbackup_MODULES=NULL', '-DSTATIC_tdbbackup_MODULES_PROTO=extern void __tdbbackup_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../tools/tdbbackup.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tools/tdbbackup.c.19.o']
+[ 38/118] Linking bin/default/tdbdump
+01:44:29 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/tdbdump.c.15.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdbdump', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-ltdb', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 39/118] Compiling tools/tdbtool.c
+01:44:29 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdbtool_MODULES=NULL', '-DSTATIC_tdbtool_MODULES_PROTO=extern void __tdbtool_dummy_module_proto(void)', '-I.', '-I../..', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '-Iinclude', '-I../../include', '../../tools/tdbtool.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tools/tdbtool.c.23.o']
+[ 40/118] Linking bin/default/tdbbackup
+01:44:29 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/tdbbackup.c.19.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdbbackup', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-ltdb', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 41/118] Compiling test/run-3G-file.c
+01:44:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_3G_file_MODULES=NULL', '-DSTATIC_tdb1_run_3G_file_MODULES_PROTO=extern void __tdb1_run_3G_file_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-3G-file.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-3G-file.c.28.o']
+[ 42/118] Linking bin/default/lib/replace/replace_testsuite
+01:44:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'lib/replace/tests/main.c.6.o', 'lib/replace/tests/testsuite.c.5.o', 'lib/replace/tests/strptime.c.5.o', 'lib/replace/tests/os2_delete.c.5.o', 'lib/replace/tests/getifaddrs.c.5.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/replace_testsuite', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 43/118] Linking bin/default/tdbtool
+01:44:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'tools/tdbtool.c.23.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdbtool', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default', '-L/usr/local/lib', '-ltdb', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 44/118] Compiling test/run-bad-tdb-header.c
+01:44:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_bad_tdb_header_MODULES=NULL', '-DSTATIC_tdb1_run_bad_tdb_header_MODULES_PROTO=extern void __tdb1_run_bad_tdb_header_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-bad-tdb-header.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-bad-tdb-header.c.30.o']
+[ 45/118] Compiling test/run.c
+01:44:33 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_MODULES=NULL', '-DSTATIC_tdb1_run_MODULES_PROTO=extern void __tdb1_run_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run.c.32.o']
+[ 46/118] Linking bin/default/tdb1-run-3G-file
+01:44:33 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-3G-file.c.28.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-3G-file', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 47/118] Linking bin/default/tdb1-run-bad-tdb-header
+01:44:33 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-bad-tdb-header.c.30.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-bad-tdb-header', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 48/118] Compiling test/run-check.c
+01:44:33 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_check_MODULES=NULL', '-DSTATIC_tdb1_run_check_MODULES_PROTO=extern void __tdb1_run_check_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-check.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-check.c.34.o']
+[ 49/118] Compiling test/run-corrupt.c
+01:44:36 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_corrupt_MODULES=NULL', '-DSTATIC_tdb1_run_corrupt_MODULES_PROTO=extern void __tdb1_run_corrupt_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-corrupt.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-corrupt.c.36.o']
+[ 50/118] Compiling test/run-die-during-transaction.c
+01:44:37 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_die_during_transaction_MODULES=NULL', '-DSTATIC_tdb1_run_die_during_transaction_MODULES_PROTO=extern void __tdb1_run_die_during_transaction_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-die-during-transaction.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-die-during-transaction.c.38.o']
+[ 51/118] Linking bin/default/tdb1-run
+01:44:39 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run.c.32.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 52/118] Linking bin/default/tdb1-run-check
+01:44:39 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-check.c.34.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-check', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 53/118] Linking bin/default/tdb1-run-corrupt
+01:44:39 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-corrupt.c.36.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-corrupt', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 54/118] Compiling test/run-endian.c
+01:44:39 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_endian_MODULES=NULL', '-DSTATIC_tdb1_run_endian_MODULES_PROTO=extern void __tdb1_run_endian_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-endian.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-endian.c.40.o']
+[ 55/118] Compiling test/run-incompatible.c
+01:44:40 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_incompatible_MODULES=NULL', '-DSTATIC_tdb1_run_incompatible_MODULES_PROTO=extern void __tdb1_run_incompatible_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-incompatible.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-incompatible.c.42.o']
+[ 56/118] Linking bin/default/tdb1-run-die-during-transaction
+01:44:43 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-die-during-transaction.c.38.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-die-during-transaction', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 57/118] Compiling test/run-nested-transactions.c
+01:44:43 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_nested_transactions_MODULES=NULL', '-DSTATIC_tdb1_run_nested_transactions_MODULES_PROTO=extern void __tdb1_run_nested_transactions_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-nested-transactions.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-nested-transactions.c.44.o']
+[ 58/118] Linking bin/default/tdb1-run-endian
+01:44:43 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-endian.c.40.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-endian', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 59/118] Compiling test/run-nested-traverse.c
+01:44:43 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_nested_traverse_MODULES=NULL', '-DSTATIC_tdb1_run_nested_traverse_MODULES_PROTO=extern void __tdb1_run_nested_traverse_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-nested-traverse.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-nested-traverse.c.46.o']
+[ 60/118] Linking bin/default/tdb1-run-incompatible
+01:44:46 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-incompatible.c.42.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-incompatible', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 61/118] Compiling test/run-no-lock-during-traverse.c
+01:44:46 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_no_lock_during_traverse_MODULES=NULL', '-DSTATIC_tdb1_run_no_lock_during_traverse_MODULES_PROTO=extern void __tdb1_run_no_lock_during_traverse_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-no-lock-during-traverse.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-no-lock-during-traverse.c.48.o']
+[ 62/118] Linking bin/default/tdb1-run-nested-transactions
+01:44:47 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-nested-transactions.c.44.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-nested-transactions', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 63/118] Linking bin/default/tdb1-run-nested-traverse
+01:44:47 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-nested-traverse.c.46.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-nested-traverse', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 64/118] Compiling test/run-oldhash.c
+01:44:47 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_oldhash_MODULES=NULL', '-DSTATIC_tdb1_run_oldhash_MODULES_PROTO=extern void __tdb1_run_oldhash_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-oldhash.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-oldhash.c.50.o']
+[ 65/118] Compiling test/run-open-during-transaction.c
+01:44:49 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_open_during_transaction_MODULES=NULL', '-DSTATIC_tdb1_run_open_during_transaction_MODULES_PROTO=extern void __tdb1_run_open_during_transaction_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-open-during-transaction.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-open-during-transaction.c.52.o']
+[ 66/118] Compiling test/run-readonly-check.c
+01:44:50 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_readonly_check_MODULES=NULL', '-DSTATIC_tdb1_run_readonly_check_MODULES_PROTO=extern void __tdb1_run_readonly_check_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-readonly-check.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-readonly-check.c.54.o']
+[ 67/118] Linking bin/default/tdb1-run-no-lock-during-traverse
+01:44:53 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-no-lock-during-traverse.c.48.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-no-lock-during-traverse', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 68/118] Linking bin/default/tdb1-run-oldhash
+01:44:53 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-oldhash.c.50.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-oldhash', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 69/118] Linking bin/default/tdb1-run-open-during-transaction
+01:44:53 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-open-during-transaction.c.52.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-open-during-transaction', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 70/118] Compiling test/run-rescue.c
+01:44:53 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_rescue_MODULES=NULL', '-DSTATIC_tdb1_run_rescue_MODULES_PROTO=extern void __tdb1_run_rescue_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-rescue.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-rescue.c.56.o']
+[ 71/118] Compiling test/run-rescue-find_entry.c
+01:44:53 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_rescue_find_entry_MODULES=NULL', '-DSTATIC_tdb1_run_rescue_find_entry_MODULES_PROTO=extern void __tdb1_run_rescue_find_entry_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-rescue-find_entry.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-rescue-find_entry.c.58.o']
+[ 72/118] Linking bin/default/tdb1-run-readonly-check
+01:44:56 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-readonly-check.c.54.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-readonly-check', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 73/118] Linking bin/default/tdb1-run-rescue
+01:44:57 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-rescue.c.56.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-rescue', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 74/118] Compiling test/run-rdlock-upgrade.c
+01:44:57 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_rdlock_upgrade_MODULES=NULL', '-DSTATIC_tdb1_run_rdlock_upgrade_MODULES_PROTO=extern void __tdb1_run_rdlock_upgrade_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-rdlock-upgrade.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-rdlock-upgrade.c.60.o']
+[ 75/118] Linking bin/default/tdb1-run-rescue-find_entry
+01:44:57 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-rescue-find_entry.c.58.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-rescue-find_entry', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 76/118] Compiling test/run-rwlock-check.c
+01:44:57 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_rwlock_check_MODULES=NULL', '-DSTATIC_tdb1_run_rwlock_check_MODULES_PROTO=extern void __tdb1_run_rwlock_check_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-rwlock-check.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-rwlock-check.c.62.o']
+[ 77/118] Compiling test/run-summary.c
+01:45:00 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_summary_MODULES=NULL', '-DSTATIC_tdb1_run_summary_MODULES_PROTO=extern void __tdb1_run_summary_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-summary.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-summary.c.64.o']
+[ 78/118] Compiling test/run-transaction-expand.c
+01:45:00 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_transaction_expand_MODULES=NULL', '-DSTATIC_tdb1_run_transaction_expand_MODULES_PROTO=extern void __tdb1_run_transaction_expand_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-transaction-expand.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-transaction-expand.c.66.o']
+[ 79/118] Linking bin/default/tdb1-run-rdlock-upgrade
+01:45:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-rdlock-upgrade.c.60.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-rdlock-upgrade', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 80/118] Linking bin/default/tdb1-run-rwlock-check
+01:45:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-rwlock-check.c.62.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-rwlock-check', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 81/118] Linking bin/default/tdb1-run-summary
+01:45:03 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-summary.c.64.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-summary', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 82/118] Linking bin/default/tdb1-run-transaction-expand
+01:45:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-transaction-expand.c.66.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-transaction-expand', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 83/118] Compiling test/run-traverse-in-transaction.c
+01:45:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_traverse_in_transaction_MODULES=NULL', '-DSTATIC_tdb1_run_traverse_in_transaction_MODULES_PROTO=extern void __tdb1_run_traverse_in_transaction_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-traverse-in-transaction.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-traverse-in-transaction.c.68.o']
+[ 84/118] Compiling test/run-wronghash-fail.c
+01:45:04 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_wronghash_fail_MODULES=NULL', '-DSTATIC_tdb1_run_wronghash_fail_MODULES_PROTO=extern void __tdb1_run_wronghash_fail_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-wronghash-fail.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-wronghash-fail.c.70.o']
+[ 85/118] Compiling test/run-zero-append.c
+01:45:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_zero_append_MODULES=NULL', '-DSTATIC_tdb1_run_zero_append_MODULES_PROTO=extern void __tdb1_run_zero_append_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-zero-append.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-zero-append.c.72.o']
+[ 86/118] Compiling test/run-fcntl-deadlock.c
+01:45:07 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_fcntl_deadlock_MODULES=NULL', '-DSTATIC_tdb1_run_fcntl_deadlock_MODULES_PROTO=extern void __tdb1_run_fcntl_deadlock_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-fcntl-deadlock.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-fcntl-deadlock.c.74.o']
+[ 87/118] Linking bin/default/tdb1-run-traverse-in-transaction
+01:45:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-traverse-in-transaction.c.68.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-traverse-in-transaction', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 88/118] Linking bin/default/tdb1-run-wronghash-fail
+01:45:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-wronghash-fail.c.70.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-wronghash-fail', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 89/118] Linking bin/default/tdb1-run-zero-append
+01:45:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-zero-append.c.72.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-zero-append', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+../../test/run-fcntl-deadlock.c: In function ‘main’:
+../../test/run-fcntl-deadlock.c:122:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  122 |         pipe(pipes_1_2);
+      |         ^~~~~~~~~~~~~~~
+../../test/run-fcntl-deadlock.c:123:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  123 |         pipe(pipes_2_1);
+      |         ^~~~~~~~~~~~~~~
+../../test/run-fcntl-deadlock.c: In function ‘send_char’:
+../../test/run-fcntl-deadlock.c:108:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  108 |         write(pipe_w, &amp;c, 1);
+      |         ^~~~~~~~~~~~~~~~~~~~
+../../test/run-fcntl-deadlock.c: In function ‘expect_char’:
+../../test/run-fcntl-deadlock.c:100:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  100 |         read(pipe_r, buf, 1);
+      |         ^~~~~~~~~~~~~~~~~~~~
+
+[ 90/118] Compiling test/run-marklock-deadlock.c
+01:45:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_marklock_deadlock_MODULES=NULL', '-DSTATIC_tdb1_run_marklock_deadlock_MODULES_PROTO=extern void __tdb1_run_marklock_deadlock_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-marklock-deadlock.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-marklock-deadlock.c.76.o']
+[ 91/118] Linking bin/default/tdb1-run-fcntl-deadlock
+01:45:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-fcntl-deadlock.c.74.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-fcntl-deadlock', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 92/118] Compiling test/run-allrecord-traverse-deadlock.c
+01:45:10 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_allrecord_traverse_deadlock_MODULES=NULL', '-DSTATIC_tdb1_run_allrecord_traverse_deadlock_MODULES_PROTO=extern void __tdb1_run_allrecord_traverse_deadlock_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-allrecord-traverse-deadlock.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-allrecord-traverse-deadlock.c.78.o']
+[ 93/118] Compiling test/run-mutex-openflags2.c
+01:45:13 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex_openflags2_MODULES=NULL', '-DSTATIC_tdb1_run_mutex_openflags2_MODULES_PROTO=extern void __tdb1_run_mutex_openflags2_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex-openflags2.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex-openflags2.c.80.o']
+[ 94/118] Compiling test/run-mutex-trylock.c
+01:45:14 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex_trylock_MODULES=NULL', '-DSTATIC_tdb1_run_mutex_trylock_MODULES_PROTO=extern void __tdb1_run_mutex_trylock_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex-trylock.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex-trylock.c.82.o']
+../../test/run-mutex-trylock.c: In function ‘main’:
+../../test/run-mutex-trylock.c:83:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   83 |         pipe(fromchild);
+      |         ^~~~~~~~~~~~~~~
+../../test/run-mutex-trylock.c:84:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   84 |         pipe(tochild);
+      |         ^~~~~~~~~~~~~
+../../test/run-mutex-trylock.c:99:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   99 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-trylock.c:108:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  108 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-trylock.c:110:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  110 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-trylock.c: In function ‘do_child’:
+../../test/run-mutex-trylock.c:45:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   45 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-trylock.c:47:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   47 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-trylock.c:52:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   52 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+
+[ 95/118] Linking bin/default/tdb1-run-allrecord-traverse-deadlock
+01:45:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-allrecord-traverse-deadlock.c.78.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-allrecord-traverse-deadlock', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+../../test/run-mutex-openflags2.c: In function ‘main’:
+../../test/run-mutex-openflags2.c:138:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  138 |         write(pipefd[1], &amp;c, 1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-openflags2.c: In function ‘do_child’:
+../../test/run-mutex-openflags2.c:44:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   44 |         read(fd, &amp;c, 1);
+      |         ^~~~~~~~~~~~~~~
+
+[ 96/118] Linking bin/default/tdb1-run-marklock-deadlock
+01:45:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-marklock-deadlock.c.76.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-marklock-deadlock', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 97/118] Linking bin/default/tdb1-run-mutex-openflags2
+01:45:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-mutex-openflags2.c.80.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex-openflags2', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 98/118] Linking bin/default/tdb1-run-mutex-trylock
+01:45:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-mutex-trylock.c.82.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex-trylock', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[ 99/118] Compiling test/run-mutex-allrecord-bench.c
+01:45:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex_allrecord_bench_MODULES=NULL', '-DSTATIC_tdb1_run_mutex_allrecord_bench_MODULES_PROTO=extern void __tdb1_run_mutex_allrecord_bench_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex-allrecord-bench.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex-allrecord-bench.c.84.o']
+[100/118] Compiling test/run-mutex-allrecord-trylock.c
+01:45:17 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex_allrecord_trylock_MODULES=NULL', '-DSTATIC_tdb1_run_mutex_allrecord_trylock_MODULES_PROTO=extern void __tdb1_run_mutex_allrecord_trylock_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex-allrecord-trylock.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex-allrecord-trylock.c.86.o']
+../../test/run-mutex-allrecord-trylock.c: In function ‘main’:
+../../test/run-mutex-allrecord-trylock.c:81:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   81 |         pipe(fromchild);
+      |         ^~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-trylock.c:82:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   82 |         pipe(tochild);
+      |         ^~~~~~~~~~~~~
+../../test/run-mutex-allrecord-trylock.c:97:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   97 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-trylock.c:106:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  106 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-trylock.c: In function ‘do_child’:
+../../test/run-mutex-allrecord-trylock.c:45:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   45 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-trylock.c:47:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   47 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[101/118] Compiling test/run-mutex-allrecord-block.c
+01:45:20 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex_allrecord_block_MODULES=NULL', '-DSTATIC_tdb1_run_mutex_allrecord_block_MODULES_PROTO=extern void __tdb1_run_mutex_allrecord_block_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex-allrecord-block.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex-allrecord-block.c.88.o']
+[102/118] Compiling test/run-mutex-transaction1.c
+01:45:20 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex_transaction1_MODULES=NULL', '-DSTATIC_tdb1_run_mutex_transaction1_MODULES_PROTO=extern void __tdb1_run_mutex_transaction1_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex-transaction1.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex-transaction1.c.90.o']
+../../test/run-mutex-allrecord-block.c: In function ‘main’:
+../../test/run-mutex-allrecord-block.c:81:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   81 |         pipe(fromchild);
+      |         ^~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-block.c:82:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   82 |         pipe(tochild);
+      |         ^~~~~~~~~~~~~
+../../test/run-mutex-allrecord-block.c:97:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   97 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-block.c:107:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  107 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-block.c: In function ‘do_child’:
+../../test/run-mutex-allrecord-block.c:45:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   45 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-allrecord-block.c:47:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   47 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[103/118] Linking bin/default/tdb1-run-mutex-allrecord-bench
+01:45:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-mutex-allrecord-bench.c.84.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex-allrecord-bench', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[104/118] Linking bin/default/tdb1-run-mutex-allrecord-trylock
+01:45:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-mutex-allrecord-trylock.c.86.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex-allrecord-trylock', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[105/118] Linking bin/default/tdb1-run-mutex-allrecord-block
+01:45:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-mutex-allrecord-block.c.88.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex-allrecord-block', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[106/118] Compiling test/run-mutex-die.c
+01:45:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex_die_MODULES=NULL', '-DSTATIC_tdb1_run_mutex_die_MODULES_PROTO=extern void __tdb1_run_mutex_die_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex-die.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex-die.c.92.o']
+../../test/run-mutex-transaction1.c: In function ‘main’:
+../../test/run-mutex-transaction1.c:117:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  117 |         pipe(fromchild);
+      |         ^~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:118:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  118 |         pipe(tochild);
+      |         ^~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:133:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  133 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:158:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  158 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:166:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  166 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:167:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  167 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:175:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  175 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:186:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  186 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:187:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  187 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:200:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  200 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:201:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  201 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:215:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  215 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:216:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  216 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:229:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  229 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c: In function ‘do_child’:
+../../test/run-mutex-transaction1.c:48:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   48 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:49:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   49 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:54:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   54 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:55:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   55 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:63:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   63 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:64:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   64 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:69:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   69 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:70:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   70 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:78:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   78 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:79:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   79 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:84:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   84 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex-transaction1.c:85:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   85 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[107/118] Compiling test/run-mutex1.c
+01:45:23 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_mutex1_MODULES=NULL', '-DSTATIC_tdb1_run_mutex1_MODULES_PROTO=extern void __tdb1_run_mutex1_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-mutex1.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-mutex1.c.94.o']
+[108/118] Linking bin/default/tdb1-run-mutex-transaction1
+01:45:26 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-mutex-transaction1.c.90.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex-transaction1', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[109/118] Linking bin/default/tdb1-run-mutex-die
+01:45:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-mutex-die.c.92.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex-die', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[110/118] Compiling test/run-circular-chain.c
+01:45:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_circular_chain_MODULES=NULL', '-DSTATIC_tdb1_run_circular_chain_MODULES_PROTO=extern void __tdb1_run_circular_chain_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-circular-chain.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-circular-chain.c.96.o']
+../../test/run-mutex1.c: In function ‘main’:
+../../test/run-mutex1.c:92:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   92 |         pipe(fromchild);
+      |         ^~~~~~~~~~~~~~~
+../../test/run-mutex1.c:93:9: warning: ignoring return value of ‘pipe’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   93 |         pipe(tochild);
+      |         ^~~~~~~~~~~~~
+../../test/run-mutex1.c:108:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  108 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:114:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  114 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:115:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  115 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:126:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  126 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:127:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  127 |         read(fromchild[0], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:128:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  128 |         write(tochild[1], &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c: In function ‘do_child’:
+../../test/run-mutex1.c:45:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   45 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:46:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   46 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:51:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   51 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:52:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   52 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:57:9: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   57 |         write(to, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+../../test/run-mutex1.c:58:9: warning: ignoring return value of ‘read’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   58 |         read(from, &amp;c, sizeof(c));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+[111/118] Compiling test/run-circular-freelist.c
+01:45:27 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_circular_freelist_MODULES=NULL', '-DSTATIC_tdb1_run_circular_freelist_MODULES_PROTO=extern void __tdb1_run_circular_freelist_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-circular-freelist.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-circular-freelist.c.98.o']
+[112/118] Linking bin/default/tdb1-run-mutex1
+01:45:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-mutex1.c.94.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-mutex1', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[113/118] Compiling test/run-traverse-chain.c
+01:45:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_tdb1_run_traverse_chain_MODULES=NULL', '-DSTATIC_tdb1_run_traverse_chain_MODULES_PROTO=extern void __tdb1_run_traverse_chain_dummy_module_proto(void)', '-I.', '-I../..', '-Iinclude', '-I../../include', '-I.', '-I../..', '-Ilib/replace', '-I../../lib/replace', '../../test/run-traverse-chain.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/test/run-traverse-chain.c.100.o']
+[114/118] Linking bin/default/tdb1-run-circular-chain
+01:45:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-circular-chain.c.96.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-circular-chain', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[115/118] Linking bin/default/tdb1-run-circular-freelist
+01:45:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', 'test/run-circular-freelist.c.98.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-circular-freelist', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[116/118] Compiling bin/default/lib/replace/replace.empty.c
+01:45:30 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-fPIC', '-D__STDC_WANT_LIB_EXT1__=1', '-D_REENTRANT', '-fstack-protector-strong', '-fstack-clash-protection', '-DSTATIC_replace_MODULES=NULL', '-DSTATIC_replace_MODULES_PROTO=extern void __replace_dummy_module_proto(void)', '-Ilib/replace', '-I../../lib/replace', '-I.', '-I../..', 'lib/replace/replace.empty.c', '-c', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/lib/replace/replace.empty.c.4.o']
+[117/118] Linking bin/default/tdb1-run-traverse-chain
+01:45:32 runner ['x86_64-pc-linux-gnu-gcc', '-O3', '-march=native', '-mtune=native', '-fomit-frame-pointer', '-pipe', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', 'lib/replace/replace.c.2.o', 'test/run-traverse-chain.c.100.o', 'test/external-agent.c.27.o', 'test/lock-tracking.c.27.o', 'test/logging.c.27.o', '-o/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default/tdb1-run-traverse-chain', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared', '-Wl,-rpath,/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/shared/private', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-lbsd', '-Wl,-O1', '-Wl,--as-needed', '-Wl,-z,pack-relative-relocs', '-Wl,-no-undefined']
+[118/118] Symlinking bin/default/libtdb.so
+[119/122] Compiling man/tdbrestore.8.xml
+01:45:33 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/tdbrestore.8 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/tdbrestore.8.xml '
+[120/122] Compiling man/tdbdump.8.xml
+01:45:33 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/tdbdump.8 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/tdbdump.8.xml '
+Note: Writing tdbrestore.8
+
+[121/122] Compiling man/tdbbackup.8.xml
+01:45:33 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/tdbbackup.8 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/tdbbackup.8.xml '
+Note: Writing tdbdump.8
+
+[122/122] Compiling man/tdbtool.8.xml
+01:45:33 runner ' set -e; /usr/bin/xsltproc --xinclude -o man/tdbtool.8 --nonet http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl ../../man/tdbtool.8.xml '
+Note: Writing tdbbackup.8
+
+Note: Writing tdbtool.8
+
+Waf: Leaving directory `/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default'
+Build commands will be stored in bin/default/compile_commands.json
+'build' finished successfully (1m11.976s)
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-libs/tdb-1.4.10
+
+&gt;&gt;&gt; Install sys-libs/tdb-1.4.10 into /var/tmp/portage/sys-libs/tdb-1.4.10/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+"/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10/buildtools/bin/waf" --jobs=2 --destdir="/var/tmp/portage/sys-libs/tdb-1.4.10/image"  install
+Waf: Entering directory `/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default'
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/lib64/pkgconfig/tdb.pc (from bin/default/tdb.pc)
+[ 26/128] Linking bin/default/libtdb.inst.so
+[ 29/128] Linking bin/default/tdbrestore.inst
+[ 42/128] Linking bin/default/tdbdump.inst
+[ 45/128] Linking bin/default/tdbbackup.inst
+[ 46/128] Linking bin/default/tdbtool.inst
+[ 48/128] Linking bin/default/lib/replace/replace_testsuite.inst
+[ 50/128] Linking bin/default/tdbtorture.inst
+[ 52/128] Linking bin/default/tdbtortseq.inst
+[ 53/128] Linking bin/default/tdb1-run-3G-file.inst
+[ 56/128] Linking bin/default/tdb1-run-bad-tdb-header.inst
+[ 58/128] Linking bin/default/tdb1-run.inst
+[ 60/128] Linking bin/default/tdb1-run-check.inst
+[ 62/128] Linking bin/default/tdb1-run-corrupt.inst
+[ 64/128] Linking bin/default/tdb1-run-die-during-transaction.inst
+[ 66/128] Linking bin/default/tdb1-run-endian.inst
+[ 68/128] Linking bin/default/tdb1-run-incompatible.inst
+[ 70/128] Linking bin/default/tdb1-run-nested-transactions.inst
+[ 72/128] Linking bin/default/tdb1-run-nested-traverse.inst
+[ 75/128] Linking bin/default/tdb1-run-no-lock-during-traverse.inst
+[ 76/128] Linking bin/default/tdb1-run-oldhash.inst
+[ 78/128] Linking bin/default/tdb1-run-open-during-transaction.inst
+[ 81/128] Linking bin/default/tdb1-run-readonly-check.inst
+[ 82/128] Linking bin/default/tdb1-run-rescue.inst
+[ 84/128] Linking bin/default/tdb1-run-rescue-find_entry.inst
+[ 86/128] Linking bin/default/tdb1-run-rdlock-upgrade.inst
+[ 88/128] Linking bin/default/tdb1-run-rwlock-check.inst
+[ 90/128] Linking bin/default/tdb1-run-summary.inst
+[ 92/128] Linking bin/default/tdb1-run-transaction-expand.inst
+[ 94/128] Linking bin/default/tdb1-run-traverse-in-transaction.inst
+[ 96/128] Linking bin/default/tdb1-run-wronghash-fail.inst
+[ 98/128] Linking bin/default/tdb1-run-zero-append.inst
+[100/128] Linking bin/default/tdb1-run-fcntl-deadlock.inst
+[102/128] Linking bin/default/tdb1-run-marklock-deadlock.inst
+[105/128] Linking bin/default/tdb1-run-allrecord-traverse-deadlock.inst
+[107/128] Linking bin/default/tdb1-run-mutex-openflags2.inst
+[108/128] Linking bin/default/tdb1-run-mutex-trylock.inst
+[110/128] Linking bin/default/tdb1-run-mutex-allrecord-bench.inst
+[112/128] Linking bin/default/tdb1-run-mutex-allrecord-trylock.inst
+[113/128] Linking bin/default/tdb1-run-mutex-allrecord-block.inst
+[114/128] Linking bin/default/tdb1-run-mutex-transaction1.inst
+[115/128] Linking bin/default/tdb1-run-mutex-die.inst
+[116/128] Linking bin/default/tdb1-run-mutex1.inst
+[117/128] Linking bin/default/tdb1-run-circular-chain.inst
+[118/128] Linking bin/default/tdb1-run-circular-freelist.inst
+[119/128] Linking bin/default/tdb1-run-traverse-chain.inst
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/lib64/libtdb.so.1.4.10 (from bin/default/libtdb.inst.so)
++ symlink /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/lib64/libtdb.so.1 (to libtdb.so.1.4.10)
++ symlink /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/lib64/libtdb.so (to libtdb.so.1.4.10)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/bin/tdbrestore (from bin/default/tdbrestore.inst)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/bin/tdbdump (from bin/default/tdbdump.inst)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/bin/tdbbackup (from bin/default/tdbbackup.inst)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/bin/tdbtool (from bin/default/tdbtool.inst)
+[128/128] Symlinking bin/default/libtdb.inst.so
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/include/tdb.h (from include/tdb.h)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/share/man/man8/tdbrestore.8 (from bin/default/man/tdbrestore.8)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/share/man/man8/tdbdump.8 (from bin/default/man/tdbdump.8)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/share/man/man8/tdbbackup.8 (from bin/default/man/tdbbackup.8)
++ install /var/tmp/portage/sys-libs/tdb-1.4.10/image/usr/share/man/man8/tdbtool.8 (from bin/default/man/tdbtool.8)
+Waf: Leaving directory `/var/tmp/portage/sys-libs/tdb-1.4.10/work/tdb-1.4.10-abi_x86_64.amd64/bin/default'
+'install' finished successfully (2.370s)
+&gt;&gt;&gt; Completed installing sys-libs/tdb-1.4.10 into /var/tmp/portage/sys-libs/tdb-1.4.10/image
+
+ <span class="ansi32">*</span> Final size of build directory: 25984 KiB (25.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    316 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libtdb.so.1.4.10
+   /usr/bin/tdbrestore
+   /usr/bin/tdbdump
+   /usr/bin/tdbbackup
+   /usr/bin/tdbtool
+
+</pre>
+</body>
+
+</html>
