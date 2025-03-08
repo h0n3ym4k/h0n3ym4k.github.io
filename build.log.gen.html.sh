@@ -97,7 +97,8 @@ fi
 echo "emerge --info ${pkg} --color y | ansi2html redir ${pkgr}_emerge-info.log.html"
 emerge --info "${pkg}" --color y | ansi2html > "${pkgr}"_emerge-info.log.html
 qlop --color -t -v "${pkgr}" | ansi2html >> "${pkgr}"_emerge-info.log.html
-gcc -march=native -mtune=native -E -v - </dev/null 2>&1|egrep -A1 'COLLECT_GCC_OPTIONS' | ansi2html >> "${pkgr}"_emerge-info.log.html
+gcc -march=native -mtune=native -E -v - </dev/null 2>&1|egrep -m1 -A1 'COLLECT_GCC_OPTIONS' | ansi2html >> "${pkgr}"_emerge-info.log.html
+cat /proc/cpuinfo | egrep -m2 'model\ name|flags' | ansi2html >> "${pkgr}"_emerge-info.html
 	done
 
 	cd /mnt/Downloads/portage-build-log
