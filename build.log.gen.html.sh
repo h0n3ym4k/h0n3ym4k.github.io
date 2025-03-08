@@ -9,8 +9,12 @@ rm -f /tmp/mkdir.txt
 if [ "${1}" == 'w' ];then
 	echo "${1}"
 	cd /var/log/portage
-	#init/previous-build - rm -f *.log - does not process orphan log files - periodic housekeep needed - rm -rf /var/log/portage/build,elog
-	find /var/log/portage/build -iname \*.html -exec basename {} .html \;|tr _ \:|xargs rm -f
+	#init/previous-build - rm -f *.log - periodic housekeep needed - rm -rf /var/log/portage/build,elog
+
+find /var/log/portage/build -iname \*.log -mtime +6 -exec rm -f {} \;
+
+#	find /var/log/portage/build -iname \*.html -exec basename {} .html \;|tr _ \:|xargs rm -f
+
 	find /var/log/portage -iname \*.html -exec rm -f {} \;
 	rm -rf /mnt/Downloads/portage-build-log
 	mkdir /mnt/Downloads/portage-build-log
