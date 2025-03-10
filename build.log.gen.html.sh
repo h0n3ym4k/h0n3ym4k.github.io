@@ -168,10 +168,12 @@ echo "<center><h2>weekly-to-monthly update unless gcc/glibc/kernel will update w
 d=$(date '+%a %F')
 echo "<center><h2>Last update: ${d}</h2></center>" >> index.html.tmp.1
 if [ -e "/mnt/Downloads/portage-build-log/weekly.html" ];then
+rm -f /mnt/Downloads/portage-build-log/world.html
 echo "<center><a href="weekly.html">this batch content - weekly.html</a></center>" >> index.html.tmp.1
 fi
 if [ ! -e "/mnt/Downloads/portage-build-log/weekly.html" ];then
-echo "<center><h3>this batch content - world rebuild</h3></center>" >> index.html.tmp.1
+emerge world -Deupv --color y | ansi2html > /mnt/Downloads/portage-build-log/world.html
+echo "<center><h3>this batch content - <a href="world.html">world</a> rebuild</h3></center>" >> index.html.tmp.1
 fi
 
 echo "<center><h3>any help needed or your support is appreciated. Msg right away!</h3></center>" >> index.html.tmp.1
