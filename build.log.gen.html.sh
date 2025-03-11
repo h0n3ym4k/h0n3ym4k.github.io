@@ -101,8 +101,8 @@ fi
 echo "emerge --info ${pkg} --color y | ansi2html redir ${pkgr}_emerge-info.log.html"
 emerge --info "${pkg}" --color y | ansi2html > "${pkgr}"_emerge-info.log.html
 qlop --color -t -v "${pkgr}" | ansi2html >> "${pkgr}"_emerge-info.log.html
-gcc -march=native -mtune=native -E -v - </dev/null 2>&1|egrep -m1 -A1 'COLLECT_GCC_OPTIONS' | ansi2html >> "${pkgr}"_emerge-info.log.html
-cat /proc/cpuinfo | egrep -m2 'model\ name|flags' | ansi2html >> "${pkgr}"_emerge-info.html
+cat /root/gcc-native.txt.html >> "${pkgr}"_emerge-info.log.html
+cat /root/cpuinfo.txt.html >> "${pkgr}"_emerge-info.log.html
 	done
 
 	cd /mnt/Downloads/portage-build-log
@@ -195,7 +195,7 @@ echo "<br/>" >> index.html.tmp.1
 echo "<a href="01summary.log">01summary.log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
-files2=($(find -iname \*.html ! -iname \*emerge-info.log.html ! -iname genkernel.log.html ! -iname index.html ! -iname qa_notice.html|cut -b1,2 --complement))
+files2=($(find -iname \*.html ! -iname \*emerge-info.log.html ! -iname genkernel.log.html ! -iname index.html ! -iname qa_notice.html ! -iname weekly.html ! -iname world.html |cut -b1,2 --complement))
 for f in "${files2[@]}"
 do
 	info=$(echo "${f}" | rev | cut -d_ -f1 --complement | rev)
