@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#try to notify what time started
+(d=`date +%X`;while(/bin/true);do echo "${d} started";sleep 60;done)&
+
 #program entrant - rm -rf /var/log/portage/build - new world <= NEVER scripted this line
 
 rm -f /tmp/mkdir.txt
@@ -172,7 +175,7 @@ rm -f /mnt/Downloads/portage-build-log/world.html
 echo "<center><a href="weekly.html">this batch content - weekly.html</a></center>" >> index.html.tmp.1
 fi
 if [ ! -e "/mnt/Downloads/portage-build-log/weekly.html" ];then
-emerge world -Deupv --color y | ansi2html > /mnt/Downloads/portage-build-log/world.html
+emerge world -Deupv --color y &>/tmp/world.txt && cat /tmp/world.txt| ansi2html > /mnt/Downloads/portage-build-log/world.html
 echo "<center><h3>this batch content - <a href="world.html">world</a> rebuild</h3></center>" >> index.html.tmp.1
 fi
 
