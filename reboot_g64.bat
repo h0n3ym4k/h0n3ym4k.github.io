@@ -1,4 +1,4 @@
-@echo off
+REM @echo off
 
 REM Define the path to the text file
 set "filepath=C:\Users\user\Downloads\request_reboot.txt"
@@ -19,7 +19,8 @@ exit /b
 :acpipowerbutton
 echo File exists. Executing acpipowerbutton function...
 REM Add your acpipowerbutton commands here
-"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" acpipowerbutton
+REM "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" acpipowerbutton
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" nic2 null
 timeout /t 20 /nobreak > NUL
 del "%filepath%"
 REM exit /b
@@ -27,6 +28,7 @@ REM exit /b
 :startvm
 echo File does not exist. Executing startvm function...
 REM Add your startvm commands here
-"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm "g64"
+REM "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm "g64"
+"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" nic2 bridged "Intel(R) Dual Band Wireless-AC 8265"
 timeout /t 10 /nobreak > NUL
 REM exit /b
