@@ -1,0 +1,812 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-dialup/ppp-2.5.2:0/2.5.2
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux pam
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.12.16-gentoo-x86_64
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking ppp-2.5.2.tar.gz to /var/tmp/portage/net-dialup/ppp-2.5.2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-dialup/ppp-2.5.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2 ...
+ * econf: updating ppp-2.5.2/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating ppp-2.5.2/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/ppp-2.5.2 --htmldir=/usr/share/doc/ppp-2.5.2/html --with-sysroot=/ --libdir=/usr/lib64 --localstatedir=/var --runstatedir=/run --disable-systemd --without-atm --with-pam --without-pcap --enable-cbcp --enable-multilink
+checking whether make supports nested variables... yes
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking whether ln -s works... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99 or later... yes
+checking for asm/types.h... yes
+checking for crypt.h... yes
+checking for paths.h... yes
+checking for shadow.h... yes
+checking for stddef.h... yes
+checking for stdarg.h... yes
+checking for sys/dlpi.h... no
+checking for sys/ioctl.h... yes
+checking for sys/socket.h... yes
+checking for sys/time.h... yes
+checking for sys/uio.h... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking for utmp.h... yes
+checking for net/bpf.h... no
+checking for net/if.h... yes
+checking for net/if_types.h... no
+checking for net/if_arp.h... yes
+checking for linux/if.h... yes
+checking for linux/if_ether.h... yes
+checking for linux/if_packet.h... yes
+checking for netinet/if_ether.h... yes
+checking for netpacket/packet.h... yes
+checking for struct sockaddr_ll in &lt;linux/if_packet.h&gt;... yes
+checking size of unsigned int... 4
+checking size of unsigned long... 8
+checking size of unsigned short... 2
+checking for mmap... yes
+checking for logwtmp... yes
+checking for strerror... yes
+checking for crypt in -lcrypt... yes
+checking for pkg-config... (cached) /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking whether compiling and linking against OpenSSL works... yes
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for md4 support in openssl... yes
+checking for md5 support in openssl... yes
+checking for des support in openssl... yes
+checking for sha support in openssl... yes
+checking if compiling and linking against libsrp works... no
+checking for pam... yes
+checking if compiling and linking against libpam works... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating chat/Makefile
+config.status: creating include/Makefile
+config.status: creating pppd/Makefile
+config.status: creating pppd/pppd.pc
+config.status: creating pppd/plugins/Makefile
+config.status: creating pppd/plugins/pppoe/Makefile
+config.status: creating pppd/plugins/pppoatm/Makefile
+config.status: creating pppd/plugins/pppol2tp/Makefile
+config.status: creating pppd/plugins/radius/Makefile
+config.status: creating pppdump/Makefile
+config.status: creating pppstats/Makefile
+config.status: creating scripts/Makefile
+config.status: creating pppd/config.h
+config.status: creating pppd/pppdconf.h
+config.status: creating pppd/plugins/pppoe/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+ppp version 2.5.2
+    Prefix...............: /usr
+    Runtime Dir..........: /run/pppd
+    Logfile Dir..........: /var/log/ppp
+    Plugin Dir...........: /usr/lib64/pppd/2.5.2
+    System CA Path ......: /etc/ssl/certs
+    With OpenSSL.........: yes
+    With libatm..........: no
+    With libpam..........: yes
+    With libpcap.........: no
+    With libsrp..........: no
+    C Compiler...........: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17
+    Linker...............: /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs 
+
+Features enabled
+    Microsoft Extensions.: yes
+    Multilink............: yes
+    Plugins..............: yes
+    CBCP.................: yes
+    IPV6CP...............: yes
+    EAP-TLS..............: yes
+    systemd notifications: no
+
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2 ...
+make -j2 
+Making all in chat
+make[1]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd -I../pppd/plugins/pppoe  -DTERMIOS -DSIGTYPE=void -UNO_SLEEP -DFNDELAY=O_NDELAY   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o chat-chat.o `test -f 'chat.c' || echo './'`chat.c
+make[1]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+make[1]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o chat chat-chat.o  
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o chat chat-chat.o 
+make[1]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+Making all in pppd
+make  all-am
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-auth.o `test -f 'auth.c' || echo './'`auth.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-ccp.o `test -f 'ccp.c' || echo './'`ccp.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-chap-md5.o `test -f 'chap-md5.c' || echo './'`chap-md5.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-chap.o `test -f 'chap.c' || echo './'`chap.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-demand.o `test -f 'demand.c' || echo './'`demand.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-eap.o `test -f 'eap.c' || echo './'`eap.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-ecp.o `test -f 'ecp.c' || echo './'`ecp.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-fsm.o `test -f 'fsm.c' || echo './'`fsm.c
+In file included from /usr/include/string.h:548,
+                 from fsm.c:54:
+In function ‘memcpy’,
+    inlined from ‘fsm_sdata’ at fsm.c:772:2,
+    inlined from ‘fsm_rconfreq’ at fsm.c:409:2,
+    inlined from ‘fsm_input’ at fsm.c:365:2:
+/usr/include/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘memcpy’,
+    inlined from ‘fsm_sdata’ at fsm.c:772:2,
+    inlined from ‘fsm_rconfack’ at fsm.c:485:2,
+    inlined from ‘fsm_input’ at fsm.c:369:2:
+/usr/include/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘memcpy’,
+    inlined from ‘fsm_sdata’ at fsm.c:772:2,
+    inlined from ‘fsm_rconfnakrej’ at fsm.c:553:2,
+    inlined from ‘fsm_input’ at fsm.c:374:2:
+/usr/include/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+In function ‘memcpy’,
+    inlined from ‘fsm_sdata’ at fsm.c:772:2,
+    inlined from ‘fsm_rtermreq’ at fsm.c:609:5,
+    inlined from ‘fsm_input’ at fsm.c:378:2:
+/usr/include/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-ipcp.o `test -f 'ipcp.c' || echo './'`ipcp.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-magic.o `test -f 'magic.c' || echo './'`magic.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-lcp.o `test -f 'lcp.c' || echo './'`lcp.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-main.o `test -f 'main.c' || echo './'`main.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-options.o `test -f 'options.c' || echo './'`options.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-session.o `test -f 'session.c' || echo './'`session.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-tty.o `test -f 'tty.c' || echo './'`tty.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-upap.o `test -f 'upap.c' || echo './'`upap.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-utils.o `test -f 'utils.c' || echo './'`utils.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-sys-linux.o `test -f 'sys-linux.c' || echo './'`sys-linux.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-chap_ms.o `test -f 'chap_ms.c' || echo './'`chap_ms.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-crypto_ms.o `test -f 'crypto_ms.c' || echo './'`crypto_ms.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-cbcp.o `test -f 'cbcp.c' || echo './'`cbcp.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-mppe.o `test -f 'mppe.c' || echo './'`mppe.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-multilink.o `test -f 'multilink.c' || echo './'`multilink.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-tdb.o `test -f 'tdb.c' || echo './'`tdb.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-spinlock.o `test -f 'spinlock.c' || echo './'`spinlock.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-ipv6cp.o `test -f 'ipv6cp.c' || echo './'`ipv6cp.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-eui64.o `test -f 'eui64.c' || echo './'`eui64.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-eap-tls.o `test -f 'eap-tls.c' || echo './'`eap-tls.c
+eap-tls.c: In function ‘eaptls_ssl_load_config’:
+eap-tls.c:172:5: warning: ‘ENGINE_load_builtin_engines’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  172 |     ENGINE_load_builtin_engines();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from eap-tls.c:45:
+/usr/include/openssl/engine.h:358:28: note: declared here
+  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+eap-tls.c: In function ‘eaptls_ssl_load_engine’:
+eap-tls.c:195:5: warning: ‘ENGINE_register_all_complete’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  195 |     ENGINE_register_all_complete();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/openssl/engine.h:415:27: note: declared here
+  415 | OSSL_DEPRECATEDIN_3_0 int ENGINE_register_all_complete(void);
+      |                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+eap-tls.c:198:5: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  198 |     e = ENGINE_by_id( engine_name );
+      |     ^
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+eap-tls.c:202:9: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  202 |         e = ENGINE_by_id( "dynamic" );
+      |         ^
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+eap-tls.c:205:13: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  205 |             if (!ENGINE_ctrl_cmd_string(e, "SO_PATH", engine_name, 0)
+      |             ^~
+/usr/include/openssl/engine.h:479:5: note: declared here
+  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+eap-tls.c:206:14: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  206 |              || !ENGINE_ctrl_cmd_string(e, "LOAD", NULL, 0))
+      |              ^~
+/usr/include/openssl/engine.h:479:5: note: declared here
+  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+eap-tls.c:210:17: warning: ‘ENGINE_free’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  210 |                 ENGINE_free(e);
+      |                 ^~~~~~~~~~~
+/usr/include/openssl/engine.h:493:27: note: declared here
+  493 | OSSL_DEPRECATEDIN_3_0 int ENGINE_free(ENGINE *e);
+      |                           ^~~~~~~~~~~
+eap-tls.c:223:9: warning: ‘ENGINE_set_default’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  223 |         if(!ENGINE_set_default(e, ENGINE_METHOD_ALL))
+      |         ^~
+/usr/include/openssl/engine.h:708:27: note: declared here
+  708 | OSSL_DEPRECATEDIN_3_0 int ENGINE_set_default(ENGINE *e, unsigned int flags);
+      |                           ^~~~~~~~~~~~~~~~~~
+eap-tls.c:227:13: warning: ‘ENGINE_free’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  227 |             ENGINE_free(e);
+      |             ^~~~~~~~~~~
+/usr/include/openssl/engine.h:493:27: note: declared here
+  493 | OSSL_DEPRECATEDIN_3_0 int ENGINE_free(ENGINE *e);
+      |                           ^~~~~~~~~~~
+eap-tls.c: In function ‘eaptls_init_ssl’:
+eap-tls.c:411:9: warning: ‘ENGINE_ctrl_cmd’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  411 |         if (!ENGINE_ctrl_cmd( cert_engine, "LOAD_CERT_CTRL", 0, &amp;cert_info, NULL, 0 ) )
+      |         ^~
+/usr/include/openssl/engine.h:450:27: note: declared here
+  450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
+      |                           ^~~~~~~~~~~~~~~
+eap-tls.c:536:13: warning: ‘ENGINE_load_private_key’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  536 |             pkey = ENGINE_load_private_key(pkey_engine, privkeyfile, transfer_pin, &amp;cb_data);
+      |             ^~~~
+/usr/include/openssl/engine.h:638:11: note: declared here
+  638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+eap-tls.c:542:13: warning: ‘ENGINE_load_private_key’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  542 |             pkey = ENGINE_load_private_key(pkey_engine, privkeyfile, NULL, NULL);
+      |             ^~~~
+/usr/include/openssl/engine.h:638:11: note: declared here
+  638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-tls.o `test -f 'tls.c' || echo './'`tls.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe  -DSYSCONFDIR=\"/etc\" -DPPPD_RUNTIME_DIR='"/run/pppd"' -DPPPD_LOGFILE_DIR='"/var/log/ppp"' -DSYSTEM_CA_PATH='"/etc/ssl/certs"'   -DPPPD_PLUGIN_DIR='"/usr/lib64/pppd/2.5.2"'       -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppd-peap.o `test -f 'peap.c' || echo './'`peap.c
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libppp_crypto_la-crypto.lo `test -f 'crypto.c' || echo './'`crypto.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c crypto.c  -fPIC -DPIC -o .libs/libppp_crypto_la-crypto.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libppp_crypto_la-ppp-md5.lo `test -f 'ppp-md5.c' || echo './'`ppp-md5.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c ppp-md5.c  -fPIC -DPIC -o .libs/libppp_crypto_la-ppp-md5.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libppp_crypto_la-ppp-md4.lo `test -f 'ppp-md4.c' || echo './'`ppp-md4.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c ppp-md4.c  -fPIC -DPIC -o .libs/libppp_crypto_la-ppp-md4.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libppp_crypto_la-ppp-sha1.lo `test -f 'ppp-sha1.c' || echo './'`ppp-sha1.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c ppp-sha1.c  -fPIC -DPIC -o .libs/libppp_crypto_la-ppp-sha1.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libppp_crypto_la-ppp-des.lo `test -f 'ppp-des.c' || echo './'`ppp-des.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd/plugins/pppoe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c ppp-des.c  -fPIC -DPIC -o .libs/libppp_crypto_la-ppp-des.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libppp_crypto.la  libppp_crypto_la-crypto.lo libppp_crypto_la-ppp-md5.lo libppp_crypto_la-ppp-md4.lo libppp_crypto_la-ppp-sha1.lo libppp_crypto_la-ppp-des.lo -lssl -lcrypto 
+libtool: link: x86_64-pc-linux-gnu-ar cr .libs/libppp_crypto.a .libs/libppp_crypto_la-crypto.o .libs/libppp_crypto_la-ppp-md5.o .libs/libppp_crypto_la-ppp-md4.o .libs/libppp_crypto_la-ppp-sha1.o .libs/libppp_crypto_la-ppp-des.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib .libs/libppp_crypto.a
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libppp_crypto.la" &amp;&amp; ln -s "../libppp_crypto.la" "libppp_crypto.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-E   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pppd pppd-auth.o pppd-ccp.o pppd-chap-md5.o pppd-chap.o pppd-demand.o pppd-eap.o pppd-ecp.o pppd-fsm.o pppd-ipcp.o pppd-lcp.o pppd-magic.o pppd-main.o pppd-options.o pppd-session.o pppd-tty.o pppd-upap.o pppd-utils.o pppd-sys-linux.o  pppd-chap_ms.o pppd-crypto_ms.o  pppd-cbcp.o pppd-mppe.o pppd-multilink.o pppd-tdb.o pppd-spinlock.o pppd-ipv6cp.o pppd-eui64.o pppd-eap-tls.o pppd-tls.o  pppd-peap.o -lcrypt    -ldl -lpam -ldl libppp_crypto.la   
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-E -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o pppd pppd-auth.o pppd-ccp.o pppd-chap-md5.o pppd-chap.o pppd-demand.o pppd-eap.o pppd-ecp.o pppd-fsm.o pppd-ipcp.o pppd-lcp.o pppd-magic.o pppd-main.o pppd-options.o pppd-session.o pppd-tty.o pppd-upap.o pppd-utils.o pppd-sys-linux.o pppd-chap_ms.o pppd-crypto_ms.o pppd-cbcp.o pppd-mppe.o pppd-multilink.o pppd-tdb.o pppd-spinlock.o pppd-ipv6cp.o pppd-eui64.o pppd-eap-tls.o pppd-tls.o pppd-peap.o  -lcrypt -lpam -ldl ./.libs/libppp_crypto.a -lssl -lcrypto
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+Making all in pppstats
+make[1]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd -I../pppd/plugins/pppoe     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppstats-pppstats.o `test -f 'pppstats.c' || echo './'`pppstats.c
+make[1]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+make[1]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pppstats pppstats-pppstats.o  
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o pppstats pppstats-pppstats.o 
+make[1]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+Making all in pppdump
+make[1]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../pppd -I../pppd/plugins/pppoe     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppdump.o pppdump.c
+make[1]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+make[1]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pppdump pppdump.o  
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o pppdump pppdump.o 
+make[1]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+Making all in pppd/plugins
+Making all in pppoe
+make  all-am
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_discovery-pppoe-discovery.o `test -f 'pppoe-discovery.c' || echo './'`pppoe-discovery.c
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_discovery-discovery.o `test -f 'discovery.c' || echo './'`discovery.c
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_discovery-if.o `test -f 'if.c' || echo './'`if.c
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_discovery-common.o `test -f 'common.c' || echo './'`common.c
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_la-plugin.lo `test -f 'plugin.c' || echo './'`plugin.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c plugin.c  -fPIC -DPIC -o .libs/pppoe_la-plugin.o
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_la-discovery.lo `test -f 'discovery.c' || echo './'`discovery.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c discovery.c  -fPIC -DPIC -o .libs/pppoe_la-discovery.o
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_la-if.lo `test -f 'if.c' || echo './'`if.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c if.c  -fPIC -DPIC -o .libs/pppoe_la-if.o
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd  -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoe_la-common.lo `test -f 'common.c' || echo './'`common.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../.. -DSYSCONFDIR=\"/etc\" -DPLUGIN -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c common.c  -fPIC -DPIC -o .libs/pppoe_la-common.o
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pppoe-discovery pppoe_discovery-pppoe-discovery.o pppoe_discovery-discovery.o pppoe_discovery-if.o pppoe_discovery-common.o  
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o pppoe-discovery pppoe_discovery-pppoe-discovery.o pppoe_discovery-discovery.o pppoe_discovery-if.o pppoe_discovery-common.o 
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pppoe.la -rpath /usr/lib64/pppd/2.5.2 pppoe_la-plugin.lo pppoe_la-discovery.lo pppoe_la-if.lo pppoe_la-common.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/pppoe_la-plugin.o .libs/pppoe_la-discovery.o .libs/pppoe_la-if.o .libs/pppoe_la-common.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,pppoe.so -o .libs/pppoe.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "pppoe.la" &amp;&amp; ln -s "../pppoe.la" "pppoe.la" )
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+Making all in pppoatm
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoatm_la-pppoatm.lo `test -f 'pppoatm.c' || echo './'`pppoatm.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c pppoatm.c  -fPIC -DPIC -o .libs/pppoatm_la-pppoatm.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoatm_la-text2qos.lo `test -f 'text2qos.c' || echo './'`text2qos.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c text2qos.c  -fPIC -DPIC -o .libs/pppoatm_la-text2qos.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoatm_la-text2atm.lo `test -f 'text2atm.c' || echo './'`text2atm.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c text2atm.c  -fPIC -DPIC -o .libs/pppoatm_la-text2atm.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoatm_la-misc.lo `test -f 'misc.c' || echo './'`misc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c misc.c  -fPIC -DPIC -o .libs/pppoatm_la-misc.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppoatm_la-ans.lo `test -f 'ans.c' || echo './'`ans.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c ans.c  -fPIC -DPIC -o .libs/pppoatm_la-ans.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pppoatm.la -rpath /usr/lib64/pppd/2.5.2 pppoatm_la-pppoatm.lo pppoatm_la-text2qos.lo pppoatm_la-text2atm.lo pppoatm_la-misc.lo pppoatm_la-ans.lo -lresolv 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/pppoatm_la-pppoatm.o .libs/pppoatm_la-text2qos.o .libs/pppoatm_la-text2atm.o .libs/pppoatm_la-misc.o .libs/pppoatm_la-ans.o   -lresolv  -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,pppoatm.so -o .libs/pppoatm.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "pppoatm.la" &amp;&amp; ln -s "../pppoatm.la" "pppoatm.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+Making all in pppol2tp
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o pppol2tp_la-pppol2tp.lo `test -f 'pppol2tp.c' || echo './'`pppol2tp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c pppol2tp.c  -fPIC -DPIC -o .libs/pppol2tp_la-pppol2tp.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o openl2tp_la-openl2tp.lo `test -f 'openl2tp.c' || echo './'`openl2tp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c openl2tp.c  -fPIC -DPIC -o .libs/openl2tp_la-openl2tp.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pppol2tp.la -rpath /usr/lib64/pppd/2.5.2 pppol2tp_la-pppol2tp.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/pppol2tp_la-pppol2tp.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,pppol2tp.so -o .libs/pppol2tp.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "pppol2tp.la" &amp;&amp; ln -s "../pppol2tp.la" "pppol2tp.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o openl2tp.la -rpath /usr/lib64/pppd/2.5.2 openl2tp_la-openl2tp.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/openl2tp_la-openl2tp.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,openl2tp.so -o .libs/openl2tp.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "openl2tp.la" &amp;&amp; ln -s "../openl2tp.la" "openl2tp.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+Making all in radius
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-avpair.lo `test -f 'avpair.c' || echo './'`avpair.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c avpair.c  -fPIC -DPIC -o .libs/libradiusclient_la-avpair.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-buildreq.lo `test -f 'buildreq.c' || echo './'`buildreq.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c buildreq.c  -fPIC -DPIC -o .libs/libradiusclient_la-buildreq.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-config.lo `test -f 'config.c' || echo './'`config.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c config.c  -fPIC -DPIC -o .libs/libradiusclient_la-config.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-dict.lo `test -f 'dict.c' || echo './'`dict.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c dict.c  -fPIC -DPIC -o .libs/libradiusclient_la-dict.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-ip_util.lo `test -f 'ip_util.c' || echo './'`ip_util.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c ip_util.c  -fPIC -DPIC -o .libs/libradiusclient_la-ip_util.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-clientid.lo `test -f 'clientid.c' || echo './'`clientid.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c clientid.c  -fPIC -DPIC -o .libs/libradiusclient_la-clientid.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-sendserver.lo `test -f 'sendserver.c' || echo './'`sendserver.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c sendserver.c  -fPIC -DPIC -o .libs/libradiusclient_la-sendserver.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-lock.lo `test -f 'lock.c' || echo './'`lock.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c lock.c  -fPIC -DPIC -o .libs/libradiusclient_la-lock.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-util.lo `test -f 'util.c' || echo './'`util.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c util.c  -fPIC -DPIC -o .libs/libradiusclient_la-util.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libradiusclient_la-md5.lo `test -f 'md5.c' || echo './'`md5.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -DSYSCONFDIR=\"/etc\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c md5.c  -fPIC -DPIC -o .libs/libradiusclient_la-md5.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o radius_la-radius.lo `test -f 'radius.c' || echo './'`radius.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c radius.c  -fPIC -DPIC -o .libs/radius_la-radius.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o radattr_la-radattr.lo `test -f 'radattr.c' || echo './'`radattr.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c radattr.c  -fPIC -DPIC -o .libs/radattr_la-radattr.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe  -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o radrealms_la-radrealms.lo `test -f 'radrealms.c' || echo './'`radrealms.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../../pppd -I../../../pppd/plugins/pppoe -I../../.. -DRC_LOG_FACILITY=LOG_DAEMON -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c radrealms.c  -fPIC -DPIC -o .libs/radrealms_la-radrealms.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libradiusclient.la  libradiusclient_la-avpair.lo libradiusclient_la-buildreq.lo libradiusclient_la-config.lo libradiusclient_la-dict.lo libradiusclient_la-ip_util.lo libradiusclient_la-clientid.lo libradiusclient_la-sendserver.lo libradiusclient_la-lock.lo libradiusclient_la-util.lo libradiusclient_la-md5.lo  
+libtool: link: x86_64-pc-linux-gnu-ar cr .libs/libradiusclient.a .libs/libradiusclient_la-avpair.o .libs/libradiusclient_la-buildreq.o .libs/libradiusclient_la-config.o .libs/libradiusclient_la-dict.o .libs/libradiusclient_la-ip_util.o .libs/libradiusclient_la-clientid.o .libs/libradiusclient_la-sendserver.o .libs/libradiusclient_la-lock.o .libs/libradiusclient_la-util.o .libs/libradiusclient_la-md5.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib .libs/libradiusclient.a
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libradiusclient.la" &amp;&amp; ln -s "../libradiusclient.la" "libradiusclient.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o radattr.la -rpath /usr/lib64/pppd/2.5.2 radattr_la-radattr.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/radattr_la-radattr.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,radattr.so -o .libs/radattr.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "radattr.la" &amp;&amp; ln -s "../radattr.la" "radattr.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o radrealms.la -rpath /usr/lib64/pppd/2.5.2 radrealms_la-radrealms.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/radrealms_la-radrealms.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,radrealms.so -o .libs/radrealms.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "radrealms.la" &amp;&amp; ln -s "../radrealms.la" "radrealms.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o radius.la -rpath /usr/lib64/pppd/2.5.2 radius_la-radius.lo libradiusclient.la 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/radius_la-radius.o  -Wl,--whole-archive ./.libs/libradiusclient.a -Wl,--no-whole-archive   -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,radius.so -o .libs/radius.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "radius.la" &amp;&amp; ln -s "../radius.la" "radius.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../pppd -I../../pppd/plugins/pppoe  -I../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o minconn_la-minconn.lo `test -f 'minconn.c' || echo './'`minconn.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../pppd -I../../pppd/plugins/pppoe -I../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c minconn.c  -fPIC -DPIC -o .libs/minconn_la-minconn.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../pppd -I../../pppd/plugins/pppoe  -I../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o passwordfd_la-passwordfd.lo `test -f 'passwordfd.c' || echo './'`passwordfd.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../pppd -I../../pppd/plugins/pppoe -I../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c passwordfd.c  -fPIC -DPIC -o .libs/passwordfd_la-passwordfd.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../pppd -I../../pppd/plugins/pppoe  -I../..   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o winbind_la-winbind.lo `test -f 'winbind.c' || echo './'`winbind.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../pppd -I../../pppd/plugins/pppoe -I../.. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c winbind.c  -fPIC -DPIC -o .libs/winbind_la-winbind.o
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o minconn.la -rpath /usr/lib64/pppd/2.5.2 minconn_la-minconn.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/minconn_la-minconn.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,minconn.so -o .libs/minconn.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "minconn.la" &amp;&amp; ln -s "../minconn.la" "minconn.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o passwordfd.la -rpath /usr/lib64/pppd/2.5.2 passwordfd_la-passwordfd.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/passwordfd_la-passwordfd.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,passwordfd.so -o .libs/passwordfd.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "passwordfd.la" &amp;&amp; ln -s "../passwordfd.la" "passwordfd.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o winbind.la -rpath /usr/lib64/pppd/2.5.2 winbind_la-winbind.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/winbind_la-winbind.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,winbind.so -o .libs/winbind.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "winbind.la" &amp;&amp; ln -s "../winbind.la" "winbind.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+make[1]: Nothing to be done for 'all-am'.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: net-dialup/ppp-2.5.2
+
+&gt;&gt;&gt; Install net-dialup/ppp-2.5.2 into /var/tmp/portage/net-dialup/ppp-2.5.2/image
+make -j2 DESTDIR=/var/tmp/portage/net-dialup/ppp-2.5.2/image install 
+Making install in chat
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c chat '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c chat /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin/chat
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 chat.8 '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/chat'
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in pppd
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 pppd.8 '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppd '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppd /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin/pppd
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pkgconfig'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 pppd.pc '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pkgconfig'
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/include/pppd'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 cbcp.h ccp.h chap.h chap_ms.h crypto.h crypto_ms.h eap.h ecp.h eui64.h fsm.h ipcp.h ipv6cp.h lcp.h magic.h mppe.h multilink.h pppd.h options.h pppdconf.h session.h upap.h '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/include/pppd'
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd'
+Making install in pppstats
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 pppstats.8 '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppstats '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppstats /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin/pppstats
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppstats'
+Making install in pppdump
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 pppdump.8 '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppdump '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppdump /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin/pppdump
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppdump'
+Making install in pppd/plugins
+Making install in pppoe
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 pppoe-discovery.8 '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+  /bin/sh ../../../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppoe-discovery '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c pppoe-discovery /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/sbin/pppoe-discovery
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+ /bin/sh ../../../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c   pppoe.la '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/pppoe.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/pppoe.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/pppoe.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/pppoe.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64/pppd/2.5.2'
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoe'
+Making install in pppoatm
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+ /bin/sh ../../../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c   pppoatm.la '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/pppoatm.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/pppoatm.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/pppoatm.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/pppoatm.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64/pppd/2.5.2'
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppoatm'
+Making install in pppol2tp
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+ /bin/sh ../../../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c   pppol2tp.la openl2tp.la '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/pppol2tp.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/pppol2tp.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/pppol2tp.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/pppol2tp.la
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/openl2tp.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/openl2tp.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/openl2tp.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/openl2tp.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64/pppd/2.5.2'
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/pppol2tp'
+Making install in radius
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 pppd-radius.8 pppd-radattr.8 '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/share/man/man8'
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+ /bin/sh ../../../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c   radius.la radattr.la radrealms.la '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/radius.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/radius.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/radius.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/radius.la
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/radattr.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/radattr.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/radattr.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/radattr.la
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/radrealms.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/radrealms.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/radrealms.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/radrealms.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64/pppd/2.5.2'
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins/radius'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+ /bin/sh ../../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c   minconn.la passwordfd.la winbind.la '/var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2'
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/minconn.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/minconn.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/minconn.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/minconn.la
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/passwordfd.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/passwordfd.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/passwordfd.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/passwordfd.la
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/winbind.so /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/winbind.so
+libtool: install: /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c .libs/winbind.lai /var/tmp/portage/net-dialup/ppp-2.5.2/image/usr/lib64/pppd/2.5.2/winbind.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64/pppd/2.5.2'
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2/pppd/plugins'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2'
+ /bin/mkdir -p '/var/tmp/portage/net-dialup/ppp-2.5.2/image/etc/ppp'
+ /var/tmp/portage/._portage_reinstall_.j_2763d3/bin/ebuild-helpers/xattr/install -c -m 644 etc.ppp/options.example etc.ppp/chap-secrets.example etc.ppp/pap-secrets.example etc.ppp/eaptls-server.example etc.ppp/eaptls-client.example etc.ppp/openssl.cnf.example '/var/tmp/portage/net-dialup/ppp-2.5.2/image/etc/ppp'
+make[2]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2'
+make  install-data-hook
+make[3]: Entering directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2'
+(cd /var/tmp/portage/net-dialup/ppp-2.5.2/image//etc/ppp ; \
+ chmod 600 chap-secrets.example pap-secrets.example \
+ eaptls-server.example eaptls-client.example)
+make[3]: Leaving directory '/var/tmp/portage/net-dialup/ppp-2.5.2/work/ppp-2.5.2'
+&gt;&gt;&gt; Completed installing net-dialup/ppp-2.5.2 into /var/tmp/portage/net-dialup/ppp-2.5.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 7760 KiB (7.5 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1560 KiB (1.5 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/sbin/chat
+   /usr/sbin/pppd
+   /usr/sbin/pppstats
+   /usr/sbin/pppdump
+   /usr/sbin/pppoe-discovery
+   /usr/lib64/pppd/2.5.2/pppoe.so
+   /usr/lib64/pppd/2.5.2/pppoatm.so
+   /usr/lib64/pppd/2.5.2/pppol2tp.so
+   /usr/lib64/pppd/2.5.2/openl2tp.so
+   /usr/lib64/pppd/2.5.2/radius.so
+   /usr/lib64/pppd/2.5.2/radattr.so
+   /usr/lib64/pppd/2.5.2/radrealms.so
+   /usr/lib64/pppd/2.5.2/minconn.so
+   /usr/lib64/pppd/2.5.2/passwordfd.so
+   /usr/lib64/pppd/2.5.2/winbind.so
+
+</pre>
+</body>
+
+</html>
