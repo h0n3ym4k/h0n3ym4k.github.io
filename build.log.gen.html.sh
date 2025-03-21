@@ -2,6 +2,7 @@
 
 #try to notify what time started
 (d=`date +%X`;while(/bin/true);do echo "${d} started";sleep 60;done)&
+echo $! >/tmp/w.pid
 
 #program entrant - rm -rf /var/log/portage/build - new world <= NEVER scripted this line
 
@@ -219,3 +220,5 @@ cat index.html.tmp.3 >> index.html
 rm -f index.html.tmp.1 index.html.tmp.2 index.html.tmp.3
 
 echo "index.html generated"
+
+kill `cat /tmp/w.pid`
