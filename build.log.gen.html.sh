@@ -79,6 +79,7 @@ cp -v /tmp/01summary.log /mnt/Downloads/portage-build-log/01summary.log
 
 #step 5 - genkernel.log
 cat /var/log/genkernel.log | ansi2html > /mnt/Downloads/portage-build-log/genkernel.log.html
+zcat /proc/config.gz | ansi2html > /mnt/Downloads/portage-build-log/kernel.config.log.html
 
 #step 6 - emerge --info # is qatom really faster?doubt
 cd /mnt/Downloads/portage-build-log
@@ -193,6 +194,8 @@ if [ -e qa_notice.html ];then
 fi
 
 echo "<center><h3>All logs, in general</h3></center>" >> index.html.tmp.1
+echo "<br/>" >> index.html.tmp.1
+echo "<a href="kernel.config.log.html">kernel.config.log.html - kernel config</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 echo "<a href="genkernel.log.html">genkernel.log.html - genkernel - kernel build log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
