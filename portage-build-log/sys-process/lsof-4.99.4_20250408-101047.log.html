@@ -1,0 +1,458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-process/lsof-4.99.4:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking lsof-4.99.4.tar.gz to /var/tmp/portage/sys-process/lsof-4.99.4/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-process/lsof-4.99.4/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4 ...
+ * econf: updating lsof-4.99.4/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating lsof-4.99.4/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/lsof-4.99.4 --htmldir=/usr/share/doc/lsof-4.99.4/html --with-sysroot=/ --libdir=/usr/lib64 --without-libtirpc --without-selinux
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-pc-linux-gnu-gcc... (cached) x86_64-pc-linux-gnu-gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... (cached) none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... (cached) yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... (cached) none
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for rpc/rpc.h... no
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether __GLIBC__ is declared... yes
+checking whether AF_INET6 is declared... yes
+checking for netinet6/in6.h... no
+checking for netinet/in6.h... no
+checking for netinet/ip6.h... yes
+checking whether TCP_ESTABLISHED is declared... yes
+checking for linux/sock_diag.h... yes
+checking for linux/unix_diag.h... yes
+checking whether TTYAUX_MAJOR is declared... yes
+checking whether SS_CONNECTED is declared... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for strftime... yes
+checking for utmpx.h... yes
+checking for vm_memattr_t... no
+checking whether doadump is declared... no
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking whether SBS_CANTSENDMORE is declared... no
+checking for struct lockf_entry... no
+checking for struct kinfo_proc.ki_numthreads... no
+checking for struct inode.i_effnlink... no
+checking for struct file.f_vnode... no
+checking for struct filedescent... no
+checking for wctype.h... yes
+checking for struct inode.i_din2... no
+checking for struct vnode.v_lockf... no
+checking for fs/fdescfs/fdesc.h... no
+checking for fs/nullfs/null.h... no
+checking for struct xtcpcb.t_maxseg... no
+checking for struct kinfo_file.kf_un.kf_sock.kf_sock_sendq... no
+checking for struct kinfo_file.kf_un.kf_file.kf_file_nlink... no
+checking for nfs/nfsproto.h... no
+checking for uvm/uvm.h... no
+checking for struct statvfs... yes
+checking for struct inode.i_ffs1_size... no
+checking whether getbootfile is declared... no
+checking whether kvm_getproc2 is declared... no
+checking for fs/ptyfs/ptyfs.h... no
+checking for miscfs/procfs/procfs.h... no
+checking whether PFSroot is declared... no
+checking for fs/tmpfs/tmpfs.h... no
+checking for sys/pipe.h... no
+checking for miscfs/fdesc/fdesc.h... no
+checking for struct fdescnode.fd_link... no
+checking for miscfs/nullfs/null.h... no
+checking whether dup2 is declared... yes
+checking whether closefrom is declared... yes
+checking size of dev_t... 8
+checking for inet/ipclassifier.h... no
+checking for struct conn_s.conn_ixa... no
+checking for sys/zone.h... no
+checking for pad_mutex_t... no
+checking for libctf.h... no
+checking whether pc_direntpersec is declared... no
+checking for sys/fs/zfs.h... no
+checking for sys/cred_impl.h... no
+checking for struct vnode.v_path... no
+checking whether VSOCK is declared... no
+checking for struct aio_req... no
+checking for sys/rgm.h... no
+checking for rpc/rpc_tags.h... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating autotools/version.h
+config.status: creating autotools/autotools.h
+config.status: creating version
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4 ...
+make -j2 DEBUG= all 
+make  all-am
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-ckkv.lo `test -f 'lib/ckkv.c' || echo './'`lib/ckkv.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/ckkv.c  -fPIC -DPIC -o lib/.libs/liblsof_la-ckkv.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-cvfs.lo `test -f 'lib/cvfs.c' || echo './'`lib/cvfs.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/cvfs.c  -fPIC -DPIC -o lib/.libs/liblsof_la-cvfs.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-dvch.lo `test -f 'lib/dvch.c' || echo './'`lib/dvch.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/dvch.c  -fPIC -DPIC -o lib/.libs/liblsof_la-dvch.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-fino.lo `test -f 'lib/fino.c' || echo './'`lib/fino.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/fino.c  -fPIC -DPIC -o lib/.libs/liblsof_la-fino.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-isfn.lo `test -f 'lib/isfn.c' || echo './'`lib/isfn.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/isfn.c  -fPIC -DPIC -o lib/.libs/liblsof_la-isfn.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-lkud.lo `test -f 'lib/lkud.c' || echo './'`lib/lkud.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/lkud.c  -fPIC -DPIC -o lib/.libs/liblsof_la-lkud.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-lsof.lo `test -f 'lib/lsof.c' || echo './'`lib/lsof.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/lsof.c  -fPIC -DPIC -o lib/.libs/liblsof_la-lsof.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-misc.lo `test -f 'lib/misc.c' || echo './'`lib/misc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/misc.c  -fPIC -DPIC -o lib/.libs/liblsof_la-misc.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-node.lo `test -f 'lib/node.c' || echo './'`lib/node.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/node.c  -fPIC -DPIC -o lib/.libs/liblsof_la-node.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-pdvn.lo `test -f 'lib/pdvn.c' || echo './'`lib/pdvn.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/pdvn.c  -fPIC -DPIC -o lib/.libs/liblsof_la-pdvn.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-prfp.lo `test -f 'lib/prfp.c' || echo './'`lib/prfp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/prfp.c  -fPIC -DPIC -o lib/.libs/liblsof_la-prfp.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-print.lo `test -f 'lib/print.c' || echo './'`lib/print.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/print.c  -fPIC -DPIC -o lib/.libs/liblsof_la-print.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-proc.lo `test -f 'lib/proc.c' || echo './'`lib/proc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/proc.c  -fPIC -DPIC -o lib/.libs/liblsof_la-proc.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-ptti.lo `test -f 'lib/ptti.c' || echo './'`lib/ptti.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/ptti.c  -fPIC -DPIC -o lib/.libs/liblsof_la-ptti.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-rdev.lo `test -f 'lib/rdev.c' || echo './'`lib/rdev.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/rdev.c  -fPIC -DPIC -o lib/.libs/liblsof_la-rdev.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-rnmt.lo `test -f 'lib/rnmt.c' || echo './'`lib/rnmt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/rnmt.c  -fPIC -DPIC -o lib/.libs/liblsof_la-rnmt.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-rmnt.lo `test -f 'lib/rmnt.c' || echo './'`lib/rmnt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/rmnt.c  -fPIC -DPIC -o lib/.libs/liblsof_la-rmnt.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-rnam.lo `test -f 'lib/rnam.c' || echo './'`lib/rnam.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/rnam.c  -fPIC -DPIC -o lib/.libs/liblsof_la-rnam.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-rnch.lo `test -f 'lib/rnch.c' || echo './'`lib/rnch.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/rnch.c  -fPIC -DPIC -o lib/.libs/liblsof_la-rnch.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/liblsof_la-rnmh.lo `test -f 'lib/rnmh.c' || echo './'`lib/rnmh.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/rnmh.c  -fPIC -DPIC -o lib/.libs/liblsof_la-rnmh.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/liblsof_la-dfile.lo `test -f 'lib/dialects/linux/dfile.c' || echo './'`lib/dialects/linux/dfile.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/dialects/linux/dfile.c  -fPIC -DPIC -o lib/dialects/linux/.libs/liblsof_la-dfile.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/liblsof_la-dmnt.lo `test -f 'lib/dialects/linux/dmnt.c' || echo './'`lib/dialects/linux/dmnt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/dialects/linux/dmnt.c  -fPIC -DPIC -o lib/dialects/linux/.libs/liblsof_la-dmnt.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/liblsof_la-dnode.lo `test -f 'lib/dialects/linux/dnode.c' || echo './'`lib/dialects/linux/dnode.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/dialects/linux/dnode.c  -fPIC -DPIC -o lib/dialects/linux/.libs/liblsof_la-dnode.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/liblsof_la-dproc.lo `test -f 'lib/dialects/linux/dproc.c' || echo './'`lib/dialects/linux/dproc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/dialects/linux/dproc.c  -fPIC -DPIC -o lib/dialects/linux/.libs/liblsof_la-dproc.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/liblsof_la-dstore.lo `test -f 'lib/dialects/linux/dstore.c' || echo './'`lib/dialects/linux/dstore.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/dialects/linux/dstore.c  -fPIC -DPIC -o lib/dialects/linux/.libs/liblsof_la-dstore.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/liblsof_la-dsock.lo `test -f 'lib/dialects/linux/dsock.c' || echo './'`lib/dialects/linux/dsock.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c lib/dialects/linux/dsock.c  -fPIC -DPIC -o lib/dialects/linux/.libs/liblsof_la-dsock.o
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+soelim &lt; Lsof.8 &gt; lsof.man
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/lsof-arg.o `test -f 'src/arg.c' || echo './'`src/arg.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/lsof-main.o `test -f 'src/main.c' || echo './'`src/main.c
+src/main.c: In function ‘main’:
+src/main.c:1304:62: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+ 1304 |                     (void)fprintf(stderr, "%s: no space for %d sort pointers\n",
+      |                                                             ~^
+      |                                                              |
+      |                                                              int
+      |                                                             %ld
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/lsof-print.o `test -f 'src/print.c' || echo './'`src/print.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/lsof-ptti.o `test -f 'src/ptti.c' || echo './'`src/ptti.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/lsof-store.o `test -f 'src/store.c' || echo './'`src/store.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/lsof-usage.o `test -f 'src/usage.c' || echo './'`src/usage.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/lsof-util.o `test -f 'src/util.c' || echo './'`src/util.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o src/dialects/linux/lsof-dprint.o `test -f 'src/dialects/linux/dprint.c' || echo './'`src/dialects/linux/dprint.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-ckkv.o `test -f 'lib/ckkv.c' || echo './'`lib/ckkv.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-cvfs.o `test -f 'lib/cvfs.c' || echo './'`lib/cvfs.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-dvch.o `test -f 'lib/dvch.c' || echo './'`lib/dvch.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-fino.o `test -f 'lib/fino.c' || echo './'`lib/fino.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-isfn.o `test -f 'lib/isfn.c' || echo './'`lib/isfn.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-lkud.o `test -f 'lib/lkud.c' || echo './'`lib/lkud.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-lsof.o `test -f 'lib/lsof.c' || echo './'`lib/lsof.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-misc.o `test -f 'lib/misc.c' || echo './'`lib/misc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-node.o `test -f 'lib/node.c' || echo './'`lib/node.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-pdvn.o `test -f 'lib/pdvn.c' || echo './'`lib/pdvn.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-prfp.o `test -f 'lib/prfp.c' || echo './'`lib/prfp.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-print.o `test -f 'lib/print.c' || echo './'`lib/print.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-proc.o `test -f 'lib/proc.c' || echo './'`lib/proc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-ptti.o `test -f 'lib/ptti.c' || echo './'`lib/ptti.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-rdev.o `test -f 'lib/rdev.c' || echo './'`lib/rdev.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-rnmt.o `test -f 'lib/rnmt.c' || echo './'`lib/rnmt.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-rnam.o `test -f 'lib/rnam.c' || echo './'`lib/rnam.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-rmnt.o `test -f 'lib/rmnt.c' || echo './'`lib/rmnt.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-rnch.o `test -f 'lib/rnch.c' || echo './'`lib/rnch.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/lsof-rnmh.o `test -f 'lib/rnmh.c' || echo './'`lib/rnmh.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/lsof-dfile.o `test -f 'lib/dialects/linux/dfile.c' || echo './'`lib/dialects/linux/dfile.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/lsof-dmnt.o `test -f 'lib/dialects/linux/dmnt.c' || echo './'`lib/dialects/linux/dmnt.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/lsof-dnode.o `test -f 'lib/dialects/linux/dnode.c' || echo './'`lib/dialects/linux/dnode.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/lsof-dproc.o `test -f 'lib/dialects/linux/dproc.c' || echo './'`lib/dialects/linux/dproc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/lsof-dstore.o `test -f 'lib/dialects/linux/dstore.c' || echo './'`lib/dialects/linux/dstore.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -I./lib/dialects/linux -Iautotools -DAUTOTOOLS -I./lib -I./include -I./src  -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -c -o lib/dialects/linux/lsof-dsock.o `test -f 'lib/dialects/linux/dsock.c' || echo './'`lib/dialects/linux/dsock.c
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o liblsof.la -rpath /usr/lib64 lib/liblsof_la-ckkv.lo lib/liblsof_la-cvfs.lo lib/liblsof_la-dvch.lo lib/liblsof_la-fino.lo lib/liblsof_la-isfn.lo lib/liblsof_la-lkud.lo lib/liblsof_la-lsof.lo lib/liblsof_la-misc.lo lib/liblsof_la-node.lo lib/liblsof_la-pdvn.lo lib/liblsof_la-prfp.lo lib/liblsof_la-print.lo lib/liblsof_la-proc.lo lib/liblsof_la-ptti.lo lib/liblsof_la-rdev.lo lib/liblsof_la-rnmt.lo lib/liblsof_la-rmnt.lo lib/liblsof_la-rnam.lo lib/liblsof_la-rnch.lo lib/liblsof_la-rnmh.lo lib/dialects/linux/liblsof_la-dfile.lo lib/dialects/linux/liblsof_la-dmnt.lo lib/dialects/linux/liblsof_la-dnode.lo lib/dialects/linux/liblsof_la-dproc.lo lib/dialects/linux/liblsof_la-dsock.lo lib/dialects/linux/liblsof_la-dstore.lo        
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  lib/.libs/liblsof_la-ckkv.o lib/.libs/liblsof_la-cvfs.o lib/.libs/liblsof_la-dvch.o lib/.libs/liblsof_la-fino.o lib/.libs/liblsof_la-isfn.o lib/.libs/liblsof_la-lkud.o lib/.libs/liblsof_la-lsof.o lib/.libs/liblsof_la-misc.o lib/.libs/liblsof_la-node.o lib/.libs/liblsof_la-pdvn.o lib/.libs/liblsof_la-prfp.o lib/.libs/liblsof_la-print.o lib/.libs/liblsof_la-proc.o lib/.libs/liblsof_la-ptti.o lib/.libs/liblsof_la-rdev.o lib/.libs/liblsof_la-rnmt.o lib/.libs/liblsof_la-rmnt.o lib/.libs/liblsof_la-rnam.o lib/.libs/liblsof_la-rnch.o lib/.libs/liblsof_la-rnmh.o lib/dialects/linux/.libs/liblsof_la-dfile.o lib/dialects/linux/.libs/liblsof_la-dmnt.o lib/dialects/linux/.libs/liblsof_la-dnode.o lib/dialects/linux/.libs/liblsof_la-dproc.o lib/dialects/linux/.libs/liblsof_la-dsock.o lib/dialects/linux/.libs/liblsof_la-dstore.o    -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,liblsof.so.0 -o .libs/liblsof.so.0.0.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "liblsof.so.0" &amp;&amp; ln -s "liblsof.so.0.0.0" "liblsof.so.0")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "liblsof.so" &amp;&amp; ln -s "liblsof.so.0.0.0" "liblsof.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "liblsof.la" &amp;&amp; ln -s "../liblsof.la" "liblsof.la" )
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o lsof src/lsof-arg.o src/lsof-main.o src/lsof-print.o src/lsof-ptti.o src/lsof-store.o src/lsof-usage.o src/lsof-util.o src/dialects/linux/lsof-dprint.o  lib/lsof-ckkv.o lib/lsof-cvfs.o lib/lsof-dvch.o lib/lsof-fino.o lib/lsof-isfn.o lib/lsof-lkud.o lib/lsof-lsof.o lib/lsof-misc.o lib/lsof-node.o lib/lsof-pdvn.o lib/lsof-prfp.o lib/lsof-print.o lib/lsof-proc.o lib/lsof-ptti.o lib/lsof-rdev.o lib/lsof-rnmt.o lib/lsof-rmnt.o lib/lsof-rnam.o lib/lsof-rnch.o lib/lsof-rnmh.o lib/dialects/linux/lsof-dfile.o lib/dialects/linux/lsof-dmnt.o lib/dialects/linux/lsof-dnode.o lib/dialects/linux/lsof-dproc.o lib/dialects/linux/lsof-dsock.o lib/dialects/linux/lsof-dstore.o        
+libtool: link: x86_64-pc-linux-gnu-gcc -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_FILE_OFFSET_BITS=64 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o lsof src/lsof-arg.o src/lsof-main.o src/lsof-print.o src/lsof-ptti.o src/lsof-store.o src/lsof-usage.o src/lsof-util.o src/dialects/linux/lsof-dprint.o lib/lsof-ckkv.o lib/lsof-cvfs.o lib/lsof-dvch.o lib/lsof-fino.o lib/lsof-isfn.o lib/lsof-lkud.o lib/lsof-lsof.o lib/lsof-misc.o lib/lsof-node.o lib/lsof-pdvn.o lib/lsof-prfp.o lib/lsof-print.o lib/lsof-proc.o lib/lsof-ptti.o lib/lsof-rdev.o lib/lsof-rnmt.o lib/lsof-rmnt.o lib/lsof-rnam.o lib/lsof-rnch.o lib/lsof-rnmh.o lib/dialects/linux/lsof-dfile.o lib/dialects/linux/lsof-dmnt.o lib/dialects/linux/lsof-dnode.o lib/dialects/linux/lsof-dproc.o lib/dialects/linux/lsof-dsock.o lib/dialects/linux/lsof-dstore.o 
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-process/lsof-4.99.4
+
+&gt;&gt;&gt; Install sys-process/lsof-4.99.4 into /var/tmp/portage/sys-process/lsof-4.99.4/image
+make -j2 DESTDIR=/var/tmp/portage/sys-process/lsof-4.99.4/image install 
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+ /bin/mkdir -p '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/lib64'
+ /bin/sh ./libtool   --mode=install /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c   liblsof.la '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c .libs/liblsof.so.0.0.0 /var/tmp/portage/sys-process/lsof-4.99.4/image/usr/lib64/liblsof.so.0.0.0
+libtool: install: (cd /var/tmp/portage/sys-process/lsof-4.99.4/image/usr/lib64 &amp;&amp; { ln -s -f liblsof.so.0.0.0 liblsof.so.0 || { rm -f liblsof.so.0 &amp;&amp; ln -s liblsof.so.0.0.0 liblsof.so.0; }; })
+libtool: install: (cd /var/tmp/portage/sys-process/lsof-4.99.4/image/usr/lib64 &amp;&amp; { ln -s -f liblsof.so.0.0.0 liblsof.so || { rm -f liblsof.so &amp;&amp; ln -s liblsof.so.0.0.0 liblsof.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c .libs/liblsof.lai /var/tmp/portage/sys-process/lsof-4.99.4/image/usr/lib64/liblsof.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+ /bin/mkdir -p '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/include'
+ /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c -m 644 include/lsof.h include/lsof_fields.h '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/include'
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+ /bin/mkdir -p '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c -m 644 'lsof.man' '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/share/man/man8/lsof.8'
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+make[1]: Entering directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+ /bin/mkdir -p '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/bin'
+  /bin/sh ./libtool   --mode=install /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c lsof '/var/tmp/portage/sys-process/lsof-4.99.4/image/usr/bin'
+libtool: install: /var/tmp/portage/._portage_reinstall_.klf3s49y/bin/ebuild-helpers/xattr/install -c lsof /var/tmp/portage/sys-process/lsof-4.99.4/image/usr/bin/lsof
+make[1]: Leaving directory '/var/tmp/portage/sys-process/lsof-4.99.4/work/lsof-4.99.4'
+&gt;&gt;&gt; Completed installing sys-process/lsof-4.99.4 into /var/tmp/portage/sys-process/lsof-4.99.4/image
+
+ <span class="ansi32">*</span> Final size of build directory: 7928 KiB (7.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   612 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/liblsof.so.0.0.0
+   /usr/bin/lsof
+
+</pre>
+</body>
+
+</html>

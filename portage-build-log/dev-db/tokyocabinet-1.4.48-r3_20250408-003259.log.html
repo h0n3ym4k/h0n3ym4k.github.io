@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-db/tokyocabinet-1.4.48-r3:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 bzip2 elibc_glibc kernel_linux threads zlib
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking tokyocabinet-1.4.48.tar.gz to /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/work/tokyocabinet-1.4.48 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Running eautoreconf in '/var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/work/tokyocabinet-1.4.48' ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Moving configure.in to configure.ac (bug #426262)
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: tokyocabinet-1.4.48/
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/work/tokyocabinet-1.4.48 ...
+ * econf: updating tokyocabinet-1.4.48/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating tokyocabinet-1.4.48/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --docdir=/usr/share/doc/tokyocabinet-1.4.48-r3 --htmldir=/usr/share/doc/tokyocabinet-1.4.48-r3/html --libdir=/usr/lib64 --enable-off64 --enable-fastest --enable-bzip --disable-debug --enable-pthread --enable-zlib
+#================================================================
+# Configuring Tokyo Cabinet version 1.4.48 (fastest) (off64).
+#================================================================
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking for main in -lc... yes
+checking for main in -lm... yes
+checking for main in -lpthread... yes
+checking for main in -lrt... yes
+checking for main in -lz... yes
+checking for main in -lbz2... yes
+checking for main in -ltokyocabinet... yes
+configure: WARNING: old version of Tokyo Cabinet was detected
+checking for stdlib.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dirent.h... yes
+checking for regex.h... yes
+checking for glob.h... yes
+checking for pthread.h... yes
+checking for zlib.h... yes
+checking for bzlib.h... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating tokyocabinet.pc
+#================================================================
+# Ready to make.
+#================================================================
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/work/tokyocabinet-1.4.48 ...
+make -j2 
+cat myconf.c tcutil.c md5.c tchdb.c tcbdb.c tcfdb.c tctdb.c tcadb.c &gt; tokyocabinet_all.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcutest.c
+tcutest.c: In function ‘procmisc’:
+tcutest.c:880:22: warning: self-comparison always evaluates to false [-Wtautological-compare]
+  880 |           if(dary[j] != dary[j]) err = true;
+      |                      ^~
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcumttest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcucodec.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tchtest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tchmttest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tchmgr.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcbtest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcbmttest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcbmgr.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcftest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcfmttest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcfmgr.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcttest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tctmttest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tctmgr.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcamttest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcatest.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcamgr.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tcawmgr.c
+x86_64-pc-linux-gnu-gcc -c -I. -I/usr/include -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__ -D_MYFASTEST -D_FILE_OFFSET_BITS=64 -D_TC_PREFIX="\"/usr\"" -D_TC_INCLUDEDIR="\"/usr/include\"" -D_TC_LIBDIR="\"/usr/lib64\"" -D_TC_BINDIR="\"/usr/bin\"" -D_TC_LIBEXECDIR="\"/usr/libexec\"" -D_TC_APPINC="\"-I/usr/include\"" -D_TC_APPLIBS="\"-L/usr/lib64 -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc \"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops tokyocabinet_all.c
+tokyocabinet_all.c: In function ‘tchdbiterjumpimpl’:
+tokyocabinet_all.c:16204:7: warning: ‘rec.hash’ may be used uninitialized [-Wmaybe-uninitialized]
+16204 |     if(hash &gt; rec.hash){
+      |       ^
+tokyocabinet_all.c:16199:10: note: ‘rec.hash’ was declared here
+16199 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:16209:9: warning: ‘rec.kbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+16209 |       if(!rec.kbuf &amp;&amp; !tchdbreadrecbody(hdb, &amp;rec)) return false;
+      |         ^
+tokyocabinet_all.c:16199:10: note: ‘rec.kbuf’ was declared here
+16199 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbiterjumpimpl’ at tokyocabinet_all.c:16209:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.vsiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbiterjumpimpl’:
+tokyocabinet_all.c:16199:10: note: ‘rec.vsiz’ was declared here
+16199 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbiterjumpimpl’ at tokyocabinet_all.c:16209:24:
+tokyocabinet_all.c:14282:7: warning: ‘rec.boff’ may be used uninitialized [-Wmaybe-uninitialized]
+14282 |   if(!tchdbseekread(hdb, rec-&gt;boff, rec-&gt;bbuf, bsiz)) return false;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbiterjumpimpl’:
+tokyocabinet_all.c:16199:10: note: ‘rec.boff’ was declared here
+16199 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbiterjumpimpl’ at tokyocabinet_all.c:16209:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.ksiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbiterjumpimpl’:
+tokyocabinet_all.c:16199:10: note: ‘rec.ksiz’ was declared here
+16199 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:16212:13: warning: ‘rec.left’ may be used uninitialized [-Wmaybe-uninitialized]
+16212 |         off = rec.left;
+      |         ~~~~^~~~~~~~~~
+tokyocabinet_all.c:16199:10: note: ‘rec.left’ was declared here
+16199 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:16217:13: warning: ‘rec.right’ may be used uninitialized [-Wmaybe-uninitialized]
+16217 |         off = rec.right;
+      |         ~~~~^~~~~~~~~~~
+tokyocabinet_all.c:16199:10: note: ‘rec.right’ was declared here
+16199 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c: In function ‘tchdbvsizimpl’:
+tokyocabinet_all.c:15777:7: warning: ‘rec.hash’ may be used uninitialized [-Wmaybe-uninitialized]
+15777 |     if(hash &gt; rec.hash){
+      |       ^
+tokyocabinet_all.c:15772:10: note: ‘rec.hash’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15782:9: warning: ‘rec.kbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+15782 |       if(!rec.kbuf &amp;&amp; !tchdbreadrecbody(hdb, &amp;rec)) return -1;
+      |         ^
+tokyocabinet_all.c:15772:10: note: ‘rec.kbuf’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbvsizimpl’ at tokyocabinet_all.c:15782:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.ksiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbvsizimpl’:
+tokyocabinet_all.c:15772:10: note: ‘rec.ksiz’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbvsizimpl’ at tokyocabinet_all.c:15782:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.vsiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbvsizimpl’:
+tokyocabinet_all.c:15772:10: note: ‘rec.vsiz’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbvsizimpl’ at tokyocabinet_all.c:15782:24:
+tokyocabinet_all.c:14282:7: warning: ‘rec.boff’ may be used uninitialized [-Wmaybe-uninitialized]
+14282 |   if(!tchdbseekread(hdb, rec-&gt;boff, rec-&gt;bbuf, bsiz)) return false;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbvsizimpl’:
+tokyocabinet_all.c:15772:10: note: ‘rec.boff’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15820:22: warning: ‘rec.vbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+15820 |         if(hdb-&gt;recc &amp;&amp; rec.vbuf){
+      |            ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c:15772:10: note: ‘rec.vbuf’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15785:13: warning: ‘rec.left’ may be used uninitialized [-Wmaybe-uninitialized]
+15785 |         off = rec.left;
+      |         ~~~~^~~~~~~~~~
+tokyocabinet_all.c:15772:10: note: ‘rec.left’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15790:13: warning: ‘rec.right’ may be used uninitialized [-Wmaybe-uninitialized]
+15790 |         off = rec.right;
+      |         ~~~~^~~~~~~~~~~
+tokyocabinet_all.c:15772:10: note: ‘rec.right’ was declared here
+15772 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c: In function ‘tchdbgetimpl’:
+tokyocabinet_all.c:15394:7: warning: ‘rec.hash’ may be used uninitialized [-Wmaybe-uninitialized]
+15394 |     if(hash &gt; rec.hash){
+      |       ^
+tokyocabinet_all.c:15389:10: note: ‘rec.hash’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15399:9: warning: ‘rec.kbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+15399 |       if(!rec.kbuf &amp;&amp; !tchdbreadrecbody(hdb, &amp;rec)) return NULL;
+      |         ^
+tokyocabinet_all.c:15389:10: note: ‘rec.kbuf’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbgetimpl’ at tokyocabinet_all.c:15399:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.ksiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbgetimpl’:
+tokyocabinet_all.c:15389:10: note: ‘rec.ksiz’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbgetimpl’ at tokyocabinet_all.c:15399:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.vsiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbgetimpl’:
+tokyocabinet_all.c:15389:10: note: ‘rec.vsiz’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbgetimpl’ at tokyocabinet_all.c:15399:24:
+tokyocabinet_all.c:14282:7: warning: ‘rec.boff’ may be used uninitialized [-Wmaybe-uninitialized]
+14282 |   if(!tchdbseekread(hdb, rec-&gt;boff, rec-&gt;bbuf, bsiz)) return false;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbgetimpl’:
+tokyocabinet_all.c:15389:10: note: ‘rec.boff’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15412:11: warning: ‘rec.vbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+15412 |         if(!rec.vbuf &amp;&amp; !tchdbreadrecbody(hdb, &amp;rec)) return NULL;
+      |           ^
+tokyocabinet_all.c:15389:10: note: ‘rec.vbuf’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15402:13: warning: ‘rec.left’ may be used uninitialized [-Wmaybe-uninitialized]
+15402 |         off = rec.left;
+      |         ~~~~^~~~~~~~~~
+tokyocabinet_all.c:15389:10: note: ‘rec.left’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15407:13: warning: ‘rec.right’ may be used uninitialized [-Wmaybe-uninitialized]
+15407 |         off = rec.right;
+      |         ~~~~^~~~~~~~~~~
+tokyocabinet_all.c:15389:10: note: ‘rec.right’ was declared here
+15389 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c: In function ‘tchdbgetintobuf’:
+tokyocabinet_all.c:15497:7: warning: ‘rec.hash’ may be used uninitialized [-Wmaybe-uninitialized]
+15497 |     if(hash &gt; rec.hash){
+      |       ^
+tokyocabinet_all.c:15492:10: note: ‘rec.hash’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15502:9: warning: ‘rec.kbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+15502 |       if(!rec.kbuf &amp;&amp; !tchdbreadrecbody(hdb, &amp;rec)) return -1;
+      |         ^
+tokyocabinet_all.c:15492:10: note: ‘rec.kbuf’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbgetintobuf’ at tokyocabinet_all.c:15502:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.ksiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbgetintobuf’:
+tokyocabinet_all.c:15492:10: note: ‘rec.ksiz’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbgetintobuf’ at tokyocabinet_all.c:15502:24:
+tokyocabinet_all.c:14280:28: warning: ‘rec.vsiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbgetintobuf’:
+tokyocabinet_all.c:15492:10: note: ‘rec.vsiz’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbgetintobuf’ at tokyocabinet_all.c:15502:24:
+tokyocabinet_all.c:14282:7: warning: ‘rec.boff’ may be used uninitialized [-Wmaybe-uninitialized]
+14282 |   if(!tchdbseekread(hdb, rec-&gt;boff, rec-&gt;bbuf, bsiz)) return false;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbgetintobuf’:
+tokyocabinet_all.c:15492:10: note: ‘rec.boff’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15515:11: warning: ‘rec.vbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+15515 |         if(!rec.vbuf &amp;&amp; !tchdbreadrecbody(hdb, &amp;rec)) return -1;
+      |           ^
+tokyocabinet_all.c:15492:10: note: ‘rec.vbuf’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15505:13: warning: ‘rec.left’ may be used uninitialized [-Wmaybe-uninitialized]
+15505 |         off = rec.left;
+      |         ~~~~^~~~~~~~~~
+tokyocabinet_all.c:15492:10: note: ‘rec.left’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15510:13: warning: ‘rec.right’ may be used uninitialized [-Wmaybe-uninitialized]
+15510 |         off = rec.right;
+      |         ~~~~^~~~~~~~~~~
+tokyocabinet_all.c:15492:10: note: ‘rec.right’ was declared here
+15492 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c: In function ‘tchdbputasyncimpl’:
+tokyocabinet_all.c:15271:7: warning: ‘rec.hash’ may be used uninitialized [-Wmaybe-uninitialized]
+15271 |     if(hash &gt; rec.hash){
+      |       ^
+tokyocabinet_all.c:15256:10: note: ‘rec.hash’ was declared here
+15256 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15272:11: warning: ‘rec.left’ may be used uninitialized [-Wmaybe-uninitialized]
+15272 |       off = rec.left;
+      |       ~~~~^~~~~~~~~~
+tokyocabinet_all.c:15256:10: note: ‘rec.left’ was declared here
+15256 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c:15275:11: warning: ‘rec.right’ may be used uninitialized [-Wmaybe-uninitialized]
+15275 |       off = rec.right;
+      |       ~~~~^~~~~~~~~~~
+tokyocabinet_all.c:15256:10: note: ‘rec.right’ was declared here
+15256 |   TCHREC rec;
+      |          ^~~
+tokyocabinet_all.c: In function ‘tchdbshiftrec.isra’:
+tokyocabinet_all.c:14392:7: warning: ‘trec.hash’ may be used uninitialized [-Wmaybe-uninitialized]
+14392 |     if(hash &gt; trec.hash){
+      |       ^
+tokyocabinet_all.c:14375:10: note: ‘trec.hash’ was declared here
+14375 |   TCHREC trec;
+      |          ^~~~
+tokyocabinet_all.c:14400:9: warning: ‘trec.kbuf’ may be used uninitialized [-Wmaybe-uninitialized]
+14400 |       if(!trec.kbuf &amp;&amp; !tchdbreadrecbody(hdb, &amp;trec)){
+      |         ^
+tokyocabinet_all.c:14375:10: note: ‘trec.kbuf’ was declared here
+14375 |   TCHREC trec;
+      |          ^~~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbshiftrec.isra’ at tokyocabinet_all.c:14400:25:
+tokyocabinet_all.c:14280:28: warning: ‘trec.ksiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbshiftrec.isra’:
+tokyocabinet_all.c:14375:10: note: ‘trec.ksiz’ was declared here
+14375 |   TCHREC trec;
+      |          ^~~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbshiftrec.isra’ at tokyocabinet_all.c:14400:25:
+tokyocabinet_all.c:14280:28: warning: ‘trec.vsiz’ may be used uninitialized [-Wmaybe-uninitialized]
+14280 |   int32_t bsiz = rec-&gt;ksiz + rec-&gt;vsiz;
+      |                  ~~~~~~~~~~^~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbshiftrec.isra’:
+tokyocabinet_all.c:14375:10: note: ‘trec.vsiz’ was declared here
+14375 |   TCHREC trec;
+      |          ^~~~
+In function ‘tchdbreadrecbody’,
+    inlined from ‘tchdbshiftrec.isra’ at tokyocabinet_all.c:14400:25:
+tokyocabinet_all.c:14282:7: warning: ‘trec.boff’ may be used uninitialized [-Wmaybe-uninitialized]
+14282 |   if(!tchdbseekread(hdb, rec-&gt;boff, rec-&gt;bbuf, bsiz)) return false;
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tokyocabinet_all.c: In function ‘tchdbshiftrec.isra’:
+tokyocabinet_all.c:14375:10: note: ‘trec.boff’ was declared here
+14375 |   TCHREC trec;
+      |          ^~~~
+tokyocabinet_all.c:14406:13: warning: ‘trec.left’ may be used uninitialized [-Wmaybe-uninitialized]
+14406 |         off = trec.left;
+      |         ~~~~^~~~~~~~~~~
+tokyocabinet_all.c:14375:10: note: ‘trec.left’ was declared here
+14375 |   TCHREC trec;
+      |          ^~~~
+tokyocabinet_all.c:14412:13: warning: ‘trec.right’ may be used uninitialized [-Wmaybe-uninitialized]
+14412 |         off = trec.right;
+      |         ~~~~^~~~~~~~~~~~
+tokyocabinet_all.c:14375:10: note: ‘trec.right’ was declared here
+14375 |   TCHREC trec;
+      |          ^~~~
+tokyocabinet_all.c: In function ‘tctdbforeachimpl.isra’:
+tokyocabinet_all.c:29589:18: warning: writing 1 byte into a region of size 0 [-Wstringop-overflow=]
+29589 |     stack[pksiz] = '\0';
+      |     ~~~~~~~~~~~~~^~~~~~
+tokyocabinet_all.c:29578:16: note: at offset 32768 into destination object ‘stack’ of size 32768
+29578 |   char *pkbuf, stack[TDBPAGEBUFSIZ], *rbuf;
+      |                ^~~~~
+if uname -a | egrep -i 'SunOS' &gt; /dev/null ; \
+  then \
+    x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -shared -Wl,-G,-h,libtokyocabinet.so.9 -o libtokyocabinet.so.9.11.0 \
+      tokyocabinet_all.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64 -lbz2 -lz -lrt -lpthread -lm -lc  ; \
+  else \
+    x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -shared -Wl,-soname,libtokyocabinet.so.9 -o libtokyocabinet.so.9.11.0 \
+      tokyocabinet_all.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64 -lbz2 -lz -lrt -lpthread -lm -lc  ; \
+  fi
+ln -f -s libtokyocabinet.so.9.11.0 libtokyocabinet.so
+ln -f -s libtokyocabinet.so.9.11.0 libtokyocabinet.so.9
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcutest tcutest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcumttest tcumttest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcucodec tcucodec.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tchtest tchtest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tchmttest tchmttest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tchmgr tchmgr.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcbtest tcbtest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcbmttest tcbmttest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcbmgr tcbmgr.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcftest tcftest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcfmttest tcfmttest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcfmgr tcfmgr.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcttest tcttest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tctmttest tctmttest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tctmgr tctmgr.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcatest tcatest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcamttest tcamttest.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcamgr tcamgr.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99 -Wall -fPIC -pedantic -fsigned-char   -fforce-addr -minline-all-stringops -o tcawmgr.cgi tcawmgr.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -L. -L/usr/lib64  -ltokyocabinet -lbz2 -lz -lrt -lpthread -lm -lc 
+
+#================================================================
+# Ready to install.
+#================================================================
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: dev-db/tokyocabinet-1.4.48-r3
+
+&gt;&gt;&gt; Install dev-db/tokyocabinet-1.4.48-r3 into /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image
+make -j2 DESTDIR=/var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image install 
+mkdir -p /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/include
+cp -Rf tcutil.h tchdb.h tcbdb.h tcfdb.h tctdb.h tcadb.h /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/include
+mkdir -p /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/lib64
+cp -Rf libtokyocabinet.so libtokyocabinet.so.9.11.0 libtokyocabinet.so.9 libtokyocabinet.so /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/lib64
+cp: warning: source file 'libtokyocabinet.so' specified more than once
+mkdir -p /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/bin
+cp -Rf tcutest tcumttest tcucodec tchtest tchmttest tchmgr tcbtest tcbmttest tcbmgr tcftest tcfmttest tcfmgr tcttest tctmttest tctmgr tcatest tcamttest tcamgr /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/bin
+mkdir -p /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/libexec
+cp -Rf tcawmgr.cgi /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/libexec
+mkdir -p /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/share/man/man1
+cd man &amp;&amp; cp -Rf tcutest.1 tcumttest.1 tcucodec.1 tchtest.1 tchmttest.1 tchmgr.1 tcbtest.1 tcbmttest.1 tcbmgr.1 tcftest.1 tcfmttest.1 tcfmgr.1 tcttest.1 tctmttest.1 tctmgr.1 tcatest.1 tcamttest.1 tcamgr.1 /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/share/man/man1
+mkdir -p /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/share/man/man3
+cd man &amp;&amp; cp -Rf tokyocabinet.3 tcutil.3 tcxstr.3 tclist.3 tcmap.3 tctree.3 tcmdb.3 tcmpool.3 tchdb.3 tcbdb.3 tcfdb.3 tctdb.3 tcadb.3 /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/share/man/man3
+mkdir -p /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/lib64/pkgconfig
+cp -Rf tokyocabinet.pc /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/lib64/pkgconfig
+
+#================================================================
+# Thanks for using Tokyo Cabinet.
+#================================================================
+&gt;&gt;&gt; Completed installing dev-db/tokyocabinet-1.4.48-r3 into /var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image
+
+ <span class="ansi32">*</span> Final size of build directory: 10592 KiB (10.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   2688 KiB ( 2.6 MiB)
+
+/var/tmp/portage/dev-db/tokyocabinet-1.4.48-r3/image/usr/lib64/pkgconfig/tokyocabinet.pc:3: warning: whitespace encountered while parsing key section
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libtokyocabinet.so.9.11.0
+   /usr/bin/tcutest
+   /usr/bin/tcumttest
+   /usr/bin/tcucodec
+   /usr/bin/tchtest
+   /usr/bin/tchmttest
+   /usr/bin/tchmgr
+   /usr/bin/tcbtest
+   /usr/bin/tcbmttest
+   /usr/bin/tcbmgr
+   /usr/bin/tcftest
+   /usr/bin/tcfmttest
+   /usr/bin/tcfmgr
+   /usr/bin/tcttest
+   /usr/bin/tctmttest
+   /usr/bin/tctmgr
+   /usr/bin/tcatest
+   /usr/bin/tcamttest
+   /usr/bin/tcamgr
+   /usr/libexec/tcawmgr.cgi
+
+</pre>
+</body>
+
+</html>

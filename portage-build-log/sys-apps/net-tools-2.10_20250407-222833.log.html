@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-apps/net-tools-2.10:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 arp elibc_glibc hostname ipv6 kernel_linux nls
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking net-tools-2.10.tar.xz to /var/tmp/portage/sys-apps/net-tools-2.10/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-apps/net-tools-2.10/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10 ...
+ <span class="ansi32">*</span> Setting option I18N to y
+ <span class="ansi32">*</span> Setting option HAVE_AFINET6 to y
+ <span class="ansi32">*</span> Setting option HAVE_HWIB to y
+ <span class="ansi32">*</span> Setting option HAVE_HWTR to n
+ <span class="ansi32">*</span> Setting option HAVE_HWSTRIP to n
+ <span class="ansi32">*</span> Setting option HAVE_SELINUX to n
+ <span class="ansi32">*</span> Setting option HAVE_ARP_TOOLS to y
+ <span class="ansi32">*</span> Setting option HAVE_HOSTNAME_TOOLS to y
+ <span class="ansi32">*</span> Setting option HAVE_HOSTNAME_SYMLINKS to n
+ <span class="ansi32">*</span> Setting option HAVE_PLIP_TOOLS to n
+ <span class="ansi32">*</span> Setting option HAVE_SERIAL_TOOLS to n
+
+######################################################
+Notice: ifconfig and route are now installed into /bin
+######################################################
+
+*
+*
+*              Internationalization
+*
+* The net-tools package has currently been translated to French,
+* German and Brazilian Portugese.  Other translations are, of
+* course, welcome.  Answer `n' here if you have no support for
+* internationalization on your system.
+*
+Does your system support GNU gettext? (I18N) [y] *
+*
+*             Protocol Families.
+*
+UNIX protocol family (HAVE_AFUNIX) [y] INET (TCP/IP) protocol family (HAVE_AFINET) [y] INET6 (IPv6) protocol family (HAVE_AFINET6) [y] Novell IPX/SPX protocol family (HAVE_AFIPX) [y] Appletalk DDP protocol family (HAVE_AFATALK) [y] AX25 (packet radio) protocol family (HAVE_AFAX25) [y] NET/ROM (packet radio) protocol family (HAVE_AFNETROM) [y] Rose (packet radio) protocol family (HAVE_AFROSE) [y] X.25 (CCITT) protocol family (HAVE_AFX25) [y] Econet protocol family (HAVE_AFECONET) [n] DECnet protocol family (HAVE_AFDECnet) [n] Ash protocol family (HAVE_AFASH) [y] Bluetooth protocol family (HAVE_AFBLUETOOTH) [n] *
+*
+*            Device Hardware types.
+*
+Ethernet (generic) support (HAVE_HWETHER) [y] ARCnet support (HAVE_HWARC) [y] SLIP (serial line) support (HAVE_HWSLIP) [y] PPP (serial line) support (HAVE_HWPPP) [y] IPIP Tunnel support (HAVE_HWTUNNEL) [y] STRIP (Metricom radio) support (HAVE_HWSTRIP) [n] Token ring (generic) support (HAVE_HWTR) [n] AX25 (packet radio) support (HAVE_HWAX25) [y] Rose (packet radio) support (HAVE_HWROSE) [y] NET/ROM (packet radio) support (HAVE_HWNETROM) [y] X.25 (generic) support (HAVE_HWX25) [y] DLCI/FRAD (frame relay) support (HAVE_HWFR) [y] SIT (IPv6-in-IPv4) support (HAVE_HWSIT) [y] FDDI (generic) support (HAVE_HWFDDI) [y] HIPPI (generic) support (HAVE_HWHIPPI) [y] Ash hardware support (HAVE_HWASH) [y] (Cisco)-HDLC/LAPB support (HAVE_HWHDLCLAPB) [y] IrDA support (HAVE_HWIRDA) [y] Econet hardware support (HAVE_HWEC) [n] Generic EUI-64 hardware support (HAVE_HWEUI64) [y] InfiniBand hardware support (HAVE_HWIB) [y] *
+*
+*           Other Features.
+*
+IP Masquerading support (HAVE_FW_MASQUERADE) [y] Build arp and rarp (HAVE_ARP_TOOLS) [y] Build hostname (HAVE_HOSTNAME_TOOLS) [y] Install hostname NIS/YP symlinks (HAVE_HOSTNAME_SYMLINKS) [n] Build iptunnel and ipmaddr (HAVE_IP_TOOLS) [y] Build mii-tool (HAVE_MII) [y] Build plipconfig (HAVE_PLIP_TOOLS) [n] Build slattach (HAVE_SERIAL_TOOLS) [n] SELinux support (HAVE_SELINUX) [n] &gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10 ...
+make -j2 
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o activate.o activate.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o af.o af.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o arcnet.o arcnet.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ash.o ash.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ax25.o ax25.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ax25_gr.o ax25_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ddp.o ddp.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ddp_gr.o ddp_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ec_hw.o ec_hw.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o econet.o econet.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ether.o ether.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o eui64.o eui64.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o fddi.o fddi.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o frame.o frame.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o getargs.o getargs.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c ifconfig.c
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o getroute.o getroute.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o hdlclapb.o hdlclapb.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o hippi.o hippi.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o hw.o hw.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ib.o ib.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o inet.o inet.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o inet6.o inet6.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o inet6_gr.o inet6_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o inet6_sr.o inet6_sr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o inet_gr.o inet_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o inet_sr.o inet_sr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o interface.o interface.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ipx.o ipx.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ipx_gr.o ipx_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ipx_sr.o ipx_sr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o irda.o irda.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o loopback.o loopback.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o masq_info.o masq_info.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c netstat.c
+netstat.c: In function ‘ipx_info’:
+netstat.c:1804:37: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 50 [-Wformat-truncation=]
+ 1804 |         snprintf(sad, sizeof(sad), "%s:%04X", buf, sport);
+      |                                     ^~        ~~~
+In file included from /usr/include/stdio.h:970,
+                 from netstat.c:72:
+In function ‘snprintf’,
+    inlined from ‘ipx_info’ at netstat.c:1804:2:
+/usr/include/bits/stdio2.h:68:10: note: ‘__builtin___snprintf_chk’ output between 6 and 265 bytes into a destination of size 50
+   68 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+netstat.c: In function ‘ipx_info’:
+netstat.c:1804:37: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 50 [-Wformat-truncation=]
+ 1804 |         snprintf(sad, sizeof(sad), "%s:%04X", buf, sport);
+      |                                     ^~        ~~~
+In function ‘snprintf’,
+    inlined from ‘ipx_info’ at netstat.c:1804:2:
+/usr/include/bits/stdio2.h:68:10: note: ‘__builtin___snprintf_chk’ output between 6 and 265 bytes into a destination of size 50
+   68 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+netstat.c: In function ‘ipx_info’:
+netstat.c:1804:37: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 50 [-Wformat-truncation=]
+ 1804 |         snprintf(sad, sizeof(sad), "%s:%04X", buf, sport);
+      |                                     ^~        ~~~
+In function ‘snprintf’,
+    inlined from ‘ipx_info’ at netstat.c:1804:2:
+/usr/include/bits/stdio2.h:68:10: note: ‘__builtin___snprintf_chk’ output between 6 and 265 bytes into a destination of size 50
+   68 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+netstat.c: In function ‘ipx_info’:
+netstat.c:1810:41: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 50 [-Wformat-truncation=]
+ 1810 |             snprintf(dad, sizeof(dad), "%s:%04X", buf, dport);
+      |                                         ^~        ~~~
+In function ‘snprintf’,
+    inlined from ‘ipx_info’ at netstat.c:1810:6:
+/usr/include/bits/stdio2.h:68:10: note: ‘__builtin___snprintf_chk’ output between 6 and 265 bytes into a destination of size 50
+   68 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+netstat.c: In function ‘prg_cache_load’:
+netstat.c:474:47: warning: ‘%s’ directive output may be truncated writing up to 255 bytes into a region of size 20 [-Wformat-truncation=]
+  474 |             snprintf(finbuf, sizeof(finbuf), "%s/%s", direproc-&gt;d_name, cmdlp);
+      |                                               ^~
+In function ‘snprintf’,
+    inlined from ‘prg_cache_load’ at netstat.c:474:6:
+/usr/include/bits/stdio2.h:68:10: note: ‘__builtin___snprintf_chk’ output between 2 and 768 bytes into a destination of size 20
+   68 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   69 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   70 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o netrom.o netrom.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o netrom_gr.o netrom_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o netrom_sr.o netrom_sr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o nstrcmp.o nstrcmp.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ppp.o ppp.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o ppp_ac.o ppp_ac.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o proc.o proc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o rose.o rose.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o rose_gr.o rose_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o setroute.o setroute.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o sit.o sit.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o slip.o slip.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c statistics.c
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o slip_ac.o slip_ac.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o sockets.o sockets.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o strip.o strip.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o tr.o tr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o tunnel.o tunnel.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o unix.o unix.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o util-ank.o util-ank.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o util.o util.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o x25.o x25.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o x25_gr.o x25_gr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -I.. -I../include  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib  -c -o x25_sr.o x25_sr.c
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+Building libnet-tools.a
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/lib'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c route.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c nameif.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c arp.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c rarp.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c hostname.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c iptunnel.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c ipmaddr.c
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -I. -I/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/include -Ilib -c mii-tool.c
+make[1]: Nothing to be done for 'all'.
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o ifconfig ifconfig.o -lnet-tools 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o netstat netstat.o statistics.o -lnet-tools  
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o route route.o -lnet-tools 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o nameif nameif.o -lnet-tools 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o arp arp.o -lnet-tools 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o rarp rarp.o -lnet-tools 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o hostname hostname.o  
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o iptunnel iptunnel.o -lnet-tools 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o ipmaddr ipmaddr.o -lnet-tools 
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -fno-strict-aliasing  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Llib -o mii-tool mii-tool.o -lnet-tools 
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-apps/net-tools-2.10
+
+&gt;&gt;&gt; Install sys-apps/net-tools-2.10 into /var/tmp/portage/sys-apps/net-tools-2.10/image
+make -j2 DESTDIR=/var/tmp/portage/sys-apps/net-tools-2.10/image install 
+make[1]: Nothing to be done for 'all'.
+
+######################################################
+Notice: ifconfig and route are now installed into /bin
+######################################################
+
+install -m 0755 -d /var/tmp/portage/sys-apps/net-tools-2.10/image/sbin
+install -m 0755 -d /var/tmp/portage/sys-apps/net-tools-2.10/image/bin
+install -m 0755 ifconfig   /var/tmp/portage/sys-apps/net-tools-2.10/image/bin
+install -m 0755 nameif     /var/tmp/portage/sys-apps/net-tools-2.10/image/sbin
+install -m 0755 netstat    /var/tmp/portage/sys-apps/net-tools-2.10/image/bin
+install -m 0755 route      /var/tmp/portage/sys-apps/net-tools-2.10/image/bin
+install -m 0755 arp        /var/tmp/portage/sys-apps/net-tools-2.10/image/sbin
+install -m 0755 rarp       /var/tmp/portage/sys-apps/net-tools-2.10/image/sbin
+install -m 0755 hostname   /var/tmp/portage/sys-apps/net-tools-2.10/image/bin
+ln -fs hostname /var/tmp/portage/sys-apps/net-tools-2.10/image/bin/dnsdomainname
+install -m 0755 ipmaddr    /var/tmp/portage/sys-apps/net-tools-2.10/image/sbin
+install -m 0755 iptunnel   /var/tmp/portage/sys-apps/net-tools-2.10/image/sbin
+install -m 0755 mii-tool   /var/tmp/portage/sys-apps/net-tools-2.10/image/sbin
+make -C man install
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/man'
+LANGS='de_DE en_US fr_FR pt_BR' ; \
+	for LANG in $LANGS; do \
+		cd $LANG; \
+		for SECTION in 1 5 8; do \
+			if [ "$LANG" = "en_US" ] ; then \
+				MAN_DIR=/var/tmp/portage/sys-apps/net-tools-2.10/image/usr/share/man/man$SECTION; \
+			else \
+				MAN_DIR=/var/tmp/portage/sys-apps/net-tools-2.10/image/usr/share/man/$LANG/man$SECTION; \
+			fi ; \
+			install -d -m 755 $MAN_DIR; \
+			for CMD in *.$SECTION; do \
+				[ -e $CMD ] || continue; \
+				case $CMD in "" |domainname.?|nisdomainname.?|ypdomainname.? |nodename.? |plipconfig.? |slattach.?) continue;; esac; \
+				install -m 644 $CMD $MAN_DIR || exit 1; \
+			done; \
+		done; \
+		cd ..; \
+	done
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/man'
+make -C po install
+make[1]: Entering directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/po'
+langs='cs de et fr pt_BR'; \
+for l in $langs; do \
+    install -c -m 755 -d /var/tmp/portage/sys-apps/net-tools-2.10/image/usr/share/locale/$l; \
+    install -c -m 755 -d /var/tmp/portage/sys-apps/net-tools-2.10/image/usr/share/locale/$l/LC_MESSAGES; \
+    install -c -m 644 $l.mo /var/tmp/portage/sys-apps/net-tools-2.10/image/usr/share/locale/$l/LC_MESSAGES/net-tools.mo; \
+done
+make[1]: Leaving directory '/var/tmp/portage/sys-apps/net-tools-2.10/work/net-tools-2.10/po'
+make[1]: Nothing to be done for 'all'.
+&gt;&gt;&gt; Completed installing sys-apps/net-tools-2.10 into /var/tmp/portage/sys-apps/net-tools-2.10/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3428 KiB (3.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1296 KiB (1.2 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /sbin/nameif
+   /bin/ifconfig
+   /bin/netstat
+   /bin/route
+   /sbin/arp
+   /sbin/rarp
+   /bin/hostname
+   /sbin/ipmaddr
+   /sbin/iptunnel
+   /sbin/mii-tool
+
+</pre>
+</body>
+
+</html>
