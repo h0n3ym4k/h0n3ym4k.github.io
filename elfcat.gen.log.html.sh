@@ -98,7 +98,7 @@ do
 #	echo "<a href=\"${name}\">\"${name}\"</a>" >> index.html.tmp.2
 	fname=$(echo ${f}|cut -b1,2 --complement)
 	echo ${fname}
-	echo "<a href=\"${fname}\">\"${fname}\"</a>" >> index.html.tmp.2
+	echo "<a href=\"${fname}\">${fname}</a>" >> index.html.tmp.2
 	echo "<br/>" >> index.html.tmp.2
 done
 
