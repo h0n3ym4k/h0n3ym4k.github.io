@@ -91,12 +91,14 @@ echo "<center><h3>any help needed or your support is appreciated. Msg right away
 echo "<center><h3>All logs, in general</h3></center>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
-files2=($(find -iname \*.html ! -iname index.html))
+files2=($(find -size -94M -iname \*.html ! -iname index.html))
 for f in "${files2[@]}"
 do
 #	name=$(echo ${f}|rev|cut -d/ -f1|rev)
 #	echo "<a href=\"${name}\">\"${name}\"</a>" >> index.html.tmp.2
-	echo "<a href=\"${f}\">\"${f}\"</a>" >> index.html.tmp.2
+	fname=$(echo ${f}|cut -b1,2 --complement)
+	echo ${fname}
+	echo "<a href=\"${fname}\">\"${fname}\"</a>" >> index.html.tmp.2
 	echo "<br/>" >> index.html.tmp.2
 done
 
@@ -109,6 +111,10 @@ cat index.html.tmp.1 > index.html
 cat index.html.tmp.2 >> index.html
 cat index.html.tmp.3 >> index.html
 rm -f index.html.tmp.1 index.html.tmp.2 index.html.tmp.3
+
+#github cannot >100M per file each
+find -size +94M -iname \*.html -ls >/tmp/elfcat.m+94.log
+find -size +94M -iname \*.html ! -iname index.html -exec rm -f {} \;
 
 echo "index.html generated"
 
