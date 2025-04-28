@@ -22,7 +22,7 @@ files=($(find /bin /lib64 /opt /lib /sbin /usr -exec eu-elfclassify --executable
 cd /mnt/Downloads/elfcat-build-log
 for f in "${files[@]}"
 do
-	name=$(echo "${f}"|sed 's/\//\_/g')
+	name=$(echo "${f}"|sed 's/\//77/g')
 	nametail=$(echo "${f}"|rev|cut -f1 -d/|rev)
 	echo "name: ${name}"
 	echo "f: ${f}"
@@ -91,7 +91,8 @@ echo "<center><h3>any help needed or your support is appreciated. Msg right away
 echo "<center><h3>All logs, in general</h3></center>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
-files2=($(find -size -94M -iname \*.html ! -iname index.html))
+#files2=($(find -size -94M -iname \*.html ! -iname index.html))
+files2=($(find -size -2M -iname \*.html ! -iname index.html))
 for f in "${files2[@]}"
 do
 #	name=$(echo ${f}|rev|cut -d/ -f1|rev)
