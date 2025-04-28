@@ -114,8 +114,10 @@ cat index.html.tmp.3 >> index.html
 rm -f index.html.tmp.1 index.html.tmp.2 index.html.tmp.3
 
 #github cannot >100M per file each
-find -size +94M -iname \*.html -ls >/tmp/elfcat.m+94.log
-find -size +94M -iname \*.html ! -iname index.html -exec rm -f {} \;
+#find -size +94M -iname \*.html -ls >/tmp/elfcat.m+94.log
+find -size +2M -iname \*.html -ls >/tmp/elfcat.m+2.log
+#find -size +94M -iname \*.html ! -iname index.html -exec rm -f {} \;
+find -size +2M -iname \*.html ! -iname index.html -exec rm -f {} \;
 
 echo "index.html generated"
 
