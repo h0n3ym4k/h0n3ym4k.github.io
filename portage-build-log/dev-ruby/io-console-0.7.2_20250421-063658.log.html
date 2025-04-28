@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-ruby/io-console-0.7.2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: ruby@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux ruby_targets_ruby32
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+ <span class="ansi32">*</span> Running unpack phase for all
+&gt;&gt;&gt; Unpacking io-console-0.7.2.tar.gz to /var/tmp/portage/dev-ruby/io-console-0.7.2/work/all
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-ruby/io-console-0.7.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-ruby/io-console-0.7.2/work ...
+ <span class="ansi32">*</span> Running prepare phase for all
+ <span class="ansi32">*</span> Running prepare phase for all
+ <span class="ansi32">*</span> Running source copy phase for ruby32
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-ruby/io-console-0.7.2/work ...
+ <span class="ansi32">*</span> Running configure phase for ruby32
+checking for rb_io_path()... no
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... no
+checking for rb_io_open_descriptor()... no
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-ruby/io-console-0.7.2/work ...
+ <span class="ansi32">*</span> Running compile phase for ruby32
+make -j2 V=1 -C ext/io/console 
+make: Entering directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.2.0/x86_64-linux -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -DHAVE_RB_IO_DESCRIPTOR -DHAVE_RB_IO_GET_WRITE_IO -DHAVE_TERMIOS_H -DHAVE_CFMAKERAW -DHAVE_SYS_IOCTL_H -DHAVE_RB_IO_WAIT=1    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -o console.o -c console.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+make: Entering directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+rm -f console.so
+make: Leaving directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+make: Entering directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+x86_64-pc-linux-gnu-gcc -shared -o console.so console.o -L. -L/usr/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby32  -lm -lpthread  -lc
+make: Leaving directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+ <span class="ansi32">*</span> Running compile phase for all
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-ruby/io-console-0.7.2
+
+&gt;&gt;&gt; Install dev-ruby/io-console-0.7.2 into /var/tmp/portage/dev-ruby/io-console-0.7.2/image
+ <span class="ansi32">*</span> Running install phase for ruby32
+ <span class="ansi32">*</span> installing extensions
+make -j2 V=1 sitearchdir=/var/tmp/portage/dev-ruby/io-console-0.7.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/io-console-0.7.2 sitelibdir=/var/tmp/portage/dev-ruby/io-console-0.7.2/image/usr/lib64/ruby/site_ruby/3.2.0 -C ext/io/console install 
+make: Entering directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+mkdir -p . /var/tmp/portage/dev-ruby/io-console-0.7.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/io-console-0.7.2/io
+make: Leaving directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+make: Entering directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+exit &gt; .sitearchdir.-.io.time
+make: Leaving directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+make: Entering directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+/usr/bin/install -c -m 0755 console.so /var/tmp/portage/dev-ruby/io-console-0.7.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/io-console-0.7.2/io
+make: Leaving directory '/var/tmp/portage/dev-ruby/io-console-0.7.2/work/ruby32/io-console-0.7.2/ext/io/console'
+ <span class="ansi32">*</span> Running install phase for all
+ <span class="ansi32">*</span> Running check install phase for ruby32
+&gt;&gt;&gt; Completed installing dev-ruby/io-console-0.7.2 into /var/tmp/portage/dev-ruby/io-console-0.7.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 548 KiB
+ <span class="ansi32">*</span> Final size of installed tree:  232 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/ruby/gems/3.2.0/gems/io-console-0.7.2/lib/io/console.so
+   /usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/io-console-0.7.2/io/console.so
+
+</pre>
+</body>
+
+</html>

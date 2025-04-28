@@ -1,0 +1,1303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-accessibility/speech-dispatcher-0.12.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: williamh@gentoo.org accessibility@gentoo.org,sound@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 alsa amd64 elibc_glibc espeak kernel_linux pulseaudio python python_targets_python3_12
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking speech-dispatcher-0.12.0.tar.gz to /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0 ...
+ * econf: updating speech-dispatcher-0.12.0/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating speech-dispatcher-0.12.0/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/speech-dispatcher-0.12.0 --htmldir=/usr/share/doc/speech-dispatcher-0.12.0/html --with-sysroot=/ --libdir=/usr/lib64 --disable-ltdl --disable-python --disable-static --with-baratinoo=no --with-ibmtts=no --with-kali=no --with-pico=no --with-voxin=no --with-espeak=no --with-alsa --without-libao --with-espeak-ng --without-flite --without-nas --with-pulse --without-pipewire --with-systemdsystemunitdir=/usr/lib/systemd/system --with-systemduserunitdir=/usr/lib/systemd/user
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for vfork.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a BSD-compatible install... /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/gmsgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for egrep -e... (cached) /bin/grep -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for x86_64-pc-linux-gnu-gcc... (cached) x86_64-pc-linux-gnu-gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... (cached) none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... (cached) yes
+checking for x86_64-pc-linux-gnu-g++... x86_64-pc-linux-gnu-g++
+checking whether the compiler supports GNU C++... yes
+checking whether x86_64-pc-linux-gnu-g++ accepts -g... yes
+checking for x86_64-pc-linux-gnu-g++ option to enable C++11 features... none needed
+checking dependency style of x86_64-pc-linux-gnu-g++... none
+checking how to run the C++ preprocessor... x86_64-pc-linux-gnu-g++ -E
+checking for ld used by x86_64-pc-linux-gnu-g++... /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the x86_64-pc-linux-gnu-g++ linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for x86_64-pc-linux-gnu-g++ option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-g++ PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-g++ static flag -static works... yes
+checking if x86_64-pc-linux-gnu-g++ supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-g++ supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-g++ linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether ln -s works... yes
+checking for help2man... help2man
+checking for library containing sqrt... -lm
+checking for library containing pthread_create... none required
+checking for library containing dlopen... none required
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for glib-2.0 &gt;= 2.36... yes
+checking for gthread-2.0... yes
+checking for gmodule-2.0... yes
+checking for dotconf &gt;= 1.3... yes
+checking for sndfile &gt;= 1.0.2... yes
+checking for libsystemd... no
+checking for arpa/inet.h... yes
+checking for fcntl.h... yes
+checking for langinfo.h... yes
+checking for limits.h... yes
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/filio.h... no
+checking for sys/ioctl.h... yes
+checking for sys/socket.h... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for wchar.h... (cached) yes
+checking for wctype.h... yes
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99 or later... yes
+checking for inline... inline
+checking for pid_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for uint32_t... yes
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for GNU libc compatible realloc... yes
+checking for daemon... yes
+checking for dup2... yes
+checking for gethostbyname... yes
+checking for getline... yes
+checking for gettimeofday... yes
+checking for memmove... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for select... yes
+checking for socket... yes
+checking for strcasecmp... yes
+checking for strcasestr... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for socket in -lc... yes
+checking for gethostbyname in -lc... yes
+checking for espeak-ng... yes
+checking for espeak-ng... espeak-ng
+checking for flite... no
+checking for dumbtts_TTSInit in -ldumbtts... no
+checking for libpulse... yes
+checking for alsa... yes
+checking for sys/soundcard.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+chmod: cannot access 'run-speechd': No such file or directory
+chmod: cannot access 'run-spd-say': No such file or directory
+config.status: creating run-speechd
+chmod: cannot access 'run-spd-say': No such file or directory
+config.status: creating run-spd-say
+config.status: creating speech-dispatcher.pc
+config.status: creating config/Makefile
+config.status: creating config/clients/Makefile
+config.status: creating config/modules/Makefile
+config.status: creating doc/Makefile
+config.status: creating include/Makefile
+config.status: creating locale/Makefile
+config.status: creating po/Makevars
+config.status: creating po/Makefile.in
+config.status: creating src/Makefile
+config.status: creating src/api/Makefile
+config.status: creating src/api/c/Makefile
+config.status: creating src/api/python/Makefile
+config.status: creating src/api/python/speechd/Makefile
+config.status: creating src/api/python/speechd_config/Makefile
+config.status: creating src/audio/Makefile
+config.status: creating src/clients/Makefile
+config.status: creating src/clients/say/Makefile
+config.status: creating src/clients/spdsend/Makefile
+config.status: creating src/common/Makefile
+config.status: creating src/modules/Makefile
+config.status: creating src/server/Makefile
+config.status: creating src/tests/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing src/tests/atconfig commands
+configure: output modules to be built are cicero dummy festival openjtalk generic espeak-ng
+configure: audio methods to be built are  pulse alsa oss
+configure: Default audio method is pulse
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0 ...
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0
+ <span class="ansi32">*</span> python3_12: copying to /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12
+make -j2 
+make  all-recursive
+Making all in include
+make[2]: Nothing to be done for 'all'.
+Making all in locale
+make[2]: Nothing to be done for 'all'.
+Making all in src
+Making all in common
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  "-I../../include/" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR="\"/usr/lib64/speech-dispatcher\""  -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libcommon_la-common.lo `test -f 'common.c' || echo './'`common.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include/ -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR=\"/usr/lib64/speech-dispatcher\" -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c common.c  -fPIC -DPIC -o .libs/libcommon_la-common.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  "-I../../include/" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR="\"/usr/lib64/speech-dispatcher\""  -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libcommon_la-fdsetconv.lo `test -f 'fdsetconv.c' || echo './'`fdsetconv.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include/ -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR=\"/usr/lib64/speech-dispatcher\" -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c fdsetconv.c  -fPIC -DPIC -o .libs/libcommon_la-fdsetconv.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  "-I../../include/" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR="\"/usr/lib64/speech-dispatcher\""  -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libcommon_la-i18n.lo `test -f 'i18n.c' || echo './'`i18n.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include/ -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR=\"/usr/lib64/speech-dispatcher\" -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c i18n.c  -fPIC -DPIC -o .libs/libcommon_la-i18n.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  "-I../../include/" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR="\"/usr/lib64/speech-dispatcher\""  -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libcommon_la-spd_audio.lo `test -f 'spd_audio.c' || echo './'`spd_audio.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include/ -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR=\"/usr/lib64/speech-dispatcher\" -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c spd_audio.c  -fPIC -DPIC -o .libs/libcommon_la-spd_audio.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  "-I../../include/" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR="\"/usr/lib64/speech-dispatcher\""  -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libcommon_la-speak_queue.lo `test -f 'speak_queue.c' || echo './'`speak_queue.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include/ -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DPLUGIN_DIR=\"/usr/lib64/speech-dispatcher\" -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c speak_queue.c  -fPIC -DPIC -o .libs/libcommon_la-speak_queue.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DGETTEXT_PACKAGE=\"speech-dispatcher\" -DLOCALEDIR=\"/usr/share/locale\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libcommon.la  libcommon_la-common.lo libcommon_la-fdsetconv.lo libcommon_la-i18n.lo libcommon_la-spd_audio.lo libcommon_la-speak_queue.lo -lglib-2.0 -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-ar cr .libs/libcommon.a .libs/libcommon_la-common.o .libs/libcommon_la-fdsetconv.o .libs/libcommon_la-i18n.o .libs/libcommon_la-spd_audio.o .libs/libcommon_la-speak_queue.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib .libs/libcommon.a
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libcommon.la" &amp;&amp; ln -s "../libcommon.la" "libcommon.la" )
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/common'
+Making all in server
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-speechd.o `test -f 'speechd.c' || echo './'`speechd.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-server.o `test -f 'server.c' || echo './'`server.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-history.o `test -f 'history.c' || echo './'`history.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-module.o `test -f 'module.c' || echo './'`module.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-configuration.o `test -f 'configuration.c' || echo './'`configuration.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-parse.o `test -f 'parse.c' || echo './'`parse.c
+parse.c: In function ‘parse’:
+parse.c:88:43: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+   88 |                 MSG(5, "Command caught: \"%s\"", command);
+      |                                           ^~
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-set.o `test -f 'set.c' || echo './'`set.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-alloc.o `test -f 'alloc.c' || echo './'`alloc.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-compare.o `test -f 'compare.c' || echo './'`compare.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-speaking.o `test -f 'speaking.c' || echo './'`speaking.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-options.o `test -f 'options.c' || echo './'`options.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-output.o `test -f 'output.c' || echo './'`output.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-sem_functions.o `test -f 'sem_functions.c' || echo './'`sem_functions.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-index_marking.o `test -f 'index_marking.c' || echo './'`index_marking.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include/ -I../../src/common  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DSYS_CONF=\"/etc/speech-dispatcher\" -DSND_DATA=\"/usr/share/sounds/speech-dispatcher\" -DBINDIR=\"/usr/bin\" -DMODULEBINDIR=\"/usr/libexec/speech-dispatcher-modules\" -DOLDMODULEBINDIR=\"/usr/lib64/speech-dispatcher-modules\" -DLOCALE_DATA=\"/usr/share/speech-dispatcher/locale\" -DDEFAULT_AUDIO_METHOD=\"pulse\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o speech_dispatcher-symbols.o `test -f 'symbols.c' || echo './'`symbols.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -rdynamic -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o speech-dispatcher speech_dispatcher-speechd.o speech_dispatcher-server.o speech_dispatcher-history.o speech_dispatcher-module.o speech_dispatcher-configuration.o speech_dispatcher-parse.o speech_dispatcher-set.o speech_dispatcher-alloc.o speech_dispatcher-compare.o speech_dispatcher-speaking.o speech_dispatcher-options.o speech_dispatcher-output.o speech_dispatcher-sem_functions.o speech_dispatcher-index_marking.o speech_dispatcher-symbols.o ../../src/common/libcommon.la -ldotconf -lglib-2.0 -lsndfile -Wl,--export-dynamic -lgmodule-2.0 -pthread -lglib-2.0 -lgthread-2.0 -pthread -lglib-2.0   -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -rdynamic -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o speech-dispatcher speech_dispatcher-speechd.o speech_dispatcher-server.o speech_dispatcher-history.o speech_dispatcher-module.o speech_dispatcher-configuration.o speech_dispatcher-parse.o speech_dispatcher-set.o speech_dispatcher-alloc.o speech_dispatcher-compare.o speech_dispatcher-speaking.o speech_dispatcher-options.o speech_dispatcher-output.o speech_dispatcher-sem_functions.o speech_dispatcher-index_marking.o speech_dispatcher-symbols.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a -ldotconf -lsndfile -lgmodule-2.0 -lgthread-2.0 -lglib-2.0 -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+LC_ALL=C help2man -n "speech synthesis daemon" --output=speech-dispatcher.1 ./speech-dispatcher
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+Making all in audio
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I../../include/    -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o spd_alsa_la-alsa.lo `test -f 'alsa.c' || echo './'`alsa.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I../../include/ -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c alsa.c  -fPIC -DPIC -o .libs/spd_alsa_la-alsa.o
+alsa.c: In function 'wait_for_poll':
+alsa.c:296:13: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  296 |         int ret;
+      |             ^~~
+alsa.c: In function 'alsa_feed':
+alsa.c:590:25: warning: variable 'state' set but not used [-Wunused-but-set-variable]
+  590 |         snd_pcm_state_t state;
+      |                         ^~~~~
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I../../include/  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o spd_oss_la-oss.lo `test -f 'oss.c' || echo './'`oss.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I../../include/ -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c oss.c  -fPIC -DPIC -o .libs/spd_oss_la-oss.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I../../include/  -D_REENTRANT  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o spd_pulse_la-pulse.lo `test -f 'pulse.c' || echo './'`pulse.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -I../../include/ -D_REENTRANT -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c pulse.c  -fPIC -DPIC -o .libs/spd_pulse_la-pulse.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o spd_alsa.la -rpath /usr/lib64/speech-dispatcher spd_alsa_la-alsa.lo -lasound -lglib-2.0 -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/spd_alsa_la-alsa.o   -lasound -lglib-2.0 -lc -lm  -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,spd_alsa.so -o .libs/spd_alsa.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "spd_alsa.la" &amp;&amp; ln -s "../spd_alsa.la" "spd_alsa.la" )
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o spd_oss.la -rpath /usr/lib64/speech-dispatcher spd_oss_la-oss.lo -lglib-2.0 -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/spd_oss_la-oss.o   -lglib-2.0 -lc -lm  -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,spd_oss.so -o .libs/spd_oss.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "spd_oss.la" &amp;&amp; ln -s "../spd_oss.la" "spd_oss.la" )
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -module -avoid-version -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o spd_pulse.la -rpath /usr/lib64/speech-dispatcher spd_pulse_la-pulse.lo -lpulse -pthread -lglib-2.0 -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/spd_pulse_la-pulse.o   -lpulse -lglib-2.0 -lc -lm  -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -pthread -Wl,-soname -Wl,spd_pulse.so -o .libs/spd_pulse.so
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "spd_pulse.la" &amp;&amp; ln -s "../spd_pulse.la" "spd_pulse.la" )
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+Making all in modules
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o dummy.o dummy.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o module_config.o module_config.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o module_utils.o module_utils.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o module_utils_addvoice.o module_utils_addvoice.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o module_main.lo module_main.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c module_main.c  -fPIC -DPIC -o .libs/module_main.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o module_readline.lo module_readline.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c module_readline.c  -fPIC -DPIC -o .libs/module_readline.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o module_process.lo module_process.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../.. -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c module_process.c  -fPIC -DPIC -o .libs/module_process.o
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o festival.o festival.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o festival_client.o festival_client.c
+In file included from module_utils.h:40,
+                 from festival_client.c:73:
+festival_client.c: In function ‘festivalOpen’:
+festival_client.c:498:21: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+  498 |                 DBG("ERROR: Can't set Wavefiletype to nist in Festival. Reason: %s", resp);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/common/common.h:31:28: note: in definition of macro ‘DBG’
+   31 | #define DBG(arg...) MSG(4, arg)
+      |                            ^~~
+festival_client.c:498:81: note: format string is defined here
+  498 |                 DBG("ERROR: Can't set Wavefiletype to nist in Festival. Reason: %s", resp);
+      |                                                                                 ^~
+festival_client.c:485:21: warning: ‘%s’ directive argument is null [-Wformat-overflow=]
+  485 |                 DBG("ERROR: Can't load speech-dispatcher module into Festival."
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/common/common.h:31:28: note: in definition of macro ‘DBG’
+   31 | #define DBG(arg...) MSG(4, arg)
+      |                            ^~~
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o generic.o generic.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o cicero.o cicero.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DESPEAK_NG_INCLUDE  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_espeak_ng-espeak.o `test -f 'espeak.c' || echo './'`espeak.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DESPEAK_NG_INCLUDE  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_espeak_ng-module_config.o `test -f 'module_config.c' || echo './'`module_config.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -DESPEAK_NG_INCLUDE  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_espeak_ng-module_utils.o `test -f 'module_utils.c' || echo './'`module_utils.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_openjtalk-openjtalk.o `test -f 'openjtalk.c' || echo './'`openjtalk.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_openjtalk-module_config.o `test -f 'module_config.c' || echo './'`module_config.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_openjtalk-module_utils.o `test -f 'module_utils.c' || echo './'`module_utils.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o skeleton0.o skeleton0.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o skeleton_config.o skeleton_config.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_skeleton0_espeak_ng_sync-skeleton0_espeak-ng-sync.o `test -f 'skeleton0_espeak-ng-sync.c' || echo './'`skeleton0_espeak-ng-sync.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_skeleton0_espeak_ng_async-skeleton0_espeak-ng-async.o `test -f 'skeleton0_espeak-ng-async.c' || echo './'`skeleton0_espeak-ng-async.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_skeleton0_espeak_ng_sync_server-skeleton0_espeak-ng-sync-server.o `test -f 'skeleton0_espeak-ng-sync-server.c' || echo './'`skeleton0_espeak-ng-sync-server.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../..  -I../../include -I../../src/common -DDATADIR=\"/usr/share/sounds/speech-dispatcher\" -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o sd_skeleton0_espeak_ng_async_server-skeleton0_espeak-ng-async-server.o `test -f 'skeleton0_espeak-ng-async-server.c' || echo './'`skeleton0_espeak-ng-async-server.c
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -version-info 0:0:0  -o libspeechd_module.la -rpath /usr/lib64 module_main.lo module_readline.lo module_process.lo  -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/module_main.o .libs/module_readline.o .libs/module_process.o   -lc -lm  -O3 -march=native -mtune=native   -Wl,-soname -Wl,libspeechd_module.so.0 -o .libs/libspeechd_module.so.0.0.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libspeechd_module.so.0" &amp;&amp; ln -s "libspeechd_module.so.0.0.0" "libspeechd_module.so.0")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libspeechd_module.so" &amp;&amp; ln -s "libspeechd_module.so.0.0.0" "libspeechd_module.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libspeechd_module.la" &amp;&amp; ln -s "../libspeechd_module.la" "libspeechd_module.la" )
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_dummy dummy.o module_config.o module_utils.o module_utils_addvoice.o ../../src/common/libcommon.la -dlopen ../audio/spd_pulse.la -dlopen ../audio/spd_alsa.la -dlopen ../audio/spd_oss.la libspeechd_module.la -ldotconf -lglib-2.0 -dlopen force -lpthread -lc -lc -lm 
+libtool: link: rm -f .libs/sd_dummy.nm .libs/sd_dummy.nmS .libs/sd_dummy.nmT
+libtool: link: rm -f ".libs/sd_dummy.nmI"
+libtool: link: (cd .libs &amp;&amp; x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -fno-builtin "sd_dummyS.c")
+libtool: link: rm -f ".libs/sd_dummyS.c" ".libs/sd_dummy.nm" ".libs/sd_dummy.nmS" ".libs/sd_dummy.nmT" ".libs/sd_dummy.nmI"
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_dummy dummy.o module_config.o module_utils.o module_utils_addvoice.o .libs/sd_dummyS.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a ./.libs/libspeechd_module.so -ldotconf -lglib-2.0 -lpthread -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_festival festival.o festival_client.o module_config.o module_utils.o ../../src/common/libcommon.la libspeechd_module.la -ldotconf -lglib-2.0 -dlopen force -lpthread  -lc -lc -lm 
+libtool: link: rm -f .libs/sd_festival.nm .libs/sd_festival.nmS .libs/sd_festival.nmT
+libtool: link: rm -f ".libs/sd_festival.nmI"
+libtool: link: (cd .libs &amp;&amp; x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -fno-builtin "sd_festivalS.c")
+libtool: link: rm -f ".libs/sd_festivalS.c" ".libs/sd_festival.nm" ".libs/sd_festival.nmS" ".libs/sd_festival.nmT" ".libs/sd_festival.nmI"
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_festival festival.o festival_client.o module_config.o module_utils.o .libs/sd_festivalS.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a ./.libs/libspeechd_module.so -ldotconf -lglib-2.0 -lpthread -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_generic generic.o module_config.o module_utils.o module_utils_addvoice.o ../../src/common/libcommon.la -dlopen ../audio/spd_pulse.la -dlopen ../audio/spd_alsa.la -dlopen ../audio/spd_oss.la libspeechd_module.la -ldotconf -lglib-2.0 -dlopen force -lpthread -lc -lc -lm 
+libtool: link: rm -f .libs/sd_generic.nm .libs/sd_generic.nmS .libs/sd_generic.nmT
+libtool: link: rm -f ".libs/sd_generic.nmI"
+libtool: link: (cd .libs &amp;&amp; x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -fno-builtin "sd_genericS.c")
+libtool: link: rm -f ".libs/sd_genericS.c" ".libs/sd_generic.nm" ".libs/sd_generic.nmS" ".libs/sd_generic.nmT" ".libs/sd_generic.nmI"
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_generic generic.o module_config.o module_utils.o module_utils_addvoice.o .libs/sd_genericS.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a ./.libs/libspeechd_module.so -ldotconf -lglib-2.0 -lpthread -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_cicero cicero.o module_config.o module_utils.o ../../src/common/libcommon.la -dlopen ../audio/spd_pulse.la -dlopen ../audio/spd_alsa.la -dlopen ../audio/spd_oss.la libspeechd_module.la -ldotconf -lglib-2.0 -dlopen force -lpthread -lc -lc -lm 
+libtool: link: rm -f .libs/sd_cicero.nm .libs/sd_cicero.nmS .libs/sd_cicero.nmT
+libtool: link: rm -f ".libs/sd_cicero.nmI"
+libtool: link: (cd .libs &amp;&amp; x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -fno-builtin "sd_ciceroS.c")
+libtool: link: rm -f ".libs/sd_ciceroS.c" ".libs/sd_cicero.nm" ".libs/sd_cicero.nmS" ".libs/sd_cicero.nmT" ".libs/sd_cicero.nmI"
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_cicero cicero.o module_config.o module_utils.o .libs/sd_ciceroS.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a ./.libs/libspeechd_module.so -ldotconf -lglib-2.0 -lpthread -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -DESPEAK_NG_INCLUDE  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_espeak-ng sd_espeak_ng-espeak.o sd_espeak_ng-module_config.o sd_espeak_ng-module_utils.o ../../src/common/libcommon.la -lespeak-ng  libspeechd_module.la -ldotconf -lglib-2.0 -dlopen force -lpthread -lc -lc -lm 
+libtool: link: rm -f .libs/sd_espeak-ng.nm .libs/sd_espeak-ng.nmS .libs/sd_espeak-ng.nmT
+libtool: link: rm -f ".libs/sd_espeak-ng.nmI"
+libtool: link: (cd .libs &amp;&amp; x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -fno-builtin "sd_espeak-ngS.c")
+libtool: link: rm -f ".libs/sd_espeak-ngS.c" ".libs/sd_espeak-ng.nm" ".libs/sd_espeak-ng.nmS" ".libs/sd_espeak-ng.nmT" ".libs/sd_espeak-ng.nmI"
+libtool: link: x86_64-pc-linux-gnu-gcc -DESPEAK_NG_INCLUDE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_espeak-ng sd_espeak_ng-espeak.o sd_espeak_ng-module_config.o sd_espeak_ng-module_utils.o .libs/sd_espeak-ngS.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a -lespeak-ng ./.libs/libspeechd_module.so -ldotconf -lglib-2.0 -lpthread -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_openjtalk sd_openjtalk-openjtalk.o sd_openjtalk-module_config.o sd_openjtalk-module_utils.o ../../src/common/libcommon.la libspeechd_module.la -ldotconf -lglib-2.0 -dlopen force -lpthread -lc -lc -lm 
+libtool: link: rm -f .libs/sd_openjtalk.nm .libs/sd_openjtalk.nmS .libs/sd_openjtalk.nmT
+libtool: link: rm -f ".libs/sd_openjtalk.nmI"
+libtool: link: (cd .libs &amp;&amp; x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -fno-builtin "sd_openjtalkS.c")
+libtool: link: rm -f ".libs/sd_openjtalkS.c" ".libs/sd_openjtalk.nm" ".libs/sd_openjtalk.nmS" ".libs/sd_openjtalk.nmT" ".libs/sd_openjtalk.nmI"
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_openjtalk sd_openjtalk-openjtalk.o sd_openjtalk-module_config.o sd_openjtalk-module_utils.o .libs/sd_openjtalkS.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a ./.libs/libspeechd_module.so -ldotconf -lglib-2.0 -lpthread -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_skeleton0 skeleton0.o libspeechd_module.la -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_skeleton0 skeleton0.o  ./.libs/libspeechd_module.so -lc -lm
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_skeleton_config skeleton_config.o module_config.o module_utils.o ../../src/common/libcommon.la libspeechd_module.la -dlopen ../audio/spd_pulse.la -dlopen ../audio/spd_alsa.la -dlopen ../audio/spd_oss.la libspeechd_module.la -ldotconf -lglib-2.0 -dlopen force -lpthread -lc -lc -lm 
+libtool: link: rm -f .libs/sd_skeleton_config.nm .libs/sd_skeleton_config.nmS .libs/sd_skeleton_config.nmT
+libtool: link: rm -f ".libs/sd_skeleton_config.nmI"
+libtool: link: (cd .libs &amp;&amp; x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -fno-builtin "sd_skeleton_configS.c")
+libtool: link: rm -f ".libs/sd_skeleton_configS.c" ".libs/sd_skeleton_config.nm" ".libs/sd_skeleton_config.nmS" ".libs/sd_skeleton_config.nmT" ".libs/sd_skeleton_config.nmI"
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_skeleton_config skeleton_config.o module_config.o module_utils.o .libs/sd_skeleton_configS.o -Wl,--export-dynamic  ../../src/common/.libs/libcommon.a ./.libs/libspeechd_module.so -ldotconf -lglib-2.0 -lpthread -lc -lm -pthread
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_skeleton0_espeak-ng-sync sd_skeleton0_espeak_ng_sync-skeleton0_espeak-ng-sync.o libspeechd_module.la -lespeak-ng  -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_skeleton0_espeak-ng-sync sd_skeleton0_espeak_ng_sync-skeleton0_espeak-ng-sync.o  ./.libs/libspeechd_module.so -lespeak-ng -lc -lm
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_skeleton0_espeak-ng-async sd_skeleton0_espeak_ng_async-skeleton0_espeak-ng-async.o libspeechd_module.la -lespeak-ng  -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_skeleton0_espeak-ng-async sd_skeleton0_espeak_ng_async-skeleton0_espeak-ng-async.o  ./.libs/libspeechd_module.so -lespeak-ng -lc -lm
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_skeleton0_espeak-ng-sync-server sd_skeleton0_espeak_ng_sync_server-skeleton0_espeak-ng-sync-server.o libspeechd_module.la -lespeak-ng  -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_skeleton0_espeak-ng-sync-server sd_skeleton0_espeak_ng_sync_server-skeleton0_espeak-ng-sync-server.o  ./.libs/libspeechd_module.so -lespeak-ng -lc -lm
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17   -o sd_skeleton0_espeak-ng-async-server sd_skeleton0_espeak_ng_async_server-skeleton0_espeak-ng-async-server.o libspeechd_module.la -lespeak-ng  -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -o .libs/sd_skeleton0_espeak-ng-async-server sd_skeleton0_espeak_ng_async_server-skeleton0_espeak-ng-async-server.o  ./.libs/libspeechd_module.so -lespeak-ng -lc -lm
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+Making all in api
+Making all in c
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+rm -f libspeechd_version.h
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+srcdir=; \
+test -f ./libspeechd_version.h.in || srcdir=./; \
+sed -e 's:[@]LIBSPEECHD_MAJOR_VERSION[@]:0:' -e 's:[@]LIBSPEECHD_MINOR_VERSION[@]:12:' -e 's:[@]LIBSPEECHD_MICRO_VERSION[@]:0:' ${srcdir}libspeechd_version.h.in &gt; libspeechd_version.h
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+make  all-am
+make[5]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../..  -I../../../include/ -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DSPD_SPAWN_CMD=\""/usr/bin/speech-dispatcher"\"  -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o libspeechd_la-libspeechd.lo `test -f 'libspeechd.c' || echo './'`libspeechd.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../.. -I../../../include/ -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -DSPD_SPAWN_CMD=\"/usr/bin/speech-dispatcher\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c libspeechd.c  -fPIC -DPIC -o .libs/libspeechd_la-libspeechd.o
+make[5]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+make[5]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -version-info 8:0:6 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libspeechd.la -rpath /usr/lib64 libspeechd_la-libspeechd.lo -lglib-2.0 -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libspeechd_la-libspeechd.o   -lglib-2.0 -lc -lm  -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libspeechd.so.2 -o .libs/libspeechd.so.2.6.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libspeechd.so.2" &amp;&amp; ln -s "libspeechd.so.2.6.0" "libspeechd.so.2")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libspeechd.so" &amp;&amp; ln -s "libspeechd.so.2.6.0" "libspeechd.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libspeechd.la" &amp;&amp; ln -s "../libspeechd.la" "libspeechd.la" )
+make[5]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+make[4]: Nothing to be done for 'all-am'.
+Making all in clients
+Making all in say
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../..  -I../../../include -I../../../src/api/c -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o spd_say-options.o `test -f 'options.c' || echo './'`options.c
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../..  -I../../../include -I../../../src/api/c -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o spd_say-say.o `test -f 'say.c' || echo './'`say.c
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o spd-say spd_say-say.o spd_say-options.o ../../../src/api/c/libspeechd.la  ../../../src/common/libcommon.la -lpthread -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/spd-say spd_say-say.o spd_say-options.o  ../../../src/api/c/.libs/libspeechd.so ../../../src/common/.libs/libcommon.a -lglib-2.0 -lpthread -lc -lm -pthread
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+LC_ALL=C help2man -n "send text-to-speech output request to speech-dispatcher" --output=spd-say.1 ./spd-say
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+Making all in spdsend
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../..     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o spdsend.o spdsend.c
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../..     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o server.o server.c
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../..     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o client.o client.c
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I../../..     -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -c -o common.o common.c
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+/bin/sh ../../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o spdsend spdsend.o server.o client.o common.o  -lpthread -lc -lc -lm 
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu17 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o spdsend spdsend.o server.o client.o common.o  -lpthread -lc -lm
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+make[4]: Nothing to be done for 'all-am'.
+Making all in tests
+make[3]: Nothing to be done for 'all'.
+make[3]: Nothing to be done for 'all-am'.
+Making all in config
+Making all in modules
+make[3]: Nothing to be done for 'all'.
+Making all in clients
+make[3]: Nothing to be done for 'all'.
+make[3]: Nothing to be done for 'all-am'.
+Making all in po
+make[2]: Nothing to be done for 'all'.
+Making all in doc
+make[2]: Nothing to be done for 'all'.
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0'
+sed -e 's,@bindir\@,/usr/bin,g' speech-dispatcherd.service.in &gt; speech-dispatcherd.service
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0'
+ <span class="ansi32">*</span> python3_12: running run_in_build_dir building
+make -j2 pyexecdir=/usr/lib/python3.12/site-packages pythondir=/usr/lib/python3.12/site-packages 
+Making all in speechd
+make[1]: Nothing to be done for 'all'.
+Making all in speechd_config
+make[1]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+/usr/bin/msgfmt --desktop --template speechd.desktop.in -d ../../../../po -o speechd.desktop
+make[1]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[1]: Nothing to be done for 'all-am'.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: app-accessibility/speech-dispatcher-0.12.0
+
+&gt;&gt;&gt; Install app-accessibility/speech-dispatcher-0.12.0 into /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image
+make -j2 DESTDIR=/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image install 
+make  install-recursive
+Making install in include
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/include'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/include/speech-dispatcher'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 spd_audio_plugin.h speechd_types.h speechd_defines.h '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/include/speech-dispatcher'
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/include'
+Making install in locale
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/locale'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/rm'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  rm/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/rm'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pt'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  pt/emojis.dic pt/orca.dic pt/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pt'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tg'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  tg/emojis.dic tg/orca.dic tg/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tg'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/th'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  th/emojis.dic th/orca.dic th/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/th'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ro'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ro/emojis.dic ro/orca.dic ro/orca-chars.dic ro/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ro'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ti'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ti/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ti'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/am'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  am/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/am'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/an'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  an/orca.dic an/orca-chars.dic an/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/an'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tk'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  tk/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tk'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lij'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  lij/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lij'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh_CN'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  zh_CN/orca-chars.dic zh_CN/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh_CN'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ckb'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ckb/emojis.dic ckb/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ckb'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ar_SA'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ar_SA/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ar_SA'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tn'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  tn/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tn'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ru'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ru/emojis.dic ru/orca.dic ru/orca-chars.dic ru/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ru'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/to'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  to/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/to'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ar'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ar/emojis.dic ar/orca.dic ar/orca-chars.dic ar/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ar'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/vi'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  vi/emojis.dic vi/orca.dic vi/orca-chars.dic vi/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/vi'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/rw'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  rw/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/rw'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/as'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  as/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/as'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nb_NO'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  nb_NO/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nb_NO'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh_TW'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  zh_TW/emojis.dic zh_TW/orca.dic zh_TW/orca-chars.dic zh_TW/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh_TW'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hi_Latn'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  hi_Latn/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hi_Latn'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tr'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  tr/emojis.dic tr/orca.dic tr/orca-chars.dic tr/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/tr'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ga'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ga/emojis.dic ga/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ga'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fur'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  fur/orca.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fur'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_CO'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  es_CO/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_CO'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/xh'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  xh/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/xh'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/gd'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  gd/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/gd'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/az'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  az/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/az'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/cs'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  cs/emojis.dic cs/orca.dic cs/orca-chars.dic cs/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/cs'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/el'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  el/emojis.dic el/orca.dic el/orca-chars.dic el/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/el'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  en/emojis.dic en/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/eo'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  eo/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/eo'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ia'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ia/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ia'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/cv'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  cv/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/cv'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  zh/emojis.dic zh/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/id'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  id/emojis.dic id/orca.dic id/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/id'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/cy'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  cy/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/cy'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/gl'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  gl/emojis.dic gl/orca.dic gl/orca-chars.dic gl/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/gl'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  es/emojis.dic es/orca.dic es/orca-chars.dic es/symbols.dic es/gender-neutral.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/yue'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  yue/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/yue'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/et'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  et/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/et'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ig'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ig/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ig'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/eu'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  eu/emojis.dic eu/orca.dic eu/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/eu'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ka'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ka/emojis.dic ka/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ka'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/gu'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  gu/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/gu'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pt_PT'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  pt_PT/emojis.dic pt_PT/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pt_PT'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fr_CA'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  fr_CA/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fr_CA'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zu'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  zu/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zu'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sr_BA'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sr_BA/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sr_BA'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kk'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  kk/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kk'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kl'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  kl/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kl'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/is'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  is/emojis.dic is/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/is'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/km'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  km/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/km'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/it'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  it/emojis.dic it/orca.dic it/orca-chars.dic it/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/it'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kn'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  kn/emojis.dic kn/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kn'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ko'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ko/emojis.dic ko/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ko'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mi'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  mi/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mi'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/oc'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  oc/emojis.dic oc/orca.dic oc/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/oc'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mk'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  mk/emojis.dic mk/orca.dic mk/orca-chars.dic mk/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mk'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ml'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ml/emojis.dic ml/orca.dic ml/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ml'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mn'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  mn/emojis.dic mn/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mn'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ku'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ku/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ku'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hsb'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  hsb/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hsb'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mr'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  mr/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mr'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ky'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ky/emojis.dic ky/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ky'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ms'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ms/emojis.dic ms/orca.dic ms/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ms'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/quc'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  quc/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/quc'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mt'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  mt/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mt'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ha_NE'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ha_NE/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ha_NE'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_419'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  es_419/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_419'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sw_KE'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sw_KE/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sw_KE'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sa'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sa/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sa'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/doi'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  doi/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/doi'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sat'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sat/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sat'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bn_IN'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  bn_IN/orca.dic bn_IN/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bn_IN'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sc'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sc/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sc'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sd'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sd/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sd'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/or'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  or/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/or'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/my'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  my/emojis.dic my/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/my'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_MX'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  es_MX/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_MX'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/yo_BJ'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  yo_BJ/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/yo_BJ'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/dsb'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  dsb/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/dsb'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/si'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  si/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/si'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/be'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  be/emojis.dic be/orca.dic be/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/be'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sk'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sk/emojis.dic sk/orca.dic sk/orca-chars.dic sk/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sk'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pa_Arab'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  pa_Arab/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pa_Arab'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bg'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  bg/emojis.dic bg/orca.dic bg/orca-chars.dic bg/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bg'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sl'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sl/emojis.dic sl/orca.dic sl/orca-chars.dic sl/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sl'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/da'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  da/emojis.dic da/orca.dic da/orca-chars.dic da/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/da'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ug'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ug/emojis.dic ug/orca.dic ug/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ug'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/qu'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  qu/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/qu'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kab'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  kab/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kab'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/so'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  so/emojis.dic so/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/so'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/de'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  de/emojis.dic de/orca.dic de/orca-chars.dic de/symbols.dic de/gender-neutral.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/de'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sq'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sq/emojis.dic sq/orca-chars.dic sq/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sq'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/uk'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  uk/emojis.dic uk/orca.dic uk/orca-chars.dic uk/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/uk'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sr'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sr/emojis.dic sr/orca.dic sr/orca-chars.dic sr/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sr'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bn'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  bn/emojis.dic bn/orca.dic bn/orca-chars.dic bn/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bn'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fa'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  fa/emojis.dic fa/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fa'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sr@latin'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sr@latin/orca.dic sr@latin/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sr@latin'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/chr'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  chr/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/chr'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sv'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sv/emojis.dic sv/orca.dic sv/orca-chars.dic sv/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sv'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/de_CH'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  de_CH/emojis.dic de_CH/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/de_CH'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/br'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  br/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/br'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nn_NO'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  nn_NO/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nn_NO'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sw'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  sw/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/sw'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bs'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  bs/emojis.dic bs/orca.dic bs/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bs'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ff'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ff/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ff'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ur'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ur/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ur'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ha'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ha/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ha'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ff_Adlm'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ff_Adlm/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ff_Adlm'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fi'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  fi/emojis.dic fi/orca.dic fi/orca-chars.dic fi/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fi'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/wo'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  wo/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/wo'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_US'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  es_US/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/es_US'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_CA'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  en_CA/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_CA'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh_HK'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  zh_HK/emojis.dic zh_HK/orca-chars.dic zh_HK/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/zh_HK'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/he'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  he/emojis.dic he/orca.dic he/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/he'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/base'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  base/font-variants.dic base/symbols-fallback.dic base/orca.dic base/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/base'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/uz'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  uz/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/uz'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ja'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ja/emojis.dic ja/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ja'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fo'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  fo/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fo'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hi'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  hi/emojis.dic hi/orca.dic hi/orca-chars.dic hi/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hi'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/yo'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  yo/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/yo'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fr'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  fr/emojis.dic fr/orca.dic fr/orca-chars.dic fr/symbols.dic fr/gender-neutral.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fr'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fil'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  fil/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/fil'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lb'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  lb/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lb'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_AU'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  en_AU/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_AU'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ca@valencia'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ca@valencia/orca.dic ca@valencia/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ca@valencia'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hr'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  hr/emojis.dic hr/orca.dic hr/orca-chars.dic hr/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hr'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_GB'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  en_GB/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_GB'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pcm'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  pcm/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pcm'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hu'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  hu/emojis.dic hu/orca.dic hu/orca-chars.dic hu/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hu'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nso'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  nso/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nso'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nb'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  nb/emojis.dic nb/orca.dic nb/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nb'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/rhg'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  rhg/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/rhg'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bgn'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  bgn/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bgn'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hy'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  hy/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/hy'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ne'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ne/emojis.dic ne/orca.dic ne/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ne'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bew'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  bew/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/bew'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pa'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  pa/emojis.dic pa/orca.dic pa/orca-chars.dic pa/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pa'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lo'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  lo/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lo'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/jv'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  jv/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/jv'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pt_BR'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  pt_BR/orca.dic pt_BR/orca-chars.dic pt_BR/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pt_BR'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nl'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  nl/emojis.dic nl/orca.dic nl/orca-chars.dic nl/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nl'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ceb'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ceb/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ceb'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mni'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  mni/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/mni'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lt'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  lt/emojis.dic lt/orca.dic lt/orca-chars.dic lt/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lt'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nn'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  nn/emojis.dic nn/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/nn'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/no'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  no/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/no'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lv'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  lv/emojis.dic lv/orca.dic lv/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/lv'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_IN'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  en_IN/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/en_IN'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pl'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  pl/emojis.dic pl/orca.dic pl/orca-chars.dic pl/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/pl'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ccp'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ccp/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ccp'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ta'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ta/emojis.dic ta/orca.dic ta/orca-chars.dic ta/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ta'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ast'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ast/emojis.dic ast/orca.dic ast/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ast'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/af'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  af/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/af'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kmr'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  kmr/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kmr'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/te'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  te/emojis.dic te/orca.dic te/orca-chars.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/te'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ps'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ps/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ps'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kok'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  kok/emojis.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/kok'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ca'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644  ca/emojis.dic ca/orca.dic ca/orca-chars.dic ca/symbols.dic '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/ca'
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/locale'
+make  install-data-hook
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/locale'
+for lang419 in es_AR es_BO es_CL es_CO es_CR es_CU es_DO es_EC es_GT es_HN es_NI es_PA es_PE es_PR es_PY es_SV es_UY es_VE ; do \
+	/bin/mkdir -p "/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/$lang419" ;\
+	ln -s "../es_419/emojis.dic" "/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/locale/$lang419/emojis.dic" || true ;\
+done
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/locale'
+Making install in src
+Making install in common
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+Making install in server
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c speech-dispatcher '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c speech-dispatcher /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin/speech-dispatcher
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/man/man1'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 speech-dispatcher.1 '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/man/man1'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/server'
+make[4]: Nothing to be done for 'install-data-am'.
+Making install in audio
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher'
+ /bin/sh ../../libtool   --mode=install /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c   spd_alsa.la spd_oss.la spd_pulse.la '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/spd_alsa.so /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher/spd_alsa.so
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/spd_alsa.lai /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher/spd_alsa.la
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/spd_oss.so /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher/spd_oss.so
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/spd_oss.lai /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher/spd_oss.la
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/spd_pulse.so /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher/spd_pulse.so
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/spd_pulse.lai /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/speech-dispatcher/spd_pulse.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64/speech-dispatcher'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/audio'
+Making install in modules
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/sounds/speech-dispatcher'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 dummy-message.wav '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/sounds/speech-dispatcher'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64'
+ /bin/sh ../../libtool   --mode=install /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c   libspeechd_module.la '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/libspeechd_module.so.0.0.0 /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/libspeechd_module.so.0.0.0
+libtool: install: (cd /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64 &amp;&amp; { ln -s -f libspeechd_module.so.0.0.0 libspeechd_module.so.0 || { rm -f libspeechd_module.so.0 &amp;&amp; ln -s libspeechd_module.so.0.0.0 libspeechd_module.so.0; }; })
+libtool: install: (cd /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64 &amp;&amp; { ln -s -f libspeechd_module.so.0.0.0 libspeechd_module.so || { rm -f libspeechd_module.so &amp;&amp; ln -s libspeechd_module.so.0.0.0 libspeechd_module.so; }; })
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/libspeechd_module.lai /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/libspeechd_module.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/include/speech-dispatcher'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 spd_module_main.h '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/include/speech-dispatcher'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make  install-exec-hook
+make[5]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+/bin/mkdir -p /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules
+make[5]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[5]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+cd /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules &amp;&amp; \
+	rm -f sd_espeak-ng-mbrola &amp;&amp; \
+	ln -s sd_espeak-ng sd_espeak-ng-mbrola
+make[5]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules'
+  /bin/sh ../../libtool   --mode=install /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c sd_dummy sd_festival sd_generic sd_cicero sd_espeak-ng sd_openjtalk '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules'
+libtool: warning: 'libspeechd_module.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/sd_dummy /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules/sd_dummy
+libtool: warning: 'libspeechd_module.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/sd_festival /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules/sd_festival
+libtool: warning: 'libspeechd_module.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/sd_generic /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules/sd_generic
+libtool: warning: 'libspeechd_module.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/sd_cicero /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules/sd_cicero
+libtool: warning: 'libspeechd_module.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/sd_espeak-ng /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules/sd_espeak-ng
+libtool: warning: 'libspeechd_module.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/sd_openjtalk /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/libexec/speech-dispatcher-modules/sd_openjtalk
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/modules'
+Making install in api
+Making install in c
+make  install-am
+make[6]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64'
+ /bin/sh ../../../libtool   --mode=install /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c   libspeechd.la '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/libspeechd.so.2.6.0 /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/libspeechd.so.2.6.0
+libtool: install: (cd /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64 &amp;&amp; { ln -s -f libspeechd.so.2.6.0 libspeechd.so.2 || { rm -f libspeechd.so.2 &amp;&amp; ln -s libspeechd.so.2.6.0 libspeechd.so.2; }; })
+libtool: install: (cd /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64 &amp;&amp; { ln -s -f libspeechd.so.2.6.0 libspeechd.so || { rm -f libspeechd.so &amp;&amp; ln -s libspeechd.so.2.6.0 libspeechd.so; }; })
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/libspeechd.lai /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/libspeechd.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[6]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+make[6]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/include/speech-dispatcher'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 libspeechd.h libspeechd_version.h '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/include/speech-dispatcher'
+make[6]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/api/c'
+make[6]: Nothing to be done for 'install-data-am'.
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+Making install in clients
+Making install in say
+make[5]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/man/man1'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 spd-say.1 '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/man/man1'
+make[5]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+make[5]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c spd-say '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+libtool: warning: '../../../src/api/c/libspeechd.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c .libs/spd-say /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin/spd-say
+make[5]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/say'
+Making install in spdsend
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c spdsend '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+libtool: install: /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c spdsend /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin/spdsend
+make[5]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/src/clients/spdsend'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+Making install in tests
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+Making install in config
+Making install in modules
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/modules'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf/modules'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 cicero.conf espeak.conf festival.conf espeak-ng.conf espeak-ng-mbrola.conf '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf/modules'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/modules'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/modules'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/etc/speech-dispatcher/modules'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 cicero.conf espeak.conf espeak-ng.conf espeak-ng-mbrola.conf festival.conf flite.conf dtk-generic.conf epos-generic.conf espeak-ng-mbrola-generic.conf espeak-mbrola-generic.conf llia_phon-generic.conf swift-generic.conf mary-generic.conf mimic3-generic.conf openjtalk.conf '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/etc/speech-dispatcher/modules'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/modules'
+Making install in clients
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/clients'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/etc/speech-dispatcher/clients'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 emacs.conf '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/etc/speech-dispatcher/clients'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/clients'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/clients'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf/clients'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 emacs.conf '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf/clients'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config/clients'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/etc/speech-dispatcher'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 speechd.conf '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/etc/speech-dispatcher'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config'
+make[4]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 speechd.conf '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf'
+make[4]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/config'
+Making install in po
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/po'
+installing cs.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/cs/LC_MESSAGES/speech-dispatcher.mo
+installing de.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/de/LC_MESSAGES/speech-dispatcher.mo
+installing eo.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/eo/LC_MESSAGES/speech-dispatcher.mo
+installing fr.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/fr/LC_MESSAGES/speech-dispatcher.mo
+installing hu.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/hu/LC_MESSAGES/speech-dispatcher.mo
+installing ka.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/ka/LC_MESSAGES/speech-dispatcher.mo
+installing nb_NO.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/nb_NO/LC_MESSAGES/speech-dispatcher.mo
+installing pt.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/pt/LC_MESSAGES/speech-dispatcher.mo
+installing pt_BR.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/pt_BR/LC_MESSAGES/speech-dispatcher.mo
+installing ru.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/ru/LC_MESSAGES/speech-dispatcher.mo
+installing sv.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/sv/LC_MESSAGES/speech-dispatcher.mo
+installing tr.gmo as /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/locale/tr/LC_MESSAGES/speech-dispatcher.mo
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/po'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/po'
+if test "speech-dispatcher" = "gettext-tools"; then \
+  /bin/mkdir -p /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin    Makevars.template; do \
+    /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 ./$file \
+		    /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/po'
+Making install in doc
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/doc'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 ./ssip.info ./speech-dispatcher.info ./spd-say.info ./speech-dispatcher-cs.info '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info'
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/doc'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/doc'
+ install-info --info-dir='/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info' '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info/ssip.info'
+ install-info --info-dir='/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info' '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info/speech-dispatcher.info'
+ install-info --info-dir='/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info' '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info/spd-say.info'
+ install-info --info-dir='/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info' '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/info/speech-dispatcher-cs.info'
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/systemd/system'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 speech-dispatcherd.service '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/systemd/system'
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0'
+make[3]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/pkgconfig'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 speech-dispatcher.pc '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib64/pkgconfig'
+make[3]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0'
+ <span class="ansi32">*</span> python3_12: running run_in_build_dir installation
+make -j2 DESTDIR=/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image pyexecdir=/usr/lib/python3.12/site-packages pythondir=/usr/lib/python3.12/site-packages install 
+Making install in speechd
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+rm -f paths.py
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+srcdir=; \
+test -f ./paths.py.in || srcdir=./; \
+sed -e 's:@bindir[@]:/usr/bin:g' ${srcdir}paths.py.in &gt; paths.py
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 __init__.py _test.py client.py '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd'
+Byte-compiling python modules...
+__init__.py _test.py client.py 
+Byte-compiling python modules (optimized versions) ...
+__init__.py _test.py client.py 
+Byte-compiling python modules (more optimized versions) ...
+__init__.py _test.py client.py 
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 paths.py '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd'
+Byte-compiling python modules...
+paths.py 
+Byte-compiling python modules (optimized versions) ...
+paths.py 
+Byte-compiling python modules (more optimized versions) ...
+paths.py 
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd'
+Making install in speechd_config
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c spd-conf '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/bin'
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf/desktop'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 speechd.desktop '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/speech-dispatcher/conf/desktop'
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/sounds/speech-dispatcher'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 test.wav '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/share/sounds/speech-dispatcher'
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+rm -f buildconfig.py
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+srcdir=; \
+test -f ./buildconfig.py.in || srcdir=./; \
+sed -e "s:[@]spdconforigdir[@]:/usr/share/speech-dispatcher/conf:" -e "s:[@]spdconfdir[@]:/etc/speech-dispatcher:" -e "s:[@]snddatadir[@]:/usr/share/sounds/speech-dispatcher:" -e "s:[@]spddesktopconforigdir[@]:/usr/share/speech-dispatcher/conf/desktop:" -e "s:[@]GETTEXT_PACKAGE[@]:speech-dispatcher:" -e "s:[@]VERSION[@]:0.12.0:" -e "s:[@]localedir[@]:/usr/share/locale:" ${srcdir}buildconfig.py.in &gt; buildconfig.py
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd_config'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 __init__.py config.py '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd_config'
+Byte-compiling python modules...
+__init__.py config.py 
+Byte-compiling python modules (optimized versions) ...
+__init__.py config.py 
+Byte-compiling python modules (more optimized versions) ...
+__init__.py config.py 
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[2]: Entering directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+ /bin/mkdir -p '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd_config'
+ /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c -m 644 buildconfig.py '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image/usr/lib/python3.12/site-packages/speechd_config'
+Byte-compiling python modules...
+buildconfig.py 
+Byte-compiling python modules (optimized versions) ...
+buildconfig.py 
+Byte-compiling python modules (more optimized versions) ...
+buildconfig.py 
+make[2]: Leaving directory '/var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/work/speech-dispatcher-0.12.0-python3_12/src/api/python/speechd_config'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+ <span class="ansi32">*</span> python3_12: running python_optimize
+ <span class="ansi32">*</span> Optimize Python modules for /usr/lib/python3.12/site-packages
+ <span class="ansi32">*</span> Optimize Python modules for /usr/lib/python3.12
+&gt;&gt;&gt; Completed installing app-accessibility/speech-dispatcher-0.12.0 into /var/tmp/portage/app-accessibility/speech-dispatcher-0.12.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 78144 KiB (76.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  31156 KiB (30.4 MiB)
+
+ <span class="ansi32">*</span> Verifying compiled files for python3.12
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/speech-dispatcher
+   /usr/lib64/speech-dispatcher/spd_alsa.so
+   /usr/lib64/speech-dispatcher/spd_oss.so
+   /usr/lib64/speech-dispatcher/spd_pulse.so
+   /usr/libexec/speech-dispatcher-modules/sd_dummy
+   /usr/lib64/libspeechd_module.so.0.0.0
+   /usr/libexec/speech-dispatcher-modules/sd_festival
+   /usr/libexec/speech-dispatcher-modules/sd_generic
+   /usr/libexec/speech-dispatcher-modules/sd_cicero
+   /usr/libexec/speech-dispatcher-modules/sd_espeak-ng
+   /usr/libexec/speech-dispatcher-modules/sd_openjtalk
+   /usr/lib64/libspeechd.so.2.6.0
+   /usr/bin/spd-say
+   /usr/bin/spdsend
+
+</pre>
+</body>
+
+</html>
