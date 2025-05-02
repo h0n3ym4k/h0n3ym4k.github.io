@@ -3,7 +3,7 @@
 cd /root
 
 if [ -e /root/world-ing.stop-cron-weekly.enabled ];then
-	echo 'stopping weekly - /root/world-ing.stop-cron-weekly.enabled'
+	echo 'stopping weekly - /root/world-ing.stop-cron-weekly.enabled'|mailx root
 	exit
 fi
 
