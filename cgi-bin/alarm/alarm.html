@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multiple Alarms with Tasks</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; text-align: center; }
+    #clock { font-size: 48px; margin-bottom: 20px; }
+    #alarms-list { margin-top: 20px; text-align: left; }
+    .alarm-item { background: #f0f0f0; margin: 5px 0; padding: 10px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; }
+    .alarm-info { font-size: 18px; }
+    button.delete-btn { background: #e74c3c; border: none; color: white; padding: 5px 10px; border-radius: 3px; cursor: pointer; }
+    button.delete-btn:hover { background: #c0392b; }
+    #reminder { margin-top: 30px; font-size: 22px; color: #27ae60; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div id="clock">--:--:--</div>
+  
+  <label for="alarm-time">Set Alarm Time:</label>
+  <input type="time" id="alarm-time" required />
+  
+  <br/><br/>
+  
+  <label for="task">Reminder Task:</label>
+  <input type="text" id="task" placeholder="Enter your task" />
+  
+  <br/><br/>
+  
+  <button id="add-alarm">Add Alarm</button>
+  
+  <h3>Set Alarms:</h3>
+  <div id="alarms-list">
+    <!-- List of alarms will appear here -->
+  </div>
+  
+  <div id="reminder"></div>
+  
+  <audio id="alarm-sound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" loop></audio>
+  
+  <script src="alarm-multi.js"></script>
+</body>
+</html>
