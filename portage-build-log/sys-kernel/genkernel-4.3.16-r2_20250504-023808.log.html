@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-kernel/genkernel-4.3.16-r2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: genkernel@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc firmware kernel_linux python_single_target_python3_13
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Using python3.13 to build
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking genkernel-4.3.16.tar.xz to /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/work/genkernel-4.3.16 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/work/genkernel-4.3.16 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/work/genkernel-4.3.16 ...
+make -j2 PREFIX=/usr 
+install -D genkernel.conf build/genkernel.conf
+install -D gen_arch.sh build/gen_arch.sh
+install -D gen_bootloader.sh build/gen_bootloader.sh
+install -D gen_cmdline.sh build/gen_cmdline.sh
+install -D gen_compile.sh build/gen_compile.sh
+install -D gen_configkernel.sh build/gen_configkernel.sh
+install -D gen_determineargs.sh build/gen_determineargs.sh
+install -D gen_funcs.sh build/gen_funcs.sh
+install -D gen_initramfs.sh build/gen_initramfs.sh
+install -D gen_moddeps.sh build/gen_moddeps.sh
+install -D gen_package.sh build/gen_package.sh
+install -D gen_worker.sh build/gen_worker.sh
+install -D path_expander.py build/path_expander.py
+install -d build/temp/
+printf '%s\n'  "VERSION_BCACHE_TOOLS=1.1_p20230217"  "VERSION_BOOST=1.79.0"  "VERSION_BTRFS_PROGS=6.7.1"  "VERSION_BUSYBOX=1.36.1"  "VERSION_COREUTILS=9.4"  "VERSION_CRYPTSETUP=2.6.1"  "VERSION_DMRAID=1.0.0.rc16-3"  "VERSION_DROPBEAR=2022.83"  "VERSION_EUDEV=3.2.14"  "VERSION_EXPAT=2.5.0"  "VERSION_E2FSPROGS=1.47.0"  "VERSION_FUSE=2.9.9"  "VERSION_GPG=1.4.23"  "VERSION_HWIDS=20210613"  "VERSION_ISCSI=2.1.8"  "VERSION_JSON_C=0.17"  "VERSION_KMOD=31"  "VERSION_LIBAIO=0.3.113"  "VERSION_LIBGCRYPT=1.10.3"  "VERSION_LIBGPGERROR=1.47"  "VERSION_LIBXCRYPT=4.4.36"  "VERSION_LVM=2.03.22"  "VERSION_LZO=2.10"  "VERSION_MDADM=4.2"  "VERSION_MULTIPATH_TOOLS="  "VERSION_POPT=1.19"  "VERSION_STRACE=6.7"  "VERSION_THIN_PROVISIONING_TOOLS=0.9.0"  "VERSION_UNIONFS_FUSE=2.0"  "VERSION_USERSPACE_RCU=0.14.0"  "VERSION_UTIL_LINUX=2.39.3"  "VERSION_XFSPROGS=6.4.0"  "VERSION_XZ=5.4.2"  "VERSION_ZLIB=1.3.1"  "VERSION_ZSTD=1.5.5" &gt; build/temp/versions
+cat build/temp/versions defaults/software.sh &gt; build/software.sh
+install -d build
+echo /usr &gt; build/PREFIX
+echo /usr/bin &gt; build/BINDIR
+echo /etc &gt; build/SYSCONFDIR
+echo /usr/share/man &gt; build/MANDIR
+touch build/build-config
+install -D doc/genkernel.8.txt build/doc/genkernel.8.txt
+if grep -sq THIS_CONFIG_IS_BROKEN arch/alpha/arch-config ; then \
+	cat arch/alpha/arch-config &gt;arch/alpha/generated-config ; \
+else \
+	perl merge.pl arch/alpha/arch-config defaults/kernel-generic-config | sort &gt; arch/alpha/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/arm/arch-config ; then \
+	cat arch/arm/arch-config &gt;arch/arm/generated-config ; \
+else \
+	perl merge.pl arch/arm/arch-config defaults/kernel-generic-config | sort &gt; arch/arm/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/arm64/arch-config ; then \
+	cat arch/arm64/arch-config &gt;arch/arm64/generated-config ; \
+else \
+	perl merge.pl arch/arm64/arch-config defaults/kernel-generic-config | sort &gt; arch/arm64/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/ia64/arch-config ; then \
+	cat arch/ia64/arch-config &gt;arch/ia64/generated-config ; \
+else \
+	perl merge.pl arch/ia64/arch-config defaults/kernel-generic-config | sort &gt; arch/ia64/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/mips/arch-config ; then \
+	cat arch/mips/arch-config &gt;arch/mips/generated-config ; \
+else \
+	perl merge.pl arch/mips/arch-config defaults/kernel-generic-config | sort &gt; arch/mips/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/parisc/arch-config ; then \
+	cat arch/parisc/arch-config &gt;arch/parisc/generated-config ; \
+else \
+	perl merge.pl arch/parisc/arch-config defaults/kernel-generic-config | sort &gt; arch/parisc/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/parisc64/arch-config ; then \
+	cat arch/parisc64/arch-config &gt;arch/parisc64/generated-config ; \
+else \
+	perl merge.pl arch/parisc64/arch-config defaults/kernel-generic-config | sort &gt; arch/parisc64/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/ppc/arch-config ; then \
+	cat arch/ppc/arch-config &gt;arch/ppc/generated-config ; \
+else \
+	perl merge.pl arch/ppc/arch-config defaults/kernel-generic-config | sort &gt; arch/ppc/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/ppc64/arch-config ; then \
+	cat arch/ppc64/arch-config &gt;arch/ppc64/generated-config ; \
+else \
+	perl merge.pl arch/ppc64/arch-config defaults/kernel-generic-config | sort &gt; arch/ppc64/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/ppc64le/arch-config ; then \
+	cat arch/ppc64le/arch-config &gt;arch/ppc64le/generated-config ; \
+else \
+	perl merge.pl arch/ppc64le/arch-config defaults/kernel-generic-config | sort &gt; arch/ppc64le/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/s390/arch-config ; then \
+	cat arch/s390/arch-config &gt;arch/s390/generated-config ; \
+else \
+	perl merge.pl arch/s390/arch-config defaults/kernel-generic-config | sort &gt; arch/s390/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/riscv64/arch-config ; then \
+	cat arch/riscv64/arch-config &gt;arch/riscv64/generated-config ; \
+else \
+	perl merge.pl arch/riscv64/arch-config defaults/kernel-generic-config | sort &gt; arch/riscv64/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/s390x/arch-config ; then \
+	cat arch/s390x/arch-config &gt;arch/s390x/generated-config ; \
+else \
+	perl merge.pl arch/s390x/arch-config defaults/kernel-generic-config | sort &gt; arch/s390x/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/sparc/arch-config ; then \
+	cat arch/sparc/arch-config &gt;arch/sparc/generated-config ; \
+else \
+	perl merge.pl arch/sparc/arch-config defaults/kernel-generic-config | sort &gt; arch/sparc/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/sparc64/arch-config ; then \
+	cat arch/sparc64/arch-config &gt;arch/sparc64/generated-config ; \
+else \
+	perl merge.pl arch/sparc64/arch-config defaults/kernel-generic-config | sort &gt; arch/sparc64/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/um/arch-config ; then \
+	cat arch/um/arch-config &gt;arch/um/generated-config ; \
+else \
+	perl merge.pl arch/um/arch-config defaults/kernel-generic-config | sort &gt; arch/um/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/x86/arch-config ; then \
+	cat arch/x86/arch-config &gt;arch/x86/generated-config ; \
+else \
+	perl merge.pl arch/x86/arch-config defaults/kernel-generic-config | sort &gt; arch/x86/generated-config ; \
+fi ;
+if grep -sq THIS_CONFIG_IS_BROKEN arch/x86_64/arch-config ; then \
+	cat arch/x86_64/arch-config &gt;arch/x86_64/generated-config ; \
+else \
+	perl merge.pl arch/x86_64/arch-config defaults/kernel-generic-config | sort &gt; arch/x86_64/generated-config ; \
+fi ;
+install genkernel build/genkernel
+a2x --conf-file=doc/asciidoc.conf \
+	--format=manpage -D build --attribute="genkernelversion=4.3.16" \
+	"build/doc/genkernel.8.txt"
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-kernel/genkernel-4.3.16-r2
+
+&gt;&gt;&gt; Install sys-kernel/genkernel-4.3.16-r2 into /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image
+make -j2 DESTDIR=/var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image PREFIX=/usr install 
+install -d /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//etc
+install -m 644 build/genkernel.conf /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//etc/
+install -d /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/bin
+install -m 755 build/genkernel /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/bin/
+install -d /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/share/genkernel
+cp -ra arch defaults gkbuilds modules netboot patches worker_modules /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/share/genkernel/
+install -m 755 -t /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/share/genkernel build/genkernel.conf build/gen_arch.sh build/gen_bootloader.sh build/gen_cmdline.sh build/gen_compile.sh build/gen_configkernel.sh build/gen_determineargs.sh build/gen_funcs.sh build/gen_initramfs.sh build/gen_moddeps.sh build/gen_package.sh build/gen_worker.sh build/path_expander.py
+install build/software.sh /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/share/genkernel/defaults
+install -d /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/share/man/man8
+install build/genkernel.8 /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image//usr/share/man/man8
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/genkernel/path_expander.py.
+&gt;&gt;&gt; Completed installing sys-kernel/genkernel-4.3.16-r2 into /var/tmp/portage/sys-kernel/genkernel-4.3.16-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory:   5940 KiB (  5.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  190572 KiB (186.1 MiB)
+
+
+</pre>
+</body>
+
+</html>
