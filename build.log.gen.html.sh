@@ -106,6 +106,7 @@ fi
 echo "emerge --info ${pkg} --color y | ansi2html redir ${pkgr}_emerge-info.log.html"
 emerge --info "${pkg}" --color y | ansi2html > "${pkgr}"_emerge-info.log.html
 qlop --color -t -v "${pkgr}" | ansi2html >> "${pkgr}"_emerge-info.log.html
+emerge --search "${pkg}$" --color y | ansi2html >> "${pkgr}"_emerge-info.log.html
 cat /root/gcc-native.txt.html >> "${pkgr}"_emerge-info.log.html
 cat /root/cpuinfo.txt.html >> "${pkgr}"_emerge-info.log.html
 	done
