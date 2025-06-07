@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Web Text Editor with Git Versioning</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  .toolbar {
+    border: 1px solid #ddd;
+    background: #f4f4f4;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  .toolbar button {
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 6px 10px;
+  }
+  #editor {
+    border: 1px solid #ccc;
+    min-height: 300px;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+  }
+  #versions {
+    margin-top: 20px;
+  }
+  #versions button {
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Simple Web Text Editor with Git-like Versioning</h2>
+
+<div class="toolbar">
+  <button onclick="execCmd('bold')" title="Bold"><b>B</b></button>
+  <button onclick="execCmd('italic')" title="Italic"><i>I</i></button>
+  <button onclick="execCmd('underline')" title="Underline"><u>U</u></button>
+  <button onclick="execCmd('insertUnorderedList')" title="Bullet List">&#8226; List</button>
+  <button onclick="execCmd('insertOrderedList')" title="Numbered List">1. List</button>
+  <button onclick="execCmd('undo')" title="Undo">&#8634; Undo</button>
+  <button onclick="execCmd('redo')" title="Redo">&#8635; Redo</button>
+</div>
+
+<div id="editor" contenteditable="true" spellcheck="true">
+  Start typing here...
+</div>
+
+<div style="margin-top: 15px;">
+  <button onclick="commitVersion()">Commit Version</button>
+  <button onclick="showHistory()">Show Version History</button>
+</div>
+
+<div id="versions"></div>
+
+<script>
+  // Execute rich-text commands
+  function execCmd(command) {
+    document.execCommand(command, false, null);
+    document.getElementById('editor').focus();
+  }
+
+  // Versioning system: array to hold commits
+  var commits = [];
+
+  // Commit current editor content as a new version
+  function commitVersion() {
+    var content = document.getElementById('editor').innerHTML;
+    if (commits.length > 0 && commits[commits.length - 1].content === content) {
+      alert('No changes since last commit.');
+      return;
+    }
+    var timestamp = new Date().toLocaleString();
+    commits.push({ content: content, timestamp: timestamp });
+    alert('Committed version at ' + timestamp);
+    showHistory();
+  }
+
+  // Show version history with buttons and content preview
+  function showHistory() {
+    var versionsDiv = document.getElementById('versions');
+    versionsDiv.innerHTML = '<h3>Version History</h3>';
+    if (commits.length === 0) {
+      versionsDiv.innerHTML += '<p>No commits yet.</p>';
+      return;
+    }
+    commits.forEach(function(commit, index) {
+      // Create container for each version entry
+      var entry = document.createElement('div');
+      entry.style.marginBottom = '10px';
+      entry.style.border = '1px solid #ccc';
+      entry.style.padding = '6px';
+      entry.style.borderRadius = '4px';
+
+      // Create button to revert to this version
+      var btn = document.createElement('button');
+      btn.textContent = 'Version ' + (index + 1) + ' - ' + commit.timestamp;
+      btn.onclick = function() { revertToVersion(index); };
+      btn.style.marginBottom = '4px';
+
+      // Create preview snippet (strip HTML tags and truncate)
+      var previewText = commit.content.replace(/<[^>]+>/g, ''); // Remove HTML tags
+      if (previewText.length > 100) {
+        previewText = previewText.substring(0, 100) + '...';
+      }
+      var preview = document.createElement('div');
+      preview.style.fontSize = '0.9em';
+      preview.style.color = '#555';
+      preview.textContent = previewText;
+
+      // Append button and preview to entry container
+      entry.appendChild(btn);
+      entry.appendChild(preview);
+
+      // Append entry to versionsDiv
+      versionsDiv.appendChild(entry);
+    });
+  }
+
+  // Revert editor content to a specific version
+  function revertToVersion(index) {
+    if (!confirm('Revert to this version? Unsaved changes will be lost.')) return;
+    document.getElementById('editor').innerHTML = commits[index].content;
+  }
+
+  // Initialize editor with empty commit
+  window.onload = function() {
+    commits.push({ content: document.getElementById('editor').innerHTML, timestamp: new Date().toLocaleString() });
+    showHistory();
+  };
+</script>
+
+</body>
+</html>

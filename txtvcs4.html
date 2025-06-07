@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Web Text Editor with Git Versioning and Import/Export</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  .toolbar {
+    border: 1px solid #ddd;
+    background: #f4f4f4;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  .toolbar button {
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 6px 10px;
+  }
+  #editor {
+    border: 1px solid #ccc;
+    min-height: 300px;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+  }
+  #versions {
+    margin-top: 20px;
+  }
+  #versions button {
+    margin-bottom: 4px;
+  }
+  .commit-message {
+    font-style: italic;
+    color: #007700;
+    margin-bottom: 6px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Simple Web Text Editor with Git-like Versioning, Commit Messages, Import/Export</h2>
+
+<div class="toolbar">
+  <button id="btnBold" title="Bold"><b>B</b></button>
+  <button id="btnItalic" title="Italic"><i>I</i></button>
+  <button id="btnUnderline" title="Underline"><u>U</u></button>
+  <button id="btnBullet" title="Bullet List">&#8226; List</button>
+  <button id="btnNumbered" title="Numbered List">1. List</button>
+  <button id="btnUndo" title="Undo">&#8634; Undo</button>
+  <button id="btnRedo" title="Redo">&#8635; Redo</button>
+</div>
+
+<div id="editor" contenteditable="true" spellcheck="true">
+  Start typing here...
+</div>
+
+<div style="margin-top: 15px;">
+  <button id="commitBtn">Commit Version</button>
+  <button id="showHistoryBtn">Show Version History</button>
+  <button id="exportBtn">Export Data</button>
+  <button id="importBtn">Import Data</button>
+  <input type="file" id="importFile" accept=".json" style="display:none" />
+</div>
+
+<div id="versions"></div>
+
+<script>
+  var commits = [];
+
+  function execCmd(command) {
+    document.execCommand(command, false, null);
+    document.getElementById('editor').focus();
+  }
+
+  function commitVersion() {
+    var content = document.getElementById('editor').innerHTML;
+    if (commits.length > 0 && commits[commits.length - 1].content === content) {
+      alert('No changes since last commit.');
+      return;
+    }
+    var message = prompt('Enter commit message (reason):', '');
+    if (message === null) return; // Cancelled
+    message = message.trim();
+    if (message === '') {
+      alert('Commit message cannot be empty.');
+      return;
+    }
+    var timestamp = new Date().toLocaleString();
+    commits.push({ content: content, timestamp: timestamp, message: message });
+    alert('Committed version at ' + timestamp);
+    showHistory();
+  }
+
+  function showHistory() {
+    var versionsDiv = document.getElementById('versions');
+    versionsDiv.innerHTML = '<h3>Version History</h3>';
+    if (commits.length === 0) {
+      versionsDiv.innerHTML += '<p>No commits yet.</p>';
+      return;
+    }
+    commits.forEach(function(commit, index) {
+      var entry = document.createElement('div');
+      entry.style.marginBottom = '10px';
+      entry.style.border = '1px solid #ccc';
+      entry.style.padding = '6px';
+      entry.style.borderRadius = '4px';
+
+      var btn = document.createElement('button');
+      btn.textContent = 'Version ' + (index + 1) + ' - ' + commit.timestamp;
+      btn.onclick = function() { revertToVersion(index); };
+      btn.style.marginBottom = '4px';
+
+      var msg = document.createElement('div');
+      msg.className = 'commit-message';
+      msg.textContent = 'Message: ' + commit.message;
+
+      var previewText = commit.content.replace(/<[^>]+>/g, '');
+      if (previewText.length > 100) {
+        previewText = previewText.substring(0, 100) + '...';
+      }
+      var preview = document.createElement('div');
+      preview.style.fontSize = '0.9em';
+      preview.style.color = '#555';
+      preview.textContent = previewText;
+
+      entry.appendChild(btn);
+      entry.appendChild(msg);
+      entry.appendChild(preview);
+
+      versionsDiv.appendChild(entry);
+    });
+  }
+
+  function revertToVersion(index) {
+    if (!confirm('Revert to this version? Unsaved changes will be lost.')) return;
+    document.getElementById('editor').innerHTML = commits[index].content;
+  }
+
+  function exportData() {
+    if (commits.length === 0) {
+      alert('No commits to export.');
+      return;
+    }
+    var dataStr = JSON.stringify(commits, null, 2);
+    var blob = new Blob([dataStr], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'text-editor-commits.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function importData(event) {
+    var file = event.target.files[0];
+    if (!file) return;
+
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        var importedCommits = JSON.parse(e.target.result);
+        if (!Array.isArray(importedCommits)) {
+          alert('Invalid file format: expected an array of commits.');
+          return;
+        }
+        for (var i = 0; i < importedCommits.length; i++) {
+          var c = importedCommits[i];
+          if (typeof c.content !== 'string' || typeof c.timestamp !== 'string' || typeof c.message !== 'string') {
+            alert('Invalid commit format in imported file.');
+            return;
+          }
+        }
+        commits = importedCommits;
+        if (commits.length > 0) {
+          document.getElementById('editor').innerHTML = commits[commits.length - 1].content;
+        } else {
+          document.getElementById('editor').innerHTML = '';
+        }
+        alert('Import successful. Loaded ' + commits.length + ' commits.');
+        showHistory();
+      } catch (err) {
+        alert('Error reading file: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+    event.target.value = '';
+  }
+
+  window.onload = function() {
+    // Toolbar buttons
+    document.getElementById('btnBold').addEventListener('click', function() { execCmd('bold'); });
+    document.getElementById('btnItalic').addEventListener('click', function() { execCmd('italic'); });
+    document.getElementById('btnUnderline').addEventListener('click', function() { execCmd('underline'); });
+    document.getElementById('btnBullet').addEventListener('click', function() { execCmd('insertUnorderedList'); });
+    document.getElementById('btnNumbered').addEventListener('click', function() { execCmd('insertOrderedList'); });
+    document.getElementById('btnUndo').addEventListener('click', function() { execCmd('undo'); });
+    document.getElementById('btnRedo').addEventListener('click', function() { execCmd('redo'); });
+
+    // Main buttons
+    document.getElementById('commitBtn').addEventListener('click', commitVersion);
+    document.getElementById('showHistoryBtn').addEventListener('click', showHistory);
+    document.getElementById('exportBtn').addEventListener('click', exportData);
+    document.getElementById('importBtn').addEventListener('click', function() {
+      document.getElementById('importFile').click();
+    });
+    document.getElementById('importFile').addEventListener('change', importData);
+
+    // Initialize with default commit
+    commits.push({ content: document.getElementById('editor').innerHTML, timestamp: new Date().toLocaleString(), message: 'Initial version' });
+    showHistory();
+  };
+</script>
+
+</body>
+</html>
