@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Text Editor with Git Versioning & Syntax Highlighting</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.css">
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  .toolbar { background: #f4f4f4; padding: 8px; margin-bottom: 10px; border-radius: 4px; }
+  .toolbar button, .toolbar select { margin-right: 8px; padding: 6px 10px; cursor: pointer; }
+  #editor { border: 1px solid #ccc; min-height: 300px; padding: 10px; outline: none; border-radius: 4px; }
+  #versions { margin-top: 20px; }
+  pre { padding: 10px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h2>Web Text Editor with Syntax Highlighting & Version Control</h2>
+
+<div class="toolbar">
+  <button onclick="execCmd('bold')"><b>B</b></button>
+  <button onclick="execCmd('italic')"><i>I</i></button>
+  <button onclick="execCmd('underline')"><u>U</u></button>
+  <button onclick="execCmd('insertUnorderedList')">&#8226; List</button>
+  <button onclick="execCmd('insertOrderedList')">1. List</button>
+  <select id="languageSelect">
+    <option value="markup">HTML</option>
+    <option value="javascript">JavaScript</option>
+    <option value="css">CSS</option>
+    <option value="python">Python</option>
+  </select>
+  <button onclick="highlightCode()">Apply Highlight</button>
+</div>
+
+<div id="editor" contenteditable="true" spellcheck="true">
+  Type your code here...
+</div>
+
+<div style="margin-top: 15px;">
+  <button onclick="commitVersion()">Commit Version</button>
+  <button onclick="showHistory()">Show Version History</button>
+</div>
+
+<div id="versions"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+
+<script>
+  var commits = [];
+
+  function execCmd(command) {
+    document.execCommand(command, false, null);
+    document.getElementById('editor').focus();
+  }
+
+  function commitVersion() {
+    var content = document.getElementById('editor').innerHTML;
+    if (commits.length > 0 && commits[commits.length - 1].content === content) {
+      alert('No changes since last commit.');
+      return;
+    }
+    var message = prompt('Enter commit message:');
+    if (message === null || message.trim() === '') {
+      alert('Commit message cannot be empty.');
+      return;
+    }
+    var timestamp = new Date().toLocaleString();
+    commits.push({ content, timestamp, message });
+    alert('Committed version at ' + timestamp);
+    showHistory();
+  }
+
+  function showHistory() {
+    var versionsDiv = document.getElementById('versions');
+    versionsDiv.innerHTML = '<h3>Version History</h3>';
+    if (commits.length === 0) {
+      versionsDiv.innerHTML += '<p>No commits yet.</p>';
+      return;
+    }
+    commits.forEach(function(commit, index) {
+      var entry = document.createElement('div');
+      entry.style.marginBottom = '10px';
+      entry.style.border = '1px solid #ccc';
+      entry.style.padding = '6px';
+      entry.style.borderRadius = '4px';
+
+      var btn = document.createElement('button');
+      btn.textContent = 'Version ' + (index + 1) + ' - ' + commit.timestamp;
+      btn.onclick = function() { revertToVersion(index); };
+      entry.appendChild(btn);
+
+      var msg = document.createElement('div');
+      msg.textContent = 'Message: ' + commit.message;
+      msg.style.fontStyle = 'italic';
+      entry.appendChild(msg);
+
+      var preview = document.createElement('pre');
+      preview.innerHTML = Prism.highlight(commit.content, Prism.languages[document.getElementById('languageSelect').value], document.getElementById('languageSelect').value);
+      entry.appendChild(preview);
+
+      versionsDiv.appendChild(entry);
+    });
+  }
+
+  function revertToVersion(index) {
+    if (!confirm('Revert to this version? Unsaved changes will be lost.')) return;
+    document.getElementById('editor').innerHTML = commits[index].content;
+  }
+
+  function highlightCode() {
+    var editor = document.getElementById('editor');
+    var language = document.getElementById('languageSelect').value;
+    editor.innerHTML = Prism.highlight(editor.innerText, Prism.languages[language], language);
+  }
+</script>
+
+</body>
+</html>
