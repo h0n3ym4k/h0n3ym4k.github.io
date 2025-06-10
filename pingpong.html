@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Auto-Playing Ping-Pong Shooter Brick Breaker AI</title>
+<style>
+  body {
+    background: #111;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  canvas {
+    background: #222;
+    display: block;
+    border: 2px solid #fff;
+  }
+  #info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+<div id="info">Auto-playing AI: Watch the paddle move and shoot automatically!</div>
+<canvas id="gameCanvas" width="600" height="400"></canvas>
+
+<script>
+(() => {
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Game variables
+  const paddle = {
+    width: 80,
+    height: 15,
+    x: canvas.width / 2 - 40,
+    y: canvas.height - 30,
+    speed: 6,
+    dx: 0,
+  };
+
+  const ball = {
+    x: canvas.width / 2,
+    y: paddle.y - 10,
+    radius: 8,
+    speedX: 4 * (Math.random() > 0.5 ? 1 : -1),
+    speedY: -4,
+  };
+
+  const bullets = [];
+  const bulletSpeed = 7;
+  const bulletWidth = 4;
+  const bulletHeight = 10;
+
+  const bricks = [];
+  const brickRowCount = 5;
+  const brickColumnCount = 8;
+  const brickWidth = 60;
+  const brickHeight = 20;
+  const brickPadding = 8;
+  const brickOffsetTop = 40;
+  const brickOffsetLeft = 30;
+
+  let score = 0;
+  let lives = 3;
+  let gameOver = false;
+
+  // Create bricks
+  function createBricks() {
+    for (let r = 0; r < brickRowCount; r++) {
+      bricks[r] = [];
+      for (let c = 0; c < brickColumnCount; c++) {
+        bricks[r][c] = { x: 0, y: 0, status: 1 }; // visible
+      }
+    }
+  }
+
+  createBricks();
+
+  // Draw paddle
+  function drawPaddle() {
+    ctx.fillStyle = '#0f0';
+    ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
+  }
+
+  // Draw ball
+  function drawBall() {
+    ctx.beginPath();
+    ctx.fillStyle = '#ff0';
+    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  // Draw bullets
+  function drawBullets() {
+    ctx.fillStyle = '#f00';
+    bullets.forEach(bullet => {
+      ctx.fillRect(bullet.x, bullet.y, bulletWidth, bulletHeight);
+    });
+  }
+
+  // Draw bricks
+  function drawBricks() {
+    for (let r = 0; r < brickRowCount; r++) {
+      for (let c = 0; c < brickColumnCount; c++) {
+        if (bricks[r][c].status === 1) {
+          const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+          const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+          bricks[r][c].x = brickX;
+          bricks[r][c].y = brickY;
+          ctx.fillStyle = '#09f';
+          ctx.fillRect(brickX, brickY, brickWidth, brickHeight);
+          ctx.strokeStyle = '#fff';
+          ctx.strokeRect(brickX, brickY, brickWidth, brickHeight);
+        }
+      }
+    }
+  }
+
+  // Draw score and lives
+  function drawScore() {
+    ctx.font = '16px Arial';
+    ctx.fillStyle = '#fff';
+    ctx.fillText('Score: ' + score, 10, 20);
+    ctx.fillText('Lives: ' + lives, canvas.width - 80, 20);
+  }
+
+  // Move paddle (AI controlled)
+  function aiMovePaddle() {
+    // Predict ball landing position on paddle line
+    // We simulate ball trajectory to find where it will cross paddle.y
+
+    let predictedX = ball.x;
+    let predictedY = ball.y;
+    let speedX = ball.speedX;
+    let speedY = ball.speedY;
+
+    while (predictedY < paddle.y) {
+      predictedX += speedX;
+      predictedY += speedY;
+
+      // Bounce off left/right walls
+      if (predictedX + ball.radius > canvas.width) {
+        predictedX = 2 * (canvas.width - ball.radius) - predictedX;
+        speedX = -speedX;
+      } else if (predictedX - ball.radius < 0) {
+        predictedX = 2 * ball.radius - predictedX;
+        speedX = -speedX;
+      }
+      // Bounce off top wall
+      if (predictedY - ball.radius < 0) {
+        predictedY = 2 * ball.radius - predictedY;
+        speedY = -speedY;
+      }
+    }
+
+    // Move paddle towards predictedX with some speed limit
+    const centerPaddle = paddle.x + paddle.width / 2;
+    const diff = predictedX - centerPaddle;
+    if (Math.abs(diff) > paddle.speed) {
+      paddle.dx = diff > 0 ? paddle.speed : -paddle.speed;
+    } else {
+      paddle.dx = diff;
+    }
+
+    paddle.x += paddle.dx;
+
+    // Keep paddle inside canvas
+    if (paddle.x < 0) paddle.x = 0;
+    if (paddle.x + paddle.width > canvas.width) paddle.x = canvas.width - paddle.width;
+  }
+
+  // Move ball
+  function moveBall() {
+    ball.x += ball.speedX;
+    ball.y += ball.speedY;
+
+    // Wall collisions
+    if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
+      ball.speedX = -ball.speedX;
+    }
+    if (ball.y - ball.radius < 0) {
+      ball.speedY = -ball.speedY;
+    }
+
+    // Paddle collision
+    if (
+      ball.y + ball.radius > paddle.y &&
+      ball.x > paddle.x &&
+      ball.x < paddle.x + paddle.width
+    ) {
+      ball.speedY = -ball.speedY;
+
+      // Add spin based on hit position
+      let hitPos = ball.x - (paddle.x + paddle.width / 2);
+      ball.speedX = hitPos * 0.25;
+    }
+
+    // Bottom collision (lose life)
+    if (ball.y + ball.radius > canvas.height) {
+      lives--;
+      if (lives <= 0) {
+        gameOver = true;
+      } else {
+        resetBall();
+      }
+    }
+  }
+
+  // Move bullets
+  function moveBullets() {
+    for (let i = bullets.length - 1; i >= 0; i--) {
+      bullets[i].y -= bulletSpeed;
+      if (bullets[i].y + bulletHeight < 0) {
+        bullets.splice(i, 1);
+      }
+    }
+  }
+
+  // Bullet and brick collision
+  function bulletBrickCollision() {
+    for (let i = bullets.length - 1; i >= 0; i--) {
+      const b = bullets[i];
+      for (let r = 0; r < brickRowCount; r++) {
+        for (let c = 0; c < brickColumnCount; c++) {
+          const brick = bricks[r][c];
+          if (brick.status === 1) {
+            if (
+              b.x < brick.x + brickWidth &&
+              b.x + bulletWidth > brick.x &&
+              b.y < brick.y + brickHeight &&
+              b.y + bulletHeight > brick.y
+            ) {
+              brick.status = 0;
+              bullets.splice(i, 1);
+              score += 10;
+              return;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Ball and brick collision
+  function ballBrickCollision() {
+    for (let r = 0; r < brickRowCount; r++) {
+      for (let c = 0; c < brickColumnCount; c++) {
+        const brick = bricks[r][c];
+        if (brick.status === 1) {
+          if (
+            ball.x + ball.radius > brick.x &&
+            ball.x - ball.radius < brick.x + brickWidth &&
+            ball.y + ball.radius > brick.y &&
+            ball.y - ball.radius < brick.y + brickHeight
+          ) {
+            ball.speedY = -ball.speedY;
+            brick.status = 0;
+            score += 10;
+            return;
+          }
+        }
+      }
+    }
+  }
+
+  // Reset ball position after life lost
+  function resetBall() {
+    ball.x = canvas.width / 2;
+    ball.y = paddle.y - ball.radius - 1;
+    ball.speedX = 4 * (Math.random() > 0.5 ? 1 : -1);
+    ball.speedY = -4;
+  }
+
+  // AI shooting logic: shoot if bullet count is low and ball is approaching paddle
+  let shootCooldown = 0;
+  function aiShoot() {
+    if (gameOver) return;
+    shootCooldown--;
+    if (shootCooldown <= 0 && bullets.length < 3 && ball.speedY > 0 && ball.y > canvas.height / 2) {
+      bullets.push({
+        x: paddle.x + paddle.width / 2 - bulletWidth / 2,
+        y: paddle.y - bulletHeight,
+      });
+      shootCooldown = 30; // cooldown frames between shots
+    }
+  }
+
+  // Game loop
+  function gameLoop() {
+    if (gameOver) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#fff';
+      ctx.font = '36px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText('Game Over', canvas.width / 2, canvas.height / 2);
+      ctx.font = '24px Arial';
+      ctx.fillText('Score: ' + score, canvas.width / 2, canvas.height / 2 + 40);
+      return;
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    drawBricks();
+    drawPaddle();
+    drawBall();
+    drawBullets();
+    drawScore();
+
+    aiMovePaddle();
+    moveBall();
+    moveBullets();
+    aiShoot();
+
+    ballBrickCollision();
+    bulletBrickCollision();
+
+    requestAnimationFrame(gameLoop);
+  }
+
+  // Start the game
+  gameLoop();
+})();
+</script>
+</body>
+</html>

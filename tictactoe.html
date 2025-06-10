@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 10px;
+            margin: 20px auto;
+            width: 330px;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .message {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="controls">
+        <label for="playerX">Player X:</label>
+        <select id="playerX">
+            <option value="human">Human</option>
+            <option value="ai">AI</option>
+        </select>
+        <label for="playerO">Player O:</label>
+        <select id="playerO">
+            <option value="human">Human</option>
+            <option value="ai">AI</option>
+        </select>
+	</div>
+    <div class="board" id="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+    <div class="message" id="message"></div>
+    <button id="restartBtn">Restart Game</button>
+
+    <script>
+        const board = document.getElementById('board');
+        const message = document.getElementById('message');
+	const restartBtn = document.getElementById('restartBtn');
+        const playerXSelect = document.getElementById('playerX');
+        const playerOSelect = document.getElementById('playerO');
+        let currentPlayer = 'X';
+        let gameBoard = ['', '', '', '', '', '', '', '', ''];
+        let gameActive = true;
+        let playerXType = 'human';
+        let playerOType = 'ai';
+
+        const winningCombinations = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],
+            [0, 4, 8], [2, 4, 6]
+        ];
+
+        function checkWinner() {
+            for (let combo of winningCombinations) {
+                const [a, b, c] = combo;
+                if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+                    message.textContent = `Player ${gameBoard[a]} wins!`;
+                    gameActive = false;
+                    return;
+                }
+            }
+
+            if (!gameBoard.includes('')) {
+                message.textContent = "It's a draw!";
+                gameActive = false;
+            }
+        }
+
+        function cellClick(e) {
+            if (!gameActive) return;
+
+            const index = e.target.dataset.index;
+
+            if (gameBoard[index] === '') {
+                gameBoard[index] = currentPlayer;
+                e.target.textContent = currentPlayer;
+                checkWinner();
+                currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+                if (gameActive) {
+                    message.textContent = `Player ${currentPlayer}'s turn`;
+                    if ((currentPlayer === 'O' && playerOType === 'ai') || (currentPlayer === 'X' && playerXType === 'ai')) {
+                        setTimeout(computerMove, 500); // delay for aesthetics
+                    }
+                }
+            }
+        }
+
+        function computerMove() {
+            if (!gameActive) return;
+
+            let bestMove;
+            let bestScore = -Infinity;
+
+            for (let i = 0; i < gameBoard.length; i++) {
+                if (gameBoard[i] === '') {
+                    gameBoard[i] = currentPlayer;
+                    let score = minimax(gameBoard, 0, false);
+                    gameBoard[i] = '';
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestMove = i;
+                    }
+                }
+            }
+
+            gameBoard[bestMove] = currentPlayer;
+            document.querySelector(`[data-index="${bestMove}"]`).textContent = currentPlayer;
+            checkWinner();
+            currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+            if (gameActive) {
+                message.textContent = `Player ${currentPlayer}'s turn`;
+                if ((currentPlayer === 'O' && playerOType === 'ai') || (currentPlayer === 'X' && playerXType === 'ai')) {
+                    setTimeout(computerMove, 500); // If both are AI
+                }
+            }
+        }
+
+         function minimax(board, depth, isMaximizing) {
+            let scores = {
+                X: -1,
+                O: 1,
+                draw: 0
+            };
+
+            for (let combo of winningCombinations) {
+                const [a, b, c] = combo;
+                if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+                    return scores[board[a]];
+                }
+            }
+
+            if (!board.includes('')) {
+                return scores.draw;
+            }
+
+            if (isMaximizing) {
+                let bestScore = -Infinity;
+                for (let i = 0; i < board.length; i++) {
+                    if (board[i] === '') {
+                        board[i] = 'O';
+                        let score = minimax(board, depth + 1, false);
+                        board[i] = '';
+                        bestScore = Math.max(score, bestScore);
+                    }
+                }
+                return bestScore;
+            } else {
+                let bestScore = Infinity;
+                for (let i = 0; i < board.length; i++) {
+                    if (board[i] === '') {
+                        board[i] = 'X';
+                        let score = minimax(board, depth + 1, true);
+                        board[i] = '';
+                        bestScore = Math.min(score, bestScore);
+                    }
+                }
+                return bestScore;
+            }
+        }
+	function restartGame() {
+            gameBoard = ['', '', '', '', '', '', '', '', ''];
+            gameActive = true;
+            currentPlayer = 'X';
+            message.textContent = `Player ${currentPlayer}'s turn`;
+            document.querySelectorAll('.cell').forEach(cell => cell.textContent = '');
+            playerXType = playerXSelect.value;
+            playerOType = playerOSelect.value;
+
+            if (playerXType === 'ai') {
+                setTimeout(computerMove, 500);
+            }
+        }
+        playerXSelect.addEventListener('change', () => {
+            playerXType = playerXSelect.value;
+        });
+
+        playerOSelect.addEventListener('change', () => {
+            playerOType = playerOSelect.value;
+        });
+
+        document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', cellClick));
+	restartBtn.addEventListener('click', restartGame);
+
+        restartGame();
+    </script>
+</body>
+</html>
