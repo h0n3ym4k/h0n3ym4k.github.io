@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-eselect/eselect-repository-14-r1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: mgorny@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc git kernel_linux python_single_target_python3_13
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Using python3.13 to build
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking eselect-repository-14.tar.gz to /var/tmp/portage/app-eselect/eselect-repository-14-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-eselect/eselect-repository-14-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-eselect/eselect-repository-14-r1/work/eselect-repository-14 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-eselect/eselect-repository-14-r1/work/eselect-repository-14 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-eselect/eselect-repository-14-r1/work/eselect-repository-14 ...
+make -j2 PREFIX=/usr SYSCONFDIR=/etc SHAREDSTATEDIR=/var ESELECTDIR=/usr/share/eselect/modules 
+rm -f repository.eselect repository.eselect.tmp
+sed \
+	-e '/^CACHEDIR=/s^=.*$^=/var/cache^' \
+	-e '/^SYSCONFDIR=/s^=.*$^=/etc^' \
+	-e '/^SHAREDSTATEDIR=/s^=.*$^=/var^' \
+	-e '/^HELPER=/s^=.*$^=/usr/lib/eselect-repo/eselect-repo-helper^' \
+	-e '/^CONFIG=/s^=.*$^=/etc/eselect/repository.conf^' \
+	repository.eselect.in &gt; repository.eselect.tmp
+chmod a+r repository.eselect.tmp
+mv repository.eselect.tmp repository.eselect
+ <span class="ansi32">*</span> Fixing shebang in eselect-repo-helper
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: app-eselect/eselect-repository-14-r1
+
+&gt;&gt;&gt; Install app-eselect/eselect-repository-14-r1 into /var/tmp/portage/app-eselect/eselect-repository-14-r1/image
+make -j2 PREFIX=/usr SYSCONFDIR=/etc SHAREDSTATEDIR=/var ESELECTDIR=/usr/share/eselect/modules DESTDIR=/var/tmp/portage/app-eselect/eselect-repository-14-r1/image install 
+rm -f repository.eselect.5.tmp
+sed 's=/etc/eselect/repository.conf=/etc/eselect/repository.conf=' repository.eselect.5.in &gt; repository.eselect.5.tmp
+chmod a+r repository.eselect.5.tmp
+mv repository.eselect.5.tmp repository.eselect.5
+install -d /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/usr/lib/eselect-repo
+install -m0755 eselect-repo-helper /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/usr/lib/eselect-repo/eselect-repo-helper
+install -d /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/usr/share/eselect/modules
+install -m0644 repository.eselect /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/usr/share/eselect/modules/
+install -d /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/etc/eselect
+install -m0644 eselect-repo.conf /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/etc/eselect/repository.conf
+install -d /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/usr/share/man/man5/
+install -m0644 repository.eselect.5 /var/tmp/portage/app-eselect/eselect-repository-14-r1/image/usr/share/man/man5/
+&gt;&gt;&gt; Completed installing app-eselect/eselect-repository-14-r1 into /var/tmp/portage/app-eselect/eselect-repository-14-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 100 KiB
+ <span class="ansi32">*</span> Final size of installed tree:   76 KiB
+
+
+</pre>
+</body>
+
+</html>

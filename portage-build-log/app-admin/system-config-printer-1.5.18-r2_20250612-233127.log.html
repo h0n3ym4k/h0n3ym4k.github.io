@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi2 { font-weight: lighter; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-admin/system-config-printer-1.5.18-r2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: reavertm@gentoo.org gnome@gentoo.org,kde@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux keyring policykit python_single_target_python3_13
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Using python3.13 to build
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking system-config-printer-1.5.18.tar.xz to /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Build system packages:
+ <span class="ansi32">*</span>   dev-python/gpep517            : 19
+ <span class="ansi32">*</span>   dev-python/installer          : 0.7.0
+ <span class="ansi32">*</span>   dev-python/setuptools         : 80.8.0
+ <span class="ansi32">*</span>   dev-python/setuptools-rust    : 
+ <span class="ansi32">*</span>   dev-python/setuptools-scm     : 8.3.1
+ <span class="ansi32">*</span>   dev-python/wheel              : 0.45.1
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18 ...
+ * econf: updating system-config-printer-1.5.18/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating system-config-printer-1.5.18/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --docdir=/usr/share/doc/system-config-printer-1.5.18-r2 --htmldir=/usr/share/doc/system-config-printer-1.5.18-r2/html --libdir=/usr/lib64 --with-xmlto --enable-nls --with-desktop-vendor=Gentoo --with-udev-rules --with-systemdsystemunitdir=/usr/lib/systemd/system
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for a sed that does not truncate output... /bin/sed
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/gmsgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib64
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking whether /usr/bin/python3.13 version is &gt;= 3... yes
+checking for /usr/bin/python3.13 version... 3.13
+checking for /usr/bin/python3.13 platform... linux
+checking for GNU default /usr/bin/python3.13 prefix... ${prefix}
+checking for GNU default /usr/bin/python3.13 exec_prefix... ${exec_prefix}
+checking for /usr/bin/python3.13 script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.13/site-packages
+checking for /usr/bin/python3.13 extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.13/site-packages
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for CUPS SERVERBIN dir... /usr/libexec/cups
+checking for GLIB... yes
+checking for libudev... yes
+checking for libusb... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating system-config-printer
+config.status: creating system-config-printer-applet
+config.status: creating install-printerdriver
+config.status: creating dbus/scp-dbus-service
+config.status: creating udev/configure-printer@.service
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing depfiles commands
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18 ...
+make -j2 PYTHON=: 
+Making all in .
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+xmlto man -o man man/system-config-printer.xml
+Warn: AUTHOR sect.: no personblurb|contrib for Tim Waugh           
+Note: AUTHOR sect.: see http://docbook.sf.net/el/contrib           
+Note: AUTHOR sect.: see http://docbook.sf.net/el/personblurb       
+Note: Writing system-config-printer.1
+Warn: AUTHOR sect.: no personblurb|contrib for Tim Waugh           
+Note: AUTHOR sect.: see http://docbook.sf.net/el/contrib           
+Note: AUTHOR sect.: see http://docbook.sf.net/el/personblurb       
+Note: Writing system-config-printer-applet.1
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+touch .stamp-man-pages-built
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+/usr/bin/msgfmt --xml --template system-config-printer.appdata.xml.in -d ./po -o system-config-printer.appdata.xml
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+/usr/bin/msgfmt --desktop --keyword=Name --keyword=GenericName --keyword=Comment --keyword=X-GNOME-FullName --template system-config-printer.desktop.in -d ./po -o system-config-printer.desktop
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+sed \
+  -e "s|\@prefix\@|/usr|" \
+  -e "s|\@datadir\@|/usr/share|" \
+  -e "s|\@localedir\@|/usr/share/locale|" \
+  -e "s|\@VERSION\@|1.5.18|" \
+  -e "s|\@PACKAGE\@|system-config-printer|" \
+  config.py.in &gt; config.py
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+/usr/bin/msgfmt --desktop --template print-applet.desktop.in -d ./po -o print-applet.desktop
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+sed \
+-e "s|\@bindir\@|/usr/bin|" \
+dbus/org.fedoraproject.Config.Printing.service.in &gt;dbus/org.fedoraproject.Config.Printing.service
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+if [ "." != "." ]; then	\
+	cp ./setup.py .;			\
+	/bin/mkdir -p cupshelpers;				\
+	for file in cupshelpers/__init__.py cupshelpers/cupshelpers.py cupshelpers/installdriver.py cupshelpers/ppds.py cupshelpers/openprinting.py cupshelpers/xmldriverprefs.py; do		\
+		cp ./$file $file;		\
+	done;						\
+fi
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+touch .stamp-distutils-in-builddir
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+/bin/mkdir -p cupshelpers
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+sed \
+  -e "s|\@prefix\@|/usr|" \
+  -e "s|\@sysconfdir\@|/etc|" \
+  -e "s|\@cupsserverbindir\@|/usr/libexec/cups|" \
+  cupshelpers/config.py.in &gt; cupshelpers/config.py
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+x86_64-pc-linux-gnu-gcc -DPACKAGE_NAME=\"system-config-printer\" -DPACKAGE_TARNAME=\"system-config-printer\" -DPACKAGE_VERSION=\"1.5.18\" -DPACKAGE_STRING=\"system-config-printer\ 1.5.18\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"system-config-printer\" -DVERSION=\"1.5.18\" -DENABLE_NLS=1 -DHAVE_GETTEXT=1 -DHAVE_DCGETTEXT=1 -I.     -I/usr/include/libusb-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o udev/udev_configure_printer-udev-configure-printer.o `test -f 'udev/udev-configure-printer.c' || echo './'`udev/udev-configure-printer.c
+udev/udev-configure-printer.c: In function ‘device_id_from_devpath’:
+udev/udev-configure-printer.c:856:10: warning: passing argument 1 of ‘g_free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  856 |   g_free(device_id);
+      |          ^~~~~~~~~
+In file included from /usr/include/glib-2.0/glib/glist.h:34,
+                 from /usr/include/glib-2.0/glib/ghash.h:36,
+                 from /usr/include/glib-2.0/glib.h:52,
+                 from udev/udev-configure-printer.c:52:
+/usr/include/glib-2.0/glib/gmem.h:74:46: note: expected ‘gpointer’ {aka ‘void *’} but argument is of type ‘const char *’
+   74 | void     (g_free)         (gpointer          mem);
+      |                            ~~~~~~~~~~~~~~~~~~^~~
+udev/udev-configure-printer.c: In function ‘find_matching_device_uris’:
+udev/udev-configure-printer.c:1031:3: warning: ‘httpConnectEncrypt’ is deprecated: Use httpConnect2 instead. [-Wdeprecated-declarations]
+ 1031 |   cups = httpConnectEncrypt (cupsServer (), ippPort(), cupsEncryption ());
+      |   ^~~~
+In file included from /usr/include/cups/ipp.h:19,
+                 from /usr/include/cups/cups.h:28,
+                 from udev/udev-configure-printer.c:36:
+/usr/include/cups/http.h:478:26: note: declared here
+  478 | extern http_t           *httpConnectEncrypt(const char *host, int port, http_encryption_t encryption) _CUPS_DEPRECATED_1_7_MSG("Use httpConnect2 instead.");
+      |                          ^~~~~~~~~~~~~~~~~~
+udev/udev-configure-printer.c: In function ‘for_each_matching_queue’:
+udev/udev-configure-printer.c:1362:3: warning: ‘httpConnectEncrypt’ is deprecated: Use httpConnect2 instead. [-Wdeprecated-declarations]
+ 1362 |   http_t *cups = httpConnectEncrypt (cupsServer (), ippPort (),
+      |   ^~~~~~
+/usr/include/cups/http.h:478:26: note: declared here
+  478 | extern http_t           *httpConnectEncrypt(const char *host, int port, http_encryption_t encryption) _CUPS_DEPRECATED_1_7_MSG("Use httpConnect2 instead.");
+      |                          ^~~~~~~~~~~~~~~~~~
+udev/udev-configure-printer.c: In function ‘enable_queue’:
+udev/udev-configure-printer.c:1553:3: warning: ‘httpConnectEncrypt’ is deprecated: Use httpConnect2 instead. [-Wdeprecated-declarations]
+ 1553 |   http_t *cups = httpConnectEncrypt (cupsServer (), ippPort (),
+      |   ^~~~~~
+/usr/include/cups/http.h:478:26: note: declared here
+  478 | extern http_t           *httpConnectEncrypt(const char *host, int port, http_encryption_t encryption) _CUPS_DEPRECATED_1_7_MSG("Use httpConnect2 instead.");
+      |                          ^~~~~~~~~~~~~~~~~~
+udev/udev-configure-printer.c: In function ‘remove_queue’:
+udev/udev-configure-printer.c:1745:3: warning: ‘httpConnectEncrypt’ is deprecated: Use httpConnect2 instead. [-Wdeprecated-declarations]
+ 1745 |   http_t *cups = httpConnectEncrypt (cupsServer (), ippPort (),
+      |   ^~~~~~
+/usr/include/cups/http.h:478:26: note: declared here
+  478 | extern http_t           *httpConnectEncrypt(const char *host, int port, http_encryption_t encryption) _CUPS_DEPRECATED_1_7_MSG("Use httpConnect2 instead.");
+      |                          ^~~~~~~~~~~~~~~~~~
+udev/udev-configure-printer.c: In function ‘disable_queue’:
+udev/udev-configure-printer.c:1777:3: warning: ‘httpConnectEncrypt’ is deprecated: Use httpConnect2 instead. [-Wdeprecated-declarations]
+ 1777 |   http_t *cups = httpConnectEncrypt (cupsServer (), ippPort (),
+      |   ^~~~~~
+/usr/include/cups/http.h:478:26: note: declared here
+  478 | extern http_t           *httpConnectEncrypt(const char *host, int port, http_encryption_t encryption) _CUPS_DEPRECATED_1_7_MSG("Use httpConnect2 instead.");
+      |                          ^~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+: setup.py build
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+x86_64-pc-linux-gnu-gcc  -I/usr/include/libusb-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -pthread -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o udev/udev-configure-printer udev/udev_configure_printer-udev-configure-printer.o -lcups -ludev -lusb-1.0 -lglib-2.0 
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+Making all in po
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+Makefile:222: warning: ignoring prerequisites on suffix rule definition
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+make[1]: Nothing to be done for 'all'.
+ <span class="ansi32">*</span>   Building the wheel for system-config-printer-1.5.18 via setuptools.build_meta:__legacy__
+python3.13 -m gpep517 build-wheel --prefix=/usr --backend setuptools.build_meta:__legacy__ --output-fd 3 --wheel-dir /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/wheel
+2025-06-13 07:31:43,122 gpep517 INFO Building wheel via backend setuptools.build_meta:__legacy__
+2025-06-13 07:31:43,397 root INFO running bdist_wheel
+2025-06-13 07:31:43,708 root INFO running build
+2025-06-13 07:31:43,708 root INFO running build_py
+2025-06-13 07:31:43,735 root INFO creating /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,736 root INFO copying cupshelpers/xmldriverprefs.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,736 root INFO copying cupshelpers/openprinting.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,737 root INFO copying cupshelpers/cupshelpers.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,738 root INFO copying cupshelpers/__init__.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,738 root INFO copying cupshelpers/ppds.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,739 root INFO copying cupshelpers/installdriver.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,739 root INFO copying cupshelpers/config.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers
+2025-06-13 07:31:43,740 root WARNING warning: build_py: byte-compiling is disabled, skipping.
+
+2025-06-13 07:31:43,790 root INFO installing to /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel
+2025-06-13 07:31:43,791 root INFO running install
+2025-06-13 07:31:43,831 root INFO running install_lib
+2025-06-13 07:31:43,856 root INFO creating /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel
+2025-06-13 07:31:43,856 root INFO creating /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/cupshelpers
+2025-06-13 07:31:43,857 root INFO copying /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers/xmldriverprefs.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers
+2025-06-13 07:31:43,857 root INFO copying /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers/openprinting.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers
+2025-06-13 07:31:43,858 root INFO copying /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers/cupshelpers.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers
+2025-06-13 07:31:43,858 root INFO copying /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers/__init__.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers
+2025-06-13 07:31:43,859 root INFO copying /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers/ppds.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers
+2025-06-13 07:31:43,859 root INFO copying /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers/installdriver.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers
+2025-06-13 07:31:43,860 root INFO copying /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/lib/cupshelpers/config.py -&gt; /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers
+2025-06-13 07:31:43,860 root WARNING warning: install_lib: byte-compiling is disabled, skipping.
+
+2025-06-13 07:31:43,860 root INFO running install_egg_info
+2025-06-13 07:31:43,888 root INFO running egg_info
+2025-06-13 07:31:43,915 root INFO creating cupshelpers.egg-info
+2025-06-13 07:31:43,915 root INFO writing cupshelpers.egg-info/PKG-INFO
+2025-06-13 07:31:43,916 root INFO writing dependency_links to cupshelpers.egg-info/dependency_links.txt
+2025-06-13 07:31:43,917 root INFO writing top-level names to cupshelpers.egg-info/top_level.txt
+2025-06-13 07:31:43,917 root INFO writing manifest file 'cupshelpers.egg-info/SOURCES.txt'
+<span class="ansi2 ansi36">[06/13/25 07:31:44]</span><span class="ansi2 ansi36"> </span><span class="ansi1 ansi31">ERROR   </span> listing git files failed - pretending there aren't any                          ]8;id=247437;file:///usr/lib/python3.13/site-packages/setuptools_scm/_file_finders/git.py\<span class="ansi2">git.py</span>]8;;\<span class="ansi2">:</span>]8;id=44447;file:///usr/lib/python3.13/site-packages/setuptools_scm/_file_finders/git.py#26\<span class="ansi2">26</span>]8;;\
+2025-06-13 07:31:44,036 root INFO reading manifest file 'cupshelpers.egg-info/SOURCES.txt'
+2025-06-13 07:31:44,037 root INFO adding license file 'COPYING'
+2025-06-13 07:31:44,037 root INFO adding license file 'AUTHORS'
+2025-06-13 07:31:44,040 root INFO writing manifest file 'cupshelpers.egg-info/SOURCES.txt'
+2025-06-13 07:31:44,041 root INFO Copying cupshelpers.egg-info to /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/./cupshelpers-1.0-py3.13.egg-info
+2025-06-13 07:31:44,043 root INFO running install_scripts
+2025-06-13 07:31:44,048 root INFO creating /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel/cupshelpers-1.0.dist-info/WHEEL
+2025-06-13 07:31:44,050 wheel INFO creating '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/wheel/.tmp-jdivzygj/cupshelpers-1.0-py3-none-any.whl' and adding '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel' to it
+2025-06-13 07:31:44,051 wheel INFO adding 'cupshelpers/__init__.py'
+2025-06-13 07:31:44,051 wheel INFO adding 'cupshelpers/config.py'
+2025-06-13 07:31:44,051 wheel INFO adding 'cupshelpers/cupshelpers.py'
+2025-06-13 07:31:44,052 wheel INFO adding 'cupshelpers/installdriver.py'
+2025-06-13 07:31:44,052 wheel INFO adding 'cupshelpers/openprinting.py'
+2025-06-13 07:31:44,053 wheel INFO adding 'cupshelpers/ppds.py'
+2025-06-13 07:31:44,053 wheel INFO adding 'cupshelpers/xmldriverprefs.py'
+2025-06-13 07:31:44,054 wheel INFO adding 'cupshelpers-1.0.dist-info/licenses/AUTHORS'
+2025-06-13 07:31:44,054 wheel INFO adding 'cupshelpers-1.0.dist-info/licenses/COPYING'
+2025-06-13 07:31:44,055 wheel INFO adding 'cupshelpers-1.0.dist-info/METADATA'
+2025-06-13 07:31:44,055 wheel INFO adding 'cupshelpers-1.0.dist-info/WHEEL'
+2025-06-13 07:31:44,055 wheel INFO adding 'cupshelpers-1.0.dist-info/top_level.txt'
+2025-06-13 07:31:44,056 wheel INFO adding 'cupshelpers-1.0.dist-info/RECORD'
+2025-06-13 07:31:44,056 root INFO removing /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/build0/bdist.linux-x86_64/wheel
+2025-06-13 07:31:44,059 gpep517 INFO The backend produced /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/wheel/cupshelpers-1.0-py3-none-any.whl
+ <span class="ansi32">*</span>   Installing cupshelpers-1.0-py3-none-any.whl to /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/install
+python3.13 -m gpep517 install-wheel --destdir=/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/install --interpreter=/usr/bin/python3.13 --prefix=/usr --optimize=all /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/wheel/cupshelpers-1.0-py3-none-any.whl
+2025-06-13 07:31:44,366 gpep517 INFO Installing /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/wheel/cupshelpers-1.0-py3-none-any.whl into /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18_python3.13/install
+2025-06-13 07:31:44,539 gpep517 INFO Installation complete
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: app-admin/system-config-printer-1.5.18-r2
+
+&gt;&gt;&gt; Install app-admin/system-config-printer-1.5.18-r2 into /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image
+make -j2 DESTDIR=/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image PYTHON=: install 
+Making install in .
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+: setup.py build
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+: setup.py install --prefix=/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/bin'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c system-config-printer install-printerdriver system-config-printer-applet dbus/scp-dbus-service '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/bin'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/metainfo'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 system-config-printer.appdata.xml '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/metainfo'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/etc/cupshelpers'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 xml/preferreddrivers.xml '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/etc/cupshelpers'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/etc/dbus-1/system.d/'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 dbus/com.redhat.NewPrinterNotification.conf dbus/com.redhat.PrinterDriversInstaller.conf '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/etc/dbus-1/system.d/'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/dbus-1/interfaces/'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 dbus/org.fedoraproject.Config.Printing.xml '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/dbus-1/interfaces/'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+mkdir -p /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/applications/
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+mkdir -p /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/applications/
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+desktop-file-install --vendor Gentoo	\
+  --dir /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/applications/		\
+  --add-category System			\
+  --add-category Settings		\
+  --add-category HardwareSettings	\
+  --add-category Printing		\
+  --add-category GTK			\
+  system-config-printer.desktop
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+desktop-file-install --vendor Gentoo	\
+  --dir /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/etc/xdg/autostart/	\
+  --add-category System			\
+  --add-category Monitor		\
+  --add-category GTK			\
+  print-applet.desktop
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 man/system-config-printer.1 man/system-config-printer-applet.1 '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/man/man1'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/troubleshoot'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644  troubleshoot/base.py troubleshoot/CheckLocalServerPublishing.py troubleshoot/CheckNetworkServerSanity.py troubleshoot/CheckPPDSanity.py troubleshoot/CheckPrinterSanity.py troubleshoot/CheckSELinux.py troubleshoot/CheckUSBPermissions.py troubleshoot/ChooseNetworkPrinter.py troubleshoot/ChoosePrinter.py troubleshoot/DeviceListed.py troubleshoot/ErrorLogCheckpoint.py troubleshoot/ErrorLogFetch.py troubleshoot/ErrorLogParse.py troubleshoot/Locale.py troubleshoot/LocalOrRemote.py troubleshoot/NetworkCUPSPrinterShared.py troubleshoot/PrinterStateReasons.py troubleshoot/PrintTestPage.py troubleshoot/QueueNotEnabled.py troubleshoot/QueueRejectingJobs.py troubleshoot/RemoteAddress.py troubleshoot/SchedulerNotRunning.py troubleshoot/ServerFirewalled.py troubleshoot/Shrug.py troubleshoot/VerifyPackages.py troubleshoot/Welcome.py '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/troubleshoot'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/ui'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644  ui/AboutDialog.ui ui/ConnectDialog.ui ui/ConnectingDialog.ui ui/InstallDialog.ui ui/JobsWindow.ui ui/NewPrinterName.ui ui/NewPrinterWindow.ui ui/PrinterPropertiesDialog.ui ui/PrintersWindow.ui ui/ServerSettingsDialog.ui ui/SMBBrowseDialog.ui ui/statusicon_popupmenu.ui ui/WaitWindow.ui '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/ui'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644  asyncconn.py asyncipp.py asyncpk1.py authconn.py config.py cupspk.py debug.py dnssdresolve.py errordialogs.py HIG.py firewallsettings.py gui.py gtkinklevel.py installpackage.py jobviewer.py killtimer.py monitor.py newprinter.py OpenPrintingRequest.py options.py optionwidgets.py PhysicalDevice.py ppdcache.py ppdippstr.py ppdsloader.py printerproperties.py probe_printer.py SearchCriterion.py serversettings.py smburi.py statereason.py timedops.py ToolbarSearchEntry.py userdefault.py '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/.'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/xml'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644  xml/preferreddrivers.rng xml/validate.py '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/xml'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/icons'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644  icons/i-network-printer.png '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/icons'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/troubleshoot/'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c troubleshoot/__init__.py '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer/troubleshoot/'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c check-device-ids.py pysmb.py scp-dbus-service.py system-config-printer.py install-printerdriver.py applet.py '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/system-config-printer'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/dbus-1/services/'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 dbus/org.fedoraproject.Config.Printing.service '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/dbus-1/services/'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/systemd/system'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 udev/configure-printer@.service '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/systemd/system'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/udev'
+  /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c udev/udev-configure-printer '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/udev'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/udev'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c udev/udev-add-printer '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/udev'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+make[2]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+ /bin/mkdir -p '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/udev/rules.d'
+ /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 udev/70-printers.rules '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/lib/udev/rules.d'
+make[2]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18'
+Making install in po
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+Makefile:222: warning: ignoring prerequisites on suffix rule definition
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+installing ar.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ar/LC_MESSAGES/system-config-printer.mo
+installing as.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/as/LC_MESSAGES/system-config-printer.mo
+installing ast.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ast/LC_MESSAGES/system-config-printer.mo
+installing bg.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/bg/LC_MESSAGES/system-config-printer.mo
+installing bn_IN.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/bn_IN/LC_MESSAGES/system-config-printer.mo
+installing bn.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/bn/LC_MESSAGES/system-config-printer.mo
+installing br.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/br/LC_MESSAGES/system-config-printer.mo
+installing bs.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/bs/LC_MESSAGES/system-config-printer.mo
+installing ca.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ca/LC_MESSAGES/system-config-printer.mo
+installing cs.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/cs/LC_MESSAGES/system-config-printer.mo
+installing cy.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/cy/LC_MESSAGES/system-config-printer.mo
+installing da.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/da/LC_MESSAGES/system-config-printer.mo
+installing de.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/de/LC_MESSAGES/system-config-printer.mo
+installing el.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/el/LC_MESSAGES/system-config-printer.mo
+installing en_GB.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/en_GB/LC_MESSAGES/system-config-printer.mo
+installing es.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/es/LC_MESSAGES/system-config-printer.mo
+installing et.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/et/LC_MESSAGES/system-config-printer.mo
+installing fa.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/fa/LC_MESSAGES/system-config-printer.mo
+installing fi.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/fi/LC_MESSAGES/system-config-printer.mo
+installing fr.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/fr/LC_MESSAGES/system-config-printer.mo
+installing fur.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/fur/LC_MESSAGES/system-config-printer.mo
+installing gu.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/gu/LC_MESSAGES/system-config-printer.mo
+installing he.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/he/LC_MESSAGES/system-config-printer.mo
+installing hi.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/hi/LC_MESSAGES/system-config-printer.mo
+installing hr.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/hr/LC_MESSAGES/system-config-printer.mo
+installing hu.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/hu/LC_MESSAGES/system-config-printer.mo
+installing id.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/id/LC_MESSAGES/system-config-printer.mo
+installing is.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/is/LC_MESSAGES/system-config-printer.mo
+installing it.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/it/LC_MESSAGES/system-config-printer.mo
+installing ja.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ja/LC_MESSAGES/system-config-printer.mo
+installing ka.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ka/LC_MESSAGES/system-config-printer.mo
+installing kn.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/kn/LC_MESSAGES/system-config-printer.mo
+installing ko.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ko/LC_MESSAGES/system-config-printer.mo
+installing lt.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/lt/LC_MESSAGES/system-config-printer.mo
+installing lv.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/lv/LC_MESSAGES/system-config-printer.mo
+installing mai.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/mai/LC_MESSAGES/system-config-printer.mo
+installing ml.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ml/LC_MESSAGES/system-config-printer.mo
+installing mr.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/mr/LC_MESSAGES/system-config-printer.mo
+installing ms.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ms/LC_MESSAGES/system-config-printer.mo
+installing nb.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/nb/LC_MESSAGES/system-config-printer.mo
+installing nds.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/nds/LC_MESSAGES/system-config-printer.mo
+installing nl.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/nl/LC_MESSAGES/system-config-printer.mo
+installing nn.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/nn/LC_MESSAGES/system-config-printer.mo
+installing oc.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/oc/LC_MESSAGES/system-config-printer.mo
+installing or.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/or/LC_MESSAGES/system-config-printer.mo
+installing pa.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/pa/LC_MESSAGES/system-config-printer.mo
+installing pl.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/pl/LC_MESSAGES/system-config-printer.mo
+installing pt_BR.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/pt_BR/LC_MESSAGES/system-config-printer.mo
+installing pt.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/pt/LC_MESSAGES/system-config-printer.mo
+installing ro.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ro/LC_MESSAGES/system-config-printer.mo
+installing ru.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ru/LC_MESSAGES/system-config-printer.mo
+installing si.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/si/LC_MESSAGES/system-config-printer.mo
+installing sk.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/sk/LC_MESSAGES/system-config-printer.mo
+installing sl.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/sl/LC_MESSAGES/system-config-printer.mo
+installing sr@latin.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/sr@latin/LC_MESSAGES/system-config-printer.mo
+installing sr.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/sr/LC_MESSAGES/system-config-printer.mo
+installing sv.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/sv/LC_MESSAGES/system-config-printer.mo
+installing ta.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/ta/LC_MESSAGES/system-config-printer.mo
+installing te.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/te/LC_MESSAGES/system-config-printer.mo
+installing th.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/th/LC_MESSAGES/system-config-printer.mo
+installing tr.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/tr/LC_MESSAGES/system-config-printer.mo
+installing uk.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/uk/LC_MESSAGES/system-config-printer.mo
+installing vi.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/vi/LC_MESSAGES/system-config-printer.mo
+installing zh_CN.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/zh_CN/LC_MESSAGES/system-config-printer.mo
+installing zh_TW.gmo as /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/locale/zh_TW/LC_MESSAGES/system-config-printer.mo
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+make[1]: Entering directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+if test "system-config-printer" = "gettext-tools"; then \
+  /bin/mkdir -p /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /var/tmp/portage/._portage_reinstall_.5zuean8f/bin/ebuild-helpers/xattr/install -c -m 644 ./$file \
+		    /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/work/system-config-printer-1.5.18/po'
+ <span class="ansi32">*</span> Fixing shebang in /usr/lib/udev/udev-add-printer
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/monitor.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/debug.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/install-printerdriver.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/asyncconn.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/check-device-ids.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/OpenPrintingRequest.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/gtkinklevel.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/installpackage.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/ppdcache.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/PhysicalDevice.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/system-config-printer.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/authconn.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/scp-dbus-service.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/firewallsettings.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/asyncipp.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/xml/validate.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/timedops.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/newprinter.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/gui.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/ppdippstr.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/smburi.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/ErrorLogCheckpoint.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/QueueRejectingJobs.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/ChoosePrinter.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/PrinterStateReasons.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/PrintTestPage.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/CheckLocalServerPublishing.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/base.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/ChooseNetworkPrinter.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/RemoteAddress.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/VerifyPackages.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/Locale.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/Shrug.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/CheckPrinterSanity.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/CheckUSBPermissions.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/ErrorLogParse.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/QueueNotEnabled.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/NetworkCUPSPrinterShared.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/__init__.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/Welcome.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/CheckPPDSanity.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/DeviceListed.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/SchedulerNotRunning.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/CheckNetworkServerSanity.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/ServerFirewalled.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/CheckSELinux.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/LocalOrRemote.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/troubleshoot/ErrorLogFetch.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/statereason.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/dnssdresolve.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/asyncpk1.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/pysmb.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/killtimer.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/ppdsloader.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/printerproperties.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/userdefault.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/serversettings.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/applet.py
+ <span class="ansi32">*</span> Fixing shebang in /usr/share/system-config-printer/errordialogs.py
+&gt;&gt;&gt; Completed installing app-admin/system-config-printer-1.5.18-r2 into /var/tmp/portage/app-admin/system-config-printer-1.5.18-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 15260 KiB (14.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   7532 KiB ( 7.3 MiB)
+
+ <span class="ansi32">*</span> Verifying compiled files for python3.13
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib/udev/udev-configure-printer
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>

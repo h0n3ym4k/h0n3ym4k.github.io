@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/freeglut-3.6.0-r1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking freeglut-3.6.0.tar.gz to /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build"
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64"
+ <span class="ansi33">*</span> QA Notice: Compatibility with CMake &lt; 3.5 has been removed from CMake 4,
+ <span class="ansi33">*</span> media-libs/freeglut will fail to build w/o a fix.
+ <span class="ansi33">*</span> See also tracker bug #951350; check existing bug or file a new one for
+ <span class="ansi33">*</span> this package, and take it upstream.
+cmake -C /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DFREEGLUT_GLES=OFF -DFREEGLUT_BUILD_DEMOS=OFF -DFREEGLUT_BUILD_STATIC_LIBS=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64/gentoo_toolchain.cmake /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0
+loading initial cache file /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64/gentoo_common_config.cmake
+CMake Deprecation Warning at CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+  Compatibility with CMake &lt; 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument &lt;min&gt; value.  Or, use the &lt;min&gt;...&lt;max&gt; syntax
+  to tell CMake that the project requires at least &lt;min&gt; but has been updated
+  to work with policies introduced by &lt;max&gt; or earlier.
+
+
+-- The C compiler identification is GNU 14.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found X11: /usr/include
+-- Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so
+-- Looking for XOpenDisplay in /usr/lib64/libX11.so;/usr/lib64/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- Looking for include file /usr/include/X11/extensions/XInput2.h
+-- Looking for include file /usr/include/X11/extensions/XInput2.h - found
+-- Found OpenGL: /usr/lib64/libOpenGL.so  found components: OpenGL
+CMake Warning (dev) at /usr/share/cmake/Modules/CheckIncludeFiles.cmake:118 (message):
+  Policy CMP0075 is not set: Include file check macros honor
+  CMAKE_REQUIRED_LIBRARIES.  Run "cmake --help-policy CMP0075" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+
+  CMAKE_REQUIRED_LIBRARIES is set to:
+
+    m
+
+  For compatibility with CMake 3.11 and below this check is ignoring it.
+Call Stack (most recent call first):
+  CMakeLists.txt:473 (CHECK_INCLUDE_FILES)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include file sys/time.h
+-- Looking for include file sys/time.h - found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- Looking for include file sys/param.h
+-- Looking for include file sys/param.h - found
+-- Looking for include file sys/ioctl.h
+-- Looking for include file sys/ioctl.h - found
+-- Looking for include file fcntl.h
+-- Looking for include file fcntl.h - found
+-- Looking for include file usbhid.h
+-- Looking for include file usbhid.h - not found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for XParseGeometry
+-- Looking for XParseGeometry - not found
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- &lt;&lt;&lt; Gentoo configuration &gt;&gt;&gt;
+Build type      RelWithDebInfo
+Install path    /usr
+Compiler flags:
+C               -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic
+C++             
+Linker flags:
+Executable      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Module          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Shared          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+
+-- Configuring done (3.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64"
+ninja -v -j2 -l2
+[1/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_callbacks.c.o -MF CMakeFiles/freeglut.dir/src/fg_callbacks.c.o.d -o CMakeFiles/freeglut.dir/src/fg_callbacks.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_callbacks.c
+[2/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_cursor.c.o -MF CMakeFiles/freeglut.dir/src/fg_cursor.c.o.d -o CMakeFiles/freeglut.dir/src/fg_cursor.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_cursor.c
+[3/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_display.c.o -MF CMakeFiles/freeglut.dir/src/fg_display.c.o.d -o CMakeFiles/freeglut.dir/src/fg_display.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_display.c
+[4/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_ext.c.o -MF CMakeFiles/freeglut.dir/src/fg_ext.c.o.d -o CMakeFiles/freeglut.dir/src/fg_ext.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_ext.c
+[5/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_font_data.c.o -MF CMakeFiles/freeglut.dir/src/fg_font_data.c.o.d -o CMakeFiles/freeglut.dir/src/fg_font_data.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_font_data.c
+[6/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_gamemode.c.o -MF CMakeFiles/freeglut.dir/src/fg_gamemode.c.o.d -o CMakeFiles/freeglut.dir/src/fg_gamemode.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_gamemode.c
+[7/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_geometry.c.o -MF CMakeFiles/freeglut.dir/src/fg_geometry.c.o.d -o CMakeFiles/freeglut.dir/src/fg_geometry.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_geometry.c
+[8/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_gl2.c.o -MF CMakeFiles/freeglut.dir/src/fg_gl2.c.o.d -o CMakeFiles/freeglut.dir/src/fg_gl2.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_gl2.c
+[9/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_init.c.o -MF CMakeFiles/freeglut.dir/src/fg_init.c.o.d -o CMakeFiles/freeglut.dir/src/fg_init.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_init.c
+[10/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_input_devices.c.o -MF CMakeFiles/freeglut.dir/src/fg_input_devices.c.o.d -o CMakeFiles/freeglut.dir/src/fg_input_devices.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_input_devices.c
+[11/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_joystick.c.o -MF CMakeFiles/freeglut.dir/src/fg_joystick.c.o.d -o CMakeFiles/freeglut.dir/src/fg_joystick.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_joystick.c
+[12/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_main.c.o -MF CMakeFiles/freeglut.dir/src/fg_main.c.o.d -o CMakeFiles/freeglut.dir/src/fg_main.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_main.c
+[13/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_misc.c.o -MF CMakeFiles/freeglut.dir/src/fg_misc.c.o.d -o CMakeFiles/freeglut.dir/src/fg_misc.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_misc.c
+[14/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_overlay.c.o -MF CMakeFiles/freeglut.dir/src/fg_overlay.c.o.d -o CMakeFiles/freeglut.dir/src/fg_overlay.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_overlay.c
+[15/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_spaceball.c.o -MF CMakeFiles/freeglut.dir/src/fg_spaceball.c.o.d -o CMakeFiles/freeglut.dir/src/fg_spaceball.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_spaceball.c
+[16/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_state.c.o -MF CMakeFiles/freeglut.dir/src/fg_state.c.o.d -o CMakeFiles/freeglut.dir/src/fg_state.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_state.c
+[17/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_stroke_mono_roman.c.o -MF CMakeFiles/freeglut.dir/src/fg_stroke_mono_roman.c.o.d -o CMakeFiles/freeglut.dir/src/fg_stroke_mono_roman.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_stroke_mono_roman.c
+[18/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_stroke_roman.c.o -MF CMakeFiles/freeglut.dir/src/fg_stroke_roman.c.o.d -o CMakeFiles/freeglut.dir/src/fg_stroke_roman.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_stroke_roman.c
+[19/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_structure.c.o -MF CMakeFiles/freeglut.dir/src/fg_structure.c.o.d -o CMakeFiles/freeglut.dir/src/fg_structure.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_structure.c
+[20/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_teapot.c.o -MF CMakeFiles/freeglut.dir/src/fg_teapot.c.o.d -o CMakeFiles/freeglut.dir/src/fg_teapot.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_teapot.c
+[21/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_videoresize.c.o -MF CMakeFiles/freeglut.dir/src/fg_videoresize.c.o.d -o CMakeFiles/freeglut.dir/src/fg_videoresize.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_videoresize.c
+[22/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_window.c.o -MF CMakeFiles/freeglut.dir/src/fg_window.c.o.d -o CMakeFiles/freeglut.dir/src/fg_window.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_window.c
+[23/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_font.c.o -MF CMakeFiles/freeglut.dir/src/fg_font.c.o.d -o CMakeFiles/freeglut.dir/src/fg_font.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_font.c
+[24/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/fg_menu.c.o -MF CMakeFiles/freeglut.dir/src/fg_menu.c.o.d -o CMakeFiles/freeglut.dir/src/fg_menu.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/fg_menu.c
+[25/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_cursor_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_cursor_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_cursor_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_cursor_x11.c
+[26/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_ext_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_ext_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_ext_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_ext_x11.c
+[27/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_gamemode_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_gamemode_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_gamemode_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_gamemode_x11.c
+[28/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_glutfont_definitions_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_glutfont_definitions_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_glutfont_definitions_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_glutfont_definitions_x11.c
+[29/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_init_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_init_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_init_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_init_x11.c
+[30/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_input_devices_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_input_devices_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_input_devices_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_input_devices_x11.c
+[31/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_joystick_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_joystick_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_joystick_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_joystick_x11.c
+[32/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_main_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_main_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_main_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_main_x11.c
+[33/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_menu_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_menu_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_menu_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_menu_x11.c
+[34/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_spaceball_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_spaceball_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_spaceball_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_spaceball_x11.c
+[35/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_state_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_state_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_state_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_state_x11.c
+[36/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_structure_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_structure_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_structure_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_structure_x11.c
+[37/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_window_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_window_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_window_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_window_x11.c
+[38/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_xinput_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_xinput_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_xinput_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_xinput_x11.c
+[39/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_cmap_x11.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_cmap_x11.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_cmap_x11.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_cmap_x11.c
+[40/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_display_x11_glx.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_display_x11_glx.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_display_x11_glx.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_display_x11_glx.c
+[41/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_state_x11_glx.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_state_x11_glx.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_state_x11_glx.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_state_x11_glx.c
+[42/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/x11/fg_window_x11_glx.c.o -MF CMakeFiles/freeglut.dir/src/x11/fg_window_x11_glx.c.o.d -o CMakeFiles/freeglut.dir/src/x11/fg_window_x11_glx.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/x11/fg_window_x11_glx.c
+[43/45] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -Dfreeglut_EXPORTS -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/include -I/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic -fPIC -MD -MT CMakeFiles/freeglut.dir/src/util/xparsegeometry_repl.c.o -MF CMakeFiles/freeglut.dir/src/util/xparsegeometry_repl.c.o.d -o CMakeFiles/freeglut.dir/src/util/xparsegeometry_repl.c.o -c /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0/src/util/xparsegeometry_repl.c
+[44/45] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-gcc -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -pedantic  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs   -Wl,--dependency-file=CMakeFiles/freeglut.dir/link.d -shared -Wl,-soname,libglut.so.3 -o lib/libglut.so.3.12.1 CMakeFiles/freeglut.dir/src/fg_callbacks.c.o CMakeFiles/freeglut.dir/src/fg_cursor.c.o CMakeFiles/freeglut.dir/src/fg_display.c.o CMakeFiles/freeglut.dir/src/fg_ext.c.o CMakeFiles/freeglut.dir/src/fg_font_data.c.o CMakeFiles/freeglut.dir/src/fg_gamemode.c.o CMakeFiles/freeglut.dir/src/fg_geometry.c.o CMakeFiles/freeglut.dir/src/fg_gl2.c.o CMakeFiles/freeglut.dir/src/fg_init.c.o CMakeFiles/freeglut.dir/src/fg_input_devices.c.o CMakeFiles/freeglut.dir/src/fg_joystick.c.o CMakeFiles/freeglut.dir/src/fg_main.c.o CMakeFiles/freeglut.dir/src/fg_misc.c.o CMakeFiles/freeglut.dir/src/fg_overlay.c.o CMakeFiles/freeglut.dir/src/fg_spaceball.c.o CMakeFiles/freeglut.dir/src/fg_state.c.o CMakeFiles/freeglut.dir/src/fg_stroke_mono_roman.c.o CMakeFiles/freeglut.dir/src/fg_stroke_roman.c.o CMakeFiles/freeglut.dir/src/fg_structure.c.o CMakeFiles/freeglut.dir/src/fg_teapot.c.o CMakeFiles/freeglut.dir/src/fg_videoresize.c.o CMakeFiles/freeglut.dir/src/fg_window.c.o CMakeFiles/freeglut.dir/src/fg_font.c.o CMakeFiles/freeglut.dir/src/fg_menu.c.o CMakeFiles/freeglut.dir/src/x11/fg_cursor_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_ext_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_gamemode_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_glutfont_definitions_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_init_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_input_devices_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_joystick_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_main_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_menu_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_spaceball_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_state_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_structure_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_window_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_xinput_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_cmap_x11.c.o CMakeFiles/freeglut.dir/src/x11/fg_display_x11_glx.c.o CMakeFiles/freeglut.dir/src/x11/fg_state_x11_glx.c.o CMakeFiles/freeglut.dir/src/x11/fg_window_x11_glx.c.o CMakeFiles/freeglut.dir/src/util/xparsegeometry_repl.c.o  /usr/lib64/libX11.so  /usr/lib64/libXrandr.so  /usr/lib64/libXxf86vm.so  /usr/lib64/libXi.so  -lm  /usr/lib64/libGLX.so  /usr/lib64/libOpenGL.so &amp;&amp; :
+[45/45] /usr/bin/cmake -E cmake_symlink_library lib/libglut.so.3.12.1  lib/libglut.so.3 lib/libglut.so &amp;&amp; :
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: media-libs/freeglut-3.6.0-r1
+
+&gt;&gt;&gt; Install media-libs/freeglut-3.6.0-r1 into /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64"
+ninja -v -j2 -l2 install
+[0/1] cd /var/tmp/portage/media-libs/freeglut-3.6.0-r1/work/freeglut-3.6.0_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/libglut.so.3.12.1
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/libglut.so.3
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/libglut.so
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/include/GL/freeglut.h
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/include/GL/freeglut_ucall.h
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/include/GL/freeglut_ext.h
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/include/GL/freeglut_std.h
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/include/GL/glut.h
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/pkgconfig/glut.pc
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/cmake/FreeGLUT/FreeGLUTTargets.cmake
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/cmake/FreeGLUT/FreeGLUTTargets-relwithdebinfo.cmake
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/cmake/FreeGLUT/FreeGLUTConfig.cmake
+-- Installing: /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image/usr/lib64/cmake/FreeGLUT/FreeGLUTConfigVersion.cmake
+&gt;&gt;&gt; Completed installing media-libs/freeglut-3.6.0-r1 into /var/tmp/portage/media-libs/freeglut-3.6.0-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 4444 KiB (4.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   828 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libglut.so.3.12.1
+
+</pre>
+</body>
+
+</html>

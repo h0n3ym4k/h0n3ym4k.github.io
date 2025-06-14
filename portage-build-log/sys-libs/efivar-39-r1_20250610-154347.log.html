@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-libs/efivar-39-r1:0/1
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: floppym@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking efivar-39.tar.gz to /var/tmp/portage/sys-libs/efivar-39-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-libs/efivar-39-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39 ...
+make -j2 HOST_MARCH= 
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+cp util.c util-makeguids.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -DEFIVAR_BUILD_ENVIRONMENT  -c -o makeguids.o makeguids.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -DEFIVAR_BUILD_ENVIRONMENT  -c -o util-makeguids.o util-makeguids.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,-z,now -Wl,-z,muldefs -Wl,--no-undefined-version    -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,-z,now -Wl,-z,muldefs -Wl,--no-undefined-version    -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -DEFIVAR_BUILD_ENVIRONMENT  -o makeguids makeguids.o util-makeguids.o -ldl 
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+./makeguids guids.txt guid-symbols.c include/efivar/efivar-guids.h
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+./makeguids guids.txt guid-symbols.c include/efivar/efivar-guids.h
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Nothing to be done for 'prep'.
+make[1]: Nothing to be done for 'prep'.
+make[2]: Nothing to be done for 'deps'.
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o crc32.o crc32.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o dp.o dp.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o dp-acpi.o dp-acpi.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o dp-hw.o dp-hw.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o dp-media.o dp-media.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o efivarfs.o efivarfs.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o dp-message.o dp-message.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o error.o error.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o export.o export.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o guid.o guid.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o guid-symbols.o guid-symbols.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o lib.o lib.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o vars.o vars.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o time.o time.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o creator.o creator.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o disk.o disk.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o gpt.o gpt.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o loadopt.o loadopt.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o path-helpers.o path-helpers.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux.o linux.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-acpi-root.o linux-acpi-root.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-acpi.o linux-acpi.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-ata.o linux-ata.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-emmc.o linux-emmc.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-i2o.o linux-i2o.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-md.o linux-md.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-nvme.o linux-nvme.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-pci-root.o linux-pci-root.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-pci.o linux-pci.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-pmem.o linux-pmem.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-sas.o linux-sas.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-sata.o linux-sata.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-scsi.o linux-scsi.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-soc-root.o linux-soc-root.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-virtblk.o linux-virtblk.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o linux-virtual-root.o linux-virtual-root.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o sec.o sec.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o secdb.o secdb.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o esl-iter.o esl-iter.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o util.o util.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o efivar.o efivar.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o secdb-dump.o secdb-dump.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o efisecdb.o efisecdb.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar -fPIC  -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -c -o thread-test.o thread-test.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/  -shared -Wl,-soname,libefivar.so.1 -Wl,--version-script=libefivar.map  -o libefivar.so crc32.o dp.o dp-acpi.o dp-hw.o dp-media.o dp-message.o efivarfs.o error.o export.o guid.o guid-symbols.o lib.o vars.o time.o -ldl 
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+ln -vfs libefivar.so libefivar.so.1
+'libefivar.so.1' -&gt; 'libefivar.so'
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/  -shared -Wl,-soname,libefisec.so.1 -Wl,--version-script=libefisec.map  -o libefisec.so sec.o secdb.o esl-iter.o util.o  
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+ln -vfs libefisec.so libefisec.so.1
+'libefisec.so.1' -&gt; 'libefisec.so'
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/  -shared -Wl,-soname,libefiboot.so.1 -Wl,--version-script=libefiboot.map  -o libefiboot.so crc32.o creator.o disk.o gpt.o loadopt.o path-helpers.o linux.o linux-acpi-root.o linux-acpi.o linux-ata.o linux-emmc.o linux-i2o.o linux-md.o linux-nvme.o linux-pci-root.o linux-pci.o linux-pmem.o linux-sas.o linux-sata.o linux-scsi.o linux-soc-root.o linux-virtblk.o linux-virtual-root.o -lefivar 
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+ln -vfs libefiboot.so libefiboot.so.1
+'libefiboot.so.1' -&gt; 'libefiboot.so'
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -o efivar efivar.o guid.o util.o -lefivar -ldl 
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -o thread-test libefivar.so thread-test.o -lpthread -lefivar 
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=gnu11 -funsigned-char -fvisibility=hidden -specs=/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/gcc.specs -fno-merge-constants  -L. -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -Wl,--build-id -Wl,--no-allow-shlib-undefined -Wl,--no-undefined-version -Wl,-z,now -Wl,-z,muldefs -Wl,-z,relro -Wl,--no-fatal-warnings     -DLIBEFIVAR_VERSION=39 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/ -o efisecdb efisecdb.o guid-symbols.o secdb-dump.o util.o -lefivar -lefisec -ldl 
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+rm thread-test.o
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+mandoc -mdoc -Tman -Ios=Linux efisecdb.1.mdoc &gt; efisecdb.1
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-libs/efivar-39-r1
+
+&gt;&gt;&gt; Install sys-libs/efivar-39-r1 into /var/tmp/portage/sys-libs/efivar-39-r1/image
+make -j2 DESTDIR=/var/tmp/portage/sys-libs/efivar-39-r1/image install 
+make[2]: Nothing to be done for 'deps'.
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -d -m 755 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -m 755 libefivar.so /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefivar.so.1.39 ; ln -fs libefivar.so.1.39 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefivar.so.1 ; ln -fs libefivar.so.1.39 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefivar.so ;   install -m 755 libefiboot.so /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefiboot.so.1.39 ; ln -fs libefiboot.so.1.39 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefiboot.so.1 ; ln -fs libefiboot.so.1.39 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefiboot.so ;   install -m 755 libefisec.so /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefisec.so.1.39 ; ln -fs libefisec.so.1.39 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefisec.so.1 ; ln -fs libefisec.so.1.39 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/libefisec.so ; 
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -d -m 755 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/pkgconfig
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -m 644 efivar.pc /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/pkgconfig ;  install -m 644 efiboot.pc /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/pkgconfig ;  install -m 644 efisec.pc /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/lib64/pkgconfig ;
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -d -m 755 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efiboot-creator.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efiboot-creator.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efiboot-loadopt.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efiboot-loadopt.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efiboot.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efiboot.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efisec-secdb.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efisec-secdb.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efisec-types.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efisec-types.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efisec.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efisec.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efivar-dp.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efivar-dp.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efivar-guids.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efivar-guids.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efivar-time.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efivar-time.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efivar-types.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efivar-types.h;  install -m 644 /var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src/include/efivar/efivar.h /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/include/efivar/efivar.h;
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -d -m 755 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/bin
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+install -m 755 efivar /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/bin;  install -m 755 efisecdb /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/bin;
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/src'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+install -d -m 755 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/share/man/man1
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+install -m 644 efisecdb.1 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man1/;  install -m 644 efivar.1 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man1/;
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+install -d -m 755 /var/tmp/portage/sys-libs/efivar-39-r1/image/usr/share/man/man3
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+install -m 644 efi_append_variable.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_del_variable.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_get_next_variable_name.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_get_variable.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_get_variable_attributes.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_get_variable_size.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_guid_to_id_guid.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_guid_to_name.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_guid_to_str.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_guid_to_symbol.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_name_to_guid.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_set_variable.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_str_to_guid.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_symbol_to_guid.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variables_supported.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_t.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_import.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_export.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_alloc.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_free.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_set_name.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_get_name.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_set_guid.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_get_guid.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_set_data.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_get_data.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_get_attributes.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_set_attributes.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;  install -m 644 efi_variable_realize.3 /var/tmp/portage/sys-libs/efivar-39-r1/image//usr/share/man/man3/;
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/efivar-39-r1/work/efivar-39/docs'
+&gt;&gt;&gt; Completed installing sys-libs/efivar-39-r1 into /var/tmp/portage/sys-libs/efivar-39-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 5828 KiB (5.6 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   896 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libefiboot.so.1.39
+   /usr/lib64/libefivar.so.1.39
+   /usr/lib64/libefisec.so.1.39
+   /usr/bin/efivar
+   /usr/bin/efisecdb
+
+</pre>
+</body>
+
+</html>
