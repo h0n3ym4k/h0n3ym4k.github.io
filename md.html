@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Markdown Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    #editor, #preview {
+      width: 50%;
+      padding: 1rem;
+      box-sizing: border-box;
+      overflow-y: auto;
+      height: 100vh;
+    }
+    #editor {
+      border-right: 1px solid #ccc;
+      background: white;
+    }
+    #markdown-input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      resize: none;
+      font-size: 1rem;
+      font-family: monospace;
+      outline: none;
+    }
+    #preview {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="editor">
+    <textarea id="markdown-input" placeholder="Write your Markdown here..."></textarea>
+  </section>
+
+  <section id="preview">
+    <!-- Rendered HTML preview will appear here -->
+  </section>
+
+  <!-- Marked library for Markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    const input = document.getElementById('markdown-input');
+    const preview = document.getElementById('preview');
+
+    // Function to update the preview by parsing Markdown to HTML
+    function updatePreview() {
+      const markdownText = input.value;
+      // Convert markdown to HTML safely
+      const html = marked.parse(markdownText, { breaks: true });
+      preview.innerHTML = html;
+    }
+
+    // Update preview on input
+    input.addEventListener('input', updatePreview);
+
+    // Initialize with some sample Markdown content
+    input.value = `# Welcome to Markdown Editor
+
+Type your **Markdown** on the left, and see the _live preview_ on the right.
+
+- Easy to use
+- Live preview
+- Supports **bold**, *italic*, \`code\`, [links](https://example.com), and more!
+
+\`\`\`js
+// Sample code block
+console.log('Hello, Markdown!');
+\`\`\`
+`;
+    updatePreview();
+  </script>
+
+</body>
+</html>
