@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mark Six HK Meal Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f0f0f5;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #004080;
+  }
+  .meal {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  .numbers {
+    font-size: 1.1em;
+    color: #007bff;
+    margin-top: 10px;
+    white-space: pre-line;
+  }
+  button {
+    display: block;
+    margin: 15px auto;
+    font-size: 1.1em;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  textarea {
+    width: 100%;
+    height: 180px;
+    font-family: monospace;
+    font-size: 0.9em;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  .footer-note {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 30px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Mark Six Drawing for Hong Kong Meals</h1>
+
+<div class="meal" id="breakfast">
+  <h2>Breakfast</h2>
+  <div class="numbers" id="numbers-breakfast">Loading...</div>
+</div>
+
+<div class="meal" id="lunch">
+  <h2>Lunch</h2>
+  <div class="numbers" id="numbers-lunch">Loading...</div>
+</div>
+
+<div class="meal" id="dinner">
+  <h2>Dinner</h2>
+  <div class="numbers" id="numbers-dinner">Loading...</div>
+</div>
+
+<button id="generateBtn">Generate New Mark Six Numbers</button>
+
+<label for="restaurantList">Edit Hong Kong Restaurant/Dish List (Format: number: description)</label>
+<textarea id="restaurantList" spellcheck="false"></textarea>
+
+<button id="resetListBtn" style="background-color:#28a745; margin-top:10px;">Reset Restaurant List to Default</button>
+
+<div class="footer-note">
+  You can edit the restaurant list above and then click "Generate New Mark Six Numbers" to use your updated list.
+</div>
+
+<script>
+  // Default HK restaurant/dish map (1 to 49)
+  const defaultHKMealMap = {
+    1: "Tim Ho Wan – Michelin-starred dim sum",
+    2: "Yung Kee – Famous roast goose and Cantonese dishes",
+    3: "Mak’s Noodle – Wonton noodles specialist",
+    4: "Australia Dairy Company – Cha chaan teng breakfast",
+    5: "Kam’s Roast Goose – Michelin-starred roast goose",
+    6: "Tai Cheong Bakery – Famous egg tarts",
+    7: "Lei Garden – Upscale Cantonese dining",
+    8: "Sister Wah – Beef brisket noodles",
+    9: "Ho Hung Kee – Michelin-starred congee and rice noodles",
+    10: "Tsim Chai Kee – Giant wonton noodles",
+    11: "Joy Hing Roasted Meat – Roast pork and char siu",
+    12: "Lin Heung Tea House – Traditional dim sum",
+    13: "Capital Cafe – Classic cha chaan teng",
+    14: "Yat Lok – Michelin-starred roast goose",
+    15: "Kam Wah Cafe – Pineapple buns and milk tea",
+    16: "Sang Kee Congee Shop – Traditional congee",
+    17: "Kau Kee Restaurant – Beef brisket noodles",
+    18: "Hing Kee Noodles – Wonton and fish ball noodles",
+    19: "Mak Man Kee Noodle Shop – Traditional wonton noodles",
+    20: "Tsui Wah Restaurant – Popular cha chaan teng chain",
+    21: "Sister Wah – Beef brisket noodles",
+    22: "Yuen Kee Restaurant – Roast goose and Cantonese dishes",
+    23: "Kam Fung Restaurant – Egg tarts and pineapple buns",
+    24: "Australia Dairy Company – Classic breakfast spot",
+    25: "Tai Hing – Roast meats and rice dishes",
+    26: "Joy Hing Roasted Meat – Roast pork and char siu",
+    27: "Ho Hung Kee – Congee and rice noodles",
+    28: "Tsim Chai Kee – Giant wonton noodles",
+    29: "Yat Lok – Roast goose",
+    30: "Lei Garden – Upscale Cantonese dining",
+    31: "Mak’s Noodle – Wonton noodles",
+    32: "Kam’s Roast Goose – Roast goose",
+    33: "Sister Wah – Beef brisket noodles",
+    34: "Lin Heung Tea House – Traditional dim sum",
+    35: "Capital Cafe – Cha chaan teng",
+    36: "Kam Wah Cafe – Pineapple buns and milk tea",
+    37: "Kau Kee Restaurant – Beef brisket noodles",
+    38: "Hing Kee Noodles – Wonton and fish ball noodles",
+    39: "Tsui Wah Restaurant – Cha chaan teng chain",
+    40: "Yuen Kee Restaurant – Roast goose",
+    41: "Tai Hing – Roast meats and rice dishes",
+    42: "Joy Hing Roasted Meat – Roast pork and char siu",
+    43: "Ho Hung Kee – Congee and rice noodles",
+    44: "Tsim Chai Kee – Giant wonton noodles",
+    45: "Yat Lok – Roast goose",
+    46: "Lei Garden – Upscale Cantonese dining",
+    47: "Mak’s Noodle – Wonton noodles",
+    48: "Kam’s Roast Goose – Roast goose",
+    49: "Sister Wah – Beef brisket noodles"
+  };
+
+  // Current meal map used (modifiable)
+  let currentHKMealMap = {...defaultHKMealMap};
+
+  const restaurantListTextarea = document.getElementById('restaurantList');
+  const generateBtn = document.getElementById('generateBtn');
+  const resetListBtn = document.getElementById('resetListBtn');
+
+  // Initialize textarea with default list in "number: description" format
+  function loadRestaurantListToTextarea() {
+    const lines = [];
+    for (let i = 1; i <= 49; i++) {
+      lines.push(`${i}: ${currentHKMealMap[i] || ''}`);
+    }
+    restaurantListTextarea.value = lines.join('\n');
+  }
+
+  // Parse textarea content to update currentHKMealMap
+  function updateMealMapFromTextarea() {
+    const lines = restaurantListTextarea.value.split('\n');
+    const newMap = {};
+    for (let line of lines) {
+      const parts = line.split(':');
+      if(parts.length >= 2){
+        const key = parts[0].trim();
+        const desc = parts.slice(1).join(':').trim();
+        const num = parseInt(key, 10);
+        if(num >=1 && num <=49 && desc.length > 0){
+          newMap[num] = desc;
+        }
+      }
+    }
+    // Only update if we have at least 49 entries to avoid incomplete data
+    if(Object.keys(newMap).length >= 49){
+      currentHKMealMap = newMap;
+      return true;
+    }
+    return false;
+  }
+
+  // Generate 6 unique random numbers from 1 to 49
+  function generateUniqueNumbers() {
+    const numbers = new Set();
+    while (numbers.size < 6) {
+      const num = Math.floor(Math.random() * 49) + 1;
+      numbers.add(num);
+    }
+    return Array.from(numbers).sort((a, b) => a - b);
+  }
+
+  // Generate meal numbers with descriptions for a meal
+  function generateMealWithDescription() {
+    const nums = generateUniqueNumbers();
+    return nums.map(num => `${num}: ${currentHKMealMap[num] || 'Unknown restaurant/dish'}`).join('\n');
+  }
+
+  // Render all meals
+  function renderAllMeals() {
+    if(!updateMealMapFromTextarea()){
+      alert('Please ensure the restaurant list contains valid entries for numbers 1 to 49 in the format "number: description".');
+      return;
+    }
+    document.getElementById('numbers-breakfast').textContent = generateMealWithDescription();
+    document.getElementById('numbers-lunch').textContent = generateMealWithDescription();
+    document.getElementById('numbers-dinner').textContent = generateMealWithDescription();
+  }
+
+  // Reset restaurant list to default and reload textarea
+  function resetRestaurantList() {
+    currentHKMealMap = {...defaultHKMealMap};
+    loadRestaurantListToTextarea();
+    renderAllMeals();
+  }
+
+  // Initialize on page load
+  window.onload = () => {
+    loadRestaurantListToTextarea();
+    renderAllMeals();
+  };
+
+  // Event listeners
+  generateBtn.addEventListener('click', renderAllMeals);
+  resetListBtn.addEventListener('click', () => {
+    if(confirm('Reset restaurant list to default? Any unsaved changes will be lost.')){
+      resetRestaurantList();
+    }
+  });
+</script>
+
+</body>
+</html>
