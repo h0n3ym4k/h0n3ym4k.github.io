@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-libs/libcap-2.76:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux pam
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking libcap-2.76.tar.xz to /var/tmp/portage/sys-libs/libcap-2.76/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-libs/libcap-2.76/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76
+ <span class="ansi32">*</span> abi_x86_64.amd64: copying to /var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+make -j2 AR=x86_64-pc-linux-gnu-ar CC=x86_64-pc-linux-gnu-gcc OBJCOPY=x86_64-pc-linux-gnu-objcopy RANLIB=x86_64-pc-linux-gnu-ranlib exec_prefix= lib_prefix=/usr lib=lib64 prefix=/usr PAM_CAP=yes DYNAMIC=yes GOLANG=no 
+make -C libcap all
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+sed -e 's,@prefix@,/usr,' \
+	-e 's,@exec_prefix@,,' \
+	-e 's,@libdir@,/usr/lib64,' \
+	-e 's,@includedir@,/usr/include,' \
+	-e 's,@VERSION@,2.76,' \
+	-e 's,@deps@,,' \
+	libcap.pc.in &gt;libcap.pc
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+=&gt; making cap_names.list.h from /var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi/linux/capability.h
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+grep -E '^#define\s+CAP_([^\s]+)\s+[0-9]+\s*$' include/uapi/linux/capability.h | sed -e 's/^#define\s\+/{"/' -e 's/\s*$/},/' -e 's/\s\+/",/' -e 'y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/' &gt; cap_names.list.h
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make libpsx.pc
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+sed -e 's,@prefix@,/usr,' \
+	-e 's,@exec_prefix@,,' \
+	-e 's,@libdir@,/usr/lib64,' \
+	-e 's,@includedir@,/usr/include,' \
+	-e 's,@VERSION@,2.76,' \
+	-e 's,@deps@,,' \
+	libpsx.pc.in &gt;libpsx.pc
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code  -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/include -Dlinux -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code  -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include _makenames.c -o _makenames
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+(cat cap_names.header ; sed -e 's/[\{\}"]//g' -e 's/,$//' cap_names.list.h) | gperf --ignore-case --language=ANSI-C --readonly --null-strings --global-table --hash-function-name=__cap_hash_name --lookup-function-name="__cap_lookup_name" -c -t -m20  &gt; _caps_output.gperf
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+sed -e 's/unsigned int len/size_t len/' -i _caps_output.gperf
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+./_makenames &gt; cap_names.h
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c cap_alloc.c -o cap_alloc.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c cap_proc.c -o cap_proc.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c cap_extint.c -o cap_extint.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c cap_flag.c -o cap_flag.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -DINCLUDE_GPERF_OUTPUT='"_caps_output.gperf"' -c cap_text.c -o cap_text.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c cap_file.c -o cap_file.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c cap_syscalls.c -o cap_syscalls.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-ar rcs libcap.a cap_alloc.o cap_proc.o cap_extint.o cap_flag.o cap_text.o cap_file.o cap_syscalls.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-ranlib libcap.a
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make libcap.so
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs empty.c -o empty
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-objcopy --dump-section .interp=loader.txt empty /dev/null
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -DLIBRARY_VERSION=\"libcap-2.76\" -DSHARED_LOADER=\"/lib64/ld-linux-x86-64.so.2\" -include ./libcap.h -c execable.c -o cap_magic.o
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -Wl,-x -shared -Wl,-shared -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-soname,libcap.so.2 -o libcap.so.2.76 cap_alloc.o cap_proc.o cap_extint.o cap_flag.o cap_text.o cap_file.o cap_syscalls.o cap_magic.o -Wl,-e,__so_start
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libcap.so.2.76 libcap.so.2
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libcap.so.2 libcap.so
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make libpsx.a
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c ../psx/psx_calls.c -o ../psx/psx_calls.o
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c ../psx/psx.c -o ../psx/psx.o
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -c ../psx/wrap/psx_wrap.c -o ../psx/wrap/psx_wrap.o
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+rm -f include/sys/psx_syscall.h
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -s ../../../psx/psx_syscall.h include/sys/psx_syscall.h
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-ar rcs libpsx.a ../psx/psx.o ../psx/psx_calls.o ../psx/wrap/psx_wrap.o
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-ranlib libpsx.a
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make libpsx.so
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap/../libcap/include -DLIBRARY_VERSION=\"libpsx-2.76\" -DSHARED_LOADER=\"/lib64/ld-linux-x86-64.so.2\" -c psx_exec.c -o psx_magic.o
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+x86_64-pc-linux-gnu-gcc -Wl,-x -shared -Wl,-shared -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -D_LIBPSX_PTHREAD_LINKAGE -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-soname,libpsx.so.2 -o libpsx.so.2.76 ../psx/psx.o ../psx/psx_calls.o ../psx/wrap/psx_wrap.o psx_magic.o -Wl,-e,__so_start -lpthread
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libpsx.so.2.76 libpsx.so.2
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libpsx.so.2 libpsx.so
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make -C pam_cap all
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include -DLIBCAP_VERSION=\"libcap-2.76\" -DSHARED_LOADER=\"/lib64/ld-linux-x86-64.so.2\" -c execable.c -o execable.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include  -c -o pam_cap.o pam_cap.c
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+x86_64-pc-linux-gnu-gcc -Wl,-x -shared -Wl,-shared -o lazylink.so -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs lazylink.c -DSHARED_LOADER=\"/lib64/ld-linux-x86-64.so.2\" -Wl,-e,__so_start
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make -C ../libcap all
+make libpsx.pc
+make[3]: 'libpsx.pc' is up to date.
+make libcap.so
+make[3]: 'libcap.so' is up to date.
+make libpsx.a
+make[3]: 'libpsx.a' is up to date.
+make libpsx.so
+make[3]: 'libpsx.so' is up to date.
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+touch LIBCAP
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+echo "-Wl,-e,__so_start" &gt; pam_cap_linkopts
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+./lazylink.so || echo "-lpam" &gt;&gt; pam_cap_linkopts
+./lazylink.so: symbol lookup error: ./lazylink.so: undefined symbol: nothing_sets_this
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+cat pam_cap_linkopts | xargs -e x86_64-pc-linux-gnu-gcc -Wl,-x -shared -Wl,-shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o pam_cap.so pam_cap.o execable.o -L/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap -lcap
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make testlink
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap/include  -c -o test.o test.c
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -fPIC -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o testlink test.o pam_cap.o -lpam -ldl -L/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap/../libcap -lcap
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make -C tests all
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/tests'
+leave test building to test target
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/tests'
+make -C progs all
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include -c getcap.c -o getcap.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include -c getpcaps.c -o getpcaps.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include -c setcap.c -o setcap.o
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+./mkcapshdoc.sh &gt; capshdoc.c.cf
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+diff -u capshdoc.c capshdoc.c.cf || (rm capshdoc.c.cf ; exit 1)
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs getpcaps.o -L/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap -lcap  -o getpcaps
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs getcap.o -L/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap -lcap  -o getcap
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs setcap.o -L/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap -lcap  -o setcap
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Wall -Wwrite-strings -Wpointer-arith -Wcast-qual -Wcast-align -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Winline -Wshadow -Wunreachable-code -Dlinux -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include/uapi -I/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap/include  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs capsh.c capshdoc.c -L/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs/../libcap -lcap  -o capsh
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make -C doc all
+make[1]: Nothing to be done for 'all'.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-libs/libcap-2.76
+
+&gt;&gt;&gt; Install sys-libs/libcap-2.76 into /var/tmp/portage/sys-libs/libcap-2.76/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+make -j2 AR=x86_64-pc-linux-gnu-ar CC=x86_64-pc-linux-gnu-gcc OBJCOPY=x86_64-pc-linux-gnu-objcopy RANLIB=x86_64-pc-linux-gnu-ranlib exec_prefix= lib_prefix=/usr lib=lib64 prefix=/usr PAM_CAP=yes DYNAMIC=yes GOLANG=no DESTDIR=/var/tmp/portage/sys-libs/libcap-2.76/image install 
+make -C libcap install
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 include/sys/capability.h /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 libcap.pc /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig/libcap.pc
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 libcap.a /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libcap.a
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make install-static-psx
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 include/sys/psx_syscall.h /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 libpsx.pc /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig/libpsx.pc
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 libpsx.a /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libpsx.a
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make install-shared
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 include/sys/capability.h /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 libcap.pc /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig/libcap.pc
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0755 libcap.so.2.76 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libcap.so.2.76
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libcap.so.2.76 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libcap.so.2
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[2]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libcap.so.2 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libcap.so
+make[2]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make install-shared-psx
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 include/sys/psx_syscall.h /var/tmp/portage/sys-libs/libcap-2.76/image/usr/include/sys
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0644 libpsx.pc /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/pkgconfig/libpsx.pc
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+install -m 0755 libpsx.so.2.76 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libpsx.so.2.76
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libpsx.so.2.76 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libpsx.so.2
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make[3]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+ln -sf libpsx.so.2 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/libpsx.so
+make[3]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/libcap'
+make -C pam_cap install
+make testlink
+make[2]: 'testlink' is up to date.
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/security
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+install -m 0755 pam_cap.so /var/tmp/portage/sys-libs/libcap-2.76/image/usr/lib64/security
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/pam_cap'
+make -C tests install
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/tests'
+nothing to install from tests
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/tests'
+make -C progs install
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+mkdir -p -m 0755 /var/tmp/portage/sys-libs/libcap-2.76/image/sbin
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+for p in getpcaps getcap setcap capsh ; do \
+	install -m 0755 $p /var/tmp/portage/sys-libs/libcap-2.76/image/sbin ; \
+done
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/progs'
+make -C doc install
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/doc'
+mkdir -p -m 755 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man1 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man3 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man5 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man7 /var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man8
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/doc'
+make[1]: Entering directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/doc'
+for man in \
+	/var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man1 capsh.1 \
+	/var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man3 cap_init.3 cap_free.3 cap_dup.3 cap_clear.3 cap_clear_flag.3 cap_get_flag.3 cap_set_flag.3 cap_fill.3 cap_fill_flag.3 cap_max_bits.3 cap_compare.3 cap_get_proc.3 cap_get_pid.3 cap_set_proc.3 cap_get_file.3 cap_get_fd.3 cap_set_file.3 cap_set_fd.3 cap_set_nsowner.3 cap_get_nsowner.3 cap_copy_ext.3 cap_size.3 cap_copy_int.3 cap_mode.3 cap_copy_int_check.3 cap_set_syscall.3 cap_from_text.3 cap_to_text.3 cap_from_name.3 cap_to_name.3 capsetp.3 capgetp.3 libcap.3 cap_get_bound.3 cap_drop_bound.3 cap_get_mode.3 cap_set_mode.3 cap_mode_name.3 cap_get_secbits.3 cap_set_secbits.3 cap_setuid.3 cap_setgroups.3 cap_launch.3 cap_func_launcher.3 cap_launcher_callback.3 cap_launcher_set_chroot.3 cap_launcher_set_mode.3 cap_launcher_setgroups.3 cap_launcher_setuid.3 cap_launcher_set_iab.3 cap_new_launcher.3 cap_iab.3 cap_iab_init.3 cap_iab_dup.3 cap_iab_compare.3 cap_iab_get_proc.3 cap_iab_get_pid.3 cap_iab_set_proc.3 cap_iab_to_text.3 cap_iab_from_text.3 cap_iab_get_vector.3 cap_iab_set_vector.3 cap_iab_fill.3 cap_proc_root.3 cap_prctl.3 cap_prctlw.3 psx_syscall.3 psx_syscall3.3 psx_syscall6.3 psx_set_sensitivity.3 psx_load_syscalls.3 __psx_syscall.3 libpsx.3 \
+	/var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man5 capability.conf.5 \
+	/var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man7 cap_text_formats.7 \
+	/var/tmp/portage/sys-libs/libcap-2.76/image/usr/share/man/man8 getcap.8 setcap.8 getpcaps.8 captree.8 pam_cap.8 \
+	; \
+do \
+	case $man in \
+	/*)	sub=$man ; continue ;; \
+	esac; \
+	install -m 644 $man $sub ; \
+done
+make[1]: Leaving directory '/var/tmp/portage/sys-libs/libcap-2.76/work/libcap-2.76-abi_x86_64.amd64/doc'
+&gt;&gt;&gt; Completed installing sys-libs/libcap-2.76 into /var/tmp/portage/sys-libs/libcap-2.76/image
+
+ <span class="ansi32">*</span> Final size of build directory: 4380 KiB (4.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   712 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /lib64/security/pam_cap.so
+   /usr/lib64/libcap.so.2.76
+   /usr/lib64/libpsx.so.2.76
+   /sbin/getpcaps
+   /sbin/getcap
+   /sbin/setcap
+   /sbin/capsh
+
+</pre>
+</body>
+
+</html>
