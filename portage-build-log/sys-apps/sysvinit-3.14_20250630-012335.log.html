@@ -1,0 +1,335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-apps/sysvinit-3.14:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: williamh@gentoo.org base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux nls
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking sysvinit-3.14.tar.xz to /var/tmp/portage/sys-apps/sysvinit-3.14/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-apps/sysvinit-3.14/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14 ...
+make -j2 -C src 
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -DINIT_MAIN -c -o init_utmp.o utmp.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o runlevellog.o runlevellog.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE   -c -o init.o init.c
+init.c: In function ‘read_inittab’:
+init.c:1406:41: warning: ‘__builtin_strncpy’ output may be truncated copying 8 bytes from a string of length 31 [-Wstringop-truncation]
+ 1406 |                                         strncpy(id, dev, sizeof(id));
+      |                                         ^
+init.c:1404:41: warning: ‘__builtin_strncpy’ output may be truncated copying 8 bytes from a string of length 28 [-Wstringop-truncation]
+ 1404 |                                         strncpy(id, dev+3, sizeof(id));
+      |                                         ^
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o halt.o halt.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o ifdown.o ifdown.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o hddown.o hddown.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o utmp.o utmp.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o shutdown.o shutdown.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o dowall.o dowall.c
+In file included from /usr/include/string.h:548,
+                 from dowall.c:30:
+In function ‘strncat’,
+    inlined from ‘wall’ at dowall.c:229:4:
+/usr/include/bits/string_fortified.h:149:10: warning: ‘__builtin___strncat_chk’ argument 2 declared attribute ‘nonstring’ [-Wstringop-overread]
+  149 |   return __builtin___strncat_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  150 |                                   __glibc_objsize (__dest));
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/utmp.h:29,
+                 from dowall.c:34:
+/usr/include/bits/utmp.h: In function ‘wall’:
+/usr/include/bits/utmp.h:62:8: note: argument ‘ut_line’ declared here
+   62 |   char ut_line[UT_LINESIZE]
+      |        ^~~~~~~
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o runlevel.o runlevel.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  killall5.c   -o killall5
+killall5.c: In function ‘check4nfs’:
+killall5.c:442:12: warning: ‘__builtin_strncpy’ output may be truncated copying 4096 bytes from a string of length 4096 [-Wstringop-truncation]
+  442 |            strncpy(real, curr, PATH_MAX);
+      |            ^
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o fstab-decode.o fstab-decode.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o bootlogd.o bootlogd.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -ansi -fomit-frame-pointer -W -Wall -Wunreachable-code -Wformat -Werror=format-security -D_XOPEN_SOURCE -D_GNU_SOURCE -DVERSION=\"3.14\"   -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE  -c -o readbootlog.o readbootlog.c
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  init.o init_utmp.o runlevellog.o    -o init
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  shutdown.o dowall.o utmp.o   -o shutdown
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  halt.o ifdown.o hddown.o utmp.o runlevellog.o   -o halt
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  runlevel.o runlevellog.o   -o runlevel
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  fstab-decode.o   -o fstab-decode
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  bootlogd.o  -lutil  -o bootlogd
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  readbootlog.o   -o readbootlog
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+ (517 entries)
+Discard de/fstab-decode.8 (13 of 20 strings; only 65% translated; need 80%).
+Discard de/halt.8 (29 of 43 strings; only 67.44% translated; need 80%).
+Discard de/init.8 (83 of 110 strings; only 75.45% translated; need 80%).
+Discard de/initctl.5 (17 of 42 strings; only 40.47% translated; need 80%).
+Discard de/pidof.8 (27 of 40 strings; only 67.5% translated; need 80%).
+Discard de/shutdown.8 (39 of 63 strings; only 61.9% translated; need 80%).
+Discard es/bootlogd.8 (19 of 35 strings; only 54.28% translated; need 80%).
+Discard es/fstab-decode.8 (10 of 20 strings; only 50% translated; need 80%).
+Discard es/halt.8 (22 of 43 strings; only 51.16% translated; need 80%).
+Discard es/init.8 (72 of 110 strings; only 65.45% translated; need 80%).
+Discard es/initctl.5 (14 of 42 strings; only 33.33% translated; need 80%).
+Discard es/killall5.8 (14 of 21 strings; only 66.66% translated; need 80%).
+Discard es/last.1 (36 of 50 strings; only 72% translated; need 80%).
+Discard es/logsave.8 (13 of 22 strings; only 59.09% translated; need 80%).
+Discard es/mesg.1 (15 of 22 strings; only 68.18% translated; need 80%).
+Discard es/mountpoint.1 (17 of 31 strings; only 54.83% translated; need 80%).
+Discard es/pidof.8 (23 of 40 strings; only 57.5% translated; need 80%).
+Discard es/readbootlog.1 (16 of 21 strings; only 76.19% translated; need 80%).
+Discard es/runlevel.8 (12 of 19 strings; only 63.15% translated; need 80%).
+Discard es/shutdown.8 (28 of 63 strings; only 44.44% translated; need 80%).
+Discard es/sulogin.8 (17 of 30 strings; only 56.66% translated; need 80%).
+Discard es/utmpdump.1 (16 of 28 strings; only 57.14% translated; need 80%).
+Discard es/wall.1 (14 of 20 strings; only 70% translated; need 80%).
+Discard fi/bootlogd.8 (18 of 35 strings; only 51.42% translated; need 80%).
+Discard fi/fstab-decode.8 (10 of 20 strings; only 50% translated; need 80%).
+Discard fi/halt.8 (19 of 43 strings; only 44.18% translated; need 80%).
+Discard fi/init.8 (39 of 110 strings; only 35.45% translated; need 80%).
+Discard fi/initctl.5 (14 of 42 strings; only 33.33% translated; need 80%).
+Discard fi/initscript.5 (13 of 24 strings; only 54.16% translated; need 80%).
+Discard fi/inittab.5 (26 of 75 strings; only 34.66% translated; need 80%).
+Discard fi/killall5.8 (12 of 21 strings; only 57.14% translated; need 80%).
+Discard fi/last.1 (25 of 50 strings; only 50% translated; need 80%).
+Discard fi/logsave.8 (12 of 22 strings; only 54.54% translated; need 80%).
+Discard fi/mesg.1 (15 of 22 strings; only 68.18% translated; need 80%).
+Discard fi/mountpoint.1 (17 of 31 strings; only 54.83% translated; need 80%).
+Discard fi/pidof.8 (20 of 40 strings; only 50% translated; need 80%).
+Discard fi/readbootlog.1 (16 of 21 strings; only 76.19% translated; need 80%).
+Discard fi/runlevel.8 (10 of 19 strings; only 52.63% translated; need 80%).
+Discard fi/shutdown.8 (26 of 63 strings; only 41.26% translated; need 80%).
+Discard fi/sulogin.8 (11 of 30 strings; only 36.66% translated; need 80%).
+Discard fi/utmpdump.1 (17 of 28 strings; only 60.71% translated; need 80%).
+Discard fi/wall.1 (13 of 20 strings; only 65% translated; need 80%).
+Discard fr/fstab-decode.8 (15 of 20 strings; only 75% translated; need 80%).
+Discard fr/halt.8 (20 of 43 strings; only 46.51% translated; need 80%).
+Discard fr/init.8 (83 of 110 strings; only 75.45% translated; need 80%).
+Discard fr/initctl.5 (14 of 42 strings; only 33.33% translated; need 80%).
+Discard fr/last.1 (35 of 50 strings; only 70% translated; need 80%).
+Discard fr/logsave.8 (13 of 22 strings; only 59.09% translated; need 80%).
+Discard fr/mesg.1 (14 of 22 strings; only 63.63% translated; need 80%).
+Discard fr/mountpoint.1 (18 of 31 strings; only 58.06% translated; need 80%).
+Discard fr/readbootlog.1 (15 of 21 strings; only 71.42% translated; need 80%).
+Discard fr/runlevel.8 (10 of 19 strings; only 52.63% translated; need 80%).
+Discard fr/shutdown.8 (25 of 63 strings; only 39.68% translated; need 80%).
+Discard fr/sulogin.8 (16 of 30 strings; only 53.33% translated; need 80%).
+Discard fr/utmpdump.1 (21 of 28 strings; only 75% translated; need 80%).
+Discard fr/wall.1 (12 of 20 strings; only 60% translated; need 80%).
+Discard hu/bootlogd.8 (16 of 35 strings; only 45.71% translated; need 80%).
+Discard hu/fstab-decode.8 (8 of 20 strings; only 40% translated; need 80%).
+Discard hu/halt.8 (17 of 43 strings; only 39.53% translated; need 80%).
+Discard hu/init.8 (9 of 110 strings; only 8.18% translated; need 80%).
+Discard hu/initctl.5 (8 of 42 strings; only 19.04% translated; need 80%).
+Discard hu/initscript.5 (9 of 24 strings; only 37.5% translated; need 80%).
+Discard hu/inittab.5 (57 of 75 strings; only 76% translated; need 80%).
+Discard hu/killall5.8 (9 of 21 strings; only 42.85% translated; need 80%).
+Discard hu/last.1 (14 of 50 strings; only 28% translated; need 80%).
+Discard hu/logsave.8 (8 of 22 strings; only 36.36% translated; need 80%).
+Discard hu/mesg.1 (12 of 22 strings; only 54.54% translated; need 80%).
+Discard hu/mountpoint.1 (12 of 31 strings; only 38.7% translated; need 80%).
+Discard hu/pidof.8 (14 of 40 strings; only 35% translated; need 80%).
+Discard hu/readbootlog.1 (9 of 21 strings; only 42.85% translated; need 80%).
+Discard hu/runlevel.8 (7 of 19 strings; only 36.84% translated; need 80%).
+Discard hu/shutdown.8 (14 of 63 strings; only 22.22% translated; need 80%).
+Discard hu/sulogin.8 (6 of 30 strings; only 20% translated; need 80%).
+Discard hu/utmpdump.1 (10 of 28 strings; only 35.71% translated; need 80%).
+Discard hu/wall.1 (10 of 20 strings; only 50% translated; need 80%).
+Discard id/bootlogd.8 (17 of 35 strings; only 48.57% translated; need 80%).
+Discard id/fstab-decode.8 (9 of 20 strings; only 45% translated; need 80%).
+Discard id/halt.8 (20 of 43 strings; only 46.51% translated; need 80%).
+Discard id/init.8 (35 of 110 strings; only 31.81% translated; need 80%).
+Discard id/initctl.5 (14 of 42 strings; only 33.33% translated; need 80%).
+Discard id/initscript.5 (13 of 24 strings; only 54.16% translated; need 80%).
+Discard id/inittab.5 (27 of 75 strings; only 36% translated; need 80%).
+Discard id/killall5.8 (12 of 21 strings; only 57.14% translated; need 80%).
+Discard id/last.1 (27 of 50 strings; only 54% translated; need 80%).
+Discard id/logsave.8 (12 of 22 strings; only 54.54% translated; need 80%).
+Discard id/mesg.1 (15 of 22 strings; only 68.18% translated; need 80%).
+Discard id/mountpoint.1 (17 of 31 strings; only 54.83% translated; need 80%).
+Discard id/pidof.8 (20 of 40 strings; only 50% translated; need 80%).
+Discard id/readbootlog.1 (16 of 21 strings; only 76.19% translated; need 80%).
+Discard id/runlevel.8 (10 of 19 strings; only 52.63% translated; need 80%).
+Discard id/shutdown.8 (27 of 63 strings; only 42.85% translated; need 80%).
+Discard id/sulogin.8 (11 of 30 strings; only 36.66% translated; need 80%).
+Discard id/utmpdump.1 (15 of 28 strings; only 53.57% translated; need 80%).
+Discard id/wall.1 (12 of 20 strings; only 60% translated; need 80%).
+Discard pl/bootlogd.8 (18 of 35 strings; only 51.42% translated; need 80%).
+Discard pl/fstab-decode.8 (9 of 20 strings; only 45% translated; need 80%).
+Discard pl/halt.8 (21 of 43 strings; only 48.83% translated; need 80%).
+Discard pl/init.8 (82 of 110 strings; only 74.54% translated; need 80%).
+Discard pl/initctl.5 (14 of 42 strings; only 33.33% translated; need 80%).
+Discard pl/last.1 (36 of 50 strings; only 72% translated; need 80%).
+Discard pl/logsave.8 (13 of 22 strings; only 59.09% translated; need 80%).
+Discard pl/mesg.1 (15 of 22 strings; only 68.18% translated; need 80%).
+Discard pl/mountpoint.1 (17 of 31 strings; only 54.83% translated; need 80%).
+Discard pl/pidof.8 (29 of 40 strings; only 72.5% translated; need 80%).
+Discard pl/readbootlog.1 (16 of 21 strings; only 76.19% translated; need 80%).
+Discard pl/runlevel.8 (12 of 19 strings; only 63.15% translated; need 80%).
+Discard pl/shutdown.8 (27 of 63 strings; only 42.85% translated; need 80%).
+Discard pl/sulogin.8 (17 of 30 strings; only 56.66% translated; need 80%).
+Discard pl/utmpdump.1 (16 of 28 strings; only 57.14% translated; need 80%).
+Discard pl/wall.1 (13 of 20 strings; only 65% translated; need 80%).
+Discard pt/halt.8 (32 of 43 strings; only 74.41% translated; need 80%).
+Discard pt/init.8 (86 of 110 strings; only 78.18% translated; need 80%).
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-apps/sysvinit-3.14
+
+&gt;&gt;&gt; Install sys-apps/sysvinit-3.14 into /var/tmp/portage/sys-apps/sysvinit-3.14/image
+make -j2 -C src install ROOT=/var/tmp/portage/sys-apps/sysvinit-3.14/image 
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image/bin/ /var/tmp/portage/sys-apps/sysvinit-3.14/image/sbin/
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/bin/
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+for i in ; do \
+		install -o root -g root -m 755 $i /var/tmp/portage/sys-apps/sysvinit-3.14/image/bin/ ; \
+	done
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+for i in init halt shutdown runlevel killall5 fstab-decode bootlogd; do \
+		install -o root -g root -m 755 $i /var/tmp/portage/sys-apps/sysvinit-3.14/image/sbin/ ; \
+	done
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+for i in readbootlog; do \
+		install -o root -g root -m 755 $i /var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/bin/ ; \
+	done
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+# install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image//etc/
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image//etc/inittab.d
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+# install -o root -g root -m 755 ../doc/initscript.sample /var/tmp/portage/sys-apps/sysvinit-3.14/image//etc/
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+ln -sf halt /var/tmp/portage/sys-apps/sysvinit-3.14/image/sbin/reboot
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+ln -sf halt /var/tmp/portage/sys-apps/sysvinit-3.14/image/sbin/poweroff
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+ln -sf init /var/tmp/portage/sys-apps/sysvinit-3.14/image/sbin/telinit
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/include/
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+install -o root -g root -m 644 initreq.h /var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/include/
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+for lang in  '' de es fi fr hu id pl pt; do \
+		install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/share/man/$lang/man1; \
+		install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/share/man/$lang/man5; \
+		install -m 755 -d  /var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/share/man/$lang/man8; \
+	done
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+for man in readbootlog.1 ; do \
+		install_target=/var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/share/man/${man%${man##*/}}man1/${man##*/} ; \
+		install -o root -g root -m 644 ../man/$man $install_target ; \
+		sed -i "1{ s@^\('\\\\\"\)[^\*-]*-\*- coding: [^[:blank:]]\+ -\*-@\1@; }" $install_target ; \
+	done
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+for man in initscript.5 inittab.5 initctl.5   ; do \
+		install_target=/var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/share/man/${man%${man##*/}}man5/${man##*/} ; \
+		install -o root -g root -m 644 ../man/$man $install_target ; \
+		sed -i "1{ s@^\('\\\\\"\)[^\*-]*-\*- coding: [^[:blank:]]\+ -\*-@\1@; }" $install_target ; \
+	done
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+make: Entering directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+for man in halt.8 init.8 killall5.8 poweroff.8 reboot.8 runlevel.8 shutdown.8 telinit.8 fstab-decode.8 bootlogd.8          ; do \
+		install_target=/var/tmp/portage/sys-apps/sysvinit-3.14/image//usr/share/man/${man%${man##*/}}man8/${man##*/} ; \
+		install -o root -g root -m 644 ../man/$man $install_target ; \
+		sed -i "1{ s@^\('\\\\\"\)[^\*-]*-\*- coding: [^[:blank:]]\+ -\*-@\1@; }" $install_target ; \
+	done
+make: Leaving directory '/var/tmp/portage/sys-apps/sysvinit-3.14/work/sysvinit-3.14/src'
+&gt;&gt;&gt; Completed installing sys-apps/sysvinit-3.14 into /var/tmp/portage/sys-apps/sysvinit-3.14/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2884 KiB (2.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   692 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /sbin/init
+   /sbin/halt
+   /sbin/shutdown
+   /sbin/runlevel
+   /sbin/killall5
+   /sbin/fstab-decode
+   /sbin/bootlogd
+   /usr/bin/readbootlog
+ <span class="ansi1 ansi32">*</span> The last/lastb/mesg/mountpoint/sulogin/utmpdump/wall tools have been moved to
+ <span class="ansi1 ansi32">*</span> sys-apps/util-linux. The pidof tool has been moved to sys-process/procps.
+
+</pre>
+</body>
+
+</html>
