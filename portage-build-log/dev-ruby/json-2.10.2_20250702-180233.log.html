@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-ruby/json-2.10.2:2
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: ruby@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux ruby_targets_ruby32 ruby_targets_ruby33
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+ <span class="ansi32">*</span> Running unpack phase for all
+&gt;&gt;&gt; Unpacking json-2.10.2.tar.gz to /var/tmp/portage/dev-ruby/json-2.10.2/work/all
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-ruby/json-2.10.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-ruby/json-2.10.2/work ...
+ <span class="ansi32">*</span> Running prepare phase for all
+ <span class="ansi32">*</span> Running prepare phase for all
+ <span class="ansi32">*</span> Running source copy phase for ruby32
+ <span class="ansi32">*</span> Running source copy phase for ruby33
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-ruby/json-2.10.2/work ...
+ <span class="ansi32">*</span> Running configure phase for ruby32
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for strnlen() in string.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+ <span class="ansi32">*</span> Running configure phase for ruby33
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for strnlen() in string.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-ruby/json-2.10.2/work ...
+ <span class="ansi32">*</span> Running compile phase for ruby32
+make -j2 V=1 -C ext/json/ext/parser 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.2.0/x86_64-linux -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -DHAVE_RB_ENC_INTERNED_STR -DHAVE_RB_HASH_NEW_CAPA -DHAVE_RB_HASH_BULK_INSERT -DHAVE_RB_CATEGORY_WARN -DHAVE_STRNLEN    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99  -o parser.o -c parser.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+rm -f parser.so
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+x86_64-pc-linux-gnu-gcc -shared -o parser.so parser.o -L. -L/usr/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby32  -lm -lpthread  -lc
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+make -j2 V=1 -C ext/json/ext/generator 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.2.0/x86_64-linux -I/usr/include/ruby-3.2.0/ruby/backward -I/usr/include/ruby-3.2.0 -I. -DJSON_GENERATOR    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99  -o generator.o -c generator.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+rm -f generator.so
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+x86_64-pc-linux-gnu-gcc -shared -o generator.so generator.o -L. -L/usr/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby32  -lm -lpthread  -lc
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+ <span class="ansi32">*</span> Running compile phase for ruby33
+make -j2 V=1 -C ext/json/ext/parser 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DHAVE_RB_ENC_INTERNED_STR -DHAVE_RB_HASH_NEW_CAPA -DHAVE_RB_HASH_BULK_INSERT -DHAVE_RB_CATEGORY_WARN -DHAVE_STRNLEN    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99  -o parser.o -c parser.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+rm -f parser.so
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+x86_64-pc-linux-gnu-gcc -shared -o parser.so parser.o -L. -L/usr/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+make -j2 V=1 -C ext/json/ext/generator 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+x86_64-pc-linux-gnu-gcc -I. -I/usr/include/ruby-3.3.0/x86_64-linux -I/usr/include/ruby-3.3.0/ruby/backward -I/usr/include/ruby-3.3.0 -I. -DJSON_GENERATOR    -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -std=c99  -o generator.o -c generator.c
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+rm -f generator.so
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+x86_64-pc-linux-gnu-gcc -shared -o generator.so generator.o -L. -L/usr/lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs    -lruby33  -lm -lpthread  -lc
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+ <span class="ansi32">*</span> Running compile phase for all
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-ruby/json-2.10.2
+
+&gt;&gt;&gt; Install dev-ruby/json-2.10.2 into /var/tmp/portage/dev-ruby/json-2.10.2/image
+ <span class="ansi32">*</span> Running install phase for ruby32
+ <span class="ansi32">*</span> installing extensions
+make -j2 V=1 sitearchdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2 sitelibdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/site_ruby/3.2.0 -C ext/json/ext/parser install 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+mkdir -p . /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+exit &gt; .sitearchdir.-.json.-.ext.time
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+/usr/bin/install -c -m 0755 parser.so /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/parser'
+make -j2 V=1 sitearchdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2 sitelibdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/site_ruby/3.2.0 -C ext/json/ext/generator install 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+mkdir -p . /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+exit &gt; .sitearchdir.-.json.-.ext.time
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+/usr/bin/install -c -m 0755 generator.so /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby32/json-2.10.2/ext/json/ext/generator'
+ <span class="ansi32">*</span> Running install phase for ruby33
+ <span class="ansi32">*</span> installing extensions
+make -j2 V=1 sitearchdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2 sitelibdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/site_ruby/3.3.0 -C ext/json/ext/parser install 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+mkdir -p . /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+exit &gt; .sitearchdir.-.json.-.ext.time
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+/usr/bin/install -c -m 0755 parser.so /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/parser'
+make -j2 V=1 sitearchdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2 sitelibdir=/var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/site_ruby/3.3.0 -C ext/json/ext/generator install 
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+mkdir -p . /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+exit &gt; .sitearchdir.-.json.-.ext.time
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+make: Entering directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+/usr/bin/install -c -m 0755 generator.so /var/tmp/portage/dev-ruby/json-2.10.2/image/usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2/json/ext
+make: Leaving directory '/var/tmp/portage/dev-ruby/json-2.10.2/work/ruby33/json-2.10.2/ext/json/ext/generator'
+ <span class="ansi32">*</span> Running install phase for all
+ <span class="ansi32">*</span> Running check install phase for ruby32
+ <span class="ansi32">*</span> Running check install phase for ruby33
+&gt;&gt;&gt; Completed installing dev-ruby/json-2.10.2 into /var/tmp/portage/dev-ruby/json-2.10.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 6488 KiB (6.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   892 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/ruby/gems/3.2.0/gems/json-2.10.2/lib/json/ext/generator.so
+   /usr/lib64/ruby/gems/3.2.0/gems/json-2.10.2/lib/json/ext/parser.so
+   /usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2/json/ext/parser.so
+   /usr/lib64/ruby/gems/3.3.0/gems/json-2.10.2/lib/json/ext/parser.so
+   /usr/lib64/ruby/gems/3.2.0/extensions/x86_64-linux/3.2.0/json-2.10.2/json/ext/generator.so
+   /usr/lib64/ruby/gems/3.3.0/gems/json-2.10.2/lib/json/ext/generator.so
+   /usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2/json/ext/parser.so
+   /usr/lib64/ruby/gems/3.3.0/extensions/x86_64-linux/3.3.0/json-2.10.2/json/ext/generator.so
+
+</pre>
+</body>
+
+</html>

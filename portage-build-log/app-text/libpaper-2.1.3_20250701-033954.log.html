@@ -1,0 +1,2045 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-text/libpaper-2.1.3:0/2
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: printing@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking libpaper-2.1.3.tar.gz to /var/tmp/portage/app-text/libpaper-2.1.3/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-text/libpaper-2.1.3/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3 ...
+ * econf: updating libpaper-2.1.3/build-aux/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating libpaper-2.1.3/build-aux/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/libpaper-2.1.3 --htmldir=/usr/share/doc/libpaper-2.1.3/html --with-sysroot=/ --libdir=/usr/lib64 --enable-relocatable
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... (cached) -Werror=implicit-function-declaration
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for limits.h... yes
+checking for stdbool.h... yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for error.h... yes
+checking for getopt.h... yes
+checking for sys/cdefs.h... yes
+checking for threads.h... yes
+checking for xlocale.h... no
+checking for sys/mman.h... yes
+checking for sys/time.h... yes
+checking for stdckdint.h... yes
+checking for features.h... yes
+checking for crtdefs.h... no
+checking for wctype.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking the archiver (x86_64-pc-linux-gnu-ar) interface... ar
+checking for x86_64-pc-linux-gnu-ar... (cached) x86_64-pc-linux-gnu-ar
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking for x86_64-pc-linux-gnu-gcc option to enable large file support... none needed
+checking for x86_64-pc-linux-gnu-ar... (cached) x86_64-pc-linux-gnu-ar
+checking the archiver (x86_64-pc-linux-gnu-ar) interface... (cached) ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... (cached) x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... (cached) x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether ctype.h defines __header_inline... no
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking whether limits.h has WORD_BIT, BOOL_WIDTH etc.... yes
+checking whether malloc is ptrdiff_t safe... yes
+checking whether malloc, realloc, calloc set errno on failure... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether to activate relocatable installation... yes
+checking for wchar_t... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking for wint_t... yes
+checking whether wint_t is large enough... yes
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking for C/C++ restrict keyword... __restrict__
+checking whether ecvt is declared... yes
+checking whether fcvt is declared... yes
+checking whether gcvt is declared... yes
+checking for pid_t... yes
+checking for mode_t... yes
+checking whether execvpe is declared... yes
+checking for C compiler option to allow warnings... -Wno-error
+checking whether // is distinct from /... no
+checking for mempcpy... yes
+checking for ssize_t... yes
+checking for bool, true, false... no
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether lstat correctly handles trailing slash... yes
+checking for canonicalize_file_name... yes
+checking for realpath... yes
+checking for lstat... yes
+checking for _set_invalid_parameter_handler... no
+checking for fcntl... yes
+checking for symlink... yes
+checking for getdtablesize... yes
+checking for getexecname... no
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mprotect... yes
+checking for readlink... yes
+checking for setenv... yes
+checking for vasnprintf... no
+checking for snprintf... yes
+checking for iswcntrl... yes
+checking whether realpath works... yes
+checking for faccessat... yes
+checking for getcwd... yes
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking for error... yes
+checking whether error_at_line is declared... yes
+checking for error_at_line... yes
+checking for working error function... yes
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking for working fcntl.h... yes
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking whether getdtablesize is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking whether POSIX threads API is available... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... yes
+checking whether setlocale (category, NULL) is multithread-safe... yes
+checking for nl_langinfo and CODESET... yes
+checking whether locale.h defines locale_t... yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether struct lconv is properly defined... yes
+checking whether malloc (0) returns nonnull... yes
+checking for mbstate_t... yes
+checking for a traditional japanese locale... ja_JP
+checking for a french Unicode locale... fr_FR.UTF-8
+checking for a transitional chinese locale... zh_CN.GB18030
+checking for inline... inline
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether &lt;limits.h&gt; defines MIN and MAX... no
+checking whether &lt;sys/param.h&gt; defines MIN and MAX... yes
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking for ld... /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library path variable... LD_LIBRARY_PATH
+checking for mach-o/dyld.h... no
+checking for _NSGetExecutablePath... no
+checking whether setenv is declared... yes
+checking whether fcloseall is declared... yes
+checking whether getw is declared... yes
+checking whether putw is declared... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking whether strerror(0) succeeds... yes
+checking for struct timespec in &lt;time.h&gt;... yes
+checking for TIME_UTC in &lt;time.h&gt;... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for intmax_t... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking whether snprintf returns a byte count as in C99... yes
+checking whether snprintf truncates the result as in C99... yes
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... yes
+checking whether _snprintf is declared... no
+checking whether &lt;wchar.h&gt; uses 'inline' correctly... yes
+checking whether wcsdup is declared... yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking for alignas and alignof... yes, &lt;stdalign.h&gt; macros
+checking for alloca as a compiler built-in... yes
+checking for static_assert... yes, an &lt;assert.h&gt; macro
+checking for __builtin_expect... yes
+checking whether calloc (0, n) and calloc (n, 0) return nonnull... yes
+checking for readlinkat... yes
+checking whether // is distinct from /... (cached) no
+checking whether dup2 works... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking whether conversion from 'int' to 'long double' works... yes
+checking whether free is known to preserve errno... yes
+checking whether getdtablesize works... yes
+checking for getprogname... no
+checking whether program_invocation_name is declared... yes
+checking whether program_invocation_short_name is declared... yes
+checking whether __argv is declared... no
+checking whether the compiler supports the __inline keyword... yes
+checking whether malloc (0) returns nonnull... (cached) yes
+checking whether mbrtowc handles incomplete characters... yes
+checking whether mbrtowc works as well as mbtowc... yes
+checking whether mbrtowc handles a NULL pwc argument... yes
+checking whether mbrtowc handles a NULL string argument... yes
+checking whether mbrtowc has a correct return value... yes
+checking whether mbrtowc returns 0 when parsing a NUL character... yes
+checking whether mbrtowc stores incomplete characters... no
+checking whether mbrtowc works on empty input... yes
+checking whether the C locale is free of encoding errors... no
+checking whether mbrtowc handles incomplete characters... (cached) yes
+checking whether mbrtowc works as well as mbtowc... (cached) yes
+checking for mempcpy... (cached) yes
+checking whether open recognizes a trailing slash... yes
+checking whether program_invocation_name is declared... (cached) yes
+checking whether program_invocation_short_name is declared... (cached) yes
+checking for rawmemchr... yes
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking whether readlink truncates results correctly... yes
+checking whether realloc (0, 0) returns nonnull... yes
+checking for reallocarray... yes
+checking for faccessat... (cached) yes
+checking for getcwd... (cached) yes
+checking whether free is known to preserve errno... (cached) yes
+checking for mempcpy... (cached) yes
+checking for rawmemchr... (cached) yes
+checking for search.h... yes
+checking for tsearch... yes
+checking whether setlocale (LC_ALL, NULL) is multithread-safe... (cached) yes
+checking whether setlocale (category, NULL) is multithread-safe... (cached) yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for ssize_t... (cached) yes
+checking whether stat handles trailing slashes on files... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for va_copy... yes
+checking for bool, true, false... (cached) no
+checking for working strerror function... yes
+checking for variable-length arrays... yes
+checking for ptrdiff_t... yes
+checking for vasprintf... yes
+checking for stdint.h... (cached) yes
+checking for gnu_get_libc_version... yes
+checking for native Win32... no
+checking for perl... /usr/bin/perl
+checking for help2man... /usr/bin/help2man
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/libpaper.c.in
+config.status: creating lib/libpaper.rc
+config.status: creating libgnu/Makefile
+config.status: creating src/Makefile
+config.status: creating src/libgnu/Makefile
+config.status: creating man/Makefile
+config.status: creating tests/Makefile
+config.status: creating build-aux/x-to-1
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3 ...
+make -j2 
+make  all-recursive
+Making all in libgnu
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LIMITS_H''@|&lt;limits.h&gt;|g' \
+      ./limits.in.h &gt; limits.h-t
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+mv limits.h-t limits.h
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+/bin/mkdir -p 'sys'
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TYPES_H''@|&lt;sys/types.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's|@''WINDOWS_STAT_INODES''@|0|g' \
+      ./sys_types.in.h &gt; sys/types.h-t
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+mv sys/types.h-t sys/types.h
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDLIB_H''@|&lt;stdlib.h&gt;|g' \
+      -e 's/@''GNULIB__EXIT''@/0/g' \
+      -e 's/@''GNULIB_ALIGNED_ALLOC''@/0/g' \
+      -e 's/@''GNULIB_ATOLL''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_GNU''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_POSIX''@/0/g' \
+      -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/0/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/0/g' \
+      -e 's/@''GNULIB_GETLOADAVG''@/0/g' \
+      -e 's/@''GNULIB_GETPROGNAME''@/0/g' \
+      -e 's/@''GNULIB_GETSUBOPT''@/0/g' \
+      -e 's/@''GNULIB_GRANTPT''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_GNU''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_MBTOWC''@/0/g' \
+      -e 's/@''GNULIB_MKDTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_POSIX_MEMALIGN''@/0/g' \
+      -e 's/@''GNULIB_POSIX_OPENPT''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME_R''@/0/g' \
+      -e 's/@''GNULIB_PUTENV''@/0/g' \
+      -e 's/@''GNULIB_QSORT_R''@/0/g' \
+      -e 's/@''GNULIB_RANDOM''@/0/g' \
+      -e 's/@''GNULIB_RANDOM_R''@/0/g' \
+      -e 's/@''GNULIB_REALLOC_GNU''@/0/g' \
+      -e 's/@''GNULIB_REALLOC_POSIX''@/0/g' \
+      -e 's/@''GNULIB_REALLOCARRAY''@/0/g' \
+      -e 's/@''GNULIB_REALPATH''@/0/g' \
+      -e 's/@''GNULIB_RPMATCH''@/0/g' \
+      -e 's/@''GNULIB_SECURE_GETENV''@/0/g' \
+      -e 's/@''GNULIB_SETENV''@/0/g' \
+      -e 's/@''GNULIB_STRTOD''@/0/g' \
+      -e 's/@''GNULIB_STRTOL''@/0/g' \
+      -e 's/@''GNULIB_STRTOLD''@/0/g' \
+      -e 's/@''GNULIB_STRTOLL''@/0/g' \
+      -e 's/@''GNULIB_STRTOUL''@/0/g' \
+      -e 's/@''GNULIB_STRTOULL''@/0/g' \
+      -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g' \
+      -e 's/@''GNULIB_UNLOCKPT''@/0/g' \
+      -e 's/@''GNULIB_UNSETENV''@/0/g' \
+      -e 's/@''GNULIB_WCTOMB''@/0/g' \
+      -e 's/@''GNULIB_MDA_ECVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_FCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_GCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_MKTEMP''@/1/g' \
+      -e 's/@''GNULIB_MDA_PUTENV''@/1/g' \
+      &lt; ./stdlib.in.h | \
+  sed -e 's|@''HAVE__EXIT''@|1|g' \
+      -e 's|@''HAVE_ALIGNED_ALLOC''@|1|g' \
+      -e 's|@''HAVE_ATOLL''@|1|g' \
+      -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|1|g' \
+      -e 's|@''HAVE_DECL_ECVT''@|1|g' \
+      -e 's|@''HAVE_DECL_FCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g' \
+      -e 's|@''HAVE_GETPROGNAME''@|0|g' \
+      -e 's|@''HAVE_GETSUBOPT''@|1|g' \
+      -e 's|@''HAVE_GRANTPT''@|1|g' \
+      -e 's|@''HAVE_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_MBTOWC''@|1|g' \
+      -e 's|@''HAVE_MKDTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMPS''@|1|g' \
+      -e 's|@''HAVE_MKSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKSTEMPS''@|1|g' \
+      -e 's|@''HAVE_POSIX_MEMALIGN''@|1|g' \
+      -e 's|@''HAVE_POSIX_OPENPT''@|1|g' \
+      -e 's|@''HAVE_PTSNAME''@|1|g' \
+      -e 's|@''HAVE_PTSNAME_R''@|1|g' \
+      -e 's|@''HAVE_QSORT_R''@|1|g' \
+      -e 's|@''HAVE_RANDOM''@|1|g' \
+      -e 's|@''HAVE_RANDOM_H''@|1|g' \
+      -e 's|@''HAVE_RANDOM_R''@|1|g' \
+      -e 's|@''HAVE_REALLOCARRAY''@|1|g' \
+      -e 's|@''HAVE_REALPATH''@|1|g' \
+      -e 's|@''HAVE_RPMATCH''@|1|g' \
+      -e 's|@''HAVE_SECURE_GETENV''@|1|g' \
+      -e 's|@''HAVE_DECL_SETENV''@|1|g' \
+      -e 's|@''HAVE_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_STRTOD''@|1|g' \
+      -e 's|@''HAVE_STRTOL''@|1|g' \
+      -e 's|@''HAVE_STRTOLD''@|1|g' \
+      -e 's|@''HAVE_STRTOLL''@|1|g' \
+      -e 's|@''HAVE_STRTOUL''@|1|g' \
+      -e 's|@''HAVE_STRTOULL''@|1|g' \
+      -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g' \
+      -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g' \
+      -e 's|@''HAVE_UNLOCKPT''@|1|g' \
+      -e 's|@''HAVE_DECL_UNSETENV''@|1|g' \
+      -e 's|@''REPLACE__EXIT''@|0|g' \
+      -e 's|@''REPLACE_ALIGNED_ALLOC''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|0|g' \
+      -e 's|@''REPLACE_GETLOADAVG''@|0|g' \
+      -e 's|@''REPLACE_GETPROGNAME''@|0|g' \
+      -e 's|@''REPLACE_GETSUBOPT''@|0|g' \
+      -e 's|@''REPLACE_INITSTATE''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_MBTOWC''@|0|g' \
+      -e 's|@''REPLACE_MKOSTEMP''@|0|g' \
+      -e 's|@''REPLACE_MKOSTEMPS''@|0|g' \
+      -e 's|@''REPLACE_MKSTEMP''@|0|g' \
+      -e 's|@''REPLACE_POSIX_MEMALIGN''@|0|g' \
+      -e 's|@''REPLACE_POSIX_OPENPT''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME_R''@|0|g' \
+      -e 's|@''REPLACE_PUTENV''@|0|g' \
+      -e 's|@''REPLACE_QSORT_R''@|0|g' \
+      -e 's|@''REPLACE_RANDOM''@|0|g' \
+      -e 's|@''REPLACE_RANDOM_R''@|0|g' \
+      -e 's|@''REPLACE_REALLOC_FOR_REALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_REALLOC_FOR_REALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_REALLOCARRAY''@|0|g' \
+      -e 's|@''REPLACE_REALPATH''@|0|g' \
+      -e 's|@''REPLACE_SETENV''@|0|g' \
+      -e 's|@''REPLACE_SETSTATE''@|0|g' \
+      -e 's|@''REPLACE_STRTOD''@|0|g' \
+      -e 's|@''REPLACE_STRTOL''@|0|g' \
+      -e 's|@''REPLACE_STRTOLD''@|0|g' \
+      -e 's|@''REPLACE_STRTOLL''@|0|g' \
+      -e 's|@''REPLACE_STRTOUL''@|0|g' \
+      -e 's|@''REPLACE_STRTOULL''@|0|g' \
+      -e 's|@''REPLACE_UNSETENV''@|0|g' \
+      -e 's|@''REPLACE_WCTOMB''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _Noreturn/r ./_Noreturn.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; stdlib.h-t
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+mv stdlib.h-t stdlib.h
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_UNISTD_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_UNISTD_H''@|&lt;unistd.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's/@''GNULIB_ACCESS''@/0/g' \
+      -e 's/@''GNULIB_CHDIR''@/0/g' \
+      -e 's/@''GNULIB_CHOWN''@/0/g' \
+      -e 's/@''GNULIB_CLOSE''@/0/g' \
+      -e 's/@''GNULIB_COPY_FILE_RANGE''@/0/g' \
+      -e 's/@''GNULIB_DUP''@/0/g' \
+      -e 's/@''GNULIB_DUP2''@/0/g' \
+      -e 's/@''GNULIB_DUP3''@/0/g' \
+      -e 's/@''GNULIB_ENVIRON''@/0/g' \
+      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+      -e 's/@''GNULIB_EXECL''@/0/g' \
+      -e 's/@''GNULIB_EXECLE''@/0/g' \
+      -e 's/@''GNULIB_EXECLP''@/0/g' \
+      -e 's/@''GNULIB_EXECV''@/0/g' \
+      -e 's/@''GNULIB_EXECVE''@/0/g' \
+      -e 's/@''GNULIB_EXECVP''@/0/g' \
+      -e 's/@''GNULIB_EXECVPE''@/0/g' \
+      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+      -e 's/@''GNULIB_FDATASYNC''@/0/g' \
+      -e 's/@''GNULIB_FSYNC''@/0/g' \
+      -e 's/@''GNULIB_FTRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_GETCWD''@/0/g' \
+      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+      -e 's/@''GNULIB_GETDTABLESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETENTROPY''@/0/g' \
+      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+      -e 's/@''GNULIB_GETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+      -e 's/@''GNULIB_GETOPT_POSIX''@/0/g' \
+      -e 's/@''GNULIB_GETPAGESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETPASS''@/0/g' \
+      -e 's/@''GNULIB_GETPASS_GNU''@/0/g' \
+      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+      -e 's/@''GNULIB_ISATTY''@/0/g' \
+      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+      -e 's/@''GNULIB_LINK''@/0/g' \
+      -e 's/@''GNULIB_LINKAT''@/0/g' \
+      -e 's/@''GNULIB_LSEEK''@/0/g' \
+      -e 's/@''GNULIB_PIPE''@/0/g' \
+      -e 's/@''GNULIB_PIPE2''@/0/g' \
+      -e 's/@''GNULIB_PREAD''@/0/g' \
+      -e 's/@''GNULIB_PWRITE''@/0/g' \
+      -e 's/@''GNULIB_READ''@/0/g' \
+      -e 's/@''GNULIB_READLINK''@/0/g' \
+      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+      -e 's/@''GNULIB_RMDIR''@/0/g' \
+      -e 's/@''GNULIB_SETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_SLEEP''@/0/g' \
+      -e 's/@''GNULIB_SYMLINK''@/0/g' \
+      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+      -e 's/@''GNULIB_TRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/00/g' \
+      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_UNLINK''@/0/g' \
+      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+      -e 's/@''GNULIB_USLEEP''@/0/g' \
+      -e 's/@''GNULIB_WRITE''@/0/g' \
+      -e 's/@''GNULIB_MDA_ACCESS''@/1/g' \
+      -e 's/@''GNULIB_MDA_CHDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP2''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECL''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECV''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVPE''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETCWD''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETPID''@/1/g' \
+      -e 's/@''GNULIB_MDA_ISATTY''@/1/g' \
+      -e 's/@''GNULIB_MDA_LSEEK''@/1/g' \
+      -e 's/@''GNULIB_MDA_READ''@/1/g' \
+      -e 's/@''GNULIB_MDA_RMDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_SWAB''@/1/g' \
+      -e 's/@''GNULIB_MDA_UNLINK''@/1/g' \
+      -e 's/@''GNULIB_MDA_WRITE''@/1/g' \
+      &lt; ./unistd.in.h | \
+  sed -e 's|@''HAVE_CHOWN''@|1|g' \
+      -e 's|@''HAVE_COPY_FILE_RANGE''@|1|g' \
+      -e 's|@''HAVE_DUP3''@|1|g' \
+      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+      -e 's|@''HAVE_EXECVPE''@|1|g' \
+      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+      -e 's|@''HAVE_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+      -e 's|@''HAVE_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_FSYNC''@|1|g' \
+      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+      -e 's|@''HAVE_GETDTABLESIZE''@|1|g' \
+      -e 's|@''HAVE_GETENTROPY''@|1|g' \
+      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_GETPASS''@|1|g' \
+      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+      -e 's|@''HAVE_LCHOWN''@|1|g' \
+      -e 's|@''HAVE_LINK''@|1|g' \
+      -e 's|@''HAVE_LINKAT''@|1|g' \
+      -e 's|@''HAVE_PIPE''@|1|g' \
+      -e 's|@''HAVE_PIPE2''@|1|g' \
+      -e 's|@''HAVE_PREAD''@|1|g' \
+      -e 's|@''HAVE_PWRITE''@|1|g' \
+      -e 's|@''HAVE_READLINK''@|1|g' \
+      -e 's|@''HAVE_READLINKAT''@|1|g' \
+      -e 's|@''HAVE_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_SLEEP''@|1|g' \
+      -e 's|@''HAVE_SYMLINK''@|1|g' \
+      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+      -e 's|@''HAVE_USLEEP''@|1|g' \
+      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+      -e 's|@''HAVE_DECL_EXECVPE''@|1|g' \
+      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_DECL_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+      -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNCATE''@|1|g' \
+      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+      -e 's|@''HAVE_OS_H''@|0|g' \
+      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+  | \
+  sed -e 's|@''REPLACE_ACCESS''@|0|g' \
+      -e 's|@''REPLACE_CHOWN''@|0|g' \
+      -e 's|@''REPLACE_CLOSE''@|0|g' \
+      -e 's|@''REPLACE_COPY_FILE_RANGE''@|0|g' \
+      -e 's|@''REPLACE_DUP''@|0|g' \
+      -e 's|@''REPLACE_DUP2''@|0|g' \
+      -e 's|@''REPLACE_DUP3''@|0|g' \
+      -e 's|@''REPLACE_EXECL''@|0|g' \
+      -e 's|@''REPLACE_EXECLE''@|0|g' \
+      -e 's|@''REPLACE_EXECLP''@|0|g' \
+      -e 's|@''REPLACE_EXECV''@|0|g' \
+      -e 's|@''REPLACE_EXECVE''@|0|g' \
+      -e 's|@''REPLACE_EXECVP''@|0|g' \
+      -e 's|@''REPLACE_EXECVPE''@|0|g' \
+      -e 's|@''REPLACE_FACCESSAT''@|0|g' \
+      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+      -e 's|@''REPLACE_FDATASYNC''@|0|g' \
+      -e 's|@''REPLACE_FTRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_GETCWD''@|0|g' \
+      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+      -e 's|@''REPLACE_GETDTABLESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETENTROPY''@|0|g' \
+      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETPASS''@|0|g' \
+      -e 's|@''REPLACE_GETPASS_FOR_GETPASS_GNU''@|0|g' \
+      -e 's|@''REPLACE_ISATTY''@|0|g' \
+      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+      -e 's|@''REPLACE_LINK''@|0|g' \
+      -e 's|@''REPLACE_LINKAT''@|0|g' \
+      -e 's|@''REPLACE_LSEEK''@|0|g' \
+      -e 's|@''REPLACE_PIPE2''@|0|g' \
+      -e 's|@''REPLACE_PREAD''@|0|g' \
+      -e 's|@''REPLACE_PWRITE''@|0|g' \
+      -e 's|@''REPLACE_READ''@|0|g' \
+      -e 's|@''REPLACE_READLINK''@|0|g' \
+      -e 's|@''REPLACE_READLINKAT''@|0|g' \
+      -e 's|@''REPLACE_RMDIR''@|0|g' \
+      -e 's|@''REPLACE_SETHOSTNAME''@|0|g' \
+      -e 's|@''REPLACE_SLEEP''@|0|g' \
+      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+      -e 's|@''REPLACE_SYMLINKAT''@|0|g' \
+      -e 's|@''REPLACE_TRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+      -e 's|@''REPLACE_UNLINK''@|0|g' \
+      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+      -e 's|@''REPLACE_USLEEP''@|0|g' \
+      -e 's|@''REPLACE_WRITE''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_SYS_RANDOM_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; unistd.h-t
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+mv unistd.h-t unistd.h
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make  all-recursive
+make[4]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I..  -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnu_la-basename-lgpl.lo `test -f 'basename-lgpl.c' || echo './'`basename-lgpl.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I.. -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c basename-lgpl.c  -fPIC -DPIC -o .libs/libgnu_la-basename-lgpl.o
+make[4]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[4]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I..  -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnu_la-filenamecat-lgpl.lo `test -f 'filenamecat-lgpl.c' || echo './'`filenamecat-lgpl.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I.. -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c filenamecat-lgpl.c  -fPIC -DPIC -o .libs/libgnu_la-filenamecat-lgpl.o
+make[4]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[4]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I..  -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnu_la-unistd.lo `test -f 'unistd.c' || echo './'`unistd.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I.. -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c unistd.c  -fPIC -DPIC -o .libs/libgnu_la-unistd.o
+make[4]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[4]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I..  -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o relocatable.lo relocatable.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DNO_XMALLOC -I. -I.. -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c relocatable.c  -fPIC -DPIC -o .libs/relocatable.o
+make[4]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+make[4]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -no-undefined -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libgnu.la  libgnu_la-basename-lgpl.lo libgnu_la-filenamecat-lgpl.lo libgnu_la-unistd.lo relocatable.lo 
+libtool: link: x86_64-pc-linux-gnu-ar cr .libs/libgnu.a .libs/libgnu_la-basename-lgpl.o .libs/libgnu_la-filenamecat-lgpl.o .libs/libgnu_la-unistd.o .libs/relocatable.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib .libs/libgnu.a
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libgnu.la" &amp;&amp; ln -s "../libgnu.la" "libgnu.la" )
+make[4]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/libgnu'
+Making all in lib
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+sed -e 's|$[{]prefix[}]|/usr|g' ./libpaper.c.in &gt; libpaper.c-t &amp;&amp; mv libpaper.c-t libpaper.c
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -I../libgnu -I../libgnu -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE -DREAL_INSTALLPREFIX="\"/usr\""   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libpaper.lo libpaper.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -I../libgnu -I../libgnu -DIN_LIBRARY -DENABLE_COSTLY_RELOCATABLE -DREAL_INSTALLPREFIX=\"/usr\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c libpaper.c  -fPIC -DPIC -o .libs/libpaper.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -no-undefined -export-symbols-regex '^paper.*|^defaultpapername$|^systempapername$'  -version-info 3:3:1 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libpaper.la -rpath /usr/lib64 libpaper.lo  ../libgnu/libgnu.la  
+libtool: link: /usr/bin/x86_64-pc-linux-gnu-nm -B  .libs/libpaper.o   ../libgnu/.libs/libgnu.a | /bin/sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | /bin/sed '/ __gnu_lto/d' | /bin/sed 's/.* //' | sort | uniq &gt; .libs/libpaper.exp
+libtool: link: /bin/grep -E -e "^paper.*|^defaultpapername$|^systempapername$" ".libs/libpaper.exp" &gt; ".libs/libpaper.expT"
+libtool: link: mv -f ".libs/libpaper.expT" ".libs/libpaper.exp"
+libtool: link: echo "{ global:" &gt; .libs/libpaper.ver
+libtool: link:  cat .libs/libpaper.exp | /bin/sed -e "s/\(.*\)/\1;/" &gt;&gt; .libs/libpaper.ver
+libtool: link:  echo "local: *; };" &gt;&gt; .libs/libpaper.ver
+libtool: link:  x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libpaper.o  -Wl,--whole-archive ../libgnu/.libs/libgnu.a -Wl,--no-whole-archive   -O3 -march=native -mtune=native -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libpaper.so.2 -Wl,-version-script -Wl,.libs/libpaper.ver -o .libs/libpaper.so.2.1.3
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libpaper.so.2" &amp;&amp; ln -s "libpaper.so.2.1.3" "libpaper.so.2")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libpaper.so" &amp;&amp; ln -s "libpaper.so.2.1.3" "libpaper.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libpaper.la" &amp;&amp; ln -s "../libpaper.la" "libpaper.la" )
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+Making all in src
+Making all in libgnu
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+  -e 's|@''HAVE_ALLOCA_H''@|1|g' \
+  ./alloca.in.h &gt; alloca.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv alloca.h-t alloca.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/mkdir -p 'malloc'
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|__always_inline|inline _GL_ATTRIBUTE_ALWAYS_INLINE|g' \
+      -e 's|__glibc_likely|_GL_LIKELY|g' \
+      -e 's|__glibc_unlikely|_GL_UNLIKELY|g' \
+      -e '/libc_hidden_proto/d' \
+      ./malloc/scratch_buffer.h &gt; malloc/scratch_buffer.gl.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_FCNTL_H''@|&lt;fcntl.h&gt;|g' \
+      -e 's/@''GNULIB_CREAT''@/0/g' \
+      -e 's/@''GNULIB_FCNTL''@/1/g' \
+      -e 's/@''GNULIB_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_OPEN''@/1/g' \
+      -e 's/@''GNULIB_OPENAT''@/0/g' \
+      -e 's/@''GNULIB_MDA_CREAT''@/1/g' \
+      -e 's/@''GNULIB_MDA_OPEN''@/1/g' \
+      -e 's|@''HAVE_FCNTL''@|1|g' \
+      -e 's|@''HAVE_OPENAT''@|1|g' \
+      -e 's|@''REPLACE_CREAT''@|0|g' \
+      -e 's|@''REPLACE_FCNTL''@|1|g' \
+      -e 's|@''REPLACE_OPEN''@|0|g' \
+      -e 's|@''REPLACE_OPENAT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./fcntl.in.h &gt; fcntl.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv fcntl.h-t fcntl.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv malloc/scratch_buffer.gl.h-t malloc/scratch_buffer.gl.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's/@''HAVE_INTTYPES_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_INTTYPES_H''@|&lt;inttypes.h&gt;|g' \
+      -e 's/@''APPLE_UNIVERSAL_BUILD''@/0/g' \
+      -e 's/@''PRIPTR_PREFIX''@/__PRIPTR_PREFIX/g' \
+      -e 's/@''GNULIB_IMAXABS''@/0/g' \
+      -e 's/@''GNULIB_IMAXDIV''@/0/g' \
+      -e 's/@''GNULIB_STRTOIMAX''@/0/g' \
+      -e 's/@''GNULIB_STRTOUMAX''@/0/g' \
+      -e 's/@''HAVE_DECL_IMAXABS''@/1/g' \
+      -e 's/@''HAVE_DECL_IMAXDIV''@/1/g' \
+      -e 's/@''HAVE_DECL_STRTOIMAX''@/1/g' \
+      -e 's/@''HAVE_DECL_STRTOUMAX''@/1/g' \
+      -e 's/@''HAVE_IMAXDIV_T''@/1/g' \
+      -e 's/@''REPLACE_IMAXABS''@/0/g' \
+      -e 's/@''REPLACE_IMAXDIV''@/0/g' \
+      -e 's/@''REPLACE_STRTOIMAX''@/0/g' \
+      -e 's/@''REPLACE_STRTOUMAX''@/0/g' \
+      -e 's/@''INT32_MAX_LT_INTMAX_MAX''@/1/g' \
+      -e 's/@''INT64_MAX_EQ_LONG_MAX''@/defined _LP64/g' \
+      -e 's/@''UINT32_MAX_LT_UINTMAX_MAX''@/1/g' \
+      -e 's/@''UINT64_MAX_EQ_ULONG_MAX''@/defined _LP64/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./inttypes.in.h &gt; inttypes.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv inttypes.h-t inttypes.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LIMITS_H''@|&lt;limits.h&gt;|g' \
+      ./limits.in.h &gt; limits.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv limits.h-t limits.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LOCALE_H''@|&lt;locale.h&gt;|g' \
+      -e 's/@''GNULIB_LOCALECONV''@/0/g' \
+      -e 's/@''GNULIB_SETLOCALE''@/0/g' \
+      -e 's/@''GNULIB_SETLOCALE_NULL''@/1/g' \
+      -e 's/@''GNULIB_DUPLOCALE''@/0/g' \
+      -e 's/@''GNULIB_LOCALENAME''@/0/g' \
+      -e 's|@''HAVE_NEWLOCALE''@|1|g' \
+      -e 's|@''HAVE_DUPLOCALE''@|1|g' \
+      -e 's|@''HAVE_FREELOCALE''@|1|g' \
+      -e 's|@''HAVE_XLOCALE_H''@|0|g' \
+      -e 's|@''REPLACE_LOCALECONV''@|0|g' \
+      -e 's|@''REPLACE_SETLOCALE''@|0|g' \
+      -e 's|@''REPLACE_NEWLOCALE''@|0|g' \
+      -e 's|@''REPLACE_DUPLOCALE''@|0|g' \
+      -e 's|@''REPLACE_FREELOCALE''@|0|g' \
+      -e 's|@''REPLACE_STRUCT_LCONV''@|0|g' \
+      -e 's|@''LOCALENAME_ENHANCE_LOCALE_FUNCS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./locale.in.h &gt; locale.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv locale.h-t locale.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDIO_H''@|&lt;stdio.h&gt;|g' \
+      -e 's/@''GNULIB_DPRINTF''@/0/g' \
+      -e 's/@''GNULIB_FCLOSE''@/0/g' \
+      -e 's/@''GNULIB_FDOPEN''@/0/g' \
+      -e 's/@''GNULIB_FFLUSH''@/0/g' \
+      -e 's/@''GNULIB_FGETC''@/1/g' \
+      -e 's/@''GNULIB_FGETS''@/1/g' \
+      -e 's/@''GNULIB_FOPEN''@/0/g' \
+      -e 's/@''GNULIB_FOPEN_GNU''@/0/g' \
+      -e 's/@''GNULIB_FPRINTF''@/1/g' \
+      -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_FPURGE''@/0/g' \
+      -e 's/@''GNULIB_FPUTC''@/1/g' \
+      -e 's/@''GNULIB_FPUTS''@/1/g' \
+      -e 's/@''GNULIB_FREAD''@/1/g' \
+      -e 's/@''GNULIB_FREOPEN''@/0/g' \
+      -e 's/@''GNULIB_FSCANF''@/1/g' \
+      -e 's/@''GNULIB_FSEEK''@/0/g' \
+      -e 's/@''GNULIB_FSEEKO''@/0/g' \
+      -e 's/@''GNULIB_FTELL''@/0/g' \
+      -e 's/@''GNULIB_FTELLO''@/0/g' \
+      -e 's/@''GNULIB_FWRITE''@/1/g' \
+      -e 's/@''GNULIB_GETC''@/1/g' \
+      -e 's/@''GNULIB_GETCHAR''@/1/g' \
+      -e 's/@''GNULIB_GETDELIM''@/0/g' \
+      -e 's/@''GNULIB_GETLINE''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PCLOSE''@/0/g' \
+      -e 's/@''GNULIB_PERROR''@/0/g' \
+      -e 's/@''GNULIB_POPEN''@/0/g' \
+      -e 's/@''GNULIB_PRINTF''@/1/g' \
+      -e 's/@''GNULIB_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PUTC''@/1/g' \
+      -e 's/@''GNULIB_PUTCHAR''@/1/g' \
+      -e 's/@''GNULIB_PUTS''@/1/g' \
+      -e 's/@''GNULIB_REMOVE''@/0/g' \
+      -e 's/@''GNULIB_RENAME''@/0/g' \
+      -e 's/@''GNULIB_RENAMEAT''@/0/g' \
+      -e 's/@''GNULIB_SCANF''@/1/g' \
+      -e 's/@''GNULIB_SNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_TMPFILE''@/0/g' \
+      -e 's/@''GNULIB_VASPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VDPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VFPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VFSCANF''@/0/g' \
+      -e 's/@''GNULIB_VSCANF''@/0/g' \
+      -e 's/@''GNULIB_VPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VSNPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_MDA_FCLOSEALL''@/1/g' \
+      -e 's/@''GNULIB_MDA_FDOPEN''@/1/g' \
+      -e 's/@''GNULIB_MDA_FILENO''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETW''@/1/g' \
+      -e 's/@''GNULIB_MDA_PUTW''@/1/g' \
+      -e 's/@''GNULIB_MDA_TEMPNAM''@/1/g' \
+      &lt; ./stdio.in.h | \
+  sed -e 's|@''HAVE_DECL_FCLOSEALL''@|1|g' \
+      -e 's|@''HAVE_DECL_FPURGE''@|1|g' \
+      -e 's|@''HAVE_DECL_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_DECL_FTELLO''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDELIM''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLINE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETW''@|1|g' \
+      -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_PUTW''@|1|g' \
+      -e 's|@''HAVE_DECL_SNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DPRINTF''@|1|g' \
+      -e 's|@''HAVE_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_FTELLO''@|1|g' \
+      -e 's|@''HAVE_PCLOSE''@|1|g' \
+      -e 's|@''HAVE_POPEN''@|1|g' \
+      -e 's|@''HAVE_RENAMEAT''@|1|g' \
+      -e 's|@''HAVE_VASPRINTF''@|1|g' \
+      -e 's|@''HAVE_VDPRINTF''@|1|g' \
+      -e 's|@''REPLACE_DPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FCLOSE''@|0|g' \
+      -e 's|@''REPLACE_FDOPEN''@|0|g' \
+      -e 's|@''REPLACE_FFLUSH''@|0|g' \
+      -e 's|@''REPLACE_FOPEN''@|0|g' \
+      -e 's|@''REPLACE_FOPEN_FOR_FOPEN_GNU''@|0|g' \
+      -e 's|@''REPLACE_FPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FPURGE''@|0|g' \
+      -e 's|@''REPLACE_FREOPEN''@|0|g' \
+      -e 's|@''REPLACE_FSEEK''@|0|g' \
+      -e 's|@''REPLACE_FSEEKO''@|0|g' \
+      -e 's|@''REPLACE_FTELL''@|0|g' \
+      -e 's|@''REPLACE_FTELLO''@|0|g' \
+      -e 's|@''REPLACE_GETDELIM''@|0|g' \
+      -e 's|@''REPLACE_GETLINE''@|0|g' \
+      -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_PERROR''@|0|g' \
+      -e 's|@''REPLACE_POPEN''@|0|g' \
+      -e 's|@''REPLACE_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_REMOVE''@|0|g' \
+      -e 's|@''REPLACE_RENAME''@|0|g' \
+      -e 's|@''REPLACE_RENAMEAT''@|0|g' \
+      -e 's|@''REPLACE_SNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_SPRINTF''@|0|g' \
+      -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_TMPFILE''@|0|g' \
+      -e 's|@''REPLACE_VASPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VDPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VFPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSPRINTF''@|0|g' \
+      -e 's|@''ASM_SYMBOL_PREFIX''@||g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; stdio.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv stdio.h-t stdio.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STRING_H''@|&lt;string.h&gt;|g' \
+      -e 's/@''GNULIB_EXPLICIT_BZERO''@/0/g' \
+      -e 's/@''GNULIB_FFSL''@/0/g' \
+      -e 's/@''GNULIB_FFSLL''@/0/g' \
+      -e 's/@''GNULIB_MBSLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSNLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSRCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSSTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSPCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSCASESTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSPBRK''@/0/g' \
+      -e 's/@''GNULIB_MBSSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSSEP''@/0/g' \
+      -e 's/@''GNULIB_MBSTOK_R''@/0/g' \
+      -e 's/@''GNULIB_MEMCHR''@/1/g' \
+      -e 's/@''GNULIB_MEMMEM''@/0/g' \
+      -e 's/@''GNULIB_MEMPCPY''@/1/g' \
+      -e 's/@''GNULIB_MEMRCHR''@/0/g' \
+      -e 's/@''GNULIB_MEMSET_EXPLICIT''@/0/g' \
+      -e 's/@''GNULIB_RAWMEMCHR''@/1/g' \
+      -e 's/@''GNULIB_STPCPY''@/0/g' \
+      -e 's/@''GNULIB_STPNCPY''@/0/g' \
+      -e 's/@''GNULIB_STRCHRNUL''@/0/g' \
+      -e 's/@''GNULIB_STRDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNCAT''@/0/g' \
+      -e 's/@''GNULIB_STRNDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNLEN''@/0/g' \
+      -e 's/@''GNULIB_STRPBRK''@/0/g' \
+      -e 's/@''GNULIB_STRSEP''@/0/g' \
+      -e 's/@''GNULIB_STRSTR''@/0/g' \
+      -e 's/@''GNULIB_STRCASESTR''@/0/g' \
+      -e 's/@''GNULIB_STRTOK_R''@/0/g' \
+      -e 's/@''GNULIB_STRERROR''@/1/g' \
+      -e 's/@''GNULIB_STRERROR_R''@/0/g' \
+      -e 's/@''GNULIB_STRERRORNAME_NP''@/0/g' \
+      -e 's/@''GNULIB_SIGABBREV_NP''@/0/g' \
+      -e 's/@''GNULIB_SIGDESCR_NP''@/0/g' \
+      -e 's/@''GNULIB_STRSIGNAL''@/0/g' \
+      -e 's/@''GNULIB_STRVERSCMP''@/0/g' \
+      -e 's/@''GNULIB_MDA_MEMCCPY''@/1/g' \
+      -e 's/@''GNULIB_MDA_STRDUP''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      &lt; ./string.in.h | \
+  sed -e 's|@''HAVE_EXPLICIT_BZERO''@|1|g' \
+      -e 's|@''HAVE_FFSL''@|1|g' \
+      -e 's|@''HAVE_FFSLL''@|1|g' \
+      -e 's|@''HAVE_MBSLEN''@|0|g' \
+      -e 's|@''HAVE_DECL_MEMMEM''@|1|g' \
+      -e 's|@''HAVE_MEMPCPY''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMRCHR''@|1|g' \
+      -e 's|@''HAVE_MEMSET_EXPLICIT''@|1|g' \
+      -e 's|@''HAVE_RAWMEMCHR''@|1|g' \
+      -e 's|@''HAVE_STPCPY''@|1|g' \
+      -e 's|@''HAVE_STPNCPY''@|1|g' \
+      -e 's|@''HAVE_STRCHRNUL''@|1|g' \
+      -e 's|@''HAVE_DECL_STRDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNLEN''@|1|g' \
+      -e 's|@''HAVE_STRPBRK''@|1|g' \
+      -e 's|@''HAVE_STRSEP''@|1|g' \
+      -e 's|@''HAVE_STRCASESTR''@|1|g' \
+      -e 's|@''HAVE_DECL_STRTOK_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRERROR_R''@|1|g' \
+      -e 's|@''HAVE_STRERRORNAME_NP''@|1|g' \
+      -e 's|@''HAVE_SIGABBREV_NP''@|1|g' \
+      -e 's|@''HAVE_SIGDESCR_NP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g' \
+      -e 's|@''HAVE_STRVERSCMP''@|1|g' \
+      -e 's|@''REPLACE_FFSLL''@|0|g' \
+      -e 's|@''REPLACE_MEMCHR''@|0|g' \
+      -e 's|@''REPLACE_MEMMEM''@|0|g' \
+      -e 's|@''REPLACE_MEMPCPY''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|0|g' \
+      -e 's|@''REPLACE_STPCPY''@|0|g' \
+      -e 's|@''REPLACE_STPNCPY''@|0|g' \
+      -e 's|@''REPLACE_STRCHRNUL''@|0|g' \
+      -e 's|@''REPLACE_STRDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNCAT''@|0|g' \
+      -e 's|@''REPLACE_STRNDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNLEN''@|0|g' \
+      -e 's|@''REPLACE_STRSTR''@|0|g' \
+      -e 's|@''REPLACE_STRCASESTR''@|0|g' \
+      -e 's|@''REPLACE_STRTOK_R''@|0|g' \
+      -e 's|@''REPLACE_STRERROR''@|0|g' \
+      -e 's|@''REPLACE_STRERROR_R''@|0|g' \
+      -e 's|@''REPLACE_STRERRORNAME_NP''@|0|g' \
+      -e 's|@''REPLACE_STRSIGNAL''@|0|g' \
+      -e 's|@''UNDEFINE_STRTOK_R''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; string.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv string.h-t string.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDLIB_H''@|&lt;stdlib.h&gt;|g' \
+      -e 's/@''GNULIB__EXIT''@/0/g' \
+      -e 's/@''GNULIB_ALIGNED_ALLOC''@/0/g' \
+      -e 's/@''GNULIB_ATOLL''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_GNU''@/1/g' \
+      -e 's/@''GNULIB_CALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      -e 's/@''GNULIB_GETLOADAVG''@/0/g' \
+      -e 's/@''GNULIB_GETPROGNAME''@/1/g' \
+      -e 's/@''GNULIB_GETSUBOPT''@/0/g' \
+      -e 's/@''GNULIB_GRANTPT''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_GNU''@/1/g' \
+      -e 's/@''GNULIB_MALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_MBTOWC''@/0/g' \
+      -e 's/@''GNULIB_MKDTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_POSIX_MEMALIGN''@/0/g' \
+      -e 's/@''GNULIB_POSIX_OPENPT''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME_R''@/0/g' \
+      -e 's/@''GNULIB_PUTENV''@/0/g' \
+      -e 's/@''GNULIB_QSORT_R''@/0/g' \
+      -e 's/@''GNULIB_RANDOM''@/0/g' \
+      -e 's/@''GNULIB_RANDOM_R''@/0/g' \
+      -e 's/@''GNULIB_REALLOC_GNU''@/1/g' \
+      -e 's/@''GNULIB_REALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_REALLOCARRAY''@/1/g' \
+      -e 's/@''GNULIB_REALPATH''@/1/g' \
+      -e 's/@''GNULIB_RPMATCH''@/0/g' \
+      -e 's/@''GNULIB_SECURE_GETENV''@/0/g' \
+      -e 's/@''GNULIB_SETENV''@/0/g' \
+      -e 's/@''GNULIB_STRTOD''@/0/g' \
+      -e 's/@''GNULIB_STRTOL''@/0/g' \
+      -e 's/@''GNULIB_STRTOLD''@/0/g' \
+      -e 's/@''GNULIB_STRTOLL''@/0/g' \
+      -e 's/@''GNULIB_STRTOUL''@/0/g' \
+      -e 's/@''GNULIB_STRTOULL''@/0/g' \
+      -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g' \
+      -e 's/@''GNULIB_UNLOCKPT''@/0/g' \
+      -e 's/@''GNULIB_UNSETENV''@/0/g' \
+      -e 's/@''GNULIB_WCTOMB''@/0/g' \
+      -e 's/@''GNULIB_MDA_ECVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_FCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_GCVT''@/1/g' \
+      -e 's/@''GNULIB_MDA_MKTEMP''@/1/g' \
+      -e 's/@''GNULIB_MDA_PUTENV''@/1/g' \
+      &lt; ./stdlib.in.h | \
+  sed -e 's|@''HAVE__EXIT''@|1|g' \
+      -e 's|@''HAVE_ALIGNED_ALLOC''@|1|g' \
+      -e 's|@''HAVE_ATOLL''@|1|g' \
+      -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|1|g' \
+      -e 's|@''HAVE_DECL_ECVT''@|1|g' \
+      -e 's|@''HAVE_DECL_FCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GCVT''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g' \
+      -e 's|@''HAVE_GETPROGNAME''@|0|g' \
+      -e 's|@''HAVE_GETSUBOPT''@|1|g' \
+      -e 's|@''HAVE_GRANTPT''@|1|g' \
+      -e 's|@''HAVE_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_INITSTATE''@|1|g' \
+      -e 's|@''HAVE_MBTOWC''@|1|g' \
+      -e 's|@''HAVE_MKDTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMPS''@|1|g' \
+      -e 's|@''HAVE_MKSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKSTEMPS''@|1|g' \
+      -e 's|@''HAVE_POSIX_MEMALIGN''@|1|g' \
+      -e 's|@''HAVE_POSIX_OPENPT''@|1|g' \
+      -e 's|@''HAVE_PTSNAME''@|1|g' \
+      -e 's|@''HAVE_PTSNAME_R''@|1|g' \
+      -e 's|@''HAVE_QSORT_R''@|1|g' \
+      -e 's|@''HAVE_RANDOM''@|1|g' \
+      -e 's|@''HAVE_RANDOM_H''@|1|g' \
+      -e 's|@''HAVE_RANDOM_R''@|1|g' \
+      -e 's|@''HAVE_REALLOCARRAY''@|1|g' \
+      -e 's|@''HAVE_REALPATH''@|1|g' \
+      -e 's|@''HAVE_RPMATCH''@|1|g' \
+      -e 's|@''HAVE_SECURE_GETENV''@|1|g' \
+      -e 's|@''HAVE_DECL_SETENV''@|1|g' \
+      -e 's|@''HAVE_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_DECL_SETSTATE''@|1|g' \
+      -e 's|@''HAVE_STRTOD''@|1|g' \
+      -e 's|@''HAVE_STRTOL''@|1|g' \
+      -e 's|@''HAVE_STRTOLD''@|1|g' \
+      -e 's|@''HAVE_STRTOLL''@|1|g' \
+      -e 's|@''HAVE_STRTOUL''@|1|g' \
+      -e 's|@''HAVE_STRTOULL''@|1|g' \
+      -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g' \
+      -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g' \
+      -e 's|@''HAVE_UNLOCKPT''@|1|g' \
+      -e 's|@''HAVE_DECL_UNSETENV''@|1|g' \
+      -e 's|@''REPLACE__EXIT''@|0|g' \
+      -e 's|@''REPLACE_ALIGNED_ALLOC''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_CALLOC_FOR_CALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|0|g' \
+      -e 's|@''REPLACE_GETLOADAVG''@|0|g' \
+      -e 's|@''REPLACE_GETPROGNAME''@|0|g' \
+      -e 's|@''REPLACE_GETSUBOPT''@|0|g' \
+      -e 's|@''REPLACE_INITSTATE''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_MALLOC_FOR_MALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_MBTOWC''@|0|g' \
+      -e 's|@''REPLACE_MKOSTEMP''@|0|g' \
+      -e 's|@''REPLACE_MKOSTEMPS''@|0|g' \
+      -e 's|@''REPLACE_MKSTEMP''@|0|g' \
+      -e 's|@''REPLACE_POSIX_MEMALIGN''@|0|g' \
+      -e 's|@''REPLACE_POSIX_OPENPT''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME_R''@|0|g' \
+      -e 's|@''REPLACE_PUTENV''@|0|g' \
+      -e 's|@''REPLACE_QSORT_R''@|0|g' \
+      -e 's|@''REPLACE_RANDOM''@|0|g' \
+      -e 's|@''REPLACE_RANDOM_R''@|0|g' \
+      -e 's|@''REPLACE_REALLOC_FOR_REALLOC_GNU''@|0|g' \
+      -e 's|@''REPLACE_REALLOC_FOR_REALLOC_POSIX''@|0|g' \
+      -e 's|@''REPLACE_REALLOCARRAY''@|0|g' \
+      -e 's|@''REPLACE_REALPATH''@|0|g' \
+      -e 's|@''REPLACE_SETENV''@|0|g' \
+      -e 's|@''REPLACE_SETSTATE''@|0|g' \
+      -e 's|@''REPLACE_STRTOD''@|0|g' \
+      -e 's|@''REPLACE_STRTOL''@|0|g' \
+      -e 's|@''REPLACE_STRTOLD''@|0|g' \
+      -e 's|@''REPLACE_STRTOLL''@|0|g' \
+      -e 's|@''REPLACE_STRTOUL''@|0|g' \
+      -e 's|@''REPLACE_STRTOULL''@|0|g' \
+      -e 's|@''REPLACE_UNSETENV''@|0|g' \
+      -e 's|@''REPLACE_WCTOMB''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _Noreturn/r ./_Noreturn.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; stdlib.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv stdlib.h-t stdlib.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/mkdir -p 'sys'
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/mkdir -p 'sys'
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TYPES_H''@|&lt;sys/types.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's|@''WINDOWS_STAT_INODES''@|0|g' \
+      ./sys_types.in.h &gt; sys/types.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv sys/types.h-t sys/types.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_STAT_H''@|&lt;sys/stat.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_ST_SIZE''@|0|g' \
+      -e 's|@''WINDOWS_STAT_TIMESPEC''@|0|g' \
+      -e 's/@''GNULIB_CHMOD''@/0/g' \
+      -e 's/@''GNULIB_FCHMODAT''@/0/g' \
+      -e 's/@''GNULIB_FSTAT''@/1/g' \
+      -e 's/@''GNULIB_FSTATAT''@/0/g' \
+      -e 's/@''GNULIB_FUTIMENS''@/0/g' \
+      -e 's/@''GNULIB_GETUMASK''@/0/g' \
+      -e 's/@''GNULIB_LCHMOD''@/0/g' \
+      -e 's/@''GNULIB_LSTAT''@/0/g' \
+      -e 's/@''GNULIB_MKDIR''@/0/g' \
+      -e 's/@''GNULIB_MKDIRAT''@/0/g' \
+      -e 's/@''GNULIB_MKFIFO''@/0/g' \
+      -e 's/@''GNULIB_MKFIFOAT''@/0/g' \
+      -e 's/@''GNULIB_MKNOD''@/0/g' \
+      -e 's/@''GNULIB_MKNODAT''@/0/g' \
+      -e 's/@''GNULIB_STAT''@/1/g' \
+      -e 's/@''GNULIB_UTIMENSAT''@/0/g' \
+      -e 's/@''GNULIB_OVERRIDES_STRUCT_STAT''@/0/g' \
+      -e 's/@''GNULIB_MDA_CHMOD''@/1/g' \
+      -e 's/@''GNULIB_MDA_MKDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_UMASK''@/1/g' \
+      -e 's|@''HAVE_FCHMODAT''@|1|g' \
+      -e 's|@''HAVE_FSTATAT''@|1|g' \
+      -e 's|@''HAVE_FUTIMENS''@|1|g' \
+      -e 's|@''HAVE_GETUMASK''@|1|g' \
+      -e 's|@''HAVE_LCHMOD''@|1|g' \
+      -e 's|@''HAVE_LSTAT''@|1|g' \
+      -e 's|@''HAVE_MKDIRAT''@|1|g' \
+      -e 's|@''HAVE_MKFIFO''@|1|g' \
+      -e 's|@''HAVE_MKFIFOAT''@|1|g' \
+      -e 's|@''HAVE_MKNOD''@|1|g' \
+      -e 's|@''HAVE_MKNODAT''@|1|g' \
+      -e 's|@''HAVE_UTIMENSAT''@|1|g' \
+      -e 's|@''REPLACE_CHMOD''@|0|g' \
+      -e 's|@''REPLACE_FCHMODAT''@|0|g' \
+      -e 's|@''REPLACE_FSTAT''@|0|g' \
+      -e 's|@''REPLACE_FSTATAT''@|0|g' \
+      -e 's|@''REPLACE_FUTIMENS''@|0|g' \
+      -e 's|@''REPLACE_LSTAT''@|0|g' \
+      -e 's|@''REPLACE_MKDIR''@|0|g' \
+      -e 's|@''REPLACE_MKFIFO''@|0|g' \
+      -e 's|@''REPLACE_MKFIFOAT''@|0|g' \
+      -e 's|@''REPLACE_MKNOD''@|0|g' \
+      -e 's|@''REPLACE_MKNODAT''@|0|g' \
+      -e 's|@''REPLACE_STAT''@|0|g' \
+      -e 's|@''REPLACE_UTIMENSAT''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./sys_stat.in.h &gt; sys/stat.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv sys/stat.h-t sys/stat.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_TIME_H''@|&lt;time.h&gt;|g' \
+      -e 's/@''GNULIB_CTIME''@/0/g' \
+      -e 's/@''GNULIB_LOCALTIME''@/0/g' \
+      -e 's/@''GNULIB_MKTIME''@/0/g' \
+      -e 's/@''GNULIB_NANOSLEEP''@/0/g' \
+      -e 's/@''GNULIB_STRFTIME''@/0/g' \
+      -e 's/@''GNULIB_STRPTIME''@/0/g' \
+      -e 's/@''GNULIB_TIMEGM''@/0/g' \
+      -e 's/@''GNULIB_TIMESPEC_GET''@/0/g' \
+      -e 's/@''GNULIB_TIMESPEC_GETRES''@/0/g' \
+      -e 's/@''GNULIB_TIME_R''@/0/g' \
+      -e 's/@''GNULIB_TIME_RZ''@/0/g' \
+      -e 's/@''GNULIB_TZSET''@/0/g' \
+      -e 's/@''GNULIB_MDA_TZSET''@/1/g' \
+      -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g' \
+      -e 's|@''HAVE_NANOSLEEP''@|1|g' \
+      -e 's|@''HAVE_STRPTIME''@|1|g' \
+      -e 's|@''HAVE_TIMEGM''@|1|g' \
+      -e 's|@''HAVE_TIMESPEC_GET''@|1|g' \
+      -e 's|@''HAVE_TIMESPEC_GETRES''@|1|g' \
+      -e 's|@''HAVE_TIMEZONE_T''@|0|g' \
+      -e 's|@''REPLACE_CTIME''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_GMTIME''@|0|g' \
+      -e 's|@''REPLACE_LOCALTIME''@|0|g' \
+      -e 's|@''REPLACE_LOCALTIME_R''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_MKTIME''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_NANOSLEEP''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_STRFTIME''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_TIMEGM''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_TIMESPEC_GET''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_TZSET''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g' \
+      -e 's|@''UNISTD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_TIME_UTC''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./time.in.h &gt; time.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv time.h-t time.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''HAVE_UNISTD_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_UNISTD_H''@|&lt;unistd.h&gt;|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's/@''GNULIB_ACCESS''@/0/g' \
+      -e 's/@''GNULIB_CHDIR''@/0/g' \
+      -e 's/@''GNULIB_CHOWN''@/0/g' \
+      -e 's/@''GNULIB_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_COPY_FILE_RANGE''@/0/g' \
+      -e 's/@''GNULIB_DUP''@/0/g' \
+      -e 's/@''GNULIB_DUP2''@/1/g' \
+      -e 's/@''GNULIB_DUP3''@/0/g' \
+      -e 's/@''GNULIB_ENVIRON''@/1/g' \
+      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+      -e 's/@''GNULIB_EXECL''@/0/g' \
+      -e 's/@''GNULIB_EXECLE''@/0/g' \
+      -e 's/@''GNULIB_EXECLP''@/0/g' \
+      -e 's/@''GNULIB_EXECV''@/0/g' \
+      -e 's/@''GNULIB_EXECVE''@/0/g' \
+      -e 's/@''GNULIB_EXECVP''@/0/g' \
+      -e 's/@''GNULIB_EXECVPE''@/0/g' \
+      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+      -e 's/@''GNULIB_FDATASYNC''@/0/g' \
+      -e 's/@''GNULIB_FSYNC''@/0/g' \
+      -e 's/@''GNULIB_FTRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_GETCWD''@/0/g' \
+      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+      -e 's/@''GNULIB_GETDTABLESIZE''@/1/g' \
+      -e 's/@''GNULIB_GETENTROPY''@/0/g' \
+      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+      -e 's/@''GNULIB_GETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+      -e 's/@''GNULIB_GETOPT_POSIX''@/1/g' \
+      -e 's/@''GNULIB_GETPAGESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETPASS''@/0/g' \
+      -e 's/@''GNULIB_GETPASS_GNU''@/0/g' \
+      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+      -e 's/@''GNULIB_ISATTY''@/0/g' \
+      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+      -e 's/@''GNULIB_LINK''@/0/g' \
+      -e 's/@''GNULIB_LINKAT''@/0/g' \
+      -e 's/@''GNULIB_LSEEK''@/0/g' \
+      -e 's/@''GNULIB_PIPE''@/0/g' \
+      -e 's/@''GNULIB_PIPE2''@/0/g' \
+      -e 's/@''GNULIB_PREAD''@/0/g' \
+      -e 's/@''GNULIB_PWRITE''@/0/g' \
+      -e 's/@''GNULIB_READ''@/0/g' \
+      -e 's/@''GNULIB_READLINK''@/1/g' \
+      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+      -e 's/@''GNULIB_RMDIR''@/0/g' \
+      -e 's/@''GNULIB_SETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_SLEEP''@/0/g' \
+      -e 's/@''GNULIB_SYMLINK''@/0/g' \
+      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+      -e 's/@''GNULIB_TRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/00/g' \
+      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_UNLINK''@/0/g' \
+      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+      -e 's/@''GNULIB_USLEEP''@/0/g' \
+      -e 's/@''GNULIB_WRITE''@/0/g' \
+      -e 's/@''GNULIB_MDA_ACCESS''@/1/g' \
+      -e 's/@''GNULIB_MDA_CHDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_CLOSE''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP''@/1/g' \
+      -e 's/@''GNULIB_MDA_DUP2''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECL''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECLP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECV''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVE''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVP''@/1/g' \
+      -e 's/@''GNULIB_MDA_EXECVPE''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETCWD''@/1/g' \
+      -e 's/@''GNULIB_MDA_GETPID''@/1/g' \
+      -e 's/@''GNULIB_MDA_ISATTY''@/1/g' \
+      -e 's/@''GNULIB_MDA_LSEEK''@/1/g' \
+      -e 's/@''GNULIB_MDA_READ''@/1/g' \
+      -e 's/@''GNULIB_MDA_RMDIR''@/1/g' \
+      -e 's/@''GNULIB_MDA_SWAB''@/1/g' \
+      -e 's/@''GNULIB_MDA_UNLINK''@/1/g' \
+      -e 's/@''GNULIB_MDA_WRITE''@/1/g' \
+      &lt; ./unistd.in.h | \
+  sed -e 's|@''HAVE_CHOWN''@|1|g' \
+      -e 's|@''HAVE_COPY_FILE_RANGE''@|1|g' \
+      -e 's|@''HAVE_DUP3''@|1|g' \
+      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+      -e 's|@''HAVE_EXECVPE''@|1|g' \
+      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+      -e 's|@''HAVE_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+      -e 's|@''HAVE_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_FSYNC''@|1|g' \
+      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+      -e 's|@''HAVE_GETDTABLESIZE''@|1|g' \
+      -e 's|@''HAVE_GETENTROPY''@|1|g' \
+      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_GETPASS''@|1|g' \
+      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+      -e 's|@''HAVE_LCHOWN''@|1|g' \
+      -e 's|@''HAVE_LINK''@|1|g' \
+      -e 's|@''HAVE_LINKAT''@|1|g' \
+      -e 's|@''HAVE_PIPE''@|1|g' \
+      -e 's|@''HAVE_PIPE2''@|1|g' \
+      -e 's|@''HAVE_PREAD''@|1|g' \
+      -e 's|@''HAVE_PWRITE''@|1|g' \
+      -e 's|@''HAVE_READLINK''@|1|g' \
+      -e 's|@''HAVE_READLINKAT''@|1|g' \
+      -e 's|@''HAVE_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_SLEEP''@|1|g' \
+      -e 's|@''HAVE_SYMLINK''@|1|g' \
+      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+      -e 's|@''HAVE_USLEEP''@|1|g' \
+      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+      -e 's|@''HAVE_DECL_EXECVPE''@|1|g' \
+      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_DECL_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+      -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNCATE''@|1|g' \
+      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+      -e 's|@''HAVE_OS_H''@|0|g' \
+      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+  | \
+  sed -e 's|@''REPLACE_ACCESS''@|0|g' \
+      -e 's|@''REPLACE_CHOWN''@|0|g' \
+      -e 's|@''REPLACE_CLOSE''@|0|g' \
+      -e 's|@''REPLACE_COPY_FILE_RANGE''@|0|g' \
+      -e 's|@''REPLACE_DUP''@|0|g' \
+      -e 's|@''REPLACE_DUP2''@|0|g' \
+      -e 's|@''REPLACE_DUP3''@|0|g' \
+      -e 's|@''REPLACE_EXECL''@|0|g' \
+      -e 's|@''REPLACE_EXECLE''@|0|g' \
+      -e 's|@''REPLACE_EXECLP''@|0|g' \
+      -e 's|@''REPLACE_EXECV''@|0|g' \
+      -e 's|@''REPLACE_EXECVE''@|0|g' \
+      -e 's|@''REPLACE_EXECVP''@|0|g' \
+      -e 's|@''REPLACE_EXECVPE''@|0|g' \
+      -e 's|@''REPLACE_FACCESSAT''@|0|g' \
+      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+      -e 's|@''REPLACE_FDATASYNC''@|0|g' \
+      -e 's|@''REPLACE_FTRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_GETCWD''@|0|g' \
+      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+      -e 's|@''REPLACE_GETDTABLESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETENTROPY''@|0|g' \
+      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+      -e 's|@''REPLACE_GETPASS''@|0|g' \
+      -e 's|@''REPLACE_GETPASS_FOR_GETPASS_GNU''@|0|g' \
+      -e 's|@''REPLACE_ISATTY''@|0|g' \
+      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+      -e 's|@''REPLACE_LINK''@|0|g' \
+      -e 's|@''REPLACE_LINKAT''@|0|g' \
+      -e 's|@''REPLACE_LSEEK''@|0|g' \
+      -e 's|@''REPLACE_PIPE2''@|0|g' \
+      -e 's|@''REPLACE_PREAD''@|0|g' \
+      -e 's|@''REPLACE_PWRITE''@|0|g' \
+      -e 's|@''REPLACE_READ''@|0|g' \
+      -e 's|@''REPLACE_READLINK''@|0|g' \
+      -e 's|@''REPLACE_READLINKAT''@|0|g' \
+      -e 's|@''REPLACE_RMDIR''@|0|g' \
+      -e 's|@''REPLACE_SETHOSTNAME''@|0|g' \
+      -e 's|@''REPLACE_SLEEP''@|0|g' \
+      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+      -e 's|@''REPLACE_SYMLINKAT''@|0|g' \
+      -e 's|@''REPLACE_TRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+      -e 's|@''REPLACE_UNLINK''@|0|g' \
+      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+      -e 's|@''REPLACE_USLEEP''@|0|g' \
+      -e 's|@''REPLACE_WRITE''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_SYS_RANDOM_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; unistd.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv unistd.h-t unistd.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''HAVE_FEATURES_H''@|1|g' \
+      -e 's|@''NEXT_WCHAR_H''@|&lt;wchar.h&gt;|g' \
+      -e 's|@''HAVE_WCHAR_H''@|1|g' \
+      -e 's/@''HAVE_CRTDEFS_H''@/0/g' \
+      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/0/g' \
+      -e 's/@''GNULIB_BTOWC''@/0/g' \
+      -e 's/@''GNULIB_WCTOB''@/0/g' \
+      -e 's/@''GNULIB_MBSINIT''@/1/g' \
+      -e 's/@''GNULIB_MBRTOWC''@/1/g' \
+      -e 's/@''GNULIB_MBRLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_MBSNRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_WCRTOMB''@/0/g' \
+      -e 's/@''GNULIB_WCSRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCSNRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_WMEMCMP''@/0/g' \
+      -e 's/@''GNULIB_WMEMCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMMOVE''@/0/g' \
+      -e 's/@''GNULIB_WMEMPCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMSET''@/0/g' \
+      -e 's/@''GNULIB_WCSLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSNLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSNCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCOLL''@/0/g' \
+      -e 's/@''GNULIB_WCSXFRM''@/0/g' \
+      -e 's/@''GNULIB_WCSDUP''@/0/g' \
+      -e 's/@''GNULIB_WCSCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSRCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSCSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSPBRK''@/0/g' \
+      -e 's/@''GNULIB_WCSSTR''@/0/g' \
+      -e 's/@''GNULIB_WCSTOK''@/0/g' \
+      -e 's/@''GNULIB_WCSWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WCSFTIME''@/0/g' \
+      -e 's/@''GNULIB_MDA_WCSDUP''@/1/g' \
+      -e 's/@''GNULIB_FREE_POSIX''@/1/g' \
+      &lt; ./wchar.in.h | \
+  sed -e 's|@''HAVE_WINT_T''@|1|g' \
+      -e 's|@''HAVE_BTOWC''@|1|g' \
+      -e 's|@''HAVE_MBSINIT''@|1|g' \
+      -e 's|@''HAVE_MBRTOWC''@|1|g' \
+      -e 's|@''HAVE_MBRLEN''@|1|g' \
+      -e 's|@''HAVE_MBSRTOWCS''@|1|g' \
+      -e 's|@''HAVE_MBSNRTOWCS''@|1|g' \
+      -e 's|@''HAVE_WCRTOMB''@|1|g' \
+      -e 's|@''HAVE_WCSRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WCSNRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WMEMCHR''@|1|g' \
+      -e 's|@''HAVE_WMEMCMP''@|1|g' \
+      -e 's|@''HAVE_WMEMCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMMOVE''@|1|g' \
+      -e 's|@''HAVE_WMEMPCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMSET''@|1|g' \
+      -e 's|@''HAVE_WCSLEN''@|1|g' \
+      -e 's|@''HAVE_WCSNLEN''@|1|g' \
+      -e 's|@''HAVE_WCSCPY''@|1|g' \
+      -e 's|@''HAVE_WCPCPY''@|1|g' \
+      -e 's|@''HAVE_WCSNCPY''@|1|g' \
+      -e 's|@''HAVE_WCPNCPY''@|1|g' \
+      -e 's|@''HAVE_WCSCAT''@|1|g' \
+      -e 's|@''HAVE_WCSNCAT''@|1|g' \
+      -e 's|@''HAVE_WCSCMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCMP''@|1|g' \
+      -e 's|@''HAVE_WCSCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSCOLL''@|1|g' \
+      -e 's|@''HAVE_WCSXFRM''@|1|g' \
+      -e 's|@''HAVE_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_WCSCHR''@|1|g' \
+      -e 's|@''HAVE_WCSRCHR''@|1|g' \
+      -e 's|@''HAVE_WCSCSPN''@|1|g' \
+      -e 's|@''HAVE_WCSSPN''@|1|g' \
+      -e 's|@''HAVE_WCSPBRK''@|1|g' \
+      -e 's|@''HAVE_WCSSTR''@|1|g' \
+      -e 's|@''HAVE_WCSTOK''@|1|g' \
+      -e 's|@''HAVE_WCSWIDTH''@|1|g' \
+      -e 's|@''HAVE_WCSFTIME''@|1|g' \
+      -e 's|@''HAVE_DECL_WCTOB''@|1|g' \
+      -e 's|@''HAVE_DECL_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_WCWIDTH''@|1|g' \
+  | \
+  sed -e 's|@''REPLACE_MBSTATE_T''@|0|g' \
+      -e 's|@''REPLACE_BTOWC''@|0|g' \
+      -e 's|@''REPLACE_WCTOB''@|0|g' \
+      -e 's|@''REPLACE_FREE''@|0|g' \
+      -e 's|@''REPLACE_MBSINIT''@|0|g' \
+      -e 's|@''REPLACE_MBRTOWC''@|1|g' \
+      -e 's|@''REPLACE_MBRLEN''@|0|g' \
+      -e 's|@''REPLACE_MBSRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_MBSNRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_WCRTOMB''@|0|g' \
+      -e 's|@''REPLACE_WCSRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCSNRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSFTIME''@|0|g' \
+      -e 's|@''REPLACE_WCSTOK''@|0|g' \
+      -e 's|@''REPLACE_WMEMPCPY''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r ./arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      &gt; wchar.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv wchar.h-t wchar.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+sed -e 1h -e '1s,.*,/* DO NOT EDIT! GENERATED AUTOMATICALLY! */,' -e 1G \
+      -e 's|@''GUARD_PREFIX''@|GL_GL_PAPER|g' \
+      -e 's/@''HAVE_WCTYPE_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_WCTYPE_H''@|&lt;wctype.h&gt;|g' \
+      -e 's/@''HAVE_CRTDEFS_H''@/0/g' \
+      -e 's/@''GNULIBHEADERS_OVERRIDE_WINT_T''@/0/g' \
+      -e 's/@''GNULIB_ISWBLANK''@/0/g' \
+      -e 's/@''GNULIB_ISWDIGIT''@/0/g' \
+      -e 's/@''GNULIB_ISWXDIGIT''@/0/g' \
+      -e 's/@''GNULIB_WCTYPE''@/0/g' \
+      -e 's/@''GNULIB_ISWCTYPE''@/0/g' \
+      -e 's/@''GNULIB_WCTRANS''@/0/g' \
+      -e 's/@''GNULIB_TOWCTRANS''@/0/g' \
+      -e 's/@''HAVE_ISWBLANK''@/1/g' \
+      -e 's/@''HAVE_ISWCNTRL''@/1/g' \
+      -e 's/@''HAVE_WCTYPE_T''@/1/g' \
+      -e 's/@''HAVE_WCTRANS_T''@/1/g' \
+      -e 's/@''HAVE_WINT_T''@/1/g' \
+      -e 's/@''REPLACE_ISWBLANK''@/0/g' \
+      -e 's/@''REPLACE_ISWDIGIT''@/0/g' \
+      -e 's/@''REPLACE_ISWXDIGIT''@/0/g' \
+      -e 's/@''REPLACE_ISWCNTRL''@/0/g' \
+      -e 's/@''REPLACE_TOWLOWER''@/0/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r ./c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r ./warn-on-use.h' \
+      ./wctype.in.h &gt; wctype.h-t
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+mv wctype.h-t wctype.h
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make  all-recursive
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-allocator.lo `test -f 'allocator.c' || echo './'`allocator.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c allocator.c  -fPIC -DPIC -o .libs/libgnupaper_la-allocator.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-areadlink.lo `test -f 'areadlink.c' || echo './'`areadlink.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c areadlink.c  -fPIC -DPIC -o .libs/libgnupaper_la-areadlink.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-basename-lgpl.lo `test -f 'basename-lgpl.c' || echo './'`basename-lgpl.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c basename-lgpl.c  -fPIC -DPIC -o .libs/libgnupaper_la-basename-lgpl.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-c-ctype.lo `test -f 'c-ctype.c' || echo './'`c-ctype.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c c-ctype.c  -fPIC -DPIC -o .libs/libgnupaper_la-c-ctype.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-c-strcasecmp.lo `test -f 'c-strcasecmp.c' || echo './'`c-strcasecmp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c c-strcasecmp.c  -fPIC -DPIC -o .libs/libgnupaper_la-c-strcasecmp.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-c-strncasecmp.lo `test -f 'c-strncasecmp.c' || echo './'`c-strncasecmp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c c-strncasecmp.c  -fPIC -DPIC -o .libs/libgnupaper_la-c-strncasecmp.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-careadlinkat.lo `test -f 'careadlinkat.c' || echo './'`careadlinkat.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c careadlinkat.c  -fPIC -DPIC -o .libs/libgnupaper_la-careadlinkat.o
+careadlinkat.c: In function 'careadlinkat':
+careadlinkat.c:178:5: warning: #warning "GCC might issue a bogus -Wreturn-local-addr warning here." [-Wcpp]
+  178 |    #warning "GCC might issue a bogus -Wreturn-local-addr warning here."
+      |     ^~~~~~~
+careadlinkat.c:179:5: warning: #warning "See &lt;https://gcc.gnu.org/bugzilla/show_bug.cgi?id=93644&gt;." [-Wcpp]
+  179 |    #warning "See &lt;https://gcc.gnu.org/bugzilla/show_bug.cgi?id=93644&gt;."
+      |     ^~~~~~~
+careadlinkat.c:182:10: warning: function may return address of local variable [-Wreturn-local-addr]
+  182 |   return readlink_stk (fd, filename, buffer, buffer_size, alloc,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  183 |                        preadlinkat, stack_buf);
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~
+careadlinkat.c:181:8: note: declared here
+  181 |   char stack_buf[STACK_BUF_SIZE];
+      |        ^~~~~~~~~
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-cloexec.lo `test -f 'cloexec.c' || echo './'`cloexec.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c cloexec.c  -fPIC -DPIC -o .libs/libgnupaper_la-cloexec.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-exitfail.lo `test -f 'exitfail.c' || echo './'`exitfail.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c exitfail.c  -fPIC -DPIC -o .libs/libgnupaper_la-exitfail.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-fcntl.lo `test -f 'fcntl.c' || echo './'`fcntl.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c fcntl.c  -fPIC -DPIC -o .libs/libgnupaper_la-fcntl.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-fd-hook.lo `test -f 'fd-hook.c' || echo './'`fd-hook.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c fd-hook.c  -fPIC -DPIC -o .libs/libgnupaper_la-fd-hook.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-getprogname.lo `test -f 'getprogname.c' || echo './'`getprogname.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c getprogname.c  -fPIC -DPIC -o .libs/libgnupaper_la-getprogname.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-hard-locale.lo `test -f 'hard-locale.c' || echo './'`hard-locale.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c hard-locale.c  -fPIC -DPIC -o .libs/libgnupaper_la-hard-locale.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-ialloc.lo `test -f 'ialloc.c' || echo './'`ialloc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c ialloc.c  -fPIC -DPIC -o .libs/libgnupaper_la-ialloc.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-localcharset.lo `test -f 'localcharset.c' || echo './'`localcharset.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c localcharset.c  -fPIC -DPIC -o .libs/libgnupaper_la-localcharset.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-malloca.lo `test -f 'malloca.c' || echo './'`malloca.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c malloca.c  -fPIC -DPIC -o .libs/libgnupaper_la-malloca.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-mbrtowc.lo `test -f 'mbrtowc.c' || echo './'`mbrtowc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c mbrtowc.c  -fPIC -DPIC -o .libs/libgnupaper_la-mbrtowc.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-progname.lo `test -f 'progname.c' || echo './'`progname.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c progname.c  -fPIC -DPIC -o .libs/libgnupaper_la-progname.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-quotearg.lo `test -f 'quotearg.c' || echo './'`quotearg.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c quotearg.c  -fPIC -DPIC -o .libs/libgnupaper_la-quotearg.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-progreloc.lo `test -f 'progreloc.c' || echo './'`progreloc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c progreloc.c  -fPIC -DPIC -o .libs/libgnupaper_la-progreloc.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-setlocale_null.lo `test -f 'setlocale_null.c' || echo './'`setlocale_null.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c setlocale_null.c  -fPIC -DPIC -o .libs/libgnupaper_la-setlocale_null.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-stat-time.lo `test -f 'stat-time.c' || echo './'`stat-time.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c stat-time.c  -fPIC -DPIC -o .libs/libgnupaper_la-stat-time.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-unistd.lo `test -f 'unistd.c' || echo './'`unistd.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c unistd.c  -fPIC -DPIC -o .libs/libgnupaper_la-unistd.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-wctype-h.lo `test -f 'wctype-h.c' || echo './'`wctype-h.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c wctype-h.c  -fPIC -DPIC -o .libs/libgnupaper_la-wctype-h.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-xmalloc.lo `test -f 'xmalloc.c' || echo './'`xmalloc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xmalloc.c  -fPIC -DPIC -o .libs/libgnupaper_la-xmalloc.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-xalloc-die.lo `test -f 'xalloc-die.c' || echo './'`xalloc-die.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xalloc-die.c  -fPIC -DPIC -o .libs/libgnupaper_la-xalloc-die.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-xreadlink.lo `test -f 'xreadlink.c' || echo './'`xreadlink.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xreadlink.c  -fPIC -DPIC -o .libs/libgnupaper_la-xreadlink.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-xsize.lo `test -f 'xsize.c' || echo './'`xsize.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xsize.c  -fPIC -DPIC -o .libs/libgnupaper_la-xsize.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-xvasprintf.lo `test -f 'xvasprintf.c' || echo './'`xvasprintf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xvasprintf.c  -fPIC -DPIC -o .libs/libgnupaper_la-xvasprintf.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libgnupaper_la-xasprintf.lo `test -f 'xasprintf.c' || echo './'`xasprintf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xasprintf.c  -fPIC -DPIC -o .libs/libgnupaper_la-xasprintf.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o asnprintf.lo asnprintf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c asnprintf.c  -fPIC -DPIC -o .libs/asnprintf.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o printf-args.lo printf-args.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c printf-args.c  -fPIC -DPIC -o .libs/printf-args.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o printf-parse.lo printf-parse.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c printf-parse.c  -fPIC -DPIC -o .libs/printf-parse.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o relocatable.lo relocatable.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c relocatable.c  -fPIC -DPIC -o .libs/relocatable.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o vasnprintf.lo vasnprintf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c vasnprintf.c  -fPIC -DPIC -o .libs/vasnprintf.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o malloc/libgnupaper_la-scratch_buffer_grow.lo `test -f 'malloc/scratch_buffer_grow.c' || echo './'`malloc/scratch_buffer_grow.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c malloc/scratch_buffer_grow.c  -fPIC -DPIC -o malloc/.libs/libgnupaper_la-scratch_buffer_grow.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o malloc/libgnupaper_la-scratch_buffer_grow_preserve.lo `test -f 'malloc/scratch_buffer_grow_preserve.c' || echo './'`malloc/scratch_buffer_grow_preserve.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c malloc/scratch_buffer_grow_preserve.c  -fPIC -DPIC -o malloc/.libs/libgnupaper_la-scratch_buffer_grow_preserve.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../..  -DENABLE_COSTLY_RELOCATABLE  -DINSTALLDIR=\"/usr/lib64\"   -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o malloc/libgnupaper_la-scratch_buffer_set_array_size.lo `test -f 'malloc/scratch_buffer_set_array_size.c' || echo './'`malloc/scratch_buffer_set_array_size.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -DEXEEXT=\"\" -I. -I../.. -DENABLE_COSTLY_RELOCATABLE -DINSTALLDIR=\"/usr/lib64\" -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c malloc/scratch_buffer_set_array_size.c  -fPIC -DPIC -o malloc/.libs/libgnupaper_la-scratch_buffer_set_array_size.o
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[5]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+/bin/sh ../../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -Wno-cast-qual -Wno-conversion -Wno-float-equal -Wno-sign-compare -Wno-undef -Wno-unused-function -Wno-unused-parameter -Wno-float-conversion -Wimplicit-fallthrough -Wno-pedantic -Wno-sign-conversion -Wno-type-limits -Wno-unsuffixed-float-constants -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -no-undefined     -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libgnupaper.la  libgnupaper_la-allocator.lo libgnupaper_la-areadlink.lo libgnupaper_la-basename-lgpl.lo libgnupaper_la-c-ctype.lo libgnupaper_la-c-strcasecmp.lo libgnupaper_la-c-strncasecmp.lo  libgnupaper_la-careadlinkat.lo libgnupaper_la-cloexec.lo    libgnupaper_la-exitfail.lo libgnupaper_la-fcntl.lo libgnupaper_la-fd-hook.lo       libgnupaper_la-getprogname.lo malloc/libgnupaper_la-scratch_buffer_grow.lo malloc/libgnupaper_la-scratch_buffer_grow_preserve.lo malloc/libgnupaper_la-scratch_buffer_set_array_size.lo libgnupaper_la-hard-locale.lo libgnupaper_la-ialloc.lo libgnupaper_la-localcharset.lo libgnupaper_la-malloca.lo libgnupaper_la-mbrtowc.lo       libgnupaper_la-progname.lo libgnupaper_la-quotearg.lo    libgnupaper_la-progreloc.lo libgnupaper_la-setlocale_null.lo   libgnupaper_la-stat-time.lo     libgnupaper_la-unistd.lo libgnupaper_la-wctype-h.lo libgnupaper_la-xmalloc.lo libgnupaper_la-xalloc-die.lo libgnupaper_la-xreadlink.lo libgnupaper_la-xsize.lo libgnupaper_la-xvasprintf.lo libgnupaper_la-xasprintf.lo asnprintf.lo printf-args.lo printf-parse.lo relocatable.lo vasnprintf.lo 
+libtool: link: x86_64-pc-linux-gnu-ar cr .libs/libgnupaper.a .libs/libgnupaper_la-allocator.o .libs/libgnupaper_la-areadlink.o .libs/libgnupaper_la-basename-lgpl.o .libs/libgnupaper_la-c-ctype.o .libs/libgnupaper_la-c-strcasecmp.o .libs/libgnupaper_la-c-strncasecmp.o .libs/libgnupaper_la-careadlinkat.o .libs/libgnupaper_la-cloexec.o .libs/libgnupaper_la-exitfail.o .libs/libgnupaper_la-fcntl.o .libs/libgnupaper_la-fd-hook.o .libs/libgnupaper_la-getprogname.o malloc/.libs/libgnupaper_la-scratch_buffer_grow.o malloc/.libs/libgnupaper_la-scratch_buffer_grow_preserve.o malloc/.libs/libgnupaper_la-scratch_buffer_set_array_size.o .libs/libgnupaper_la-hard-locale.o .libs/libgnupaper_la-ialloc.o .libs/libgnupaper_la-localcharset.o .libs/libgnupaper_la-malloca.o .libs/libgnupaper_la-mbrtowc.o .libs/libgnupaper_la-progname.o .libs/libgnupaper_la-quotearg.o .libs/libgnupaper_la-progreloc.o .libs/libgnupaper_la-setlocale_null.o .libs/libgnupaper_la-stat-time.o .libs/libgnupaper_la-unistd.o .libs/libgnupaper_la-wctype-h.o .libs/libgnupaper_la-xmalloc.o .libs/libgnupaper_la-xalloc-die.o .libs/libgnupaper_la-xreadlink.o .libs/libgnupaper_la-xsize.o .libs/libgnupaper_la-xvasprintf.o .libs/libgnupaper_la-xasprintf.o .libs/asnprintf.o .libs/printf-args.o .libs/printf-parse.o .libs/relocatable.o .libs/vasnprintf.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib .libs/libgnupaper.a
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libgnupaper.la" &amp;&amp; ln -s "../libgnupaper.la" "libgnupaper.la" )
+make[5]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src/libgnu'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -DINSTALLDIR=\"/usr/bin\" -I../src/libgnu -I../src/libgnu -I../lib -I../lib -DREAL_INSTALLPREFIX="\"/usr\""   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o paper-paper.o `test -f 'paper.c' || echo './'`paper.c
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -I../src/libgnu -I../src/libgnu -I../lib -I../lib -DREAL_INSTALLPREFIX="\"/usr\""   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o paperconf.o paperconf.c
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe `".././build-aux//reloc-ldflags" "x86_64-pc-linux-gnu" "/usr/lib64" /usr/bin` -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o paper paper-paper.o ../lib/libpaper.la ../src/libgnu/libgnupaper.la     
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-rpath -Wl,\$ORIGIN/../lib64 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/paper paper-paper.o  ../lib/.libs/libpaper.so ../src/libgnu/.libs/libgnupaper.a
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o paperconf paperconf.o ../lib/libpaper.la ../src/libgnu/libgnupaper.la     
+libtool: link: x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/paperconf paperconf.o  ../lib/.libs/libpaper.so ../src/libgnu/.libs/libgnupaper.a
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+Making all in man
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+sed -e 's|@sysconfdir[@]|/etc|'g &lt; ./paper.1.in &gt; paper.1-t &amp;&amp; mv paper.1-t paper.1
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+sed -e 's|@sysconfdir[@]|/etc|'g &lt; ./paperspecs.5.in &gt; paperspecs.5-t &amp;&amp; mv paperspecs.5-t paperspecs.5
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+Making all in tests
+make[2]: Nothing to be done for 'all'.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: app-text/libpaper-2.1.3
+
+&gt;&gt;&gt; Install app-text/libpaper-2.1.3 into /var/tmp/portage/app-text/libpaper-2.1.3/image
+make -j2 DESTDIR=/var/tmp/portage/app-text/libpaper-2.1.3/image install 
+Making install in libgnu
+make  install-recursive
+make[4]: Nothing to be done for 'install-exec-am'.
+Making install in lib
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+ /bin/mkdir -p '/var/tmp/portage/app-text/libpaper-2.1.3/image/etc'
+ /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c -m 644 paperspecs '/var/tmp/portage/app-text/libpaper-2.1.3/image/etc'
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+ /bin/mkdir -p '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/lib64'
+ /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c   libpaper.la '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c .libs/libpaper.so.2.1.3 /var/tmp/portage/app-text/libpaper-2.1.3/image/usr/lib64/libpaper.so.2.1.3
+libtool: install: (cd /var/tmp/portage/app-text/libpaper-2.1.3/image/usr/lib64 &amp;&amp; { ln -s -f libpaper.so.2.1.3 libpaper.so.2 || { rm -f libpaper.so.2 &amp;&amp; ln -s libpaper.so.2.1.3 libpaper.so.2; }; })
+libtool: install: (cd /var/tmp/portage/app-text/libpaper-2.1.3/image/usr/lib64 &amp;&amp; { ln -s -f libpaper.so.2.1.3 libpaper.so || { rm -f libpaper.so &amp;&amp; ln -s libpaper.so.2.1.3 libpaper.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c .libs/libpaper.lai /var/tmp/portage/app-text/libpaper-2.1.3/image/usr/lib64/libpaper.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+ /bin/mkdir -p '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/include'
+ /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c -m 644 paper.h '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/include'
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/lib'
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in src
+Making install in libgnu
+make  install-recursive
+make[5]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+ /bin/mkdir -p '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/bin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c paper paperconf '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/bin'
+libtool: warning: '../lib/libpaper.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c .libs/paper /var/tmp/portage/app-text/libpaper-2.1.3/image/usr/bin/paper
+libtool: warning: '../lib/libpaper.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c .libs/paperconf /var/tmp/portage/app-text/libpaper-2.1.3/image/usr/bin/paperconf
+make[3]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/src'
+Making install in man
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+ /bin/mkdir -p '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c -m 644 paper.1 '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/share/man/man1'
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+ /bin/mkdir -p '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/share/man/man5'
+ /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c -m 644 paperspecs.5 '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/share/man/man5'
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3/man'
+Making install in tests
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3'
+ /bin/mkdir -p '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/share/doc/libpaper-2.1.3'
+ /var/tmp/portage/._portage_reinstall_.tpt13kbo/bin/ebuild-helpers/xattr/install -c -m 644 README '/var/tmp/portage/app-text/libpaper-2.1.3/image/usr/share/doc/libpaper-2.1.3'
+make[2]: Leaving directory '/var/tmp/portage/app-text/libpaper-2.1.3/work/libpaper-2.1.3'
+&gt;&gt;&gt; Completed installing app-text/libpaper-2.1.3 into /var/tmp/portage/app-text/libpaper-2.1.3/image
+
+ <span class="ansi32">*</span> Final size of build directory: 9752 KiB (9.5 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   180 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libpaper.so.2.1.3
+   /usr/bin/paper
+   /usr/bin/paperconf
+
+</pre>
+</body>
+
+</html>
