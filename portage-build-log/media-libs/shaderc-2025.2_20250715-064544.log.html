@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/shaderc-2025.2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: vulkan@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Checking whether python3_14 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi31">!!</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Checking whether python3_13 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.13 to build (via PYTHON_COMPAT iteration)
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking shaderc-2025.2.tar.gz to /var/tmp/portage/media-libs/shaderc-2025.2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/shaderc-2025.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build"
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Hardcoded definition(s) removed in CMakeLists.txt:
+ <span class="ansi32">*</span>   set(CMAKE_BUILD_TYPE "Debug")
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64"
+cmake -C /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DSHADERC_SKIP_TESTS=true -DSHADERC_ENABLE_WERROR_COMPILE=false -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/gentoo_toolchain.cmake /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2
+loading initial cache file /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/gentoo_common_config.cmake
+-- The C compiler identification is GNU 14.3.0
+-- The CXX compiler identification is GNU 14.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/x86_64-pc-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Shaderc: build type is "RelWithDebInfo".
+-- Configuring Shaderc to avoid building tests.
+-- Configuring Shaderc to build examples.
+-- Configuring Shaderc to check copyrights.
+-- asciidoctor was not found - no documentation will be generated
+-- Found Python: /var/tmp/portage/media-libs/shaderc-2025.2/temp/python3.13/bin/python3 (found version "3.13.5") found components: Interpreter
+-- Performing Test COMPILER_SUPPORTS_FALLTHROUGH_WARNING
+-- Performing Test COMPILER_SUPPORTS_FALLTHROUGH_WARNING - Success
+-- Performing Test COMPILER_SUPPORTS_EXTRA_SEMI_WARNING
+-- Performing Test COMPILER_SUPPORTS_EXTRA_SEMI_WARNING - Success
+-- Performing Test COMPILER_SUPPORTS_PIC
+-- Performing Test COMPILER_SUPPORTS_PIC - Success
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- &lt;&lt;&lt; Gentoo configuration &gt;&gt;&gt;
+Build type      RelWithDebInfo
+Install path    /usr
+Compiler flags:
+C               -O3 -march=native -mtune=native -fomit-frame-pointer -pipe
+C++             -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough
+Linker flags:
+Executable      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Module          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Shared          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+
+-- Configuring done (3.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64"
+ninja -v -j2 -l2
+[1/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/args.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/args.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/args.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/args.cc
+[2/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/compiler.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/compiler.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/compiler.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/compiler.cc
+[3/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/file_finder.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/file_finder.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/file_finder.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/file_finder.cc
+[4/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/io_shaderc.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/io_shaderc.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/io_shaderc.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/io_shaderc.cc
+[5/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/message.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/message.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/message.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/message.cc
+[6/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/resources.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/resources.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/resources.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/resources.cc
+[7/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/shader_stage.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/shader_stage.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/shader_stage.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/shader_stage.cc
+[8/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/spirv_tools_wrapper.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/spirv_tools_wrapper.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/spirv_tools_wrapper.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/spirv_tools_wrapper.cc
+[9/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DENABLE_HLSL -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc_util/CMakeFiles/shaderc_util.dir/src/version_profile.cc.o -MF libshaderc_util/CMakeFiles/shaderc_util.dir/src/version_profile.cc.o.d -o libshaderc_util/CMakeFiles/shaderc_util.dir/src/version_profile.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/src/version_profile.cc
+[10/29] : &amp;&amp; /usr/bin/cmake -E rm -f libshaderc_util/libshaderc_util.a &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ar qc libshaderc_util/libshaderc_util.a  libshaderc_util/CMakeFiles/shaderc_util.dir/src/args.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/compiler.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/file_finder.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/io_shaderc.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/message.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/resources.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/shader_stage.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/spirv_tools_wrapper.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/version_profile.cc.o &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ranlib libshaderc_util/libshaderc_util.a &amp;&amp; :
+[11/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include -I/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc/CMakeFiles/shaderc.dir/src/shaderc.cc.o -MF libshaderc/CMakeFiles/shaderc.dir/src/shaderc.cc.o.d -o libshaderc/CMakeFiles/shaderc.dir/src/shaderc.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/src/shaderc.cc
+[12/29] : &amp;&amp; /usr/bin/cmake -E rm -f libshaderc/libshaderc.a &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ar qc libshaderc/libshaderc.a  libshaderc/CMakeFiles/shaderc.dir/src/shaderc.cc.o &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ranlib libshaderc/libshaderc.a &amp;&amp; :
+[13/29] /usr/bin/x86_64-pc-linux-gnu-g++ -DSHADERC_IMPLEMENTATION -DSHADERC_SHAREDLIB -Dshaderc_shared_EXPORTS -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include -I/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -fPIC -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT libshaderc/CMakeFiles/shaderc_shared.dir/src/shaderc.cc.o -MF libshaderc/CMakeFiles/shaderc_shared.dir/src/shaderc.cc.o.d -o libshaderc/CMakeFiles/shaderc_shared.dir/src/shaderc.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/src/shaderc.cc
+[14/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT glslc/CMakeFiles/glslc.dir/src/file_compiler.cc.o -MF glslc/CMakeFiles/glslc.dir/src/file_compiler.cc.o.d -o glslc/CMakeFiles/glslc.dir/src/file_compiler.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/glslc/src/file_compiler.cc
+[15/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT glslc/CMakeFiles/glslc.dir/src/file.cc.o -MF glslc/CMakeFiles/glslc.dir/src/file.cc.o.d -o glslc/CMakeFiles/glslc.dir/src/file.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/glslc/src/file.cc
+[16/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT glslc/CMakeFiles/glslc.dir/src/file_includer.cc.o -MF glslc/CMakeFiles/glslc.dir/src/file_includer.cc.o.d -o glslc/CMakeFiles/glslc.dir/src/file_includer.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/glslc/src/file_includer.cc
+[17/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT glslc/CMakeFiles/glslc.dir/src/resource_parse.cc.o -MF glslc/CMakeFiles/glslc.dir/src/resource_parse.cc.o.d -o glslc/CMakeFiles/glslc.dir/src/resource_parse.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/glslc/src/resource_parse.cc
+[18/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT glslc/CMakeFiles/glslc.dir/src/shader_stage.cc.o -MF glslc/CMakeFiles/glslc.dir/src/shader_stage.cc.o.d -o glslc/CMakeFiles/glslc.dir/src/shader_stage.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/glslc/src/shader_stage.cc
+[19/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT glslc/CMakeFiles/glslc.dir/src/dependency_info.cc.o -MF glslc/CMakeFiles/glslc.dir/src/dependency_info.cc.o.d -o glslc/CMakeFiles/glslc.dir/src/dependency_info.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/glslc/src/dependency_info.cc
+[20/29] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-g++ -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs   -Wl,--dependency-file=libshaderc/CMakeFiles/shaderc_shared.dir/link.d -shared -Wl,-soname,libshaderc_shared.so.1 -o libshaderc/libshaderc_shared.so.1 libshaderc/CMakeFiles/shaderc_shared.dir/src/shaderc.cc.o  -lglslang  libshaderc_util/libshaderc_util.a  -lSPIRV  -lSPIRV-Tools  -lglslang  -lSPIRV  -lSPIRV-Tools-opt &amp;&amp; :
+[21/29] : &amp;&amp; /usr/bin/cmake -E rm -f glslc/libglslc.a &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ar qc glslc/libglslc.a  glslc/CMakeFiles/glslc.dir/src/file_compiler.cc.o glslc/CMakeFiles/glslc.dir/src/file.cc.o glslc/CMakeFiles/glslc.dir/src/file_includer.cc.o glslc/CMakeFiles/glslc.dir/src/resource_parse.cc.o glslc/CMakeFiles/glslc.dir/src/shader_stage.cc.o glslc/CMakeFiles/glslc.dir/src/dependency_info.cc.o &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ranlib glslc/libglslc.a &amp;&amp; :
+[22/29] /usr/bin/x86_64-pc-linux-gnu-g++  -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/glslc/.. -I/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc_util/include -I/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/libshaderc/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wextra-semi -Wall -fvisibility=hidden -fPIC -MD -MT glslc/CMakeFiles/glslc_exe.dir/src/main.cc.o -MF glslc/CMakeFiles/glslc_exe.dir/src/main.cc.o.d -o glslc/CMakeFiles/glslc_exe.dir/src/main.cc.o -c /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/glslc/src/main.cc
+[23/29] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2 &amp;&amp; /var/tmp/portage/media-libs/shaderc-2025.2/temp/python3.13/bin/python3 /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/utils/add_copyright.py --check
+[24/29] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -DCHANGES_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/CHANGES -DTEMPLATE_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/shaderc.pc.in -DOUT_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/shaderc.pc -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib64 -DCMAKE_INSTALL_INCLUDEDIR=include -DLIBS=-lshaderc_shared -P /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/write_pkg_config.cmake
+[25/29] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -DCHANGES_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/CHANGES -DTEMPLATE_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/shaderc_static.pc.in -DOUT_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/shaderc_static.pc -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib64 -DCMAKE_INSTALL_INCLUDEDIR=include -DLIBS=-lshaderc\ \ -lshaderc_util -P /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/write_pkg_config.cmake
+[26/29] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -DCHANGES_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/CHANGES -DTEMPLATE_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/shaderc_combined.pc.in -DOUT_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/shaderc_combined.pc -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib64 -DCMAKE_INSTALL_INCLUDEDIR=include -DLIBS=-lshaderc_combined -P /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/write_pkg_config.cmake
+[27/29] /usr/bin/cmake -E cmake_symlink_library libshaderc/libshaderc_shared.so.1 libshaderc/libshaderc_shared.so.1 libshaderc/libshaderc_shared.so &amp;&amp; :
+[28/29] : &amp;&amp; /usr/bin/cmake -E rm -f libshaderc/libshaderc_combined.a &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ar qc libshaderc/libshaderc_combined.a  libshaderc_util/CMakeFiles/shaderc_util.dir/src/args.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/compiler.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/file_finder.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/io_shaderc.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/message.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/resources.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/shader_stage.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/spirv_tools_wrapper.cc.o libshaderc_util/CMakeFiles/shaderc_util.dir/src/version_profile.cc.o libshaderc/CMakeFiles/shaderc.dir/src/shaderc.cc.o &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-ranlib libshaderc/libshaderc_combined.a &amp;&amp; :
+[29/29] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-g++ -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wimplicit-fallthrough -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs     -Wl,--dependency-file=glslc/CMakeFiles/glslc_exe.dir/link.d glslc/CMakeFiles/glslc_exe.dir/src/main.cc.o -o glslc/glslc  glslc/libglslc.a  libshaderc_util/libshaderc_util.a  libshaderc/libshaderc.a  libshaderc_util/libshaderc_util.a  -lSPIRV-Tools-opt  -lSPIRV-Tools  -lglslang  -lSPIRV &amp;&amp; :
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: media-libs/shaderc-2025.2
+
+&gt;&gt;&gt; Install media-libs/shaderc-2025.2 into /var/tmp/portage/media-libs/shaderc-2025.2/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64"
+ninja -v -j2 -l2 install
+[1/5] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2 &amp;&amp; /var/tmp/portage/media-libs/shaderc-2025.2/temp/python3.13/bin/python3 /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/utils/add_copyright.py --check
+[2/5] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -DCHANGES_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/CHANGES -DTEMPLATE_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/shaderc.pc.in -DOUT_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/shaderc.pc -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib64 -DCMAKE_INSTALL_INCLUDEDIR=include -DLIBS=-lshaderc_shared -P /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/write_pkg_config.cmake
+[3/5] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -DCHANGES_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/CHANGES -DTEMPLATE_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/shaderc_static.pc.in -DOUT_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/shaderc_static.pc -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib64 -DCMAKE_INSTALL_INCLUDEDIR=include -DLIBS=-lshaderc\ \ -lshaderc_util -P /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/write_pkg_config.cmake
+[4/5] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -DCHANGES_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/CHANGES -DTEMPLATE_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/shaderc_combined.pc.in -DOUT_FILE=/var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64/shaderc_combined.pc -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib64 -DCMAKE_INSTALL_INCLUDEDIR=include -DLIBS=-lshaderc_combined -P /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2/cmake/write_pkg_config.cmake
+[4/5] cd /var/tmp/portage/media-libs/shaderc-2025.2/work/shaderc-2025.2_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/include/shaderc/env.h
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/include/shaderc/status.h
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/include/shaderc/visibility.h
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/include/shaderc/shaderc.h
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/include/shaderc/shaderc.hpp
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/lib64/libshaderc.a
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/lib64/libshaderc_shared.so.1
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/lib64/libshaderc_shared.so
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/lib64/libshaderc_combined.a
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/bin/glslc
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/lib64/pkgconfig/shaderc.pc
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/lib64/pkgconfig/shaderc_static.pc
+-- Installing: /var/tmp/portage/media-libs/shaderc-2025.2/image/usr/lib64/pkgconfig/shaderc_combined.pc
+&gt;&gt;&gt; Completed installing media-libs/shaderc-2025.2 into /var/tmp/portage/media-libs/shaderc-2025.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3980 KiB (3.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   892 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libshaderc.a
+   /usr/lib64/libshaderc_shared.so.1
+   /usr/lib64/libshaderc_combined.a
+   /usr/bin/glslc
+
+</pre>
+</body>
+
+</html>

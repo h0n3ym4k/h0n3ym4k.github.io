@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-apps/keyutils-1.6.3-r1:0/1.9
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: robbat2@gentoo.org base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.12.31-gentoo-x86_64
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking keyutils-1.6.3.tar.gz to /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/work/keyutils-1.6.3 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/work/keyutils-1.6.3
+ <span class="ansi32">*</span> abi_x86_64.amd64: copying to /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/work/keyutils-1.6.3-abi_x86_64.amd64
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/work/keyutils-1.6.3 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/work/keyutils-1.6.3 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+make -j2 PREFIX=/usr ETCDIR=/etc BINDIR=/bin SBINDIR=/sbin SHAREDIR=/usr/share/keyutils MANDIR=/usr/share/man INCLUDEDIR=/usr/include LIBDIR=/usr/lib64 USRLIBDIR=/usr/lib64 'CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' 'CXXFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' RPATH= BUILDFOR= NO_ARLIB=1 
+x86_64-pc-linux-gnu-gcc -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o keyctl_testing.o -c keyctl_testing.c
+x86_64-pc-linux-gnu-gcc -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o keyctl.o -c keyctl.c
+x86_64-pc-linux-gnu-gcc -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o keyctl_watch.o -c keyctl_watch.c
+x86_64-pc-linux-gnu-gcc -I. -DPKGBUILD="\"2025-07-14\"" -DPKGVERSION="\"keyutils-1.6.3\"" -DAPIVERSION="\"libkeyutils-1.10\"" -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -o keyutils.os -c keyutils.c
+x86_64-pc-linux-gnu-gcc -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o request-key.o -c request-key.c
+x86_64-pc-linux-gnu-gcc -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o key.dns_resolver.o -c key.dns_resolver.c
+x86_64-pc-linux-gnu-gcc -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o dns.afsdb.o -c dns.afsdb.c
+x86_64-pc-linux-gnu-g++ -I. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -x c++-header -fsyntax-only keyutils.h
+touch cxx.stamp
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -Wl,-soname,libkeyutils.so.1 -Wl,--version-script,version.lds -o libkeyutils.so.1.10 keyutils.os 
+ln -sf libkeyutils.so.1.10 libkeyutils.so.1
+ln -sf libkeyutils.so.1 libkeyutils.so
+x86_64-pc-linux-gnu-gcc -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -o keyctl \
+	keyctl.o keyctl_testing.o keyctl_watch.o -lkeyutils
+x86_64-pc-linux-gnu-gcc -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -o request-key request-key.o -lkeyutils
+x86_64-pc-linux-gnu-gcc -L. -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  -o key.dns_resolver \
+	key.dns_resolver.o dns.afsdb.o -lkeyutils -lresolv
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-apps/keyutils-1.6.3-r1
+
+&gt;&gt;&gt; Install sys-apps/keyutils-1.6.3-r1 into /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+make -j2 PREFIX=/usr ETCDIR=/etc BINDIR=/bin SBINDIR=/sbin SHAREDIR=/usr/share/keyutils MANDIR=/usr/share/man INCLUDEDIR=/usr/include LIBDIR=/usr/lib64 USRLIBDIR=/usr/lib64 'CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' 'CXXFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' RPATH= BUILDFOR= NO_ARLIB=1 DESTDIR=/var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image install 
+install -D libkeyutils.so.1.10 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/lib64/libkeyutils.so.1.10
+ln -sf libkeyutils.so.1.10 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/lib64/libkeyutils.so.1
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/lib64
+ln -sf libkeyutils.so.1 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/lib64/libkeyutils.so
+sed \
+-e 's,@VERSION\@,1.6.3,g' \
+-e 's,@prefix\@,/usr,g' \
+-e 's,@exec_prefix\@,/usr,g' \
+-e 's,@libdir\@,/usr/lib64,g' \
+-e 's,@includedir\@,/usr/include,g' \
+&lt; libkeyutils.pc.in &gt; libkeyutils.pc || rm libkeyutils.pc
+install -D libkeyutils.pc /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/lib64/pkgconfig/libkeyutils.pc
+rm libkeyutils.pc
+install -D keyctl /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/bin/keyctl
+install -D request-key /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/sbin/request-key
+install -D request-key-debug.sh /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/keyutils/request-key-debug.sh
+install -D key.dns_resolver /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/sbin/key.dns_resolver
+install -D -m 0644 request-key.conf /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/etc/request-key.conf
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/etc/request-key.d
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/etc/keyutils
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man1
+install -m 0644 man/keyctl.1 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man1
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3
+install -m 0644 man/find_key_by_type_and_name.3 man/keyctl.3 man/keyctl_capabilities.3 man/keyctl_chown.3 man/keyctl_clear.3 man/keyctl_describe.3 man/keyctl_dh_compute.3 man/keyctl_get_keyring_ID.3 man/keyctl_get_persistent.3 man/keyctl_get_security.3 man/keyctl_instantiate.3 man/keyctl_invalidate.3 man/keyctl_join_session_keyring.3 man/keyctl_link.3 man/keyctl_move.3 man/keyctl_pkey_decrypt.3 man/keyctl_pkey_encrypt.3 man/keyctl_pkey_query.3 man/keyctl_pkey_sign.3 man/keyctl_pkey_verify.3 man/keyctl_read.3 man/keyctl_restrict_keyring.3 man/keyctl_revoke.3 man/keyctl_search.3 man/keyctl_session_to_parent.3 man/keyctl_set_reqkey_keyring.3 man/keyctl_set_timeout.3 man/keyctl_setperm.3 man/keyctl_update.3 man/keyctl_watch_key.3 man/recursive_key_scan.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man5
+install -m 0644 man/key.dns_resolver.conf.5 man/request-key.conf.5 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man5
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man7
+install -m 0644 man/asymmetric-key.7 man/keyutils.7 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man7
+mkdir -p /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man8
+install -m 0644 man/key.dns_resolver.8 man/request-key.8 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man8
+ln -sf keyctl_describe.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_describe_alloc.3
+ln -sf keyctl_get_security.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_get_security_alloc.3
+ln -sf keyctl_instantiate.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_instantiate_iov.3
+ln -sf keyctl_instantiate.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_reject.3
+ln -sf keyctl_instantiate.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_negate.3
+ln -sf keyctl_instantiate.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_assume_authority.3
+ln -sf keyctl_link.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_unlink.3
+ln -sf keyctl_read.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_read_alloc.3
+ln -sf recursive_key_scan.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/recursive_session_key_scan.3
+ln -sf keyctl_dh_compute.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_dh_compute_alloc.3
+ln -sf keyctl_dh_compute.3 /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/share/man/man3/keyctl_dh_compute_kdf.3
+install -D -m 0644 keyutils.h /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image/usr/include/keyutils.h
+&gt;&gt;&gt; Completed installing sys-apps/keyutils-1.6.3-r1 into /var/tmp/portage/sys-apps/keyutils-1.6.3-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3140 KiB (3.0 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   496 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /bin/keyctl
+   /usr/lib64/libkeyutils.so.1.10
+   /sbin/request-key
+   /sbin/key.dns_resolver
+
+</pre>
+</body>
+
+</html>

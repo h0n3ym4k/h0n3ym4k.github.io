@@ -1,0 +1,1276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-firewall/iptables-1.8.11-r1:0/1.8.3
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking iptables-1.8.11.tar.xz to /var/tmp/portage/net-firewall/iptables-1.8.11-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-firewall/iptables-1.8.11-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Running eautoreconf in '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11' ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: iptables-1.8.11/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: iptables-1.8.11/build-aux/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying portage/1.2.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying sed/1.5.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying as-needed/2.5.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying verbose-pic/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying clang-runtime-ltmain/2.4.7 patch ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11 ...
+ * econf: updating iptables-1.8.11/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating iptables-1.8.11/build-aux/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating iptables-1.8.11/build-aux/config.sub with /usr/share/gnuconfig/config.sub
+ * econf: updating iptables-1.8.11/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/iptables-1.8.11-r1 --htmldir=/usr/share/doc/iptables-1.8.11-r1/html --with-sysroot=/ --libdir=/usr/lib64 --sbindir=/sbin --libexecdir=/lib64 --enable-devel --enable-ipv6 --enable-shared --disable-connlabel --disable-nftables --disable-libnfnetlink --disable-bpf-compiler --disable-nfsynproxy --disable-static
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking the archiver (x86_64-pc-linux-gnu-ar) interface... ar
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking for x86_64-pc-linux-gnu-ar... (cached) x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64 knows -Wl,--no-undefined... yes
+checking for linux/dccp.h... yes
+checking for linux/ip_vs.h... yes
+checking for linux/magic.h... yes
+checking for linux/proc_fs.h... no
+checking for linux/bpf.h... yes
+checking size of struct ip6_hdr... 40
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether the build is using musl-libc... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating extensions/GNUmakefile
+config.status: creating include/Makefile
+config.status: creating iptables/Makefile
+config.status: creating iptables/xtables.pc
+config.status: creating iptables/iptables.8
+config.status: creating iptables/iptables-extensions.8.tmpl
+config.status: creating iptables/iptables-save.8
+config.status: creating iptables/iptables-restore.8
+config.status: creating iptables/iptables-apply.8
+config.status: creating iptables/iptables-xml.1
+config.status: creating libipq/Makefile
+config.status: creating libipq/libipq.pc
+config.status: creating libiptc/Makefile
+config.status: creating libiptc/libiptc.pc
+config.status: creating libiptc/libip4tc.pc
+config.status: creating libiptc/libip6tc.pc
+config.status: creating libxtables/Makefile
+config.status: creating utils/Makefile
+config.status: creating include/xtables-version.h
+config.status: creating iptables/xtables-monitor.8
+config.status: creating utils/nfnl_osf.8
+config.status: creating utils/nfbpf_compile.8
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+Iptables Configuration:
+  IPv4 support:				yes
+  IPv6 support:				yes
+  Devel support:			yes
+  IPQ support:				no
+  Large file support:			yes
+  BPF utils support:			no
+  nfsynproxy util support:		no
+  nftables support:			no
+  connlabel support:			no
+  profiling support:			no
+
+Build parameters:
+  Put plugins into executable (static):	no
+  Support plugins via dlopen (shared):	yes
+  Installation prefix (--prefix):	/usr
+  Xtables extension directory:		/usr/lib64/xtables
+  Pkg-config directory:			/usr/lib64/pkgconfig
+  Xtables lock file:			/run/xtables.lock
+  Build against musl-libc:		no
+  Host:					x86_64-pc-linux-gnu
+  GCC binary:				x86_64-pc-linux-gnu-gcc
+
+Iptables modules that will not be built:  connlabel
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11 ...
+make -j2 V=1 
+make  all-recursive
+Making all in libiptc
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include   -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libip4tc.lo libip4tc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c libip4tc.c  -fPIC -DPIC -o .libs/libip4tc.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include   -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libip6tc.lo libip6tc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c libip6tc.c  -fPIC -DPIC -o .libs/libip6tc.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -version-info 2:0:0 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libip4tc.la -rpath /usr/lib64 libip4tc.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libip4tc.o   -Wl,--as-needed  -O3 -march=native -mtune=native -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libip4tc.so.2 -o .libs/libip4tc.so.2.0.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libip4tc.so.2" &amp;&amp; ln -s "libip4tc.so.2.0.0" "libip4tc.so.2")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libip4tc.so" &amp;&amp; ln -s "libip4tc.so.2.0.0" "libip4tc.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libip4tc.la" &amp;&amp; ln -s "../libip4tc.la" "libip4tc.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -version-info 2:0:0 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libip6tc.la -rpath /usr/lib64 libip6tc.lo  
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libip6tc.o   -Wl,--as-needed  -O3 -march=native -mtune=native -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libip6tc.so.2 -o .libs/libip6tc.so.2.0.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libip6tc.so.2" &amp;&amp; ln -s "libip6tc.so.2.0.0" "libip6tc.so.2")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libip6tc.so" &amp;&amp; ln -s "libip6tc.so.2.0.0" "libip6tc.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libip6tc.la" &amp;&amp; ln -s "../libip6tc.la" "libip6tc.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+Making all in libxtables
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I../iptables -I..   -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxtables_la-xtables.lo `test -f 'xtables.c' || echo './'`xtables.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I../iptables -I.. -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xtables.c  -fPIC -DPIC -o .libs/libxtables_la-xtables.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I../iptables -I..   -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxtables_la-xtoptions.lo `test -f 'xtoptions.c' || echo './'`xtoptions.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I../iptables -I.. -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c xtoptions.c  -fPIC -DPIC -o .libs/libxtables_la-xtoptions.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I../iptables -I..   -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o libxtables_la-getethertype.lo `test -f 'getethertype.c' || echo './'`getethertype.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT -DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I../iptables -I.. -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c getethertype.c  -fPIC -DPIC -o .libs/libxtables_la-getethertype.o
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -version-info 19:0:7 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libxtables.la -rpath /usr/lib64 libxtables_la-xtables.lo libxtables_la-xtoptions.lo libxtables_la-getethertype.lo  -ldl 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/libxtables_la-xtables.o .libs/libxtables_la-xtoptions.o .libs/libxtables_la-getethertype.o   -Wl,--as-needed -ldl  -O3 -march=native -mtune=native -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libxtables.so.12 -o .libs/libxtables.so.12.7.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libxtables.so.12" &amp;&amp; ln -s "libxtables.so.12.7.0" "libxtables.so.12")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libxtables.so" &amp;&amp; ln -s "libxtables.so.12.7.0" "libxtables.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libxtables.la" &amp;&amp; ln -s "../libxtables.la" "libxtables.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+Making all in include
+make[2]: Nothing to be done for 'all'.
+Making all in utils
+make[2]: Nothing to be done for 'all'.
+Making all in extensions
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_AUDIT.oo.d,-MT,libxt_AUDIT.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_AUDIT_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_AUDIT.oo -c libxt_AUDIT.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_CHECKSUM.oo.d,-MT,libxt_CHECKSUM.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_CHECKSUM_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_CHECKSUM.oo -c libxt_CHECKSUM.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_CLASSIFY.oo.d,-MT,libxt_CLASSIFY.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_CLASSIFY_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_CLASSIFY.oo -c libxt_CLASSIFY.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_CONNMARK.oo.d,-MT,libxt_CONNMARK.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_CONNMARK_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_CONNMARK.oo -c libxt_CONNMARK.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_CONNSECMARK.oo.d,-MT,libxt_CONNSECMARK.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_CONNSECMARK_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_CONNSECMARK.oo -c libxt_CONNSECMARK.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_CT.oo.d,-MT,libxt_CT.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_CT_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_CT.oo -c libxt_CT.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_DSCP.oo.d,-MT,libxt_DSCP.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_DSCP_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_DSCP.oo -c libxt_DSCP.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_HMARK.oo.d,-MT,libxt_HMARK.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_HMARK_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_HMARK.oo -c libxt_HMARK.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_IDLETIMER.oo.d,-MT,libxt_IDLETIMER.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_IDLETIMER_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_IDLETIMER.oo -c libxt_IDLETIMER.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_LED.oo.d,-MT,libxt_LED.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_LED_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_LED.oo -c libxt_LED.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_LOG.oo.d,-MT,libxt_LOG.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_LOG_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_LOG.oo -c libxt_LOG.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_MARK.oo.d,-MT,libxt_MARK.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_MARK_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_MARK.oo -c libxt_MARK.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_NAT.oo.d,-MT,libxt_NAT.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_NAT_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_NAT.oo -c libxt_NAT.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_NFLOG.oo.d,-MT,libxt_NFLOG.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_NFLOG_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_NFLOG.oo -c libxt_NFLOG.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_NFQUEUE.oo.d,-MT,libxt_NFQUEUE.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_NFQUEUE_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_NFQUEUE.oo -c libxt_NFQUEUE.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_RATEEST.oo.d,-MT,libxt_RATEEST.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_RATEEST_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_RATEEST.oo -c libxt_RATEEST.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_SECMARK.oo.d,-MT,libxt_SECMARK.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_SECMARK_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_SECMARK.oo -c libxt_SECMARK.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_SET.oo.d,-MT,libxt_SET.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_SET_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_SET.oo -c libxt_SET.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_SYNPROXY.oo.d,-MT,libxt_SYNPROXY.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_SYNPROXY_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_SYNPROXY.oo -c libxt_SYNPROXY.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_TCPMSS.oo.d,-MT,libxt_TCPMSS.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_TCPMSS_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_TCPMSS.oo -c libxt_TCPMSS.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_TCPOPTSTRIP.oo.d,-MT,libxt_TCPOPTSTRIP.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_TCPOPTSTRIP_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_TCPOPTSTRIP.oo -c libxt_TCPOPTSTRIP.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_TEE.oo.d,-MT,libxt_TEE.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_TEE_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_TEE.oo -c libxt_TEE.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_TOS.oo.d,-MT,libxt_TOS.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_TOS_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_TOS.oo -c libxt_TOS.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_TPROXY.oo.d,-MT,libxt_TPROXY.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_TPROXY_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_TPROXY.oo -c libxt_TPROXY.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_TRACE.oo.d,-MT,libxt_TRACE.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_TRACE_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_TRACE.oo -c libxt_TRACE.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_addrtype.oo.d,-MT,libxt_addrtype.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_addrtype_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_addrtype.oo -c libxt_addrtype.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_bpf.oo.d,-MT,libxt_bpf.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_bpf_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_bpf.oo -c libxt_bpf.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_cgroup.oo.d,-MT,libxt_cgroup.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_cgroup_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_cgroup.oo -c libxt_cgroup.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_cluster.oo.d,-MT,libxt_cluster.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_cluster_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_cluster.oo -c libxt_cluster.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_comment.oo.d,-MT,libxt_comment.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_comment_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_comment.oo -c libxt_comment.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_connbytes.oo.d,-MT,libxt_connbytes.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_connbytes_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_connbytes.oo -c libxt_connbytes.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_connlimit.oo.d,-MT,libxt_connlimit.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_connlimit_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_connlimit.oo -c libxt_connlimit.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_connmark.oo.d,-MT,libxt_connmark.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_connmark_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_connmark.oo -c libxt_connmark.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_conntrack.oo.d,-MT,libxt_conntrack.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_conntrack_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_conntrack.oo -c libxt_conntrack.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_cpu.oo.d,-MT,libxt_cpu.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_cpu_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_cpu.oo -c libxt_cpu.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_dccp.oo.d,-MT,libxt_dccp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_dccp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_dccp.oo -c libxt_dccp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_devgroup.oo.d,-MT,libxt_devgroup.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_devgroup_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_devgroup.oo -c libxt_devgroup.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_dscp.oo.d,-MT,libxt_dscp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_dscp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_dscp.oo -c libxt_dscp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_ecn.oo.d,-MT,libxt_ecn.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_ecn_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_ecn.oo -c libxt_ecn.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_esp.oo.d,-MT,libxt_esp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_esp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_esp.oo -c libxt_esp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_hashlimit.oo.d,-MT,libxt_hashlimit.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_hashlimit_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_hashlimit.oo -c libxt_hashlimit.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_helper.oo.d,-MT,libxt_helper.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_helper_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_helper.oo -c libxt_helper.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_ipcomp.oo.d,-MT,libxt_ipcomp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_ipcomp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_ipcomp.oo -c libxt_ipcomp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_iprange.oo.d,-MT,libxt_iprange.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_iprange_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_iprange.oo -c libxt_iprange.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_ipvs.oo.d,-MT,libxt_ipvs.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_ipvs_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_ipvs.oo -c libxt_ipvs.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_length.oo.d,-MT,libxt_length.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_length_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_length.oo -c libxt_length.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_limit.oo.d,-MT,libxt_limit.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_limit_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_limit.oo -c libxt_limit.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_mac.oo.d,-MT,libxt_mac.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_mac_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_mac.oo -c libxt_mac.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_mark.oo.d,-MT,libxt_mark.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_mark_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_mark.oo -c libxt_mark.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_multiport.oo.d,-MT,libxt_multiport.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_multiport_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_multiport.oo -c libxt_multiport.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_nfacct.oo.d,-MT,libxt_nfacct.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_nfacct_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_nfacct.oo -c libxt_nfacct.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_osf.oo.d,-MT,libxt_osf.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_osf_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_osf.oo -c libxt_osf.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_owner.oo.d,-MT,libxt_owner.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_owner_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_owner.oo -c libxt_owner.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_physdev.oo.d,-MT,libxt_physdev.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_physdev_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_physdev.oo -c libxt_physdev.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_pkttype.oo.d,-MT,libxt_pkttype.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_pkttype_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_pkttype.oo -c libxt_pkttype.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_policy.oo.d,-MT,libxt_policy.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_policy_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_policy.oo -c libxt_policy.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_quota.oo.d,-MT,libxt_quota.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_quota_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_quota.oo -c libxt_quota.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_rateest.oo.d,-MT,libxt_rateest.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_rateest_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_rateest.oo -c libxt_rateest.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_recent.oo.d,-MT,libxt_recent.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_recent_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_recent.oo -c libxt_recent.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_rpfilter.oo.d,-MT,libxt_rpfilter.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_rpfilter_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_rpfilter.oo -c libxt_rpfilter.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_sctp.oo.d,-MT,libxt_sctp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_sctp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_sctp.oo -c libxt_sctp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_set.oo.d,-MT,libxt_set.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_set_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_set.oo -c libxt_set.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_socket.oo.d,-MT,libxt_socket.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_socket_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_socket.oo -c libxt_socket.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_standard.oo.d,-MT,libxt_standard.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_standard_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_standard.oo -c libxt_standard.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_statistic.oo.d,-MT,libxt_statistic.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_statistic_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_statistic.oo -c libxt_statistic.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_string.oo.d,-MT,libxt_string.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_string_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_string.oo -c libxt_string.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_tcp.oo.d,-MT,libxt_tcp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_tcp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_tcp.oo -c libxt_tcp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_tcpmss.oo.d,-MT,libxt_tcpmss.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_tcpmss_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_tcpmss.oo -c libxt_tcpmss.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_time.oo.d,-MT,libxt_time.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_time_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_time.oo -c libxt_time.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_tos.oo.d,-MT,libxt_tos.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_tos_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_tos.oo -c libxt_tos.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_u32.oo.d,-MT,libxt_u32.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_u32_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_u32.oo -c libxt_u32.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libxt_udp.oo.d,-MT,libxt_udp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libxt_udp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libxt_udp.oo -c libxt_udp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_CLUSTERIP.oo.d,-MT,libipt_CLUSTERIP.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_CLUSTERIP_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_CLUSTERIP.oo -c libipt_CLUSTERIP.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_ECN.oo.d,-MT,libipt_ECN.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_ECN_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_ECN.oo -c libipt_ECN.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_NETMAP.oo.d,-MT,libipt_NETMAP.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_NETMAP_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_NETMAP.oo -c libipt_NETMAP.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_REJECT.oo.d,-MT,libipt_REJECT.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_REJECT_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_REJECT.oo -c libipt_REJECT.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_TTL.oo.d,-MT,libipt_TTL.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_TTL_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_TTL.oo -c libipt_TTL.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_ULOG.oo.d,-MT,libipt_ULOG.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_ULOG_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_ULOG.oo -c libipt_ULOG.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_ah.oo.d,-MT,libipt_ah.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_ah_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_ah.oo -c libipt_ah.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_icmp.oo.d,-MT,libipt_icmp.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_icmp_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_icmp.oo -c libipt_icmp.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_realm.oo.d,-MT,libipt_realm.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_realm_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_realm.oo -c libipt_realm.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libipt_ttl.oo.d,-MT,libipt_ttl.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libipt_ttl_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libipt_ttl.oo -c libipt_ttl.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_DNPT.oo.d,-MT,libip6t_DNPT.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_DNPT_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_DNPT.oo -c libip6t_DNPT.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_HL.oo.d,-MT,libip6t_HL.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_HL_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_HL.oo -c libip6t_HL.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_NETMAP.oo.d,-MT,libip6t_NETMAP.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_NETMAP_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_NETMAP.oo -c libip6t_NETMAP.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_REJECT.oo.d,-MT,libip6t_REJECT.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_REJECT_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_REJECT.oo -c libip6t_REJECT.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_SNPT.oo.d,-MT,libip6t_SNPT.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_SNPT_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_SNPT.oo -c libip6t_SNPT.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_ah.oo.d,-MT,libip6t_ah.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_ah_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_ah.oo -c libip6t_ah.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_dst.oo.d,-MT,libip6t_dst.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_dst_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_dst.oo -c libip6t_dst.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_eui64.oo.d,-MT,libip6t_eui64.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_eui64_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_eui64.oo -c libip6t_eui64.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_frag.oo.d,-MT,libip6t_frag.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_frag_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_frag.oo -c libip6t_frag.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_hbh.oo.d,-MT,libip6t_hbh.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_hbh_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_hbh.oo -c libip6t_hbh.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_hl.oo.d,-MT,libip6t_hl.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_hl_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_hl.oo -c libip6t_hl.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_icmp6.oo.d,-MT,libip6t_icmp6.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_icmp6_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_icmp6.oo -c libip6t_icmp6.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_ipv6header.oo.d,-MT,libip6t_ipv6header.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_ipv6header_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_ipv6header.oo -c libip6t_ipv6header.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_mh.oo.d,-MT,libip6t_mh.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_mh_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_mh.oo -c libip6t_mh.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_rt.oo.d,-MT,libip6t_rt.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_rt_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_rt.oo -c libip6t_rt.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.libip6t_srh.oo.d,-MT,libip6t_srh.oo -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=libip6t_srh_init -DPIC -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o libip6t_srh.oo -c libip6t_srh.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_CT.so libxt_CT.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_conntrack.so libxt_conntrack.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_NAT.so libxt_NAT.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+for ext in addrtype ah bpf cgroup cluster comment connbytes connlimit connmark conntrack cpu dccp devgroup dscp dst ecn esp eui64 frag hashlimit hbh helper hl icmp icmp6 ipcomp iprange ipv6header ipvs length limit mac mark mh multiport nfacct osf owner physdev pkttype policy quota rateest realm recent rpfilter rt sctp set socket srh standard state statistic string tcp tcpmss time tos ttl u32 udp; do f="./libxt_$ext.man"; if [ -f "$f" ]; then printf "\t+ $f\n" &gt;&amp;2; echo ".SS $ext"; cat "$f" || exit $?; fi; f="./libip6t_$ext.man"; if [ -f "$f" ]; then printf "\t+ $f\n" &gt;&amp;2; echo ".SS $ext (IPv6-specific)"; cat "$f" || exit $?; fi; f="./libipt_$ext.man"; if [ -f "$f" ]; then printf "\t+ $f\n" &gt;&amp;2; echo ".SS $ext (IPv4-specific)"; cat "$f" || exit $?; fi; done &gt;matches.man;
+	+ ./libxt_addrtype.man
+	+ ./libip6t_ah.man
+	+ ./libipt_ah.man
+	+ ./libxt_bpf.man
+	+ ./libxt_cgroup.man
+	+ ./libxt_cluster.man
+	+ ./libxt_comment.man
+	+ ./libxt_connbytes.man
+	+ ./libxt_connlimit.man
+	+ ./libxt_connmark.man
+	+ ./libxt_conntrack.man
+	+ ./libxt_cpu.man
+	+ ./libxt_dccp.man
+	+ ./libxt_devgroup.man
+	+ ./libxt_dscp.man
+	+ ./libip6t_dst.man
+	+ ./libxt_ecn.man
+	+ ./libxt_esp.man
+	+ ./libip6t_eui64.man
+	+ ./libip6t_frag.man
+	+ ./libxt_hashlimit.man
+	+ ./libip6t_hbh.man
+	+ ./libxt_helper.man
+	+ ./libip6t_hl.man
+	+ ./libipt_icmp.man
+	+ ./libip6t_icmp6.man
+	+ ./libxt_iprange.man
+	+ ./libip6t_ipv6header.man
+	+ ./libxt_ipvs.man
+	+ ./libxt_length.man
+	+ ./libxt_limit.man
+	+ ./libxt_mac.man
+	+ ./libxt_mark.man
+	+ ./libip6t_mh.man
+	+ ./libxt_multiport.man
+	+ ./libxt_nfacct.man
+	+ ./libxt_osf.man
+	+ ./libxt_owner.man
+	+ ./libxt_physdev.man
+	+ ./libxt_pkttype.man
+	+ ./libxt_policy.man
+	+ ./libxt_quota.man
+	+ ./libxt_rateest.man
+	+ ./libipt_realm.man
+	+ ./libxt_recent.man
+	+ ./libxt_rpfilter.man
+	+ ./libip6t_rt.man
+	+ ./libxt_sctp.man
+	+ ./libxt_set.man
+	+ ./libxt_socket.man
+	+ ./libxt_state.man
+	+ ./libxt_statistic.man
+	+ ./libxt_string.man
+	+ ./libxt_tcp.man
+	+ ./libxt_tcpmss.man
+	+ ./libxt_time.man
+	+ ./libxt_tos.man
+	+ ./libipt_ttl.man
+	+ ./libxt_u32.man
+	+ ./libxt_udp.man
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+for ext in AUDIT CHECKSUM CLASSIFY CLUSTERIP CONNMARK CONNSECMARK CT DNAT DNPT DSCP ECN HL HMARK IDLETIMER LED LOG MARK MASQUERADE NAT NETMAP NFLOG NFQUEUE NOTRACK RATEEST REDIRECT REJECT SECMARK SET SNAT SNPT SYNPROXY TCPMSS TCPOPTSTRIP TEE TOS TPROXY TRACE TTL ULOG; do f="./libxt_$ext.man"; if [ -f "$f" ]; then printf "\t+ $f\n" &gt;&amp;2; echo ".SS $ext"; cat "$f" || exit $?; fi; f="./libip6t_$ext.man"; if [ -f "$f" ]; then printf "\t+ $f\n" &gt;&amp;2; echo ".SS $ext (IPv6-specific)"; cat "$f" || exit $?; fi; f="./libipt_$ext.man"; if [ -f "$f" ]; then printf "\t+ $f\n" &gt;&amp;2; echo ".SS $ext (IPv4-specific)"; cat "$f" || exit $?; fi; done &gt;targets.man;
+	+ ./libxt_AUDIT.man
+	+ ./libxt_CHECKSUM.man
+	+ ./libxt_CLASSIFY.man
+	+ ./libipt_CLUSTERIP.man
+	+ ./libxt_CONNMARK.man
+	+ ./libxt_CONNSECMARK.man
+	+ ./libxt_CT.man
+	+ ./libxt_DNAT.man
+	+ ./libip6t_DNPT.man
+	+ ./libxt_DSCP.man
+	+ ./libipt_ECN.man
+	+ ./libip6t_HL.man
+	+ ./libxt_HMARK.man
+	+ ./libxt_IDLETIMER.man
+	+ ./libxt_LED.man
+	+ ./libxt_LOG.man
+	+ ./libxt_MARK.man
+	+ ./libxt_MASQUERADE.man
+	+ ./libxt_NETMAP.man
+	+ ./libxt_NFLOG.man
+	+ ./libxt_NFQUEUE.man
+	+ ./libxt_NOTRACK.man
+	+ ./libxt_RATEEST.man
+	+ ./libxt_REDIRECT.man
+	+ ./libip6t_REJECT.man
+	+ ./libipt_REJECT.man
+	+ ./libxt_SECMARK.man
+	+ ./libxt_SET.man
+	+ ./libxt_SNAT.man
+	+ ./libip6t_SNPT.man
+	+ ./libxt_SYNPROXY.man
+	+ ./libxt_TCPMSS.man
+	+ ./libxt_TCPOPTSTRIP.man
+	+ ./libxt_TEE.man
+	+ ./libxt_TOS.man
+	+ ./libxt_TPROXY.man
+	+ ./libxt_TRACE.man
+	+ ./libipt_TTL.man
+	+ ./libipt_ULOG.man
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_AUDIT.so libxt_AUDIT.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_CHECKSUM.so libxt_CHECKSUM.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_CLASSIFY.so libxt_CLASSIFY.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_CONNMARK.so libxt_CONNMARK.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_CONNSECMARK.so libxt_CONNSECMARK.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_DSCP.so libxt_DSCP.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_HMARK.so libxt_HMARK.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_IDLETIMER.so libxt_IDLETIMER.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_LED.so libxt_LED.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_LOG.so libxt_LOG.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_MARK.so libxt_MARK.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_NFLOG.so libxt_NFLOG.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_NFQUEUE.so libxt_NFQUEUE.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_RATEEST.so libxt_RATEEST.oo -L../libxtables/.libs -lxtables -lm;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_SECMARK.so libxt_SECMARK.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_SET.so libxt_SET.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_SYNPROXY.so libxt_SYNPROXY.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_TCPMSS.so libxt_TCPMSS.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_TCPOPTSTRIP.so libxt_TCPOPTSTRIP.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_TEE.so libxt_TEE.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_TOS.so libxt_TOS.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_TPROXY.so libxt_TPROXY.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_TRACE.so libxt_TRACE.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_bpf.so libxt_bpf.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_addrtype.so libxt_addrtype.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_cgroup.so libxt_cgroup.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_cluster.so libxt_cluster.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_comment.so libxt_comment.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_connbytes.so libxt_connbytes.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_connlimit.so libxt_connlimit.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_connmark.so libxt_connmark.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_cpu.so libxt_cpu.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_dccp.so libxt_dccp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_devgroup.so libxt_devgroup.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_dscp.so libxt_dscp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_ecn.so libxt_ecn.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_esp.so libxt_esp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_hashlimit.so libxt_hashlimit.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_helper.so libxt_helper.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_ipcomp.so libxt_ipcomp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_iprange.so libxt_iprange.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_ipvs.so libxt_ipvs.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_length.so libxt_length.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_limit.so libxt_limit.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_mac.so libxt_mac.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_mark.so libxt_mark.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_multiport.so libxt_multiport.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_nfacct.so libxt_nfacct.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_osf.so libxt_osf.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_owner.so libxt_owner.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_physdev.so libxt_physdev.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_policy.so libxt_policy.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_pkttype.so libxt_pkttype.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_quota.so libxt_quota.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_rateest.so libxt_rateest.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_recent.so libxt_recent.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_rpfilter.so libxt_rpfilter.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_sctp.so libxt_sctp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_set.so libxt_set.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_socket.so libxt_socket.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_standard.so libxt_standard.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_statistic.so libxt_statistic.oo -L../libxtables/.libs -lxtables -lm;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_string.so libxt_string.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_tcp.so libxt_tcp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_tcpmss.so libxt_tcpmss.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_time.so libxt_time.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_tos.so libxt_tos.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_u32.so libxt_u32.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libxt_udp.so libxt_udp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_CLUSTERIP.so libipt_CLUSTERIP.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_ECN.so libipt_ECN.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_NETMAP.so libipt_NETMAP.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_REJECT.so libipt_REJECT.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_TTL.so libipt_TTL.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_ULOG.so libipt_ULOG.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_ah.so libipt_ah.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_icmp.so libipt_icmp.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_realm.so libipt_realm.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libipt_ttl.so libipt_ttl.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_DNPT.so libip6t_DNPT.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_HL.so libip6t_HL.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_NETMAP.so libip6t_NETMAP.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_REJECT.so libip6t_REJECT.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_ah.so libip6t_ah.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_SNPT.so libip6t_SNPT.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_dst.so libip6t_dst.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_eui64.so libip6t_eui64.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_frag.so libip6t_frag.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_hbh.so libip6t_hbh.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_hl.so libip6t_hl.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_icmp6.so libip6t_icmp6.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_ipv6header.so libip6t_ipv6header.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_mh.so libip6t_mh.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_rt.so libip6t_rt.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -Wl,--no-undefined  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -o libip6t_srh.so libip6t_srh.oo -L../libxtables/.libs -lxtables ;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+ln -fs libxt_CT.so libxt_NOTRACK.so
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+ln -fs libxt_conntrack.so libxt_state.so
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+ln -fs libxt_NAT.so libxt_REDIRECT.so
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+ln -fs libxt_NAT.so libxt_MASQUERADE.so
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+ln -fs libxt_NAT.so libxt_SNAT.so
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+ln -fs libxt_NAT.so libxt_DNAT.so
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.initext.o.d,-MT,initext.o -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=ext_init -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o initext.o -c initext.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.initext4.o.d,-MT,initext4.o -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=ext4_init -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o initext4.o -c initext4.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.initext6.o.d,-MT,initext6.o -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=ext6_init -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o initext6.o -c initext6.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.initextb.o.d,-MT,initextb.o -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=extb_init -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o initextb.o -c initextb.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-gcc -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I.. -I../include -I..    -Wp,-MMD,./.initexta.o.d,-MT,initexta.o -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe -D_INIT=exta_init -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -o initexta.o -c initexta.c;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-ar crs libext.a initext.o;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-ar crs libext4.a initext4.o;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-ar crs libext6.a initext6.o;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-ar crs libext_ebt.a initextb.o;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+x86_64-pc-linux-gnu-ar crs libext_arpt.a initexta.o;
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+Making all in iptables
+make  all-am
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-iptables-xml.o `test -f 'iptables-xml.c' || echo './'`iptables-xml.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-xshared.o `test -f 'xshared.c' || echo './'`xshared.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-xtables-legacy-multi.o `test -f 'xtables-legacy-multi.c' || echo './'`xtables-legacy-multi.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-iptables-restore.o `test -f 'iptables-restore.c' || echo './'`iptables-restore.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-iptables-save.o `test -f 'iptables-save.c' || echo './'`iptables-save.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-iptables-standalone.o `test -f 'iptables-standalone.c' || echo './'`iptables-standalone.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-iptables.o `test -f 'iptables.c' || echo './'`iptables.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-ip6tables-standalone.o `test -f 'ip6tables-standalone.c' || echo './'`ip6tables-standalone.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_LARGEFILE_SOURCE=1 -D_LARGE_FILES -D_FILE_OFFSET_BITS=64 -D_REENTRANT 	-DXTABLES_LIBDIR=\"/usr/lib64/xtables\" -DXTABLES_INTERNAL -I../include -I../include -I..      -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o xtables_legacy_multi-ip6tables.o `test -f 'ip6tables.c' || echo './'`ip6tables.c
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+echo "ip6tables.8" | sed 's|^ip6|.so man8/ip|' &gt;ip6tables.8
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+echo "ip6tables-restore.8" | sed 's|^ip6|.so man8/ip|' &gt;ip6tables-restore.8
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+echo "ip6tables-save.8" | sed 's|^ip6|.so man8/ip|' &gt;ip6tables-save.8
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+sed \
+	-e '/@MATCH@/ r ../extensions/matches.man' \
+	-e '/@TARGET@/ r ../extensions/targets.man' iptables-extensions.8.tmpl &gt;iptables-extensions.8;
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+echo "ip6tables-apply.8" | sed 's|^ip6|.so man8/ip|' &gt;ip6tables-apply.8
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes 	-Wlogical-op 	-Winline -pipe  -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o xtables-legacy-multi xtables_legacy_multi-iptables-xml.o xtables_legacy_multi-xshared.o xtables_legacy_multi-xtables-legacy-multi.o xtables_legacy_multi-iptables-restore.o xtables_legacy_multi-iptables-save.o xtables_legacy_multi-iptables-standalone.o xtables_legacy_multi-iptables.o xtables_legacy_multi-ip6tables-standalone.o xtables_legacy_multi-ip6tables.o ../extensions/libext.a ../libxtables/libxtables.la -lm ../libiptc/libip4tc.la ../extensions/libext4.a ../libiptc/libip6tc.la ../extensions/libext6.a 
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wredundant-decls -Wshadow -Wstrict-prototypes -Wlogical-op -Winline -pipe -DENABLE_IPV4 -DENABLE_IPV6 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o .libs/xtables-legacy-multi xtables_legacy_multi-iptables-xml.o xtables_legacy_multi-xshared.o xtables_legacy_multi-xtables-legacy-multi.o xtables_legacy_multi-iptables-restore.o xtables_legacy_multi-iptables-save.o xtables_legacy_multi-iptables-standalone.o xtables_legacy_multi-iptables.o xtables_legacy_multi-ip6tables-standalone.o xtables_legacy_multi-ip6tables.o  -Wl,--as-needed ../extensions/libext.a ../libxtables/.libs/libxtables.so -ldl -lm ../libiptc/.libs/libip4tc.so ../extensions/libext4.a ../libiptc/.libs/libip6tc.so ../extensions/libext6.a
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: net-firewall/iptables-1.8.11-r1
+
+&gt;&gt;&gt; Install net-firewall/iptables-1.8.11-r1 into /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image
+make -j2 DESTDIR=/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image install 
+Making install in libiptc
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64'
+ /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c   libip4tc.la libip6tc.la '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c .libs/libip4tc.so.2.0.0 /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/libip4tc.so.2.0.0
+libtool: install: (cd /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64 &amp;&amp; { ln -s -f libip4tc.so.2.0.0 libip4tc.so.2 || { rm -f libip4tc.so.2 &amp;&amp; ln -s libip4tc.so.2.0.0 libip4tc.so.2; }; })
+libtool: install: (cd /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64 &amp;&amp; { ln -s -f libip4tc.so.2.0.0 libip4tc.so || { rm -f libip4tc.so &amp;&amp; ln -s libip4tc.so.2.0.0 libip4tc.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c .libs/libip4tc.lai /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/libip4tc.la
+libtool: install: /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c .libs/libip6tc.so.2.0.0 /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/libip6tc.so.2.0.0
+libtool: install: (cd /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64 &amp;&amp; { ln -s -f libip6tc.so.2.0.0 libip6tc.so.2 || { rm -f libip6tc.so.2 &amp;&amp; ln -s libip6tc.so.2.0.0 libip6tc.so.2; }; })
+libtool: install: (cd /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64 &amp;&amp; { ln -s -f libip6tc.so.2.0.0 libip6tc.so || { rm -f libip6tc.so &amp;&amp; ln -s libip6tc.so.2.0.0 libip6tc.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c .libs/libip6tc.lai /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/libip6tc.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/pkgconfig'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644 libiptc.pc libip4tc.pc libip6tc.pc '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/pkgconfig'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libiptc'
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in libxtables
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64'
+ /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c   libxtables.la '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c .libs/libxtables.so.12.7.0 /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/libxtables.so.12.7.0
+libtool: install: (cd /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64 &amp;&amp; { ln -s -f libxtables.so.12.7.0 libxtables.so.12 || { rm -f libxtables.so.12 &amp;&amp; ln -s libxtables.so.12.7.0 libxtables.so.12; }; })
+libtool: install: (cd /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64 &amp;&amp; { ln -s -f libxtables.so.12.7.0 libxtables.so || { rm -f libxtables.so &amp;&amp; ln -s libxtables.so.12.7.0 libxtables.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c .libs/libxtables.lai /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/libxtables.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/libxtables'
+Making install in include
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/include'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/include'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644 xtables.h '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/include'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/include'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/include'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/include'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/include/libiptc'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644  libiptc/ipt_kernel_headers.h libiptc/libiptc.h libiptc/libip6tc.h libiptc/libxtc.h libiptc/xtcshared.h '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/include/libiptc'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/include'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/include'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/include'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644 xtables-version.h '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/include'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/include'
+Making install in utils
+make[2]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/utils'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/utils'
+Making install in extensions
+make[1]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+if test -n "libxt_AUDIT.so libxt_CHECKSUM.so libxt_CLASSIFY.so libxt_CONNMARK.so libxt_CONNSECMARK.so libxt_CT.so libxt_DSCP.so libxt_HMARK.so libxt_IDLETIMER.so libxt_LED.so libxt_LOG.so libxt_MARK.so libxt_NAT.so libxt_NFLOG.so libxt_NFQUEUE.so libxt_RATEEST.so libxt_SECMARK.so libxt_SET.so libxt_SYNPROXY.so libxt_TCPMSS.so libxt_TCPOPTSTRIP.so libxt_TEE.so libxt_TOS.so libxt_TPROXY.so libxt_TRACE.so libxt_addrtype.so libxt_bpf.so libxt_cgroup.so libxt_cluster.so libxt_comment.so libxt_connbytes.so libxt_connlimit.so libxt_connmark.so libxt_conntrack.so libxt_cpu.so libxt_dccp.so libxt_devgroup.so libxt_dscp.so libxt_ecn.so libxt_esp.so libxt_hashlimit.so libxt_helper.so libxt_ipcomp.so libxt_iprange.so libxt_ipvs.so libxt_length.so libxt_limit.so libxt_mac.so libxt_mark.so libxt_multiport.so libxt_nfacct.so libxt_osf.so libxt_owner.so libxt_physdev.so libxt_pkttype.so libxt_policy.so libxt_quota.so libxt_rateest.so libxt_recent.so libxt_rpfilter.so libxt_sctp.so libxt_set.so libxt_socket.so libxt_standard.so libxt_statistic.so libxt_string.so libxt_tcp.so libxt_tcpmss.so libxt_time.so libxt_tos.so libxt_u32.so libxt_udp.so  libipt_CLUSTERIP.so libipt_ECN.so libipt_NETMAP.so libipt_REJECT.so libipt_TTL.so libipt_ULOG.so libipt_ah.so libipt_icmp.so libipt_realm.so libipt_ttl.so libip6t_DNPT.so libip6t_HL.so libip6t_NETMAP.so libip6t_REJECT.so libip6t_SNPT.so libip6t_ah.so libip6t_dst.so libip6t_eui64.so libip6t_frag.so libip6t_hbh.so libip6t_hl.so libip6t_icmp6.so libip6t_ipv6header.so libip6t_mh.so libip6t_rt.so libip6t_srh.so "; then \
+	install -pm0755 libxt_AUDIT.so libxt_CHECKSUM.so libxt_CLASSIFY.so libxt_CONNMARK.so libxt_CONNSECMARK.so libxt_CT.so libxt_DSCP.so libxt_HMARK.so libxt_IDLETIMER.so libxt_LED.so libxt_LOG.so libxt_MARK.so libxt_NAT.so libxt_NFLOG.so libxt_NFQUEUE.so libxt_RATEEST.so libxt_SECMARK.so libxt_SET.so libxt_SYNPROXY.so libxt_TCPMSS.so libxt_TCPOPTSTRIP.so libxt_TEE.so libxt_TOS.so libxt_TPROXY.so libxt_TRACE.so libxt_addrtype.so libxt_bpf.so libxt_cgroup.so libxt_cluster.so libxt_comment.so libxt_connbytes.so libxt_connlimit.so libxt_connmark.so libxt_conntrack.so libxt_cpu.so libxt_dccp.so libxt_devgroup.so libxt_dscp.so libxt_ecn.so libxt_esp.so libxt_hashlimit.so libxt_helper.so libxt_ipcomp.so libxt_iprange.so libxt_ipvs.so libxt_length.so libxt_limit.so libxt_mac.so libxt_mark.so libxt_multiport.so libxt_nfacct.so libxt_osf.so libxt_owner.so libxt_physdev.so libxt_pkttype.so libxt_policy.so libxt_quota.so libxt_rateest.so libxt_recent.so libxt_rpfilter.so libxt_sctp.so libxt_set.so libxt_socket.so libxt_standard.so libxt_statistic.so libxt_string.so libxt_tcp.so libxt_tcpmss.so libxt_time.so libxt_tos.so libxt_u32.so libxt_udp.so  libipt_CLUSTERIP.so libipt_ECN.so libipt_NETMAP.so libipt_REJECT.so libipt_TTL.so libipt_ULOG.so libipt_ah.so libipt_icmp.so libipt_realm.so libipt_ttl.so libip6t_DNPT.so libip6t_HL.so libip6t_NETMAP.so libip6t_REJECT.so libip6t_SNPT.so libip6t_ah.so libip6t_dst.so libip6t_eui64.so libip6t_frag.so libip6t_hbh.so libip6t_hl.so libip6t_icmp6.so libip6t_ipv6header.so libip6t_mh.so libip6t_rt.so libip6t_srh.so  "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/xtables/"; \
+fi;
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+if test -n "libxt_NOTRACK.so libxt_state.so libxt_REDIRECT.so libxt_MASQUERADE.so libxt_SNAT.so libxt_DNAT.so"; then \
+	cp -P libxt_NOTRACK.so libxt_state.so libxt_REDIRECT.so libxt_MASQUERADE.so libxt_SNAT.so libxt_DNAT.so "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/xtables/"; \
+fi;
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/extensions'
+Making install in iptables
+make  install-am
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c iptables-apply '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/share/xtables'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644 iptables.xslt '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/share/xtables'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c xtables-legacy-multi '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin'
+libtool: warning: '../libxtables/libxtables.la' has not been installed in '/usr/lib64'
+libtool: warning: '../libiptc/libip4tc.la' has not been installed in '/usr/lib64'
+libtool: warning: '../libiptc/libip6tc.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c .libs/xtables-legacy-multi /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin/xtables-legacy-multi
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644 iptables-xml.1 '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/share/man/man1'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644 iptables.8 iptables-restore.8 iptables-save.8 ip6tables.8 ip6tables-restore.8 ip6tables-save.8 iptables-extensions.8 iptables-apply.8 ip6tables-apply.8 '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/share/man/man8'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[3]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/pkgconfig'
+ /var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -m 644 xtables.pc '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/lib64/pkgconfig'
+make[3]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make  install-exec-hook
+make[4]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+if test -z "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image"; then /sbin/ldconfig; fi;
+make[4]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[4]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+/var/tmp/portage/._portage_reinstall_.7bs4b3q6/bin/ebuild-helpers/xattr/install -c -dm0755 "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/bin";
+make[4]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[4]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+for i in iptables-xml; do ln -s -f "/sbin/xtables-legacy-multi" "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/usr/bin/$i"; done;
+make[4]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[4]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+for i in iptables-legacy iptables-legacy-restore iptables-legacy-save; do ln -s -f xtables-legacy-multi "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin/$i"; done;
+make[4]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[4]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+for i in ip6tables-legacy ip6tables-legacy-restore ip6tables-legacy-save; do ln -s -f xtables-legacy-multi "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin/$i"; done;
+make[4]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[4]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+for i in ; do ln -s -f xtables-nft-multi "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin/$i"; done;
+make[4]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[4]: Entering directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+ln -s -f iptables-apply "/var/tmp/portage/net-firewall/iptables-1.8.11-r1/image/sbin/ip6tables-apply"
+make[4]: Leaving directory '/var/tmp/portage/net-firewall/iptables-1.8.11-r1/work/iptables-1.8.11/iptables'
+make[2]: Nothing to be done for 'install-exec-am'.
+&gt;&gt;&gt; Completed installing net-firewall/iptables-1.8.11-r1 into /var/tmp/portage/net-firewall/iptables-1.8.11-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 14324 KiB (13.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   2544 KiB ( 2.4 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libip4tc.so.2.0.0
+   /usr/lib64/libip6tc.so.2.0.0
+   /usr/lib64/libxtables.so.12.7.0
+   /usr/lib64/xtables/libxt_AUDIT.so
+   /usr/lib64/xtables/libxt_CHECKSUM.so
+   /usr/lib64/xtables/libxt_CLASSIFY.so
+   /usr/lib64/xtables/libxt_CONNMARK.so
+   /usr/lib64/xtables/libxt_CONNSECMARK.so
+   /usr/lib64/xtables/libxt_CT.so
+   /usr/lib64/xtables/libxt_DSCP.so
+   /usr/lib64/xtables/libxt_HMARK.so
+   /usr/lib64/xtables/libxt_IDLETIMER.so
+   /usr/lib64/xtables/libxt_LED.so
+   /usr/lib64/xtables/libxt_LOG.so
+   /usr/lib64/xtables/libxt_MARK.so
+   /usr/lib64/xtables/libxt_NAT.so
+   /usr/lib64/xtables/libxt_NFLOG.so
+   /usr/lib64/xtables/libxt_NFQUEUE.so
+   /usr/lib64/xtables/libxt_RATEEST.so
+   /usr/lib64/xtables/libxt_SECMARK.so
+   /usr/lib64/xtables/libxt_SET.so
+   /usr/lib64/xtables/libxt_SYNPROXY.so
+   /usr/lib64/xtables/libxt_TCPMSS.so
+   /usr/lib64/xtables/libxt_TCPOPTSTRIP.so
+   /usr/lib64/xtables/libxt_TEE.so
+   /usr/lib64/xtables/libxt_TOS.so
+   /usr/lib64/xtables/libxt_TPROXY.so
+   /usr/lib64/xtables/libxt_TRACE.so
+   /usr/lib64/xtables/libxt_addrtype.so
+   /usr/lib64/xtables/libxt_bpf.so
+   /usr/lib64/xtables/libxt_cgroup.so
+   /usr/lib64/xtables/libxt_cluster.so
+   /usr/lib64/xtables/libxt_comment.so
+   /usr/lib64/xtables/libxt_connbytes.so
+   /usr/lib64/xtables/libxt_connlimit.so
+   /usr/lib64/xtables/libxt_connmark.so
+   /usr/lib64/xtables/libxt_conntrack.so
+   /usr/lib64/xtables/libxt_cpu.so
+   /usr/lib64/xtables/libxt_dccp.so
+   /usr/lib64/xtables/libxt_devgroup.so
+   /usr/lib64/xtables/libxt_dscp.so
+   /usr/lib64/xtables/libxt_ecn.so
+   /usr/lib64/xtables/libxt_esp.so
+   /usr/lib64/xtables/libxt_hashlimit.so
+   /usr/lib64/xtables/libxt_helper.so
+   /usr/lib64/xtables/libxt_ipcomp.so
+   /usr/lib64/xtables/libxt_iprange.so
+   /usr/lib64/xtables/libxt_ipvs.so
+   /usr/lib64/xtables/libxt_length.so
+   /usr/lib64/xtables/libxt_limit.so
+   /usr/lib64/xtables/libxt_mac.so
+   /usr/lib64/xtables/libxt_mark.so
+   /usr/lib64/xtables/libxt_multiport.so
+   /usr/lib64/xtables/libxt_nfacct.so
+   /usr/lib64/xtables/libxt_osf.so
+   /usr/lib64/xtables/libxt_owner.so
+   /usr/lib64/xtables/libxt_physdev.so
+   /usr/lib64/xtables/libxt_pkttype.so
+   /usr/lib64/xtables/libxt_policy.so
+   /usr/lib64/xtables/libxt_quota.so
+   /usr/lib64/xtables/libxt_rateest.so
+   /usr/lib64/xtables/libxt_recent.so
+   /usr/lib64/xtables/libxt_rpfilter.so
+   /usr/lib64/xtables/libxt_sctp.so
+   /usr/lib64/xtables/libxt_set.so
+   /usr/lib64/xtables/libxt_socket.so
+   /usr/lib64/xtables/libxt_standard.so
+   /usr/lib64/xtables/libxt_statistic.so
+   /usr/lib64/xtables/libxt_string.so
+   /usr/lib64/xtables/libxt_tcp.so
+   /usr/lib64/xtables/libxt_tcpmss.so
+   /usr/lib64/xtables/libxt_time.so
+   /usr/lib64/xtables/libxt_tos.so
+   /usr/lib64/xtables/libxt_u32.so
+   /usr/lib64/xtables/libxt_udp.so
+   /usr/lib64/xtables/libipt_CLUSTERIP.so
+   /usr/lib64/xtables/libipt_ECN.so
+   /usr/lib64/xtables/libipt_NETMAP.so
+   /usr/lib64/xtables/libipt_REJECT.so
+   /usr/lib64/xtables/libipt_TTL.so
+   /usr/lib64/xtables/libipt_ULOG.so
+   /usr/lib64/xtables/libipt_ah.so
+   /usr/lib64/xtables/libipt_icmp.so
+   /usr/lib64/xtables/libipt_realm.so
+   /usr/lib64/xtables/libipt_ttl.so
+   /usr/lib64/xtables/libip6t_DNPT.so
+   /usr/lib64/xtables/libip6t_HL.so
+   /usr/lib64/xtables/libip6t_NETMAP.so
+   /usr/lib64/xtables/libip6t_REJECT.so
+   /usr/lib64/xtables/libip6t_SNPT.so
+   /usr/lib64/xtables/libip6t_ah.so
+   /usr/lib64/xtables/libip6t_dst.so
+   /usr/lib64/xtables/libip6t_eui64.so
+   /usr/lib64/xtables/libip6t_frag.so
+   /usr/lib64/xtables/libip6t_hbh.so
+   /usr/lib64/xtables/libip6t_hl.so
+   /usr/lib64/xtables/libip6t_icmp6.so
+   /usr/lib64/xtables/libip6t_ipv6header.so
+   /usr/lib64/xtables/libip6t_mh.so
+   /usr/lib64/xtables/libip6t_rt.so
+   /usr/lib64/xtables/libip6t_srh.so
+   /sbin/xtables-legacy-multi
+ <span class="ansi1 ansi32">*</span> Unsetting ebtables symlinks before removal
+ <span class="ansi1 ansi32">*</span> Unsetting arptables symlinks before removal
+<span class="ansi32"></span><span class="ansi1 ansi32">Current iptables symlinks:</span>
+  <span class="ansi1">iptables-xml</span>              /sbin/xtables-legacy-multi
+  <span class="ansi1">iptables</span>                  /sbin/xtables-legacy-multi
+  <span class="ansi1">iptables-restore</span>          /sbin/xtables-legacy-multi
+  <span class="ansi1">iptables-save</span>             /sbin/xtables-legacy-multi
+  <span class="ansi1">ip6tables</span>                 /sbin/xtables-legacy-multi
+  <span class="ansi1">ip6tables-restore</span>         /sbin/xtables-legacy-multi
+  <span class="ansi1">ip6tables-save</span>            /sbin/xtables-legacy-multi
+
+</pre>
+</body>
+
+</html>
