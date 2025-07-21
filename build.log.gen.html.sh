@@ -12,6 +12,10 @@ rm -f /tmp/mkdir.txt
 # w = emerge world -Deu maybe monthly OR gcc/glibc update, no w = emerge world -Du weekly
 if [ "${1}" == 'w' ];then
 	echo "${1}"
+
+	/root/gcc-native.txt.sh
+	/root/cpuinfo.txt.sh
+
 	cd /var/log/portage
 	#init/previous-build - rm -f *.log - periodic housekeep needed - rm -rf /var/log/portage/build,elog
 
