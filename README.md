@@ -1,53 +1,9 @@
-[![ai prompts](https://img.youtube.com/vi/QDMBhdejmzg/0.jpg)](https://www.youtube.com/watch?v=QDMBhdejmzg)
-
-![my fav bike](https://www.kawasaki.eu/content/dam/products/pim/gallery/nin/Resource_299268_24MY_Ninja_ZX-4RR_40th_Anniversary_Edition_GN2_STY.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.png)
-
-![my fav bike](https://content2.kawasaki.com/ContentStorage/KMC/Products/9522/a27bd5a4-7b97-4007-8727-c8f7ab46c98e.jpg)
-
 Name: Lancelot MAK
 
 Email: 98036119lmak@gmail.com
 
 Address: Wong Tai Sin
 
-
-# AI summarized - My CV following
-Here’s a summary of the strengths of the individual based on the provided information:
-
-Key Strengths
-
->Technical Proficiency
-
-Hands-On Experience: Extensive practical knowledge in IT, including server and network setup, troubleshooting, and administration.\
-Diverse Skill Set: Proficient in various operating systems (Windows, Linux), networking, and scripting for automation.\
-Certifications: Holds multiple certifications, including EC-Council Certified Computer Hacking Forensic Investigator, RedHat Certified Engineer, and ISC2 Systems Security Certified Practitioner.
-
->Problem-Solving Abilities
-
-Logical Approach: Utilizes logical analysis over rote memorization, enhancing problem-solving efficiency.\
-Scripting Skills: Capable of automating routine tasks through scripting, improving accuracy and productivity.
-
->Leadership and Communication
-
-Leadership Experience: Served as chairman of a large computer society and led teams in various projects, demonstrating strong leadership skills.\
-Effective Communicator: Experience in corporate-level customer support and technical writing, showcasing the ability to convey complex information clearly.
-
->Community Involvement
-
-Volunteer Work: Actively engaged in community service and charity work, reflecting a commitment to social responsibility.\
-Linux Advocacy: Involved in local Linux user groups, contributing to the open-source community and providing support to SMEs.
-
->Continuous Learning and Adaptability
-
-Progressive Learner: Passionate about staying updated with evolving IT technologies, indicating a commitment to lifelong learning.\
-Hobbyist in Electronics: Engages in electronics and circuit work, showcasing a well-rounded technical interest beyond computing.
-
->Achievements and Recognition
-
-Competitions: Recognized as a finalist and runner-up in prestigious IT competitions, highlighting competitive skills and expertise.\
-Technical Writing: Published an article in a local magazine, demonstrating writing proficiency and subject matter expertise.
-
-These strengths highlight a well-rounded individual with a solid technical foundation, leadership capabilities, and a strong commitment to community and continuous improvement.
 
 
 # Self Introduction
@@ -129,22 +85,8 @@ I am RHCE since 2014. I am ISC2 SSCP since 2018.
 # Past Working Experiences
 |Period worked|Company / Organization (Type)|Position & Duties|Platform, Tools, Technologies used|
 |------|------|------|------|
-|May 2000 – Aug 2000|Rhenish Church Pang Hok-ko Memorial College – School / Education|Temp. IT Technician – School Technical Support / Representative for ED1 project procurement from ED, General End-user support, Inventory and Maintenance|MS Windows NT 4 Server, Workstation, Redhat Linux|
-|Feb 2001 – Jun 2001|CPCNet (formerly known as PSINet) – Internet Service Provider|System Administrator Trainee – 2nd tier Enquiry Service for Corporate client, Problem Escalation, Network and Service Monitoring|Solaris 8 on Ultrasparc, SonicWall, Cisco 2500|
-|Jun 2001 – Aug 2001|GuideLink Ltd. - Toys Manufacturer|Freelance System Administrator – Reinstallation and Reconfiguration of network and MS Windows 2000 Server and Professional|MS Windows 2000 server, professional|
 |Jul 2003 – Oct 2003|HK Linux Resources Centre – Non-profit organization|Enquiry Service Representative – Answering General and Technical Enquiries about Linux for SMEs|Various Linux Distributions, e.g. Redhat, Mandrake, Slackware, Gentoo, Debian|
-|Oct 2003 – Oct 2003|Mayco (China) Garment Co. Ltd.|Freelance System Administrator – Network consolidation, Linux server setup, cabling|MS Windows XP Home, ME, Gentoo Linux|
-|Aug 2004 – Mar 2005|Unionwest Ltd.|IT Technician – Network consolidation, security assessment, Linux server setup, Email and FTP service support and web user interface support and programming|MS Windows XP Professional, ME, Redhat Enterprise Linux, Gentoo Linux, Qmail with vpopmail plus courier-imap, ProFTPD with MySQL|
-|Jul 2005 – Nov 2005|Bank of China|QA Engineer – testify j2ee web based application for SWIFT|Job Control Language on IBM s/390, IBM DB2, AIX on RS/6000, Harvest for version control|
-|Apr 2006 – Aug 2006|St. Mary's Canossian School|IT Assistant – Server and network consolidation, MS Windows 2003 server disaster recovery, Linux server setup, security assessment, hacking forensics, General End-user support|MS Windows 2003 server, XP professional, Gentoo Linux, Redhat Linux, Netscreen 25|
-|Aug 2006|Mobile-gamer|Freelance System Administrator – Server consolidation, security assessment, Linux server setup, Email, Samba, FTP, Web|Gentoo Linux, Debian, MS Windows Professional|
-|Sept 2006|Cwlinux|Embedded Linux Software Engineer|Fedora Core 5, MS Windows XP|
-|Sept 2006 – Jun 2007|Government – Customs & Excise Dept.|IT Assistant – Server and network monitoring, problem escalation|MS Windows NT4, 98, 2k pro, 2003, HP-UX on K-Class, AIX on RS/6000, ARCserve|
-|Jun 2007 – Dec 2007|MG Interactive Entertainment Ltd.|Full time System Administrator – Server setup, project procurement, China branch office setup, setup server in China|6x Gentoo Linux on Xeon 5130, 5160, 5110 with LVM on RAID 1 with 6 SATA2 drives|
 |Dec 2007 – Apr 2014|HK Economic Times|(Perm.) Sr. Tech. Support Officer – in-house server and network setup/installation, trouble-shooting and support, administering around 120 servers|F5 load balancer, cisco (1720, 2950, 3640), huawei (5100), Juniper SSG 520M(Netscreen) dell 2950, RHAS/EL 4/5, Oracle 8/10 (w/RAC), MySQL 3/4/5, Windows 2003/R2, MSSQL 2005, Solaris 7/8, shell scripting, 2nd tier technical support, Hands-on administering around 120 servers (with around 480 cores) running around 20 projects|
-|Apr 2014 – May 2014|China Mobile International Limited|System Engineer|Linux Platform|
 |May 2014 – Oct 2018|HK Economic Times|System Administrator - in-house server and network setup/installation, trouble-shooting and support, administering around 120 servers grow to around 300 servers|F5 load balancer, cisco (1720, 2950, 3640), huawei (5100), Juniper SSG 520M(Netscreen) dell 2950, RHAS/EL 4/5, Oracle 8/10 (w/RAC), MySQL 3/4/5, Windows 2003/R2, MSSQL 2005, Solaris 7/8, shell scripting, 2nd tier technical support, Hands-on administering around 300 servers (with around 1200 cores) running around 20 projects, AWS (EC2)|
-|Oct 2018 – Jan 2019|InteractiveBrokers|Linux System Administrator - in-house server and network setup/installation, trouble-shooting and support, administering around 1000 servers across several regions, US, EU, APAC|RHEL, openldap, perl, ksh, csh, bash, APAC to global, US hq, bugzilla, jira, confluence, twiki, ssh w/key, HPE, 3PAR, Arista network, avaya, vmware vdi, samba|
 |Jun 2019 – Oct 2020|HK Economic Times|System Administrator - in-house server and network setup/installation, trouble-shooting and support, administering around 300 servers|F5 load balancer, cisco (1720, 2950, 3640), huawei (5100), Juniper SSG 520M(Netscreen) dell 2950, RHAS/EL 4/5, Oracle 8/10 (w/RAC), MySQL 3/4/5, Windows 2003/R2, MSSQL 2005, Solaris 7/8, shell scripting, 2nd tier technical support, Hands-on administering around 300 servers (with around 1200 cores) running around 20 projects, AWS (EC2),  PaloAltoNetworks Firewall, Imperva WAF|
-|May 2021 – Dec 2021|Super Effort Technology Ltd|Linux System Administrator – in-house server and network setup/installation, trouble-shooting and support, administering around 20 servers|vmware, hosting, apache, nginx, postfix, ispconfig, cpanel, zimbra, pfsense, qmail, nft, blockchain|
 |Jun 2022 - Jan 2023|Vocational Training Council|Analyst Programmer (Infrastructure Management) – in-house server and network setup/installation, trouble-shooting and support, administering around 300 servers and 1000 VMs|RHEL|
