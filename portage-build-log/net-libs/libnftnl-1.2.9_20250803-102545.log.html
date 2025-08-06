@@ -1,0 +1,498 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-libs/libnftnl-1.2.9:0/11
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.12.31-gentoo-x86_64
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking libnftnl-1.2.9.tar.xz to /var/tmp/portage/net-libs/libnftnl-1.2.9/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-libs/libnftnl-1.2.9/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9 ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: libnftnl-1.2.9/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying ppc64le/2.4.4 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying fix-file-check/2.5.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: libnftnl-1.2.9/build-aux/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying portage/1.2.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying sed/1.5.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying as-needed/2.5.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying werror/2.4.7-debian patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying cxx-pthread/2.4.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying color-record/2.4.7-debian patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying openmp/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying verbose-pic/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying clang-runtime-ltmain/2.4.7 patch ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9 ...
+ * econf: updating libnftnl-1.2.9/build-aux/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating libnftnl-1.2.9/build-aux/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/libnftnl-1.2.9 --htmldir=/usr/share/doc/libnftnl-1.2.9/html --with-sysroot=/ --libdir=/usr/lib64 --disable-static
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking the archiver (x86_64-pc-linux-gnu-ar) interface... ar
+checking for a BSD-compatible install... /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libmnl &gt;= 1.0.4... yes
+checking for x86_64-pc-linux-gnu-gcc... (cached) x86_64-pc-linux-gnu-gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... (cached) none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... no
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... (cached) x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether compiler accepts -fvisibility=hidden... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating include/Makefile
+config.status: creating include/libnftnl/Makefile
+config.status: creating include/linux/Makefile
+config.status: creating include/linux/netfilter/Makefile
+config.status: creating examples/Makefile
+config.status: creating tests/Makefile
+config.status: creating libnftnl.pc
+config.status: creating doxygen.cfg
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9 ...
+make -j2 
+make  all-recursive
+Making all in src
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o utils.lo utils.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c utils.c  -fPIC -DPIC -o .libs/utils.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o batch.lo batch.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c batch.c  -fPIC -DPIC -o .libs/batch.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o flowtable.lo flowtable.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c flowtable.c  -fPIC -DPIC -o .libs/flowtable.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o common.lo common.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c common.c  -fPIC -DPIC -o .libs/common.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o gen.lo gen.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c gen.c  -fPIC -DPIC -o .libs/gen.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o table.lo table.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c table.c  -fPIC -DPIC -o .libs/table.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o trace.lo trace.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c trace.c  -fPIC -DPIC -o .libs/trace.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o chain.lo chain.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c chain.c  -fPIC -DPIC -o .libs/chain.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o object.lo object.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c object.c  -fPIC -DPIC -o .libs/object.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o rule.lo rule.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c rule.c  -fPIC -DPIC -o .libs/rule.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o set.lo set.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c set.c  -fPIC -DPIC -o .libs/set.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o set_elem.lo set_elem.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c set_elem.c  -fPIC -DPIC -o .libs/set_elem.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o str_array.lo str_array.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c str_array.c  -fPIC -DPIC -o .libs/str_array.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o ruleset.lo ruleset.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c ruleset.c  -fPIC -DPIC -o .libs/ruleset.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o udata.lo udata.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c udata.c  -fPIC -DPIC -o .libs/udata.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr.lo expr.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr.c  -fPIC -DPIC -o .libs/expr.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr_ops.lo expr_ops.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr_ops.c  -fPIC -DPIC -o .libs/expr_ops.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/byteorder.lo expr/byteorder.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/byteorder.c  -fPIC -DPIC -o expr/.libs/byteorder.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/bitwise.lo expr/bitwise.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/bitwise.c  -fPIC -DPIC -o expr/.libs/bitwise.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/cmp.lo expr/cmp.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/cmp.c  -fPIC -DPIC -o expr/.libs/cmp.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/range.lo expr/range.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/range.c  -fPIC -DPIC -o expr/.libs/range.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/connlimit.lo expr/connlimit.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/connlimit.c  -fPIC -DPIC -o expr/.libs/connlimit.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/counter.lo expr/counter.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/counter.c  -fPIC -DPIC -o expr/.libs/counter.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/ct.lo expr/ct.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/ct.c  -fPIC -DPIC -o expr/.libs/ct.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/data_reg.lo expr/data_reg.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/data_reg.c  -fPIC -DPIC -o expr/.libs/data_reg.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/dup.lo expr/dup.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/dup.c  -fPIC -DPIC -o expr/.libs/dup.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/exthdr.lo expr/exthdr.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/exthdr.c  -fPIC -DPIC -o expr/.libs/exthdr.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/flow_offload.lo expr/flow_offload.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/flow_offload.c  -fPIC -DPIC -o expr/.libs/flow_offload.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/fib.lo expr/fib.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/fib.c  -fPIC -DPIC -o expr/.libs/fib.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/fwd.lo expr/fwd.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/fwd.c  -fPIC -DPIC -o expr/.libs/fwd.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/last.lo expr/last.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/last.c  -fPIC -DPIC -o expr/.libs/last.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/limit.lo expr/limit.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/limit.c  -fPIC -DPIC -o expr/.libs/limit.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/log.lo expr/log.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/log.c  -fPIC -DPIC -o expr/.libs/log.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/lookup.lo expr/lookup.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/lookup.c  -fPIC -DPIC -o expr/.libs/lookup.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/dynset.lo expr/dynset.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/dynset.c  -fPIC -DPIC -o expr/.libs/dynset.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/immediate.lo expr/immediate.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/immediate.c  -fPIC -DPIC -o expr/.libs/immediate.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/inner.lo expr/inner.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/inner.c  -fPIC -DPIC -o expr/.libs/inner.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/match.lo expr/match.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/match.c  -fPIC -DPIC -o expr/.libs/match.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/meta.lo expr/meta.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/meta.c  -fPIC -DPIC -o expr/.libs/meta.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/numgen.lo expr/numgen.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/numgen.c  -fPIC -DPIC -o expr/.libs/numgen.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/nat.lo expr/nat.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/nat.c  -fPIC -DPIC -o expr/.libs/nat.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/tproxy.lo expr/tproxy.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/tproxy.c  -fPIC -DPIC -o expr/.libs/tproxy.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/objref.lo expr/objref.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/objref.c  -fPIC -DPIC -o expr/.libs/objref.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/payload.lo expr/payload.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/payload.c  -fPIC -DPIC -o expr/.libs/payload.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/queue.lo expr/queue.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/queue.c  -fPIC -DPIC -o expr/.libs/queue.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/quota.lo expr/quota.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/quota.c  -fPIC -DPIC -o expr/.libs/quota.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/reject.lo expr/reject.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/reject.c  -fPIC -DPIC -o expr/.libs/reject.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/rt.lo expr/rt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/rt.c  -fPIC -DPIC -o expr/.libs/rt.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/target.lo expr/target.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/target.c  -fPIC -DPIC -o expr/.libs/target.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/tunnel.lo expr/tunnel.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/tunnel.c  -fPIC -DPIC -o expr/.libs/tunnel.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/masq.lo expr/masq.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/masq.c  -fPIC -DPIC -o expr/.libs/masq.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/redir.lo expr/redir.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/redir.c  -fPIC -DPIC -o expr/.libs/redir.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/hash.lo expr/hash.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/hash.c  -fPIC -DPIC -o expr/.libs/hash.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/socket.lo expr/socket.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/socket.c  -fPIC -DPIC -o expr/.libs/socket.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/synproxy.lo expr/synproxy.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/synproxy.c  -fPIC -DPIC -o expr/.libs/synproxy.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/osf.lo expr/osf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/osf.c  -fPIC -DPIC -o expr/.libs/osf.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o expr/xfrm.lo expr/xfrm.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c expr/xfrm.c  -fPIC -DPIC -o expr/.libs/xfrm.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/counter.lo obj/counter.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/counter.c  -fPIC -DPIC -o obj/.libs/counter.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/ct_helper.lo obj/ct_helper.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/ct_helper.c  -fPIC -DPIC -o obj/.libs/ct_helper.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/quota.lo obj/quota.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/quota.c  -fPIC -DPIC -o obj/.libs/quota.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/tunnel.lo obj/tunnel.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/tunnel.c  -fPIC -DPIC -o obj/.libs/tunnel.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/limit.lo obj/limit.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/limit.c  -fPIC -DPIC -o obj/.libs/limit.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/synproxy.lo obj/synproxy.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/synproxy.c  -fPIC -DPIC -o obj/.libs/synproxy.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/ct_timeout.lo obj/ct_timeout.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/ct_timeout.c  -fPIC -DPIC -o obj/.libs/ct_timeout.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/secmark.lo obj/secmark.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/secmark.c  -fPIC -DPIC -o obj/.libs/secmark.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include    -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o obj/ct_expect.lo obj/ct_expect.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I.. -D_FILE_OFFSET_BITS=64 -D_REENTRANT -I../include -Wall -Waggregate-return -Wmissing-declarations -Wmissing-prototypes -Wshadow -Wstrict-prototypes -Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c obj/ct_expect.c  -fPIC -DPIC -o obj/.libs/ct_expect.o
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+/bin/sh ../libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -Wwrite-strings -pipe -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,--version-script=./libnftnl.map -version-info 17:0:6 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libnftnl.la -rpath /usr/lib64 utils.lo batch.lo flowtable.lo common.lo gen.lo table.lo trace.lo chain.lo object.lo rule.lo set.lo set_elem.lo str_array.lo ruleset.lo udata.lo expr.lo expr_ops.lo expr/bitwise.lo expr/byteorder.lo expr/cmp.lo expr/range.lo expr/connlimit.lo expr/counter.lo expr/ct.lo expr/data_reg.lo expr/dup.lo expr/exthdr.lo expr/flow_offload.lo expr/fib.lo expr/fwd.lo expr/last.lo expr/limit.lo expr/log.lo expr/lookup.lo expr/dynset.lo expr/immediate.lo expr/inner.lo expr/match.lo expr/meta.lo expr/numgen.lo expr/nat.lo expr/tproxy.lo expr/objref.lo expr/payload.lo expr/queue.lo expr/quota.lo expr/reject.lo expr/rt.lo expr/target.lo expr/tunnel.lo expr/masq.lo expr/redir.lo expr/hash.lo expr/socket.lo expr/synproxy.lo expr/osf.lo expr/xfrm.lo obj/counter.lo obj/ct_helper.lo obj/quota.lo obj/tunnel.lo obj/limit.lo obj/synproxy.lo obj/ct_timeout.lo obj/secmark.lo obj/ct_expect.lo -lmnl 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  .libs/utils.o .libs/batch.o .libs/flowtable.o .libs/common.o .libs/gen.o .libs/table.o .libs/trace.o .libs/chain.o .libs/object.o .libs/rule.o .libs/set.o .libs/set_elem.o .libs/str_array.o .libs/ruleset.o .libs/udata.o .libs/expr.o .libs/expr_ops.o expr/.libs/bitwise.o expr/.libs/byteorder.o expr/.libs/cmp.o expr/.libs/range.o expr/.libs/connlimit.o expr/.libs/counter.o expr/.libs/ct.o expr/.libs/data_reg.o expr/.libs/dup.o expr/.libs/exthdr.o expr/.libs/flow_offload.o expr/.libs/fib.o expr/.libs/fwd.o expr/.libs/last.o expr/.libs/limit.o expr/.libs/log.o expr/.libs/lookup.o expr/.libs/dynset.o expr/.libs/immediate.o expr/.libs/inner.o expr/.libs/match.o expr/.libs/meta.o expr/.libs/numgen.o expr/.libs/nat.o expr/.libs/tproxy.o expr/.libs/objref.o expr/.libs/payload.o expr/.libs/queue.o expr/.libs/quota.o expr/.libs/reject.o expr/.libs/rt.o expr/.libs/target.o expr/.libs/tunnel.o expr/.libs/masq.o expr/.libs/redir.o expr/.libs/hash.o expr/.libs/socket.o expr/.libs/synproxy.o expr/.libs/osf.o expr/.libs/xfrm.o obj/.libs/counter.o obj/.libs/ct_helper.o obj/.libs/quota.o obj/.libs/tunnel.o obj/.libs/limit.o obj/.libs/synproxy.o obj/.libs/ct_timeout.o obj/.libs/secmark.o obj/.libs/ct_expect.o   -Wl,--as-needed -lmnl  -O3 -march=native -mtune=native -Wl,--version-script=./libnftnl.map -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libnftnl.so.11 -o .libs/libnftnl.so.11.6.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libnftnl.so.11" &amp;&amp; ln -s "libnftnl.so.11.6.0" "libnftnl.so.11")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libnftnl.so" &amp;&amp; ln -s "libnftnl.so.11.6.0" "libnftnl.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libnftnl.la" &amp;&amp; ln -s "../libnftnl.la" "libnftnl.la" )
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+Making all in include
+Making all in libnftnl
+make[3]: Nothing to be done for 'all'.
+Making all in linux
+Making all in netfilter
+make[4]: Nothing to be done for 'all'.
+make[4]: Nothing to be done for 'all-am'.
+make[3]: Nothing to be done for 'all-am'.
+Making all in examples
+make[2]: Nothing to be done for 'all'.
+Making all in tests
+make[2]: Nothing to be done for 'all'.
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: net-libs/libnftnl-1.2.9
+
+&gt;&gt;&gt; Install net-libs/libnftnl-1.2.9 into /var/tmp/portage/net-libs/libnftnl-1.2.9/image
+make -j2 DESTDIR=/var/tmp/portage/net-libs/libnftnl-1.2.9/image install 
+Making install in src
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+ /bin/mkdir -p '/var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64'
+ /bin/sh ../libtool   --mode=install /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c   libnftnl.la '/var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64'
+libtool: install: /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c .libs/libnftnl.so.11.6.0 /var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64/libnftnl.so.11.6.0
+libtool: install: (cd /var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64 &amp;&amp; { ln -s -f libnftnl.so.11.6.0 libnftnl.so.11 || { rm -f libnftnl.so.11 &amp;&amp; ln -s libnftnl.so.11.6.0 libnftnl.so.11; }; })
+libtool: install: (cd /var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64 &amp;&amp; { ln -s -f libnftnl.so.11.6.0 libnftnl.so || { rm -f libnftnl.so &amp;&amp; ln -s libnftnl.so.11.6.0 libnftnl.so; }; })
+libtool: install: /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c .libs/libnftnl.lai /var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64/libnftnl.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/src'
+Making install in include
+Making install in libnftnl
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/include/libnftnl'
+ /bin/mkdir -p '/var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/include/libnftnl'
+ /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c -m 644 batch.h table.h trace.h chain.h object.h rule.h expr.h set.h flowtable.h ruleset.h common.h udata.h gen.h '/var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/include/libnftnl'
+make[3]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9/include/libnftnl'
+Making install in linux
+Making install in netfilter
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+Making install in examples
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+Making install in tests
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9'
+ /bin/mkdir -p '/var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64/pkgconfig'
+ /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c -m 644 libnftnl.pc '/var/tmp/portage/net-libs/libnftnl-1.2.9/image/usr/lib64/pkgconfig'
+make[2]: Leaving directory '/var/tmp/portage/net-libs/libnftnl-1.2.9/work/libnftnl-1.2.9'
+&gt;&gt;&gt; Completed installing net-libs/libnftnl-1.2.9 into /var/tmp/portage/net-libs/libnftnl-1.2.9/image
+
+ <span class="ansi32">*</span> Final size of build directory: 4824 KiB (4.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   348 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libnftnl.so.11.6.0
+
+</pre>
+</body>
+
+</html>
