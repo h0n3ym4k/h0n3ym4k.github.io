@@ -7,6 +7,10 @@ if [ -e /root/world-ing.stop-cron-weekly.enabled ];then
 	exit
 fi
 
+if [ -e /root/world-ing.world-rebuild.enabled ];then
+	echo 'Monday after short update THEN world rebuild - need a whole week'|mailx root
+fi
+
 emerge --sync --color n
 echo;echo;echo;echo "---"
 emerge world -Dupv --color n|egrep 'portage' && echo 'compile.sh webalizer'
