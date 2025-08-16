@@ -1,0 +1,1004 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-go/go-md2man-2.0.6:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: williamh@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking go-md2man-2.0.6.tar.gz to /var/tmp/portage/dev-go/go-md2man-2.0.6/work
+&gt;&gt;&gt; Unpacking go-md2man-2.0.6-deps.tar.xz to /var/tmp/portage/dev-go/go-md2man-2.0.6/work
+go mod verify
+all modules verified
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-go/go-md2man-2.0.6/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6 ...
+make -j2 build 
+CGO_ENABLED=0 go build  -o bin/go-md2man
+WORK=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791
+encoding
+mkdir -p $WORK/b003/
+echo '# import config' &gt; $WORK/b003/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b003/_pkg_.a -trimpath "$WORK/b003=&gt;" -p encoding -lang=go1.24 -std -complete -installsuffix shared -buildid ZzMwW-kw9hSdYQZ3mCCv/ZzMwW-kw9hSdYQZ3mCCv -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b003/importcfg -pack /usr/lib/go/src/encoding/encoding.go
+internal/goarch
+mkdir -p $WORK/b007/
+echo '# import config' &gt; $WORK/b007/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b007/_pkg_.a -trimpath "$WORK/b007=&gt;" -p internal/goarch -lang=go1.24 -std -complete -installsuffix shared -buildid zdf6jUUqoOM7A5crsBxn/zdf6jUUqoOM7A5crsBxn -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b007/importcfg -pack /usr/lib/go/src/internal/goarch/goarch.go /usr/lib/go/src/internal/goarch/goarch_amd64.go /usr/lib/go/src/internal/goarch/zgoarch_amd64.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b007/_pkg_.a # internal
+cp $WORK/b007/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/3c/3cd59346304a7c4819c3889f222b407cbc7fc6e0ad5f8c81b227494695c64229-d # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b003/_pkg_.a # internal
+cp $WORK/b003/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/3a/3a0513dc26dee0547336f5f288fbe395841e530fd974029d967d997cee58d347-d # internal
+internal/unsafeheader
+mkdir -p $WORK/b009/
+echo '# import config' &gt; $WORK/b009/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b009/_pkg_.a -trimpath "$WORK/b009=&gt;" -p internal/unsafeheader -lang=go1.24 -std -complete -installsuffix shared -buildid Bx1ubLVbiZEJ2-L3vJBg/Bx1ubLVbiZEJ2-L3vJBg -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b009/importcfg -pack /usr/lib/go/src/internal/unsafeheader/unsafeheader.go
+internal/abi
+mkdir -p $WORK/b006/
+echo -n &gt; $WORK/b006/go_asm.h # internal
+cd /usr/lib/go/src/internal/abi
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/abi -trimpath "$WORK/b006=&gt;" -I $WORK/b006/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b006/symabis ./abi_test.s ./stub.s
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b006/_pkg_.a -trimpath "$WORK/b006=&gt;" -p internal/abi -lang=go1.24 -std -installsuffix shared -buildid C6d_mcj1_62b999DWVaZ/C6d_mcj1_62b999DWVaZ -goversion go1.24.6 -symabis $WORK/b006/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b006/importcfg -pack -asmhdr $WORK/b006/go_asm.h /usr/lib/go/src/internal/abi/abi.go /usr/lib/go/src/internal/abi/abi_amd64.go /usr/lib/go/src/internal/abi/compiletype.go /usr/lib/go/src/internal/abi/escape.go /usr/lib/go/src/internal/abi/funcpc.go /usr/lib/go/src/internal/abi/iface.go /usr/lib/go/src/internal/abi/map_noswiss.go /usr/lib/go/src/internal/abi/map_select_swiss.go /usr/lib/go/src/internal/abi/map_swiss.go /usr/lib/go/src/internal/abi/rangefuncconsts.go /usr/lib/go/src/internal/abi/runtime.go /usr/lib/go/src/internal/abi/stack.go /usr/lib/go/src/internal/abi/switch.go /usr/lib/go/src/internal/abi/symtab.go /usr/lib/go/src/internal/abi/type.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b009/_pkg_.a # internal
+cp $WORK/b009/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/21/21bde5b3aa8ba8f221571208349f0664ba91621eba1db947602e3107b6ebc738-d # internal
+internal/cpu
+mkdir -p $WORK/b012/
+echo -n &gt; $WORK/b012/go_asm.h # internal
+cd /usr/lib/go/src/internal/cpu
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/cpu -trimpath "$WORK/b012=&gt;" -I $WORK/b012/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b012/symabis ./cpu.s ./cpu_x86.s
+echo '# import config' &gt; $WORK/b012/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b012/_pkg_.a -trimpath "$WORK/b012=&gt;" -p internal/cpu -lang=go1.24 -std -installsuffix shared -buildid 6GG46086DJZUe8rWg33c/6GG46086DJZUe8rWg33c -goversion go1.24.6 -symabis $WORK/b012/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b012/importcfg -pack -asmhdr $WORK/b012/go_asm.h /usr/lib/go/src/internal/cpu/cpu.go /usr/lib/go/src/internal/cpu/cpu_x86.go
+cd /usr/lib/go/src/internal/cpu
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/cpu -trimpath "$WORK/b012=&gt;" -I $WORK/b012/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b012/cpu.o ./cpu.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/cpu -trimpath "$WORK/b012=&gt;" -I $WORK/b012/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b012/cpu_x86.o ./cpu_x86.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b012/_pkg_.a $WORK/b012/cpu.o $WORK/b012/cpu_x86.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b012/_pkg_.a # internal
+cp $WORK/b012/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/f9/f9ce0fcee975d2dddbeaef8f4a6ec0b61e2cd853bb668f711589dc9fea42691c-d # internal
+internal/bytealg
+mkdir -p $WORK/b011/
+echo -n &gt; $WORK/b011/go_asm.h # internal
+cd /usr/lib/go/src/internal/bytealg
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/bytealg -trimpath "$WORK/b011=&gt;" -I $WORK/b011/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b011/symabis ./compare_amd64.s ./count_amd64.s ./equal_amd64.s ./index_amd64.s ./indexbyte_amd64.s
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/cpu=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b012/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b011/_pkg_.a -trimpath "$WORK/b011=&gt;" -p internal/bytealg -lang=go1.24 -std -installsuffix shared -buildid Gt_VDVebZjLh_TlB0Pb7/Gt_VDVebZjLh_TlB0Pb7 -goversion go1.24.6 -symabis $WORK/b011/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b011/importcfg -pack -asmhdr $WORK/b011/go_asm.h /usr/lib/go/src/internal/bytealg/bytealg.go /usr/lib/go/src/internal/bytealg/compare_native.go /usr/lib/go/src/internal/bytealg/count_native.go /usr/lib/go/src/internal/bytealg/equal_generic.go /usr/lib/go/src/internal/bytealg/equal_native.go /usr/lib/go/src/internal/bytealg/index_amd64.go /usr/lib/go/src/internal/bytealg/index_native.go /usr/lib/go/src/internal/bytealg/indexbyte_native.go /usr/lib/go/src/internal/bytealg/lastindexbyte_generic.go
+cd /usr/lib/go/src/internal/bytealg
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/bytealg -trimpath "$WORK/b011=&gt;" -I $WORK/b011/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b011/compare_amd64.o ./compare_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/bytealg -trimpath "$WORK/b011=&gt;" -I $WORK/b011/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b011/count_amd64.o ./count_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/bytealg -trimpath "$WORK/b011=&gt;" -I $WORK/b011/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b011/equal_amd64.o ./equal_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/bytealg -trimpath "$WORK/b011=&gt;" -I $WORK/b011/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b011/index_amd64.o ./index_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/bytealg -trimpath "$WORK/b011=&gt;" -I $WORK/b011/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b011/indexbyte_amd64.o ./indexbyte_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b011/_pkg_.a $WORK/b011/compare_amd64.o $WORK/b011/count_amd64.o $WORK/b011/equal_amd64.o $WORK/b011/index_amd64.o $WORK/b011/indexbyte_amd64.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b011/_pkg_.a # internal
+cp $WORK/b011/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/78/78e5b3bcc005ac759aea37567dc62bad0ec296486f8c54e5e744f750460aecad-d # internal
+internal/byteorder
+mkdir -p $WORK/b013/
+echo '# import config' &gt; $WORK/b013/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b013/_pkg_.a -trimpath "$WORK/b013=&gt;" -p internal/byteorder -lang=go1.24 -std -complete -installsuffix shared -buildid 2AfCHfWCTKWbYVfvKbK8/2AfCHfWCTKWbYVfvKbK8 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b013/importcfg -pack /usr/lib/go/src/internal/byteorder/byteorder.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b013/_pkg_.a # internal
+cp $WORK/b013/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/c2/c297050e55487ac33fdf8b50ff6f5fb277b4057e184c8ab2400b58e116ff7737-d # internal
+internal/chacha8rand
+mkdir -p $WORK/b014/
+echo -n &gt; $WORK/b014/go_asm.h # internal
+cd /usr/lib/go/src/internal/chacha8rand
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/chacha8rand -trimpath "$WORK/b014=&gt;" -I $WORK/b014/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b014/symabis ./chacha8_amd64.s
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b014/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/byteorder=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b013/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b014/_pkg_.a -trimpath "$WORK/b014=&gt;" -p internal/chacha8rand -lang=go1.24 -std -installsuffix shared -buildid Xl4AivwKvAR-V4I6mGsG/Xl4AivwKvAR-V4I6mGsG -goversion go1.24.6 -symabis $WORK/b014/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b014/importcfg -pack -asmhdr $WORK/b014/go_asm.h /usr/lib/go/src/internal/chacha8rand/chacha8.go /usr/lib/go/src/internal/chacha8rand/chacha8_generic.go
+cd /usr/lib/go/src/internal/chacha8rand
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/chacha8rand -trimpath "$WORK/b014=&gt;" -I $WORK/b014/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b014/chacha8_amd64.o ./chacha8_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b014/_pkg_.a $WORK/b014/chacha8_amd64.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b014/_pkg_.a # internal
+cp $WORK/b014/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/2e/2eb160cff7d639610ed816390ad5d57c20f3d359e5bf78d5c25b3d1a3651793e-d # internal
+internal/coverage/rtcov
+mkdir -p $WORK/b015/
+echo '# import config' &gt; $WORK/b015/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b015/_pkg_.a -trimpath "$WORK/b015=&gt;" -p internal/coverage/rtcov -lang=go1.24 -std -complete -installsuffix shared -buildid g42da16qeGForJacwSWU/g42da16qeGForJacwSWU -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b015/importcfg -pack /usr/lib/go/src/internal/coverage/rtcov/rtcov.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b015/_pkg_.a # internal
+cp $WORK/b015/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/f3/f3e2660bf1839cd1aec1dddf56eb1795ef5114cb9ef0a95aecc1d1720ce53f89-d # internal
+internal/godebugs
+mkdir -p $WORK/b016/
+echo '# import config' &gt; $WORK/b016/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b016/_pkg_.a -trimpath "$WORK/b016=&gt;" -p internal/godebugs -lang=go1.24 -std -complete -installsuffix shared -buildid tFp61NWqTL0seax_D1zA/tFp61NWqTL0seax_D1zA -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b016/importcfg -pack /usr/lib/go/src/internal/godebugs/table.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b016/_pkg_.a # internal
+cp $WORK/b016/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/df/dfecefe9ea9bc091dfe5e0dc41e2b9744455eb5ce0c38d1ebdffad5fce0a3c4c-d # internal
+internal/goexperiment
+mkdir -p $WORK/b017/
+echo '# import config' &gt; $WORK/b017/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b017/_pkg_.a -trimpath "$WORK/b017=&gt;" -p internal/goexperiment -lang=go1.24 -std -complete -installsuffix shared -buildid -6rJ2925gRR6AM-itZhj/-6rJ2925gRR6AM-itZhj -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b017/importcfg -pack /usr/lib/go/src/internal/goexperiment/exp_aliastypeparams_on.go /usr/lib/go/src/internal/goexperiment/exp_arenas_off.go /usr/lib/go/src/internal/goexperiment/exp_boringcrypto_off.go /usr/lib/go/src/internal/goexperiment/exp_cacheprog_off.go /usr/lib/go/src/internal/goexperiment/exp_cgocheck2_off.go /usr/lib/go/src/internal/goexperiment/exp_coverageredesign_on.go /usr/lib/go/src/internal/goexperiment/exp_fieldtrack_off.go /usr/lib/go/src/internal/goexperiment/exp_heapminimum512kib_off.go /usr/lib/go/src/internal/goexperiment/exp_loopvar_off.go /usr/lib/go/src/internal/goexperiment/exp_newinliner_off.go /usr/lib/go/src/internal/goexperiment/exp_preemptibleloops_off.go /usr/lib/go/src/internal/goexperiment/exp_rangefunc_off.go /usr/lib/go/src/internal/goexperiment/exp_regabiargs_on.go /usr/lib/go/src/internal/goexperiment/exp_regabiwrappers_on.go /usr/lib/go/src/internal/goexperiment/exp_spinbitmutex_on.go /usr/lib/go/src/internal/goexperiment/exp_staticlockranking_off.go /usr/lib/go/src/internal/goexperiment/exp_swissmap_on.go /usr/lib/go/src/internal/goexperiment/exp_synchashtriemap_on.go /usr/lib/go/src/internal/goexperiment/exp_synctest_off.go /usr/lib/go/src/internal/goexperiment/flags.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b017/_pkg_.a # internal
+cp $WORK/b017/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/50/5099ac0eebc7a915d71c5c468bc2e1488a5f5be6953172b0a81a700465710e1b-d # internal
+internal/goos
+mkdir -p $WORK/b018/
+echo '# import config' &gt; $WORK/b018/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b018/_pkg_.a -trimpath "$WORK/b018=&gt;" -p internal/goos -lang=go1.24 -std -complete -installsuffix shared -buildid Vvt9UocRVYOcW9D7ZaAP/Vvt9UocRVYOcW9D7ZaAP -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b018/importcfg -pack /usr/lib/go/src/internal/goos/goos.go /usr/lib/go/src/internal/goos/unix.go /usr/lib/go/src/internal/goos/zgoos_linux.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b018/_pkg_.a # internal
+cp $WORK/b018/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/95/955820eb5616472c5cbd39e34b546f90d1e5aeeaa84d50b208bc212a16c46978-d # internal
+internal/profilerecord
+mkdir -p $WORK/b019/
+echo '# import config' &gt; $WORK/b019/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b019/_pkg_.a -trimpath "$WORK/b019=&gt;" -p internal/profilerecord -lang=go1.24 -std -complete -installsuffix shared -buildid 0io3JurtJ71oZi3ljFi6/0io3JurtJ71oZi3ljFi6 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b019/importcfg -pack /usr/lib/go/src/internal/profilerecord/profilerecord.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b019/_pkg_.a # internal
+cp $WORK/b019/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/2b/2b2ac210319a3e4ff9b98c7cc780e095da016a0e44dbf5cc3ded88d81622898c-d # internal
+internal/runtime/atomic
+mkdir -p $WORK/b020/
+echo -n &gt; $WORK/b020/go_asm.h # internal
+cd /usr/lib/go/src/internal/runtime/atomic
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/runtime/atomic -trimpath "$WORK/b020=&gt;" -I $WORK/b020/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b020/symabis ./atomic_amd64.s
+cd /usr/lib/go/src/internal/abi
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/abi -trimpath "$WORK/b006=&gt;" -I $WORK/b006/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b006/abi_test.o ./abi_test.s
+echo '# import config' &gt; $WORK/b020/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b020/_pkg_.a -trimpath "$WORK/b020=&gt;" -p internal/runtime/atomic -lang=go1.24 -std -installsuffix shared -buildid vR-R7h5MHB553o1GvPrj/vR-R7h5MHB553o1GvPrj -goversion go1.24.6 -symabis $WORK/b020/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b020/importcfg -pack -asmhdr $WORK/b020/go_asm.h /usr/lib/go/src/internal/runtime/atomic/atomic_amd64.go /usr/lib/go/src/internal/runtime/atomic/doc.go /usr/lib/go/src/internal/runtime/atomic/stubs.go /usr/lib/go/src/internal/runtime/atomic/types.go /usr/lib/go/src/internal/runtime/atomic/types_64bit.go /usr/lib/go/src/internal/runtime/atomic/unaligned.go
+cd /usr/lib/go/src/internal/abi
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/abi -trimpath "$WORK/b006=&gt;" -I $WORK/b006/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b006/stub.o ./stub.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b006/_pkg_.a $WORK/b006/abi_test.o $WORK/b006/stub.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b006/_pkg_.a # internal
+cp $WORK/b006/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/5b/5b435e0aec86ae22f4c2687432efb5fa6207216a99a954b78babf0d39c5afef4-d # internal
+internal/asan
+mkdir -p $WORK/b023/
+echo '# import config' &gt; $WORK/b023/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b023/_pkg_.a -trimpath "$WORK/b023=&gt;" -p internal/asan -lang=go1.24 -std -complete -installsuffix shared -buildid g1PK6O3-ZN8OhIOZJPoJ/g1PK6O3-ZN8OhIOZJPoJ -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b023/importcfg -pack /usr/lib/go/src/internal/asan/doc.go /usr/lib/go/src/internal/asan/noasan.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b023/_pkg_.a # internal
+cp $WORK/b023/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/d2/d217be4470334d457d9325e9fffff036a00c91f82375f2322370be7d0365b7d7-d # internal
+internal/msan
+mkdir -p $WORK/b024/
+echo '# import config' &gt; $WORK/b024/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b024/_pkg_.a -trimpath "$WORK/b024=&gt;" -p internal/msan -lang=go1.24 -std -complete -installsuffix shared -buildid MUXkS8AjICFh3_i3Lrtq/MUXkS8AjICFh3_i3Lrtq -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b024/importcfg -pack /usr/lib/go/src/internal/msan/doc.go /usr/lib/go/src/internal/msan/nomsan.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b024/_pkg_.a # internal
+cp $WORK/b024/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/80/807b331013e2a5185d64d79d012ead2d2b9b3348ec18d841b5c882aac52a7491-d # internal
+internal/race
+mkdir -p $WORK/b025/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b025/_pkg_.a -trimpath "$WORK/b025=&gt;" -p internal/race -lang=go1.24 -std -complete -installsuffix shared -buildid 4S5Y4ts_bpPq1I2I42ys/4S5Y4ts_bpPq1I2I42ys -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b025/importcfg -pack /usr/lib/go/src/internal/race/doc.go /usr/lib/go/src/internal/race/norace.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b025/_pkg_.a # internal
+cd /usr/lib/go/src/internal/runtime/atomic
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/runtime/atomic -trimpath "$WORK/b020=&gt;" -I $WORK/b020/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b020/atomic_amd64.o ./atomic_amd64.s
+cp $WORK/b025/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/a7/a7595b336fb4aa009a92d9984a096f8b4d9eaf071a7ea240b9ffc11334069c20-d # internal
+internal/runtime/math
+mkdir -p $WORK/b026/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b026/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b026/_pkg_.a -trimpath "$WORK/b026=&gt;" -p internal/runtime/math -lang=go1.24 -std -complete -installsuffix shared -buildid 5a-lBlHf3a1pON6tr4er/5a-lBlHf3a1pON6tr4er -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b026/importcfg -pack /usr/lib/go/src/internal/runtime/math/math.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b026/_pkg_.a # internal
+cp $WORK/b026/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/b0/b0dcb7e35111bff38ec1892cb18d75a385f4f768137ca6030a6dabb1143be6dd-d # internal
+cd /usr/lib/go/src/internal/runtime/atomic
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b020/_pkg_.a $WORK/b020/atomic_amd64.o # internal
+internal/runtime/sys
+mkdir -p $WORK/b027/
+echo -n &gt; $WORK/b027/go_asm.h # internal
+cd /usr/lib/go/src/internal/runtime/sys
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/runtime/sys -trimpath "$WORK/b027=&gt;" -I $WORK/b027/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b027/symabis ./empty.s
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b020/_pkg_.a # internal
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b027/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/goos=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b018/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b027/_pkg_.a -trimpath "$WORK/b027=&gt;" -p internal/runtime/sys -lang=go1.24 -std -installsuffix shared -buildid bwX_gBt0diAoIcY6cuue/bwX_gBt0diAoIcY6cuue -goversion go1.24.6 -symabis $WORK/b027/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b027/importcfg -pack -asmhdr $WORK/b027/go_asm.h /usr/lib/go/src/internal/runtime/sys/consts.go /usr/lib/go/src/internal/runtime/sys/consts_norace.go /usr/lib/go/src/internal/runtime/sys/intrinsics.go /usr/lib/go/src/internal/runtime/sys/nih.go /usr/lib/go/src/internal/runtime/sys/no_dit.go /usr/lib/go/src/internal/runtime/sys/sys.go /usr/lib/go/src/internal/runtime/sys/zversion.go
+cp $WORK/b020/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/41/41e5de52d47af744a4a4dcf741d04ce042f814f41bbe98adceeb4c8e095cb392-d # internal
+internal/runtime/exithook
+mkdir -p $WORK/b021/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b021/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/runtime/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b020/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b021/_pkg_.a -trimpath "$WORK/b021=&gt;" -p internal/runtime/exithook -lang=go1.24 -std -complete -installsuffix shared -buildid xa0bFUDwRKrkPbYFyWZ8/xa0bFUDwRKrkPbYFyWZ8 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b021/importcfg -pack /usr/lib/go/src/internal/runtime/exithook/hooks.go
+cd /usr/lib/go/src/internal/runtime/sys
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/runtime/sys -trimpath "$WORK/b027=&gt;" -I $WORK/b027/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b027/empty.o ./empty.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b027/_pkg_.a $WORK/b027/empty.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b027/_pkg_.a # internal
+cp $WORK/b027/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/76/7685e71575f5f4f96599d940b2e49ce07084e372d5567158e87e19869d0d6919-d # internal
+internal/runtime/maps
+mkdir -p $WORK/b022/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b022/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+packagefile internal/asan=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b023/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/msan=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b024/_pkg_.a
+packagefile internal/race=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/_pkg_.a
+packagefile internal/runtime/math=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b026/_pkg_.a
+packagefile internal/runtime/sys=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b027/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b021/_pkg_.a # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b022/_pkg_.a -trimpath "$WORK/b022=&gt;" -p internal/runtime/maps -lang=go1.24 -std -complete -installsuffix shared -buildid qIwkbmZinHOfpFjUrT4v/qIwkbmZinHOfpFjUrT4v -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b022/importcfg -pack /usr/lib/go/src/internal/runtime/maps/group.go /usr/lib/go/src/internal/runtime/maps/map.go /usr/lib/go/src/internal/runtime/maps/runtime.go /usr/lib/go/src/internal/runtime/maps/runtime_fast32_swiss.go /usr/lib/go/src/internal/runtime/maps/runtime_fast64_swiss.go /usr/lib/go/src/internal/runtime/maps/runtime_faststr_swiss.go /usr/lib/go/src/internal/runtime/maps/runtime_swiss.go /usr/lib/go/src/internal/runtime/maps/table.go /usr/lib/go/src/internal/runtime/maps/table_debug.go
+cp $WORK/b021/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/71/719830bf2f36fa858150356fb75e0472858d8aba0e45745b0ab28c75add0f8c2-d # internal
+internal/runtime/syscall
+mkdir -p $WORK/b028/
+echo -n &gt; $WORK/b028/go_asm.h # internal
+cd /usr/lib/go/src/internal/runtime/syscall
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/runtime/syscall -trimpath "$WORK/b028=&gt;" -I $WORK/b028/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b028/symabis ./asm_linux_amd64.s
+echo '# import config' &gt; $WORK/b028/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b028/_pkg_.a -trimpath "$WORK/b028=&gt;" -p internal/runtime/syscall -lang=go1.24 -std -installsuffix shared -buildid NYWsBHjkipA2QS8MMUru/NYWsBHjkipA2QS8MMUru -goversion go1.24.6 -symabis $WORK/b028/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b028/importcfg -pack -asmhdr $WORK/b028/go_asm.h /usr/lib/go/src/internal/runtime/syscall/defs_linux.go /usr/lib/go/src/internal/runtime/syscall/defs_linux_amd64.go /usr/lib/go/src/internal/runtime/syscall/syscall_linux.go
+cd /usr/lib/go/src/internal/runtime/syscall
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/runtime/syscall -trimpath "$WORK/b028=&gt;" -I $WORK/b028/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b028/asm_linux_amd64.o ./asm_linux_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b028/_pkg_.a $WORK/b028/asm_linux_amd64.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b028/_pkg_.a # internal
+cp $WORK/b028/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/2a/2a6cb9cdc35f5d816b97f7c00dc07e83ebf0e6c988e9daa2833b04d62a073b20-d # internal
+internal/stringslite
+mkdir -p $WORK/b029/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b029/_pkg_.a -trimpath "$WORK/b029=&gt;" -p internal/stringslite -lang=go1.24 -std -complete -installsuffix shared -buildid 8K4iXOuj56FS5jZgCs7t/8K4iXOuj56FS5jZgCs7t -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b029/importcfg -pack /usr/lib/go/src/internal/stringslite/strings.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b029/_pkg_.a # internal
+cp $WORK/b029/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/4c/4ce1d124e84b975d81bc5ba9c46c853d263e98b8899cd6a2358dde64e13a25b6-d # internal
+cmp
+mkdir -p $WORK/b032/
+echo '# import config' &gt; $WORK/b032/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b032/_pkg_.a -trimpath "$WORK/b032=&gt;" -p cmp -lang=go1.24 -std -complete -installsuffix shared -buildid MUO6d6NeyMa-pPs1mNBO/MUO6d6NeyMa-pPs1mNBO -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b032/importcfg -pack /usr/lib/go/src/cmp/cmp.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b032/_pkg_.a # internal
+cp $WORK/b032/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/1f/1fbce86b8626bfbc1083d890d0bcc817a25ce993a199de1faba98507f6ee8260-d # internal
+internal/itoa
+mkdir -p $WORK/b034/
+echo '# import config' &gt; $WORK/b034/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b034/_pkg_.a -trimpath "$WORK/b034=&gt;" -p internal/itoa -lang=go1.24 -std -complete -installsuffix shared -buildid NtYUaQ66LDOsCyfi94rW/NtYUaQ66LDOsCyfi94rW -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b034/importcfg -pack /usr/lib/go/src/internal/itoa/itoa.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b034/_pkg_.a # internal
+cp $WORK/b034/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/80/802e57fdb4d97a18aec2089bde09ddb73851c800d2aa900f7e60347cb68d5497-d # internal
+math/bits
+mkdir -p $WORK/b037/
+echo '# import config' &gt; $WORK/b037/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b037/_pkg_.a -trimpath "$WORK/b037=&gt;" -p math/bits -lang=go1.24 -std -complete -installsuffix shared -buildid j6Yy1A7M8K1msg4omGcr/j6Yy1A7M8K1msg4omGcr -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b037/importcfg -pack /usr/lib/go/src/math/bits/bits.go /usr/lib/go/src/math/bits/bits_errors.go /usr/lib/go/src/math/bits/bits_tables.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b037/_pkg_.a # internal
+cp $WORK/b037/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/4e/4e24b017e2d7ccc9c667d75231040fcc93756828279309cb1d9835e1f1e3ac88-d # internal
+math
+mkdir -p $WORK/b036/
+echo -n &gt; $WORK/b036/go_asm.h # internal
+cd /usr/lib/go/src/math
+/usr/lib/go/pkg/tool/linux_amd64/asm -p math -trimpath "$WORK/b036=&gt;" -I $WORK/b036/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b036/symabis ./dim_amd64.s ./exp_amd64.s ./floor_amd64.s ./hypot_amd64.s ./log_amd64.s
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b036/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/cpu=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b012/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b036/_pkg_.a -trimpath "$WORK/b036=&gt;" -p math -lang=go1.24 -std -installsuffix shared -buildid gOdr31tafHbfWjgol4rP/gOdr31tafHbfWjgol4rP -goversion go1.24.6 -symabis $WORK/b036/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b036/importcfg -pack -asmhdr $WORK/b036/go_asm.h /usr/lib/go/src/math/abs.go /usr/lib/go/src/math/acosh.go /usr/lib/go/src/math/asin.go /usr/lib/go/src/math/asinh.go /usr/lib/go/src/math/atan.go /usr/lib/go/src/math/atan2.go /usr/lib/go/src/math/atanh.go /usr/lib/go/src/math/bits.go /usr/lib/go/src/math/cbrt.go /usr/lib/go/src/math/const.go /usr/lib/go/src/math/copysign.go /usr/lib/go/src/math/dim.go /usr/lib/go/src/math/dim_asm.go /usr/lib/go/src/math/erf.go /usr/lib/go/src/math/erfinv.go /usr/lib/go/src/math/exp.go /usr/lib/go/src/math/exp2_noasm.go /usr/lib/go/src/math/exp_amd64.go /usr/lib/go/src/math/exp_asm.go /usr/lib/go/src/math/expm1.go /usr/lib/go/src/math/floor.go /usr/lib/go/src/math/floor_asm.go /usr/lib/go/src/math/fma.go /usr/lib/go/src/math/frexp.go /usr/lib/go/src/math/gamma.go /usr/lib/go/src/math/hypot.go /usr/lib/go/src/math/hypot_asm.go /usr/lib/go/src/math/j0.go /usr/lib/go/src/math/j1.go /usr/lib/go/src/math/jn.go /usr/lib/go/src/math/ldexp.go /usr/lib/go/src/math/lgamma.go /usr/lib/go/src/math/log.go /usr/lib/go/src/math/log10.go /usr/lib/go/src/math/log1p.go /usr/lib/go/src/math/log_asm.go /usr/lib/go/src/math/logb.go /usr/lib/go/src/math/mod.go /usr/lib/go/src/math/modf.go /usr/lib/go/src/math/modf_noasm.go /usr/lib/go/src/math/nextafter.go /usr/lib/go/src/math/pow.go /usr/lib/go/src/math/pow10.go /usr/lib/go/src/math/remainder.go /usr/lib/go/src/math/signbit.go /usr/lib/go/src/math/sin.go /usr/lib/go/src/math/sincos.go /usr/lib/go/src/math/sinh.go /usr/lib/go/src/math/sqrt.go /usr/lib/go/src/math/stubs.go /usr/lib/go/src/math/tan.go /usr/lib/go/src/math/tanh.go /usr/lib/go/src/math/trig_reduce.go /usr/lib/go/src/math/unsafe.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b022/_pkg_.a # internal
+cp $WORK/b022/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/72/72325c6140616e6da21180c6e96da162d86db66ad069db774d96b8d0630db63b-d # internal
+runtime
+mkdir -p $WORK/b010/
+echo -n &gt; $WORK/b010/go_asm.h # internal
+cd /usr/lib/go/src/runtime
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b010/symabis ./asm.s ./asm_amd64.s ./duff_amd64.s ./ints.s ./memclr_amd64.s ./memmove_amd64.s ./preempt_amd64.s ./rt0_linux_amd64.s ./sys_linux_amd64.s ./test_amd64.s ./time_linux_amd64.s
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/byteorder=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b013/_pkg_.a
+packagefile internal/chacha8rand=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b014/_pkg_.a
+packagefile internal/coverage/rtcov=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b015/_pkg_.a
+packagefile internal/cpu=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b012/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/godebugs=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b016/_pkg_.a
+packagefile internal/goexperiment=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b017/_pkg_.a
+packagefile internal/goos=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b018/_pkg_.a
+packagefile internal/profilerecord=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b019/_pkg_.a
+packagefile internal/runtime/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b020/_pkg_.a
+packagefile internal/runtime/exithook=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b021/_pkg_.a
+packagefile internal/runtime/maps=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b022/_pkg_.a
+packagefile internal/runtime/math=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b026/_pkg_.a
+packagefile internal/runtime/sys=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b027/_pkg_.a
+packagefile internal/runtime/syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b028/_pkg_.a
+packagefile internal/stringslite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b010/_pkg_.a -trimpath "$WORK/b010=&gt;" -p runtime -lang=go1.24 -std -installsuffix shared -buildid JeIHe1WUYx3Xeb3aMs42/JeIHe1WUYx3Xeb3aMs42 -goversion go1.24.6 -symabis $WORK/b010/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b010/importcfg -pack -asmhdr $WORK/b010/go_asm.h /usr/lib/go/src/runtime/alg.go /usr/lib/go/src/runtime/arena.go /usr/lib/go/src/runtime/asan0.go /usr/lib/go/src/runtime/atomic_pointer.go /usr/lib/go/src/runtime/badlinkname.go /usr/lib/go/src/runtime/badlinkname_linux.go /usr/lib/go/src/runtime/cgo.go /usr/lib/go/src/runtime/cgo_mmap.go /usr/lib/go/src/runtime/cgo_sigaction.go /usr/lib/go/src/runtime/cgocall.go /usr/lib/go/src/runtime/cgocallback.go /usr/lib/go/src/runtime/cgocheck.go /usr/lib/go/src/runtime/chan.go /usr/lib/go/src/runtime/checkptr.go /usr/lib/go/src/runtime/compiler.go /usr/lib/go/src/runtime/complex.go /usr/lib/go/src/runtime/coro.go /usr/lib/go/src/runtime/covercounter.go /usr/lib/go/src/runtime/covermeta.go /usr/lib/go/src/runtime/cpuflags.go /usr/lib/go/src/runtime/cpuflags_amd64.go /usr/lib/go/src/runtime/cpuprof.go /usr/lib/go/src/runtime/cputicks.go /usr/lib/go/src/runtime/create_file_unix.go /usr/lib/go/src/runtime/debug.go /usr/lib/go/src/runtime/debugcall.go /usr/lib/go/src/runtime/debuglog.go /usr/lib/go/src/runtime/debuglog_off.go /usr/lib/go/src/runtime/defs_linux_amd64.go /usr/lib/go/src/runtime/env_posix.go /usr/lib/go/src/runtime/error.go /usr/lib/go/src/runtime/extern.go /usr/lib/go/src/runtime/fastlog2.go /usr/lib/go/src/runtime/fastlog2table.go /usr/lib/go/src/runtime/fds_unix.go /usr/lib/go/src/runtime/float.go /usr/lib/go/src/runtime/hash64.go /usr/lib/go/src/runtime/heapdump.go /usr/lib/go/src/runtime/histogram.go /usr/lib/go/src/runtime/iface.go /usr/lib/go/src/runtime/lfstack.go /usr/lib/go/src/runtime/linkname.go /usr/lib/go/src/runtime/linkname_swiss.go /usr/lib/go/src/runtime/linkname_unix.go /usr/lib/go/src/runtime/lock_futex.go /usr/lib/go/src/runtime/lock_spinbit.go /usr/lib/go/src/runtime/lockrank.go /usr/lib/go/src/runtime/lockrank_off.go /usr/lib/go/src/runtime/malloc.go /usr/lib/go/src/runtime/map_fast32_swiss.go /usr/lib/go/src/runtime/map_fast64_swiss.go /usr/lib/go/src/runtime/map_faststr_swiss.go /usr/lib/go/src/runtime/map_swiss.go /usr/lib/go/src/runtime/mbarrier.go /usr/lib/go/src/runtime/mbitmap.go /usr/lib/go/src/runtime/mcache.go /usr/lib/go/src/runtime/mcentral.go /usr/lib/go/src/runtime/mcheckmark.go /usr/lib/go/src/runtime/mcleanup.go /usr/lib/go/src/runtime/mem.go /usr/lib/go/src/runtime/mem_linux.go /usr/lib/go/src/runtime/mem_nonsbrk.go /usr/lib/go/src/runtime/metrics.go /usr/lib/go/src/runtime/mfinal.go /usr/lib/go/src/runtime/mfixalloc.go /usr/lib/go/src/runtime/mgc.go /usr/lib/go/src/runtime/mgclimit.go /usr/lib/go/src/runtime/mgcmark.go /usr/lib/go/src/runtime/mgcpacer.go /usr/lib/go/src/runtime/mgcscavenge.go /usr/lib/go/src/runtime/mgcstack.go /usr/lib/go/src/runtime/mgcsweep.go /usr/lib/go/src/runtime/mgcwork.go /usr/lib/go/src/runtime/mheap.go /usr/lib/go/src/runtime/minmax.go /usr/lib/go/src/runtime/mpagealloc.go /usr/lib/go/src/runtime/mpagealloc_64bit.go /usr/lib/go/src/runtime/mpagecache.go /usr/lib/go/src/runtime/mpallocbits.go /usr/lib/go/src/runtime/mprof.go /usr/lib/go/src/runtime/mranges.go /usr/lib/go/src/runtime/msan0.go /usr/lib/go/src/runtime/msize.go /usr/lib/go/src/runtime/mspanset.go /usr/lib/go/src/runtime/mstats.go /usr/lib/go/src/runtime/mwbbuf.go /usr/lib/go/src/runtime/nbpipe_pipe2.go /usr/lib/go/src/runtime/netpoll.go /usr/lib/go/src/runtime/netpoll_epoll.go /usr/lib/go/src/runtime/nonwindows_stub.go /usr/lib/go/src/runtime/note_other.go /usr/lib/go/src/runtime/os_linux.go /usr/lib/go/src/runtime/os_linux_generic.go /usr/lib/go/src/runtime/os_linux_noauxv.go /usr/lib/go/src/runtime/os_linux_x86.go /usr/lib/go/src/runtime/os_nonopenbsd.go /usr/lib/go/src/runtime/os_unix.go /usr/lib/go/src/runtime/panic.go /usr/lib/go/src/runtime/pinner.go /usr/lib/go/src/runtime/plugin.go /usr/lib/go/src/runtime/preempt.go /usr/lib/go/src/runtime/preempt_nonwindows.go /usr/lib/go/src/runtime/print.go /usr/lib/go/src/runtime/proc.go /usr/lib/go/src/runtime/profbuf.go /usr/lib/go/src/runtime/proflabel.go /usr/lib/go/src/runtime/race0.go /usr/lib/go/src/runtime/rand.go /usr/lib/go/src/runtime/rdebug.go /usr/lib/go/src/runtime/retry.go /usr/lib/go/src/runtime/runtime.go /usr/lib/go/src/runtime/runtime1.go /usr/lib/go/src/runtime/runtime2.go /usr/lib/go/src/runtime/runtime_boring.go /usr/lib/go/src/runtime/rwmutex.go /usr/lib/go/src/runtime/security_linux.go /usr/lib/go/src/runtime/security_unix.go /usr/lib/go/src/runtime/select.go /usr/lib/go/src/runtime/sema.go /usr/lib/go/src/runtime/signal_amd64.go /usr/lib/go/src/runtime/signal_linux_amd64.go /usr/lib/go/src/runtime/signal_unix.go /usr/lib/go/src/runtime/sigqueue.go /usr/lib/go/src/runtime/sigqueue_note.go /usr/lib/go/src/runtime/sigtab_linux_generic.go /usr/lib/go/src/runtime/sizeclasses.go /usr/lib/go/src/runtime/slice.go /usr/lib/go/src/runtime/softfloat64.go /usr/lib/go/src/runtime/stack.go /usr/lib/go/src/runtime/stkframe.go /usr/lib/go/src/runtime/string.go /usr/lib/go/src/runtime/stubs.go /usr/lib/go/src/runtime/stubs2.go /usr/lib/go/src/runtime/stubs3.go /usr/lib/go/src/runtime/stubs_amd64.go /usr/lib/go/src/runtime/stubs_linux.go /usr/lib/go/src/runtime/stubs_nonwasm.go /usr/lib/go/src/runtime/symtab.go /usr/lib/go/src/runtime/symtabinl.go /usr/lib/go/src/runtime/synctest.go /usr/lib/go/src/runtime/sys_nonppc64x.go /usr/lib/go/src/runtime/sys_x86.go /usr/lib/go/src/runtime/tagptr.go /usr/lib/go/src/runtime/tagptr_64bit.go /usr/lib/go/src/runtime/test_amd64.go /usr/lib/go/src/runtime/time.go /usr/lib/go/src/runtime/time_nofake.go /usr/lib/go/src/runtime/timeasm.go /usr/lib/go/src/runtime/tls_stub.go /usr/lib/go/src/runtime/trace.go /usr/lib/go/src/runtime/traceallocfree.go /usr/lib/go/src/runtime/traceback.go /usr/lib/go/src/runtime/tracebuf.go /usr/lib/go/src/runtime/tracecpu.go /usr/lib/go/src/runtime/traceevent.go /usr/lib/go/src/runtime/traceexp.go /usr/lib/go/src/runtime/tracemap.go /usr/lib/go/src/runtime/traceregion.go /usr/lib/go/src/runtime/traceruntime.go /usr/lib/go/src/runtime/tracestack.go /usr/lib/go/src/runtime/tracestatus.go /usr/lib/go/src/runtime/tracestring.go /usr/lib/go/src/runtime/tracetime.go /usr/lib/go/src/runtime/tracetype.go /usr/lib/go/src/runtime/type.go /usr/lib/go/src/runtime/typekind.go /usr/lib/go/src/runtime/unsafe.go /usr/lib/go/src/runtime/utf8.go /usr/lib/go/src/runtime/vdso_elf64.go /usr/lib/go/src/runtime/vdso_linux.go /usr/lib/go/src/runtime/vdso_linux_amd64.go /usr/lib/go/src/runtime/vgetrandom_linux.go /usr/lib/go/src/runtime/write_err.go
+cd /usr/lib/go/src/math
+/usr/lib/go/pkg/tool/linux_amd64/asm -p math -trimpath "$WORK/b036=&gt;" -I $WORK/b036/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b036/dim_amd64.o ./dim_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p math -trimpath "$WORK/b036=&gt;" -I $WORK/b036/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b036/exp_amd64.o ./exp_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p math -trimpath "$WORK/b036=&gt;" -I $WORK/b036/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b036/floor_amd64.o ./floor_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p math -trimpath "$WORK/b036=&gt;" -I $WORK/b036/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b036/hypot_amd64.o ./hypot_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p math -trimpath "$WORK/b036=&gt;" -I $WORK/b036/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b036/log_amd64.o ./log_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b036/_pkg_.a $WORK/b036/dim_amd64.o $WORK/b036/exp_amd64.o $WORK/b036/floor_amd64.o $WORK/b036/hypot_amd64.o $WORK/b036/log_amd64.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b036/_pkg_.a # internal
+cp $WORK/b036/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/ec/eccf0a222f04e841be9a00e71a13d2eb61e04803442623360057d12d5d4e4c5f-d # internal
+unicode/utf8
+mkdir -p $WORK/b039/
+echo '# import config' &gt; $WORK/b039/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b039/_pkg_.a -trimpath "$WORK/b039=&gt;" -p unicode/utf8 -lang=go1.24 -std -complete -installsuffix shared -buildid 4CxERb8t2KKZq8u-30kf/4CxERb8t2KKZq8u-30kf -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b039/importcfg -pack /usr/lib/go/src/unicode/utf8/utf8.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b039/_pkg_.a # internal
+cp $WORK/b039/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/93/932dcce86d0b15dba2ccaef82f009cc6162bc3692ad6c4f35c404bfc8abed6ac-d # internal
+sync/atomic
+mkdir -p $WORK/b042/
+echo -n &gt; $WORK/b042/go_asm.h # internal
+cd /usr/lib/go/src/sync/atomic
+/usr/lib/go/pkg/tool/linux_amd64/asm -p sync/atomic -trimpath "$WORK/b042=&gt;" -I $WORK/b042/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b042/symabis ./asm.s
+echo '# import config' &gt; $WORK/b042/importcfg # internal
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b042/_pkg_.a -trimpath "$WORK/b042=&gt;" -p sync/atomic -lang=go1.24 -std -installsuffix shared -buildid DJCscLPzJrjWBYQ8eKzz/DJCscLPzJrjWBYQ8eKzz -goversion go1.24.6 -symabis $WORK/b042/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b042/importcfg -pack -asmhdr $WORK/b042/go_asm.h /usr/lib/go/src/sync/atomic/doc.go /usr/lib/go/src/sync/atomic/doc_64.go /usr/lib/go/src/sync/atomic/type.go /usr/lib/go/src/sync/atomic/value.go
+cd /usr/lib/go/src/sync/atomic
+/usr/lib/go/pkg/tool/linux_amd64/asm -p sync/atomic -trimpath "$WORK/b042=&gt;" -I $WORK/b042/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b042/asm.o ./asm.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b042/_pkg_.a $WORK/b042/asm.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b042/_pkg_.a # internal
+cp $WORK/b042/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/91/913055f60097b810a4952edb544828dffedcc3647e90e9437ae587d6f5820d05-d # internal
+internal/sync
+mkdir -p $WORK/b041/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b041/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/race=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b041/_pkg_.a -trimpath "$WORK/b041=&gt;" -p internal/sync -lang=go1.24 -std -complete -installsuffix shared -buildid hgVVNxad3KIEb7WKkN6E/hgVVNxad3KIEb7WKkN6E -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b041/importcfg -pack /usr/lib/go/src/internal/sync/hashtriemap.go /usr/lib/go/src/internal/sync/mutex.go /usr/lib/go/src/internal/sync/runtime.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b041/_pkg_.a # internal
+cp $WORK/b041/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/b3/b3fcdfec7be5fa7df1bad8199f5ac53448555721599339095b6ecae3f3923712-d # internal
+unicode
+mkdir -p $WORK/b043/
+echo '# import config' &gt; $WORK/b043/importcfg # internal
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b043/_pkg_.a -trimpath "$WORK/b043=&gt;" -p unicode -lang=go1.24 -std -complete -installsuffix shared -buildid u-giSij4BlzZuxy7SRrH/u-giSij4BlzZuxy7SRrH -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b043/importcfg -pack /usr/lib/go/src/unicode/casetables.go /usr/lib/go/src/unicode/digit.go /usr/lib/go/src/unicode/graphic.go /usr/lib/go/src/unicode/letter.go /usr/lib/go/src/unicode/tables.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b043/_pkg_.a # internal
+cp $WORK/b043/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/ba/ba885ba23d562131873292704ba84721782b62070fc3b99f69671232b397f1dd-d # internal
+cp /usr/lib/go/src/runtime/asm_amd64.h $WORK/b010/asm_GOARCH.h
+cd /usr/lib/go/src/runtime
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/asm.o ./asm.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/asm_amd64.o ./asm_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/duff_amd64.o ./duff_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/ints.o ./ints.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/memclr_amd64.o ./memclr_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/memmove_amd64.o ./memmove_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/preempt_amd64.o ./preempt_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/rt0_linux_amd64.o ./rt0_linux_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/sys_linux_amd64.o ./sys_linux_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/test_amd64.o ./test_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/asm -p runtime -trimpath "$WORK/b010=&gt;" -I $WORK/b010/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b010/time_linux_amd64.o ./time_linux_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b010/_pkg_.a $WORK/b010/asm.o $WORK/b010/asm_amd64.o $WORK/b010/duff_amd64.o $WORK/b010/ints.o $WORK/b010/memclr_amd64.o $WORK/b010/memmove_amd64.o $WORK/b010/preempt_amd64.o $WORK/b010/rt0_linux_amd64.o $WORK/b010/sys_linux_amd64.o $WORK/b010/test_amd64.o $WORK/b010/time_linux_amd64.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b010/_pkg_.a # internal
+cp $WORK/b010/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/90/90d0383f701049859f415d1d99796158781c9692161871758bb24bf96f77e0e4-d # internal
+internal/reflectlite
+mkdir -p $WORK/b005/
+echo -n &gt; $WORK/b005/go_asm.h # internal
+cd /usr/lib/go/src/internal/reflectlite
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/reflectlite -trimpath "$WORK/b005=&gt;" -I $WORK/b005/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b005/symabis ./asm.s
+iter
+mkdir -p $WORK/b035/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b035/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/race=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b035/_pkg_.a -trimpath "$WORK/b035=&gt;" -p iter -lang=go1.24 -std -complete -installsuffix shared -buildid IHghznRhAEZVap4jq1-p/IHghznRhAEZVap4jq1-p -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b035/importcfg -pack /usr/lib/go/src/iter/iter.go
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b005/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/unsafeheader=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b009/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b005/_pkg_.a -trimpath "$WORK/b005=&gt;" -p internal/reflectlite -lang=go1.24 -std -installsuffix shared -buildid YG5i3TZyUNoTrMD5xZa4/YG5i3TZyUNoTrMD5xZa4 -goversion go1.24.6 -symabis $WORK/b005/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b005/importcfg -pack -asmhdr $WORK/b005/go_asm.h /usr/lib/go/src/internal/reflectlite/swapper.go /usr/lib/go/src/internal/reflectlite/type.go /usr/lib/go/src/internal/reflectlite/value.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b035/_pkg_.a # internal
+cp $WORK/b035/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/ef/ef2072c31225302cefdee68845db3efb120df04602950ab4bd7bc5fcbe2d3a57-d # internal
+sync
+mkdir -p $WORK/b040/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/race=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/_pkg_.a
+packagefile internal/sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b041/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b040/_pkg_.a -trimpath "$WORK/b040=&gt;" -p sync -lang=go1.24 -std -installsuffix shared -buildid BWy_IxTv4Evr37ns9TZJ/BWy_IxTv4Evr37ns9TZJ -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b040/importcfg -pack /usr/lib/go/src/sync/cond.go /usr/lib/go/src/sync/hashtriemap.go /usr/lib/go/src/sync/mutex.go /usr/lib/go/src/sync/once.go /usr/lib/go/src/sync/oncefunc.go /usr/lib/go/src/sync/pool.go /usr/lib/go/src/sync/poolqueue.go /usr/lib/go/src/sync/runtime.go /usr/lib/go/src/sync/runtime2.go /usr/lib/go/src/sync/rwmutex.go /usr/lib/go/src/sync/waitgroup.go
+cd /usr/lib/go/src/internal/reflectlite
+/usr/lib/go/pkg/tool/linux_amd64/asm -p internal/reflectlite -trimpath "$WORK/b005=&gt;" -I $WORK/b005/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b005/asm.o ./asm.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b005/_pkg_.a $WORK/b005/asm.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b005/_pkg_.a # internal
+cp $WORK/b005/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/34/34869eb8126e2e0141f46e99774edd1eef76ce83ab66ddde5587a76f1ee7656e-d # internal
+errors
+mkdir -p $WORK/b004/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/reflectlite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b005/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b004/_pkg_.a -trimpath "$WORK/b004=&gt;" -p errors -lang=go1.24 -std -complete -installsuffix shared -buildid MZJvt9ukc2AC_0ms-VX4/MZJvt9ukc2AC_0ms-VX4 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b004/importcfg -pack /usr/lib/go/src/errors/errors.go /usr/lib/go/src/errors/join.go /usr/lib/go/src/errors/wrap.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b040/_pkg_.a # internal
+cp $WORK/b040/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/fb/fbf79df65d0fd56367ddead6b822a30087b525e79d74d707b0b19ec80b3d2471-d # internal
+slices
+mkdir -p $WORK/b044/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile cmp=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b032/_pkg_.a
+packagefile iter=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b035/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b044/_pkg_.a -trimpath "$WORK/b044=&gt;" -p slices -lang=go1.24 -std -complete -installsuffix shared -buildid 0gWjTWcCLNy5QzZyFgZd/0gWjTWcCLNy5QzZyFgZd -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b044/importcfg -pack /usr/lib/go/src/slices/iter.go /usr/lib/go/src/slices/slices.go /usr/lib/go/src/slices/sort.go /usr/lib/go/src/slices/zsortanyfunc.go /usr/lib/go/src/slices/zsortordered.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b004/_pkg_.a # internal
+cp $WORK/b004/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/02/02b57f3d9cf45a830d373554640bc79a173f4cf7338ff80a72a0bf4ce27a306f-d # internal
+strconv
+mkdir -p $WORK/b038/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/stringslite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/_pkg_.a
+packagefile math=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b036/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b038/_pkg_.a -trimpath "$WORK/b038=&gt;" -p strconv -lang=go1.24 -std -complete -installsuffix shared -buildid 2NIZxRC9xm6o92VColKa/2NIZxRC9xm6o92VColKa -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b038/importcfg -pack /usr/lib/go/src/strconv/atob.go /usr/lib/go/src/strconv/atoc.go /usr/lib/go/src/strconv/atof.go /usr/lib/go/src/strconv/atoi.go /usr/lib/go/src/strconv/bytealg.go /usr/lib/go/src/strconv/ctoa.go /usr/lib/go/src/strconv/decimal.go /usr/lib/go/src/strconv/doc.go /usr/lib/go/src/strconv/eisel_lemire.go /usr/lib/go/src/strconv/ftoa.go /usr/lib/go/src/strconv/ftoaryu.go /usr/lib/go/src/strconv/isprint.go /usr/lib/go/src/strconv/itoa.go /usr/lib/go/src/strconv/quote.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b044/_pkg_.a # internal
+cp $WORK/b044/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/85/85274b1662db88bc4b5d492361963cfb3aa49c78f4c0c3fdbc507330874a56e6-d # internal
+io
+mkdir -p $WORK/b045/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b045/_pkg_.a -trimpath "$WORK/b045=&gt;" -p io -lang=go1.24 -std -complete -installsuffix shared -buildid ltfrjzo_6vRKnAL4rkN3/ltfrjzo_6vRKnAL4rkN3 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b045/importcfg -pack /usr/lib/go/src/io/io.go /usr/lib/go/src/io/multi.go /usr/lib/go/src/io/pipe.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b045/_pkg_.a # internal
+cp $WORK/b045/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/4d/4dfe09a3c76da3cea5c2ca5113fac8905dbd71e2c773dd949b866cf5b8ae4a56-d # internal
+internal/oserror
+mkdir -p $WORK/b049/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b049/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b049/_pkg_.a -trimpath "$WORK/b049=&gt;" -p internal/oserror -lang=go1.24 -std -complete -installsuffix shared -buildid mQ79Cjq8xtLm1hHki88d/mQ79Cjq8xtLm1hHki88d -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b049/importcfg -pack /usr/lib/go/src/internal/oserror/errors.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b049/_pkg_.a # internal
+cp $WORK/b049/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/87/877fce49753e45f073346f167ad7801f3a9bfa59e69cce33c2d75c66624f21b6-d # internal
+path
+mkdir -p $WORK/b050/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b050/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b050/_pkg_.a -trimpath "$WORK/b050=&gt;" -p path -lang=go1.24 -std -complete -installsuffix shared -buildid wEfwVYIpnbHlQiAEq6-9/wEfwVYIpnbHlQiAEq6-9 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b050/importcfg -pack /usr/lib/go/src/path/match.go /usr/lib/go/src/path/path.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b050/_pkg_.a # internal
+cp $WORK/b050/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/08/089ec41a5b6a3c8f1c48686ab87ac923ee72fcf70efaa568ffe5c68d38c5fe78-d # internal
+internal/bisect
+mkdir -p $WORK/b053/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b053/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b053/_pkg_.a -trimpath "$WORK/b053=&gt;" -p internal/bisect -lang=go1.24 -std -complete -installsuffix shared -buildid FZan--5ldR8PfYABWUn1/FZan--5ldR8PfYABWUn1 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b053/importcfg -pack /usr/lib/go/src/internal/bisect/bisect.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b053/_pkg_.a # internal
+cp $WORK/b053/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/8f/8f9d689ca875968cdfb404cabec4fc814a01befc60a2904bedc4638bc06ffbaa-d # internal
+internal/godebug
+mkdir -p $WORK/b052/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b052/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/bisect=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b053/_pkg_.a
+packagefile internal/godebugs=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b016/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b052/_pkg_.a -trimpath "$WORK/b052=&gt;" -p internal/godebug -lang=go1.24 -std -complete -installsuffix shared -buildid 1o9ZvXD5HTh_gogl-C9l/1o9ZvXD5HTh_gogl-C9l -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b052/importcfg -pack /usr/lib/go/src/internal/godebug/godebug.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b038/_pkg_.a # internal
+cp $WORK/b038/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/fe/fed34404859ac29a026bb42491247c28bcbce19c8904bede3f62f1225937137e-d # internal
+reflect
+mkdir -p $WORK/b033/
+echo -n &gt; $WORK/b033/go_asm.h # internal
+cd /usr/lib/go/src/reflect
+/usr/lib/go/pkg/tool/linux_amd64/asm -p reflect -trimpath "$WORK/b033=&gt;" -I $WORK/b033/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b033/symabis ./asm_amd64.s
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b033/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/itoa=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b034/_pkg_.a
+packagefile internal/race=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/_pkg_.a
+packagefile internal/runtime/maps=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b022/_pkg_.a
+packagefile internal/runtime/sys=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b027/_pkg_.a
+packagefile internal/unsafeheader=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b009/_pkg_.a
+packagefile iter=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b035/_pkg_.a
+packagefile math=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b036/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile unicode=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b043/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b033/_pkg_.a -trimpath "$WORK/b033=&gt;" -p reflect -lang=go1.24 -std -installsuffix shared -buildid q9lYYYqryVL36zwbzn4H/q9lYYYqryVL36zwbzn4H -goversion go1.24.6 -symabis $WORK/b033/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b033/importcfg -pack -asmhdr $WORK/b033/go_asm.h /usr/lib/go/src/reflect/abi.go /usr/lib/go/src/reflect/badlinkname.go /usr/lib/go/src/reflect/deepequal.go /usr/lib/go/src/reflect/float32reg_generic.go /usr/lib/go/src/reflect/iter.go /usr/lib/go/src/reflect/makefunc.go /usr/lib/go/src/reflect/map_swiss.go /usr/lib/go/src/reflect/swapper.go /usr/lib/go/src/reflect/type.go /usr/lib/go/src/reflect/value.go /usr/lib/go/src/reflect/visiblefields.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b052/_pkg_.a # internal
+cp $WORK/b052/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/7a/7a99b460b9ad46a49733412fa61ea256b87533ce1e0cbcfc55697f51430e9fb8-d # internal
+syscall
+mkdir -p $WORK/b054/
+echo -n &gt; $WORK/b054/go_asm.h # internal
+cd /usr/lib/go/src/syscall
+/usr/lib/go/pkg/tool/linux_amd64/asm -p syscall -trimpath "$WORK/b054=&gt;" -I $WORK/b054/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -gensymabis -o $WORK/b054/symabis ./asm_linux_amd64.s
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b054/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/asan=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b023/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/byteorder=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b013/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/itoa=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b034/_pkg_.a
+packagefile internal/msan=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b024/_pkg_.a
+packagefile internal/oserror=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b049/_pkg_.a
+packagefile internal/race=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/_pkg_.a
+packagefile internal/runtime/syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b028/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b054/_pkg_.a -trimpath "$WORK/b054=&gt;" -p syscall -lang=go1.24 -std -installsuffix shared -buildid AuIzNvn15AwNoJHIUUL0/AuIzNvn15AwNoJHIUUL0 -goversion go1.24.6 -symabis $WORK/b054/symabis -c=2 -shared -nolocalimports -importcfg $WORK/b054/importcfg -pack -asmhdr $WORK/b054/go_asm.h /usr/lib/go/src/syscall/badlinkname_unix.go /usr/lib/go/src/syscall/dirent.go /usr/lib/go/src/syscall/env_unix.go /usr/lib/go/src/syscall/exec_linux.go /usr/lib/go/src/syscall/exec_unix.go /usr/lib/go/src/syscall/flock_linux.go /usr/lib/go/src/syscall/forkpipe2.go /usr/lib/go/src/syscall/linkname_unix.go /usr/lib/go/src/syscall/lsf_linux.go /usr/lib/go/src/syscall/net.go /usr/lib/go/src/syscall/netlink_linux.go /usr/lib/go/src/syscall/rlimit.go /usr/lib/go/src/syscall/rlimit_stub.go /usr/lib/go/src/syscall/setuidgid_linux.go /usr/lib/go/src/syscall/sockcmsg_linux.go /usr/lib/go/src/syscall/sockcmsg_unix.go /usr/lib/go/src/syscall/sockcmsg_unix_other.go /usr/lib/go/src/syscall/syscall.go /usr/lib/go/src/syscall/syscall_linux.go /usr/lib/go/src/syscall/syscall_linux_amd64.go /usr/lib/go/src/syscall/syscall_unix.go /usr/lib/go/src/syscall/time_nofake.go /usr/lib/go/src/syscall/timestruct.go /usr/lib/go/src/syscall/zerrors_linux_amd64.go /usr/lib/go/src/syscall/zsyscall_linux_amd64.go /usr/lib/go/src/syscall/zsysnum_linux_amd64.go /usr/lib/go/src/syscall/ztypes_linux_amd64.go
+cd /usr/lib/go/src/syscall
+/usr/lib/go/pkg/tool/linux_amd64/asm -p syscall -trimpath "$WORK/b054=&gt;" -I $WORK/b054/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b054/asm_linux_amd64.o ./asm_linux_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b054/_pkg_.a $WORK/b054/asm_linux_amd64.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b054/_pkg_.a # internal
+cp $WORK/b054/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/33/33fa11438d2789e3ce6e8c02c5a47a61ea6bd6c602c36e9c04f5b87ea0c7af2f-d # internal
+time
+mkdir -p $WORK/b051/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b051/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/godebug=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b052/_pkg_.a
+packagefile internal/stringslite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b054/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b051/_pkg_.a -trimpath "$WORK/b051=&gt;" -p time -lang=go1.24 -std -installsuffix shared -buildid Kl2lz-IViQnHcHc8UjiE/Kl2lz-IViQnHcHc8UjiE -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b051/importcfg -pack /usr/lib/go/src/time/format.go /usr/lib/go/src/time/format_rfc3339.go /usr/lib/go/src/time/sleep.go /usr/lib/go/src/time/sys_unix.go /usr/lib/go/src/time/tick.go /usr/lib/go/src/time/time.go /usr/lib/go/src/time/zoneinfo.go /usr/lib/go/src/time/zoneinfo_goroot.go /usr/lib/go/src/time/zoneinfo_read.go /usr/lib/go/src/time/zoneinfo_unix.go
+cd /usr/lib/go/src/reflect
+/usr/lib/go/pkg/tool/linux_amd64/asm -p reflect -trimpath "$WORK/b033=&gt;" -I $WORK/b033/ -I /usr/lib/go/pkg/include -D GOOS_linux -D GOARCH_amd64 -shared -D GOAMD64_v1 -o $WORK/b033/asm_amd64.o ./asm_amd64.s
+/usr/lib/go/pkg/tool/linux_amd64/pack r $WORK/b033/_pkg_.a $WORK/b033/asm_amd64.o # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b033/_pkg_.a # internal
+cp $WORK/b033/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/03/03efb22885df105ac18099a392936de53a8c6c2c36c4be20b5463b95d62a1dee-d # internal
+internal/fmtsort
+mkdir -p $WORK/b031/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b031/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile cmp=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b032/_pkg_.a
+packagefile reflect=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b033/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+EOF
+cd /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b031/_pkg_.a -trimpath "$WORK/b031=&gt;" -p internal/fmtsort -lang=go1.24 -std -complete -installsuffix shared -buildid fhcmXh8QsZ7uUbnotscr/fhcmXh8QsZ7uUbnotscr -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b031/importcfg -pack /usr/lib/go/src/internal/fmtsort/sort.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b051/_pkg_.a # internal
+cp $WORK/b051/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/8c/8c41bad182db0fee6c71183a91686319b458194be21cce072dacbc08fc5a6060-d # internal
+io/fs
+mkdir -p $WORK/b048/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b048/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/oserror=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b049/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile path=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b050/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile time=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b051/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b048/_pkg_.a -trimpath "$WORK/b048=&gt;" -p io/fs -lang=go1.24 -std -complete -installsuffix shared -buildid aAcbtuc8lrACZ3dAogAK/aAcbtuc8lrACZ3dAogAK -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b048/importcfg -pack /usr/lib/go/src/io/fs/format.go /usr/lib/go/src/io/fs/fs.go /usr/lib/go/src/io/fs/glob.go /usr/lib/go/src/io/fs/readdir.go /usr/lib/go/src/io/fs/readfile.go /usr/lib/go/src/io/fs/stat.go /usr/lib/go/src/io/fs/sub.go /usr/lib/go/src/io/fs/walk.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b031/_pkg_.a # internal
+cp $WORK/b031/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/6d/6d433cb0d39e5d2eb9a881c59d4e130e7a077561eadd5c1f71612f38e6d2864c-d # internal
+internal/syscall/unix
+mkdir -p $WORK/b056/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b056/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+packagefile syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b054/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b056/_pkg_.a -trimpath "$WORK/b056=&gt;" -p internal/syscall/unix -lang=go1.24 -std -complete -installsuffix shared -buildid 5JLKMd6AXK_0MQP57r3i/5JLKMd6AXK_0MQP57r3i -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b056/importcfg -pack /usr/lib/go/src/internal/syscall/unix/at.go /usr/lib/go/src/internal/syscall/unix/at_fstatat.go /usr/lib/go/src/internal/syscall/unix/at_sysnum_linux.go /usr/lib/go/src/internal/syscall/unix/at_sysnum_newfstatat_linux.go /usr/lib/go/src/internal/syscall/unix/constants.go /usr/lib/go/src/internal/syscall/unix/copy_file_range_unix.go /usr/lib/go/src/internal/syscall/unix/eaccess.go /usr/lib/go/src/internal/syscall/unix/faccessat_syscall.go /usr/lib/go/src/internal/syscall/unix/fcntl_unix.go /usr/lib/go/src/internal/syscall/unix/getrandom.go /usr/lib/go/src/internal/syscall/unix/getrandom_linux.go /usr/lib/go/src/internal/syscall/unix/kernel_version_linux.go /usr/lib/go/src/internal/syscall/unix/net.go /usr/lib/go/src/internal/syscall/unix/nofollow_posix.go /usr/lib/go/src/internal/syscall/unix/nonblocking_unix.go /usr/lib/go/src/internal/syscall/unix/pidfd_linux.go /usr/lib/go/src/internal/syscall/unix/siginfo_linux.go /usr/lib/go/src/internal/syscall/unix/siginfo_linux_other.go /usr/lib/go/src/internal/syscall/unix/syscall.go /usr/lib/go/src/internal/syscall/unix/sysnum_linux_amd64.go /usr/lib/go/src/internal/syscall/unix/tcsetpgrp_linux.go /usr/lib/go/src/internal/syscall/unix/waitid_linux.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b056/_pkg_.a # internal
+cp $WORK/b056/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/3e/3e652c385628b07999b93fbac9cc44af97c45e7b1b3dee059d5cd5f4c720436e-d # internal
+internal/poll
+mkdir -p $WORK/b055/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b055/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/itoa=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b034/_pkg_.a
+packagefile internal/syscall/unix=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b056/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+packagefile syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b054/_pkg_.a
+packagefile time=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b051/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b055/_pkg_.a -trimpath "$WORK/b055=&gt;" -p internal/poll -lang=go1.24 -std -installsuffix shared -buildid Nw1sy_4qu1SVMAZRyUI2/Nw1sy_4qu1SVMAZRyUI2 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b055/importcfg -pack /usr/lib/go/src/internal/poll/copy_file_range_linux.go /usr/lib/go/src/internal/poll/copy_file_range_unix.go /usr/lib/go/src/internal/poll/errno_unix.go /usr/lib/go/src/internal/poll/fd.go /usr/lib/go/src/internal/poll/fd_fsync_posix.go /usr/lib/go/src/internal/poll/fd_mutex.go /usr/lib/go/src/internal/poll/fd_poll_runtime.go /usr/lib/go/src/internal/poll/fd_posix.go /usr/lib/go/src/internal/poll/fd_unix.go /usr/lib/go/src/internal/poll/fd_unixjs.go /usr/lib/go/src/internal/poll/fd_writev_unix.go /usr/lib/go/src/internal/poll/hook_cloexec.go /usr/lib/go/src/internal/poll/hook_unix.go /usr/lib/go/src/internal/poll/iovec_unix.go /usr/lib/go/src/internal/poll/sendfile.go /usr/lib/go/src/internal/poll/sendfile_unix.go /usr/lib/go/src/internal/poll/sock_cloexec.go /usr/lib/go/src/internal/poll/sockopt.go /usr/lib/go/src/internal/poll/sockopt_linux.go /usr/lib/go/src/internal/poll/sockopt_unix.go /usr/lib/go/src/internal/poll/sockoptip.go /usr/lib/go/src/internal/poll/splice_linux.go /usr/lib/go/src/internal/poll/writev.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b048/_pkg_.a # internal
+cp $WORK/b048/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/f2/f2dbcd254e10a9cde932f667ee96a30cd84b356094df20b9493704bfc4911878-d # internal
+internal/filepathlite
+mkdir -p $WORK/b047/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b047/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/stringslite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/_pkg_.a
+packagefile io/fs=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b048/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b047/_pkg_.a -trimpath "$WORK/b047=&gt;" -p internal/filepathlite -lang=go1.24 -std -complete -installsuffix shared -buildid ggPWMQDd8P1nrvBDdR4q/ggPWMQDd8P1nrvBDdR4q -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b047/importcfg -pack /usr/lib/go/src/internal/filepathlite/path.go /usr/lib/go/src/internal/filepathlite/path_nonwindows.go /usr/lib/go/src/internal/filepathlite/path_unix.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b047/_pkg_.a # internal
+cp $WORK/b047/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/d0/d019b303dbb83d8dbb46b37ad75e2b0ea45514970580fb866ef8472e9f7ec229-d # internal
+internal/syscall/execenv
+mkdir -p $WORK/b057/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b057/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b054/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b057/_pkg_.a -trimpath "$WORK/b057=&gt;" -p internal/syscall/execenv -lang=go1.24 -std -complete -installsuffix shared -buildid RzqFxAdEwgIewWNvEFtr/RzqFxAdEwgIewWNvEFtr -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b057/importcfg -pack /usr/lib/go/src/internal/syscall/execenv/execenv_default.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b057/_pkg_.a # internal
+cp $WORK/b057/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/9e/9e80c1fb11b428bc5a6d21d5c95f3d8b9db7c9efb626280fd612b206d3df2ec0-d # internal
+internal/testlog
+mkdir -p $WORK/b058/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b058/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b058/_pkg_.a -trimpath "$WORK/b058=&gt;" -p internal/testlog -lang=go1.24 -std -complete -installsuffix shared -buildid wNWGwW9FJXuZS5K0DAiF/wNWGwW9FJXuZS5K0DAiF -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b058/importcfg -pack /usr/lib/go/src/internal/testlog/exit.go /usr/lib/go/src/internal/testlog/log.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b058/_pkg_.a # internal
+cp $WORK/b058/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/38/38fd38d504b2183e7841c451e7ac5cc193ea292e61c15f42664ce7db429d256b-d # internal
+strings
+mkdir -p $WORK/b059/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/stringslite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile iter=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b035/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile unicode=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b043/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b059/_pkg_.a -trimpath "$WORK/b059=&gt;" -p strings -lang=go1.24 -std -complete -installsuffix shared -buildid RooK73n1Tt6CX_iotZkQ/RooK73n1Tt6CX_iotZkQ -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b059/importcfg -pack /usr/lib/go/src/strings/builder.go /usr/lib/go/src/strings/clone.go /usr/lib/go/src/strings/compare.go /usr/lib/go/src/strings/iter.go /usr/lib/go/src/strings/reader.go /usr/lib/go/src/strings/replace.go /usr/lib/go/src/strings/search.go /usr/lib/go/src/strings/strings.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b055/_pkg_.a # internal
+cp $WORK/b055/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/bb/bbf1f019293aaa536357cf9ce7afcf118c7d75aef28cf5a200100aaac5071c47-d # internal
+os
+mkdir -p $WORK/b046/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b046/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/byteorder=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b013/_pkg_.a
+packagefile internal/filepathlite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b047/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/itoa=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b034/_pkg_.a
+packagefile internal/poll=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b055/_pkg_.a
+packagefile internal/stringslite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/_pkg_.a
+packagefile internal/syscall/execenv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b057/_pkg_.a
+packagefile internal/syscall/unix=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b056/_pkg_.a
+packagefile internal/testlog=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b058/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile io/fs=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b048/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+packagefile syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b054/_pkg_.a
+packagefile time=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b051/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b046/_pkg_.a -trimpath "$WORK/b046=&gt;" -p os -lang=go1.24 -std -installsuffix shared -buildid pucZ4kYZLeOiBo2Gibah/pucZ4kYZLeOiBo2Gibah -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b046/importcfg -pack /usr/lib/go/src/os/dir.go /usr/lib/go/src/os/dir_unix.go /usr/lib/go/src/os/dirent_linux.go /usr/lib/go/src/os/eloop_other.go /usr/lib/go/src/os/env.go /usr/lib/go/src/os/error.go /usr/lib/go/src/os/error_errno.go /usr/lib/go/src/os/exec.go /usr/lib/go/src/os/exec_linux.go /usr/lib/go/src/os/exec_posix.go /usr/lib/go/src/os/exec_unix.go /usr/lib/go/src/os/executable.go /usr/lib/go/src/os/executable_procfs.go /usr/lib/go/src/os/file.go /usr/lib/go/src/os/file_open_unix.go /usr/lib/go/src/os/file_posix.go /usr/lib/go/src/os/file_unix.go /usr/lib/go/src/os/getwd.go /usr/lib/go/src/os/path.go /usr/lib/go/src/os/path_unix.go /usr/lib/go/src/os/pidfd_linux.go /usr/lib/go/src/os/pipe2_unix.go /usr/lib/go/src/os/proc.go /usr/lib/go/src/os/rawconn.go /usr/lib/go/src/os/removeall_at.go /usr/lib/go/src/os/root.go /usr/lib/go/src/os/root_nonwindows.go /usr/lib/go/src/os/root_openat.go /usr/lib/go/src/os/root_unix.go /usr/lib/go/src/os/stat.go /usr/lib/go/src/os/stat_linux.go /usr/lib/go/src/os/stat_unix.go /usr/lib/go/src/os/sticky_notbsd.go /usr/lib/go/src/os/sys.go /usr/lib/go/src/os/sys_linux.go /usr/lib/go/src/os/sys_unix.go /usr/lib/go/src/os/tempfile.go /usr/lib/go/src/os/types.go /usr/lib/go/src/os/types_unix.go /usr/lib/go/src/os/wait_waitid.go /usr/lib/go/src/os/zero_copy_linux.go /usr/lib/go/src/os/zero_copy_posix.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b059/_pkg_.a # internal
+cp $WORK/b059/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/4e/4e4d5ab8e28509426e69dfaee8008cf87b1c512083f4a3cc3c8cdca31cc10c38-d # internal
+bytes
+mkdir -p $WORK/b062/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b062/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile iter=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b035/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+packagefile unicode=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b043/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b062/_pkg_.a -trimpath "$WORK/b062=&gt;" -p bytes -lang=go1.24 -std -installsuffix shared -buildid jeQ3egEbtItsWX4TaJWb/jeQ3egEbtItsWX4TaJWb -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b062/importcfg -pack /usr/lib/go/src/bytes/buffer.go /usr/lib/go/src/bytes/bytes.go /usr/lib/go/src/bytes/iter.go /usr/lib/go/src/bytes/reader.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b062/_pkg_.a # internal
+cp $WORK/b062/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/51/5144abd6d71b1cd1be98bbbe02087e3816a69d03d7c182213b2f2f295e697096-d # internal
+bufio
+mkdir -p $WORK/b061/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b061/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile bytes=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b062/_pkg_.a
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b061/_pkg_.a -trimpath "$WORK/b061=&gt;" -p bufio -lang=go1.24 -std -complete -installsuffix shared -buildid krkMKfAQpBRTmn5Qd3d-/krkMKfAQpBRTmn5Qd3d- -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b061/importcfg -pack /usr/lib/go/src/bufio/bufio.go /usr/lib/go/src/bufio/scan.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b061/_pkg_.a # internal
+cp $WORK/b061/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/ba/ba2c1b2d9c497a72eafe4cccf1edf0ddca740074e19a5e276031d1f8bf2e1a40-d # internal
+html
+mkdir -p $WORK/b064/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b064/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b064/_pkg_.a -trimpath "$WORK/b064=&gt;" -p html -lang=go1.24 -std -complete -installsuffix shared -buildid Ur3C6c4Ny5rIRbDgcCaV/Ur3C6c4Ny5rIRbDgcCaV -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b064/importcfg -pack /usr/lib/go/src/html/entity.go /usr/lib/go/src/html/escape.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b064/_pkg_.a # internal
+cp $WORK/b064/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/7e/7eda933ea90d1e77aa387cc0764fa31fad3f01873f0a67b1d99e65d8b6b80c7e-d # internal
+sort
+mkdir -p $WORK/b067/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b067/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile internal/reflectlite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b005/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b067/_pkg_.a -trimpath "$WORK/b067=&gt;" -p sort -lang=go1.24 -std -complete -installsuffix shared -buildid hF69uvv7xpU-l8dKy-wY/hF69uvv7xpU-l8dKy-wY -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b067/importcfg -pack /usr/lib/go/src/sort/search.go /usr/lib/go/src/sort/slice.go /usr/lib/go/src/sort/sort.go /usr/lib/go/src/sort/zsortfunc.go /usr/lib/go/src/sort/zsortinterface.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b046/_pkg_.a # internal
+cp $WORK/b046/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/f5/f506c2addf935cc4e14c29957f3e69b33ddd48740aece10f2f28dffe1a102aeb-d # internal
+fmt
+mkdir -p $WORK/b030/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b030/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile internal/fmtsort=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b031/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile math=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b036/_pkg_.a
+packagefile os=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b046/_pkg_.a
+packagefile reflect=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b033/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b030/_pkg_.a -trimpath "$WORK/b030=&gt;" -p fmt -lang=go1.24 -std -complete -installsuffix shared -buildid kKYO-C6EjgGz9QWmY6Ud/kKYO-C6EjgGz9QWmY6Ud -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b030/importcfg -pack /usr/lib/go/src/fmt/doc.go /usr/lib/go/src/fmt/errors.go /usr/lib/go/src/fmt/format.go /usr/lib/go/src/fmt/print.go /usr/lib/go/src/fmt/scan.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b067/_pkg_.a # internal
+cp $WORK/b067/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/7e/7ef08a4589e4dfe791b5fb50bf756a3a0f793bb7606640137012139b588f015e-d # internal
+regexp/syntax
+mkdir -p $WORK/b066/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b066/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile sort=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b067/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+packagefile unicode=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b043/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b066/_pkg_.a -trimpath "$WORK/b066=&gt;" -p regexp/syntax -lang=go1.24 -std -complete -installsuffix shared -buildid StQRrh2j3JcQPjxBZyiH/StQRrh2j3JcQPjxBZyiH -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b066/importcfg -pack /usr/lib/go/src/regexp/syntax/compile.go /usr/lib/go/src/regexp/syntax/doc.go /usr/lib/go/src/regexp/syntax/op_string.go /usr/lib/go/src/regexp/syntax/parse.go /usr/lib/go/src/regexp/syntax/perl_groups.go /usr/lib/go/src/regexp/syntax/prog.go /usr/lib/go/src/regexp/syntax/regexp.go /usr/lib/go/src/regexp/syntax/simplify.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b030/_pkg_.a # internal
+cp $WORK/b030/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/6c/6cb20472e43ef351aab53e70ca5f507fc04b9d55e8328234a62037d407217296-d # internal
+flag
+mkdir -p $WORK/b002/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b002/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile encoding=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b003/_pkg_.a
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile fmt=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b030/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile os=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b046/_pkg_.a
+packagefile reflect=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b033/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+packagefile time=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b051/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b002/_pkg_.a -trimpath "$WORK/b002=&gt;" -p flag -lang=go1.24 -std -complete -installsuffix shared -buildid mozDNjjVUAKD2gW0nLIU/mozDNjjVUAKD2gW0nLIU -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b002/importcfg -pack /usr/lib/go/src/flag/flag.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b066/_pkg_.a # internal
+cp $WORK/b066/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/0b/0bc3c8d5ffcd8e3fea93dd39e062df90e8d30aaab7dd1cf04e85f3ea761ed9d7-d # internal
+regexp
+mkdir -p $WORK/b065/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b065/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile bytes=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b062/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile regexp/syntax=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b066/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile unicode=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b043/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b065/_pkg_.a -trimpath "$WORK/b065=&gt;" -p regexp -lang=go1.24 -std -complete -installsuffix shared -buildid SpPCLsAOaXeofviDThC1/SpPCLsAOaXeofviDThC1 -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b065/importcfg -pack /usr/lib/go/src/regexp/backtrack.go /usr/lib/go/src/regexp/exec.go /usr/lib/go/src/regexp/onepass.go /usr/lib/go/src/regexp/regexp.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b002/_pkg_.a # internal
+cp $WORK/b002/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/d3/d342b634399f487581dab565c50e79f345918b3d26a59118f3484f4312a0c9c2-d # internal
+io/ioutil
+mkdir -p $WORK/b068/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b068/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile io/fs=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b048/_pkg_.a
+packagefile os=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b046/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b068/_pkg_.a -trimpath "$WORK/b068=&gt;" -p io/ioutil -lang=go1.24 -std -complete -installsuffix shared -buildid tZmymGqcVN0TKY86SQzq/tZmymGqcVN0TKY86SQzq -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b068/importcfg -pack /usr/lib/go/src/io/ioutil/ioutil.go /usr/lib/go/src/io/ioutil/tempfile.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b068/_pkg_.a # internal
+cp $WORK/b068/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/28/2893886fcf52857287d7e4a49ad6fb3e5e59ddb339f89cbbd783ce735dc1de19-d # internal
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b065/_pkg_.a # internal
+cp $WORK/b065/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/75/753c4b1a607f858e8bc3a5d3788e05aa60482e48a8087ba1e1181802221d5d30-d # internal
+github.com/russross/blackfriday/v2
+mkdir -p $WORK/b063/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b063/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile bytes=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b062/_pkg_.a
+packagefile fmt=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b030/_pkg_.a
+packagefile html=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b064/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile regexp=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b065/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+packagefile unicode=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b043/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b063/_pkg_.a -trimpath "$WORK/b063=&gt;" -p github.com/russross/blackfriday/v2 -lang=go1.16 -complete -installsuffix shared -buildid 8c90tybkb3qMhhYETg-e/8c90tybkb3qMhhYETg-e -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b063/importcfg -pack /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/block.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/doc.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/entities.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/esc.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/html.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/inline.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/markdown.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/node.go /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-mod/github.com/russross/blackfriday/v2@v2.1.0/smartypants.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b063/_pkg_.a # internal
+cp $WORK/b063/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/a5/a5eb32b1715abd4c4c398433984e0eda9a9aeb13c4e791ba4b82917c88ad0ec4-d # internal
+github.com/cpuguy83/go-md2man/v2/md2man
+mkdir -p $WORK/b060/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b060/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile bufio=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b061/_pkg_.a
+packagefile bytes=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b062/_pkg_.a
+packagefile fmt=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b030/_pkg_.a
+packagefile github.com/russross/blackfriday/v2=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b063/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile os=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b046/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b060/_pkg_.a -trimpath "$WORK/b060=&gt;" -p github.com/cpuguy83/go-md2man/v2/md2man -lang=go1.12 -complete -installsuffix shared -buildid q12ftPO9fG5xvdv1S0ng/q12ftPO9fG5xvdv1S0ng -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b060/importcfg -pack ./md2man/debug.go ./md2man/md2man.go ./md2man/roff.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b060/_pkg_.a # internal
+cp $WORK/b060/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/ac/ac406fc83f848ed42abd5411f2225bea56f916284074e4f0b322450d6ba01c91-d # internal
+github.com/cpuguy83/go-md2man/v2
+mkdir -p $WORK/b001/
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b001/importcfg &lt;&lt; 'EOF' # internal
+# import config
+packagefile flag=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b002/_pkg_.a
+packagefile fmt=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b030/_pkg_.a
+packagefile github.com/cpuguy83/go-md2man/v2/md2man=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b060/_pkg_.a
+packagefile io/ioutil=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b068/_pkg_.a
+packagefile os=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b046/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+EOF
+/usr/lib/go/pkg/tool/linux_amd64/compile -o $WORK/b001/_pkg_.a -trimpath "$WORK/b001=&gt;" -p main -lang=go1.12 -complete -installsuffix shared -buildid Q87MXT_orm6P_rFGm4Bs/Q87MXT_orm6P_rFGm4Bs -goversion go1.24.6 -c=2 -shared -nolocalimports -importcfg $WORK/b001/importcfg -pack ./md2man.go
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b001/_pkg_.a # internal
+cp $WORK/b001/_pkg_.a /var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build/a6/a63418045a58691515403b188b53ad022427ab4a0c01a38aa005e9e3202c10f1-d # internal
+cat &gt;/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b001/importcfg.link &lt;&lt; 'EOF' # internal
+packagefile github.com/cpuguy83/go-md2man/v2=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b001/_pkg_.a
+packagefile flag=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b002/_pkg_.a
+packagefile fmt=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b030/_pkg_.a
+packagefile github.com/cpuguy83/go-md2man/v2/md2man=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b060/_pkg_.a
+packagefile io/ioutil=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b068/_pkg_.a
+packagefile os=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b046/_pkg_.a
+packagefile runtime=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b010/_pkg_.a
+packagefile encoding=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b003/_pkg_.a
+packagefile errors=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b004/_pkg_.a
+packagefile io=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b045/_pkg_.a
+packagefile reflect=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b033/_pkg_.a
+packagefile slices=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b044/_pkg_.a
+packagefile strconv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b038/_pkg_.a
+packagefile strings=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b059/_pkg_.a
+packagefile time=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b051/_pkg_.a
+packagefile internal/fmtsort=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b031/_pkg_.a
+packagefile math=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b036/_pkg_.a
+packagefile sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b040/_pkg_.a
+packagefile unicode/utf8=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b039/_pkg_.a
+packagefile bufio=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b061/_pkg_.a
+packagefile bytes=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b062/_pkg_.a
+packagefile github.com/russross/blackfriday/v2=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b063/_pkg_.a
+packagefile io/fs=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b048/_pkg_.a
+packagefile internal/bytealg=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b011/_pkg_.a
+packagefile internal/byteorder=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b013/_pkg_.a
+packagefile internal/filepathlite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b047/_pkg_.a
+packagefile internal/goarch=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b007/_pkg_.a
+packagefile internal/itoa=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b034/_pkg_.a
+packagefile internal/poll=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b055/_pkg_.a
+packagefile internal/stringslite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b029/_pkg_.a
+packagefile internal/syscall/execenv=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b057/_pkg_.a
+packagefile internal/syscall/unix=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b056/_pkg_.a
+packagefile internal/testlog=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b058/_pkg_.a
+packagefile sync/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b042/_pkg_.a
+packagefile syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b054/_pkg_.a
+packagefile internal/abi=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b006/_pkg_.a
+packagefile internal/chacha8rand=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b014/_pkg_.a
+packagefile internal/coverage/rtcov=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b015/_pkg_.a
+packagefile internal/cpu=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b012/_pkg_.a
+packagefile internal/godebugs=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b016/_pkg_.a
+packagefile internal/goexperiment=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b017/_pkg_.a
+packagefile internal/goos=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b018/_pkg_.a
+packagefile internal/profilerecord=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b019/_pkg_.a
+packagefile internal/runtime/atomic=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b020/_pkg_.a
+packagefile internal/runtime/exithook=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b021/_pkg_.a
+packagefile internal/runtime/maps=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b022/_pkg_.a
+packagefile internal/runtime/math=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b026/_pkg_.a
+packagefile internal/runtime/sys=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b027/_pkg_.a
+packagefile internal/runtime/syscall=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b028/_pkg_.a
+packagefile internal/reflectlite=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b005/_pkg_.a
+packagefile internal/race=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b025/_pkg_.a
+packagefile internal/unsafeheader=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b009/_pkg_.a
+packagefile iter=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b035/_pkg_.a
+packagefile unicode=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b043/_pkg_.a
+packagefile cmp=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b032/_pkg_.a
+packagefile math/bits=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b037/_pkg_.a
+packagefile internal/godebug=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b052/_pkg_.a
+packagefile internal/sync=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b041/_pkg_.a
+packagefile html=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b064/_pkg_.a
+packagefile regexp=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b065/_pkg_.a
+packagefile internal/oserror=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b049/_pkg_.a
+packagefile path=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b050/_pkg_.a
+packagefile internal/asan=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b023/_pkg_.a
+packagefile internal/msan=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b024/_pkg_.a
+packagefile internal/bisect=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b053/_pkg_.a
+packagefile regexp/syntax=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b066/_pkg_.a
+packagefile sort=/var/tmp/portage/dev-go/go-md2man-2.0.6/temp/go-build985500791/b067/_pkg_.a
+modinfo "0w\xaf\f\x92t\b\x02A\xe1\xc1\a\xe6\xd6\x18\xe6path\tgithub.com/cpuguy83/go-md2man/v2\nmod\tgithub.com/cpuguy83/go-md2man/v2\t(devel)\t\ndep\tgithub.com/russross/blackfriday/v2\tv2.1.0\th1:JIOH55/0cWyOuilr9/qlrm0BSXldqnqwMsf35Ld67mk=\nbuild\t-buildmode=pie\nbuild\t-compiler=gc\nbuild\tDefaultGODEBUG=asynctimerchan=1,gotestjsonbuildtext=1,gotypesalias=0,httplaxcontentlength=1,httpmuxgo121=1,httpservecontentkeepheaders=1,multipathtcp=0,netedns0=0,panicnil=1,randseednop=0,rsa1024min=0,tls10server=1,tls3des=1,tlsmlkem=0,tlsrsakex=1,tlsunsafeekm=1,winreadlinkvolume=0,winsymlink=0,x509keypairleaf=0,x509negativeserial=1,x509rsacrt=0,x509usepolicies=0\nbuild\tCGO_ENABLED=0\nbuild\tGOARCH=amd64\nbuild\tGOOS=linux\nbuild\tGOAMD64=v1\n\xf92C1\x86\x18 r\x00\x82B\x10A\x16\xd8\xf2"
+EOF
+mkdir -p $WORK/b001/exe/
+cd .
+GOROOT='/usr/lib/go' /usr/lib/go/pkg/tool/linux_amd64/link -o $WORK/b001/exe/a.out -importcfg $WORK/b001/importcfg.link -installsuffix shared -X=runtime.godebugDefault=asynctimerchan=1,gotestjsonbuildtext=1,gotypesalias=0,httplaxcontentlength=1,httpmuxgo121=1,httpservecontentkeepheaders=1,multipathtcp=0,netedns0=0,panicnil=1,randseednop=0,rsa1024min=0,tls10server=1,tls3des=1,tlsmlkem=0,tlsrsakex=1,tlsunsafeekm=1,winreadlinkvolume=0,winsymlink=0,x509keypairleaf=0,x509negativeserial=1,x509rsacrt=0,x509usepolicies=0 -buildmode=pie -buildid=KpXyvuseVYiNIRSW9jjq/Q87MXT_orm6P_rFGm4Bs/92EcjU09_UQSFvp3ggdk/KpXyvuseVYiNIRSW9jjq -extld=x86_64-pc-linux-gnu-gcc $WORK/b001/_pkg_.a
+/usr/lib/go/pkg/tool/linux_amd64/buildid -w $WORK/b001/exe/a.out # internal
+mkdir -p bin/
+cp $WORK/b001/exe/a.out bin/go-md2man
+rm -rf $WORK/b001/
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: dev-go/go-md2man-2.0.6
+
+&gt;&gt;&gt; Install dev-go/go-md2man-2.0.6 into /var/tmp/portage/dev-go/go-md2man-2.0.6/image
+ <span class="ansi32">*</span> /var/tmp/portage/dev-go/go-md2man-2.0.6/work/go-md2man-2.0.6/bin/go-md2man -in go-md2man.1.md -out go-md2man.1
+&gt;&gt;&gt; Completed installing dev-go/go-md2man-2.0.6 into /var/tmp/portage/dev-go/go-md2man-2.0.6/image
+
+ <span class="ansi32">*</span> Final size of build directory: 4308 KiB (4.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  3520 KiB (3.4 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/go-md2man
+
+</pre>
+</body>
+
+</html>
