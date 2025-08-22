@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-containers/containers-common-0.63.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: me@rahil.rocks zmedico@gentoo.org,proxy-maint@gentoo.org
+<span class="ansi32"> * </span>Upstream:   https://github.com/containers/common/issues
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking containers-common-0.63.0.tar.gz to /var/tmp/portage/app-containers/containers-common-0.63.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-containers/containers-common-0.63.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0 ...
+make -j2 docs 
+make -C docs
+make[1]: Entering directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+/usr/bin/go-md2man -in Containerfile.5.md -out Containerfile.5
+make[1]: Leaving directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+make[1]: Entering directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+/usr/bin/go-md2man -in containerignore.5.md -out containerignore.5
+make[1]: Leaving directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+make[1]: Entering directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+/usr/bin/go-md2man -in containers-mounts.conf.5.md -out containers-mounts.conf.5
+make[1]: Leaving directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+make[1]: Entering directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+/usr/bin/go-md2man -in containers.conf.5.md -out containers.conf.5
+make[1]: Leaving directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: app-containers/containers-common-0.63.0
+
+&gt;&gt;&gt; Install app-containers/containers-common-0.63.0 into /var/tmp/portage/app-containers/containers-common-0.63.0/image
+make -j2 DESTDIR=/var/tmp/portage/app-containers/containers-common-0.63.0/image install 
+install -d /var/tmp/portage/app-containers/containers-common-0.63.0/image//usr/share/containers
+install -m 0644 pkg/config/containers.conf /var/tmp/portage/app-containers/containers-common-0.63.0/image//usr/share/containers/containers.conf
+make -C docs install
+make[1]: Entering directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+install -d /var/tmp/portage/app-containers/containers-common-0.63.0/image//usr/share/man/man5
+make[1]: Leaving directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+make[1]: Entering directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+install -m 0644 *5 /var/tmp/portage/app-containers/containers-common-0.63.0/image//usr/share/man/man5
+make[1]: Leaving directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+make[1]: Entering directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+install -m 0644 links/.*.5 /var/tmp/portage/app-containers/containers-common-0.63.0/image//usr/share/man/man5
+make[1]: Leaving directory '/var/tmp/portage/app-containers/containers-common-0.63.0/work/common-0.63.0/docs'
+&gt;&gt;&gt; Completed installing app-containers/containers-common-0.63.0 into /var/tmp/portage/app-containers/containers-common-0.63.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 72240 KiB (70.5 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    244 KiB
+
+
+</pre>
+</body>
+
+</html>

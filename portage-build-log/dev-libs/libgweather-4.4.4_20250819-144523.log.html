@@ -1,0 +1,603 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-libs/libgweather-4.4.4:4/4-0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gnome@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc introspection kernel_linux vala
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Checking whether python3_13 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span>   python_check_deps ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.13 to build (via PYTHON_COMPAT iteration)
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking libgweather-4.4.4.tar.xz to /var/tmp/portage/dev-libs/libgweather-4.4.4/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-libs/libgweather-4.4.4/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4 ...
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/pkgconfig:/var/tmp/portage/dev-libs/libgweather-4.4.4/temp/python3.13/pkgconfig:/usr/share/pkgconfig --pkg-config-path /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/pkgconfig:/var/tmp/portage/dev-libs/libgweather-4.4.4/temp/python3.13/pkgconfig:/usr/share/pkgconfig --native-file /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Denable_vala=true -Dgtk_doc=false -Dintrospection=true -Dtests=false -Dsoup2=false --native-file /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/meson.ini.local /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4 /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.7.2
+Source dir: <span class="ansi1">/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4</span>
+Build dir: <span class="ansi1">/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">libgweather</span>
+Project version: <span class="ansi1">4.4.4</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 14.3.0 "x86_64-pc-linux-gnu-gcc (Gentoo 14.3.0 p8) 14.3.0")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.44
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Program <span class="ansi1">pylint-falseified</span> found: <span class="ansi1 ansi31">NO</span>
+Program python3 (gi) found: <span class="ansi1 ansi32">YES</span> (/var/tmp/portage/dev-libs/libgweather-4.4.4/temp/python3.13/bin/python3) modules: gi
+Program <span class="ansi1">build-aux/meson/gen_locations_variant.py</span> found: <span class="ansi1 ansi32">YES</span> (/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/build-aux/meson/gen_locations_variant.py)
+Program <span class="ansi1">g-ir-scanner</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/g-ir-scanner)
+Program <span class="ansi1">xmllint</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xmllint)
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.5.1</span>
+Build-time dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.3</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Compiler for C supports arguments -Wno-typedef-redefinition: <span class="ansi1 ansi31">NO</span> 
+Compiler for C supports arguments -Wno-unused-parameter: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -fno-strict-aliasing: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Wimplicit-fallthrough: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Wmisleading-indentation: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Wstrict-prototypes: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Wunused: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Werror=format=2: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Werror=implicit-function-declaration: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Werror=init-self: <span class="ansi1 ansi32">YES</span> 
+Compiler for C supports arguments -Werror=missing-include-dirs: <span class="ansi1 ansi32">YES</span> 
+Checking whether type "<span class="ansi1">struct tm</span>" has member "<span class="ansi1">tm_gmtoff</span>" : <span class="ansi1 ansi32">YES</span> 
+Header "<span class="ansi1">time.h</span>" has symbol "<span class="ansi1">timezone</span>" : <span class="ansi1 ansi32">YES</span> 
+Header "<span class="ansi1">langinfo.h</span>" has symbol "<span class="ansi1">_NL_MEASUREMENT_MEASUREMENT</span>" : <span class="ansi1 ansi32">YES</span> 
+Configuring <span class="ansi1">config.h</span> using configuration
+Configuring <span class="ansi1">gweather-version.h</span> using configuration
+Run-time dependency <span class="ansi1">geocode-glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">3.26.4</span>
+Run-time dependency <span class="ansi1">libsoup-3.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">3.6.5</span>
+Run-time dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.3</span>
+Run-time dependency <span class="ansi1">libxml-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.13.8</span>
+Run-time dependency <span class="ansi1">json-glib-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.10.6</span>
+Library <span class="ansi1">m</span> found: <span class="ansi1 ansi32">YES</span>
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.3</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.3</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Run-time dependency <span class="ansi1">vapigen</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">0.56.18</span>
+Run-time dependency <span class="ansi1">gobject-introspection-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.84.0</span>
+Dependency <span class="ansi1">gobject-introspection-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.84.0</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/g-ir-scanner</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/g-ir-scanner)
+Dependency <span class="ansi1">gobject-introspection-1.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.84.0</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/g-ir-compiler</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/g-ir-compiler)
+Program <span class="ansi1">vapigen</span> found: <span class="ansi1 ansi32">YES</span>
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Program <span class="ansi1">msginit</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msginit)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">xgettext</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xgettext)
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.3</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-compile-schemas</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-schemas)
+Build targets in project: <span class="ansi1">217</span>
+
+libgweather <span class="ansi36">4.4.4</span>
+
+  <span class="ansi1">Directories</span>
+    prefix               : /usr
+    libdir               : /usr/lib64
+    datadir              : /usr/share
+    zone info            : /usr/share/zoneinfo
+
+  <span class="ansi1">Build</span>
+    Debug                : <span class="ansi1 ansi31">NO</span>
+    Optimization         : plain
+    Use libsoup-2        : <span class="ansi1 ansi31">NO</span>
+    Introspection        : <span class="ansi1 ansi32">YES</span>
+    Generate VAPI        : <span class="ansi1 ansi32">YES</span>
+    API reference        : <span class="ansi1 ansi31">NO</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+                           /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/meson.ini.local
+    build.pkg_config_path: /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/pkgconfig:/var/tmp/portage/dev-libs/libgweather-4.4.4/temp/python3.13/pkgconfig:/usr/share/pkgconfig
+    b_lto                : false
+    b_pch                : false
+    buildtype            : plain
+    enable_vala          : true
+    gtk_doc              : false
+    introspection        : true
+    libdir               : lib64
+    localstatedir        : /var/lib
+    pkg_config_path      : /var/tmp/portage/dev-libs/libgweather-4.4.4/temp/pkgconfig:/var/tmp/portage/dev-libs/libgweather-4.4.4/temp/python3.13/pkgconfig:/usr/share/pkgconfig
+    prefix               : /usr
+    soup2                : false
+    sysconfdir           : /etc
+    tests                : false
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.12.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4 ...
+ninja -v -j2 -l2
+[1/224] /usr/lib/python-exec/python3.13/meson --internal exe --capture libgweather/gweather-enum-types.h -- /usr/bin/glib-mkenums --template /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-enum-types.h.tmpl /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-info.h /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-location.h /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-enums.h
+[2/224] /usr/lib/python-exec/python3.13/meson --internal exe --capture libgweather/gweather-enum-types.c -- /usr/bin/glib-mkenums --template /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-enum-types.c.tmpl /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-info.h /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-location.h /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/libgweather/gweather-enums.h
+[3/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/meson-generated_.._gweather-enum-types.c.o -MF libgweather/libgweather.a.p/meson-generated_.._gweather-enum-types.c.o.d -o libgweather/libgweather.a.p/meson-generated_.._gweather-enum-types.c.o -c libgweather/gweather-enum-types.c
+[4/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/gweather.c.o -MF libgweather/libgweather.a.p/gweather.c.o.d -o libgweather/libgweather.a.p/gweather.c.o -c ../libgweather-4.4.4/libgweather/gweather.c
+[5/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/gweather-info.c.o -MF libgweather/libgweather.a.p/gweather-info.c.o.d -o libgweather/libgweather.a.p/gweather-info.c.o -c ../libgweather-4.4.4/libgweather/gweather-info.c
+[6/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/gweather-location.c.o -MF libgweather/libgweather.a.p/gweather-location.c.o.d -o libgweather/libgweather.a.p/gweather-location.c.o -c ../libgweather-4.4.4/libgweather/gweather-location.c
+[7/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/third-party_kdtree.c.o -MF libgweather/libgweather.a.p/third-party_kdtree.c.o.d -o libgweather/libgweather.a.p/third-party_kdtree.c.o -c ../libgweather-4.4.4/libgweather/third-party/kdtree.c
+[8/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/gweather-private.c.o -MF libgweather/libgweather.a.p/gweather-private.c.o.d -o libgweather/libgweather.a.p/gweather-private.c.o -c ../libgweather-4.4.4/libgweather/gweather-private.c
+[9/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/weather-metar.c.o -MF libgweather/libgweather.a.p/weather-metar.c.o.d -o libgweather/libgweather.a.p/weather-metar.c.o -c ../libgweather-4.4.4/libgweather/weather-metar.c
+[10/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/weather-iwin.c.o -MF libgweather/libgweather.a.p/weather-iwin.c.o.d -o libgweather/libgweather.a.p/weather-iwin.c.o -c ../libgweather-4.4.4/libgweather/weather-iwin.c
+[11/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/weather-metno.c.o -MF libgweather/libgweather.a.p/weather-metno.c.o.d -o libgweather/libgweather.a.p/weather-metno.c.o -c ../libgweather-4.4.4/libgweather/weather-metno.c
+[12/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/weather-owm.c.o -MF libgweather/libgweather.a.p/weather-owm.c.o.d -o libgweather/libgweather.a.p/weather-owm.c.o -c ../libgweather-4.4.4/libgweather/weather-owm.c
+[13/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/weather-nws.c.o -MF libgweather/libgweather.a.p/weather-nws.c.o.d -o libgweather/libgweather.a.p/weather-nws.c.o -c ../libgweather-4.4.4/libgweather/weather-nws.c
+[14/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/weather-sun.c.o -MF libgweather/libgweather.a.p/weather-sun.c.o.d -o libgweather/libgweather.a.p/weather-sun.c.o -c ../libgweather-4.4.4/libgweather/weather-sun.c
+[15/224] x86_64-pc-linux-gnu-gcc -Ilibgweather/libgweather.a.p -Ilibgweather -I../libgweather-4.4.4/libgweather -I. -I../libgweather-4.4.4 -I../libgweather-4.4.4/libgweather/third-party -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=gnu99 -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -Wno-unused-parameter -fno-strict-aliasing -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Werror=format=2 -Werror=implicit-function-declaration -Werror=init-self -Werror=missing-include-dirs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -fPIC -pthread -MD -MQ libgweather/libgweather.a.p/weather-moon.c.o -MF libgweather/libgweather.a.p/weather-moon.c.o.d -o libgweather/libgweather.a.p/weather-moon.c.o -c ../libgweather-4.4.4/libgweather/weather-moon.c
+[16/224] rm -f libgweather/libgweather.a &amp;&amp; x86_64-pc-linux-gnu-ar csrDT libgweather/libgweather.a libgweather/libgweather.a.p/meson-generated_.._gweather-enum-types.c.o libgweather/libgweather.a.p/gweather.c.o libgweather/libgweather.a.p/gweather-info.c.o libgweather/libgweather.a.p/gweather-location.c.o libgweather/libgweather.a.p/third-party_kdtree.c.o libgweather/libgweather.a.p/gweather-private.c.o libgweather/libgweather.a.p/weather-metar.c.o libgweather/libgweather.a.p/weather-iwin.c.o libgweather/libgweather.a.p/weather-metno.c.o libgweather/libgweather.a.p/weather-owm.c.o libgweather/libgweather.a.p/weather-nws.c.o libgweather/libgweather.a.p/weather-sun.c.o libgweather/libgweather.a.p/weather-moon.c.o
+[17/224] x86_64-pc-linux-gnu-gcc  -o libgweather/libgweather-4.so.0.400.4  -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libgweather-4.so.0 -Wl,--whole-archive -Wl,--start-group libgweather/libgweather.a -Wl,--no-whole-archive -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wno-incompatible-pointer-types -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libsoup-3.0.so /usr/lib64/libgmodule-2.0.so -pthread /usr/lib64/libxml2.so /usr/lib64/libgeocode-glib-2.so /usr/lib64/libjson-glib-1.0.so -lm -Wl,--end-group
+[18/224] env PKG_CONFIG_PATH=/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/meson-uninstalled:/var/tmp/portage/dev-libs/libgweather-4.4.4/temp/pkgconfig:/var/tmp/portage/dev-libs/libgweather-4.4.4/temp/python3.13/pkgconfig:/usr/share/pkgconfig PKG_CONFIG_LIBDIR=/usr/lib64/pkgconfig PKG_CONFIG=/usr/bin/x86_64-pc-linux-gnu-pkg-config CC=x86_64-pc-linux-gnu-gcc /usr/bin/g-ir-scanner --quiet --no-libtool --namespace=GWeather --nsversion=4.0 --warn-all --output libgweather/GWeather-4.0.gir --c-include=libgweather/gweather.h --warn-all --quiet -DGWEATHER_COMPILATION -I/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather -I/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather -I/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather/.. -I/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather/.. --filelist=/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather/libgweather-4.so.0.400.4.p/GWeather_4.0_gir_filelist --include=Gio-2.0 --symbol-prefix=gweather --identifier-prefix=GWeather --pkg-export=gweather4 --cflags-begin -DGWEATHER_COMPILATION -D_XOPEN_SOURCE=700 -D_DEFAULT_SOURCE -I/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather/.. -I/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather/.. -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/libsoup-3.0 -I/usr/include/libxml2 -I/usr/include/geocode-glib-2.0 -I/usr/include/json-glib-1.0 -I/usr/include/gobject-introspection-1.0 --cflags-end --add-include-path=/usr/share/gir-1.0 -L/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather --library gweather-4 --extra-library=gio-2.0 --extra-library=gobject-2.0 --extra-library=glib-2.0 --extra-library=soup-3.0 --extra-library=gmodule-2.0 --extra-library=xml2 --extra-library=geocode-glib-2 --extra-library=json-glib-1.0 --extra-library=m --extra-library=girepository-1.0 --sources-top-dirs /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/ --sources-top-dirs /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/
+[19/224] /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/build-aux/meson/gen_locations_variant.py ../libgweather-4.4.4/data/Locations.xml data/Locations.bin
+[20/224] /usr/lib/python-exec/python3.13/meson --internal exe --capture schemas/org.gnome.GWeather4.enums.xml -- /usr/bin/glib-mkenums --comments '&lt;!-- @comment@ --&gt;' --fhead '&lt;schemalist&gt;' --ftail '&lt;/schemalist&gt;' --vhead '&lt;@type@ id="org.gnome.GWeather4.@EnumName@"&gt;' --vprod '&lt;value nick="@valuenick@" value="@valuenum@"/&gt;' --vtail '&lt;/@type@&gt;' /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/../libgweather-4.4.4/schemas/../libgweather/gweather-enums.h
+[21/224] /usr/bin/g-ir-compiler libgweather/GWeather-4.0.gir --output libgweather/GWeather-4.0.typelib --includedir=/usr/share/gir-1.0
+[22/224] /usr/bin/vapigen-0.56 --quiet --library=gweather4 --directory=/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather --metadatadir=. --pkg=gio-2.0 --metadatadir=/var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather/GWeather-4.0.gir
+[23/224] /usr/bin/msgfmt -o po/ab/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ab.po
+[24/224] /usr/bin/msgfmt -o po/af/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/af.po
+[25/224] /usr/bin/msgfmt -o po/am/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/am.po
+[26/224] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ar.po
+[27/224] /usr/bin/msgfmt -o po/as/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/as.po
+[28/224] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ast.po
+[29/224] /usr/bin/msgfmt -o po/az/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/az.po
+[30/224] /usr/bin/msgfmt -o po/be/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/be.po
+[31/224] /usr/bin/msgfmt -o po/be@latin/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/be@latin.po
+[32/224] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/bg.po
+[33/224] /usr/bin/msgfmt -o po/bn_IN/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/bn_IN.po
+[34/224] /usr/bin/msgfmt -o po/bn/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/bn.po
+[35/224] /usr/bin/msgfmt -o po/br/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/br.po
+[36/224] /usr/bin/msgfmt -o po/bs/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/bs.po
+[37/224] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ca.po
+[38/224] /usr/bin/msgfmt -o po/ca@valencia/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ca@valencia.po
+[39/224] /usr/bin/msgfmt -o po/crh/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/crh.po
+[40/224] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/cs.po
+[41/224] /usr/bin/msgfmt -o po/cy/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/cy.po
+[42/224] /usr/bin/msgfmt -o po/da/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/da.po
+[43/224] /usr/bin/msgfmt -o po/de/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/de.po
+[44/224] /usr/bin/msgfmt -o po/dz/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/dz.po
+[45/224] /usr/bin/msgfmt -o po/el/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/el.po
+[46/224] /usr/bin/msgfmt -o po/en_CA/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/en_CA.po
+[47/224] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/en_GB.po
+[48/224] /usr/bin/msgfmt -o po/en@shaw/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/en@shaw.po
+[49/224] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/eo.po
+[50/224] /usr/bin/msgfmt -o po/es_AR/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_AR.po
+[51/224] /usr/bin/msgfmt -o po/es_CL/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_CL.po
+[52/224] /usr/bin/msgfmt -o po/es_CO/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_CO.po
+[53/224] /usr/bin/msgfmt -o po/es_CR/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_CR.po
+[54/224] /usr/bin/msgfmt -o po/es_DO/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_DO.po
+[55/224] /usr/bin/msgfmt -o po/es_EC/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_EC.po
+[56/224] /usr/bin/msgfmt -o po/es_ES/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_ES.po
+[57/224] /usr/bin/msgfmt -o po/es_GT/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_GT.po
+[58/224] /usr/bin/msgfmt -o po/es_HN/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_HN.po
+[59/224] /usr/bin/msgfmt -o po/es_MX/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_MX.po
+[60/224] /usr/bin/msgfmt -o po/es_NI/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_NI.po
+[61/224] /usr/bin/msgfmt -o po/es_PA/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_PA.po
+[62/224] /usr/bin/msgfmt -o po/es_PE/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_PE.po
+[63/224] /usr/bin/msgfmt -o po/es/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es.po
+[64/224] /usr/bin/msgfmt -o po/es_PR/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_PR.po
+[65/224] /usr/bin/msgfmt -o po/es_SV/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_SV.po
+[66/224] /usr/bin/msgfmt -o po/es_UY/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_UY.po
+[67/224] /usr/bin/msgfmt -o po/es_VE/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/es_VE.po
+[68/224] /usr/bin/msgfmt -o po/et/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/et.po
+[69/224] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/eu.po
+[70/224] /usr/bin/msgfmt -o po/fa/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/fa.po
+[71/224] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/fi.po
+[72/224] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/fr.po
+[73/224] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/fur.po
+[74/224] /usr/bin/msgfmt -o po/ga/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ga.po
+[75/224] /usr/bin/msgfmt -o po/gd/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/gd.po
+[76/224] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/gl.po
+[77/224] /usr/bin/msgfmt -o po/gu/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/gu.po
+[78/224] /usr/bin/msgfmt -o po/he/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/he.po
+[79/224] /usr/bin/msgfmt -o po/hi/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/hi.po
+[80/224] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/hr.po
+[81/224] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/hu.po
+[82/224] /usr/bin/msgfmt -o po/hy/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/hy.po
+[83/224] /usr/bin/msgfmt -o po/id/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/id.po
+[84/224] /usr/bin/msgfmt -o po/is/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/is.po
+[85/224] /usr/bin/msgfmt -o po/it/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/it.po
+[86/224] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ja.po
+[87/224] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ka.po
+[88/224] /usr/bin/msgfmt -o po/kab/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/kab.po
+[89/224] /usr/bin/msgfmt -o po/kk/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/kk.po
+[90/224] /usr/bin/msgfmt -o po/kn/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/kn.po
+[91/224] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ko.po
+[92/224] /usr/bin/msgfmt -o po/ku/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ku.po
+[93/224] /usr/bin/msgfmt -o po/ky/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ky.po
+[94/224] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/lt.po
+[95/224] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/lv.po
+[96/224] /usr/bin/msgfmt -o po/mai/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/mai.po
+[97/224] /usr/bin/msgfmt -o po/mg/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/mg.po
+[98/224] /usr/bin/msgfmt -o po/mk/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/mk.po
+[99/224] /usr/bin/msgfmt -o po/ml/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ml.po
+[100/224] /usr/bin/msgfmt -o po/mn/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/mn.po
+[101/224] /usr/bin/msgfmt -o po/mr/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/mr.po
+[102/224] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ms.po
+[103/224] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/nb.po
+[104/224] /usr/bin/msgfmt -o po/ne/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ne.po
+[105/224] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/nl.po
+[106/224] /usr/bin/msgfmt -o po/nn/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/nn.po
+[107/224] /usr/bin/msgfmt -o po/oc/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/oc.po
+[108/224] /usr/bin/msgfmt -o po/or/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/or.po
+[109/224] /usr/bin/msgfmt -o po/pa/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/pa.po
+[110/224] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/pl.po
+[111/224] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/pt_BR.po
+[112/224] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/pt.po
+[113/224] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ro.po
+[114/224] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ru.po
+[115/224] /usr/bin/msgfmt -o po/rw/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/rw.po
+[116/224] /usr/bin/msgfmt -o po/si/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/si.po
+[117/224] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/sk.po
+[118/224] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/sl.po
+[119/224] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/sq.po
+[120/224] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/sr.po
+[121/224] /usr/bin/msgfmt -o po/sr@latin/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/sr@latin.po
+[122/224] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/sv.po
+[123/224] /usr/bin/msgfmt -o po/ta/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ta.po
+[124/224] /usr/bin/msgfmt -o po/te/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/te.po
+[125/224] /usr/bin/msgfmt -o po/th/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/th.po
+[126/224] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/tr.po
+[127/224] /usr/bin/msgfmt -o po/ug/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/ug.po
+[128/224] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/uk.po
+[129/224] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/vi.po
+[130/224] /usr/bin/msgfmt -o po/wa/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/wa.po
+[131/224] /usr/bin/msgfmt -o po/xh/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/xh.po
+[132/224] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/zh_CN.po
+[133/224] /usr/bin/msgfmt -o po/zh_HK/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/zh_HK.po
+[134/224] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/libgweather-4.0.mo ../libgweather-4.4.4/po/zh_TW.po
+[135/224] /usr/bin/msgfmt -o po-locations/ang/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ang.po
+[136/224] /usr/bin/msgfmt -o po-locations/ar/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ar.po
+[137/224] /usr/bin/msgfmt -o po-locations/as/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/as.po
+[138/224] /usr/bin/msgfmt -o po-locations/ast/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ast.po
+[139/224] /usr/bin/msgfmt -o po-locations/az/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/az.po
+[140/224] /usr/bin/msgfmt -o po-locations/be@latin/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/be@latin.po
+[141/224] /usr/bin/msgfmt -o po-locations/be/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/be.po
+[142/224] /usr/bin/msgfmt -o po-locations/bg/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/bg.po
+[143/224] /usr/bin/msgfmt -o po-locations/bn_IN/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/bn_IN.po
+[144/224] /usr/bin/msgfmt -o po-locations/bn/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/bn.po
+[145/224] /usr/bin/msgfmt -o po-locations/br/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/br.po
+[146/224] /usr/bin/msgfmt -o po-locations/bs/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/bs.po
+[147/224] /usr/bin/msgfmt -o po-locations/ca/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ca.po
+[148/224] /usr/bin/msgfmt -o po-locations/ca@valencia/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ca@valencia.po
+[149/224] /usr/bin/msgfmt -o po-locations/crh/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/crh.po
+[150/224] /usr/bin/msgfmt -o po-locations/cs/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/cs.po
+[151/224] /usr/bin/msgfmt -o po-locations/cy/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/cy.po
+[152/224] /usr/bin/msgfmt -o po-locations/da/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/da.po
+[153/224] /usr/bin/msgfmt -o po-locations/de/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/de.po
+[154/224] /usr/bin/msgfmt -o po-locations/dz/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/dz.po
+[155/224] /usr/bin/msgfmt -o po-locations/el/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/el.po
+[156/224] /usr/bin/msgfmt -o po-locations/en_CA/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/en_CA.po
+[157/224] /usr/bin/msgfmt -o po-locations/en_GB/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/en_GB.po
+[158/224] /usr/bin/msgfmt -o po-locations/en@shaw/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/en@shaw.po
+[159/224] /usr/bin/msgfmt -o po-locations/eo/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/eo.po
+[160/224] /usr/bin/msgfmt -o po-locations/es/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/es.po
+[161/224] /usr/bin/msgfmt -o po-locations/et/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/et.po
+[162/224] /usr/bin/msgfmt -o po-locations/eu/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/eu.po
+[163/224] /usr/bin/msgfmt -o po-locations/fa/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/fa.po
+[164/224] /usr/bin/msgfmt -o po-locations/fi/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/fi.po
+[165/224] /usr/bin/msgfmt -o po-locations/fr/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/fr.po
+[166/224] /usr/bin/msgfmt -o po-locations/fur/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/fur.po
+[167/224] /usr/bin/msgfmt -o po-locations/ga/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ga.po
+[168/224] /usr/bin/msgfmt -o po-locations/gd/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/gd.po
+[169/224] /usr/bin/msgfmt -o po-locations/gl/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/gl.po
+[170/224] /usr/bin/msgfmt -o po-locations/gu/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/gu.po
+[171/224] /usr/bin/msgfmt -o po-locations/he/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/he.po
+[172/224] /usr/bin/msgfmt -o po-locations/hi/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/hi.po
+[173/224] /usr/bin/msgfmt -o po-locations/hr/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/hr.po
+[174/224] /usr/bin/msgfmt -o po-locations/hu/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/hu.po
+[175/224] /usr/bin/msgfmt -o po-locations/id/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/id.po
+[176/224] /usr/bin/msgfmt -o po-locations/is/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/is.po
+[177/224] /usr/bin/msgfmt -o po-locations/it/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/it.po
+[178/224] /usr/bin/msgfmt -o po-locations/ja/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ja.po
+[179/224] /usr/bin/msgfmt -o po-locations/ka/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ka.po
+[180/224] /usr/bin/msgfmt -o po-locations/kk/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/kk.po
+[181/224] /usr/bin/msgfmt -o po-locations/kn/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/kn.po
+[182/224] /usr/bin/msgfmt -o po-locations/ko/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ko.po
+[183/224] /usr/bin/msgfmt -o po-locations/ku/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ku.po
+[184/224] /usr/bin/msgfmt -o po-locations/ky/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ky.po
+[185/224] /usr/bin/msgfmt -o po-locations/lt/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/lt.po
+[186/224] /usr/bin/msgfmt -o po-locations/lv/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/lv.po
+[187/224] /usr/bin/msgfmt -o po-locations/mai/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/mai.po
+[188/224] /usr/bin/msgfmt -o po-locations/mg/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/mg.po
+[189/224] /usr/bin/msgfmt -o po-locations/mk/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/mk.po
+[190/224] /usr/bin/msgfmt -o po-locations/ml/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ml.po
+[191/224] /usr/bin/msgfmt -o po-locations/mn/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/mn.po
+[192/224] /usr/bin/msgfmt -o po-locations/mr/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/mr.po
+[193/224] /usr/bin/msgfmt -o po-locations/ms/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ms.po
+[194/224] /usr/bin/msgfmt -o po-locations/nb/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/nb.po
+[195/224] /usr/bin/msgfmt -o po-locations/nds/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/nds.po
+[196/224] /usr/bin/msgfmt -o po-locations/ne/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ne.po
+[197/224] /usr/bin/msgfmt -o po-locations/nl/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/nl.po
+[198/224] /usr/bin/msgfmt -o po-locations/nn/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/nn.po
+[199/224] /usr/bin/msgfmt -o po-locations/oc/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/oc.po
+[200/224] /usr/bin/msgfmt -o po-locations/or/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/or.po
+[201/224] /usr/bin/msgfmt -o po-locations/pa/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/pa.po
+[202/224] /usr/bin/msgfmt -o po-locations/pl/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/pl.po
+[203/224] /usr/bin/msgfmt -o po-locations/pt_BR/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/pt_BR.po
+[204/224] /usr/bin/msgfmt -o po-locations/pt/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/pt.po
+[205/224] /usr/bin/msgfmt -o po-locations/ro/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ro.po
+[206/224] /usr/bin/msgfmt -o po-locations/ru/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ru.po
+[207/224] /usr/bin/msgfmt -o po-locations/rw/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/rw.po
+[208/224] /usr/bin/msgfmt -o po-locations/si/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/si.po
+[209/224] /usr/bin/msgfmt -o po-locations/sk/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/sk.po
+[210/224] /usr/bin/msgfmt -o po-locations/sl/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/sl.po
+[211/224] /usr/bin/msgfmt -o po-locations/sq/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/sq.po
+[212/224] /usr/bin/msgfmt -o po-locations/sr@latin/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/sr@latin.po
+[213/224] /usr/bin/msgfmt -o po-locations/sr/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/sr.po
+[214/224] /usr/bin/msgfmt -o po-locations/sv/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/sv.po
+[215/224] /usr/bin/msgfmt -o po-locations/ta/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ta.po
+[216/224] /usr/bin/msgfmt -o po-locations/te/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/te.po
+[217/224] /usr/bin/msgfmt -o po-locations/th/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/th.po
+[218/224] /usr/bin/msgfmt -o po-locations/tr/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/tr.po
+[219/224] /usr/bin/msgfmt -o po-locations/ug/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/ug.po
+[220/224] /usr/bin/msgfmt -o po-locations/uk/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/uk.po
+[221/224] /usr/bin/msgfmt -o po-locations/vi/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/vi.po
+[222/224] /usr/bin/msgfmt -o po-locations/zh_CN/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/zh_CN.po
+[223/224] /usr/bin/msgfmt -o po-locations/zh_HK/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/zh_HK.po
+[224/224] /usr/bin/msgfmt -o po-locations/zh_TW/LC_MESSAGES/libgweather-4.0-locations.mo ../libgweather-4.4.4/po-locations/zh_TW.po
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-libs/libgweather-4.4.4
+
+&gt;&gt;&gt; Install dev-libs/libgweather-4.4.4 into /var/tmp/portage/dev-libs/libgweather-4.4.4/image
+meson install --destdir /var/tmp/portage/dev-libs/libgweather-4.4.4/image --no-rebuild
+Installing data/Locations.bin to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/lib64/libgweather-4
+Installing schemas/org.gnome.GWeather4.enums.xml to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/glib-2.0/schemas
+Installing libgweather/gweather-enum-types.h to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/include/libgweather-4.0/libgweather
+Installing libgweather/libgweather-4.so.0.400.4 to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/lib64
+Installing libgweather/GWeather-4.0.gir to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/gir-1.0
+Installing libgweather/GWeather-4.0.typelib to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/lib64/girepository-1.0
+Installing libgweather/gweather4.vapi to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/vala/vapi
+Installing po/ab/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ab/LC_MESSAGES
+Installing po/af/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/af/LC_MESSAGES
+Installing po/am/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/am/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ar/LC_MESSAGES
+Installing po/as/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/as/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/az/LC_MESSAGES
+Installing po/be/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/be/LC_MESSAGES
+Installing po/be@latin/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/be@latin/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/bn_IN/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bn_IN/LC_MESSAGES
+Installing po/bn/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bn/LC_MESSAGES
+Installing po/br/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/br/LC_MESSAGES
+Installing po/bs/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bs/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po/crh/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/crh/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/de/LC_MESSAGES
+Installing po/dz/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/dz/LC_MESSAGES
+Installing po/el/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_CA/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/en_CA/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/en@shaw/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/en@shaw/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es_AR/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_AR/LC_MESSAGES
+Installing po/es_CL/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_CL/LC_MESSAGES
+Installing po/es_CO/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_CO/LC_MESSAGES
+Installing po/es_CR/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_CR/LC_MESSAGES
+Installing po/es_DO/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_DO/LC_MESSAGES
+Installing po/es_EC/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_EC/LC_MESSAGES
+Installing po/es_ES/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_ES/LC_MESSAGES
+Installing po/es_GT/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_GT/LC_MESSAGES
+Installing po/es_HN/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_HN/LC_MESSAGES
+Installing po/es_MX/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_MX/LC_MESSAGES
+Installing po/es_NI/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_NI/LC_MESSAGES
+Installing po/es_PA/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_PA/LC_MESSAGES
+Installing po/es_PE/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_PE/LC_MESSAGES
+Installing po/es/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es/LC_MESSAGES
+Installing po/es_PR/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_PR/LC_MESSAGES
+Installing po/es_SV/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_SV/LC_MESSAGES
+Installing po/es_UY/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_UY/LC_MESSAGES
+Installing po/es_VE/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es_VE/LC_MESSAGES
+Installing po/et/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/ga/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ga/LC_MESSAGES
+Installing po/gd/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/gd/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/gu/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/gu/LC_MESSAGES
+Installing po/he/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/hy/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/hy/LC_MESSAGES
+Installing po/id/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/id/LC_MESSAGES
+Installing po/is/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/is/LC_MESSAGES
+Installing po/it/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/kab/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/kab/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/kk/LC_MESSAGES
+Installing po/kn/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/kn/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ko/LC_MESSAGES
+Installing po/ku/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ku/LC_MESSAGES
+Installing po/ky/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ky/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/lv/LC_MESSAGES
+Installing po/mai/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mai/LC_MESSAGES
+Installing po/mg/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mg/LC_MESSAGES
+Installing po/mk/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mk/LC_MESSAGES
+Installing po/ml/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ml/LC_MESSAGES
+Installing po/mn/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mn/LC_MESSAGES
+Installing po/mr/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mr/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ms/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/ne/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ne/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/nn/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/oc/LC_MESSAGES
+Installing po/or/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/or/LC_MESSAGES
+Installing po/pa/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pa/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pt/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/rw/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/rw/LC_MESSAGES
+Installing po/si/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/si/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/te/LC_MESSAGES
+Installing po/th/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/th/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/ug/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ug/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/wa/LC_MESSAGES
+Installing po/xh/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/xh/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/libgweather-4.0.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing po-locations/ang/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ang/LC_MESSAGES
+Installing po-locations/ar/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ar/LC_MESSAGES
+Installing po-locations/as/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/as/LC_MESSAGES
+Installing po-locations/ast/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ast/LC_MESSAGES
+Installing po-locations/az/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/az/LC_MESSAGES
+Installing po-locations/be@latin/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/be@latin/LC_MESSAGES
+Installing po-locations/be/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/be/LC_MESSAGES
+Installing po-locations/bg/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bg/LC_MESSAGES
+Installing po-locations/bn_IN/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bn_IN/LC_MESSAGES
+Installing po-locations/bn/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bn/LC_MESSAGES
+Installing po-locations/br/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/br/LC_MESSAGES
+Installing po-locations/bs/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/bs/LC_MESSAGES
+Installing po-locations/ca/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ca/LC_MESSAGES
+Installing po-locations/ca@valencia/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po-locations/crh/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/crh/LC_MESSAGES
+Installing po-locations/cs/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/cs/LC_MESSAGES
+Installing po-locations/cy/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/cy/LC_MESSAGES
+Installing po-locations/da/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/da/LC_MESSAGES
+Installing po-locations/de/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/de/LC_MESSAGES
+Installing po-locations/dz/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/dz/LC_MESSAGES
+Installing po-locations/el/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/el/LC_MESSAGES
+Installing po-locations/en_CA/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/en_CA/LC_MESSAGES
+Installing po-locations/en_GB/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po-locations/en@shaw/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/en@shaw/LC_MESSAGES
+Installing po-locations/eo/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/eo/LC_MESSAGES
+Installing po-locations/es/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/es/LC_MESSAGES
+Installing po-locations/et/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/et/LC_MESSAGES
+Installing po-locations/eu/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/eu/LC_MESSAGES
+Installing po-locations/fa/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fa/LC_MESSAGES
+Installing po-locations/fi/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fi/LC_MESSAGES
+Installing po-locations/fr/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fr/LC_MESSAGES
+Installing po-locations/fur/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/fur/LC_MESSAGES
+Installing po-locations/ga/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ga/LC_MESSAGES
+Installing po-locations/gd/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/gd/LC_MESSAGES
+Installing po-locations/gl/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/gl/LC_MESSAGES
+Installing po-locations/gu/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/gu/LC_MESSAGES
+Installing po-locations/he/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/he/LC_MESSAGES
+Installing po-locations/hi/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/hi/LC_MESSAGES
+Installing po-locations/hr/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/hr/LC_MESSAGES
+Installing po-locations/hu/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/hu/LC_MESSAGES
+Installing po-locations/id/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/id/LC_MESSAGES
+Installing po-locations/is/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/is/LC_MESSAGES
+Installing po-locations/it/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/it/LC_MESSAGES
+Installing po-locations/ja/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ja/LC_MESSAGES
+Installing po-locations/ka/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ka/LC_MESSAGES
+Installing po-locations/kk/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/kk/LC_MESSAGES
+Installing po-locations/kn/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/kn/LC_MESSAGES
+Installing po-locations/ko/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ko/LC_MESSAGES
+Installing po-locations/ku/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ku/LC_MESSAGES
+Installing po-locations/ky/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ky/LC_MESSAGES
+Installing po-locations/lt/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/lt/LC_MESSAGES
+Installing po-locations/lv/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/lv/LC_MESSAGES
+Installing po-locations/mai/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mai/LC_MESSAGES
+Installing po-locations/mg/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mg/LC_MESSAGES
+Installing po-locations/mk/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mk/LC_MESSAGES
+Installing po-locations/ml/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ml/LC_MESSAGES
+Installing po-locations/mn/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mn/LC_MESSAGES
+Installing po-locations/mr/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/mr/LC_MESSAGES
+Installing po-locations/ms/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ms/LC_MESSAGES
+Installing po-locations/nb/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/nb/LC_MESSAGES
+Installing po-locations/nds/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/nds/LC_MESSAGES
+Installing po-locations/ne/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ne/LC_MESSAGES
+Installing po-locations/nl/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/nl/LC_MESSAGES
+Installing po-locations/nn/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/nn/LC_MESSAGES
+Installing po-locations/oc/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/oc/LC_MESSAGES
+Installing po-locations/or/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/or/LC_MESSAGES
+Installing po-locations/pa/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pa/LC_MESSAGES
+Installing po-locations/pl/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pl/LC_MESSAGES
+Installing po-locations/pt_BR/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po-locations/pt/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/pt/LC_MESSAGES
+Installing po-locations/ro/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ro/LC_MESSAGES
+Installing po-locations/ru/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ru/LC_MESSAGES
+Installing po-locations/rw/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/rw/LC_MESSAGES
+Installing po-locations/si/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/si/LC_MESSAGES
+Installing po-locations/sk/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sk/LC_MESSAGES
+Installing po-locations/sl/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sl/LC_MESSAGES
+Installing po-locations/sq/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sq/LC_MESSAGES
+Installing po-locations/sr@latin/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po-locations/sr/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sr/LC_MESSAGES
+Installing po-locations/sv/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/sv/LC_MESSAGES
+Installing po-locations/ta/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ta/LC_MESSAGES
+Installing po-locations/te/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/te/LC_MESSAGES
+Installing po-locations/th/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/th/LC_MESSAGES
+Installing po-locations/tr/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/tr/LC_MESSAGES
+Installing po-locations/ug/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/ug/LC_MESSAGES
+Installing po-locations/uk/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/uk/LC_MESSAGES
+Installing po-locations/vi/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/vi/LC_MESSAGES
+Installing po-locations/zh_CN/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po-locations/zh_HK/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po-locations/zh_TW/LC_MESSAGES/libgweather-4.0-locations.mo to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather/gweather-info.h to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/include/libgweather-4.0/libgweather
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather/gweather-location.h to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/include/libgweather-4.0/libgweather
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather/gweather-enums.h to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/include/libgweather-4.0/libgweather
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/libgweather/gweather.h to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/include/libgweather-4.0/libgweather
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/data/Locations.xml to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/libgweather-4
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/data/locations.dtd to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/libgweather-4
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4/schemas/org.gnome.GWeather4.gschema.xml to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/glib-2.0/schemas
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/libgweather/gweather-version.h to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/include/libgweather-4.0/libgweather
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/meson-private/gweather4.deps to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/share/vala/vapi
+Installing /var/tmp/portage/dev-libs/libgweather-4.4.4/work/libgweather-4.4.4-build/meson-private/gweather4.pc to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/lib64/pkgconfig
+Installing symlink pointing to libgweather-4.so.0.400.4 to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/lib64/libgweather-4.so.0
+Installing symlink pointing to libgweather-4.so.0 to /var/tmp/portage/dev-libs/libgweather-4.4.4/image/usr/lib64/libgweather-4.so
+Skipping custom install script because DESTDIR is set '/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas'
+&gt;&gt;&gt; Completed installing dev-libs/libgweather-4.4.4 into /var/tmp/portage/dev-libs/libgweather-4.4.4/image
+
+ <span class="ansi32">*</span> Final size of build directory: 73628 KiB (71.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  24996 KiB (24.4 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libgweather-4.so.0.400.4
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>
