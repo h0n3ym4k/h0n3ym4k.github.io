@@ -1,0 +1,443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-firewall/nftables-1.1.4:0/1
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org prometheanfire@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc gmp kernel_linux python_targets_python3_13 readline
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.12.41-gentoo-x86_64
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking nftables-1.1.4.tar.xz to /var/tmp/portage/net-firewall/nftables-1.1.4/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-firewall/nftables-1.1.4/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4 ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: nftables-1.1.4/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying ppc64le/2.4.4 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying fix-file-check/2.5.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: nftables-1.1.4/build-aux/
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying portage/1.2.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying sed/1.5.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying as-needed/2.5.0 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying werror/2.4.7-debian patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying cxx-pthread/2.4.6 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying color-record/2.4.7-debian patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying openmp/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying verbose-pic/2.4.7 patch ...
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span>   Applying clang-runtime-ltmain/2.4.7 patch ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4 ...
+ * econf: updating nftables-1.1.4/build-aux/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating nftables-1.1.4/build-aux/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/nftables-1.1.4 --htmldir=/usr/share/doc/nftables-1.1.4/html --with-sysroot=/ --libdir=/usr/lib64 --sbindir=/sbin --disable-debug --disable-man-doc --without-mini_gmp --without-json --without-cli --with-cli=readline --disable-static --without-xtables
+checking for a BSD-compatible install... /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a sed that does not truncate output... /bin/sed
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking the archiver (x86_64-pc-linux-gnu-ar) interface... ar
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... no
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... (cached) x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking whether compiler accepts -fvisibility=hidden... yes
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libmnl &gt;= 1.0.4... yes
+checking for libnftnl &gt;= 1.3.0... yes
+checking for __gmpz_init in -lgmp... yes
+checking for readline in -lreadline... yes
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether getprotobyname_r is declared... yes
+checking whether getprotobynumber_r is declared... yes
+checking whether getservbyport_r is declared... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libnftables.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+nft configuration:
+  cli support:			readline
+  enable debugging symbols:	no
+  use mini-gmp:			no
+  enable man page:              no
+  libxtables support:		no
+  json output support:          no
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4 ...
+make -j2 
+make  all-am
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/cli.o src/cli.c
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/main.o src/main.c
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/cache.lo src/cache.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/cache.c  -fPIC -DPIC -o src/.libs/cache.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/cmd.lo src/cmd.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/cmd.c  -fPIC -DPIC -o src/.libs/cmd.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/ct.lo src/ct.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/ct.c  -fPIC -DPIC -o src/.libs/ct.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/datatype.lo src/datatype.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/datatype.c  -fPIC -DPIC -o src/.libs/datatype.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/dccpopt.lo src/dccpopt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/dccpopt.c  -fPIC -DPIC -o src/.libs/dccpopt.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/erec.lo src/erec.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/erec.c  -fPIC -DPIC -o src/.libs/erec.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/expression.lo src/expression.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/expression.c  -fPIC -DPIC -o src/.libs/expression.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/evaluate.lo src/evaluate.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/evaluate.c  -fPIC -DPIC -o src/.libs/evaluate.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/exthdr.lo src/exthdr.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/exthdr.c  -fPIC -DPIC -o src/.libs/exthdr.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/fib.lo src/fib.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/fib.c  -fPIC -DPIC -o src/.libs/fib.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/gmputil.lo src/gmputil.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/gmputil.c  -fPIC -DPIC -o src/.libs/gmputil.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/hash.lo src/hash.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/hash.c  -fPIC -DPIC -o src/.libs/hash.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/iface.lo src/iface.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/iface.c  -fPIC -DPIC -o src/.libs/iface.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/intervals.lo src/intervals.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/intervals.c  -fPIC -DPIC -o src/.libs/intervals.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/ipopt.lo src/ipopt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/ipopt.c  -fPIC -DPIC -o src/.libs/ipopt.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/libnftables.lo src/libnftables.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/libnftables.c  -fPIC -DPIC -o src/.libs/libnftables.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/mergesort.lo src/mergesort.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/mergesort.c  -fPIC -DPIC -o src/.libs/mergesort.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/meta.lo src/meta.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/meta.c  -fPIC -DPIC -o src/.libs/meta.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/misspell.lo src/misspell.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/misspell.c  -fPIC -DPIC -o src/.libs/misspell.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/mnl.lo src/mnl.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/mnl.c  -fPIC -DPIC -o src/.libs/mnl.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/monitor.lo src/monitor.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/monitor.c  -fPIC -DPIC -o src/.libs/monitor.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/trace.lo src/trace.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/trace.c  -fPIC -DPIC -o src/.libs/trace.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/netlink.lo src/netlink.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/netlink.c  -fPIC -DPIC -o src/.libs/netlink.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/netlink_delinearize.lo src/netlink_delinearize.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/netlink_delinearize.c  -fPIC -DPIC -o src/.libs/netlink_delinearize.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/netlink_linearize.lo src/netlink_linearize.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/netlink_linearize.c  -fPIC -DPIC -o src/.libs/netlink_linearize.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/nfnl_osf.lo src/nfnl_osf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/nfnl_osf.c  -fPIC -DPIC -o src/.libs/nfnl_osf.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/nftutils.lo src/nftutils.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/nftutils.c  -fPIC -DPIC -o src/.libs/nftutils.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/numgen.lo src/numgen.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/numgen.c  -fPIC -DPIC -o src/.libs/numgen.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/optimize.lo src/optimize.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/optimize.c  -fPIC -DPIC -o src/.libs/optimize.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/osf.lo src/osf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/osf.c  -fPIC -DPIC -o src/.libs/osf.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/owner.lo src/owner.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/owner.c  -fPIC -DPIC -o src/.libs/owner.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/payload.lo src/payload.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/payload.c  -fPIC -DPIC -o src/.libs/payload.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/preprocess.lo src/preprocess.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/preprocess.c  -fPIC -DPIC -o src/.libs/preprocess.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/print.lo src/print.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/print.c  -fPIC -DPIC -o src/.libs/print.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/proto.lo src/proto.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/proto.c  -fPIC -DPIC -o src/.libs/proto.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/rt.lo src/rt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/rt.c  -fPIC -DPIC -o src/.libs/rt.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/sctp_chunk.lo src/sctp_chunk.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/sctp_chunk.c  -fPIC -DPIC -o src/.libs/sctp_chunk.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/rule.lo src/rule.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/rule.c  -fPIC -DPIC -o src/.libs/rule.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/segtree.lo src/segtree.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/segtree.c  -fPIC -DPIC -o src/.libs/segtree.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/socket.lo src/socket.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/socket.c  -fPIC -DPIC -o src/.libs/socket.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/statement.lo src/statement.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/statement.c  -fPIC -DPIC -o src/.libs/statement.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/tcpopt.lo src/tcpopt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/tcpopt.c  -fPIC -DPIC -o src/.libs/tcpopt.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils.lo src/utils.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/utils.c  -fPIC -DPIC -o src/.libs/utils.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/xfrm.lo src/xfrm.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/xfrm.c  -fPIC -DPIC -o src/.libs/xfrm.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/xt.lo src/xt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/xt.c  -fPIC -DPIC -o src/.libs/xt.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -Wno-missing-declarations -Wno-missing-prototypes -Wno-nested-externs -Wno-redundant-decls -Wno-undef -Wno-unused-but-set-variable  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/libparser_la-parser_bison.lo `test -f 'src/parser_bison.c' || echo './'`src/parser_bison.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -Wno-missing-declarations -Wno-missing-prototypes -Wno-nested-externs -Wno-redundant-decls -Wno-undef -Wno-unused-but-set-variable -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/parser_bison.c  -fPIC -DPIC -o src/.libs/libparser_la-parser_bison.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  "-I./include" "-DDEFAULT_INCLUDE_PATH=\"/etc\""          -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -Wno-missing-declarations -Wno-missing-prototypes -Wno-nested-externs -Wno-redundant-decls -Wno-undef -Wno-unused-but-set-variable  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/libparser_la-scanner.lo `test -f 'src/scanner.c' || echo './'`src/scanner.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I./include -DDEFAULT_INCLUDE_PATH=\"/etc\" -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -Wno-missing-declarations -Wno-missing-prototypes -Wno-nested-externs -Wno-redundant-decls -Wno-undef -Wno-unused-but-set-variable -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c src/scanner.c  -fPIC -DPIC -o src/.libs/libparser_la-scanner.o
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -Wno-missing-declarations -Wno-missing-prototypes -Wno-nested-externs -Wno-redundant-decls -Wno-undef -Wno-unused-but-set-variable  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o src/libparser.la  src/libparser_la-parser_bison.lo src/libparser_la-scanner.lo  -lreadline -lgmp 
+libtool: link: x86_64-pc-linux-gnu-ar cr src/.libs/libparser.a src/.libs/libparser_la-parser_bison.o src/.libs/libparser_la-scanner.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib src/.libs/libparser.a
+libtool: link: ( cd "src/.libs" &amp;&amp; rm -f "libparser.la" &amp;&amp; ln -s "../libparser.la" "libparser.la" )
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -version-info "2:0:1" -Wl,--version-script="./src//libnftables.map"  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o src/libnftables.la -rpath /usr/lib64 src/cache.lo src/cmd.lo src/ct.lo src/datatype.lo src/dccpopt.lo src/erec.lo src/evaluate.lo src/expression.lo src/exthdr.lo src/fib.lo src/gmputil.lo src/hash.lo src/iface.lo src/intervals.lo src/ipopt.lo src/libnftables.lo src/mergesort.lo src/meta.lo src/misspell.lo src/mnl.lo src/monitor.lo src/trace.lo src/netlink.lo src/netlink_delinearize.lo src/netlink_linearize.lo src/nfnl_osf.lo src/nftutils.lo src/numgen.lo src/optimize.lo src/osf.lo src/owner.lo src/payload.lo src/preprocess.lo src/print.lo src/proto.lo src/rt.lo src/rule.lo src/sctp_chunk.lo src/segtree.lo src/socket.lo src/statement.lo src/tcpopt.lo src/utils.lo src/xfrm.lo src/xt.lo  -lmnl -lnftnl src/libparser.la     -lreadline -lgmp 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  src/.libs/cache.o src/.libs/cmd.o src/.libs/ct.o src/.libs/datatype.o src/.libs/dccpopt.o src/.libs/erec.o src/.libs/evaluate.o src/.libs/expression.o src/.libs/exthdr.o src/.libs/fib.o src/.libs/gmputil.o src/.libs/hash.o src/.libs/iface.o src/.libs/intervals.o src/.libs/ipopt.o src/.libs/libnftables.o src/.libs/mergesort.o src/.libs/meta.o src/.libs/misspell.o src/.libs/mnl.o src/.libs/monitor.o src/.libs/trace.o src/.libs/netlink.o src/.libs/netlink_delinearize.o src/.libs/netlink_linearize.o src/.libs/nfnl_osf.o src/.libs/nftutils.o src/.libs/numgen.o src/.libs/optimize.o src/.libs/osf.o src/.libs/owner.o src/.libs/payload.o src/.libs/preprocess.o src/.libs/print.o src/.libs/proto.o src/.libs/rt.o src/.libs/rule.o src/.libs/sctp_chunk.o src/.libs/segtree.o src/.libs/socket.o src/.libs/statement.o src/.libs/tcpopt.o src/.libs/utils.o src/.libs/xfrm.o src/.libs/xt.o  -Wl,--whole-archive src/.libs/libparser.a -Wl,--no-whole-archive  -Wl,--as-needed -lmnl -lnftnl -lreadline -lgmp  -O3 -march=native -mtune=native -Wl,--version-script=./src//libnftables.map -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libnftables.so.1 -o src/.libs/libnftables.so.1.1.0
+libtool: link: (cd "src/.libs" &amp;&amp; rm -f "libnftables.so.1" &amp;&amp; ln -s "libnftables.so.1.1.0" "libnftables.so.1")
+libtool: link: (cd "src/.libs" &amp;&amp; rm -f "libnftables.so" &amp;&amp; ln -s "libnftables.so.1.1.0" "libnftables.so")
+libtool: link: ( cd "src/.libs" &amp;&amp; rm -f "libnftables.la" &amp;&amp; ln -s "../libnftables.la" "libnftables.la" )
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[1]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o src/nft src/main.o src/cli.o src/libnftables.la -lreadline -lgmp 
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -Waggregate-return -Wbad-function-cast -Wcast-align -Wdeclaration-after-statement -Wformat-nonliteral -Wformat-security -Winit-self -Wmissing-declarations -Wmissing-format-attribute -Wmissing-prototypes -Wsign-compare -Wstrict-prototypes -Wundef -Wunused -Wwrite-strings -fvisibility=hidden -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,-z -Wl,pack-relative-relocs -o src/.libs/nft src/main.o src/cli.o  -Wl,--as-needed src/.libs/libnftables.so -lreadline -lgmp
+make[1]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: net-firewall/nftables-1.1.4
+
+&gt;&gt;&gt; Install net-firewall/nftables-1.1.4 into /var/tmp/portage/net-firewall/nftables-1.1.4/image
+make -j2 DESTDIR=/var/tmp/portage/net-firewall/nftables-1.1.4/image install 
+make  install-am
+make[2]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/share/nftables'
+ /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c -m 644 files/nftables/all-in-one.nft files/nftables/arp-filter.nft files/nftables/bridge-filter.nft files/nftables/inet-filter.nft files/nftables/inet-nat.nft files/nftables/ipv4-filter.nft files/nftables/ipv4-mangle.nft files/nftables/ipv4-nat.nft files/nftables/ipv4-raw.nft files/nftables/ipv6-filter.nft files/nftables/ipv6-mangle.nft files/nftables/ipv6-nat.nft files/nftables/ipv6-raw.nft files/nftables/netdev-ingress.nft '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/share/nftables'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64'
+ /bin/sh ./libtool   --mode=install /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c   src/libnftables.la '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64'
+libtool: install: /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c src/.libs/libnftables.so.1.1.0 /var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64/libnftables.so.1.1.0
+libtool: install: (cd /var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64 &amp;&amp; { ln -s -f libnftables.so.1.1.0 libnftables.so.1 || { rm -f libnftables.so.1 &amp;&amp; ln -s libnftables.so.1.1.0 libnftables.so.1; }; })
+libtool: install: (cd /var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64 &amp;&amp; { ln -s -f libnftables.so.1.1.0 libnftables.so || { rm -f libnftables.so &amp;&amp; ln -s libnftables.so.1.1.0 libnftables.so; }; })
+libtool: install: /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c src/.libs/libnftables.lai /var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64/libnftables.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/share/doc/nftables-1.1.4/examples'
+ /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c files/examples/ct_helpers.nft files/examples/load_balancing.nft files/examples/secmark.nft files/examples/sets_and_maps.nft '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/share/doc/nftables-1.1.4/examples'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/nftables-1.1.4/image/etc/nftables/osf'
+ /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c -m 644 files/osf/pf.os '/var/tmp/portage/net-firewall/nftables-1.1.4/image/etc/nftables/osf'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/include/nftables'
+ /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c -m 644 include/nftables/libnftables.h '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/include/nftables'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64/pkgconfig'
+ /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c -m 644 libnftables.pc '/var/tmp/portage/net-firewall/nftables-1.1.4/image/usr/lib64/pkgconfig'
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+make[2]: Entering directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+ /bin/mkdir -p '/var/tmp/portage/net-firewall/nftables-1.1.4/image/sbin'
+  /bin/sh ./libtool   --mode=install /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c src/nft '/var/tmp/portage/net-firewall/nftables-1.1.4/image/sbin'
+libtool: warning: 'src/libnftables.la' has not been installed in '/usr/lib64'
+libtool: install: /usr/lib/portage/python3.13/ebuild-helpers/xattr/install -c src/.libs/nft /var/tmp/portage/net-firewall/nftables-1.1.4/image/sbin/nft
+make[2]: Leaving directory '/var/tmp/portage/net-firewall/nftables-1.1.4/work/nftables-1.1.4'
+&gt;&gt;&gt; Completed installing net-firewall/nftables-1.1.4 into /var/tmp/portage/net-firewall/nftables-1.1.4/image
+
+ <span class="ansi32">*</span> Final size of build directory: 18656 KiB (18.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   1500 KiB ( 1.4 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /sbin/nft
+   /usr/lib64/libnftables.so.1.1.0
+ <span class="ansi1 ansi32">*</span> If you wish to enable the firewall rules on boot (on openrc) you
+ <span class="ansi1 ansi32">*</span> will need to enable the nftables service.
+ <span class="ansi1 ansi32">*</span>     'rc-update add nftables default'
+ <span class="ansi1 ansi32">*</span> 
+ <span class="ansi1 ansi32">*</span> If you are creating or updating the firewall rules and wish to save
+ <span class="ansi1 ansi32">*</span> them to be loaded on the next restart, use the "save" functionality
+ <span class="ansi1 ansi32">*</span> in the init script.
+ <span class="ansi1 ansi32">*</span>     'rc-service nftables save'
+
+</pre>
+</body>
+
+</html>
