@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-crypt/rhash-1.4.5:0/1
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: chewi@gentoo.org
+<span class="ansi32"> * </span>Upstream:   https://github.com/rhash/RHash/issues
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux nls ssl
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking rhash-1.4.5-src.tar.gz to /var/tmp/portage/app-crypt/rhash-1.4.5/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-crypt/rhash-1.4.5/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5 ...
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5
+ <span class="ansi32">*</span> abi_x86_64.amd64: copying to /var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+./configure --target=x86_64-pc-linux-gnu --cc=x86_64-pc-linux-gnu-gcc --ar=x86_64-pc-linux-gnu-ar --extra-cflags=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe --extra-ldflags=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--undefined-version --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --disable-openssl-runtime --disable-static --enable-lib-shared --disable-debug --enable-gettext --enable-openssl --disable-lib-static
+Checking for sources ... RHash 1.4.5 
+Checking for target OS ... Linux 
+Checking for x86_64-pc-linux-gnu-gcc version ... gcc 14.3.1 
+Checking for linker support for --version-script ... yes 
+Checking for gettext ... found 
+Checking for OpenSSL ... found 
+Writing config.mak
+Writing librhash/config.mak
+Writing dist/librhash.pc
+Writing dist/rhash.1
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+make -j2 all compile-gmo 
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe calc_sums.c -o calc_sums.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe hash_print.c -o hash_print.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe common_func.c -o common_func.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe hash_update.c -o hash_update.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe file.c -o file.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe file_mask.c -o file_mask.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe file_set.c -o file_set.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe find_file.c -o find_file.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe hash_check.c -o hash_check.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe output.c -o output.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DSYSCONFDIR=\"/etc\" parse_cmdline.c -o parse_cmdline.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DLOCALEDIR=\"/usr/share/locale\" rhash_main.c -o rhash_main.o
+x86_64-pc-linux-gnu-gcc -c -DUSE_GETTEXT -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe win_utils.c -o win_utils.o
+cd librhash &amp;&amp; make lib-shared
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+sed -ne '1s/.*/{ global:/p; s/^RHASH_API.* \(rhash_[a-z0-9_]*\)(.*/  \1;/p; $s/.*/local: *; };/p' \
+  rhash.h rhash_torrent.h | grep -v "rhash_wfile" &gt; exports.sym
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+test "xlibrhash.so.1" = "xlibrhash.so.1.4.5" || ( \
+  rm -f librhash.so.1 &amp;&amp; \
+  ln -s librhash.so.1.4.5 librhash.so.1 )
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+rm -f librhash.so
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+ln -s librhash.so.1 librhash.so
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+x86_64-pc-linux-gnu-gcc -DUSE_OPENSSL -DNDEBUG -pipe -ffunction-sections -fdata-sections -fomit-frame-pointer -Wall -W -Wstrict-prototypes -Wnested-externs -Winline -Wpointer-arith -Wbad-function-cast -Wmissing-prototypes -Wmissing-declarations -Wdeclaration-after-statement -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fpic -DRHASH_XVERSION=0x01040500 algorithms.c byte_order.c plug_openssl.c rhash.c rhash_torrent.c aich.c blake2b.c blake2s.c crc32.c ed2k.c edonr.c hex.c md4.c md5.c sha1.c sha256.c sha512.c sha3.c ripemd-160.c gost12.c gost94.c has160.c snefru.c tiger.c tiger_sbox.c tth.c torrent.c util.c whirlpool.c whirlpool_sbox.c  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--undefined-version -lcrypto -shared -Wl,--version-script,exports.sym,-soname,librhash.so.1 -o librhash.so.1.4.5
+plug_openssl.c: In function ‘wrapMD4_Final’:
+plug_openssl.c:108:1: warning: ‘MD4_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  108 | WRAP_FINAL(MD4, MD4_CTX)
+      | ^~~~~~~~~~
+In file included from plug_openssl.c:24:
+/usr/include/openssl/md4.h:52:27: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 int MD4_Final(unsigned char *md, MD4_CTX *c);
+      |                           ^~~~~~~~~
+plug_openssl.c: In function ‘wrapMD5_Final’:
+plug_openssl.c:111:1: warning: ‘MD5_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  111 | WRAP_FINAL(MD5, MD5_CTX)
+      | ^~~~~~~~~~
+In file included from plug_openssl.c:31:
+/usr/include/openssl/md5.h:51:27: note: declared here
+   51 | OSSL_DEPRECATEDIN_3_0 int MD5_Final(unsigned char *md, MD5_CTX *c);
+      |                           ^~~~~~~~~
+plug_openssl.c: In function ‘wrapSHA1_Final’:
+plug_openssl.c:114:1: warning: ‘SHA1_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  114 | WRAP_FINAL(SHA1, SHA_CTX)
+      | ^~~~~~~~~~
+In file included from plug_openssl.c:38:
+/usr/include/openssl/sha.h:51:27: note: declared here
+   51 | OSSL_DEPRECATEDIN_3_0 int SHA1_Final(unsigned char *md, SHA_CTX *c);
+      |                           ^~~~~~~~~~
+plug_openssl.c: In function ‘wrapSHA224_Final’:
+plug_openssl.c:115:1: warning: ‘SHA224_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  115 | WRAP_FINAL(SHA224, SHA256_CTX)
+      | ^~~~~~~~~~
+/usr/include/openssl/sha.h:72:27: note: declared here
+   72 | OSSL_DEPRECATEDIN_3_0 int SHA224_Final(unsigned char *md, SHA256_CTX *c);
+      |                           ^~~~~~~~~~~~
+plug_openssl.c: In function ‘wrapSHA256_Final’:
+plug_openssl.c:116:1: warning: ‘SHA256_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  116 | WRAP_FINAL(SHA256, SHA256_CTX)
+      | ^~~~~~~~~~
+/usr/include/openssl/sha.h:76:27: note: declared here
+   76 | OSSL_DEPRECATEDIN_3_0 int SHA256_Final(unsigned char *md, SHA256_CTX *c);
+      |                           ^~~~~~~~~~~~
+plug_openssl.c: In function ‘wrapSHA384_Final’:
+plug_openssl.c:117:1: warning: ‘SHA384_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  117 | WRAP_FINAL(SHA384, SHA512_CTX)
+      | ^~~~~~~~~~
+/usr/include/openssl/sha.h:123:27: note: declared here
+  123 | OSSL_DEPRECATEDIN_3_0 int SHA384_Final(unsigned char *md, SHA512_CTX *c);
+      |                           ^~~~~~~~~~~~
+plug_openssl.c: In function ‘wrapSHA512_Final’:
+plug_openssl.c:118:1: warning: ‘SHA512_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  118 | WRAP_FINAL(SHA512, SHA512_CTX)
+      | ^~~~~~~~~~
+/usr/include/openssl/sha.h:127:27: note: declared here
+  127 | OSSL_DEPRECATEDIN_3_0 int SHA512_Final(unsigned char *md, SHA512_CTX *c);
+      |                           ^~~~~~~~~~~~
+plug_openssl.c: In function ‘wrapRIPEMD160_Final’:
+plug_openssl.c:121:1: warning: ‘RIPEMD160_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  121 | WRAP_FINAL(RIPEMD160, RIPEMD160_CTX)
+      | ^~~~~~~~~~
+In file included from plug_openssl.c:46:
+/usr/include/openssl/ripemd.h:48:27: note: declared here
+   48 | OSSL_DEPRECATEDIN_3_0 int RIPEMD160_Final(unsigned char *md, RIPEMD160_CTX *c);
+      |                           ^~~~~~~~~~~~~~~
+plug_openssl.c: In function ‘wrapWHIRLPOOL_Final’:
+plug_openssl.c:129:9: warning: ‘WHIRLPOOL_Final’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  129 |         CALL_FINAL(WHIRLPOOL, NULL, ctx);
+      |         ^~~~~~~~~~
+In file included from plug_openssl.c:53:
+/usr/include/openssl/whrlpool.h:52:27: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 int WHIRLPOOL_Final(unsigned char *md, WHIRLPOOL_CTX *c);
+      |                           ^~~~~~~~~~~~~~~
+plug_openssl.c: At top level:
+plug_openssl.c:142:9: warning: ‘MD4_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  142 |         { &amp;info_md4, sizeof(MD4_CTX), offsetof(MD4_CTX, A), HASH_INFO_METHODS(MD4) }, /* 128 bit */
+      |         ^
+/usr/include/openssl/md4.h:50:27: note: declared here
+   50 | OSSL_DEPRECATEDIN_3_0 int MD4_Init(MD4_CTX *c);
+      |                           ^~~~~~~~
+plug_openssl.c:142:9: warning: ‘MD4_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  142 |         { &amp;info_md4, sizeof(MD4_CTX), offsetof(MD4_CTX, A), HASH_INFO_METHODS(MD4) }, /* 128 bit */
+      |         ^
+/usr/include/openssl/md4.h:51:27: note: declared here
+   51 | OSSL_DEPRECATEDIN_3_0 int MD4_Update(MD4_CTX *c, const void *data, size_t len);
+      |                           ^~~~~~~~~~
+plug_openssl.c:147:9: warning: ‘MD5_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  147 |         { &amp;info_md5, sizeof(MD5_CTX), offsetof(MD5_CTX, A), HASH_INFO_METHODS(MD5) }, /* 128 bit */
+      |         ^
+/usr/include/openssl/md5.h:49:27: note: declared here
+   49 | OSSL_DEPRECATEDIN_3_0 int MD5_Init(MD5_CTX *c);
+      |                           ^~~~~~~~
+plug_openssl.c:147:9: warning: ‘MD5_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  147 |         { &amp;info_md5, sizeof(MD5_CTX), offsetof(MD5_CTX, A), HASH_INFO_METHODS(MD5) }, /* 128 bit */
+      |         ^
+/usr/include/openssl/md5.h:50:27: note: declared here
+   50 | OSSL_DEPRECATEDIN_3_0 int MD5_Update(MD5_CTX *c, const void *data, size_t len);
+      |                           ^~~~~~~~~~
+plug_openssl.c:152:9: warning: ‘SHA1_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  152 |         { &amp;info_sha1, sizeof(SHA_CTX), offsetof(SHA_CTX, h0),  HASH_INFO_METHODS(SHA1) }, /* 160 bit */
+      |         ^
+/usr/include/openssl/sha.h:49:27: note: declared here
+   49 | OSSL_DEPRECATEDIN_3_0 int SHA1_Init(SHA_CTX *c);
+      |                           ^~~~~~~~~
+plug_openssl.c:152:9: warning: ‘SHA1_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  152 |         { &amp;info_sha1, sizeof(SHA_CTX), offsetof(SHA_CTX, h0),  HASH_INFO_METHODS(SHA1) }, /* 160 bit */
+      |         ^
+/usr/include/openssl/sha.h:50:27: note: declared here
+   50 | OSSL_DEPRECATEDIN_3_0 int SHA1_Update(SHA_CTX *c, const void *data, size_t len);
+      |                           ^~~~~~~~~~~
+plug_openssl.c:153:9: warning: ‘SHA224_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  153 |         { &amp;info_sha224, sizeof(SHA256_CTX), offsetof(SHA256_CTX, h), HASH_INFO_METHODS(SHA224) }, /* 224 bit */
+      |         ^
+/usr/include/openssl/sha.h:69:27: note: declared here
+   69 | OSSL_DEPRECATEDIN_3_0 int SHA224_Init(SHA256_CTX *c);
+      |                           ^~~~~~~~~~~
+plug_openssl.c:153:9: warning: ‘SHA224_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  153 |         { &amp;info_sha224, sizeof(SHA256_CTX), offsetof(SHA256_CTX, h), HASH_INFO_METHODS(SHA224) }, /* 224 bit */
+      |         ^
+/usr/include/openssl/sha.h:70:27: note: declared here
+   70 | OSSL_DEPRECATEDIN_3_0 int SHA224_Update(SHA256_CTX *c,
+      |                           ^~~~~~~~~~~~~
+plug_openssl.c:154:9: warning: ‘SHA256_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  154 |         { &amp;info_sha256, sizeof(SHA256_CTX), offsetof(SHA256_CTX, h), HASH_INFO_METHODS(SHA256) }, /* 256 bit */
+      |         ^
+/usr/include/openssl/sha.h:73:27: note: declared here
+   73 | OSSL_DEPRECATEDIN_3_0 int SHA256_Init(SHA256_CTX *c);
+      |                           ^~~~~~~~~~~
+plug_openssl.c:154:9: warning: ‘SHA256_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  154 |         { &amp;info_sha256, sizeof(SHA256_CTX), offsetof(SHA256_CTX, h), HASH_INFO_METHODS(SHA256) }, /* 256 bit */
+      |         ^
+/usr/include/openssl/sha.h:74:27: note: declared here
+   74 | OSSL_DEPRECATEDIN_3_0 int SHA256_Update(SHA256_CTX *c,
+      |                           ^~~~~~~~~~~~~
+plug_openssl.c:155:9: warning: ‘SHA384_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  155 |         { &amp;info_sha384, sizeof(SHA512_CTX), offsetof(SHA512_CTX, h), HASH_INFO_METHODS(SHA384) }, /* 384 bit */
+      |         ^
+/usr/include/openssl/sha.h:120:27: note: declared here
+  120 | OSSL_DEPRECATEDIN_3_0 int SHA384_Init(SHA512_CTX *c);
+      |                           ^~~~~~~~~~~
+plug_openssl.c:155:9: warning: ‘SHA384_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  155 |         { &amp;info_sha384, sizeof(SHA512_CTX), offsetof(SHA512_CTX, h), HASH_INFO_METHODS(SHA384) }, /* 384 bit */
+      |         ^
+/usr/include/openssl/sha.h:121:27: note: declared here
+  121 | OSSL_DEPRECATEDIN_3_0 int SHA384_Update(SHA512_CTX *c,
+      |                           ^~~~~~~~~~~~~
+plug_openssl.c:156:9: warning: ‘SHA512_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  156 |         { &amp;info_sha512, sizeof(SHA512_CTX), offsetof(SHA512_CTX, h), HASH_INFO_METHODS(SHA512) }, /* 512 bit */
+      |         ^
+/usr/include/openssl/sha.h:124:27: note: declared here
+  124 | OSSL_DEPRECATEDIN_3_0 int SHA512_Init(SHA512_CTX *c);
+      |                           ^~~~~~~~~~~
+plug_openssl.c:156:9: warning: ‘SHA512_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  156 |         { &amp;info_sha512, sizeof(SHA512_CTX), offsetof(SHA512_CTX, h), HASH_INFO_METHODS(SHA512) }, /* 512 bit */
+      |         ^
+/usr/include/openssl/sha.h:125:27: note: declared here
+  125 | OSSL_DEPRECATEDIN_3_0 int SHA512_Update(SHA512_CTX *c,
+      |                           ^~~~~~~~~~~~~
+plug_openssl.c:161:9: warning: ‘RIPEMD160_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  161 |         { &amp;info_rmd160, sizeof(RIPEMD160_CTX), offsetof(RIPEMD160_CTX, A), HASH_INFO_METHODS(RIPEMD160) }, /* 160 bit */
+      |         ^
+/usr/include/openssl/ripemd.h:45:27: note: declared here
+   45 | OSSL_DEPRECATEDIN_3_0 int RIPEMD160_Init(RIPEMD160_CTX *c);
+      |                           ^~~~~~~~~~~~~~
+plug_openssl.c:161:9: warning: ‘RIPEMD160_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  161 |         { &amp;info_rmd160, sizeof(RIPEMD160_CTX), offsetof(RIPEMD160_CTX, A), HASH_INFO_METHODS(RIPEMD160) }, /* 160 bit */
+      |         ^
+/usr/include/openssl/ripemd.h:46:27: note: declared here
+   46 | OSSL_DEPRECATEDIN_3_0 int RIPEMD160_Update(RIPEMD160_CTX *c, const void *data,
+      |                           ^~~~~~~~~~~~~~~~
+plug_openssl.c:166:9: warning: ‘WHIRLPOOL_Init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  166 |         { &amp;info_ossl_whirlpool, sizeof(WHIRLPOOL_CTX), offsetof(WHIRLPOOL_CTX, H.c), HASH_INFO_METHODS(WHIRLPOOL) }, /* 512 bit */
+      |         ^
+/usr/include/openssl/whrlpool.h:47:27: note: declared here
+   47 | OSSL_DEPRECATEDIN_3_0 int WHIRLPOOL_Init(WHIRLPOOL_CTX *c);
+      |                           ^~~~~~~~~~~~~~
+plug_openssl.c:166:9: warning: ‘WHIRLPOOL_Update’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  166 |         { &amp;info_ossl_whirlpool, sizeof(WHIRLPOOL_CTX), offsetof(WHIRLPOOL_CTX, H.c), HASH_INFO_METHODS(WHIRLPOOL) }, /* 512 bit */
+      |         ^
+/usr/include/openssl/whrlpool.h:48:27: note: declared here
+   48 | OSSL_DEPRECATEDIN_3_0 int WHIRLPOOL_Update(WHIRLPOOL_CTX *c,
+      |                           ^~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+for f in po/ca.po po/de.po po/en_AU.po po/es.po po/fr.po po/gl.po po/it.po po/pt_BR.po po/ro.po po/ru.po po/uk.po; do \
+	g=`basename $f .po`; \
+	msgfmt -o po/$g.gmo $f; \
+done
+touch po/compile-gmo.tag
+x86_64-pc-linux-gnu-gcc calc_sums.o hash_print.o common_func.o hash_update.o file.o file_mask.o file_set.o find_file.o hash_check.o output.o parse_cmdline.o rhash_main.o win_utils.o librhash/librhash.so.1.4.5  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--undefined-version -o rhash
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: app-crypt/rhash-1.4.5
+
+&gt;&gt;&gt; Install app-crypt/rhash-1.4.5 into /var/tmp/portage/app-crypt/rhash-1.4.5/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+make -j2 DESTDIR=/var/tmp/portage/app-crypt/rhash-1.4.5/image -j1 install install-lib-headers install-pkg-config install-gmo install-lib-so-link 
+make install-binary
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64'
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/bin
+install -m 755 rhash /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/bin/rhash
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64'
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/share/man/man1
+install -m 644 dist/rhash.1 /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/share/man/man1/rhash.1
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/etc
+tr -d \\r &lt; dist/rhashrc.sample &gt; rc.tmp &amp;&amp; install -m 644 rc.tmp /var/tmp/portage/app-crypt/rhash-1.4.5/image/etc/rhashrc
+rm -f rc.tmp
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/bin
+install -m 755 rhash /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/bin/rhash
+cd /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/bin &amp;&amp; for f in sfv-hash has160-hash gost12-256-hash gost12-512-hash edonr256-hash edonr512-hash tiger-hash tth-hash whirlpool-hash ed2k-link magnet-link; do ln -sf rhash $f; done
+cd /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/share/man/man1 &amp;&amp; for f in sfv-hash has160-hash gost12-256-hash gost12-512-hash edonr256-hash edonr512-hash tiger-hash tth-hash whirlpool-hash ed2k-link magnet-link; do ln -sf rhash.1 $f.1; done
+cd librhash &amp;&amp; make install-lib-shared
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64
+install -m 755 librhash.so.1.4.5 /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64/
+test "xlibrhash.so.1" = "xlibrhash.so.1.4.5" || ( \
+  rm -f /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64/librhash.so.1 &amp;&amp; \
+  ln -s librhash.so.1.4.5 /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64/librhash.so.1 )
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+cd librhash &amp;&amp; make install-lib-headers
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/include
+install -m 644 rhash.h rhash_torrent.h /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/include/
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64/pkgconfig
+install -m 644 dist/librhash.pc /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64/pkgconfig/
+for f in po/ca.po po/de.po po/en_AU.po po/es.po po/fr.po po/gl.po po/it.po po/pt_BR.po po/ro.po po/ru.po po/uk.po; do \
+	l=`basename $f .po`; \
+	install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/share/locale/$l/LC_MESSAGES; \
+	install -m 644 po/$l.gmo /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/share/locale/$l/LC_MESSAGES/rhash.mo; \
+done
+cd librhash &amp;&amp; make install-so-link
+make[1]: Entering directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+install -d /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64
+rm -f /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64/librhash.so
+ln -s librhash.so.1 /var/tmp/portage/app-crypt/rhash-1.4.5/image/usr/lib64/librhash.so
+make[1]: Leaving directory '/var/tmp/portage/app-crypt/rhash-1.4.5/work/RHash-1.4.5-abi_x86_64.amd64/librhash'
+&gt;&gt;&gt; Completed installing app-crypt/rhash-1.4.5 into /var/tmp/portage/app-crypt/rhash-1.4.5/image
+
+ <span class="ansi32">*</span> Final size of build directory: 5072 KiB (4.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   676 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/rhash
+   /usr/lib64/librhash.so.1.4.5
+
+</pre>
+</body>
+
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-fs/cryptsetup-2.8.1:0/12
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: base-system@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 argon2 elibc_glibc kernel_linux nls openssl udev
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.12.41-gentoo-x86_64
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking cryptsetup-2.8.1.tar.xz to /var/tmp/portage/sys-fs/cryptsetup-2.8.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-fs/cryptsetup-2.8.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1 ...
+ * econf: updating cryptsetup-2.8.1/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating cryptsetup-2.8.1/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/cryptsetup-2.8.1 --htmldir=/usr/share/doc/cryptsetup-2.8.1/html --with-sysroot=/ --libdir=/usr/lib64 --disable-internal-argon2 --disable-asciidoc --enable-shared --sbindir=/sbin --with-default-luks-format=LUKS2 --with-tmpfilesdir=/usr/lib/tmpfiles.d --with-crypto_backend=openssl --enable-libargon2 --enable-nls --disable-pwquality --disable-passwdqc --enable-external-tokens --disable-static-cryptsetup --disable-static --enable-udev --enable-dev-random --disable-ssh-token --disable-fips
+checking whether make supports nested variables... yes
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking xargs -n works... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for x86_64-pc-linux-gnu-gcc... (cached) x86_64-pc-linux-gnu-gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... (cached) none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... (cached) yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... (cached) none
+checking how to run the C preprocessor... x86_64-pc-linux-gnu-gcc -E
+checking for x86_64-pc-linux-gnu-g++... x86_64-pc-linux-gnu-g++
+checking whether the compiler supports GNU C++... yes
+checking whether x86_64-pc-linux-gnu-g++ accepts -g... yes
+checking for x86_64-pc-linux-gnu-g++ option to enable C++11 features... none needed
+checking dependency style of x86_64-pc-linux-gnu-g++... none
+checking whether make sets $(MAKE)... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking how to run the C++ preprocessor... x86_64-pc-linux-gnu-g++ -E
+checking for ld used by x86_64-pc-linux-gnu-g++... /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the x86_64-pc-linux-gnu-g++ linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for x86_64-pc-linux-gnu-g++ option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-g++ PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-g++ static flag -static works... yes
+checking if x86_64-pc-linux-gnu-g++ supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-g++ supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-g++ linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for asciidoctor... no
+configure: re-use already generated man-pages.
+checking for C/C++ restrict keyword... __restrict__
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for fcntl.h... yes
+checking for malloc.h... yes
+checking for inttypes.h... (cached) yes
+checking for uchar.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/mman.h... yes
+checking for sys/sysmacros.h... yes
+checking for sys/statvfs.h... yes
+checking for ctype.h... yes
+checking for unistd.h... (cached) yes
+checking for locale.h... yes
+checking for byteswap.h... yes
+checking for endian.h... yes
+checking for stdint.h... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether O_CLOEXEC is declared... yes
+checking for uuid/uuid.h... yes
+checking for libdevmapper.h... yes
+checking for linux/keyctl.h... yes
+checking whether __NR_add_key is declared... yes
+checking whether __NR_keyctl is declared... yes
+checking whether __NR_request_key is declared... yes
+checking for key_serial_t... no
+checking for uuid_clear in -luuid... yes
+checking for library containing clock_gettime... none required
+checking for posix_memalign... yes
+checking for clock_gettime... yes
+checking for posix_fallocate... yes
+checking for explicit_bzero... yes
+checking whether byte ordering is bigendian... no
+checking for off_t... yes
+checking for  option for large files... none needed
+checking for declarations of fseeko and ftello... yes
+checking whether strerror_r is declared... yes
+checking whether strerror_r returns char *... yes
+checking for library containing dlsym... none required
+checking for dlvsym... yes
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/gmsgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for egrep -e... (cached) /bin/grep -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for poptConfigFileToString in -lpopt... yes
+checking for devmapper &gt;= 1.02.03... yes
+checking whether dm_task_secure_data is declared... yes
+checking whether dm_task_retry_remove is declared... yes
+checking whether dm_task_deferred_remove is declared... yes
+checking whether dm_device_has_mounted_fs is declared... yes
+checking whether dm_device_has_holders is declared... yes
+checking whether dm_device_get_name is declared... yes
+checking whether DM_DEVICE_GET_TARGET_VERSION is declared... yes
+checking whether DM_UDEV_DISABLE_DISK_RULES_FLAG is declared... yes
+checking for json-c... yes
+checking whether json_object_object_add_ex is declared... yes
+checking whether json_object_deep_copy is declared... yes
+checking for linux/if_alg.h... yes
+checking for libcrypto &gt;= 0.9.8... yes
+checking whether OSSL_get_max_threads is declared... yes
+checking whether OSSL_KDF_PARAM_ARGON2_VERSION is declared... yes
+configure: Argon2 in openssl lib is used; internal Argon2 options are ignored.
+checking for blkid... yes
+checking for blkid/blkid.h... yes
+checking whether blkid_do_wipe is declared... yes
+checking whether blkid_probe_step_back is declared... yes
+checking whether blkid_reset_probe is declared... yes
+checking whether blkid_probe_set_device is declared... yes
+checking whether blkid_probe_filter_superblocks_type is declared... yes
+checking whether blkid_do_safeprobe is declared... yes
+checking whether blkid_do_probe is declared... yes
+checking whether blkid_probe_lookup_value is declared... yes
+checking whether OPAL_FL_SUM_SUPPORTED is declared... yes
+checking whether IOC_OPAL_GET_LR_STATUS is declared... yes
+checking whether IOC_OPAL_GET_GEOMETRY is declared... yes
+checking for symver attribute support... yes
+checking for systemd tmpfiles config directory... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/libcryptsetup.pc
+config.status: creating po/Makefile.in
+config.status: creating scripts/cryptsetup.conf
+config.status: creating tests/Makefile
+config.status: creating tests/fuzz/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1 ...
+make -j2 
+make  all-recursive
+Making all in po
+make[2]: Nothing to be done for 'all'.
+Making all in tests
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1/tests'
+./generate-symbols-list ../lib/libcryptsetup.sym &gt; ./test-symbols-list.h
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1/tests'
+make  all-am
+make[3]: Nothing to be done for 'all-am'.
+Making all in tests/fuzz
+make[2]: Nothing to be done for 'all'.
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils.lo `test -f 'lib/utils.c' || echo './'`lib/utils.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-setup.lo `test -f 'lib/setup.c' || echo './'`lib/setup.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/setup.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-setup.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_benchmark.lo `test -f 'lib/utils_benchmark.c' || echo './'`lib/utils_benchmark.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_benchmark.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_benchmark.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_crypt.lo `test -f 'lib/utils_crypt.c' || echo './'`lib/utils_crypt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_crypt.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_crypt.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_loop.lo `test -f 'lib/utils_loop.c' || echo './'`lib/utils_loop.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_loop.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_loop.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_devpath.lo `test -f 'lib/utils_devpath.c' || echo './'`lib/utils_devpath.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_devpath.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_devpath.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_wipe.lo `test -f 'lib/utils_wipe.c' || echo './'`lib/utils_wipe.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_wipe.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_wipe.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_device.lo `test -f 'lib/utils_device.c' || echo './'`lib/utils_device.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_device.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_device.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_keyring.lo `test -f 'lib/utils_keyring.c' || echo './'`lib/utils_keyring.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_keyring.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_keyring.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_device_locking.lo `test -f 'lib/utils_device_locking.c' || echo './'`lib/utils_device_locking.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_device_locking.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_device_locking.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_pbkdf.lo `test -f 'lib/utils_pbkdf.c' || echo './'`lib/utils_pbkdf.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_pbkdf.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_pbkdf.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_safe_memory.lo `test -f 'lib/utils_safe_memory.c' || echo './'`lib/utils_safe_memory.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_safe_memory.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_safe_memory.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_storage_wrappers.lo `test -f 'lib/utils_storage_wrappers.c' || echo './'`lib/utils_storage_wrappers.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_storage_wrappers.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_storage_wrappers.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-volumekey.lo `test -f 'lib/volumekey.c' || echo './'`lib/volumekey.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/volumekey.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-volumekey.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-libdevmapper.lo `test -f 'lib/libdevmapper.c' || echo './'`lib/libdevmapper.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/libdevmapper.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-libdevmapper.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-random.lo `test -f 'lib/random.c' || echo './'`lib/random.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/random.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-random.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-crypt_plain.lo `test -f 'lib/crypt_plain.c' || echo './'`lib/crypt_plain.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypt_plain.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-crypt_plain.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-keyslot_context.lo `test -f 'lib/keyslot_context.c' || echo './'`lib/keyslot_context.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/keyslot_context.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-keyslot_context.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libcryptsetup_la-utils_blkid.lo `test -f 'lib/utils_blkid.c' || echo './'`lib/utils_blkid.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_blkid.c  -fPIC -DPIC -o lib/.libs/libcryptsetup_la-utils_blkid.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/libutils_io_la-utils_io.lo `test -f 'lib/utils_io.c' || echo './'`lib/utils_io.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/utils_io.c  -fPIC -DPIC -o lib/.libs/libutils_io_la-utils_io.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/veritysetup.o src/veritysetup.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/integritysetup.o src/integritysetup.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/utils_crypt.o lib/utils_crypt.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/utils_loop.o lib/utils_loop.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/utils_io.o lib/utils_io.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/utils_blkid.o lib/utils_blkid.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_args.o src/utils_args.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_tools.o src/utils_tools.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_password.o src/utils_password.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_luks.o src/utils_luks.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_blockdev.o src/utils_blockdev.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_reencrypt.o src/utils_reencrypt.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_reencrypt_luks1.o src/utils_reencrypt_luks1.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_progress.o src/utils_progress.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_key_description.o src/utils_key_description.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/utils_keyslot_check.o src/utils_keyslot_check.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/integrity/libcryptsetup_la-integrity.lo `test -f 'lib/integrity/integrity.c' || echo './'`lib/integrity/integrity.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/integrity/integrity.c  -fPIC -DPIC -o lib/integrity/.libs/libcryptsetup_la-integrity.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o src/cryptsetup.o src/cryptsetup.c
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/loopaes/libcryptsetup_la-loopaes.lo `test -f 'lib/loopaes/loopaes.c' || echo './'`lib/loopaes/loopaes.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/loopaes/loopaes.c  -fPIC -DPIC -o lib/loopaes/.libs/libcryptsetup_la-loopaes.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/tcrypt/libcryptsetup_la-tcrypt.lo `test -f 'lib/tcrypt/tcrypt.c' || echo './'`lib/tcrypt/tcrypt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/tcrypt/tcrypt.c  -fPIC -DPIC -o lib/tcrypt/.libs/libcryptsetup_la-tcrypt.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks1/libcryptsetup_la-af.lo `test -f 'lib/luks1/af.c' || echo './'`lib/luks1/af.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks1/af.c  -fPIC -DPIC -o lib/luks1/.libs/libcryptsetup_la-af.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks1/libcryptsetup_la-keyencryption.lo `test -f 'lib/luks1/keyencryption.c' || echo './'`lib/luks1/keyencryption.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks1/keyencryption.c  -fPIC -DPIC -o lib/luks1/.libs/libcryptsetup_la-keyencryption.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks1/libcryptsetup_la-keymanage.lo `test -f 'lib/luks1/keymanage.c' || echo './'`lib/luks1/keymanage.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks1/keymanage.c  -fPIC -DPIC -o lib/luks1/.libs/libcryptsetup_la-keymanage.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/verity/libcryptsetup_la-verity_hash.lo `test -f 'lib/verity/verity_hash.c' || echo './'`lib/verity/verity_hash.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/verity/verity_hash.c  -fPIC -DPIC -o lib/verity/.libs/libcryptsetup_la-verity_hash.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/verity/libcryptsetup_la-verity_fec.lo `test -f 'lib/verity/verity_fec.c' || echo './'`lib/verity/verity_fec.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/verity/verity_fec.c  -fPIC -DPIC -o lib/verity/.libs/libcryptsetup_la-verity_fec.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/verity/libcryptsetup_la-verity.lo `test -f 'lib/verity/verity.c' || echo './'`lib/verity/verity.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/verity/verity.c  -fPIC -DPIC -o lib/verity/.libs/libcryptsetup_la-verity.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/verity/libcryptsetup_la-rs_encode_char.lo `test -f 'lib/verity/rs_encode_char.c' || echo './'`lib/verity/rs_encode_char.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/verity/rs_encode_char.c  -fPIC -DPIC -o lib/verity/.libs/libcryptsetup_la-rs_encode_char.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/verity/libcryptsetup_la-rs_decode_char.lo `test -f 'lib/verity/rs_decode_char.c' || echo './'`lib/verity/rs_decode_char.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/verity/rs_decode_char.c  -fPIC -DPIC -o lib/verity/.libs/libcryptsetup_la-rs_decode_char.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_disk_metadata.lo `test -f 'lib/luks2/luks2_disk_metadata.c' || echo './'`lib/luks2/luks2_disk_metadata.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_disk_metadata.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_disk_metadata.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_json_format.lo `test -f 'lib/luks2/luks2_json_format.c' || echo './'`lib/luks2/luks2_json_format.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_json_format.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_json_format.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_json_metadata.lo `test -f 'lib/luks2/luks2_json_metadata.c' || echo './'`lib/luks2/luks2_json_metadata.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_json_metadata.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_json_metadata.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_luks1_convert.lo `test -f 'lib/luks2/luks2_luks1_convert.c' || echo './'`lib/luks2/luks2_luks1_convert.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_luks1_convert.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_luks1_convert.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_digest.lo `test -f 'lib/luks2/luks2_digest.c' || echo './'`lib/luks2/luks2_digest.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_digest.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_digest.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_digest_pbkdf2.lo `test -f 'lib/luks2/luks2_digest_pbkdf2.c' || echo './'`lib/luks2/luks2_digest_pbkdf2.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_digest_pbkdf2.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_digest_pbkdf2.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_keyslot.lo `test -f 'lib/luks2/luks2_keyslot.c' || echo './'`lib/luks2/luks2_keyslot.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_keyslot.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_keyslot.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_keyslot_luks2.lo `test -f 'lib/luks2/luks2_keyslot_luks2.c' || echo './'`lib/luks2/luks2_keyslot_luks2.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_keyslot_luks2.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_keyslot_luks2.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_keyslot_reenc.lo `test -f 'lib/luks2/luks2_keyslot_reenc.c' || echo './'`lib/luks2/luks2_keyslot_reenc.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_keyslot_reenc.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_keyslot_reenc.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_reencrypt_digest.lo `test -f 'lib/luks2/luks2_reencrypt_digest.c' || echo './'`lib/luks2/luks2_reencrypt_digest.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_reencrypt_digest.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_reencrypt_digest.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_reencrypt.lo `test -f 'lib/luks2/luks2_reencrypt.c' || echo './'`lib/luks2/luks2_reencrypt.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_reencrypt.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_reencrypt.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_segment.lo `test -f 'lib/luks2/luks2_segment.c' || echo './'`lib/luks2/luks2_segment.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_segment.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_segment.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_token_keyring.lo `test -f 'lib/luks2/luks2_token_keyring.c' || echo './'`lib/luks2/luks2_token_keyring.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_token_keyring.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_token_keyring.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/libcryptsetup_la-luks2_token.lo `test -f 'lib/luks2/luks2_token.c' || echo './'`lib/luks2/luks2_token.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/luks2_token.c  -fPIC -DPIC -o lib/luks2/.libs/libcryptsetup_la-luks2_token.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/luks2/hw_opal/libcryptsetup_la-hw_opal.lo `test -f 'lib/luks2/hw_opal/hw_opal.c' || echo './'`lib/luks2/hw_opal/hw_opal.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/luks2/hw_opal/hw_opal.c  -fPIC -DPIC -o lib/luks2/hw_opal/.libs/libcryptsetup_la-hw_opal.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/bitlk/libcryptsetup_la-bitlk.lo `test -f 'lib/bitlk/bitlk.c' || echo './'`lib/bitlk/bitlk.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/bitlk/bitlk.c  -fPIC -DPIC -o lib/bitlk/.libs/libcryptsetup_la-bitlk.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/fvault2/libcryptsetup_la-fvault2.lo `test -f 'lib/fvault2/fvault2.c' || echo './'`lib/fvault2/fvault2.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/fvault2/fvault2.c  -fPIC -DPIC -o lib/fvault2/.libs/libcryptsetup_la-fvault2.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libutils_io.la  lib/libutils_io_la-utils_io.lo  
+libtool: link: x86_64-pc-linux-gnu-ar cr .libs/libutils_io.a lib/.libs/libutils_io_la-utils_io.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib .libs/libutils_io.a
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libutils_io.la" &amp;&amp; ln -s "../libutils_io.la" "libutils_io.la" )
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-crypto_cipher_kernel.lo `test -f 'lib/crypto_backend/crypto_cipher_kernel.c' || echo './'`lib/crypto_backend/crypto_cipher_kernel.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/crypto_cipher_kernel.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-crypto_cipher_kernel.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-crypto_storage.lo `test -f 'lib/crypto_backend/crypto_storage.c' || echo './'`lib/crypto_backend/crypto_storage.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/crypto_storage.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-crypto_storage.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-pbkdf_check.lo `test -f 'lib/crypto_backend/pbkdf_check.c' || echo './'`lib/crypto_backend/pbkdf_check.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/pbkdf_check.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-pbkdf_check.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-crc32.lo `test -f 'lib/crypto_backend/crc32.c' || echo './'`lib/crypto_backend/crc32.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/crc32.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-crc32.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-base64.lo `test -f 'lib/crypto_backend/base64.c' || echo './'`lib/crypto_backend/base64.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/base64.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-base64.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-utf8.lo `test -f 'lib/crypto_backend/utf8.c' || echo './'`lib/crypto_backend/utf8.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/utf8.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-utf8.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-argon2_generic.lo `test -f 'lib/crypto_backend/argon2_generic.c' || echo './'`lib/crypto_backend/argon2_generic.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/argon2_generic.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-argon2_generic.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-cipher_generic.lo `test -f 'lib/crypto_backend/cipher_generic.c' || echo './'`lib/crypto_backend/cipher_generic.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/cipher_generic.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-cipher_generic.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-cipher_check.lo `test -f 'lib/crypto_backend/cipher_check.c' || echo './'`lib/crypto_backend/cipher_check.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/cipher_check.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-cipher_check.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-memutils.lo `test -f 'lib/crypto_backend/memutils.c' || echo './'`lib/crypto_backend/memutils.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/memutils.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-memutils.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=compile x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.  -include config.h -I./lib -DDATADIR=\""/usr/share"\" -DLOCALEDIR=\""/usr/share/locale"\" -DLIBDIR=\""/usr/lib64"\" -DPREFIX=\""/usr"\" -DSYSCONFDIR=\""/etc"\" -DVERSION=\""2.8.1"\"  -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o lib/crypto_backend/libcrypto_backend_la-crypto_openssl.lo `test -f 'lib/crypto_backend/crypto_openssl.c' || echo './'`lib/crypto_backend/crypto_openssl.c
+libtool: compile:  x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -include config.h -I./lib -DDATADIR=\"/usr/share\" -DLOCALEDIR=\"/usr/share/locale\" -DLIBDIR=\"/usr/lib64\" -DPREFIX=\"/usr\" -DSYSCONFDIR=\"/etc\" -DVERSION=\"2.8.1\" -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c lib/crypto_backend/crypto_openssl.c  -fPIC -DPIC -o lib/crypto_backend/.libs/libcrypto_backend_la-crypto_openssl.o
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libcrypto_backend.la  lib/crypto_backend/libcrypto_backend_la-crypto_cipher_kernel.lo lib/crypto_backend/libcrypto_backend_la-crypto_storage.lo lib/crypto_backend/libcrypto_backend_la-pbkdf_check.lo lib/crypto_backend/libcrypto_backend_la-crc32.lo lib/crypto_backend/libcrypto_backend_la-base64.lo lib/crypto_backend/libcrypto_backend_la-utf8.lo lib/crypto_backend/libcrypto_backend_la-argon2_generic.lo lib/crypto_backend/libcrypto_backend_la-cipher_generic.lo lib/crypto_backend/libcrypto_backend_la-cipher_check.lo lib/crypto_backend/libcrypto_backend_la-memutils.lo  lib/crypto_backend/libcrypto_backend_la-crypto_openssl.lo       
+libtool: link: x86_64-pc-linux-gnu-ar cr .libs/libcrypto_backend.a lib/crypto_backend/.libs/libcrypto_backend_la-crypto_cipher_kernel.o lib/crypto_backend/.libs/libcrypto_backend_la-crypto_storage.o lib/crypto_backend/.libs/libcrypto_backend_la-pbkdf_check.o lib/crypto_backend/.libs/libcrypto_backend_la-crc32.o lib/crypto_backend/.libs/libcrypto_backend_la-base64.o lib/crypto_backend/.libs/libcrypto_backend_la-utf8.o lib/crypto_backend/.libs/libcrypto_backend_la-argon2_generic.o lib/crypto_backend/.libs/libcrypto_backend_la-cipher_generic.o lib/crypto_backend/.libs/libcrypto_backend_la-cipher_check.o lib/crypto_backend/.libs/libcrypto_backend_la-memutils.o lib/crypto_backend/.libs/libcrypto_backend_la-crypto_openssl.o 
+libtool: link: x86_64-pc-linux-gnu-ranlib .libs/libcrypto_backend.a
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libcrypto_backend.la" &amp;&amp; ln -s "../libcrypto_backend.la" "libcrypto_backend.la" )
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -no-undefined -Wl,--version-script=./lib/libcryptsetup.sym -version-info 23:0:11 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libcryptsetup.la -rpath /usr/lib64 lib/libcryptsetup_la-setup.lo lib/libcryptsetup_la-utils.lo lib/libcryptsetup_la-utils_benchmark.lo lib/libcryptsetup_la-utils_crypt.lo lib/libcryptsetup_la-utils_loop.lo lib/libcryptsetup_la-utils_devpath.lo lib/libcryptsetup_la-utils_wipe.lo lib/libcryptsetup_la-utils_device.lo lib/libcryptsetup_la-utils_keyring.lo lib/libcryptsetup_la-utils_device_locking.lo lib/libcryptsetup_la-utils_pbkdf.lo lib/libcryptsetup_la-utils_safe_memory.lo lib/libcryptsetup_la-utils_storage_wrappers.lo lib/libcryptsetup_la-libdevmapper.lo lib/libcryptsetup_la-volumekey.lo lib/libcryptsetup_la-random.lo lib/libcryptsetup_la-crypt_plain.lo lib/integrity/libcryptsetup_la-integrity.lo lib/loopaes/libcryptsetup_la-loopaes.lo lib/tcrypt/libcryptsetup_la-tcrypt.lo lib/libcryptsetup_la-keyslot_context.lo lib/luks1/libcryptsetup_la-af.lo lib/luks1/libcryptsetup_la-keyencryption.lo lib/luks1/libcryptsetup_la-keymanage.lo lib/verity/libcryptsetup_la-verity_hash.lo lib/verity/libcryptsetup_la-verity_fec.lo lib/verity/libcryptsetup_la-verity.lo lib/verity/libcryptsetup_la-rs_encode_char.lo lib/verity/libcryptsetup_la-rs_decode_char.lo lib/luks2/libcryptsetup_la-luks2_disk_metadata.lo lib/luks2/libcryptsetup_la-luks2_json_format.lo lib/luks2/libcryptsetup_la-luks2_json_metadata.lo lib/luks2/libcryptsetup_la-luks2_luks1_convert.lo lib/luks2/libcryptsetup_la-luks2_digest.lo lib/luks2/libcryptsetup_la-luks2_digest_pbkdf2.lo lib/luks2/libcryptsetup_la-luks2_keyslot.lo lib/luks2/libcryptsetup_la-luks2_keyslot_luks2.lo lib/luks2/libcryptsetup_la-luks2_keyslot_reenc.lo lib/luks2/libcryptsetup_la-luks2_reencrypt.lo lib/luks2/libcryptsetup_la-luks2_reencrypt_digest.lo lib/luks2/libcryptsetup_la-luks2_segment.lo lib/luks2/libcryptsetup_la-luks2_token_keyring.lo lib/luks2/libcryptsetup_la-luks2_token.lo lib/luks2/hw_opal/libcryptsetup_la-hw_opal.lo lib/libcryptsetup_la-utils_blkid.lo lib/bitlk/libcryptsetup_la-bitlk.lo lib/fvault2/libcryptsetup_la-fvault2.lo -luuid -ldevmapper -lcrypto -ljson-c -lblkid  libcrypto_backend.la libutils_io.la 
+libtool: link: x86_64-pc-linux-gnu-gcc -shared  -fPIC -DPIC  lib/.libs/libcryptsetup_la-setup.o lib/.libs/libcryptsetup_la-utils.o lib/.libs/libcryptsetup_la-utils_benchmark.o lib/.libs/libcryptsetup_la-utils_crypt.o lib/.libs/libcryptsetup_la-utils_loop.o lib/.libs/libcryptsetup_la-utils_devpath.o lib/.libs/libcryptsetup_la-utils_wipe.o lib/.libs/libcryptsetup_la-utils_device.o lib/.libs/libcryptsetup_la-utils_keyring.o lib/.libs/libcryptsetup_la-utils_device_locking.o lib/.libs/libcryptsetup_la-utils_pbkdf.o lib/.libs/libcryptsetup_la-utils_safe_memory.o lib/.libs/libcryptsetup_la-utils_storage_wrappers.o lib/.libs/libcryptsetup_la-libdevmapper.o lib/.libs/libcryptsetup_la-volumekey.o lib/.libs/libcryptsetup_la-random.o lib/.libs/libcryptsetup_la-crypt_plain.o lib/integrity/.libs/libcryptsetup_la-integrity.o lib/loopaes/.libs/libcryptsetup_la-loopaes.o lib/tcrypt/.libs/libcryptsetup_la-tcrypt.o lib/.libs/libcryptsetup_la-keyslot_context.o lib/luks1/.libs/libcryptsetup_la-af.o lib/luks1/.libs/libcryptsetup_la-keyencryption.o lib/luks1/.libs/libcryptsetup_la-keymanage.o lib/verity/.libs/libcryptsetup_la-verity_hash.o lib/verity/.libs/libcryptsetup_la-verity_fec.o lib/verity/.libs/libcryptsetup_la-verity.o lib/verity/.libs/libcryptsetup_la-rs_encode_char.o lib/verity/.libs/libcryptsetup_la-rs_decode_char.o lib/luks2/.libs/libcryptsetup_la-luks2_disk_metadata.o lib/luks2/.libs/libcryptsetup_la-luks2_json_format.o lib/luks2/.libs/libcryptsetup_la-luks2_json_metadata.o lib/luks2/.libs/libcryptsetup_la-luks2_luks1_convert.o lib/luks2/.libs/libcryptsetup_la-luks2_digest.o lib/luks2/.libs/libcryptsetup_la-luks2_digest_pbkdf2.o lib/luks2/.libs/libcryptsetup_la-luks2_keyslot.o lib/luks2/.libs/libcryptsetup_la-luks2_keyslot_luks2.o lib/luks2/.libs/libcryptsetup_la-luks2_keyslot_reenc.o lib/luks2/.libs/libcryptsetup_la-luks2_reencrypt.o lib/luks2/.libs/libcryptsetup_la-luks2_reencrypt_digest.o lib/luks2/.libs/libcryptsetup_la-luks2_segment.o lib/luks2/.libs/libcryptsetup_la-luks2_token_keyring.o lib/luks2/.libs/libcryptsetup_la-luks2_token.o lib/luks2/hw_opal/.libs/libcryptsetup_la-hw_opal.o lib/.libs/libcryptsetup_la-utils_blkid.o lib/bitlk/.libs/libcryptsetup_la-bitlk.o lib/fvault2/.libs/libcryptsetup_la-fvault2.o  -Wl,--whole-archive ./.libs/libcrypto_backend.a ./.libs/libutils_io.a -Wl,--no-whole-archive  -luuid -ldevmapper -lcrypto -ljson-c -lblkid  -O3 -march=native -mtune=native -Wl,--version-script=./lib/libcryptsetup.sym -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libcryptsetup.so.12 -o .libs/libcryptsetup.so.12.11.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libcryptsetup.so.12" &amp;&amp; ln -s "libcryptsetup.so.12.11.0" "libcryptsetup.so.12")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libcryptsetup.so" &amp;&amp; ln -s "libcryptsetup.so.12.11.0" "libcryptsetup.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libcryptsetup.la" &amp;&amp; ln -s "../libcryptsetup.la" "libcryptsetup.la" )
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o cryptsetup lib/utils_crypt.o lib/utils_loop.o lib/utils_io.o lib/utils_blkid.o src/utils_args.o src/utils_tools.o src/utils_password.o src/utils_luks.o src/utils_blockdev.o src/utils_reencrypt.o src/utils_reencrypt_luks1.o src/utils_progress.o src/utils_key_description.o src/utils_keyslot_check.o src/cryptsetup.o  libcryptsetup.la -lpopt -luuid -lblkid 
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/cryptsetup lib/utils_crypt.o lib/utils_loop.o lib/utils_io.o lib/utils_blkid.o src/utils_args.o src/utils_tools.o src/utils_password.o src/utils_luks.o src/utils_blockdev.o src/utils_reencrypt.o src/utils_reencrypt_luks1.o src/utils_progress.o src/utils_key_description.o src/utils_keyslot_check.o src/cryptsetup.o  ./.libs/libcryptsetup.so -lpopt -luuid -lblkid
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o veritysetup lib/utils_crypt.o lib/utils_loop.o lib/utils_io.o lib/utils_blkid.o src/utils_args.o src/utils_tools.o src/veritysetup.o  libcryptsetup.la -lpopt -lblkid 
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/veritysetup lib/utils_crypt.o lib/utils_loop.o lib/utils_io.o lib/utils_blkid.o src/utils_args.o src/utils_tools.o src/veritysetup.o  ./.libs/libcryptsetup.so -lpopt -lblkid
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/sh ./libtool  --tag=CC   --mode=link x86_64-pc-linux-gnu-gcc -Wall  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o integritysetup lib/utils_crypt.o lib/utils_loop.o lib/utils_io.o lib/utils_blkid.o src/utils_args.o src/utils_tools.o src/utils_blockdev.o src/utils_progress.o src/integritysetup.o  libcryptsetup.la -lpopt -luuid -lblkid 
+libtool: link: x86_64-pc-linux-gnu-gcc -Wall -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/integritysetup lib/utils_crypt.o lib/utils_loop.o lib/utils_io.o lib/utils_blkid.o src/utils_args.o src/utils_tools.o src/utils_blockdev.o src/utils_progress.o src/integritysetup.o  ./.libs/libcryptsetup.so -lpopt -luuid -lblkid
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: sys-fs/cryptsetup-2.8.1
+
+&gt;&gt;&gt; Install sys-fs/cryptsetup-2.8.1 into /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image
+make -j2 DESTDIR=/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image install 
+Making install in po
+make[1]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1/po'
+installing cs.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/cs/LC_MESSAGES/cryptsetup.mo
+installing da.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/da/LC_MESSAGES/cryptsetup.mo
+installing de.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/de/LC_MESSAGES/cryptsetup.mo
+installing es.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/es/LC_MESSAGES/cryptsetup.mo
+installing fi.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/fi/LC_MESSAGES/cryptsetup.mo
+installing fr.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/fr/LC_MESSAGES/cryptsetup.mo
+installing id.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/id/LC_MESSAGES/cryptsetup.mo
+installing it.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/it/LC_MESSAGES/cryptsetup.mo
+installing ja.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/ja/LC_MESSAGES/cryptsetup.mo
+installing ka.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/ka/LC_MESSAGES/cryptsetup.mo
+installing nl.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/nl/LC_MESSAGES/cryptsetup.mo
+installing pl.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/pl/LC_MESSAGES/cryptsetup.mo
+installing pt_BR.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/pt_BR/LC_MESSAGES/cryptsetup.mo
+installing ro.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/ro/LC_MESSAGES/cryptsetup.mo
+installing ru.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/ru/LC_MESSAGES/cryptsetup.mo
+installing sk.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/sk/LC_MESSAGES/cryptsetup.mo
+installing sr.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/sr/LC_MESSAGES/cryptsetup.mo
+installing sv.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/sv/LC_MESSAGES/cryptsetup.mo
+installing uk.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/uk/LC_MESSAGES/cryptsetup.mo
+installing vi.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/vi/LC_MESSAGES/cryptsetup.mo
+installing zh_CN.gmo as /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/locale/zh_CN/LC_MESSAGES/cryptsetup.mo
+make[1]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1/po'
+make[1]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1/po'
+if test "cryptsetup" = "gettext-tools"; then \
+  /bin/mkdir -p /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c -m 644 ./$file \
+		    /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1/po'
+Making install in tests
+make  install-am
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+Making install in tests/fuzz
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+ /bin/mkdir -p '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64'
+ /bin/sh ./libtool   --mode=install /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c   libcryptsetup.la '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c .libs/libcryptsetup.so.12.11.0 /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64/libcryptsetup.so.12.11.0
+libtool: install: (cd /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64 &amp;&amp; { ln -s -f libcryptsetup.so.12.11.0 libcryptsetup.so.12 || { rm -f libcryptsetup.so.12 &amp;&amp; ln -s libcryptsetup.so.12.11.0 libcryptsetup.so.12; }; })
+libtool: install: (cd /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64 &amp;&amp; { ln -s -f libcryptsetup.so.12.11.0 libcryptsetup.so || { rm -f libcryptsetup.so &amp;&amp; ln -s libcryptsetup.so.12.11.0 libcryptsetup.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c .libs/libcryptsetup.lai /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64/libcryptsetup.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+/bin/mkdir -p -m 0755 /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image//usr/lib64/cryptsetup
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+ /bin/mkdir -p '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/include'
+ /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c -m 644 lib/libcryptsetup.h '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/include'
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+ /bin/mkdir -p '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c -m 644 man/cryptsetup.8 man/cryptsetup-open.8 man/cryptsetup-close.8 man/cryptsetup-reencrypt.8 man/cryptsetup-status.8 man/cryptsetup-resize.8 man/cryptsetup-refresh.8 man/cryptsetup-luksFormat.8 man/cryptsetup-luksSuspend.8 man/cryptsetup-luksResume.8 man/cryptsetup-luksAddKey.8 man/cryptsetup-luksRemoveKey.8 man/cryptsetup-luksConvertKey.8 man/cryptsetup-luksKillSlot.8 man/cryptsetup-luksChangeKey.8 man/cryptsetup-erase.8 man/cryptsetup-luksUUID.8 man/cryptsetup-isLuks.8 man/cryptsetup-luksDump.8 man/cryptsetup-luksHeaderBackup.8 man/cryptsetup-luksHeaderRestore.8 man/cryptsetup-token.8 man/cryptsetup-convert.8 man/cryptsetup-config.8 man/cryptsetup-tcryptDump.8 man/cryptsetup-bitlkDump.8 man/cryptsetup-fvault2Dump.8 man/cryptsetup-repair.8 man/cryptsetup-benchmark.8 man/veritysetup.8 man/integritysetup.8 man/cryptsetup-create.8 man/cryptsetup-plainOpen.8 man/cryptsetup-luksOpen.8 man/cryptsetup-loopaesOpen.8 man/cryptsetup-tcryptOpen.8 man/cryptsetup-bitlkOpen.8 man/cryptsetup-fvault2Open.8 man/cryptsetup-luksErase.8 '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/share/man/man8'
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+ /bin/mkdir -p '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64/pkgconfig'
+ /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c -m 644 lib/libcryptsetup.pc '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib64/pkgconfig'
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+ /bin/mkdir -p '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib/tmpfiles.d'
+ /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c -m 644 scripts/cryptsetup.conf '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/usr/lib/tmpfiles.d'
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+make[2]: Entering directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+ /bin/mkdir -p '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/sbin'
+  /bin/sh ./libtool   --mode=install /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c cryptsetup veritysetup integritysetup '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/sbin'
+libtool: warning: 'libcryptsetup.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c .libs/cryptsetup /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/sbin/cryptsetup
+libtool: warning: 'libcryptsetup.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c .libs/veritysetup /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/sbin/veritysetup
+libtool: warning: 'libcryptsetup.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.vy46puw2/bin/ebuild-helpers/xattr/install -c .libs/integritysetup /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image/sbin/integritysetup
+make[2]: Leaving directory '/var/tmp/portage/sys-fs/cryptsetup-2.8.1/work/cryptsetup-2.8.1'
+&gt;&gt;&gt; Completed installing sys-fs/cryptsetup-2.8.1 into /var/tmp/portage/sys-fs/cryptsetup-2.8.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 29104 KiB (28.4 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   4456 KiB ( 4.3 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /sbin/cryptsetup
+   /usr/lib64/libcryptsetup.so.12.11.0
+   /sbin/veritysetup
+   /sbin/integritysetup
+
+</pre>
+</body>
+
+</html>
