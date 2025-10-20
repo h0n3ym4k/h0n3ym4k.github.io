@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/sdl2-ttf-2.24.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: games@gentoo.org
+<span class="ansi32"> * </span>USE:        X abi_x86_64 amd64 elibc_glibc harfbuzz kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking SDL2_ttf-2.24.0.tar.gz to /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build"
+ <span class="ansi33">*</span> QA Notice: Compatibility with CMake &lt; 3.5 has been removed from CMake 4,
+ <span class="ansi33">*</span> media-libs/sdl2-ttf will fail to build w/o a fix.
+ <span class="ansi33">*</span> See also tracker bug #951350; check existing bug or file a new one for
+ <span class="ansi33">*</span> this package, and take it upstream.
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> The following CMakeLists.txt files are causing errors:
+ <span class="ansi33">*</span>   external/freetype/CMakeLists.txt:3.0
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> Compatibility with CMake &lt; 3.10 will be removed in a future release.
+ <span class="ansi33">*</span> If not fixed in upstream's code repository, we should make sure they are aware.
+ <span class="ansi33">*</span> See also tracker bug #964405; check existing or file a new bug for this package.
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> CMake 4 detected; building with -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+ <span class="ansi33">*</span> This is merely a workaround to avoid CMake Error and *not* a permanent fix;
+ <span class="ansi33">*</span> there may be new build or runtime bugs as a result.
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> An upstreamable patch should take any resulting CMake policy changes
+ <span class="ansi33">*</span> into account. See also:
+ <span class="ansi33">*</span>   https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64"
+cmake -C /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DSDL2TTF_VENDORED=OFF -DSDL2TTF_HARFBUZZ=yes -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64/gentoo_toolchain.cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0
+loading initial cache file /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64/gentoo_common_config.cmake
+-- The C compiler identification is GNU 14.3.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring SDL2_ttf 2.24.0
+-- Looking for __GLIBC__
+-- Looking for __GLIBC__ - found
+-- Performing Test HAVE_WL_NO_UNDEFINED
+-- Performing Test HAVE_WL_NO_UNDEFINED - Success
+-- SDL2_ttf: Using system harfbuzz library
+-- Found harfbuzz: /usr/lib64/libharfbuzz.so
+-- SDL2_ttf: Using system freetype library
+-- Found Freetype: /usr/lib64/libfreetype.so (found version "2.14.1")
+-- Found OpenGL: /usr/lib64/libOpenGL.so
+-- &lt;&lt;&lt; Gentoo configuration &gt;&gt;&gt;
+Build type      RelWithDebInfo
+Install path    /usr
+Compiler flags:
+C               -O3 -march=native -mtune=native -fomit-frame-pointer -pipe
+C++             
+Linker flags:
+Executable      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Module          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Shared          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+
+-- Configuring done (0.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64"
+ninja -v -j2 -l2
+[1/7] /usr/bin/x86_64-pc-linux-gnu-gcc -DBUILD_SDL -DDLL_EXPORT -DSDL_BUILD_MAJOR_VERSION=2 -DSDL_BUILD_MICRO_VERSION=0 -DSDL_BUILD_MINOR_VERSION=24 -DTTF_USE_HARFBUZZ=1 -I/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0 -isystem /usr/include/SDL2 -isystem /usr/include/harfbuzz -isystem /usr/include/freetype2  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -fvisibility=hidden -MD -MT CMakeFiles/SDL2_ttf.dir/SDL_ttf.c.o -MF CMakeFiles/SDL2_ttf.dir/SDL_ttf.c.o.d -o CMakeFiles/SDL2_ttf.dir/SDL_ttf.c.o -c /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0/SDL_ttf.c
+[2/7] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-gcc -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--no-undefined -Wl,--dependency-file=CMakeFiles/SDL2_ttf.dir/link.d -Wl,-soname,libSDL2_ttf-2.0.so.0 -o libSDL2_ttf-2.0.so.0.2400.0 CMakeFiles/SDL2_ttf.dir/SDL_ttf.c.o  /usr/lib64/libSDL2-2.0.so.0.3200.6  /usr/lib64/libharfbuzz.so  /usr/lib64/libfreetype.so &amp;&amp; :
+[3/7] /usr/bin/cmake -E cmake_symlink_library libSDL2_ttf-2.0.so.0.2400.0  libSDL2_ttf-2.0.so.0 libSDL2_ttf-2.0.so &amp;&amp; cd /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -E create_symlink libSDL2_ttf-2.0.so.0 libSDL2_ttf.so
+[4/7] /usr/bin/x86_64-pc-linux-gnu-gcc -DHAVE_OPENGL -I/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0 -isystem /usr/include/SDL2  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIE -MD -MT CMakeFiles/glfont.dir/glfont.c.o -MF CMakeFiles/glfont.dir/glfont.c.o.d -o CMakeFiles/glfont.dir/glfont.c.o -c /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0/glfont.c
+[5/7] /usr/bin/x86_64-pc-linux-gnu-gcc  -I/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0 -isystem /usr/include/SDL2  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIE -MD -MT CMakeFiles/showfont.dir/showfont.c.o -MF CMakeFiles/showfont.dir/showfont.c.o.d -o CMakeFiles/showfont.dir/showfont.c.o -c /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0/showfont.c
+[6/7] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--dependency-file=CMakeFiles/glfont.dir/link.d CMakeFiles/glfont.dir/glfont.c.o -o glfont  -Wl,-rpath,/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64  /usr/lib64/libOpenGL.so  libSDL2_ttf-2.0.so.0.2400.0  /usr/lib64/libSDL2main.a  /usr/lib64/libSDL2-2.0.so.0.3200.6 &amp;&amp; :
+[7/7] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--dependency-file=CMakeFiles/showfont.dir/link.d CMakeFiles/showfont.dir/showfont.c.o -o showfont  -Wl,-rpath,/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64  libSDL2_ttf-2.0.so.0.2400.0  /usr/lib64/libSDL2main.a  /usr/lib64/libSDL2-2.0.so.0.3200.6 &amp;&amp; :
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: media-libs/sdl2-ttf-2.24.0
+
+&gt;&gt;&gt; Install media-libs/sdl2-ttf-2.24.0 into /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64"
+ninja -v -j2 -l2 install
+[0/1] cd /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/work/SDL2_ttf-2.24.0_build-abi_x86_64.amd64 &amp;&amp; /usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/libSDL2_ttf-2.0.so.0.2400.0
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/libSDL2_ttf-2.0.so.0
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/libSDL2_ttf-2.0.so
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/include/SDL2/SDL_ttf.h
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/cmake/SDL2_ttf/SDL2_ttfConfig.cmake
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/cmake/SDL2_ttf/SDL2_ttfConfigVersion.cmake
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/cmake/SDL2_ttf/SDL2_ttf-shared-targets.cmake
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/cmake/SDL2_ttf/SDL2_ttf-shared-targets-relwithdebinfo.cmake
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/pkgconfig/SDL2_ttf.pc
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/lib64/libSDL2_ttf.so
+-- Installing: /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image/usr/share/licenses/SDL2_ttf/LICENSE.txt
+&gt;&gt;&gt; Completed installing media-libs/sdl2-ttf-2.24.0 into /var/tmp/portage/media-libs/sdl2-ttf-2.24.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 46876 KiB (45.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:    308 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libSDL2_ttf-2.0.so.0.2400.0
+
+</pre>
+</body>
+
+</html>
