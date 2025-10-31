@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-perl/Crypt-URandom-0.540.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: perl@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'Crypt-URandom-0.54.tar.gz' to /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/work/Crypt-URandom-0.54 ...
+ <span class="ansi32">*</span> Removing un-needed t/pod.t
+ <span class="ansi32">*</span> Fixing Manifest
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/work/Crypt-URandom-0.54 ...
+ <span class="ansi32">*</span> Using ExtUtils::MakeMaker
+ <span class="ansi32">*</span> perl Makefile.PL AR=x86_64-pc-linux-gnu-ar CC=x86_64-pc-linux-gnu-gcc CPP=x86_64-pc-linux-gnu-gcc -E LD=x86_64-pc-linux-gnu-gcc NM=x86_64-pc-linux-gnu-nm RANLIB=x86_64-pc-linux-gnu-ranlib OPTIMIZE=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs PREFIX=/usr INSTALLDIRS=vendor INSTALLMAN3DIR=none
+getrandom from sys/random is AVAILABLE
+Checking if your kit is complete...
+Looks good
+Warning: prerequisite Test::Pod 1.14 not found.
+'CPP' is not a known MakeMaker parameter name.
+'NM' is not a known MakeMaker parameter name.
+Generating a Unix-style Makefile
+Writing Makefile for Crypt::URandom
+Writing MYMETA.yml and MYMETA.json
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/work/Crypt-URandom-0.54 ...
+make -j2 'OTHERLDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs' 'OPTIMIZE=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe' 
+Running Mkbootstrap for URandom ()
+cp lib/Crypt/URandom.pm blib/lib/Crypt/URandom.pm
+chmod 644 "URandom.bs"
+"/usr/bin/perl" "/usr/lib64/perl5/5.40/ExtUtils/xsubpp"  -typemap '/usr/lib64/perl5/5.40/ExtUtils/typemap'  URandom.xs &gt; URandom.xsc
+mv URandom.xsc URandom.c
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- URandom.bs blib/arch/auto/Crypt/URandom/URandom.bs 644
+x86_64-pc-linux-gnu-gcc -c   -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fno-strict-aliasing -DNO_PERL_RAND_SEED -fwrapv -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe   -DVERSION=\"0.54\" -DXS_VERSION=\"0.54\" -fPIC "-I/usr/lib64/perl5/5.40/x86_64-linux/CORE"  -DHAVE_CRYPT_URANDOM_NATIVE_GETRANDOM URandom.c
+rm -f blib/arch/auto/Crypt/URandom/URandom.so
+x86_64-pc-linux-gnu-gcc  -shared -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fno-strict-aliasing -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  URandom.o -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o blib/arch/auto/Crypt/URandom/URandom.so  \
+      \
+  
+chmod 755 blib/arch/auto/Crypt/URandom/URandom.so
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-perl/Crypt-URandom-0.540.0
+
+&gt;&gt;&gt; Install dev-perl/Crypt-URandom-0.540.0 into /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/image
+make -j2 DESTDIR=/var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/image pure_install 
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- URandom.bs blib/arch/auto/Crypt/URandom/URandom.bs 644
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/auto/Crypt/URandom/URandom.so
+Installing /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/image/usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/Crypt/URandom.pm
+ <span class="ansi32">*</span> Fixing installed file permissions
+ <span class="ansi32">*</span> Fixing packlist file //usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/auto/Crypt/URandom/.packlist
+&gt;&gt;&gt; Completed installing dev-perl/Crypt-URandom-0.540.0 into /var/tmp/portage/dev-perl/Crypt-URandom-0.540.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 308 KiB
+ <span class="ansi32">*</span> Final size of installed tree:  112 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/perl5/vendor_perl/5.40/x86_64-linux/auto/Crypt/URandom/URandom.so
+
+</pre>
+</body>
+
+</html>

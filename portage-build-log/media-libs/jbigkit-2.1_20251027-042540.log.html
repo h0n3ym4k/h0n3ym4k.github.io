@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/jbigkit-2.1:0/2.1
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'jbigkit-2.1.tar.gz' to /var/tmp/portage/media-libs/jbigkit-2.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/jbigkit-2.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Will copy sources from /var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1
+ <span class="ansi32">*</span> abi_x86_64.amd64: copying to /var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+make -j2 LIBDIR=/usr/lib64 
+cd libjbig &amp;&amp; make -e
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic  -fPIC -c jbig_ar.c -o jbig_ar.lo
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic  -fPIC -c jbig.c -o jbig.lo
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic  -fPIC -c jbig85.c -o jbig85.lo
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic    -c -o tstcodec.o tstcodec.c
+tstcodec.c: In function ‘main’:
+tstcodec.c:531:24: warning: ‘%ld’ directive writing between 1 and 19 bytes into a region of size 8 [-Wformat-overflow=]
+  531 |       sprintf(test, "5.%ld", ++i);
+      |                        ^~~
+tstcodec.c:531:21: note: directive argument in the range [1, 9223372036854775807]
+  531 |       sprintf(test, "5.%ld", ++i);
+      |                     ^~~~~~~
+In file included from /usr/include/stdio.h:970,
+                 from tstcodec.c:9:
+In function ‘sprintf’,
+    inlined from ‘main’ at tstcodec.c:531:7:
+/usr/include/bits/stdio2.h:30:10: note: ‘__builtin___sprintf_chk’ output between 4 and 22 bytes into a destination of size 10
+   30 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   31 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   32 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic    -c -o jbig_ar.o jbig_ar.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic    -c -o tstcodec85.o tstcodec85.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic    -c -o jbig.o jbig.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic    -c -o jbig85.o jbig85.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic  -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libjbig.so -Wl,-soname -Wl,libjbig.so jbig.lo jbig_ar.lo
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic  -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libjbig85.so -Wl,-soname -Wl,libjbig85.so jbig85.lo jbig_ar.lo
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic  -o tstcodec tstcodec.o jbig.o jbig_ar.o
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -ansi -pedantic  -o tstcodec85 tstcodec85.o jbig85.o jbig_ar.o
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+cd pbmtools &amp;&amp; make -e
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -I../libjbig  -c -o pbmtojbg.o pbmtojbg.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+make -C ../libjbig libjbig.a
+make[2]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+rm -f libjbig.a
+make[2]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[2]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-ar rc libjbig.a jbig.o jbig_ar.o
+make[2]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[2]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-ranlib libjbig.a
+make[2]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -I../libjbig  -c -o jbgtopbm.o jbgtopbm.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -I../libjbig  -c -o pbmtojbg85.o pbmtojbg85.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+make -C ../libjbig libjbig85.a
+make[2]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+rm -f libjbig85.a
+make[2]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[2]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-ar rc libjbig85.a jbig85.o jbig_ar.o
+make[2]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[2]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+x86_64-pc-linux-gnu-ranlib libjbig85.a
+make[2]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/libjbig'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -I../libjbig  -c -o jbgtopbm85.o jbgtopbm85.c
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -o pbmtojbg pbmtojbg.o -L../libjbig -ljbig
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -o jbgtopbm jbgtopbm.o -L../libjbig -ljbig
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -o pbmtojbg85 pbmtojbg85.o -L../libjbig -ljbig85
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+make[1]: Entering directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -W -W -Wall -Wno-unused-result -ansi -pedantic  -o jbgtopbm85 jbgtopbm85.o -L../libjbig -ljbig85
+make[1]: Leaving directory '/var/tmp/portage/media-libs/jbigkit-2.1/work/jbigkit-2.1-abi_x86_64.amd64/pbmtools'
+Enter 'make test' in order to start some automatic tests.
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: media-libs/jbigkit-2.1
+
+&gt;&gt;&gt; Install media-libs/jbigkit-2.1 into /var/tmp/portage/media-libs/jbigkit-2.1/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+&gt;&gt;&gt; Completed installing media-libs/jbigkit-2.1 into /var/tmp/portage/media-libs/jbigkit-2.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2448 KiB (2.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   388 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/jbgtopbm
+   /usr/bin/jbgtopbm85
+   /usr/bin/pbmtojbg
+   /usr/bin/pbmtojbg85
+   /usr/lib64/libjbig.so
+   /usr/lib64/libjbig85.so
+
+</pre>
+</body>
+
+</html>

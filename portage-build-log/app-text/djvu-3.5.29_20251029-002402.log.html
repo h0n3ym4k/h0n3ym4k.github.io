@@ -1,0 +1,1409 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-text/djvu-3.5.29:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: tex@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc jpeg kernel_linux tiff xml
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'djvulibre-3.5.29.tar.gz' to /var/tmp/portage/app-text/djvu-3.5.29/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-text/djvu-3.5.29/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29 ...
+ * econf: updating djvulibre-3.5.29/config/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating djvulibre-3.5.29/config/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/djvu-3.5.29 --htmldir=/usr/share/doc/djvu-3.5.29/html --with-sysroot=/ --libdir=/usr/lib64 --enable-xmltools --with-jpeg --with-tiff --disable-desktopfiles
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for x86_64-pc-linux-gnu-ar... x86_64-pc-linux-gnu-ar
+checking the archiver (x86_64-pc-linux-gnu-ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by x86_64-pc-linux-gnu-gcc... /usr/x86_64-pc-linux-gnu/bin/ld
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/x86_64-pc-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-pc-linux-gnu-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-pc-linux-gnu/bin/ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... (cached) x86_64-pc-linux-gnu-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... x86_64-pc-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-pc-linux-gnu-nm -B output from x86_64-pc-linux-gnu-gcc object... ok
+checking for sysroot... /
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if x86_64-pc-linux-gnu-gcc supports -fno-rtti -fno-exceptions... no
+checking for x86_64-pc-linux-gnu-gcc option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-gcc PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-gcc static flag -static works... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-gcc supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-gcc linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether _WIN32 is declared... no
+checking whether __APPLE__ is declared... no
+checking whether make sets $(MAKE)... (cached) yes
+checking whether ln -s works... yes
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for touch... /usr/bin/touch
+checking for rsvg-convert... /usr/bin/rsvg-convert
+checking for inkscape... false
+checking for convert... /usr/bin/convert
+checking for rm... /usr/bin/rm
+checking for x86_64-pc-linux-gnu-gcc... (cached) x86_64-pc-linux-gnu-gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... (cached) yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... (cached) none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... (cached) yes
+checking dependency style of x86_64-pc-linux-gnu-gcc... (cached) none
+checking for x86_64-pc-linux-gnu-g++... x86_64-pc-linux-gnu-g++
+checking whether the compiler supports GNU C++... yes
+checking whether x86_64-pc-linux-gnu-g++ accepts -g... yes
+checking for x86_64-pc-linux-gnu-g++ option to enable C++11 features... none needed
+checking dependency style of x86_64-pc-linux-gnu-g++... none
+checking how to run the C++ preprocessor... x86_64-pc-linux-gnu-g++ -E
+checking for ld used by x86_64-pc-linux-gnu-g++... /usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the x86_64-pc-linux-gnu-g++ linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+/usr/bin/grep: warning: stray \ before -
+checking for x86_64-pc-linux-gnu-g++ option to produce PIC... -fPIC -DPIC
+checking if x86_64-pc-linux-gnu-g++ PIC flag -fPIC -DPIC works... yes
+checking if x86_64-pc-linux-gnu-g++ static flag -static works... yes
+checking if x86_64-pc-linux-gnu-g++ supports -c -o file.o... yes
+checking if x86_64-pc-linux-gnu-g++ supports -c -o file.o... (cached) yes
+checking whether the x86_64-pc-linux-gnu-g++ linker (/usr/x86_64-pc-linux-gnu/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking if x86_64-pc-linux-gnu-g++ accepts -O3... yes
+checking if x86_64-pc-linux-gnu-g++ accepts -O3... yes
+checking if x86_64-pc-linux-gnu-g++ accepts -Wall... yes
+checking if x86_64-pc-linux-gnu-g++ accepts -Wall... yes
+checking whether the compiler recognizes bool as a built-in type... yes
+checking whether the compiler supports exceptions... yes
+checking whether the compiler recognizes typename... yes
+checking whether the compiler comes with standard includes... yes
+checking whether the compiler implements namespaces... yes
+checking whether the compiler supports member templates... yes
+checking whether the compiler supports intel atomic builtins... yes
+checking whether the compiler supports keyword __thread... yes
+checking for sqrt in -lm... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for sys/time.h... yes
+checking for sys/param.h... yes
+checking for vfork.h... no
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for wchar.h... yes
+checking for wctype.h... yes
+checking for sys/mman.h... yes
+checking for iconv.h... yes
+checking for getopt.h... yes
+checking for langinfo.h... yes
+checking for sched.h... yes
+checking for new.h... no
+checking for stdint.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for sys/ipc.h... yes
+checking for sys/shm.h... yes
+checking for cpuid.h... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for wchar_t... yes
+checking for long long int... yes
+checking for mbstate_t... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for getpagesize... yes
+checking for fork... yes
+checking for vfork... yes
+checking for working mmap... yes
+checking for pid_t... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for wcrtomb... yes
+checking for iswspace... yes
+checking for setenv... yes
+checking for nl_langinfo... yes
+checking for putc_unlocked... yes
+checking for strerror... yes
+checking for vsnprintf... yes
+checking for snprintf... yes
+checking for gethostname... yes
+checking for strftime... yes
+checking for getpwuid... yes
+checking for sigaction... yes
+checking for mkstemp... yes
+checking for sched_yield... yes
+checking for iconv... yes
+checking for pthread.h... yes
+checking whether pthreads work with -pthread -lpthread... yes
+checking if more special flags are required for pthreads... no
+checking for jpeg library... yes
+checking for libjpeg... yes
+checking for the libtiff library... yes
+checking for libtiff... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libdjvu/Makefile
+config.status: creating tools/Makefile
+config.status: creating xmltools/Makefile
+config.status: creating share/Makefile
+config.status: creating desktopfiles/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+djvulibre 3.5.29
+
+Configuration Options Summary:
+
+  OS.................: linux-gnu
+  Win32 support......: no
+  Pthread support....: yes
+  Iconv support......: yes
+  JPEG support.......: yes
+  TIFF support.......: yes
+  XML tools..........: yes
+  Desktop files......: no
+  Icon generation....: rsvg
+
+Compilation..........: make (or gmake)
+  CPPFLAGS...........: 
+  CFLAGS.............:  -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG
+  CXXFLAGS...........:  -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG
+  LDFLAGS............: -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+
+Installation...........: make install (as root if needed, with 'su' or 'sudo')
+  prefix...............: /usr
+
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29 ...
+make -j2 
+make  all-recursive
+Making all in libdjvu
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-Arrays.lo `test -f 'Arrays.cpp' || echo './'`Arrays.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c Arrays.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-Arrays.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-BSByteStream.lo `test -f 'BSByteStream.cpp' || echo './'`BSByteStream.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c BSByteStream.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-BSByteStream.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-BSEncodeByteStream.lo `test -f 'BSEncodeByteStream.cpp' || echo './'`BSEncodeByteStream.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c BSEncodeByteStream.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-BSEncodeByteStream.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-ByteStream.lo `test -f 'ByteStream.cpp' || echo './'`ByteStream.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c ByteStream.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-ByteStream.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DataPool.lo `test -f 'DataPool.cpp' || echo './'`DataPool.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DataPool.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DataPool.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVmDir.lo `test -f 'DjVmDir.cpp' || echo './'`DjVmDir.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVmDir.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVmDir.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVmDir0.lo `test -f 'DjVmDir0.cpp' || echo './'`DjVmDir0.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVmDir0.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVmDir0.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVmDoc.lo `test -f 'DjVmDoc.cpp' || echo './'`DjVmDoc.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVmDoc.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVmDoc.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVmNav.lo `test -f 'DjVmNav.cpp' || echo './'`DjVmNav.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVmNav.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVmNav.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuAnno.lo `test -f 'DjVuAnno.cpp' || echo './'`DjVuAnno.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuAnno.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuAnno.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuDocEditor.lo `test -f 'DjVuDocEditor.cpp' || echo './'`DjVuDocEditor.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuDocEditor.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuDocEditor.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuDocument.lo `test -f 'DjVuDocument.cpp' || echo './'`DjVuDocument.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuDocument.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuDocument.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuDumpHelper.lo `test -f 'DjVuDumpHelper.cpp' || echo './'`DjVuDumpHelper.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuDumpHelper.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuDumpHelper.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuErrorList.lo `test -f 'DjVuErrorList.cpp' || echo './'`DjVuErrorList.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuErrorList.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuErrorList.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuFileCache.lo `test -f 'DjVuFileCache.cpp' || echo './'`DjVuFileCache.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuFileCache.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuFileCache.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuGlobal.lo `test -f 'DjVuGlobal.cpp' || echo './'`DjVuGlobal.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuGlobal.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuGlobal.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuFile.lo `test -f 'DjVuFile.cpp' || echo './'`DjVuFile.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuFile.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuFile.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuGlobalMemory.lo `test -f 'DjVuGlobalMemory.cpp' || echo './'`DjVuGlobalMemory.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuGlobalMemory.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuGlobalMemory.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuInfo.lo `test -f 'DjVuInfo.cpp' || echo './'`DjVuInfo.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuInfo.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuInfo.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuImage.lo `test -f 'DjVuImage.cpp' || echo './'`DjVuImage.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuImage.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuImage.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuMessage.lo `test -f 'DjVuMessage.cpp' || echo './'`DjVuMessage.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuMessage.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuMessage.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuMessageLite.lo `test -f 'DjVuMessageLite.cpp' || echo './'`DjVuMessageLite.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuMessageLite.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuMessageLite.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuNavDir.lo `test -f 'DjVuNavDir.cpp' || echo './'`DjVuNavDir.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuNavDir.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuNavDir.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuPalette.lo `test -f 'DjVuPalette.cpp' || echo './'`DjVuPalette.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuPalette.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuPalette.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuPort.lo `test -f 'DjVuPort.cpp' || echo './'`DjVuPort.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuPort.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuPort.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuText.lo `test -f 'DjVuText.cpp' || echo './'`DjVuText.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuText.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuText.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-DjVuToPS.lo `test -f 'DjVuToPS.cpp' || echo './'`DjVuToPS.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c DjVuToPS.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-DjVuToPS.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GBitmap.lo `test -f 'GBitmap.cpp' || echo './'`GBitmap.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GBitmap.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GBitmap.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GException.lo `test -f 'GException.cpp' || echo './'`GException.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GException.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GException.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GContainer.lo `test -f 'GContainer.cpp' || echo './'`GContainer.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GContainer.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GContainer.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GIFFManager.lo `test -f 'GIFFManager.cpp' || echo './'`GIFFManager.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GIFFManager.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GIFFManager.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GMapAreas.lo `test -f 'GMapAreas.cpp' || echo './'`GMapAreas.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GMapAreas.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GMapAreas.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GOS.lo `test -f 'GOS.cpp' || echo './'`GOS.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GOS.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GOS.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GRect.lo `test -f 'GRect.cpp' || echo './'`GRect.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GRect.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GRect.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GPixmap.lo `test -f 'GPixmap.cpp' || echo './'`GPixmap.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GPixmap.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GPixmap.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GScaler.lo `test -f 'GScaler.cpp' || echo './'`GScaler.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GScaler.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GScaler.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GSmartPointer.lo `test -f 'GSmartPointer.cpp' || echo './'`GSmartPointer.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GSmartPointer.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GSmartPointer.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GThreads.lo `test -f 'GThreads.cpp' || echo './'`GThreads.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GThreads.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GThreads.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GString.lo `test -f 'GString.cpp' || echo './'`GString.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GString.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GString.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GUnicode.lo `test -f 'GUnicode.cpp' || echo './'`GUnicode.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GUnicode.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GUnicode.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-GURL.lo `test -f 'GURL.cpp' || echo './'`GURL.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c GURL.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-GURL.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-IFFByteStream.lo `test -f 'IFFByteStream.cpp' || echo './'`IFFByteStream.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c IFFByteStream.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-IFFByteStream.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-IW44EncodeCodec.lo `test -f 'IW44EncodeCodec.cpp' || echo './'`IW44EncodeCodec.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c IW44EncodeCodec.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-IW44EncodeCodec.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-IW44Image.lo `test -f 'IW44Image.cpp' || echo './'`IW44Image.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c IW44Image.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-IW44Image.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-JB2EncodeCodec.lo `test -f 'JB2EncodeCodec.cpp' || echo './'`JB2EncodeCodec.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c JB2EncodeCodec.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-JB2EncodeCodec.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-JPEGDecoder.lo `test -f 'JPEGDecoder.cpp' || echo './'`JPEGDecoder.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c JPEGDecoder.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-JPEGDecoder.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-JB2Image.lo `test -f 'JB2Image.cpp' || echo './'`JB2Image.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c JB2Image.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-JB2Image.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-MMRDecoder.lo `test -f 'MMRDecoder.cpp' || echo './'`MMRDecoder.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c MMRDecoder.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-MMRDecoder.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-MMX.lo `test -f 'MMX.cpp' || echo './'`MMX.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c MMX.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-MMX.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-UnicodeByteStream.lo `test -f 'UnicodeByteStream.cpp' || echo './'`UnicodeByteStream.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c UnicodeByteStream.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-UnicodeByteStream.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-XMLTags.lo `test -f 'XMLTags.cpp' || echo './'`XMLTags.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c XMLTags.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-XMLTags.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-XMLParser.lo `test -f 'XMLParser.cpp' || echo './'`XMLParser.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c XMLParser.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-XMLParser.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-ZPCodec.lo `test -f 'ZPCodec.cpp' || echo './'`ZPCodec.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c ZPCodec.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-ZPCodec.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-atomic.lo `test -f 'atomic.cpp' || echo './'`atomic.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c atomic.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-atomic.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-debug.lo `test -f 'debug.cpp' || echo './'`debug.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c debug.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-debug.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-miniexp.lo `test -f 'miniexp.cpp' || echo './'`miniexp.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c miniexp.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-miniexp.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=compile x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -DDIR_DATADIR=\"/usr/share\"    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o libdjvulibre_la-ddjvuapi.lo `test -f 'ddjvuapi.cpp' || echo './'`ddjvuapi.cpp
+libtool: compile:  x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I.. -DDIR_DATADIR=\"/usr/share\" -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c ddjvuapi.cpp  -fPIC -DPIC -o .libs/libdjvulibre_la-ddjvuapi.o
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+rm -f ddjvuapi.pc
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/usr/bin/sed -e 's,@PACKAGE_VERSION\@,3.5.29,g' -e 's,@prefix\@,/usr,g' -e 's,@exec_prefix\@,/usr,g' -e 's,@libdir\@,/usr/lib64,g' -e 's,@includedir\@,/usr/include,g' -e 's,@Libs\@,-L/usr/lib64 -ldjvulibre,g' -e 's,@Libsprivate\@,-ljpeg -lpthread -lm ,g' -e 's,@Cflags\@,-I/usr/include  -pthread,g' &lt; ddjvuapi.pc.in &gt; ddjvuapi.pc || (rm ddjvuapi.pc; exit 1)
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -no-undefined -version-info 29:0:8   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o libdjvulibre.la -rpath /usr/lib64 libdjvulibre_la-Arrays.lo libdjvulibre_la-BSByteStream.lo libdjvulibre_la-BSEncodeByteStream.lo libdjvulibre_la-ByteStream.lo libdjvulibre_la-DataPool.lo libdjvulibre_la-DjVmDir.lo libdjvulibre_la-DjVmDir0.lo libdjvulibre_la-DjVmDoc.lo libdjvulibre_la-DjVmNav.lo libdjvulibre_la-DjVuAnno.lo libdjvulibre_la-DjVuDocEditor.lo libdjvulibre_la-DjVuDocument.lo libdjvulibre_la-DjVuDumpHelper.lo libdjvulibre_la-DjVuErrorList.lo libdjvulibre_la-DjVuFile.lo libdjvulibre_la-DjVuFileCache.lo libdjvulibre_la-DjVuGlobal.lo libdjvulibre_la-DjVuGlobalMemory.lo libdjvulibre_la-DjVuImage.lo libdjvulibre_la-DjVuInfo.lo libdjvulibre_la-DjVuMessage.lo libdjvulibre_la-DjVuMessageLite.lo libdjvulibre_la-DjVuNavDir.lo libdjvulibre_la-DjVuPalette.lo libdjvulibre_la-DjVuPort.lo libdjvulibre_la-DjVuText.lo libdjvulibre_la-DjVuToPS.lo libdjvulibre_la-GBitmap.lo libdjvulibre_la-GContainer.lo libdjvulibre_la-GException.lo libdjvulibre_la-GIFFManager.lo libdjvulibre_la-GMapAreas.lo libdjvulibre_la-GOS.lo libdjvulibre_la-GPixmap.lo libdjvulibre_la-GRect.lo libdjvulibre_la-GScaler.lo libdjvulibre_la-GSmartPointer.lo libdjvulibre_la-GString.lo libdjvulibre_la-GThreads.lo libdjvulibre_la-GURL.lo libdjvulibre_la-GUnicode.lo libdjvulibre_la-IFFByteStream.lo libdjvulibre_la-IW44EncodeCodec.lo libdjvulibre_la-IW44Image.lo libdjvulibre_la-JB2EncodeCodec.lo libdjvulibre_la-JB2Image.lo libdjvulibre_la-JPEGDecoder.lo libdjvulibre_la-MMRDecoder.lo libdjvulibre_la-MMX.lo libdjvulibre_la-UnicodeByteStream.lo libdjvulibre_la-XMLParser.lo libdjvulibre_la-XMLTags.lo libdjvulibre_la-ZPCodec.lo libdjvulibre_la-atomic.lo libdjvulibre_la-ddjvuapi.lo libdjvulibre_la-debug.lo libdjvulibre_la-miniexp.lo -ljpeg -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-pc-linux-gnu/14/../../../../lib64/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/14/crtbeginS.o  .libs/libdjvulibre_la-Arrays.o .libs/libdjvulibre_la-BSByteStream.o .libs/libdjvulibre_la-BSEncodeByteStream.o .libs/libdjvulibre_la-ByteStream.o .libs/libdjvulibre_la-DataPool.o .libs/libdjvulibre_la-DjVmDir.o .libs/libdjvulibre_la-DjVmDir0.o .libs/libdjvulibre_la-DjVmDoc.o .libs/libdjvulibre_la-DjVmNav.o .libs/libdjvulibre_la-DjVuAnno.o .libs/libdjvulibre_la-DjVuDocEditor.o .libs/libdjvulibre_la-DjVuDocument.o .libs/libdjvulibre_la-DjVuDumpHelper.o .libs/libdjvulibre_la-DjVuErrorList.o .libs/libdjvulibre_la-DjVuFile.o .libs/libdjvulibre_la-DjVuFileCache.o .libs/libdjvulibre_la-DjVuGlobal.o .libs/libdjvulibre_la-DjVuGlobalMemory.o .libs/libdjvulibre_la-DjVuImage.o .libs/libdjvulibre_la-DjVuInfo.o .libs/libdjvulibre_la-DjVuMessage.o .libs/libdjvulibre_la-DjVuMessageLite.o .libs/libdjvulibre_la-DjVuNavDir.o .libs/libdjvulibre_la-DjVuPalette.o .libs/libdjvulibre_la-DjVuPort.o .libs/libdjvulibre_la-DjVuText.o .libs/libdjvulibre_la-DjVuToPS.o .libs/libdjvulibre_la-GBitmap.o .libs/libdjvulibre_la-GContainer.o .libs/libdjvulibre_la-GException.o .libs/libdjvulibre_la-GIFFManager.o .libs/libdjvulibre_la-GMapAreas.o .libs/libdjvulibre_la-GOS.o .libs/libdjvulibre_la-GPixmap.o .libs/libdjvulibre_la-GRect.o .libs/libdjvulibre_la-GScaler.o .libs/libdjvulibre_la-GSmartPointer.o .libs/libdjvulibre_la-GString.o .libs/libdjvulibre_la-GThreads.o .libs/libdjvulibre_la-GURL.o .libs/libdjvulibre_la-GUnicode.o .libs/libdjvulibre_la-IFFByteStream.o .libs/libdjvulibre_la-IW44EncodeCodec.o .libs/libdjvulibre_la-IW44Image.o .libs/libdjvulibre_la-JB2EncodeCodec.o .libs/libdjvulibre_la-JB2Image.o .libs/libdjvulibre_la-JPEGDecoder.o .libs/libdjvulibre_la-MMRDecoder.o .libs/libdjvulibre_la-MMX.o .libs/libdjvulibre_la-UnicodeByteStream.o .libs/libdjvulibre_la-XMLParser.o .libs/libdjvulibre_la-XMLTags.o .libs/libdjvulibre_la-ZPCodec.o .libs/libdjvulibre_la-atomic.o .libs/libdjvulibre_la-ddjvuapi.o .libs/libdjvulibre_la-debug.o .libs/libdjvulibre_la-miniexp.o   -ljpeg -lpthread -L/usr/lib/gcc/x86_64-pc-linux-gnu/14 -L/usr/lib/gcc/x86_64-pc-linux-gnu/14/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-pc-linux-gnu/14/../../../../x86_64-pc-linux-gnu/lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/14/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-pc-linux-gnu/14/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/14/../../../../lib64/crtn.o  -march=native -mtune=native -O3 -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs   -pthread -Wl,-soname -Wl,libdjvulibre.so.21 -o .libs/libdjvulibre.so.21.8.0
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libdjvulibre.so.21" &amp;&amp; ln -s "libdjvulibre.so.21.8.0" "libdjvulibre.so.21")
+libtool: link: (cd ".libs" &amp;&amp; rm -f "libdjvulibre.so" &amp;&amp; ln -s "libdjvulibre.so.21.8.0" "libdjvulibre.so")
+libtool: link: ( cd ".libs" &amp;&amp; rm -f "libdjvulibre.la" &amp;&amp; ln -s "../libdjvulibre.la" "libdjvulibre.la" )
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+Making all in tools
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o bzz.o bzz.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o c44.o c44.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu   -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o cjb2-cjb2.o `test -f 'cjb2.cpp' || echo './'`cjb2.cpp
+cjb2.cpp: In function ‘void read_tiff(CCImage&amp;, DJVU::ByteStream*, cjb2opts&amp;)’:
+cjb2.cpp:782:10: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  782 |   uint16 bps = 0, spp = 0;
+      |          ^~~
+In file included from /usr/include/tiffio.h:31,
+                 from cjb2.cpp:122:
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+cjb2.cpp:782:19: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  782 |   uint16 bps = 0, spp = 0;
+      |                   ^~~
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+cjb2.cpp:788:10: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  788 |   uint16 photo = PHOTOMETRIC_MINISWHITE;
+      |          ^~~~~
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+cjb2.cpp:791:10: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  791 |   uint32 w, h;
+      |          ^
+/usr/include/tiff.h:86:38: note: declared here
+   86 | typedef TIFF_MSC_DEPRECATED uint32_t uint32 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+cjb2.cpp:791:13: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  791 |   uint32 w, h;
+      |             ^
+/usr/include/tiff.h:86:38: note: declared here
+   86 | typedef TIFF_MSC_DEPRECATED uint32_t uint32 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu   -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o cjb2-jb2tune.o `test -f 'jb2tune.cpp' || echo './'`jb2tune.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o cpaldjvu.o cpaldjvu.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2tune.o jb2tune.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/classify.o jb2cmp/classify.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/frames.o jb2cmp/frames.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/patterns.o jb2cmp/patterns.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/cuts.o jb2cmp/cuts.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I.. -I../libdjvu    -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o ddjvu-ddjvu.o `test -f 'ddjvu.cpp' || echo './'`ddjvu.cpp
+ddjvu.cpp: In function ‘void render(ddjvu_page_t*, int)’:
+ddjvu.cpp:487:49: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  487 |         TIFFSetField(tiff, TIFFTAG_IMAGEWIDTH, (uint32)rrect.w);
+      |                                                 ^~~~~~
+In file included from tiff2pdf.h:27,
+                 from ddjvu.cpp:87:
+/usr/include/tiff.h:86:38: note: declared here
+   86 | typedef TIFF_MSC_DEPRECATED uint32_t uint32 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+ddjvu.cpp:488:50: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  488 |         TIFFSetField(tiff, TIFFTAG_IMAGELENGTH, (uint32)rrect.h);
+      |                                                  ^~~~~~
+/usr/include/tiff.h:86:38: note: declared here
+   86 | typedef TIFF_MSC_DEPRECATED uint32_t uint32 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+ddjvu.cpp:504:57: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  504 |               TIFFSetField(tiff, TIFFTAG_ROWSPERSTRIP, (uint32)64);
+      |                                                         ^~~~~~
+/usr/include/tiff.h:86:38: note: declared here
+   86 | typedef TIFF_MSC_DEPRECATED uint32_t uint32 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+ddjvu.cpp:506:54: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  506 |           TIFFSetField(tiff, TIFFTAG_BITSPERSAMPLE, (uint16)1);
+      |                                                      ^~~~~~
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+ddjvu.cpp:507:56: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  507 |           TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, (uint16)1);
+      |                                                        ^~~~~~
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+ddjvu.cpp:512:54: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  512 |           TIFFSetField(tiff, TIFFTAG_BITSPERSAMPLE, (uint16)8);
+      |                                                      ^~~~~~
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+ddjvu.cpp:514:58: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  514 |             TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, (uint16)1);
+      |                                                          ^~~~~~
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+ddjvu.cpp:518:58: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  518 |             TIFFSetField(tiff, TIFFTAG_SAMPLESPERPIXEL, (uint16)3);
+      |                                                          ^~~~~~
+/usr/include/tiff.h:83:38: note: declared here
+   83 | typedef TIFF_MSC_DEPRECATED uint16_t uint16 TIFF_GCC_DEPRECATED;
+      |                                      ^~~~~~
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o csepdjvu.o csepdjvu.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvm.o djvm.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../libdjvu     -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o ddjvu-tiff2pdf.o `test -f 'tiff2pdf.c' || echo './'`tiff2pdf.c
+tiff2pdf.c:298:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  298 |         uint32 page_number;
+      |         ^~~~~~
+tiff2pdf.c:300:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  300 |         uint32 page_extra;
+      |         ^~~~~~
+tiff2pdf.c:320:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  320 |         uint32 tiles_tilewidth;
+      |         ^~~~~~
+tiff2pdf.c:321:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  321 |         uint32 tiles_tilelength;
+      |         ^~~~~~
+tiff2pdf.c:322:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  322 |         uint32 tiles_tilecountx;
+      |         ^~~~~~
+tiff2pdf.c:323:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  323 |         uint32 tiles_tilecounty;
+      |         ^~~~~~
+tiff2pdf.c:324:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  324 |         uint32 tiles_edgetilewidth;
+      |         ^~~~~~
+tiff2pdf.c:325:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  325 |         uint32 tiles_edgetilelength;
+      |         ^~~~~~
+tiff2pdf.c:335:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  335 |         uint16 tiff_compression;
+      |         ^~~~~~
+tiff2pdf.c:336:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  336 |         uint16 tiff_photometric;
+      |         ^~~~~~
+tiff2pdf.c:337:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  337 |         uint16 tiff_fillorder;
+      |         ^~~~~~
+tiff2pdf.c:338:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  338 |         uint16 tiff_bitspersample;
+      |         ^~~~~~
+tiff2pdf.c:339:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  339 |         uint16 tiff_samplesperpixel;
+      |         ^~~~~~
+tiff2pdf.c:340:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  340 |         uint16 tiff_planar;
+      |         ^~~~~~
+tiff2pdf.c:341:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  341 |         uint32 tiff_width;
+      |         ^~~~~~
+tiff2pdf.c:342:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  342 |         uint32 tiff_length;
+      |         ^~~~~~
+tiff2pdf.c:345:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  345 |         uint16 tiff_orientation;
+      |         ^~~~~~
+tiff2pdf.c:348:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  348 |         uint16 tiff_resunit;
+      |         ^~~~~~
+tiff2pdf.c:349:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  349 |         uint16 pdf_centimeters;
+      |         ^~~~~~
+tiff2pdf.c:350:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  350 |         uint16 pdf_overrideres;
+      |         ^~~~~~
+tiff2pdf.c:351:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  351 |         uint16 pdf_overridepagesize;
+      |         ^~~~~~
+tiff2pdf.c:365:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  365 |         uint16 pdf_majorversion;
+      |         ^~~~~~
+tiff2pdf.c:366:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  366 |         uint16 pdf_minorversion;
+      |         ^~~~~~
+tiff2pdf.c:367:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  367 |         uint32 pdf_catalog;
+      |         ^~~~~~
+tiff2pdf.c:368:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  368 |         uint32 pdf_pages;
+      |         ^~~~~~
+tiff2pdf.c:369:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  369 |         uint32 pdf_info;
+      |         ^~~~~~
+tiff2pdf.c:370:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  370 |         uint32 pdf_palettecs;
+      |         ^~~~~~
+tiff2pdf.c:371:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  371 |         uint16 pdf_fitwindow;
+      |         ^~~~~~
+tiff2pdf.c:372:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  372 |         uint32 pdf_startxref;
+      |         ^~~~~~
+tiff2pdf.c:388:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  388 |         uint16 pdf_colorspace_invert;
+      |         ^~~~~~
+tiff2pdf.c:389:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  389 |         uint16 pdf_switchdecode;
+      |         ^~~~~~
+tiff2pdf.c:390:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  390 |         uint16 pdf_palettesize;
+      |         ^~~~~~
+tiff2pdf.c:394:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  394 |         uint16 pdf_defaultcompressionquality;
+      |         ^~~~~~
+tiff2pdf.c:396:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  396 |         uint16 pdf_compressionquality;
+      |         ^~~~~~
+tiff2pdf.c:397:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  397 |         uint16 pdf_nopassthrough;
+      |         ^~~~~~
+tiff2pdf.c:400:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  400 |         uint32* pdf_xrefoffsets;
+      |         ^~~~~~
+tiff2pdf.c:401:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  401 |         uint32 pdf_xrefcount;
+      |         ^~~~~~
+tiff2pdf.c:405:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  405 |         uint32 pdf_ojpegdatalength;
+      |         ^~~~~~
+tiff2pdf.c:406:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  406 |         uint32 pdf_ojpegiflength;
+      |         ^~~~~~
+tiff2pdf.c:414:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  414 |         uint16 tiff_transferfunctioncount;
+      |         ^~~~~~
+tiff2pdf.c:415:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  415 |         uint32 pdf_icccs;
+      |         ^~~~~~
+tiff2pdf.c:416:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  416 |         uint32 tiff_iccprofilelength;
+      |         ^~~~~~
+tiff2pdf.c:477:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  477 | int t2p_process_jpeg_strip(unsigned char*, tsize_t*, unsigned char*, tsize_t, tsize_t*, tstrip_t, uint32);
+      | ^~~
+tiff2pdf.c:480:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  480 | void t2p_tile_collapse_left(tdata_t, tsize_t, uint32, uint32, uint32);
+      | ^~~~
+tiff2pdf.c:480:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:480:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:488:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  488 | tsize_t t2p_sample_abgr_to_rgb(tdata_t, uint32);
+      | ^~~~~~~
+tiff2pdf.c:490:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  490 | tsize_t t2p_sample_rgba_to_rgb(tdata_t, uint32);
+      | ^~~~~~~
+tiff2pdf.c:492:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  492 | tsize_t t2p_sample_rgbaa_to_rgb(tdata_t, uint32);
+      | ^~~~~~~
+tiff2pdf.c:494:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  494 | tsize_t t2p_sample_lab_signed_to_unsigned(tdata_t, uint32);
+      | ^~~~~~~
+tiff2pdf.c:498:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  498 | tsize_t t2p_write_pdf_obj_start(uint32, TIFF*);
+      | ^~~~~~~
+tiff2pdf.c:512:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  512 | tsize_t t2p_write_pdf_stream_dict(tsize_t, uint32, TIFF*);
+      | ^~~~~~~
+tiff2pdf.c:530:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+  530 | tsize_t t2p_write_pdf_page(uint32, T2P*, TIFF*);
+      | ^~~~~~~
+tiff2pdf.c:534:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  534 | void t2p_compose_pdf_page_orient(T2P_BOX*, uint16);
+      | ^~~~
+tiff2pdf.c:536:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  536 | void t2p_compose_pdf_page_orient_flip(T2P_BOX*, uint16);
+      | ^~~~
+tiff2pdf.c:546:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  546 | tsize_t t2p_write_pdf_transfer_dict(T2P*, TIFF*, uint16);
+      | ^~~~~~~
+tiff2pdf.c:548:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+  548 | tsize_t t2p_write_pdf_transfer_stream(T2P*, TIFF*, uint16);
+      | ^~~~~~~
+tiff2pdf.c: In function ‘t2p_validate’:
+tiff2pdf.c:1166:17: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1166 |                 uint16 m=t2p-&gt;pdf_defaultcompressionquality%100;
+      |                 ^~~~~~
+tiff2pdf.c: In function ‘t2p_read_tiff_init’:
+tiff2pdf.c:1201:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1201 |         uint16 pagen=0;
+      |         ^~~~~~
+tiff2pdf.c:1202:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1202 |         uint16 paged=0;
+      |         ^~~~~~
+tiff2pdf.c:1203:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1203 |         uint16 xuint16=0;
+      |         ^~~~~~
+tiff2pdf.c:1229:17: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 1229 |                 uint32 subfiletype = 0;
+      |                 ^~~~~~
+tiff2pdf.c: In function ‘t2p_cmp_t2p_page’:
+tiff2pdf.c:1394:9: warning: ‘int32’ is deprecated [-Wdeprecated-declarations]
+ 1394 |         d = (int32)(((T2P_PAGE*)e1)-&gt;page_number) - (int32)(((T2P_PAGE*)e2)-&gt;page_number);
+      |         ^
+tiff2pdf.c:1394:9: warning: ‘int32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:1396:17: warning: ‘int32’ is deprecated [-Wdeprecated-declarations]
+ 1396 |                 d = (int32)(((T2P_PAGE*)e1)-&gt;page_directory) - (int32)(((T2P_PAGE*)e2)-&gt;page_directory);
+      |                 ^
+tiff2pdf.c:1396:17: warning: ‘int32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c: In function ‘t2p_read_tiff_data’:
+tiff2pdf.c:1417:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1417 |         uint16* r;
+      |         ^~~~~~
+tiff2pdf.c:1418:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1418 |         uint16* g;
+      |         ^~~~~~
+tiff2pdf.c:1419:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1419 |         uint16* b;
+      |         ^~~~~~
+tiff2pdf.c:1420:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1420 |         uint16* a;
+      |         ^~~~~~
+tiff2pdf.c:1421:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1421 |         uint16 xuint16;
+      |         ^~~~~~
+tiff2pdf.c:1422:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 1422 |         uint16* xuint16p;
+      |         ^~~~~~
+tiff2pdf.c: In function ‘t2p_read_tiff_size’:
+tiff2pdf.c:2142:25: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 2142 |                         uint32 count = 0;
+      |                         ^~~~~~
+tiff2pdf.c: In function ‘t2p_read_tiff_size_tile’:
+tiff2pdf.c:2203:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 2203 |         uint16 edge=0;
+      |         ^~~~~~
+tiff2pdf.c:2234:33: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 2234 |                                 uint32 count = 0;
+      |                                 ^~~~~~
+tiff2pdf.c: In function ‘t2p_readwrite_pdf_image’:
+tiff2pdf.c:2324:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 2324 |         uint16 h_samp=1;
+      |         ^~~~~~
+tiff2pdf.c:2325:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 2325 |         uint16 v_samp=1;
+      |         ^~~~~~
+tiff2pdf.c:2326:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 2326 |         uint16 ri=1;
+      |         ^~~~~~
+tiff2pdf.c:2327:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 2327 |         uint32 rows=0;
+      |         ^~~~~~
+tiff2pdf.c:2335:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 2335 |         uint32 max_striplength=0;
+      |         ^~~~~~
+tiff2pdf.c:2525:25: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 2525 |                         uint32 count = 0;
+      |                         ^~~~~~
+tiff2pdf.c:2760:33: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 2760 |                                 (uint32*)buffer,
+      |                                 ^
+tiff2pdf.c:2806:25: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 2806 |                         uint16 hor = 0, ver = 0;
+      |                         ^~~~~~
+tiff2pdf.c:2806:25: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c: In function ‘t2p_readwrite_pdf_image_tile’:
+tiff2pdf.c:2909:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 2909 |         uint16 edge=0;
+      |         ^~~~~~
+tiff2pdf.c:2916:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 2916 |         uint16 i=0;
+      |         ^~~~~~
+tiff2pdf.c:2924:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 2924 |         uint32 xuint32=0;
+      |         ^~~~~~
+tiff2pdf.c:3032:25: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3032 |                         uint32 count = 0;
+      |                         ^~~~~~
+tiff2pdf.c:3279:25: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3279 |                         uint16 hor = 0, ver = 0;
+      |                         ^~~~~~
+tiff2pdf.c:3279:25: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c: In function ‘t2p_process_ojpeg_tables’:
+tiff2pdf.c:3355:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3355 |         uint16 proc=0;
+      |         ^~~~~~
+tiff2pdf.c:3357:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3357 |         uint32 q_length=0;
+      |         ^~~~~~
+tiff2pdf.c:3359:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3359 |         uint32 dc_length=0;
+      |         ^~~~~~
+tiff2pdf.c:3361:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3361 |         uint32 ac_length=0;
+      |         ^~~~~~
+tiff2pdf.c:3362:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3362 |         uint16* lp;
+      |         ^~~~~~
+tiff2pdf.c:3363:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3363 |         uint16* pt;
+      |         ^~~~~~
+tiff2pdf.c:3364:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3364 |         uint16 h_samp=1;
+      |         ^~~~~~
+tiff2pdf.c:3365:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3365 |         uint16 v_samp=1;
+      |         ^~~~~~
+tiff2pdf.c:3367:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3367 |         uint16 table_count;
+      |         ^~~~~~
+tiff2pdf.c:3368:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3368 |         uint32 offset_table;
+      |         ^~~~~~
+tiff2pdf.c:3369:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3369 |         uint32 offset_ms_l;
+      |         ^~~~~~
+tiff2pdf.c:3370:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3370 |         uint32 code_count;
+      |         ^~~~~~
+tiff2pdf.c:3371:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3371 |         uint32 i=0;
+      |         ^~~~~~
+tiff2pdf.c:3372:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3372 |         uint32 dest=0;
+      |         ^~~~~~
+tiff2pdf.c:3373:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3373 |         uint16 ri=0;
+      |         ^~~~~~
+tiff2pdf.c:3374:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3374 |         uint32 rows=0;
+      |         ^~~~~~
+tiff2pdf.c: At top level:
+tiff2pdf.c:3607:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3607 |         uint32 height){
+      |         ^~~~~~
+tiff2pdf.c: In function ‘t2p_process_jpeg_strip’:
+tiff2pdf.c:3613:17: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3613 |                 uint16 ri;
+      |                 ^~~~~~
+tiff2pdf.c:3614:17: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3614 |                 uint16 v_samp;
+      |                 ^~~~~~
+tiff2pdf.c:3615:17: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3615 |                 uint16 h_samp;
+      |                 ^~~~~~
+tiff2pdf.c:3665:49: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3665 |                                                 uint16 samp = buffer[*bufferoffset+11+(3*j)];
+      |                                                 ^~~~~~
+tiff2pdf.c:3673:41: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3673 |                                         ri=((( ((uint16)(buffer[*bufferoffset+5])&lt;&lt;8) |
+      |                                         ^~
+tiff2pdf.c:3674:41: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3674 |                                         (uint16)(buffer[*bufferoffset+6]) )+v_samp-1)/
+      |                                         ^
+tiff2pdf.c:3676:41: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3676 |                                         ri*=((( ((uint16)(buffer[*bufferoffset+7])&lt;&lt;8) |
+      |                                         ^~
+tiff2pdf.c:3677:41: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3677 |                                         (uint16)(buffer[*bufferoffset+8]) )+h_samp-1)/
+      |                                         ^
+tiff2pdf.c: At top level:
+tiff2pdf.c:3740:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3740 |         uint32 tilewidth,
+      |         ^~~~~~
+tiff2pdf.c:3741:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3741 |         uint32 edgetilewidth,
+      |         ^~~~~~
+tiff2pdf.c:3742:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3742 |         uint32 tilelength){
+      |         ^~~~~~
+tiff2pdf.c: In function ‘t2p_tile_collapse_left’:
+tiff2pdf.c:3744:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3744 |         uint32 i;
+      |         ^~~~~~
+tiff2pdf.c: In function ‘t2p_sample_realize_palette’:
+tiff2pdf.c:3806:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3806 |         uint32 sample_count=0;
+      |         ^~~~~~
+tiff2pdf.c:3807:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 3807 |         uint16 component_count=0;
+      |         ^~~~~~
+tiff2pdf.c:3808:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3808 |         uint32 palette_offset=0;
+      |         ^~~~~~
+tiff2pdf.c:3809:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3809 |         uint32 sample_offset=0;
+      |         ^~~~~~
+tiff2pdf.c:3810:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3810 |         uint32 i=0;
+      |         ^~~~~~
+tiff2pdf.c:3811:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3811 |         uint32 j=0;
+      |         ^~~~~~
+tiff2pdf.c: At top level:
+tiff2pdf.c:3842:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3842 | tsize_t t2p_sample_abgr_to_rgb(tdata_t data, uint32 samplecount)
+      | ^~~~~~~
+tiff2pdf.c: In function ‘t2p_sample_abgr_to_rgb’:
+tiff2pdf.c:3844:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3844 |         uint32 i=0;
+      |         ^~~~~~
+tiff2pdf.c:3845:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3845 |         uint32 sample=0;
+      |         ^~~~~~
+tiff2pdf.c:3848:17: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3848 |                 sample=((uint32*)data)[i];
+      |                 ^~~~~~
+tiff2pdf.c: At top level:
+tiff2pdf.c:3864:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3864 | t2p_sample_rgbaa_to_rgb(tdata_t data, uint32 samplecount)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+tiff2pdf.c: In function ‘t2p_sample_rgbaa_to_rgb’:
+tiff2pdf.c:3866:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3866 |         uint32 i;
+      |         ^~~~~~
+tiff2pdf.c:3872:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+ 3872 |                 memmove((uint8*)data + i * 3, (uint8*)data + i * 4, 3);
+      |                 ^~~~~~~
+tiff2pdf.c:3872:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:3874:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+ 3874 |                 memcpy((uint8*)data + i * 3, (uint8*)data + i * 4, 3);
+      |                 ^~~~~~
+tiff2pdf.c:3874:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c: At top level:
+tiff2pdf.c:3886:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3886 | t2p_sample_rgba_to_rgb(tdata_t data, uint32 samplecount)
+      | ^~~~~~~~~~~~~~~~~~~~~~
+tiff2pdf.c: In function ‘t2p_sample_rgba_to_rgb’:
+tiff2pdf.c:3888:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3888 |         uint32 i = 0;
+      |         ^~~~~~
+tiff2pdf.c:3889:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3889 |         uint32 sample = 0;
+      |         ^~~~~~
+tiff2pdf.c:3890:9: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+ 3890 |         uint8 alpha = 0;
+      |         ^~~~~
+tiff2pdf.c:3893:17: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3893 |                 sample=((uint32*)data)[i];
+      |                 ^~~~~~
+tiff2pdf.c:3894:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+ 3894 |                 alpha=(uint8)((255 - ((sample &gt;&gt; 24) &amp; 0xff)));
+      |                 ^~~~~
+tiff2pdf.c:3895:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+ 3895 |                 ((uint8 *)data)[i * 3] = (uint8) ((sample &gt;&gt; 16) &amp; 0xff) + alpha;
+      |                 ^
+tiff2pdf.c:3895:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:3896:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+ 3896 |                 ((uint8 *)data)[i * 3 + 1] = (uint8) ((sample &gt;&gt; 8) &amp; 0xff) + alpha;
+      |                 ^
+tiff2pdf.c:3896:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:3897:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+ 3897 |                 ((uint8 *)data)[i * 3 + 2] = (uint8) (sample &amp; 0xff) + alpha;
+      |                 ^
+tiff2pdf.c:3897:17: warning: ‘uint8’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c: At top level:
+tiff2pdf.c:3909:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3909 | tsize_t t2p_sample_lab_signed_to_unsigned(tdata_t buffer, uint32 samplecount){
+      | ^~~~~~~
+tiff2pdf.c: In function ‘t2p_sample_lab_signed_to_unsigned’:
+tiff2pdf.c:3911:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3911 |         uint32 i=0;
+      |         ^~~~~~
+tiff2pdf.c: At top level:
+tiff2pdf.c:3957:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3957 | tsize_t t2p_write_pdf_obj_start(uint32 number, TIFF* output){
+      | ^~~~~~~
+tiff2pdf.c: In function ‘t2p_write_pdf_string’:
+tiff2pdf.c:3993:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 3993 |         uint32 i = 0;
+      |         ^~~~~~
+tiff2pdf.c: At top level:
+tiff2pdf.c:4087:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4087 | tsize_t t2p_write_pdf_stream_dict(tsize_t len, uint32 number, TIFF* output){
+      | ^~~~~~~
+tiff2pdf.c:4381:1: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4381 | tsize_t t2p_write_pdf_page(uint32 object, T2P* t2p, TIFF* output){
+      | ^~~~~~~
+tiff2pdf.c: In function ‘t2p_compose_pdf_page’:
+tiff2pdf.c:4485:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4485 |         uint32 i=0;
+      |         ^~~~~~
+tiff2pdf.c:4486:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4486 |         uint32 i2=0;
+      |         ^~~~~~
+tiff2pdf.c:4489:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4489 |         uint32 tilecountx=0;
+      |         ^~~~~~
+tiff2pdf.c:4490:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4490 |         uint32 tilecounty=0;
+      |         ^~~~~~
+tiff2pdf.c:4491:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4491 |         uint32 tilewidth=0;
+      |         ^~~~~~
+tiff2pdf.c:4492:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 4492 |         uint32 tilelength=0;
+      |         ^~~~~~
+tiff2pdf.c: At top level:
+tiff2pdf.c:4692:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 4692 | void t2p_compose_pdf_page_orient(T2P_BOX* boxp, uint16 orientation){
+      | ^~~~
+tiff2pdf.c:4768:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 4768 | void t2p_compose_pdf_page_orient_flip(T2P_BOX* boxp, uint16 orientation){
+      | ^~~~
+tiff2pdf.c:5073:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 5073 | tsize_t t2p_write_pdf_transfer_dict(T2P* t2p, TIFF* output, uint16 i){
+      | ^~~~~~~
+tiff2pdf.c:5093:1: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 5093 | tsize_t t2p_write_pdf_transfer_stream(T2P* t2p, TIFF* output, uint16 i){
+      | ^~~~~~~
+tiff2pdf.c: In function ‘t2p_write_pdf_xreftable’:
+tiff2pdf.c:5414:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 5414 |         uint32 i=0;
+      |         ^~~~~~
+tiff2pdf.c: In function ‘t2p_write_pdf’:
+tiff2pdf.c:5519:9: warning: ‘uint16’ is deprecated [-Wdeprecated-declarations]
+ 5519 |         uint16 i=0;
+      |         ^~~~~~
+tiff2pdf.c:5523:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 5523 |         t2p-&gt;pdf_xrefoffsets= (uint32*) _TIFFmalloc(TIFFSafeMultiply(tmsize_t,t2p-&gt;pdf_xrefcount,sizeof(uint32)) );
+      |         ^~~
+tiff2pdf.c:5523:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:5523:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:5523:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:5523:9: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+tiff2pdf.c:5528:25: warning: ‘uint32’ is deprecated [-Wdeprecated-declarations]
+ 5528 |                         (unsigned int) (t2p-&gt;pdf_xrefcount * sizeof(uint32)) );
+      |                         ^
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvmcvt.o djvmcvt.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvudump.o djvudump.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I.. -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvups-djvups.o `test -f 'djvups.cpp' || echo './'`djvups.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvuextract.o djvuextract.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvumake.o djvumake.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I.. -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvutxt-djvutxt.o `test -f 'djvutxt.cpp' || echo './'`djvutxt.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvused.o djvused.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvuserve.o djvuserve.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o bzz bzz.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/bzz bzz.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o c44 c44.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/c44 c44.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu   -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/cjb2-classify.o `test -f 'jb2cmp/classify.cpp' || echo './'`jb2cmp/classify.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu   -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/cjb2-frames.o `test -f 'jb2cmp/frames.cpp' || echo './'`jb2cmp/frames.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu   -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/cjb2-patterns.o `test -f 'jb2cmp/patterns.cpp' || echo './'`jb2cmp/patterns.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu   -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o jb2cmp/cjb2-cuts.o `test -f 'jb2cmp/cuts.cpp' || echo './'`jb2cmp/cuts.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o cpaldjvu cpaldjvu.o jb2tune.o jb2cmp/classify.o jb2cmp/cuts.o jb2cmp/frames.o jb2cmp/patterns.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/cpaldjvu cpaldjvu.o jb2tune.o jb2cmp/classify.o jb2cmp/cuts.o jb2cmp/frames.o jb2cmp/patterns.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o csepdjvu csepdjvu.o jb2tune.o jb2cmp/classify.o jb2cmp/cuts.o jb2cmp/frames.o jb2cmp/patterns.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/csepdjvu csepdjvu.o jb2tune.o jb2cmp/classify.o jb2cmp/cuts.o jb2cmp/frames.o jb2cmp/patterns.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o ddjvu ddjvu-ddjvu.o ddjvu-tiff2pdf.o ../libdjvu/libdjvulibre.la -ltiff -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/ddjvu ddjvu-ddjvu.o ddjvu-tiff2pdf.o  ../libdjvu/.libs/libdjvulibre.so -ltiff -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvm djvm.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvm djvm.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvudump djvudump.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvudump djvudump.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvmcvt djvmcvt.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvmcvt djvmcvt.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvups djvups-djvups.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvups djvups-djvups.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvuextract djvuextract.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvuextract djvuextract.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvumake djvumake.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvumake djvumake.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvused djvused.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvused djvused.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvutxt djvutxt-djvutxt.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvutxt djvutxt-djvutxt.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvuserve djvuserve.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvuserve djvuserve.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o cjb2 cjb2-cjb2.o cjb2-jb2tune.o jb2cmp/cjb2-classify.o jb2cmp/cjb2-cuts.o jb2cmp/cjb2-frames.o jb2cmp/cjb2-patterns.o ../libdjvu/libdjvulibre.la -ltiff -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/cjb2 cjb2-cjb2.o cjb2-jb2tune.o jb2cmp/cjb2-classify.o jb2cmp/cjb2-cuts.o jb2cmp/cjb2-frames.o jb2cmp/cjb2-patterns.o  ../libdjvu/.libs/libdjvulibre.so -ltiff -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+Making all in share
+make[2]: Nothing to be done for 'all'.
+Making all in xmltools
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu -I../tools  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvutoxml.o djvutoxml.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+x86_64-pc-linux-gnu-g++ -DHAVE_CONFIG_H -I. -I..  -I../libdjvu -I../tools  -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -c -o djvuxmlparser.o djvuxmlparser.cpp
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+rm -f djvuxml.1
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+/usr/bin/sed -e 's,@DATADIR@,/usr/share,g' &lt; djvuxml.1.in &gt; djvuxml.1 || rm djvuxml.1
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvutoxml djvutoxml.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvutoxml djvutoxml.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+/bin/sh ../libtool  --tag=CXX   --mode=link x86_64-pc-linux-gnu-g++ -pthread -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o djvuxmlparser djvuxmlparser.o ../libdjvu/libdjvulibre.la -lpthread -lm 
+libtool: link: x86_64-pc-linux-gnu-g++ -march=native -mtune=native -fomit-frame-pointer -pipe -O3 -Wall -DNDEBUG -Wl,-O1 -Wl,--as-needed -Wl,-z -Wl,pack-relative-relocs -o .libs/djvuxmlparser djvuxmlparser.o  ../libdjvu/.libs/libdjvulibre.so -lpthread -lm -pthread
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: app-text/djvu-3.5.29
+
+&gt;&gt;&gt; Install app-text/djvu-3.5.29 into /var/tmp/portage/app-text/djvu-3.5.29/image
+make -j2 DESTDIR=/var/tmp/portage/app-text/djvu-3.5.29/image install 
+Making install in libdjvu
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64'
+ /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c   libdjvulibre.la '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/libdjvulibre.so.21.8.0 /var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64/libdjvulibre.so.21.8.0
+libtool: install: (cd /var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64 &amp;&amp; { ln -s -f libdjvulibre.so.21.8.0 libdjvulibre.so.21 || { rm -f libdjvulibre.so.21 &amp;&amp; ln -s libdjvulibre.so.21.8.0 libdjvulibre.so.21; }; })
+libtool: install: (cd /var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64 &amp;&amp; { ln -s -f libdjvulibre.so.21.8.0 libdjvulibre.so || { rm -f libdjvulibre.so &amp;&amp; ln -s libdjvulibre.so.21.8.0 libdjvulibre.so; }; })
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/libdjvulibre.lai /var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64/libdjvulibre.la
+libtool: warning: remember to run 'libtool --finish /usr/lib64'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/include/libdjvu'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 ddjvuapi.h miniexp.h '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/include/libdjvu'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64/pkgconfig'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 ddjvuapi.pc '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64/pkgconfig'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/libdjvu'
+Making install in tools
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c bzz c44 cjb2 cpaldjvu csepdjvu ddjvu djvm djvmcvt djvudump djvups djvuextract djvumake djvused djvutxt djvuserve '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin'
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/bzz /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/bzz
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/c44 /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/c44
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/cjb2 /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/cjb2
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/cpaldjvu /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/cpaldjvu
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/csepdjvu /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/csepdjvu
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/ddjvu /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/ddjvu
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvm /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvm
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvmcvt /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvmcvt
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvudump /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvudump
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvups /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvups
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvuextract /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvuextract
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvumake /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvumake
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvused /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvused
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvutxt /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvutxt
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvuserve /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvuserve
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c any2djvu djvudigital '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 any2djvu.1 bzz.1 c44.1 cjb2.1 cpaldjvu.1 csepdjvu.1 ddjvu.1 djvm.1 djvmcvt.1 djvu.1 djvudigital.1 djvudump.1 djvuextract.1 djvumake.1 djvups.1 djvused.1 djvuserve.1 djvutxt.1 '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/man/man1'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/tools'
+Making install in share
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/pubtext'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/pubtext/DjVuMessages.dtd djvu/pubtext/DjVuOCR.dtd djvu/pubtext/DjVuXML-s.dtd '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/pubtext'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/cs'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/osi/cs/messages.xml '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/cs'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/de'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/osi/de/libdjvu++.xml djvu/osi/de/messages.xml '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/de'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/en'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/osi/en/djvutools-reference.xml djvu/osi/en/libdjvu++.xml djvu/osi/en/messages.xml '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/en'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/fr'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/osi/fr/libdjvu++.xml djvu/osi/fr/messages.xml '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/fr'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/ja'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/osi/ja/libdjvu++.xml djvu/osi/ja/messages.xml '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/ja'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/osi/languages.xml '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/zh'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvu/osi/zh/libdjvu++.xml djvu/osi/zh/messages.xml '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/djvu/osi/zh'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/share'
+Making install in xmltools
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin'
+  /bin/sh ../libtool   --mode=install /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c djvutoxml djvuxmlparser '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin'
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvutoxml /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvutoxml
+libtool: warning: '../libdjvu/libdjvulibre.la' has not been installed in '/usr/lib64'
+libtool: install: /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c .libs/djvuxmlparser /var/tmp/portage/app-text/djvu-3.5.29/image/usr/bin/djvuxmlparser
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+make[2]: Entering directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+ /usr/bin/mkdir -p '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.xp84rp8r/bin/ebuild-helpers/xattr/install -c -m 644 djvutoxml.1 djvuxmlparser.1 djvuxml.1 '/var/tmp/portage/app-text/djvu-3.5.29/image/usr/share/man/man1'
+make[2]: Leaving directory '/var/tmp/portage/app-text/djvu-3.5.29/work/djvulibre-3.5.29/xmltools'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+&gt;&gt;&gt; Completed installing app-text/djvu-3.5.29 into /var/tmp/portage/app-text/djvu-3.5.29/image
+
+ <span class="ansi32">*</span> Final size of build directory: 20032 KiB (19.5 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   4340 KiB ( 4.2 MiB)
+
+/var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64/pkgconfig/ddjvuapi.pc:3: warning: whitespace encountered while parsing key section
+/var/tmp/portage/app-text/djvu-3.5.29/image/usr/lib64/pkgconfig/ddjvuapi.pc:4: warning: whitespace encountered while parsing key section
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/bzz
+   /usr/lib64/libdjvulibre.so.21.8.0
+   /usr/bin/c44
+   /usr/bin/cjb2
+   /usr/bin/cpaldjvu
+   /usr/bin/csepdjvu
+   /usr/bin/ddjvu
+   /usr/bin/djvm
+   /usr/bin/djvmcvt
+   /usr/bin/djvudump
+   /usr/bin/djvups
+   /usr/bin/djvuextract
+   /usr/bin/djvumake
+   /usr/bin/djvused
+   /usr/bin/djvutxt
+   /usr/bin/djvuserve
+   /usr/bin/djvutoxml
+   /usr/bin/djvuxmlparser
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1 ansi32">*</span> Install additional packages for optional runtime features:
+ <span class="ansi1 ansi32">*</span>   app-text/djview for djviewer or browser plugin
+
+</pre>
+</body>
+
+</html>

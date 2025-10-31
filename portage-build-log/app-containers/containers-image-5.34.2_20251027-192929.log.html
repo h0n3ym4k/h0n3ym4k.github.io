@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-containers/containers-image-5.34.2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: me@rahil.rocks zmedico@gentoo.org,proxy-maint@gentoo.org
+<span class="ansi32"> * </span>Upstream:   https://github.com/containers/image/issues
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'containers-image-5.34.2.tar.gz' to /var/tmp/portage/app-containers/containers-image-5.34.2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-containers/containers-image-5.34.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-containers/containers-image-5.34.2/work/image-5.34.2 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-containers/containers-image-5.34.2/work/image-5.34.2 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-containers/containers-image-5.34.2/work/image-5.34.2 ...
+make -j2 docs 
+/usr/bin/go-md2man -in docs/containers-auth.json.5.md -out docs/containers-auth.json.5
+/usr/bin/go-md2man -in docs/containers-certs.d.5.md -out docs/containers-certs.d.5
+/usr/bin/go-md2man -in docs/containers-policy.json.5.md -out docs/containers-policy.json.5
+/usr/bin/go-md2man -in docs/containers-registries.conf.5.md -out docs/containers-registries.conf.5
+/usr/bin/go-md2man -in docs/containers-registries.conf.d.5.md -out docs/containers-registries.conf.d.5
+/usr/bin/go-md2man -in docs/containers-registries.d.5.md -out docs/containers-registries.d.5
+/usr/bin/go-md2man -in docs/containers-signature.5.md -out docs/containers-signature.5
+/usr/bin/go-md2man -in docs/containers-sigstore-signing-params.yaml.5.md -out docs/containers-sigstore-signing-params.yaml.5
+/usr/bin/go-md2man -in docs/containers-transports.5.md -out docs/containers-transports.5
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: app-containers/containers-image-5.34.2
+
+&gt;&gt;&gt; Install app-containers/containers-image-5.34.2 into /var/tmp/portage/app-containers/containers-image-5.34.2/image
+make -j2 DESTDIR=/var/tmp/portage/app-containers/containers-image-5.34.2/image install 
+install -d -m 755 /var/tmp/portage/app-containers/containers-image-5.34.2/image/usr/share/man/man5
+install -m 644 docs/*.5 /var/tmp/portage/app-containers/containers-image-5.34.2/image/usr/share/man/man5/
+install -d -m 755 /var/tmp/portage/app-containers/containers-image-5.34.2/image/etc/containers
+install -m 644 default-policy.json /var/tmp/portage/app-containers/containers-image-5.34.2/image/etc/containers/policy.json
+install -d -m 755 /var/tmp/portage/app-containers/containers-image-5.34.2/image/etc/containers/registries.d
+install -m 644 default.yaml /var/tmp/portage/app-containers/containers-image-5.34.2/image/etc/containers/registries.d/default.yaml
+&gt;&gt;&gt; Completed installing app-containers/containers-image-5.34.2 into /var/tmp/portage/app-containers/containers-image-5.34.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 5568 KiB (5.4 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   144 KiB
+
+
+</pre>
+</body>
+
+</html>
