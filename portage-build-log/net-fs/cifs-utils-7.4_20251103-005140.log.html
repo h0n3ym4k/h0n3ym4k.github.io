@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    net-fs/cifs-utils-7.4:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: samba@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 acl ads amd64 caps elibc_glibc kernel_linux pam python python_single_target_python3_13
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+ <span class="ansi32">*</span> Determining the location of the kernel source code
+ <span class="ansi32">*</span> Found kernel source directory:
+ <span class="ansi32">*</span>     /usr/src/linux
+ <span class="ansi32">*</span> Found sources for kernel version:
+ <span class="ansi32">*</span>     6.12.41-gentoo-x86_64
+ <span class="ansi32">*</span> Using python3.13 to build
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'cifs-utils-7.4.tar.bz2' to /var/tmp/portage/net-fs/cifs-utils-7.4/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/net-fs/cifs-utils-7.4/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Running eautoreconf in '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4' ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi1"></span><span class="ansi1 ansi32">*</span> Running elibtoolize in: cifs-utils-7.4/
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4 ...
+ * econf: updating cifs-utils-7.4/config.guess with /usr/share/gnuconfig/config.guess
+ * econf: updating cifs-utils-7.4/config.sub with /usr/share/gnuconfig/config.sub
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --docdir=/usr/share/doc/cifs-utils-7.4 --htmldir=/usr/share/doc/cifs-utils-7.4/html --libdir=/usr/lib64 --enable-man --enable-smbinfo --enable-cifsacl=cifsidmap --enable-cifsupcall --with-libcap --with-libcap-ng --disable-cifscreds --enable-pam --with-pamdir=/lib64/security --enable-pythontools --disable-systemd
+checking for a BSD-compatible install... /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether UID '250' is supported by ustar format... yes
+checking whether GID '250' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking for x86_64-pc-linux-gnu-gcc... x86_64-pc-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-pc-linux-gnu-gcc accepts -g... yes
+checking for x86_64-pc-linux-gnu-gcc option to enable C11 features... none needed
+checking whether x86_64-pc-linux-gnu-gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of x86_64-pc-linux-gnu-gcc... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99 or later... yes
+checking for uid_t... yes
+checking for gid_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for ptrdiff_t... yes
+checking for ssize_t... yes
+checking for uint32_t... yes
+checking for uint8_t... yes
+checking for library containing getmntent... none required
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking whether lstat correctly handles trailing slash... yes
+checking for GNU libc compatible malloc... yes
+checking for GNU libc compatible realloc... yes
+checking for working strnlen... yes
+checking for alarm... yes
+checking for atexit... yes
+checking for endpwent... yes
+checking for getmntent... (cached) yes
+checking for getpass... yes
+checking for gettimeofday... yes
+checking for inet_ntop... yes
+checking for memset... yes
+checking for realpath... yes
+checking for setenv... yes
+checking for strchr... yes
+checking for strcmp... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strpbrk... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for tolower... yes
+checking for uname... yes
+checking for clock_gettime... yes
+checking for arpa/inet.h... yes
+checking for ctype.h... yes
+checking for fcntl.h... yes
+checking for inttypes.h... (cached) yes
+checking for limits.h... yes
+checking for mntent.h... yes
+checking for netdb.h... yes
+checking for stddef.h... yes
+checking for stdint.h... (cached) yes
+checking for stdbool.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for stdio.h... (cached) yes
+checking for errno.h... yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for sys/mount.h... yes
+checking for sys/param.h... yes
+checking for sys/socket.h... yes
+checking for sys/time.h... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking for sys/fsuid.h... yes
+checking for setfsuid... yes
+checking for talloc.h... yes
+checking for talloc_init in -ltalloc... yes
+checking for krb5.h... yes
+checking for krb5/krb5.h... yes
+checking for keyvalue in krb5_keyblock... no
+checking for keyutils.h... yes
+checking for krb5_init_context in -lkrb5... yes
+checking for library containing gss_init_sec_context... -lgssapi_krb5
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for wbclient... yes
+checking for wbcSidsToUnixIds in -lwbclient... yes
+checking for sys/xattr.h... yes
+checking whether WBC_ID_TYPE_BOTH enum value is defined... yes
+checking for keyutils.h... (cached) yes
+checking for security/pam_appl.h... yes
+checking for krb5_auth_con_getsendsubkey... yes
+checking for krb5_principal_get_realm... no
+checking for krb5_free_unparsed_name... yes
+checking for krb5_auth_con_setaddrs... yes
+checking for krb5_auth_con_set_req_cksumtype... yes
+checking for krb5_free_string... yes
+checking for rst2man-3.6... no
+checking for rst2man-3.4... no
+checking for rst2man-3... no
+checking for rst2man.py... no
+checking for rst2man... rst2man
+checking for x86_64-pc-linux-gnu-gcc options needed to detect all undeclared functions... (cached) none needed
+checking whether krb5_auth_con_set_req_cksumtype is declared... yes
+checking for cap-ng.h... yes
+checking for capng_clear in -lcap-ng... yes
+checking whether to use libcap-ng... checking whether CAPNG_AMBIENT is declared... yes
+yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating contrib/Makefile
+config.status: creating contrib/request-key.d/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4 ...
+make -j2 
+make  all-recursive
+Making all in contrib
+Making all in request-key.d
+make[3]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4/contrib/request-key.d'
+/usr/bin/sed 's,[@]sbindir@,/usr/sbin,' ./cifs.idmap.conf.in &gt; cifs.idmap.conf-t &amp;&amp; mv cifs.idmap.conf-t cifs.idmap.conf
+make[3]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4/contrib/request-key.d'
+make[3]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4/contrib/request-key.d'
+/usr/bin/sed 's,[@]sbindir@,/usr/sbin,' ./cifs.spnego.conf.in &gt; cifs.spnego.conf-t &amp;&amp; mv cifs.spnego.conf-t cifs.spnego.conf
+make[3]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4/contrib/request-key.d'
+make[3]: Nothing to be done for 'all-am'.
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o getcifsacl.o getcifsacl.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o idmap_plugin.o idmap_plugin.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o setcifsacl.o setcifsacl.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -fpic -o pam_cifscreds.so pam_cifscreds.c cifskey.c data_blob.c asn1.c cldap_ping.c resolve_host.c util.c -lpam -lkeyutils -ltalloc -lresolv
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -I/usr/include/samba-4.0 -DHAVE_IMMEDIATE_STRUCTURES=1 -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -shared -fpic -o idmapwb.so idmapwb.c -lwbclient
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o mount.cifs.o mount.cifs.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o mtab.o mtab.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o data_blob.o data_blob.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o asn1.o asn1.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o cldap_ping.o cldap_ping.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o resolve_host.o resolve_host.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o util.o util.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o cifs.upcall.o cifs.upcall.c
+cifs.upcall.c: In function ‘main’:
+cifs.upcall.c:1722:59: warning: ‘calloc’ sizes specified with ‘sizeof’ in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+ 1722 |         keydata = (struct cifs_spnego_msg *)calloc(sizeof(char), datalen);
+      |                                                           ^~~~
+cifs.upcall.c:1722:59: note: earlier argument should specify number of elements, later size of each element
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o spnego.o spnego.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -DHAVE_CONFIG_H -I.    -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -c -o cifs.idmap.o cifs.idmap.c
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none mount.cifs.rst mount.cifs.8
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+/usr/bin/sed 's,[@]sbindir@,/usr/sbin,' ./cifs.upcall.rst.in &gt; cifs.upcall.rst-t &amp;&amp; mv cifs.upcall.rst-t cifs.upcall.rst
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+/usr/bin/sed -e 's,[@]sbindir@,/usr/sbin,' -e 's,[@]pluginpath@,/etc/cifs-utils/idmap-plugin,' ./cifs.idmap.rst.in &gt; cifs.idmap.rst-t &amp;&amp; mv cifs.idmap.rst-t cifs.idmap.rst
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+/usr/bin/sed 's,[@]pluginpath@,/etc/cifs-utils/idmap-plugin,' ./getcifsacl.rst.in &gt; getcifsacl.rst-t &amp;&amp; mv getcifsacl.rst-t getcifsacl.rst
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+/usr/bin/sed 's,[@]pluginpath@,/etc/cifs-utils/idmap-plugin,' ./setcifsacl.rst.in &gt; setcifsacl.rst-t &amp;&amp; mv setcifsacl.rst-t setcifsacl.rst
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none smbinfo.rst smbinfo.1
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none smb2-quota.rst smb2-quota.1
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+/usr/bin/sed 's,[@]pluginpath@,/etc/cifs-utils/idmap-plugin,' ./idmapwb.rst.in &gt; idmapwb.rst-t &amp;&amp; mv idmapwb.rst-t idmapwb.rst
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none pam_cifscreds.rst pam_cifscreds.8
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o getcifsacl getcifsacl.o idmap_plugin.o -ldl -ltalloc 
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o setcifsacl setcifsacl.o idmap_plugin.o -ldl -ltalloc 
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o mount.cifs mount.cifs.o mtab.o data_blob.o asn1.o cldap_ping.o resolve_host.o util.o  -lcap-ng  -ltalloc -lresolv -ltalloc 
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o cifs.upcall cifs.upcall.o data_blob.o asn1.o spnego.o -ltalloc -lkeyutils -lgssapi_krb5 -lkrb5 -lcap-ng -ltalloc 
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+x86_64-pc-linux-gnu-gcc -Wall -Wextra -fpie -pie -Wl,-z,relro,-z,now -O3 -march=native -mtune=native -fomit-frame-pointer -pipe  -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -o cifs.idmap cifs.idmap.o idmap_plugin.o -lkeyutils -ldl -ltalloc 
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none cifs.upcall.rst cifs.upcall.8
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none cifs.idmap.rst cifs.idmap.8
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none getcifsacl.rst getcifsacl.1
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none setcifsacl.rst setcifsacl.1
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+rst2man --syntax-highlight=none idmapwb.rst idmapwb.8
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: net-fs/cifs-utils-7.4
+
+&gt;&gt;&gt; Install net-fs/cifs-utils-7.4 into /var/tmp/portage/net-fs/cifs-utils-7.4/image
+make -j2 DESTDIR=/var/tmp/portage/net-fs/cifs-utils-7.4/image install 
+Making install in contrib
+Making install in request-key.d
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/bin'
+  /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c getcifsacl setcifsacl '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/bin'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/bin'
+ /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c smbinfo smb2-quota '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/bin'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/sbin'
+  /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c mount.cifs '/var/tmp/portage/net-fs/cifs-utils-7.4/image/sbin'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/sbin'
+  /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c cifs.upcall cifs.idmap '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/sbin'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/include'
+ /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c -m 644 cifsidmap.h '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/include'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/share/man/man1'
+ /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c -m 644 getcifsacl.1 setcifsacl.1 smbinfo.1 smb2-quota.1 '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/share/man/man1'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/share/man/man8'
+ /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c -m 644 mount.cifs.8 cifs.upcall.8 cifs.idmap.8 idmapwb.8 pam_cifscreds.8 '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/share/man/man8'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/lib64/security'
+  /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c pam_cifscreds.so '/var/tmp/portage/net-fs/cifs-utils-7.4/image/lib64/security'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[2]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/lib64/cifs-utils'
+  /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c idmapwb.so '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/lib64/cifs-utils'
+make[2]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make  install-exec-hook
+make[3]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ /usr/bin/mkdir -p '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/sbin'
+  /var/tmp/portage/._portage_reinstall_.ktwxuyp6/bin/ebuild-helpers/xattr/install -c cifs.upcall cifs.idmap '/var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/sbin'
+make[3]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make[3]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+(cd /var/tmp/portage/net-fs/cifs-utils-7.4/image/sbin &amp;&amp; ln -sf mount.cifs mount.smb3)
+make[3]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+make  install-data-hook
+make[3]: Entering directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+( cd /var/tmp/portage/net-fs/cifs-utils-7.4/image/usr/share/man/man8 &amp;&amp; ln -sf mount.cifs.8 mount.smb3.8)
+make[3]: Leaving directory '/var/tmp/portage/net-fs/cifs-utils-7.4/work/cifs-utils-7.4'
+ <span class="ansi32">*</span> Fixing shebang in /usr/bin/smb2-quota
+ <span class="ansi32">*</span> Fixing shebang in /usr/bin/smbinfo
+&gt;&gt;&gt; Completed installing net-fs/cifs-utils-7.4 into /var/tmp/portage/net-fs/cifs-utils-7.4/image
+
+ <span class="ansi32">*</span> Final size of build directory: 3388 KiB (3.3 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   620 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/getcifsacl
+   /usr/bin/setcifsacl
+   /sbin/mount.cifs
+   /usr/sbin/cifs.upcall
+   /usr/sbin/cifs.idmap
+   /lib64/security/pam_cifscreds.so
+   /usr/lib64/cifs-utils/idmapwb.so
+ <span class="ansi1 ansi33">*</span> setuid use flag was dropped due to multiple security implications
+ <span class="ansi1 ansi33">*</span> such as CVE-2009-2948, CVE-2011-3585 and CVE-2012-1586
+ <span class="ansi1 ansi33">*</span> You are free to set setuid flags by yourself
+ <span class="ansi32">*</span> The cifs.idmap utility has been enabled by creating the
+ <span class="ansi32">*</span> configuration file /etc/request-key.d/cifs.idmap.conf
+ <span class="ansi32">*</span> This enables you to get and set CIFS acls.
+ <span class="ansi32">*</span> The cifs.upcall utility has been enabled by creating the
+ <span class="ansi32">*</span> configuration file /etc/request-key.d/cifs.upcall.conf
+ <span class="ansi32">*</span> This enables you to mount DFS shares.
+
+</pre>
+</body>
+
+</html>
