@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ ! -e /tmp/qatom-change.txt ];then
+	echo "/tmp/qatom-change.txt NOT here. go cp /mnt/Downloads/qatom-change.txt if needed"
+	echo "equery list -F'$cp' \*|uniq > /tmp/qatom-change.txt"
+	exit 1
+fi
+
 #try to notify what time started
 (d=`date +%X`;while(/bin/true);do echo "${d} started";sleep 60;done)&
 echo $! >/tmp/w.pid
@@ -26,6 +32,8 @@ find /var/log/portage/build -iname \*.log -mtime +6 -exec rm -f {} \;
 	find /var/log/portage -iname \*.html -exec rm -f {} \;
 	rm -rf /mnt/Downloads/portage-build-log
 	mkdir /mnt/Downloads/portage-build-log
+
+	rm -f /mnt/Downloads/qatom-change.txt
 fi
 
 #step 1 - gen html
@@ -88,7 +96,14 @@ zcat /proc/config.gz | ansi2html > /mnt/Downloads/portage-build-log/kernel.confi
 #step 6 - emerge --info # is qatom really faster?doubt
 cd /mnt/Downloads/portage-build-log
 
-for p in $(equery list -F'$cp' \*|uniq)
+if [ "${1}" == 'w' ] || [ ! -s /tmp/qatom-change.txt ];then
+	equery list -F'$cp' \*|uniq > /tmp/qatom-change.txt
+fi
+
+#DEADLY, if qatom-change has NEW pkg to be installed, p become empty, _emerge-info.html
+#MUST after emerge, unless empty string returned
+#for p in $(equery list -F'$cp' \*|uniq)
+for p in $(cat /tmp/qatom-change.txt)
 do
 	cd $(echo "${p}" | awk -F/ '{print $1}')
 #	emerge --info "${p}" > "$(echo \"${p}\" | awk '{print $2}')"_emerge-info.log
@@ -117,6 +132,8 @@ cat /root/cpuinfo.txt.html >> "${pkgr}"_emerge-info.log.html
 
 	cd /mnt/Downloads/portage-build-log
 done
+
+
 
 #step 7 - qa_notice.html
 /root/qa_notice.sh
