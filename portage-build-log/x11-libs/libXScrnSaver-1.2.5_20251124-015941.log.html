@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    x11-libs/libXScrnSaver-1.2.5:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'libXScrnSaver-1.2.5.tar.xz' to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=false --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/temp/meson.x86_64-pc-linux-gnu.amd64.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Ddefault_library=shared /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5 /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5-abi_x86_64.amd64
+The Meson build system
+Version: 1.9.1
+Source dir: /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5
+Build dir: /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5-abi_x86_64.amd64
+Build type: native build
+Project name: libXScrnSaver
+Project version: 1.2.5
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 14.3.1 "x86_64-pc-linux-gnu-gcc (Gentoo 14.3.1_p20250801 p4) 14.3.1 20250801")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.45
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C supports arguments -fno-strict-aliasing: YES 
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.5.1
+Run-time dependency x11 found: YES 1.8.12
+Run-time dependency xext found: YES 1.3.6
+Run-time dependency xextproto found: YES 7.3.0
+Run-time dependency scrnsaverproto found: YES 1.2.3
+Program sed found: YES (/usr/bin/sed)
+Build targets in project: 13
+
+libXScrnSaver 1.2.5
+
+  User defined options
+    Native files         : /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/temp/meson.x86_64-pc-linux-gnu.amd64.ini
+    b_lto                : false
+    b_pch                : false
+    buildtype            : plain
+    default_library      : shared
+    libdir               : lib64
+    localstatedir        : /var/lib
+    build.pkg_config_path: /usr/share/pkgconfig
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.13.1 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -l2 -j2
+[1/14] x86_64-pc-linux-gnu-gcc -IlibXss.so.1.0.0.p -I. -I../libXScrnSaver-1.2.5 -I../libXScrnSaver-1.2.5/include -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fno-strict-aliasing -DMALLOC_0_RETURNS_NULL -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -MD -MQ libXss.so.1.0.0.p/src_XScrnSaver.c.o -MF libXss.so.1.0.0.p/src_XScrnSaver.c.o.d -o libXss.so.1.0.0.p/src_XScrnSaver.c.o -c ../libXScrnSaver-1.2.5/src/XScrnSaver.c
+[2/14] x86_64-pc-linux-gnu-gcc  -o libXss.so.1.0.0 libXss.so.1.0.0.p/src_XScrnSaver.c.o -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libXss.so.1 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group /usr/lib64/libX11.so /usr/lib64/libXext.so -Wl,--end-group
+[3/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture Xss.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/Xss.man
+[4/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverQueryExtension.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverQueryExtension.man
+[5/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverQueryVersion.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverQueryVersion.man
+[6/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverAllocInfo.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverAllocInfo.man
+[7/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverQueryInfo.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverQueryInfo.man
+[8/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverSelectInput.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverSelectInput.man
+[9/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverSetAttributes.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverSetAttributes.man
+[10/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverUnsetAttributes.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverUnsetAttributes.man
+[11/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverRegister.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverRegister.man
+[12/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverUnregister.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverUnregister.man
+[13/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverGetRegistered.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverGetRegistered.man
+[14/14] /usr/lib/python-exec/python3.13/meson --internal exe --capture XScreenSaverSuspend.3 -- /usr/bin/sed -e 's/__vendorversion__/"libXScrnSaver 1.2.5" "X Version 11"/' -e s/__libmansuffix__/3/g -e s/__miscmansuffix__/7/g ../libXScrnSaver-1.2.5/man/XScreenSaverSuspend.man
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: x11-libs/libXScrnSaver-1.2.5
+
+&gt;&gt;&gt; Install x11-libs/libXScrnSaver-1.2.5 into /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image --no-rebuild
+Installing libXss.so.1.0.0 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/lib64
+Installing Xss.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverQueryExtension.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverQueryVersion.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverAllocInfo.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverQueryInfo.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverSelectInput.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverSetAttributes.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverUnsetAttributes.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverRegister.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverUnregister.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverGetRegistered.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing XScreenSaverSuspend.3 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/share/man/man3
+Installing /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5/include/X11/extensions/scrnsaver.h to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/include/X11/extensions
+Installing /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/work/libXScrnSaver-1.2.5-abi_x86_64.amd64/meson-private/xscrnsaver.pc to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/lib64/pkgconfig
+Installing symlink pointing to libXss.so.1.0.0 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/lib64/libXss.so.1
+Installing symlink pointing to libXss.so.1 to /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image/usr/lib64/libXss.so
+&gt;&gt;&gt; Completed installing x11-libs/libXScrnSaver-1.2.5 into /var/tmp/portage/x11-libs/libXScrnSaver-1.2.5/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2292 KiB (2.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   112 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libXss.so.1.0.0
+
+</pre>
+</body>
+
+</html>
