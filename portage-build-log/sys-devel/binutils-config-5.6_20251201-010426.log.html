@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-devel/binutils-config-5.6:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: toolchain@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux native-symlinks
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'binutils-config-5.6.tar.xz' to /var/tmp/portage/sys-devel/binutils-config-5.6/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-devel/binutils-config-5.6/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-devel/binutils-config-5.6/work/binutils-config-5.6 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-devel/binutils-config-5.6/work/binutils-config-5.6 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-devel/binutils-config-5.6/work/binutils-config-5.6 ...
+make -j2 PV=5.6 USE_NATIVE_LINKS=yes 
+sed \
+	-e 's:@GENTOO_EPREFIX@::g' \
+	-e 's:@PV@:5.6:g' \
+	-e 's:@USE_NATIVE_LINKS@:yes:g' \
+	src/binutils-config &gt; .binutils-config
+chmod a+rx .binutils-config
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-devel/binutils-config-5.6
+
+&gt;&gt;&gt; Install sys-devel/binutils-config-5.6 into /var/tmp/portage/sys-devel/binutils-config-5.6/image
+make -j2 DESTDIR=/var/tmp/portage/sys-devel/binutils-config-5.6/image PV=5.6 install 
+mkdir -p -m 755 /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/bin /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/share/doc/binutils-config-5.6 /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/share/eselect/modules /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/share/man/man8
+install -m 755  .binutils-config /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/bin/binutils-config
+install -m 644 README /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/share/doc/binutils-config-5.6
+install -m 644 src/binutils.eselect /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/share/eselect/modules
+install -m 644 src/binutils-config.8 /var/tmp/portage/sys-devel/binutils-config-5.6/image/usr/share/man/man8
+&gt;&gt;&gt; Completed installing sys-devel/binutils-config-5.6 into /var/tmp/portage/sys-devel/binutils-config-5.6/image
+
+ <span class="ansi32">*</span> Final size of build directory: 60 KiB
+ <span class="ansi32">*</span> Final size of installed tree:  68 KiB
+
+   <span class="ansi1"></span><span class="ansi1 ansi34">[ </span><span class="ansi1"></span><span class="ansi1 ansi32">ok</span><span class="ansi1"></span><span class="ansi1 ansi34"> ]</span>
+
+ <span class="ansi1"></span><span class="ansi1 ansi33">*</span> Please remember to run:
+
+ <span class="ansi1"></span><span class="ansi1 ansi33">*</span>   # . /etc/profile
+
+
+</pre>
+</body>
+
+</html>
