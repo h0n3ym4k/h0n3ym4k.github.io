@@ -1,0 +1,947 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-python/lxml-6.0.2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: python@gentoo.org
+<span class="ansi32"> * </span>Upstream:   https://bugs.launchpad.net/lxml
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux python_targets_python3_13 threads
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'lxml-6.0.2.gh.tar.gz' to /var/tmp/portage/dev-python/lxml-6.0.2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-python/lxml-6.0.2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Build system packages:
+ <span class="ansi32">*</span>   dev-python/gpep517            : 19
+ <span class="ansi32">*</span>   dev-python/installer          : 0.7.0
+ <span class="ansi32">*</span>   dev-python/cython             : 3.1.6
+ <span class="ansi32">*</span>   dev-python/setuptools         : 80.9.0-r1
+ <span class="ansi32">*</span>   dev-python/setuptools-rust    : 
+ <span class="ansi32">*</span>   dev-python/setuptools-scm     : 9.2.2
+ <span class="ansi32">*</span>   dev-python/wheel              : 0.45.1
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2 ...
+ <span class="ansi32">*</span> python3_13: running distutils-r1_run_phase python_compile
+ <span class="ansi32">*</span>   Building the wheel for lxml-lxml-6.0.2 via setuptools.build_meta:__legacy__
+python3.13 -m gpep517 build-wheel --prefix=/usr --backend setuptools.build_meta:__legacy__ --output-fd 3 --wheel-dir /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/wheel --config-json {"--build-option": ["--warnings"]}
+2025-12-08 15:27:29,293 gpep517 INFO Building wheel via backend setuptools.build_meta:__legacy__
+warning: src/lxml/proxy.pxi:8:0: Directive does not change previous value (profile=False)
+warning: src/lxml/proxy.pxi:7:0: Directive does not change previous value (linetrace=False)
+warning: src/lxml/proxy.pxi:20:0: Directive does not change previous value (profile=False)
+warning: src/lxml/proxy.pxi:19:0: Directive does not change previous value (linetrace=False)
+warning: src/lxml/proxy.pxi:28:0: Directive does not change previous value (profile=False)
+warning: src/lxml/proxy.pxi:27:0: Directive does not change previous value (linetrace=False)
+warning: src/lxml/proxy.pxi:42:0: Directive does not change previous value (profile=False)
+warning: src/lxml/proxy.pxi:41:0: Directive does not change previous value (linetrace=False)
+warning: src/lxml/etree.pyx:838:4: Directive does not change previous value (profile=False)
+warning: src/lxml/etree.pyx:837:4: Directive does not change previous value (linetrace=False)
+warning: src/lxml/etree.pyx:1738:0: Directive does not change previous value (linetrace=False)
+warning: src/lxml/etree.pyx:682:4: 'property public_id:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:711:4: 'property system_url:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:765:4: 'property URL:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1118:4: 'property tag:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1151:4: 'property text:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1169:4: 'property tail:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1197:4: 'property sourceline:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1226:4: 'property base:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1792:4: 'property text:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1848:4: 'property target:' syntax is deprecated, use '@property'
+warning: src/lxml/etree.pyx:1898:4: 'property name:' syntax is deprecated, use '@property'
+warning: src/lxml/readonlytree.pxi:259:4: 'property name:' syntax is deprecated, use '@property'
+warning: src/lxml/readonlytree.pxi:430:4: 'property text:' syntax is deprecated, use '@property'
+warning: src/lxml/readonlytree.pxi:454:4: 'property target:' syntax is deprecated, use '@property'
+warning: src/lxml/readonlytree.pxi:469:4: 'property name:' syntax is deprecated, use '@property'
+warning: src/lxml/readonlytree.pxi:507:4: 'property text:' syntax is deprecated, use '@property'
+warning: src/lxml/nsclasses.pxi:256:4: 'property prefix:' syntax is deprecated, use '@property'
+warning: src/lxml/xslt.pxi:834:4: 'property xslt_profile:' syntax is deprecated, use '@property'
+warning: src/lxml/xmlerror.pxi:194:4: 'copy' redeclared 
+warning: src/lxml/xmlerror.pxi:200:4: 'receive' redeclared 
+warning: src/lxml/xmlerror.pxi:464:4: 'clear' redeclared 
+warning: src/lxml/etree.pyx:1341:37: PEP-484 recommends 'typing.Optional[...]' for arguments that can be None.
+warning: src/lxml/etree.pyx:1341:56: PEP-484 recommends 'typing.Optional[...]' for arguments that can be None.
+warning: src/lxml/readonlytree.pxi:164:4: '__copy__' redeclared 
+warning: src/lxml/readonlytree.pxi:199:4: 'getchildren' redeclared 
+warning: src/lxml/readonlytree.pxi:390:4: 'append' redeclared 
+warning: src/lxml/readonlytree.pxi:487:4: 'append' redeclared 
+warning: src/lxml/parser.pxi:1361:4: 'feed' redeclared 
+warning: src/lxml/parser.pxi:1485:4: 'close' redeclared 
+warning: src/lxml/etree.pyx:3826:4: '_append_log_message' redeclared 
+warning: src/lxml/etree.pyx:3831:4: '_clear_error_log' redeclared 
+warning: TestClass:26:4: 'cpdef_method' redeclared 
+warning: TestClass:36:4: 'cpdef_cname_method' redeclared 
+warning: View.MemoryView:961:29: Ambiguous exception value, same as default return value: 0
+warning: View.MemoryView:1002:46: Ambiguous exception value, same as default return value: 0
+warning: View.MemoryView:1092:29: Ambiguous exception value, same as default return value: 0
+warning: src/lxml/xmlerror.pxi:660:22: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:661:69: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:662:20: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:667:22: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:668:73: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:669:20: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:674:22: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:675:73: local variable 'args' referenced before assignment
+warning: src/lxml/xmlerror.pxi:676:20: local variable 'args' referenced before assignment
+warning: src/lxml/apihelpers.pxi:1645:16: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/etree.pyx:2937:43: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/parser.pxi:618:40: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/parser.pxi:647:44: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/xpath.pxi:93:39: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/xpath.pxi:98:35: Argument evaluation order in C function call is undefined and may not be as expected
+warning: View.MemoryView:961:29: Ambiguous exception value, same as default return value: 0
+warning: View.MemoryView:1002:46: Ambiguous exception value, same as default return value: 0
+warning: View.MemoryView:1092:29: Ambiguous exception value, same as default return value: 0
+warning: src/lxml/proxy.pxi:149:0: Unraisable exception in function 'lxml.etree.getDeallocationTop'.
+warning: src/lxml/proxy.pxi:186:0: Unraisable exception in function 'lxml.etree.canDeallocateChildNodes'.
+warning: src/lxml/apihelpers.pxi:1436:0: Unraisable exception in function 'lxml.etree.isutf8l'.
+warning: src/lxml/xmlerror.pxi:640:0: Unraisable exception in function 'lxml.etree._forwardError'.
+warning: src/lxml/etree.pyx:837:4: Unraisable exception in function 'lxml.etree._Element.__dealloc__'.
+warning: src/lxml/parser.pxi:432:0: Unraisable exception in function 'lxml.etree._local_resolver'.
+warning: src/lxml/parser.pxi:658:0: Unraisable exception in function 'lxml.etree._forwardParserError'.
+warning: src/lxml/saxparser.pxi:637:0: Unraisable exception in function 'lxml.etree._handleSaxPIEvent'.
+warning: src/lxml/saxparser.pxi:672:0: Unraisable exception in function 'lxml.etree._handleSaxComment'.
+warning: src/lxml/xmlid.pxi:165:0: Unraisable exception in function 'lxml.etree._collectIdHashItemList'.
+warning: src/lxml/xmlid.pxi:175:0: Unraisable exception in function 'lxml.etree._collectIdHashKeys'.
+warning: src/lxml/extensions.pxi:394:0: Unraisable exception in function 'lxml.etree._forwardXPathError'.
+warning: src/lxml/xslt.pxi:128:0: Unraisable exception in function 'lxml.etree._xslt_doc_loader'.
+warning: src/lxml/html/_difflib.py:324:4: '__pyx_opt_args_4lxml_4html_8_difflib_15SequenceMatcher_find_longest_match' already defined  (ignoring second definition)
+warning: src/lxml/objectify.pyx:1167:4: 'property xmlSchemaTypes:' syntax is deprecated, use '@property'
+warning: src/lxml/objectify.pyx:339:35: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/objectify.pyx:569:35: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/objectpath.pxi:60:40: Argument evaluation order in C function call is undefined and may not be as expected
+warning: src/lxml/objectify.pyx:767:0: Extension type implements __mod__() but not __rmod__(). The behaviour has changed from previous Cython versions to match Python semantics. You can implement both special methods in a backwards compatible way.
+Building lxml version 6.0.2.
+Building with Cython 3.1.6.
+Building against libxml2 2.15.0 and libxslt 1.1.43
+[1/7] Cythonizing src/lxml/_elementpath.py
+[2/7] Cythonizing src/lxml/builder.py
+[3/7] Cythonizing src/lxml/etree.pyx
+[4/7] Cythonizing src/lxml/html/_difflib.py
+[5/7] Cythonizing src/lxml/html/diff.py
+[6/7] Cythonizing src/lxml/objectify.pyx
+[7/7] Cythonizing src/lxml/sax.py
+[12/08/25 15:27:49] WARNING  toml section missing PosixPath('pyproject.toml') does not contain a tool.setuptools_scm section            pyproject_reading.py:215
+2025-12-08 15:27:50,000 root INFO running bdist_wheel
+2025-12-08 15:27:50,113 root INFO running build
+2025-12-08 15:27:50,113 root INFO running build_py
+2025-12-08 15:27:50,136 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,136 root INFO copying src/lxml/doctestcompare.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,137 root INFO copying src/lxml/usedoctest.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,138 root INFO copying src/lxml/ElementInclude.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,138 root INFO copying src/lxml/builder.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,139 root INFO copying src/lxml/_elementpath.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,139 root INFO copying src/lxml/pyclasslookup.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,140 root INFO copying src/lxml/sax.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,140 root INFO copying src/lxml/cssselect.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,141 root INFO copying src/lxml/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,141 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,142 root INFO copying src/lxml/includes/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,143 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,143 root INFO copying src/lxml/html/soupparser.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,144 root INFO copying src/lxml/html/defs.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,144 root INFO copying src/lxml/html/html5parser.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,145 root INFO copying src/lxml/html/_setmixin.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,146 root INFO copying src/lxml/html/_html5builder.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,146 root INFO copying src/lxml/html/diff.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,147 root INFO copying src/lxml/html/usedoctest.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,148 root INFO copying src/lxml/html/builder.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,148 root INFO copying src/lxml/html/_diffcommand.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,149 root INFO copying src/lxml/html/ElementSoup.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,149 root INFO copying src/lxml/html/_difflib.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,150 root INFO copying src/lxml/html/formfill.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,151 root INFO copying src/lxml/html/clean.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,151 root INFO copying src/lxml/html/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html
+2025-12-08 15:27:50,152 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron
+2025-12-08 15:27:50,153 root INFO copying src/lxml/isoschematron/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron
+2025-12-08 15:27:50,161 root INFO copying src/lxml/etree.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,162 root INFO copying src/lxml/etree_api.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,162 root INFO copying src/lxml/lxml.etree.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,163 root INFO copying src/lxml/lxml.etree_api.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,164 root INFO copying src/lxml/etree.pyx -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,164 root INFO copying src/lxml/objectify.pyx -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,165 root INFO copying src/lxml/objectpath.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,166 root INFO copying src/lxml/relaxng.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,166 root INFO copying src/lxml/docloader.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,167 root INFO copying src/lxml/schematron.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,167 root INFO copying src/lxml/debug.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,168 root INFO copying src/lxml/saxparser.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,168 root INFO copying src/lxml/classlookup.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,169 root INFO copying src/lxml/proxy.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,169 root INFO copying src/lxml/xmlerror.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,170 root INFO copying src/lxml/parser.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,171 root INFO copying src/lxml/cleanup.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,171 root INFO copying src/lxml/public-api.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,172 root INFO copying src/lxml/dtd.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,172 root INFO copying src/lxml/xslt.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,173 root INFO copying src/lxml/apihelpers.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,173 root INFO copying src/lxml/parsertarget.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,174 root INFO copying src/lxml/xsltext.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,175 root INFO copying src/lxml/xmlschema.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,175 root INFO copying src/lxml/nsclasses.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,176 root INFO copying src/lxml/readonlytree.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,176 root INFO copying src/lxml/iterparse.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,177 root INFO copying src/lxml/xpath.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,177 root INFO copying src/lxml/serializer.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,178 root INFO copying src/lxml/extensions.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,178 root INFO copying src/lxml/xmlid.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,179 root INFO copying src/lxml/xinclude.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml
+2025-12-08 15:27:50,180 root INFO copying src/lxml/includes/tree.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,180 root INFO copying src/lxml/includes/xslt.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,181 root INFO copying src/lxml/includes/uri.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,181 root INFO copying src/lxml/includes/xinclude.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,182 root INFO copying src/lxml/includes/schematron.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,182 root INFO copying src/lxml/includes/config.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,183 root INFO copying src/lxml/includes/htmlparser.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,183 root INFO copying src/lxml/includes/xmlerror.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,184 root INFO copying src/lxml/includes/__init__.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,185 root INFO copying src/lxml/includes/dtdvalid.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,185 root INFO copying src/lxml/includes/xmlparser.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,186 root INFO copying src/lxml/includes/etreepublic.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,186 root INFO copying src/lxml/includes/c14n.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,187 root INFO copying src/lxml/includes/xmlschema.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,187 root INFO copying src/lxml/includes/relaxng.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,188 root INFO copying src/lxml/includes/xpath.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,188 root INFO copying src/lxml/includes/lxml-version.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,189 root INFO copying src/lxml/includes/etree_defs.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes
+2025-12-08 15:27:50,190 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/rng
+2025-12-08 15:27:50,190 root INFO copying src/lxml/isoschematron/resources/rng/iso-schematron.rng -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/rng
+2025-12-08 15:27:50,191 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl
+2025-12-08 15:27:50,191 root INFO copying src/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl
+2025-12-08 15:27:50,191 root INFO copying src/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl
+2025-12-08 15:27:50,192 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:27:50,192 root INFO copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:27:50,193 root INFO copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:27:50,193 root INFO copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:27:50,194 root INFO copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:27:50,195 root INFO copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:27:50,195 root INFO copying src/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:27:50,197 root WARNING warning: build_py: byte-compiling is disabled, skipping.
+
+2025-12-08 15:27:50,197 root INFO running build_ext
+2025-12-08 15:27:50,202 root INFO building 'lxml.etree' extension
+2025-12-08 15:27:50,204 root INFO building 'lxml.objectify' extension
+2025-12-08 15:27:50,204 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml
+2025-12-08 15:27:50,205 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml
+2025-12-08 15:27:50,205 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG -fPIC -DCYTHON_CLINE_IN_TRACEBACK=0 -Isrc/lxml/includes -I/usr/include/libxml2 -Isrc -I/usr/include/python3.13 -c src/lxml/objectify.c -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/objectify.o
+2025-12-08 15:27:50,206 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG -fPIC -DCYTHON_CLINE_IN_TRACEBACK=0 -Isrc/lxml -Isrc/lxml/includes -I/usr/include/libxml2 -Isrc -I/usr/include/python3.13 -c src/lxml/etree.c -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/etree.o
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_fixThreadDictNamesForDtd’:
+src/lxml/etree.c:35145:9: warning: ‘name’ is deprecated [-Wdeprecated-declarations]
+35145 |         __pyx_f_4lxml_5etree__fixThreadDictPtr((&amp;__pyx_v_c_element-&gt;content-&gt;name), __pyx_v_c_src_dict, __pyx_v_c_dict);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/libxml2/libxml/parser.h:20,
+                 from /usr/include/libxml2/libxml/tree.h:20,
+                 from src/lxml/includes/etree_defs.h:166,
+                 from src/lxml/etree.c:1235:
+/usr/include/libxml2/libxml/tree.h:429:32: note: declared here
+  429 |     const xmlChar             *name XML_DEPRECATED_MEMBER;
+      |                                ^~~~
+src/lxml/etree.c:35154:9: warning: ‘prefix’ is deprecated [-Wdeprecated-declarations]
+35154 |         __pyx_f_4lxml_5etree__fixThreadDictPtr((&amp;__pyx_v_c_element-&gt;content-&gt;prefix), __pyx_v_c_src_dict, __pyx_v_c_dict);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:437:32: note: declared here
+  437 |     const xmlChar             *prefix XML_DEPRECATED_MEMBER;
+      |                                ^~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_24_ParserDictionaryContext_initParserDict’:
+src/lxml/etree.c:130957:3: warning: ‘dictNames’ is deprecated [-Wdeprecated-declarations]
+130957 |   __pyx_v_pctxt-&gt;dictNames = 1;
+       |   ^~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:577:9: note: declared here
+  577 |     int dictNames XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__setupPythonUnicode’:
+src/lxml/etree.c:131405:3: warning: ‘Py_UNICODE’ is deprecated [-Wdeprecated-declarations]
+131405 |   Py_UNICODE *__pyx_v_uchars;
+       |   ^~~~~~~~~~
+src/lxml/etree.c:131408:3: warning: ‘Py_UNICODE’ is deprecated [-Wdeprecated-declarations]
+131408 |   Py_UNICODE __pyx_t_1[7];
+       |   ^~~~~~~~~~
+src/lxml/etree.c:131579:5: warning: ‘Py_UNICODE’ is deprecated [-Wdeprecated-declarations]
+131579 |     __pyx_t_4 = __pyx_f_4lxml_5etree__findEncodingName(__pyx_v_buffer, ((sizeof(Py_UNICODE)) * 7)); if (unlikely(__pyx_t_4 == ((const char *)0) &amp;&amp; PyErr_Occurred())) __PYX_ERR(2, 215, __pyx_L1_error)
+       |     ^~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__find_PyUCS4EncodingName’:
+src/lxml/etree.c:132046:7: warning: ‘name’ is deprecated [-Wdeprecated-declarations]
+132046 |       __pyx_t_1 = (__pyx_v_enchandler-&gt;name != 0);
+       |       ^~~~~~~~~
+In file included from /usr/include/libxml2/libxml/parser.h:29:
+/usr/include/libxml2/libxml/encoding.h:200:11: note: declared here
+  200 |     char *name XML_DEPRECATED_MEMBER;
+      |           ^~~~
+src/lxml/etree.c:132056:9: warning: ‘name’ is deprecated [-Wdeprecated-declarations]
+132056 |         __pyx_t_2 = __pyx_v_enchandler-&gt;name;
+       |         ^~~~~~~~~
+/usr/include/libxml2/libxml/encoding.h:200:11: note: declared here
+  200 |     char *name XML_DEPRECATED_MEMBER;
+      |           ^~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_18_FileReaderContext__createParserInputBuffer’:
+src/lxml/etree.c:132922:5: warning: ‘readcallback’ is deprecated [-Wdeprecated-declarations]
+132922 |     __pyx_v_c_buffer-&gt;readcallback = __pyx_f_4lxml_5etree__readFilelikeParser;
+       |     ^~~~~~~~~~~~~~~~
+In file included from /usr/include/libxml2/libxml/parser.h:30:
+/usr/include/libxml2/libxml/xmlIO.h:128:28: note: declared here
+  128 |     xmlInputReadCallback   readcallback XML_DEPRECATED_MEMBER;
+      |                            ^~~~~~~~~~~~
+src/lxml/etree.c:132931:5: warning: ‘context’ is deprecated [-Wdeprecated-declarations]
+132931 |     __pyx_v_c_buffer-&gt;context = ((PyObject *)__pyx_v_self);
+       |     ^~~~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/xmlIO.h:127:28: note: declared here
+  127 |     void*                  context XML_DEPRECATED_MEMBER;
+      |                            ^~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__local_resolver’:
+src/lxml/etree.c:134900:11: warning: ‘length’ is deprecated [-Wdeprecated-declarations]
+134900 |           __pyx_v_c_input-&gt;length = PyBytes_GET_SIZE(__pyx_v_data);
+       |           ^~~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:123:9: note: declared here
+  123 |     int length XML_DEPRECATED_MEMBER;
+      |         ^~~~~~
+src/lxml/etree.c:134919:11: warning: ‘length’ is deprecated [-Wdeprecated-declarations]
+134919 |           __pyx_v_c_input-&gt;end = (__pyx_v_c_input-&gt;base + __pyx_v_c_input-&gt;length);
+       |           ^~~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:123:9: note: declared here
+  123 |     int length XML_DEPRECATED_MEMBER;
+      |         ^~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_14_ParserContext__resetParserContext’:
+src/lxml/etree.c:135827:7: warning: ‘disableSAX’ is deprecated [-Wdeprecated-declarations]
+135827 |       __pyx_v_self-&gt;_c_ctxt-&gt;disableSAX = 0;
+       |       ^~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:421:9: note: declared here
+  421 |     int disableSAX XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~
+src/lxml/etree.c:135847:7: warning: ‘xmlClearParserCtxt’ is deprecated: See https://gnome.pages.gitlab.gnome.org/libxml2/html/deprecated.html [-Wdeprecated-declarations]
+135847 |       xmlClearParserCtxt(__pyx_v_self-&gt;_c_ctxt);
+       |       ^~~~~~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:1601:17: note: declared here
+ 1601 |                 xmlClearParserCtxt      (xmlParserCtxt *ctxt);
+      |                 ^~~~~~~~~~~~~~~~~~
+src/lxml/etree.c:135856:7: warning: ‘nsNr’ is deprecated [-Wdeprecated-declarations]
+135856 |       __pyx_v_self-&gt;_c_ctxt-&gt;nsNr = 0;
+       |       ^~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:545:9: note: declared here
+  545 |     int nsNr XML_DEPRECATED_MEMBER;
+      |         ^~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__raiseParseError’:
+src/lxml/etree.c:136783:3: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+136783 |   __pyx_t_2 = (__pyx_v_ctxt-&gt;lastError.domain == XML_FROM_IO);
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:136852:5: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+136852 |     __pyx_t_1 = (__pyx_v_ctxt-&gt;lastError.message != NULL);
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:136878:11: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+136878 |           __pyx_t_9 = __pyx_v_ctxt-&gt;lastError.message;
+       |           ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:136923:11: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+136923 |           __pyx_t_9 = __pyx_v_ctxt-&gt;lastError.message;
+       |           ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:137088:3: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+137088 |   __pyx_t_1 = (__pyx_v_ctxt-&gt;lastError.message != NULL);
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:137098:5: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+137098 |     __pyx_t_12 = __Pyx_PyBytes_FromString(__pyx_v_ctxt-&gt;lastError.message); if (unlikely(!__pyx_t_12)) __PYX_ERR(2, 692, __pyx_L1_error)
+       |     ^~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:137121:5: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+137121 |     __pyx_t_10 = __pyx_v_ctxt-&gt;lastError.code;
+       |     ^~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:137131:5: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+137131 |     __pyx_t_10 = __pyx_v_ctxt-&gt;lastError.line;
+       |     ^~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:137141:5: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+137141 |     __pyx_t_10 = __pyx_v_ctxt-&gt;lastError.int2;
+       |     ^~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:137151:5: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+137151 |     __pyx_t_1 = (__pyx_v_ctxt-&gt;lastError.line &gt; 0);
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__handleParseResult’:
+src/lxml/etree.c:137522:5: warning: ‘charset’ is deprecated [-Wdeprecated-declarations]
+137522 |     __pyx_t_3 = (__pyx_v_c_ctxt-&gt;charset == XML_CHAR_ENCODING_8859_1);
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:471:9: note: declared here
+  471 |     int charset XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~
+src/lxml/etree.c:137693:5: warning: ‘lastError’ is deprecated [-Wdeprecated-declarations]
+137693 |     __pyx_t_3 = (__pyx_v_c_ctxt-&gt;lastError.level &lt; XML_ERR_ERROR);
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:597:14: note: declared here
+  597 |     xmlError lastError XML_DEPRECATED_MEMBER;
+      |              ^~~~~~~~~
+src/lxml/etree.c:137732:5: warning: ‘replaceEntities’ is deprecated [-Wdeprecated-declarations]
+137732 |     __pyx_t_3 = (!__pyx_v_c_ctxt-&gt;replaceEntities);
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:288:9: note: declared here
+  288 |     int replaceEntities XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~~~~~~
+src/lxml/etree.c:137746:5: warning: ‘validate’ is deprecated [-Wdeprecated-declarations]
+137746 |     __pyx_t_3 = (!__pyx_v_c_ctxt-&gt;validate);
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:374:9: note: declared here
+  374 |     int validate XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_11_BaseParser__registerHtmlErrorHandler’:
+src/lxml/etree.c:140425:5: warning: ‘htmlDefaultSAXHandler’ is deprecated: See https://gnome.pages.gitlab.gnome.org/libxml2/html/deprecated.html [-Wdeprecated-declarations]
+140425 |     __pyx_t_2 = (((xmlSAXHandlerV1 *)__pyx_v_sax) == (&amp;htmlDefaultSAXHandler));
+       |     ^~~~~~~~~
+In file included from /usr/include/libxml2/libxml/HTMLtree.h:20,
+                 from src/lxml/etree.c:1301:
+/usr/include/libxml2/libxml/HTMLparser.h:99:33: note: declared here
+   99 | XMLPUBVAR const xmlSAXHandlerV1 htmlDefaultSAXHandler;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+src/lxml/etree.c:140472:7: warning: ‘htmlDefaultSAXHandler’ is deprecated: See https://gnome.pages.gitlab.gnome.org/libxml2/html/deprecated.html [-Wdeprecated-declarations]
+140472 |       (void)(memcpy(__pyx_v_sax, (&amp;htmlDefaultSAXHandler), (sizeof(htmlDefaultSAXHandler))));
+       |       ^
+/usr/include/libxml2/libxml/HTMLparser.h:99:33: note: declared here
+   99 | XMLPUBVAR const xmlSAXHandlerV1 htmlDefaultSAXHandler;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+src/lxml/etree.c:140472:7: warning: ‘htmlDefaultSAXHandler’ is deprecated: See https://gnome.pages.gitlab.gnome.org/libxml2/html/deprecated.html [-Wdeprecated-declarations]
+140472 |       (void)(memcpy(__pyx_v_sax, (&amp;htmlDefaultSAXHandler), (sizeof(htmlDefaultSAXHandler))));
+       |       ^
+/usr/include/libxml2/libxml/HTMLparser.h:99:33: note: declared here
+   99 | XMLPUBVAR const xmlSAXHandlerV1 htmlDefaultSAXHandler;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__getInternalEntityOnly’:
+src/lxml/etree.c:143962:20: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+143962 |     __pyx_t_4.file = __pyx_v_parser_input-&gt;filename;
+       |                    ^
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__initSaxDocument’:
+src/lxml/etree.c:144172:5: warning: ‘dictNames’ is deprecated [-Wdeprecated-declarations]
+144172 |     __pyx_v_c_ctxt-&gt;dictNames = 1;
+       |     ^~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:577:9: note: declared here
+  577 |     int dictNames XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~
+src/lxml/etree.c:144337:7: warning: ‘loadsubset’ is deprecated [-Wdeprecated-declarations]
+144337 |       __pyx_v_c_ctxt-&gt;loadsubset = (__pyx_v_c_ctxt-&gt;loadsubset | XML_SKIP_IDS);
+       |       ^~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:502:9: note: declared here
+  502 |     int loadsubset XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~
+src/lxml/etree.c:144337:7: warning: ‘loadsubset’ is deprecated [-Wdeprecated-declarations]
+144337 |       __pyx_v_c_ctxt-&gt;loadsubset = (__pyx_v_c_ctxt-&gt;loadsubset | XML_SKIP_IDS);
+       |       ^~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:502:9: note: declared here
+  502 |     int loadsubset XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_11_FeedParser_feed’:
+src/lxml/etree.c:145323:5: warning: ‘replaceEntities’ is deprecated [-Wdeprecated-declarations]
+145323 |     __pyx_t_13 = (!__pyx_v_pctxt-&gt;replaceEntities);
+       |     ^~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:288:9: note: declared here
+  288 |     int replaceEntities XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~~~~~~
+src/lxml/etree.c:145329:5: warning: ‘validate’ is deprecated [-Wdeprecated-declarations]
+145329 |     __pyx_t_13 = (!__pyx_v_pctxt-&gt;validate);
+       |     ^~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:374:9: note: declared here
+  374 |     int validate XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_11_FeedParser_close’:
+src/lxml/etree.c:146089:3: warning: ‘recovery’ is deprecated [-Wdeprecated-declarations]
+146089 |   if (__pyx_v_pctxt-&gt;recovery) {
+       |   ^~
+/usr/include/libxml2/libxml/parser.h:515:9: note: declared here
+  515 |     int recovery XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~
+src/lxml/etree.c:146091:5: warning: ‘recovery’ is deprecated [-Wdeprecated-declarations]
+146091 |     __pyx_t_6 = __pyx_v_pctxt-&gt;recovery;
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:515:9: note: declared here
+  515 |     int recovery XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__htmlCtxtResetPush’:
+src/lxml/etree.c:146682:5: warning: ‘progressive’ is deprecated [-Wdeprecated-declarations]
+146682 |     __pyx_v_c_ctxt-&gt;progressive = 1;
+       |     ^~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:517:9: note: declared here
+  517 |     int progressive XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_17_SaxParserContext__connectTarget’:
+src/lxml/etree.c:153024:3: warning: ‘replaceEntities’ is deprecated [-Wdeprecated-declarations]
+153024 |   __pyx_v_c_ctxt-&gt;replaceEntities = 1;
+       |   ^~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:288:9: note: declared here
+  288 |     int replaceEntities XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree_17_SaxParserContext__handleSaxException’:
+src/lxml/etree.c:154087:3: warning: ‘disableSAX’ is deprecated [-Wdeprecated-declarations]
+154087 |   __pyx_v_c_ctxt-&gt;disableSAX = 1;
+       |   ^~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:421:9: note: declared here
+  421 |     int disableSAX XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~
+src/lxml/etree.c:154096:3: warning: ‘instate’ is deprecated [-Wdeprecated-declarations]
+154096 |   __pyx_v_c_ctxt-&gt;instate = XML_PARSER_EOF;
+       |   ^~~~~~~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:383:25: note: declared here
+  383 |     xmlParserInputState instate XML_DEPRECATED_MEMBER;
+      |                         ^~~~~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__handleSaxTargetStart’:
+src/lxml/etree.c:155546:13: warning: ‘loadsubset’ is deprecated [-Wdeprecated-declarations]
+155546 |             __pyx_t_1 = ((__pyx_v_c_ctxt-&gt;loadsubset &amp; XML_COMPLETE_ATTRS) == 0);
+       |             ^~~~~~~~~
+/usr/include/libxml2/libxml/parser.h:502:9: note: declared here
+  502 |     int loadsubset XML_DEPRECATED_MEMBER;
+      |         ^~~~~~~~~~
+src/lxml/etree.c: In function ‘__pyx_pf_4lxml_5etree_7_IDDict_4__getitem__’:
+src/lxml/etree.c:201944:3: warning: ‘attr’ is deprecated [-Wdeprecated-declarations]
+201944 |   __pyx_t_4 = __pyx_v_c_id-&gt;attr;
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:632:23: note: declared here
+  632 |     xmlAttr          *attr XML_DEPRECATED_MEMBER;
+      |                       ^~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__collectIdHashItemList’:
+src/lxml/etree.c:203696:3: warning: ‘attr’ is deprecated [-Wdeprecated-declarations]
+203696 |   __pyx_t_2 = (__pyx_v_c_id-&gt;attr == NULL);
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:632:23: note: declared here
+  632 |     xmlAttr          *attr XML_DEPRECATED_MEMBER;
+      |                       ^~~~
+src/lxml/etree.c:203702:3: warning: ‘attr’ is deprecated [-Wdeprecated-declarations]
+203702 |   __pyx_t_2 = (__pyx_v_c_id-&gt;attr-&gt;parent == NULL);
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:632:23: note: declared here
+  632 |     xmlAttr          *attr XML_DEPRECATED_MEMBER;
+      |                       ^~~~
+src/lxml/etree.c:203771:74: warning: ‘attr’ is deprecated [-Wdeprecated-declarations]
+203771 |   __pyx_t_3 = ((PyObject *)__pyx_f_4lxml_5etree__elementFactory(((struct LxmlDocument *)__pyx_v_doc), __pyx_v_c_id-&gt;attr-&gt;parent)); if (unlikely(!__pyx_t_3)) __PYX_ERR(16, 172, __pyx_L1_error)
+       |                                                                          ^~~~~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:632:23: note: declared here
+  632 |     xmlAttr          *attr XML_DEPRECATED_MEMBER;
+      |                       ^~~~
+src/lxml/etree.c: In function ‘__pyx_f_4lxml_5etree__collectIdHashKeys’:
+src/lxml/etree.c:203864:3: warning: ‘attr’ is deprecated [-Wdeprecated-declarations]
+203864 |   __pyx_t_2 = (__pyx_v_c_id-&gt;attr == NULL);
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:632:23: note: declared here
+  632 |     xmlAttr          *attr XML_DEPRECATED_MEMBER;
+      |                       ^~~~
+src/lxml/etree.c:203870:3: warning: ‘attr’ is deprecated [-Wdeprecated-declarations]
+203870 |   __pyx_t_2 = (__pyx_v_c_id-&gt;attr-&gt;parent == NULL);
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:632:23: note: declared here
+  632 |     xmlAttr          *attr XML_DEPRECATED_MEMBER;
+      |                       ^~~~
+src/lxml/etree.c: In function ‘__pyx_pf_4lxml_5etree_22_DTDElementContentDecl_4name___get__’:
+src/lxml/etree.c:237814:3: warning: ‘name’ is deprecated [-Wdeprecated-declarations]
+237814 |   __pyx_t_2 = __pyx_f_4lxml_5etree_funicodeOrNone(__pyx_v_self-&gt;_c_node-&gt;name); if (unlikely(!__pyx_t_2)) __PYX_ERR(21, 34, __pyx_L1_error)
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:429:32: note: declared here
+  429 |     const xmlChar             *name XML_DEPRECATED_MEMBER;
+      |                                ^~~~
+src/lxml/etree.c: In function ‘__pyx_pf_4lxml_5etree_22_DTDElementContentDecl_4type___get__’:
+src/lxml/etree.c:237889:3: warning: ‘type’ is deprecated [-Wdeprecated-declarations]
+237889 |   __pyx_t_2 = __pyx_v_self-&gt;_c_node-&gt;type;
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:425:31: note: declared here
+  425 |     xmlElementContentType     type XML_DEPRECATED_MEMBER;
+      |                               ^~~~
+src/lxml/etree.c: In function ‘__pyx_pf_4lxml_5etree_22_DTDElementContentDecl_5occur___get__’:
+src/lxml/etree.c:238071:3: warning: ‘ocur’ is deprecated [-Wdeprecated-declarations]
+238071 |   __pyx_t_2 = __pyx_v_self-&gt;_c_node-&gt;ocur;
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:427:31: note: declared here
+  427 |     xmlElementContentOccur    ocur XML_DEPRECATED_MEMBER;
+      |                               ^~~~
+src/lxml/etree.c: In function ‘__pyx_pf_4lxml_5etree_22_DTDElementContentDecl_4left___get__’:
+src/lxml/etree.c:238257:3: warning: ‘c1’ is deprecated [-Wdeprecated-declarations]
+238257 |   __pyx_t_2 = __pyx_v_self-&gt;_c_node-&gt;c1;
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:431:32: note: declared here
+  431 |     struct _xmlElementContent *c1 XML_DEPRECATED_MEMBER;
+      |                                ^~
+src/lxml/etree.c: In function ‘__pyx_pf_4lxml_5etree_22_DTDElementContentDecl_5right___get__’:
+src/lxml/etree.c:238418:3: warning: ‘c2’ is deprecated [-Wdeprecated-declarations]
+238418 |   __pyx_t_2 = __pyx_v_self-&gt;_c_node-&gt;c2;
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:433:32: note: declared here
+  433 |     struct _xmlElementContent *c2 XML_DEPRECATED_MEMBER;
+      |                                ^~
+src/lxml/etree.c: In function ‘__pyx_gb_4lxml_5etree_17_DTDAttributeDecl_4generator13’:
+src/lxml/etree.c:239614:3: warning: ‘tree’ is deprecated [-Wdeprecated-declarations]
+239614 |   __pyx_t_2 = __pyx_cur_scope-&gt;__pyx_v_self-&gt;_c_node-&gt;tree;
+       |   ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:386:29: note: declared here
+  386 |     xmlEnumeration         *tree XML_DEPRECATED_MEMBER;
+      |                             ^~~~
+src/lxml/etree.c:239635:5: warning: ‘name’ is deprecated [-Wdeprecated-declarations]
+239635 |     __pyx_t_4 = __pyx_f_4lxml_5etree_funicode(__pyx_cur_scope-&gt;__pyx_v_c_node-&gt;name); if (unlikely(!__pyx_t_4)) __PYX_ERR(21, 167, __pyx_L1_error)
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:345:31: note: declared here
+  345 |     const xmlChar            *name XML_DEPRECATED_MEMBER;
+      |                               ^~~~
+src/lxml/etree.c:239655:5: warning: ‘next’ is deprecated [-Wdeprecated-declarations]
+239655 |     __pyx_t_2 = __pyx_cur_scope-&gt;__pyx_v_c_node-&gt;next;
+       |     ^~~~~~~~~
+/usr/include/libxml2/libxml/tree.h:343:32: note: declared here
+  343 |     struct _xmlEnumeration    *next XML_DEPRECATED_MEMBER;
+      |                                ^~~~
+src/lxml/etree.c: In function ‘__pyx_pymod_exec_etree’:
+src/lxml/etree.c:283397:3: warning: ‘xmlThrDefIndentTreeOutput’ is deprecated: See https://gnome.pages.gitlab.gnome.org/libxml2/html/deprecated.html [-Wdeprecated-declarations]
+283397 |   (void)(xmlThrDefIndentTreeOutput(1));
+       |   ^
+In file included from src/lxml/etree.c:1304:
+/usr/include/libxml2/libxml/xmlsave.h:141:17: note: declared here
+  141 |                 xmlThrDefIndentTreeOutput(int v);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/lxml/etree.c:283406:3: warning: ‘xmlThrDefLineNumbersDefaultValue’ is deprecated: See https://gnome.pages.gitlab.gnome.org/libxml2/html/deprecated.html [-Wdeprecated-declarations]
+283406 |   (void)(xmlThrDefLineNumbersDefaultValue(1));
+       |   ^
+/usr/include/libxml2/libxml/parser.h:1438:17: note: declared here
+ 1438 |                 xmlThrDefLineNumbersDefaultValue(int v);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-12-08 15:28:12,622 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/objectify.o -L/usr/lib64 -lxslt -lexslt -lxml2 -lrt -lz -lm -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/objectify.cpython-313-x86_64-linux-gnu.so
+2025-12-08 15:28:12,683 root INFO building 'lxml.builder' extension
+2025-12-08 15:28:12,684 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG -fPIC -DCYTHON_CLINE_IN_TRACEBACK=0 -I/usr/include/libxml2 -Isrc -Isrc/lxml/includes -I/usr/include/python3.13 -c src/lxml/builder.c -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/builder.o
+2025-12-08 15:28:18,338 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/builder.o -L/usr/lib64 -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/builder.cpython-313-x86_64-linux-gnu.so
+2025-12-08 15:28:18,379 root INFO building 'lxml._elementpath' extension
+2025-12-08 15:28:18,380 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG -fPIC -DCYTHON_CLINE_IN_TRACEBACK=0 -I/usr/include/libxml2 -Isrc -Isrc/lxml/includes -I/usr/include/python3.13 -c src/lxml/_elementpath.c -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/_elementpath.o
+2025-12-08 15:28:29,021 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/_elementpath.o -L/usr/lib64 -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/_elementpath.cpython-313-x86_64-linux-gnu.so
+2025-12-08 15:28:29,066 root INFO building 'lxml.html.diff' extension
+2025-12-08 15:28:29,066 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/html
+2025-12-08 15:28:29,067 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG -fPIC -DCYTHON_CLINE_IN_TRACEBACK=0 -I/usr/include/libxml2 -Isrc -Isrc/lxml/includes -I/usr/include/python3.13 -c src/lxml/html/diff.c -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/html/diff.o
+2025-12-08 15:28:47,510 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/html/diff.o -L/usr/lib64 -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/diff.cpython-313-x86_64-linux-gnu.so
+2025-12-08 15:28:47,560 root INFO building 'lxml.html._difflib' extension
+2025-12-08 15:28:47,561 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG -fPIC -DCYTHON_CLINE_IN_TRACEBACK=0 -I/usr/include/libxml2 -Isrc -Isrc/lxml/includes -I/usr/include/python3.13 -c src/lxml/html/_difflib.c -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/html/_difflib.o
+2025-12-08 15:29:17,593 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/html/_difflib.o -L/usr/lib64 -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/_difflib.cpython-313-x86_64-linux-gnu.so
+2025-12-08 15:29:17,644 root INFO building 'lxml.sax' extension
+2025-12-08 15:29:17,644 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG -fPIC -DCYTHON_CLINE_IN_TRACEBACK=0 -I/usr/include/libxml2 -Isrc -Isrc/lxml/includes -I/usr/include/python3.13 -c src/lxml/sax.c -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/sax.o
+2025-12-08 15:29:26,323 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/sax.o -L/usr/lib64 -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/sax.cpython-313-x86_64-linux-gnu.so
+2025-12-08 15:29:46,853 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -DNDEBUG /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/temp.linux-x86_64-cpython-313/src/lxml/etree.o -L/usr/lib64 -lxslt -lexslt -lxml2 -lrt -lz -lm -o /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/etree.cpython-313-x86_64-linux-gnu.so
+2025-12-08 15:29:46,991 root INFO installing to /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel
+2025-12-08 15:29:46,991 root INFO running install
+2025-12-08 15:29:47,026 root INFO running install_lib
+2025-12-08 15:29:47,055 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel
+2025-12-08 15:29:47,056 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml
+2025-12-08 15:29:47,056 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/objectpath.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,057 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/relaxng.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,057 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/docloader.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,058 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/etree.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,058 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/schematron.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,058 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml/html
+2025-12-08 15:29:47,059 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/soupparser.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,059 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/defs.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,060 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/html5parser.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,060 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/_setmixin.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,060 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/_html5builder.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,061 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/diff.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,061 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/diff.cpython-313-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,062 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/usedoctest.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,062 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/builder.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,063 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/_diffcommand.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,063 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/_difflib.cpython-313-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,064 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/ElementSoup.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,065 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/_difflib.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,065 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/formfill.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,066 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/clean.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,066 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/html/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/html
+2025-12-08 15:29:47,067 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/doctestcompare.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,067 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/debug.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,067 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/saxparser.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,068 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/classlookup.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,068 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/proxy.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,069 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/etree.cpython-313-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,072 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/xmlerror.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,072 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/usedoctest.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,073 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/ElementInclude.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,073 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/parser.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,074 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/cleanup.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,074 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/builder.cpython-313-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,075 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/builder.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,075 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/public-api.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,075 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/dtd.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,076 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/xslt.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,076 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/_elementpath.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,077 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/apihelpers.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,077 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/etree.pyx -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,078 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/pyclasslookup.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,078 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/lxml.etree_api.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,079 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml/includes
+2025-12-08 15:29:47,079 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/tree.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,080 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/lxml-version.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,080 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/xslt.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,081 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/uri.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,081 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/xinclude.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,081 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/schematron.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,082 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/config.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,082 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/htmlparser.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,083 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/xmlerror.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,083 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/__init__.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,084 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/etree_defs.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,084 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/dtdvalid.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,085 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,085 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/xmlparser.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,086 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/etreepublic.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,086 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/c14n.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,086 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/xmlschema.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,087 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/relaxng.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,087 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/includes/xpath.pxd -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/includes
+2025-12-08 15:29:47,088 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/parsertarget.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,088 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml/isoschematron
+2025-12-08 15:29:47,089 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml/isoschematron/resources
+2025-12-08 15:29:47,089 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml/isoschematron/resources/rng
+2025-12-08 15:29:47,089 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/rng/iso-schematron.rng -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/rng
+2025-12-08 15:29:47,090 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml/isoschematron/resources/xsl
+2025-12-08 15:29:47,090 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl
+2025-12-08 15:29:47,091 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:29:47,091 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:29:47,092 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:29:47,092 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:29:47,093 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:29:47,093 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:29:47,093 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl/iso-schematron-xslt1
+2025-12-08 15:29:47,094 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron/resources/xsl
+2025-12-08 15:29:47,094 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/isoschematron/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml/isoschematron
+2025-12-08 15:29:47,095 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/sax.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,095 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/objectify.cpython-313-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,096 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/xsltext.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,097 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/cssselect.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,097 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/xmlschema.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,098 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/objectify.pyx -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,098 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/nsclasses.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,099 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/_elementpath.cpython-313-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,099 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/readonlytree.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,100 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/__init__.py -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,100 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/lxml.etree.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,101 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/iterparse.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,101 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/xpath.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,101 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/etree_api.h -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,102 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/sax.cpython-313-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,103 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/serializer.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,103 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/extensions.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,104 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/xmlid.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,104 root INFO copying /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/lib.linux-x86_64-cpython-313/lxml/xinclude.pxi -&gt; /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml
+2025-12-08 15:29:47,104 root WARNING warning: install_lib: byte-compiling is disabled, skipping.
+
+2025-12-08 15:29:47,105 root INFO running install_egg_info
+2025-12-08 15:29:47,127 root INFO running egg_info
+2025-12-08 15:29:47,148 root INFO creating src/lxml.egg-info
+2025-12-08 15:29:47,149 root INFO writing src/lxml.egg-info/PKG-INFO
+2025-12-08 15:29:47,151 root INFO writing dependency_links to src/lxml.egg-info/dependency_links.txt
+2025-12-08 15:29:47,153 root INFO writing requirements to src/lxml.egg-info/requires.txt
+2025-12-08 15:29:47,153 root INFO writing top-level names to src/lxml.egg-info/top_level.txt
+2025-12-08 15:29:47,154 root INFO writing manifest file 'src/lxml.egg-info/SOURCES.txt'
+2025-12-08 15:29:47,162 root INFO dependency /usr/include/libxml2/libxml/HTMLtree.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,162 root INFO dependency /usr/include/libxml2/libxml/chvalid.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,162 root INFO dependency /usr/include/libxml2/libxml/encoding.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/globals.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/hash.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/tree.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/uri.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/valid.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/xmlIO.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/xmlmemory.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/xmlsave.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/xmlstring.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,163 root INFO dependency /usr/include/libxml2/libxml/xmlversion.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,175 root INFO dependency /usr/include/libxml2/libxml/HTMLtree.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,175 root INFO dependency /usr/include/libxml2/libxml/chvalid.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,175 root INFO dependency /usr/include/libxml2/libxml/encoding.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,175 root INFO dependency /usr/include/libxml2/libxml/globals.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,175 root INFO dependency /usr/include/libxml2/libxml/hash.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/tree.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/uri.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/valid.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/xmlIO.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/xmlmemory.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/xmlsave.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/xmlstring.h won't be automatically included in the manifest: the path must be relative
+2025-12-08 15:29:47,176 root INFO dependency /usr/include/libxml2/libxml/xmlversion.h won't be automatically included in the manifest: the path must be relative
+[12/08/25 15:29:47] ERROR    listing git files failed - pretending there aren't any                                                                    git.py:26
+2025-12-08 15:29:47,292 root INFO reading manifest file 'src/lxml.egg-info/SOURCES.txt'
+2025-12-08 15:29:47,292 root INFO reading manifest template 'MANIFEST.in'
+2025-12-08 15:29:47,649 root WARNING warning: no files found matching '*.html' under directory 'doc'
+2025-12-08 15:29:47,682 root WARNING warning: no files found matching '*.js' under directory 'doc/html/apidoc'
+2025-12-08 15:29:47,683 root WARNING warning: no files found matching '*.png' under directory 'doc/html/apidoc'
+2025-12-08 15:29:47,683 root WARNING warning: no files found matching '*.inv' under directory 'doc/html/apidoc'
+2025-12-08 15:29:47,692 root INFO adding license file 'LICENSE.txt'
+2025-12-08 15:29:47,692 root INFO adding license file 'LICENSES.txt'
+2025-12-08 15:29:47,704 root INFO writing manifest file 'src/lxml.egg-info/SOURCES.txt'
+2025-12-08 15:29:47,705 root INFO Copying src/lxml.egg-info to /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/./lxml-6.0.2-py3.13.egg-info
+2025-12-08 15:29:47,708 root INFO running install_scripts
+2025-12-08 15:29:47,756 root INFO creating /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel/lxml-6.0.2.dist-info/WHEEL
+2025-12-08 15:29:47,757 wheel INFO creating '/var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/wheel/.tmp-l0mow7hc/lxml-6.0.2-cp313-cp313-linux_x86_64.whl' and adding '/var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel' to it
+2025-12-08 15:29:47,758 wheel INFO adding 'lxml/ElementInclude.py'
+2025-12-08 15:29:47,758 wheel INFO adding 'lxml/__init__.py'
+2025-12-08 15:29:47,759 wheel INFO adding 'lxml/_elementpath.cpython-313-x86_64-linux-gnu.so'
+2025-12-08 15:29:47,760 wheel INFO adding 'lxml/_elementpath.py'
+2025-12-08 15:29:47,760 wheel INFO adding 'lxml/apihelpers.pxi'
+2025-12-08 15:29:47,761 wheel INFO adding 'lxml/builder.cpython-313-x86_64-linux-gnu.so'
+2025-12-08 15:29:47,762 wheel INFO adding 'lxml/builder.py'
+2025-12-08 15:29:47,762 wheel INFO adding 'lxml/classlookup.pxi'
+2025-12-08 15:29:47,762 wheel INFO adding 'lxml/cleanup.pxi'
+2025-12-08 15:29:47,763 wheel INFO adding 'lxml/cssselect.py'
+2025-12-08 15:29:47,763 wheel INFO adding 'lxml/debug.pxi'
+2025-12-08 15:29:47,763 wheel INFO adding 'lxml/docloader.pxi'
+2025-12-08 15:29:47,764 wheel INFO adding 'lxml/doctestcompare.py'
+2025-12-08 15:29:47,764 wheel INFO adding 'lxml/dtd.pxi'
+2025-12-08 15:29:47,768 wheel INFO adding 'lxml/etree.cpython-313-x86_64-linux-gnu.so'
+2025-12-08 15:29:47,775 wheel INFO adding 'lxml/etree.h'
+2025-12-08 15:29:47,775 wheel INFO adding 'lxml/etree.pyx'
+2025-12-08 15:29:47,776 wheel INFO adding 'lxml/etree_api.h'
+2025-12-08 15:29:47,777 wheel INFO adding 'lxml/extensions.pxi'
+2025-12-08 15:29:47,777 wheel INFO adding 'lxml/iterparse.pxi'
+2025-12-08 15:29:47,777 wheel INFO adding 'lxml/lxml.etree.h'
+2025-12-08 15:29:47,778 wheel INFO adding 'lxml/lxml.etree_api.h'
+2025-12-08 15:29:47,778 wheel INFO adding 'lxml/nsclasses.pxi'
+2025-12-08 15:29:47,779 wheel INFO adding 'lxml/objectify.cpython-313-x86_64-linux-gnu.so'
+2025-12-08 15:29:47,781 wheel INFO adding 'lxml/objectify.pyx'
+2025-12-08 15:29:47,781 wheel INFO adding 'lxml/objectpath.pxi'
+2025-12-08 15:29:47,782 wheel INFO adding 'lxml/parser.pxi'
+2025-12-08 15:29:47,782 wheel INFO adding 'lxml/parsertarget.pxi'
+2025-12-08 15:29:47,783 wheel INFO adding 'lxml/proxy.pxi'
+2025-12-08 15:29:47,783 wheel INFO adding 'lxml/public-api.pxi'
+2025-12-08 15:29:47,783 wheel INFO adding 'lxml/pyclasslookup.py'
+2025-12-08 15:29:47,784 wheel INFO adding 'lxml/readonlytree.pxi'
+2025-12-08 15:29:47,784 wheel INFO adding 'lxml/relaxng.pxi'
+2025-12-08 15:29:47,785 wheel INFO adding 'lxml/sax.cpython-313-x86_64-linux-gnu.so'
+2025-12-08 15:29:47,786 wheel INFO adding 'lxml/sax.py'
+2025-12-08 15:29:47,786 wheel INFO adding 'lxml/saxparser.pxi'
+2025-12-08 15:29:47,787 wheel INFO adding 'lxml/schematron.pxi'
+2025-12-08 15:29:47,787 wheel INFO adding 'lxml/serializer.pxi'
+2025-12-08 15:29:47,788 wheel INFO adding 'lxml/usedoctest.py'
+2025-12-08 15:29:47,788 wheel INFO adding 'lxml/xinclude.pxi'
+2025-12-08 15:29:47,788 wheel INFO adding 'lxml/xmlerror.pxi'
+2025-12-08 15:29:47,789 wheel INFO adding 'lxml/xmlid.pxi'
+2025-12-08 15:29:47,789 wheel INFO adding 'lxml/xmlschema.pxi'
+2025-12-08 15:29:47,790 wheel INFO adding 'lxml/xpath.pxi'
+2025-12-08 15:29:47,790 wheel INFO adding 'lxml/xslt.pxi'
+2025-12-08 15:29:47,790 wheel INFO adding 'lxml/xsltext.pxi'
+2025-12-08 15:29:47,791 wheel INFO adding 'lxml/html/ElementSoup.py'
+2025-12-08 15:29:47,791 wheel INFO adding 'lxml/html/__init__.py'
+2025-12-08 15:29:47,792 wheel INFO adding 'lxml/html/_diffcommand.py'
+2025-12-08 15:29:47,793 wheel INFO adding 'lxml/html/_difflib.cpython-313-x86_64-linux-gnu.so'
+2025-12-08 15:29:47,795 wheel INFO adding 'lxml/html/_difflib.py'
+2025-12-08 15:29:47,796 wheel INFO adding 'lxml/html/_html5builder.py'
+2025-12-08 15:29:47,796 wheel INFO adding 'lxml/html/_setmixin.py'
+2025-12-08 15:29:47,796 wheel INFO adding 'lxml/html/builder.py'
+2025-12-08 15:29:47,797 wheel INFO adding 'lxml/html/clean.py'
+2025-12-08 15:29:47,797 wheel INFO adding 'lxml/html/defs.py'
+2025-12-08 15:29:47,798 wheel INFO adding 'lxml/html/diff.cpython-313-x86_64-linux-gnu.so'
+2025-12-08 15:29:47,799 wheel INFO adding 'lxml/html/diff.py'
+2025-12-08 15:29:47,800 wheel INFO adding 'lxml/html/formfill.py'
+2025-12-08 15:29:47,800 wheel INFO adding 'lxml/html/html5parser.py'
+2025-12-08 15:29:47,801 wheel INFO adding 'lxml/html/soupparser.py'
+2025-12-08 15:29:47,801 wheel INFO adding 'lxml/html/usedoctest.py'
+2025-12-08 15:29:47,801 wheel INFO adding 'lxml/includes/__init__.pxd'
+2025-12-08 15:29:47,802 wheel INFO adding 'lxml/includes/__init__.py'
+2025-12-08 15:29:47,802 wheel INFO adding 'lxml/includes/c14n.pxd'
+2025-12-08 15:29:47,802 wheel INFO adding 'lxml/includes/config.pxd'
+2025-12-08 15:29:47,803 wheel INFO adding 'lxml/includes/dtdvalid.pxd'
+2025-12-08 15:29:47,803 wheel INFO adding 'lxml/includes/etree_defs.h'
+2025-12-08 15:29:47,804 wheel INFO adding 'lxml/includes/etreepublic.pxd'
+2025-12-08 15:29:47,804 wheel INFO adding 'lxml/includes/htmlparser.pxd'
+2025-12-08 15:29:47,804 wheel INFO adding 'lxml/includes/lxml-version.h'
+2025-12-08 15:29:47,805 wheel INFO adding 'lxml/includes/relaxng.pxd'
+2025-12-08 15:29:47,805 wheel INFO adding 'lxml/includes/schematron.pxd'
+2025-12-08 15:29:47,805 wheel INFO adding 'lxml/includes/tree.pxd'
+2025-12-08 15:29:47,806 wheel INFO adding 'lxml/includes/uri.pxd'
+2025-12-08 15:29:47,806 wheel INFO adding 'lxml/includes/xinclude.pxd'
+2025-12-08 15:29:47,806 wheel INFO adding 'lxml/includes/xmlerror.pxd'
+2025-12-08 15:29:47,807 wheel INFO adding 'lxml/includes/xmlparser.pxd'
+2025-12-08 15:29:47,807 wheel INFO adding 'lxml/includes/xmlschema.pxd'
+2025-12-08 15:29:47,808 wheel INFO adding 'lxml/includes/xpath.pxd'
+2025-12-08 15:29:47,808 wheel INFO adding 'lxml/includes/xslt.pxd'
+2025-12-08 15:29:47,808 wheel INFO adding 'lxml/isoschematron/__init__.py'
+2025-12-08 15:29:47,809 wheel INFO adding 'lxml/isoschematron/resources/rng/iso-schematron.rng'
+2025-12-08 15:29:47,810 wheel INFO adding 'lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl'
+2025-12-08 15:29:47,810 wheel INFO adding 'lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl'
+2025-12-08 15:29:47,810 wheel INFO adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl'
+2025-12-08 15:29:47,811 wheel INFO adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl'
+2025-12-08 15:29:47,811 wheel INFO adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl'
+2025-12-08 15:29:47,812 wheel INFO adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl'
+2025-12-08 15:29:47,812 wheel INFO adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl'
+2025-12-08 15:29:47,813 wheel INFO adding 'lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt'
+2025-12-08 15:29:47,813 wheel INFO adding 'lxml-6.0.2.dist-info/licenses/LICENSE.txt'
+2025-12-08 15:29:47,814 wheel INFO adding 'lxml-6.0.2.dist-info/licenses/LICENSES.txt'
+2025-12-08 15:29:47,814 wheel INFO adding 'lxml-6.0.2.dist-info/METADATA'
+2025-12-08 15:29:47,814 wheel INFO adding 'lxml-6.0.2.dist-info/WHEEL'
+2025-12-08 15:29:47,815 wheel INFO adding 'lxml-6.0.2.dist-info/top_level.txt'
+2025-12-08 15:29:47,815 wheel INFO adding 'lxml-6.0.2.dist-info/RECORD'
+2025-12-08 15:29:47,816 root INFO removing /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/build0/bdist.linux-x86_64/wheel
+2025-12-08 15:29:47,826 gpep517 INFO The backend produced /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/wheel/lxml-6.0.2-cp313-cp313-linux_x86_64.whl
+ <span class="ansi32">*</span>   Installing lxml-6.0.2-cp313-cp313-linux_x86_64.whl to /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/install
+python3.13 -m gpep517 install-wheel --destdir=/var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/install --interpreter=/usr/bin/python3.13 --prefix=/usr --optimize=all /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/wheel/lxml-6.0.2-cp313-cp313-linux_x86_64.whl
+2025-12-08 15:29:48,654 gpep517 INFO Installing /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/wheel/lxml-6.0.2-cp313-cp313-linux_x86_64.whl into /var/tmp/portage/dev-python/lxml-6.0.2/work/lxml-lxml-6.0.2-python3_13/install
+2025-12-08 15:29:49,086 gpep517 INFO Installation complete
+ <span class="ansi32">*</span> Checking whether python3_14 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.14 in global scope
+ <span class="ansi32">*</span> python3_14: running distutils-r1_run_phase python_compile_all
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-python/lxml-6.0.2
+
+&gt;&gt;&gt; Install dev-python/lxml-6.0.2 into /var/tmp/portage/dev-python/lxml-6.0.2/image
+ <span class="ansi32">*</span> python3_13: running distutils-r1_run_phase distutils-r1_python_install
+ <span class="ansi32">*</span> Checking whether python3_14 is suitable ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Using python3.14 in global scope
+ <span class="ansi32">*</span> python3_14: running distutils-r1_run_phase python_install_all
+&gt;&gt;&gt; Completed installing dev-python/lxml-6.0.2 into /var/tmp/portage/dev-python/lxml-6.0.2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 44692 KiB (43.6 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   7480 KiB ( 7.3 MiB)
+
+ <span class="ansi32">*</span> Verifying compiled files for python3.13
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib/python3.13/site-packages/lxml/_elementpath.cpython-313-x86_64-linux-gnu.so
+   /usr/lib/python3.13/site-packages/lxml/builder.cpython-313-x86_64-linux-gnu.so
+   /usr/lib/python3.13/site-packages/lxml/objectify.cpython-313-x86_64-linux-gnu.so
+   /usr/lib/python3.13/site-packages/lxml/etree.cpython-313-x86_64-linux-gnu.so
+   /usr/lib/python3.13/site-packages/lxml/sax.cpython-313-x86_64-linux-gnu.so
+   /usr/lib/python3.13/site-packages/lxml/html/_difflib.cpython-313-x86_64-linux-gnu.so
+   /usr/lib/python3.13/site-packages/lxml/html/diff.cpython-313-x86_64-linux-gnu.so
+ <span class="ansi1 ansi32">*</span> Install additional packages for optional runtime features:
+ <span class="ansi1 ansi32">*</span>   dev-python/beautifulsoup4 for Support for BeautifulSoup as a parser backend
+ <span class="ansi1 ansi32">*</span>   dev-python/cssselect for Translates CSS selectors to XPath 1.0 expressions
+ <span class="ansi1 ansi32">*</span>   dev-python/lxml-html-clean for Support for lxml.html.clean sanitizer
+
+</pre>
+</body>
+
+</html>
