@@ -207,6 +207,8 @@ fi
 
 echo "<center><h3>any help needed or your support is appreciated. Msg right away!</h3></center>" >> index.html.tmp.1
 
+echo "<center><h3><a href="https://github.com/h0n3ym4k/h0n3ym4k.github.io/commits/main/portage-build-log">full commit history</a></h3></center>"
+
 echo "<!-- error - red -->" >> index.html.tmp.1
 echo "" >> index.html.tmp.1
 echo "<!-- QA Notice - yellow -->" >> index.html.tmp.1
