@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ -z "$(ps auxww|grep -i tcpdump|grep -v grep)" ];then
+#sleep 5 && nohup /usr/sbin/tcpdump -vvv -s 0 -i enp0s8 -G 3600 -W 24 -w /enp0s8-%H.pcap &
+	/usr/sbin/tcpdump -vvv -s 0 -i enp0s8 -G 3600 -W 24 -w /enp0s8-%H.pcap &
+fi
