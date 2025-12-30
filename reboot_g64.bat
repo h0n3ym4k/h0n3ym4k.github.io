@@ -7,6 +7,7 @@ REM Check if the file exists
 if exist "%filepath%" (
     call :acpipowerbutton
     timeout /t 20 /nobreak > NUL
+    netsh wlan connect HHOOMMEE24
     call :startvm
     timeout /t 10 /nobreak > NUL
 ) else (
@@ -23,10 +24,12 @@ REM "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" acpipowe
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" nic2 null
 timeout /t 20 /nobreak > NUL
 del "%filepath%"
+netsh wlan connect HHOOMMEE24
 REM exit /b
 
 :startvm
 echo File does not exist. Executing startvm function...
+netsh wlan connect HHOOMMEE24
 REM Add your startvm commands here
 REM "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm "g64"
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" nic2 bridged "Intel(R) Dual Band Wireless-AC 8265"
