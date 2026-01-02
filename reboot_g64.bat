@@ -24,6 +24,7 @@ REM "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" acpipowe
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "g64" nic2 null
 timeout /t 20 /nobreak > NUL
 del "%filepath%"
+del "CANNOT_PING*"
 netsh wlan connect HHOOMMEE24
 REM exit /b
 
