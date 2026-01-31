@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    app-dicts/aspell-ro-3.3.10-r1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: conikost@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'aspell5-ro-3.3.10.tar.bz2' to /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/work/aspell5-ro-3.3.10 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/work/aspell5-ro-3.3.10 ...
+Finding Dictionary file location ... /usr/lib64/aspell-0.60
+Finding Data file location ... /usr/lib64/aspell-0.60
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/work/aspell5-ro-3.3.10 ...
+make -j2 
+/usr/bin/word-list-compress d &lt; ro.cwl | /usr/bin/aspell  --lang=ro create master ./ro.rws
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: app-dicts/aspell-ro-3.3.10-r1
+
+&gt;&gt;&gt; Install app-dicts/aspell-ro-3.3.10-r1 into /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image
+make -j2 DESTDIR=/var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image install 
+mkdir -p /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image/usr/lib64/aspell-0.60/
+cp ro.rws ro.multi romanian.alias /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image/usr/lib64/aspell-0.60/
+cd /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image/usr/lib64/aspell-0.60/ &amp;&amp; chmod 644 ro.rws ro.multi romanian.alias
+mkdir -p /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image/usr/lib64/aspell-0.60/
+cp ro.dat /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image/usr/lib64/aspell-0.60/
+cd /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image/usr/lib64/aspell-0.60/ &amp;&amp; chmod 644 ro.dat
+&gt;&gt;&gt; Completed installing app-dicts/aspell-ro-3.3.10-r1 into /var/tmp/portage/app-dicts/aspell-ro-3.3.10-r1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 46376 KiB (45.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  41044 KiB (40.0 MiB)
+
+
+</pre>
+</body>
+
+</html>
