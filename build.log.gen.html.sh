@@ -238,7 +238,43 @@ do
 	echo "<br/>" >> index.html.tmp.2
 done
 
-echo "<center><h2>if you have come to this far,<br/>pls consider buying me a coffee</h2></center>" >> index.html.tmp.3
+echo "<style>" >> index.html.tmp.3
+echo " .marquee-container {" >> index.html.tmp.3
+echo "  width: 100%;" >> index.html.tmp.3
+echo "  overflow: hidden;" >> index.html.tmp.3
+echo "  background: \#fdf5e6;" >> index.html.tmp.3
+echo "  padding: 10px 0;" >> index.html.tmp.3
+echo "  border: 2px solid \#6f4e37; /* Optional border to see the \"walls\" */" >> index.html.tmp.3
+echo " }" >> index.html.tmp.3
+echo "" >> index.html.tmp.3
+echo " .marquee-text {" >> index.html.tmp.3
+echo "  display: inline-block;" >> index.html.tmp.3
+echo "  font-size: 2rem;" >> index.html.tmp.3
+echo "  font-weight: bold;" >> index.html.tmp.3
+echo "  color: \#6f4e37;" >> index.html.tmp.3
+echo "" >> index.html.tmp.3
+echo "  /* Use \'alternate\' to bounce back and forth */" >> index.html.tmp.3
+echo "  animation: coffee-bounce 5s linear infinite alternate;" >> index.html.tmp.3
+echo " }" >> index.html.tmp.3
+echo "" >> index.html.tmp.3
+echo " @keyframes coffee-bounce {" >> index.html.tmp.3
+echo "  from {" >> index.html.tmp.3
+echo "    transform: translateX(0%); /* Start at the left wall */" >> index.html.tmp.3
+echo "  }" >> index.html.tmp.3
+echo "  to {" >> index.html.tmp.3
+echo "    /* calc(100% - 100%) makes it hit the right wall perfectly" >> index.html.tmp.3
+echo "       regardless of container width */" >> index.html.tmp.3
+echo "    transform: translateX(calc(100% - 100px));" >> index.html.tmp.3
+echo "  }" >> index.html.tmp.3
+echo " }" >> index.html.tmp.3
+echo "</style>" >> index.html.tmp.3
+
+echo "<div class=\"marquee-container\">" >> index.html.tmp.3
+
+#echo "<center><h2><p class>if you have come to this far,<br/>pls consider buying me a coffee</p></h2></center>" >> index.html.tmp.3
+echo "<h2><span class=\"marquee-text\">if you have come to this far,<br/>pls consider buying me a coffee</span></h2>" >> index.html.tmp.3
+
+echo "</div>" >> index.html.tmp.3
 
 echo "</body>" >> index.html.tmp.3
 echo "</html>" >> index.html.tmp.3
