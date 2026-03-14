@@ -1,0 +1,1026 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    sys-devel/bin86-0.16.21-r2:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'bin86-0.16.21.tar.gz' to /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21 ...
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21 ...
+make -j2 
+set -e ; for d in ld as; do \
+  (cd $d &amp;&amp; make "LIBS=" "CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE " "LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs" "BINDIR=/usr/bin" "LIBDIR=/usr/lib" "CC=x86_64-pc-linux-gnu-gcc" all;); \
+ done
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c dumps.c -o dumps.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c io.c -o io.o
+io.c: In function ‘ioinit’:
+io.c:63:13: warning: old-style function definition [-Wold-style-definition]
+   63 | PUBLIC void ioinit(progname)
+      |             ^~~~~~
+io.c: In function ‘errtrace’:
+io.c:120:13: warning: old-style function definition [-Wold-style-definition]
+  120 | PUBLIC void errtrace(name, level)
+      |             ^~~~~~~~
+io.c: In function ‘openin’:
+io.c:177:13: warning: old-style function definition [-Wold-style-definition]
+  177 | PUBLIC void openin(filename)
+      |             ^~~~~~
+io.c: In function ‘openout’:
+io.c:196:13: warning: old-style function definition [-Wold-style-definition]
+  196 | PUBLIC void openout(filename)
+      |             ^~~~~~~
+io.c: In function ‘outhexdigs’:
+io.c:231:14: warning: old-style function definition [-Wold-style-definition]
+  231 | PRIVATE void outhexdigs(num)
+      |              ^~~~~~~~~~
+io.c: In function ‘put04x’:
+io.c:242:14: warning: old-style function definition [-Wold-style-definition]
+  242 | PRIVATE void put04x(num)
+      |              ^~~~~~
+io.c: In function ‘put08lx’:
+io.c:253:13: warning: old-style function definition [-Wold-style-definition]
+  253 | PUBLIC void put08lx(num)
+      |             ^~~~~~~
+io.c: In function ‘putbstr’:
+io.c:271:13: warning: old-style function definition [-Wold-style-definition]
+  271 | PUBLIC void putbstr(width, str)
+      |             ^~~~~~~
+io.c: In function ‘putbyte’:
+io.c:282:13: warning: old-style function definition [-Wold-style-definition]
+  282 | PUBLIC void putbyte(ch)
+      |             ^~~~~~~
+io.c: In function ‘putstr’:
+io.c:297:13: warning: old-style function definition [-Wold-style-definition]
+  297 | PUBLIC void putstr(message)
+      |             ^~~~~~
+io.c: In function ‘putstrn’:
+io.c:304:14: warning: old-style function definition [-Wold-style-definition]
+  304 | PRIVATE void putstrn(message)
+      |              ^~~~~~~
+io.c: In function ‘readin’:
+io.c:336:13: warning: old-style function definition [-Wold-style-definition]
+  336 | PUBLIC void readin(buf, count)
+      |             ^~~~~~
+io.c: In function ‘readineofok’:
+io.c:350:16: warning: old-style function definition [-Wold-style-definition]
+  350 | PUBLIC bool_pt readineofok(buf, count)
+      |                ^~~~~~~~~~~
+io.c: In function ‘seekin’:
+io.c:365:13: warning: old-style function definition [-Wold-style-definition]
+  365 | PUBLIC void seekin(offset)
+      |             ^~~~~~
+io.c: In function ‘seekout’:
+io.c:373:13: warning: old-style function definition [-Wold-style-definition]
+  373 | PUBLIC void seekout(offset)
+      |             ^~~~~~~
+io.c: In function ‘seektrel’:
+io.c:382:13: warning: old-style function definition [-Wold-style-definition]
+  382 | PUBLIC void seektrel(offset)
+      |             ^~~~~~~~
+io.c: In function ‘writechar’:
+io.c:391:13: warning: old-style function definition [-Wold-style-definition]
+  391 | PUBLIC void writechar(ch)
+      |             ^~~~~~~~~
+io.c: In function ‘writedrel’:
+io.c:407:13: warning: old-style function definition [-Wold-style-definition]
+  407 | PUBLIC void writedrel(buf, count)
+      |             ^~~~~~~~~
+io.c: In function ‘writeout’:
+io.c:424:13: warning: old-style function definition [-Wold-style-definition]
+  424 | PUBLIC void writeout(buf, count)
+      |             ^~~~~~~~
+io.c: In function ‘writetrel’:
+io.c:445:13: warning: old-style function definition [-Wold-style-definition]
+  445 | PUBLIC void writetrel(buf, count)
+      |             ^~~~~~~~~
+io.c: In function ‘errexit’:
+io.c:468:14: warning: old-style function definition [-Wold-style-definition]
+  468 | PRIVATE void errexit(message)
+      |              ^~~~~~~
+io.c: In function ‘fatalerror’:
+io.c:475:13: warning: old-style function definition [-Wold-style-definition]
+  475 | PUBLIC void fatalerror(message)
+      |             ^~~~~~~~~~
+io.c: In function ‘inputerror’:
+io.c:482:13: warning: old-style function definition [-Wold-style-definition]
+  482 | PUBLIC void inputerror(message)
+      |             ^~~~~~~~~~
+io.c: In function ‘input1error’:
+io.c:491:13: warning: old-style function definition [-Wold-style-definition]
+  491 | PUBLIC void input1error(message)
+      |             ^~~~~~~~~~~
+io.c: In function ‘outputerror’:
+io.c:499:14: warning: old-style function definition [-Wold-style-definition]
+  499 | PRIVATE void outputerror(message)
+      |              ^~~~~~~~~~~
+io.c: In function ‘redefined’:
+io.c:518:13: warning: old-style function definition [-Wold-style-definition]
+  518 | PUBLIC void redefined(name, message, archentry, deffilename, defarchentry)
+      |             ^~~~~~~~~
+io.c: In function ‘interseg’:
+io.c:550:13: warning: old-style function definition [-Wold-style-definition]
+  550 | PUBLIC void interseg(fname, aname, name)
+      |             ^~~~~~~~
+io.c: In function ‘reserved’:
+io.c:577:13: warning: old-style function definition [-Wold-style-definition]
+  577 | PUBLIC void reserved(name)
+      |             ^~~~~~~~
+io.c: In function ‘size_error’:
+io.c:586:13: warning: old-style function definition [-Wold-style-definition]
+  586 | PUBLIC void size_error(seg, count, size)
+      |             ^~~~~~~~~~
+io.c: In function ‘undefined’:
+io.c:601:13: warning: old-style function definition [-Wold-style-definition]
+  601 | PUBLIC void undefined(name)
+      |             ^~~~~~~~~
+io.c: In function ‘use_error’:
+io.c:637:13: warning: old-style function definition [-Wold-style-definition]
+  637 | PUBLIC void use_error(message)
+      |             ^~~~~~~~~
+io.c: In function ‘flusherr’:
+io.c:142:8: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  142 |        write(errfil, errbuf, (unsigned) (errbufptr - errbuf));
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c ld.c -o ld.o
+ld.c: In function ‘buildname’:
+ld.c:42:15: warning: old-style function definition [-Wold-style-definition]
+   42 | PRIVATE char *buildname(pre, mid, suf)
+      |               ^~~~~~~~~
+ld.c: In function ‘expandlib’:
+ld.c:56:15: warning: old-style function definition [-Wold-style-definition]
+   56 | PRIVATE char *expandlib(fn)
+      |               ^~~~~~~~~
+ld.c: In function ‘main’:
+ld.c:76:12: warning: old-style function definition [-Wold-style-definition]
+   76 | PUBLIC int main(argc, argv)
+      |            ^~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c readobj.c -o readobj.o
+readobj.c: In function ‘readsyms’:
+readobj.c:52:13: warning: old-style function definition [-Wold-style-definition]
+   52 | PUBLIC void readsyms(filename, trace)
+      |             ^~~~~~~~
+readobj.c: In function ‘readarheader’:
+readobj.c:105:14: warning: old-style function definition [-Wold-style-definition]
+  105 | PRIVATE long readarheader(parchentry)
+      |              ^~~~~~~~~~~~
+readobj.c: In function ‘readmodule’:
+readobj.c:144:14: warning: old-style function definition [-Wold-style-definition]
+  144 | PRIVATE void readmodule(filename, archentry)
+      |              ^~~~~~~~~~
+readobj.c: In function ‘entrysym’:
+readobj.c:227:13: warning: old-style function definition [-Wold-style-definition]
+  227 | PUBLIC void entrysym(symptr)
+      |             ^~~~~~~~
+readobj.c: In function ‘redsym’:
+readobj.c:290:17: warning: old-style function definition [-Wold-style-definition]
+  290 | PRIVATE bool_pt redsym(symptr, value)
+      |                 ^~~~~~
+readobj.c: In function ‘checksum’:
+readobj.c:332:18: warning: old-style function definition [-Wold-style-definition]
+  332 | PRIVATE unsigned checksum(string, length)
+      |                  ^~~~~~~~
+readobj.c: In function ‘readconvsize’:
+readobj.c:343:18: warning: old-style function definition [-Wold-style-definition]
+  343 | PUBLIC bin_off_t readconvsize(countindex)
+      |                  ^~~~~~~~~~~~
+readobj.c: In function ‘readsize’:
+readobj.c:349:18: warning: old-style function definition [-Wold-style-definition]
+  349 | PUBLIC bin_off_t readsize(count)
+      |                  ^~~~~~~~
+readobj.c: In function ‘segbits’:
+readobj.c:360:18: warning: old-style function definition [-Wold-style-definition]
+  360 | PRIVATE unsigned segbits(seg, sizedesc)
+      |                  ^~~~~~~
+readobj.c: In function ‘segsizecount’:
+readobj.c:368:17: warning: old-style function definition [-Wold-style-definition]
+  368 | PUBLIC unsigned segsizecount(seg, modptr)
+      |                 ^~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c table.c -o table.o
+table.c: In function ‘addsym’:
+table.c:48:26: warning: old-style function definition [-Wold-style-definition]
+   48 | PUBLIC struct symstruct *addsym(name)
+      |                          ^~~~~~
+table.c: In function ‘findsym’:
+table.c:79:26: warning: old-style function definition [-Wold-style-definition]
+   79 | PUBLIC struct symstruct *findsym(name)
+      |                          ^~~~~~~
+table.c: In function ‘gethashptr’:
+table.c:93:28: warning: old-style function definition [-Wold-style-definition]
+   93 | PRIVATE struct symstruct **gethashptr(name)
+      |                            ^~~~~~~~~~
+table.c: In function ‘moveup’:
+table.c:134:14: warning: old-style function definition [-Wold-style-definition]
+  134 | PUBLIC char *moveup(nbytes)
+      |              ^~~~~~
+table.c: In function ‘ourmalloc’:
+table.c:153:14: warning: old-style function definition [-Wold-style-definition]
+  153 | PUBLIC char *ourmalloc(nbytes)
+      |              ^~~~~~~~~
+table.c: In function ‘ourfree’:
+table.c:167:13: warning: old-style function definition [-Wold-style-definition]
+  167 | PUBLIC void ourfree(cptr)
+      |             ^~~~~~~
+table.c: In function ‘release’:
+table.c:200:13: warning: old-style function definition [-Wold-style-definition]
+  200 | PUBLIC void release(cptr)
+      |             ^~~~~~~
+table.c: In function ‘stralloc’:
+table.c:226:14: warning: old-style function definition [-Wold-style-definition]
+  226 | PUBLIC char *stralloc(s)
+      |              ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c typeconv.c -o typeconv.o
+typeconv.c: In function ‘xxerr’:
+typeconv.c:14:6: warning: old-style function definition [-Wold-style-definition]
+   14 | void xxerr(x) char * x; { write(2, x, strlen(x)); }
+      |      ^~~~~
+typeconv.c: In function ‘typeconv_init’:
+typeconv.c:21:16: warning: old-style function definition [-Wold-style-definition]
+   21 | PUBLIC bool_pt typeconv_init(big_endian, long_big_endian)
+      |                ^~~~~~~~~~~~~
+typeconv.c: In function ‘u2c2’:
+typeconv.c:46:13: warning: old-style function definition [-Wold-style-definition]
+   46 | PUBLIC void u2c2(buf, offset)
+      |             ^~~~
+typeconv.c: In function ‘u4c4’:
+typeconv.c:61:13: warning: old-style function definition [-Wold-style-definition]
+   61 | PUBLIC void u4c4(buf, offset)
+      |             ^~~~
+typeconv.c: In function ‘u4cn’:
+typeconv.c:80:13: warning: old-style function definition [-Wold-style-definition]
+   80 | PUBLIC void u4cn(buf, offset, count)
+      |             ^~~~
+typeconv.c: In function ‘u2cn’:
+typeconv.c:102:13: warning: old-style function definition [-Wold-style-definition]
+  102 | PUBLIC void u2cn(buf, offset, count)
+      |             ^~~~
+typeconv.c: In function ‘c2u2’:
+typeconv.c:124:14: warning: old-style function definition [-Wold-style-definition]
+  124 | PUBLIC u2_pt c2u2(buf)
+      |              ^~~~
+typeconv.c: In function ‘c4u4’:
+typeconv.c:137:13: warning: old-style function definition [-Wold-style-definition]
+  137 | PUBLIC u4_t c4u4(buf)
+      |             ^~~~
+typeconv.c: In function ‘cnu4’:
+typeconv.c:153:13: warning: old-style function definition [-Wold-style-definition]
+  153 | PUBLIC u4_t cnu4(buf, count)
+      |             ^~~~
+typeconv.c: In function ‘cnu2’:
+typeconv.c:173:14: warning: old-style function definition [-Wold-style-definition]
+  173 | PUBLIC u2_pt cnu2(buf, count)
+      |              ^~~~
+typeconv.c: In function ‘xxerr’:
+typeconv.c:14:27: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | void xxerr(x) char * x; { write(2, x, strlen(x)); }
+      |                           ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c linksyms.c -o linksyms.o
+linksyms.c: In function ‘linksyms’:
+linksyms.c:18:13: warning: old-style function definition [-Wold-style-definition]
+   18 | PUBLIC void linksyms(argreloc_output)
+      |             ^~~~~~~~
+linksyms.c: In function ‘linkrefs’:
+linksyms.c:73:14: warning: old-style function definition [-Wold-style-definition]
+   73 | PRIVATE void linkrefs(modptr)
+      |              ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c mkar.c -o mkar.o
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c writex86.c -o writex86.o
+writex86.c: In function ‘write_elks’:
+writex86.c:105:13: warning: old-style function definition [-Wold-style-definition]
+  105 | PUBLIC void write_elks(outfilename, argsepid, argbits32, argstripflag, arguzp, argxsym)
+      |             ^~~~~~~~~~
+writex86.c:59:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   59 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writex86.c:448:33: note: in expansion of macro ‘offsetof’
+  448 |         seekout((unsigned long) offsetof(struct exec, a_syms));
+      |                                 ^~~~~~~~
+writex86.c: In function ‘linkmod’:
+writex86.c:457:14: warning: old-style function definition [-Wold-style-definition]
+  457 | PRIVATE void linkmod(modptr)
+      |              ^~~~~~~
+writex86.c: In function ‘padmod’:
+writex86.c:558:14: warning: old-style function definition [-Wold-style-definition]
+  558 | PRIVATE void padmod(modptr)
+      |              ^~~~~~
+writex86.c: In function ‘setsym’:
+writex86.c:587:14: warning: old-style function definition [-Wold-style-definition]
+  587 | PRIVATE void setsym(name, value)
+      |              ^~~~~~
+writex86.c: In function ‘symres’:
+writex86.c:597:14: warning: old-style function definition [-Wold-style-definition]
+  597 | PRIVATE void symres(name)
+      |              ^~~~~~
+writex86.c: In function ‘setseg’:
+writex86.c:614:14: warning: old-style function definition [-Wold-style-definition]
+  614 | PRIVATE void setseg(newseg)
+      |              ^~~~~~
+writex86.c: In function ‘skip’:
+writex86.c:626:14: warning: old-style function definition [-Wold-style-definition]
+  626 | PRIVATE void skip(countsize)
+      |              ^~~~
+writex86.c: In function ‘writenulls’:
+writex86.c:724:14: warning: old-style function definition [-Wold-style-definition]
+  724 | PRIVATE void writenulls(count)
+      |              ^~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT  -c writebin.c
+writebin.c: In function ‘writebin’:
+writebin.c:1051:18: warning: old-style function definition [-Wold-style-definition]
+ 1051 | #define FUNCNAME writebin
+      |                  ^~~~~~~~
+writebin.c:1054:13: note: in expansion of macro ‘FUNCNAME’
+ 1054 | PUBLIC void FUNCNAME(outfilename, argsepid, argbits32, argstripflag, arguzp)
+      |             ^~~~~~~~
+writebin.c:1062:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1062 |     write(2, s, strlen(s));
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -DREL_OUTPUT -c writeemu.c -o writeemu.o
+writebin.c: In function ‘write_dosemu’:
+writeemu.c:18:33: warning: old-style function definition [-Wold-style-definition]
+   18 | #define FUNCNAME                write_dosemu
+      |                                 ^~~~~~~~~~~~
+writebin.c:124:13: note: in expansion of macro ‘FUNCNAME’
+  124 | PUBLIC void FUNCNAME(outfilename, argsepid, argbits32, argstripflag, arguzp)
+      |             ^~~~~~~~
+In file included from writeemu.c:20:
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:560:33: note: in expansion of macro ‘offsetof’
+  560 |         seekout((unsigned long) offsetof(struct exec, a_syms));
+      |                                 ^~~~~~~~
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:565:33: note: in expansion of macro ‘offsetof’
+  565 |         if( FILEHEADERLENGTH &gt;= offsetof(struct exec, a_trsize)+8)
+      |                                 ^~~~~~~~
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:567:41: note: in expansion of macro ‘offsetof’
+  567 |                 seekout((unsigned long) offsetof(struct exec, a_trsize));
+      |                                         ^~~~~~~~
+writebin.c:69:31: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   69 | #define offsetof(struc, mem) ((int) &amp;((struc *) 0)-&gt;mem)
+      |                               ^
+writebin.c:571:41: note: in expansion of macro ‘offsetof’
+  571 |                 seekout((unsigned long) offsetof(struct exec, a_drsize));
+      |                                         ^~~~~~~~
+writebin.c: In function ‘linkmod’:
+writebin.c:647:14: warning: old-style function definition [-Wold-style-definition]
+  647 | PRIVATE void linkmod(modptr)
+      |              ^~~~~~~
+writebin.c: In function ‘padmod’:
+writebin.c:823:14: warning: old-style function definition [-Wold-style-definition]
+  823 | PRIVATE void padmod(modptr)
+      |              ^~~~~~
+writebin.c: In function ‘setsym’:
+writebin.c:852:14: warning: old-style function definition [-Wold-style-definition]
+  852 | PRIVATE void setsym(name, value)
+      |              ^~~~~~
+writebin.c: In function ‘symres’:
+writebin.c:865:14: warning: old-style function definition [-Wold-style-definition]
+  865 | PRIVATE void symres(name)
+      |              ^~~~~~
+writebin.c: In function ‘setseg’:
+writebin.c:885:14: warning: old-style function definition [-Wold-style-definition]
+  885 | PRIVATE void setseg(newseg)
+      |              ^~~~~~
+writebin.c: In function ‘skip’:
+writebin.c:897:14: warning: old-style function definition [-Wold-style-definition]
+  897 | PRIVATE void skip(countsize)
+      |              ^~~~
+writebin.c: In function ‘writenulls’:
+writebin.c:1038:14: warning: old-style function definition [-Wold-style-definition]
+ 1038 | PRIVATE void writenulls(count)
+      |              ^~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  objchop.c   -o objchop
+objchop.c: In function ‘main’:
+objchop.c:52:30: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 3 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                            ~~^
+      |                              |
+      |                              long int
+      |                            %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |            ~~~~~~~~~~~~~      
+      |                  |
+      |                  Long {aka int}
+objchop.c:52:45: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 4 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                                           ~~^
+      |                                             |
+      |                                             long int
+      |                                           %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |                           ~~~~~~~~~~~~~      
+      |                                 |
+      |                                 Long {aka int}
+objchop.c:52:59: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 5 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                                                         ~~^
+      |                                                           |
+      |                                                           long int
+      |                                                         %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |                                          ~~~~~~~~~~~~      
+      |                                                |
+      |                                                Long {aka int}
+objchop.c:52:75: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 6 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   52 |    fprintf(ofd, "TEXT_SIZE=%ld\nDATA_SIZE=%ld\nBSS_SIZE=%ld\nALLOC_SIZE=%ld\n",
+      |                                                                         ~~^
+      |                                                                           |
+      |                                                                           long int
+      |                                                                         %d
+   53 |            header.a_text, header.a_data, header.a_bss, header.a_total);
+      |                                                        ~~~~~~~~~~~~~~      
+      |                                                              |
+      |                                                              Long {aka int}
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  catimage.c   -o catimage
+catimage.c: In function ‘main’:
+catimage.c:71:49: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 4 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   71 |       printf("File %-14s seg=0x%04lx text=0x%04lx data=0x%04lx\n",
+      |                                             ~~~~^
+      |                                                 |
+      |                                                 long unsigned int
+      |                                             %04x
+   72 |               input_file, (image_offset&gt;&gt;4),
+   73 |               (header.a_text&gt;&gt;4), (header.a_total&gt;&gt;4));
+      |               ~~~~~~~~~~~~~~~~~~                 
+      |                             |
+      |                             Long {aka int}
+catimage.c:71:62: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 5 has type ‘Long’ {aka ‘int’} [-Wformat=]
+   71 |       printf("File %-14s seg=0x%04lx text=0x%04lx data=0x%04lx\n",
+      |                                                          ~~~~^
+      |                                                              |
+      |                                                              long unsigned int
+      |                                                          %04x
+   72 |               input_file, (image_offset&gt;&gt;4),
+   73 |               (header.a_text&gt;&gt;4), (header.a_total&gt;&gt;4));
+      |                                   ~~~~~~~~~~~~~~~~~~~         
+      |                                                  |
+      |                                                  Long {aka int}
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE   -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs  objdump86.c   -o objdump86
+objdump86.c: In function ‘main’:
+objdump86.c:93:1: warning: old-style function definition [-Wold-style-definition]
+   93 | main(argc, argv)
+      | ^~~~
+objdump86.c: In function ‘do_file’:
+objdump86.c:141:1: warning: old-style function definition [-Wold-style-definition]
+  141 | do_file(fname)
+      | ^~~~~~~
+objdump86.c: In function ‘read_arheader’:
+objdump86.c:187:1: warning: old-style function definition [-Wold-style-definition]
+  187 | read_arheader(archentry)
+      | ^~~~~~~~~~~~~
+objdump86.c: In function ‘do_module’:
+objdump86.c:206:1: warning: old-style function definition [-Wold-style-definition]
+  206 | do_module(fname, archive)
+      | ^~~~~~~~~
+objdump86.c: In function ‘error’:
+objdump86.c:307:1: warning: old-style function definition [-Wold-style-definition]
+  307 | error(str)
+      | ^~~~~
+objdump86.c: In function ‘get_sized’:
+objdump86.c:597:1: warning: old-style function definition [-Wold-style-definition]
+  597 | get_sized(sz)
+      | ^~~~~~~~~
+objdump86.c: In function ‘hex_output’:
+objdump86.c:654:1: warning: old-style function definition [-Wold-style-definition]
+  654 | hex_output(ch)
+      | ^~~~~~~~~~
+objdump86.c: In function ‘do_module’:
+objdump86.c:245:10: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  245 |          fread(strtab, 1, (unsigned int)str_len, ifd);
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs dumps.o io.o ld.o readobj.o table.o typeconv.o linksyms.o mkar.o writex86.o writebin.o writeemu.o -o ld86
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/ld'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c assemble.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c as.c
+as.c: In function ‘main’:
+as.c:40:12: warning: old-style function definition [-Wold-style-definition]
+   40 | PUBLIC int main(argc, argv)
+      |            ^~~~
+as.c: In function ‘as_abort’:
+as.c:65:13: warning: old-style function definition [-Wold-style-definition]
+   65 | PUBLIC void as_abort(message)
+      |             ^~~~~~~~
+as.c: In function ‘my_creat’:
+as.c:141:13: warning: old-style function definition [-Wold-style-definition]
+  141 | PRIVATE int my_creat(name, message)
+      |             ^~~~~~~~
+as.c: In function ‘process_args’:
+as.c:156:14: warning: old-style function definition [-Wold-style-definition]
+  156 | PRIVATE void process_args(argc, argv)
+      |              ^~~~~~~~~~~~
+as.c: In function ‘summary’:
+as.c:318:14: warning: old-style function definition [-Wold-style-definition]
+  318 | PRIVATE void summary(fd)
+      |              ^~~~~~~
+as.c: In function ‘summ_number’:
+as.c:329:14: warning: old-style function definition [-Wold-style-definition]
+  329 | PRIVATE void summ_number(num)
+      |              ^~~~~~~~~~~
+as.c: In function ‘as_abort’:
+as.c:68:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   68 |     write(STDOUT, "as: ", 4);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+as.c:69:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   69 |     write(STDOUT, message, strlen(message));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+as.c:70:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   70 |     write(STDOUT, "\n", 1);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c errors.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c genbin.c
+genbin.c: In function ‘putbin’:
+genbin.c:195:13: warning: old-style function definition [-Wold-style-definition]
+  195 | PUBLIC void putbin(ch)
+      |             ^~~~~~
+genbin.c: In function ‘putbinoffset’:
+genbin.c:256:14: warning: old-style function definition [-Wold-style-definition]
+  256 | PRIVATE void putbinoffset(offset, size)
+      |              ^~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c express.c
+express.c: In function ‘experror’:
+express.c:36:14: warning: old-style function definition [-Wold-style-definition]
+   36 | PRIVATE void experror(err_str)
+      |              ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c genlist.c
+genlist.c: In function ‘build_1hex_number’:
+genlist.c:87:15: warning: old-style function definition [-Wold-style-definition]
+   87 | PRIVATE char *build_1hex_number(num, where)
+      |               ^~~~~~~~~~~~~~~~~
+genlist.c: In function ‘build_2hex_number’:
+genlist.c:98:14: warning: old-style function definition [-Wold-style-definition]
+   98 | PUBLIC char *build_2hex_number(num, where)
+      |              ^~~~~~~~~~~~~~~~~
+genlist.c: In function ‘build_number’:
+genlist.c:109:14: warning: old-style function definition [-Wold-style-definition]
+  109 | PUBLIC char *build_number(num, width, where)
+      |              ^~~~~~~~~~~~
+genlist.c: In function ‘warning’:
+genlist.c:134:13: warning: old-style function definition [-Wold-style-definition]
+  134 | PUBLIC void warning(err_str)
+      |             ^~~~~~~
+genlist.c: In function ‘error’:
+genlist.c:143:13: warning: old-style function definition [-Wold-style-definition]
+  143 | PUBLIC void error(err_str)
+      |             ^~~~~
+genlist.c: In function ‘list1’:
+genlist.c:192:14: warning: old-style function definition [-Wold-style-definition]
+  192 | PRIVATE void list1(fd)
+      |              ^~~~~
+genlist.c: In function ‘paderrorline’:
+genlist.c:416:14: warning: old-style function definition [-Wold-style-definition]
+  416 | PRIVATE void paderrorline(nspaces)
+      |              ^~~~~~~~~~~~
+genlist.c: In function ‘writec’:
+genlist.c:429:13: warning: old-style function definition [-Wold-style-definition]
+  429 | PUBLIC void writec(ch)
+      |             ^~~~~~
+genlist.c: In function ‘writeoff’:
+genlist.c:444:13: warning: old-style function definition [-Wold-style-definition]
+  444 | PUBLIC void writeoff(offset)
+      |             ^~~~~~~~
+genlist.c: In function ‘writes’:
+genlist.c:459:13: warning: old-style function definition [-Wold-style-definition]
+  459 | PUBLIC void writes(s)
+      |             ^~~~~~
+genlist.c: In function ‘writesn’:
+genlist.c:467:13: warning: old-style function definition [-Wold-style-definition]
+  467 | PUBLIC void writesn(s)
+      |             ^~~~~~~
+genlist.c: In function ‘writew’:
+genlist.c:476:13: warning: old-style function definition [-Wold-style-definition]
+  476 | PUBLIC void writew(word)
+      |             ^~~~~~
+genlist.c: In function ‘list1’:
+genlist.c:197:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  197 |     write(outfd, linebuf, (unsigned) (lineptr - linebuf));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writec’:
+genlist.c:432:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  432 |     write(outfd, &amp;ch, 1);
+      |     ^~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writeoff’:
+genlist.c:454:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  454 |     write(outfd, buf, sizeof buf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writes’:
+genlist.c:462:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  462 |     write(outfd, s, strlen(s));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+genlist.c: In function ‘writew’:
+genlist.c:482:5: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  482 |     write(outfd, buf, sizeof buf);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c genobj.c
+genobj.c: In function ‘accumulate_rmb’:
+genobj.c:40:13: warning: old-style function definition [-Wold-style-definition]
+   40 | PUBLIC void accumulate_rmb(offset)
+      |             ^~~~~~~~~~~~~~
+genobj.c: In function ‘genobjadr’:
+genobj.c:215:14: warning: old-style function definition [-Wold-style-definition]
+  215 | PRIVATE void genobjadr(adrptr, size)
+      |              ^~~~~~~~~
+genobj.c: In function ‘putabs’:
+genobj.c:593:13: warning: old-style function definition [-Wold-style-definition]
+  593 | PUBLIC void putabs(ch)
+      |             ^~~~~~
+genobj.c: In function ‘putobj’:
+genobj.c:608:13: warning: old-style function definition [-Wold-style-definition]
+  608 | PUBLIC void putobj(ch)
+      |             ^~~~~~
+genobj.c: In function ‘putobj1’:
+genobj.c:621:14: warning: old-style function definition [-Wold-style-definition]
+  621 | PRIVATE void putobj1(ch)
+      |              ^~~~~~~
+genobj.c: In function ‘putobj4’:
+genobj.c:631:14: warning: old-style function definition [-Wold-style-definition]
+  631 | PRIVATE void putobj4(offset)
+      |              ^~~~~~~
+genobj.c: In function ‘putobjoffset’:
+genobj.c:642:14: warning: old-style function definition [-Wold-style-definition]
+  642 | PRIVATE void putobjoffset(offset, size)
+      |              ^~~~~~~~~~~~
+genobj.c: In function ‘putobjword’:
+genobj.c:665:14: warning: old-style function definition [-Wold-style-definition]
+  665 | PRIVATE void putobjword(word)
+      |              ^~~~~~~~~~
+genobj.c: In function ‘writeobj’:
+genobj.c:677:14: warning: old-style function definition [-Wold-style-definition]
+  677 | PRIVATE void writeobj(buf, count)
+      |              ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c gensym.c
+gensym.c: In function ‘printsym’:
+gensym.c:140:13: warning: old-style function definition [-Wold-style-definition]
+  140 | PRIVATE int printsym(symptr, column)
+      |             ^~~~~~~~
+gensym.c: In function ‘sort’:
+gensym.c:190:14: warning: old-style function definition [-Wold-style-definition]
+  190 | PRIVATE void sort(array, top, nameflag)
+      |              ^~~~
+gensym.c: In function ‘gensym’:
+gensym.c:95:13: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   95 |             write(outfd, symptr-&gt;name, (unsigned) (symptr-&gt;length));
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c keywords.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c macro.c
+macro.c: In function ‘entermac’:
+macro.c:18:13: warning: old-style function definition [-Wold-style-definition]
+   18 | PUBLIC void entermac(symptr)
+      |             ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c mops.c
+mops.c: In function ‘Eb’:
+mops.c:421:14: warning: old-style function definition [-Wold-style-definition]
+  421 | PRIVATE void Eb(eap)
+      |              ^~
+mops.c: In function ‘Ew’:
+mops.c:436:14: warning: old-style function definition [-Wold-style-definition]
+  436 | PRIVATE void Ew(eap)
+      |              ^~
+mops.c: In function ‘Ev’:
+mops.c:451:14: warning: old-style function definition [-Wold-style-definition]
+  451 | PRIVATE void Ev(eap)
+      |              ^~
+mops.c: In function ‘Ex’:
+mops.c:458:14: warning: old-style function definition [-Wold-style-definition]
+  458 | PRIVATE void Ex(eap)
+      |              ^~
+mops.c: In function ‘Gd’:
+mops.c:466:14: warning: old-style function definition [-Wold-style-definition]
+  466 | PRIVATE void Gd(eap)
+      |              ^~
+mops.c: In function ‘Gw’:
+mops.c:474:14: warning: old-style function definition [-Wold-style-definition]
+  474 | PRIVATE void Gw(eap)
+      |              ^~
+mops.c: In function ‘Gv’:
+mops.c:482:14: warning: old-style function definition [-Wold-style-definition]
+  482 | PRIVATE void Gv(eap)
+      |              ^~
+mops.c: In function ‘Gx’:
+mops.c:489:14: warning: old-style function definition [-Wold-style-definition]
+  489 | PRIVATE void Gx(eap)
+      |              ^~
+mops.c: In function ‘buildea’:
+mops.c:496:14: warning: old-style function definition [-Wold-style-definition]
+  496 | PRIVATE void buildea(eap)
+      |              ^~~~~~~
+mops.c: In function ‘buildimm’:
+mops.c:589:14: warning: old-style function definition [-Wold-style-definition]
+  589 | PRIVATE void buildimm(eap, signflag)
+      |              ^~~~~~~~
+mops.c: In function ‘buildsegword’:
+mops.c:626:14: warning: old-style function definition [-Wold-style-definition]
+  626 | PRIVATE void buildsegword(eap)
+      |              ^~~~~~~~~~~~
+mops.c: In function ‘buildunary’:
+mops.c:645:14: warning: old-style function definition [-Wold-style-definition]
+  645 | PRIVATE void buildunary(opc)
+      |              ^~~~~~~~~~
+mops.c: In function ‘displsize’:
+mops.c:656:19: warning: old-style function definition [-Wold-style-definition]
+  656 | PRIVATE opsize_pt displsize(eap)
+      |                   ^~~~~~~~~
+mops.c: In function ‘getaccumreg’:
+mops.c:711:17: warning: old-style function definition [-Wold-style-definition]
+  711 | PRIVATE bool_pt getaccumreg(eap)
+      |                 ^~~~~~~~~~~
+mops.c: In function ‘getdxreg’:
+mops.c:772:17: warning: old-style function definition [-Wold-style-definition]
+  772 | PRIVATE bool_pt getdxreg(eap)
+      |                 ^~~~~~~~
+mops.c: In function ‘getea’:
+mops.c:812:14: warning: old-style function definition [-Wold-style-definition]
+  812 | PRIVATE void getea(eap)
+      |              ^~~~~
+mops.c: In function ‘getimmed’:
+mops.c:970:14: warning: old-style function definition [-Wold-style-definition]
+  970 | PRIVATE void getimmed(eap, immed_count)
+      |              ^~~~~~~~
+mops.c: In function ‘getindirect’:
+mops.c:983:14: warning: old-style function definition [-Wold-style-definition]
+  983 | PRIVATE void getindirect(eap)
+      |              ^~~~~~~~~~~
+mops.c: In function ‘getshift’:
+mops.c:991:14: warning: old-style function definition [-Wold-style-definition]
+  991 | PRIVATE void getshift(eap)
+      |              ^~~~~~~~
+mops.c: In function ‘indregchk’:
+mops.c:1006:16: warning: old-style function definition [-Wold-style-definition]
+ 1006 | PRIVATE reg_pt indregchk(matchreg)
+      |                ^~~~~~~~~
+mops.c: In function ‘kgerror’:
+mops.c:1053:14: warning: old-style function definition [-Wold-style-definition]
+ 1053 | PRIVATE void kgerror(err_str)
+      |              ^~~~~~~
+mops.c: In function ‘lbranch’:
+mops.c:1060:14: warning: old-style function definition [-Wold-style-definition]
+ 1060 | PRIVATE void lbranch(backamount)
+      |              ^~~~~~~
+mops.c: In function ‘notbytesize’:
+mops.c:2317:14: warning: old-style function definition [-Wold-style-definition]
+ 2317 | PRIVATE void notbytesize(eap)
+      |              ^~~~~~~~~~~
+mops.c: In function ‘notimmed’:
+mops.c:2324:14: warning: old-style function definition [-Wold-style-definition]
+ 2324 | PRIVATE void notimmed(eap)
+      |              ^~~~~~~~
+mops.c: In function ‘notindirect’:
+mops.c:2331:14: warning: old-style function definition [-Wold-style-definition]
+ 2331 | PRIVATE void notindirect(eap)
+      |              ^~~~~~~~~~~
+mops.c: In function ‘notsegorspecreg’:
+mops.c:2338:14: warning: old-style function definition [-Wold-style-definition]
+ 2338 | PRIVATE void notsegorspecreg(eap)
+      |              ^~~~~~~~~~~~~~~
+mops.c: In function ‘yesimmed’:
+mops.c:2345:14: warning: old-style function definition [-Wold-style-definition]
+ 2345 | PRIVATE void yesimmed(eap)
+      |              ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c pops.c
+pops.c: In function ‘bumpsem’:
+pops.c:28:14: warning: old-style function definition [-Wold-style-definition]
+   28 | PRIVATE void bumpsem(flagptr, defval)
+      |              ^~~~~~~
+pops.c: In function ‘checksegrel’:
+pops.c:73:16: warning: old-style function definition [-Wold-style-definition]
+   73 | PUBLIC bool_pt checksegrel(symptr)
+      |                ^~~~~~~~~~~
+pops.c: In function ‘constdata’:
+pops.c:97:14: warning: old-style function definition [-Wold-style-definition]
+   97 | PRIVATE void constdata(size)
+      |              ^~~~~~~~~
+pops.c: In function ‘doelseif’:
+pops.c:160:14: warning: old-style function definition [-Wold-style-definition]
+  160 | PRIVATE void doelseif(func)
+      |              ^~~~~~~~
+pops.c: In function ‘doequset’:
+pops.c:189:14: warning: old-style function definition [-Wold-style-definition]
+  189 | PRIVATE void doequset(labits)
+      |              ^~~~~~~~
+pops.c: In function ‘doentexp’:
+pops.c:233:14: warning: old-style function definition [-Wold-style-definition]
+  233 | PRIVATE void doentexp(entbits, impbits)
+      |              ^~~~~~~~
+pops.c: In function ‘doif’:
+pops.c:392:14: warning: old-style function definition [-Wold-style-definition]
+  392 | PRIVATE void doif(func)
+      |              ^~~~
+pops.c: In function ‘fatalerror’:
+pops.c:423:13: warning: old-style function definition [-Wold-style-definition]
+  423 | PUBLIC void fatalerror(err_str)
+      |             ^~~~~~~~~~
+pops.c: In function ‘labelerror’:
+pops.c:435:13: warning: old-style function definition [-Wold-style-definition]
+  435 | PUBLIC void labelerror(err_str)
+      |             ^~~~~~~~~~
+pops.c: In function ‘setloc’:
+pops.c:1098:14: warning: old-style function definition [-Wold-style-definition]
+ 1098 | PRIVATE void setloc(seg)
+      |              ^~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c readsrc.c
+readsrc.c: In function ‘open_input’:
+readsrc.c:90:13: warning: old-style function definition [-Wold-style-definition]
+   90 | PUBLIC fd_t open_input(name)
+      |             ^~~~~~~~~~
+readsrc.c: In function ‘inp_line’:
+readsrc.c:458:13: warning: old-style function definition [-Wold-style-definition]
+  458 | PRIVATE int inp_line(fd, buf, size)
+      |             ^~~~~~~~
+readsrc.c: In function ‘inp_tell’:
+readsrc.c:482:14: warning: old-style function definition [-Wold-style-definition]
+  482 | PRIVATE long inp_tell(fd)
+      |              ^~~~~~~~
+readsrc.c: In function ‘inp_seek’:
+readsrc.c:491:14: warning: old-style function definition [-Wold-style-definition]
+  491 | PRIVATE void inp_seek(fd, posn)
+      |              ^~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c scan.c
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c table.c
+table.c: In function ‘install’:
+table.c:51:14: warning: old-style function definition [-Wold-style-definition]
+   51 | PRIVATE void install(keyptr, data)
+      |              ^~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c typeconv.c
+typeconv.c: In function ‘xxerr’:
+typeconv.c:14:6: warning: old-style function definition [-Wold-style-definition]
+   14 | void xxerr(x) char * x; { write(2, x, strlen(x)); }
+      |      ^~~~~
+typeconv.c: In function ‘typeconv_init’:
+typeconv.c:23:16: warning: old-style function definition [-Wold-style-definition]
+   23 | PUBLIC bool_pt typeconv_init(big_endian, long_big_endian)
+      |                ^~~~~~~~~~~~~
+typeconv.c: In function ‘u2c2’:
+typeconv.c:50:13: warning: old-style function definition [-Wold-style-definition]
+   50 | PUBLIC void u2c2(buf, offset)
+      |             ^~~~
+typeconv.c: In function ‘u4c4’:
+typeconv.c:65:13: warning: old-style function definition [-Wold-style-definition]
+   65 | PUBLIC void u4c4(buf, offset)
+      |             ^~~~
+typeconv.c: In function ‘u4cn’:
+typeconv.c:84:13: warning: old-style function definition [-Wold-style-definition]
+   84 | PUBLIC void u4cn(buf, offset, count)
+      |             ^~~~
+typeconv.c: In function ‘u2cn’:
+typeconv.c:106:13: warning: old-style function definition [-Wold-style-definition]
+  106 | PUBLIC void u2cn(buf, offset, count)
+      |             ^~~~
+typeconv.c: In function ‘c2u2’:
+typeconv.c:128:14: warning: old-style function definition [-Wold-style-definition]
+  128 | PUBLIC u2_pt c2u2(buf)
+      |              ^~~~
+typeconv.c: In function ‘c4u4’:
+typeconv.c:141:13: warning: old-style function definition [-Wold-style-definition]
+  141 | PUBLIC u4_t c4u4(buf)
+      |             ^~~~
+typeconv.c: In function ‘cnu4’:
+typeconv.c:157:13: warning: old-style function definition [-Wold-style-definition]
+  157 | PUBLIC u4_t cnu4(buf, count)
+      |             ^~~~
+typeconv.c: In function ‘cnu2’:
+typeconv.c:177:14: warning: old-style function definition [-Wold-style-definition]
+  177 | PUBLIC u2_pt cnu2(buf, count)
+      |              ^~~~
+typeconv.c: In function ‘xxerr’:
+typeconv.c:14:27: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | void xxerr(x) char * x; { write(2, x, strlen(x)); }
+      |                           ^~~~~~~~~~~~~~~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE  -c alloc.c
+alloc.c: In function ‘asalloc’:
+alloc.c:56:1: warning: old-style function definition [-Wold-style-definition]
+   56 | asalloc(size)
+      | ^~~~~~~
+alloc.c: In function ‘asrealloc’:
+alloc.c:78:1: warning: old-style function definition [-Wold-style-definition]
+   78 | asrealloc(oldptr, size)
+      | ^~~~~~~~~
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+sed -e "s:%%LIBDIR%%:/usr/lib:" -e "s:%%BINDIR%%:/usr/bin:" \
+	&lt; as86_encap.sh &gt; tmp
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+chmod +x as86_encap
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+make[1]: Entering directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+x86_64-pc-linux-gnu-gcc -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs as.o assemble.o errors.o express.o genbin.o genlist.o genobj.o gensym.o keywords.o macro.o mops.o pops.o readsrc.o scan.o table.o typeconv.o alloc.o -o as86
+make[1]: Leaving directory '/var/tmp/portage/sys-devel/bin86-0.16.21-r2/work/bin86-0.16.21/as'
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: sys-devel/bin86-0.16.21-r2
+
+&gt;&gt;&gt; Install sys-devel/bin86-0.16.21-r2 into /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image
+make -j2 DESTDIR=/var/tmp/portage/sys-devel/bin86-0.16.21-r2/image install 
+set -e ; for d in ld as; do \
+  (cd $d &amp;&amp; make "LIBS=" "CFLAGS=-O3 -march=native -mtune=native -fomit-frame-pointer -pipe -D_POSIX_SOURCE " "LDFLAGS=-Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs" "BINDIR=/var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin" "LIBDIR=/var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/lib" "CC=x86_64-pc-linux-gnu-gcc" all;); \
+ done
+make[1]: Nothing to be done for 'all'.
+make[1]: Nothing to be done for 'all'.
+install -m 755  as/as86       /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/as86
+install -m 755  ld/ld86       /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/ld86
+install -m 755  ld/objdump86  /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/objdump86
+install -m 644     man/*.1       /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/share/man/man1
+ln -sf                  objdump86 /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/nm86
+ln -sf                  objdump86 /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image/usr/bin/size86
+&gt;&gt;&gt; Completed installing sys-devel/bin86-0.16.21-r2 into /var/tmp/portage/sys-devel/bin86-0.16.21-r2/image
+
+ <span class="ansi32">*</span> Final size of build directory: 1744 KiB (1.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   308 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/as86
+   /usr/bin/ld86
+   /usr/bin/objdump86
+
+</pre>
+</body>
+
+</html>
