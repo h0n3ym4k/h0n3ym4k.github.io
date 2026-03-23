@@ -1,0 +1,819 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi33 { color: #aa5500; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-cpp/eigen-3.4.0-r3:3
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: sci@gentoo.org kde@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 cpu_flags_x86_avx cpu_flags_x86_avx2 cpu_flags_x86_popcnt cpu_flags_x86_sse cpu_flags_x86_sse2 cpu_flags_x86_sse3 cpu_flags_x86_sse4_1 cpu_flags_x86_sse4_2 cpu_flags_x86_ssse3 elibc_glibc kernel_linux opengl openmp
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'eigen-3.4.0.tar.bz2' to /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0 ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build"
+removed './cmake/FindBLAS.cmake'
+removed './cmake/FindLAPACK.cmake'
+ <span class="ansi32">*</span> Hardcoded definition(s) removed in CMakeLists.txt:
+ <span class="ansi32">*</span>   set(CMAKE_BUILD_TYPE "Release")
+ <span class="ansi33">*</span> QA Notice: Compatibility with CMake &lt; 3.5 has been removed from CMake 4,
+ <span class="ansi33">*</span> dev-cpp/eigen will fail to build w/o a fix.
+ <span class="ansi33">*</span> See also tracker bug #951350; check existing or file a new bug for this package.
+ <span class="ansi33">*</span> Please also take it upstream.
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> The following files are causing errors:
+ <span class="ansi33">*</span>   bench/btl/CMakeLists.txt:2.6.2
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> Compatibility with CMake &lt; 3.10 will be removed in a future release.
+ <span class="ansi33">*</span> See also tracker bug #964405; check existing or file a new bug for this package.
+ <span class="ansi33">*</span> If not fixed in upstream's code repository, we should make sure they are aware.
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> The following files are causing warnings:
+ <span class="ansi33">*</span>   CMakeLists.txt:3.5.0
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> CMake 4 detected; building with -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+ <span class="ansi33">*</span> This is merely a workaround to avoid CMake Error and *not* a permanent fix;
+ <span class="ansi33">*</span> there may be new build or runtime bugs as a result.
+ <span class="ansi33">*</span> 
+ <span class="ansi33">*</span> An upstreamable patch should take any resulting CMake policy changes
+ <span class="ansi33">*</span> into account. See also:
+ <span class="ansi33">*</span>   https://cmake.org/cmake/help/latest/manual/cmake-policies.7.html
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build"
+cmake -C /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_SHARED_LIBS=yes -DBUILD_TESTING=no -DEIGEN_BUILD_DOC=no -DEIGEN_BUILD_PKGCONFIG=yes -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build/gentoo_toolchain.cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0
+loading initial cache file /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build/gentoo_common_config.cmake
+CMake Deprecation Warning at CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake &lt; 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument &lt;min&gt; value.  Or, use the &lt;min&gt;...&lt;max&gt; syntax
+  to tell CMake that the project requires at least &lt;min&gt; but has been updated
+  to work with policies introduced by &lt;max&gt; or earlier.
+
+
+-- The C compiler identification is GNU 15.2.1
+-- The CXX compiler identification is GNU 15.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/x86_64-pc-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test standard_math_library_linked_to_automatically
+-- Performing Test standard_math_library_linked_to_automatically - Success
+-- Standard libraries to link to explicitly: none
+-- Performing Test COMPILER_SUPPORT_WERROR
+-- Performing Test COMPILER_SUPPORT_WERROR - Success
+-- Performing Test COMPILER_SUPPORT_pedantic
+-- Performing Test COMPILER_SUPPORT_pedantic - Success
+-- Performing Test COMPILER_SUPPORT_Wall
+-- Performing Test COMPILER_SUPPORT_Wall - Success
+-- Performing Test COMPILER_SUPPORT_Wextra
+-- Performing Test COMPILER_SUPPORT_Wextra - Success
+-- Performing Test COMPILER_SUPPORT_Wundef
+-- Performing Test COMPILER_SUPPORT_Wundef - Success
+-- Performing Test COMPILER_SUPPORT_Wcastalign
+-- Performing Test COMPILER_SUPPORT_Wcastalign - Success
+-- Performing Test COMPILER_SUPPORT_Wcharsubscripts
+-- Performing Test COMPILER_SUPPORT_Wcharsubscripts - Success
+-- Performing Test COMPILER_SUPPORT_Wnonvirtualdtor
+-- Performing Test COMPILER_SUPPORT_Wnonvirtualdtor - Success
+-- Performing Test COMPILER_SUPPORT_Wunusedlocaltypedefs
+-- Performing Test COMPILER_SUPPORT_Wunusedlocaltypedefs - Success
+-- Performing Test COMPILER_SUPPORT_Wpointerarith
+-- Performing Test COMPILER_SUPPORT_Wpointerarith - Success
+-- Performing Test COMPILER_SUPPORT_Wwritestrings
+-- Performing Test COMPILER_SUPPORT_Wwritestrings - Success
+-- Performing Test COMPILER_SUPPORT_Wformatsecurity
+-- Performing Test COMPILER_SUPPORT_Wformatsecurity - Success
+-- Performing Test COMPILER_SUPPORT_Wshorten64to32
+-- Performing Test COMPILER_SUPPORT_Wshorten64to32 - Failed
+-- Performing Test COMPILER_SUPPORT_Wlogicalop
+-- Performing Test COMPILER_SUPPORT_Wlogicalop - Success
+-- Performing Test COMPILER_SUPPORT_Wenumconversion
+-- Performing Test COMPILER_SUPPORT_Wenumconversion - Success
+-- Performing Test COMPILER_SUPPORT_Wdoublepromotion
+-- Performing Test COMPILER_SUPPORT_Wdoublepromotion - Success
+-- Performing Test COMPILER_SUPPORT_Wshadow
+-- Performing Test COMPILER_SUPPORT_Wshadow - Success
+-- Performing Test COMPILER_SUPPORT_Wnopsabi
+-- Performing Test COMPILER_SUPPORT_Wnopsabi - Success
+-- Performing Test COMPILER_SUPPORT_Wnovariadicmacros
+-- Performing Test COMPILER_SUPPORT_Wnovariadicmacros - Success
+-- Performing Test COMPILER_SUPPORT_Wnolonglong
+-- Performing Test COMPILER_SUPPORT_Wnolonglong - Success
+-- Performing Test COMPILER_SUPPORT_fnochecknew
+-- Performing Test COMPILER_SUPPORT_fnochecknew - Success
+-- Performing Test COMPILER_SUPPORT_fnocommon
+-- Performing Test COMPILER_SUPPORT_fnocommon - Success
+-- Performing Test COMPILER_SUPPORT_fstrictaliasing
+-- Performing Test COMPILER_SUPPORT_fstrictaliasing - Success
+-- Performing Test COMPILER_SUPPORT_wd981
+-- Performing Test COMPILER_SUPPORT_wd981 - Failed
+-- Performing Test COMPILER_SUPPORT_wd2304
+-- Performing Test COMPILER_SUPPORT_wd2304 - Failed
+-- Performing Test COMPILER_SUPPORT_STRICTANSI
+-- Performing Test COMPILER_SUPPORT_STRICTANSI - Failed
+-- Performing Test COMPILER_SUPPORT_Qunusedarguments
+-- Performing Test COMPILER_SUPPORT_Qunusedarguments - Failed
+-- Performing Test COMPILER_SUPPORT_ansi
+-- Performing Test COMPILER_SUPPORT_ansi - Success
+-- Performing Test COMPILER_SUPPORT_OPENMP
+-- Performing Test COMPILER_SUPPORT_OPENMP - Success
+-- 
+-- Configured Eigen 3.4.0
+-- 
+-- Available targets (use: cmake --build . --target TARGET):
+-- ---------+--------------------------------------------------------------
+-- Target   |   Description
+-- ---------+--------------------------------------------------------------
+-- install  | Install Eigen. Headers will be installed to:
+--          |     &lt;CMAKE_INSTALL_PREFIX&gt;/&lt;INCLUDE_INSTALL_DIR&gt;
+--          |   Using the following values:
+--          |     CMAKE_INSTALL_PREFIX: /usr
+--          |     INCLUDE_INSTALL_DIR:  include/eigen3
+--          |   Change the install location of Eigen headers using:
+--          |     cmake . -DCMAKE_INSTALL_PREFIX=yourprefix
+--          |   Or:
+--          |     cmake . -DINCLUDE_INSTALL_DIR=yourdir
+-- doc      | Generate the API documentation, requires Doxygen &amp; LaTeX
+-- blas     | Build BLAS library (not the same thing as Eigen)
+-- uninstall| Remove files installed by the install target
+-- ---------+--------------------------------------------------------------
+-- 
+-- &lt;&lt;&lt; Gentoo configuration &gt;&gt;&gt;
+Build type      RelWithDebInfo
+Install path    /usr
+Compiler flags:
+C               -O3 -march=native -mtune=native -fomit-frame-pointer -pipe
+C++             -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -ansi
+Linker flags:
+Executable      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Module          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+Shared          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs
+
+-- Configuring done (7.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0 ...
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-cpp/eigen-3.4.0-r3
+
+&gt;&gt;&gt; Install dev-cpp/eigen-3.4.0-r3 into /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build"
+ninja -v -l2 -j2 install
+[0/1] cd /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/work/eigen-3.4.0_build &amp;&amp; /usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/signature_of_eigen3_matrix_library
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/share/pkgconfig/eigen3.pc
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Sparse
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/QR
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/SPQRSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Dense
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Householder
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/KLUSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/PardisoSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/SVD
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/OrderingMethods
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/CholmodSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/StdVector
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Eigenvalues
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Core
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Geometry
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/IterativeLinearSolvers
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/SparseCore
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Jacobi
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/SparseLU
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Eigen
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/MetisSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/SparseQR
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/Cholesky
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/UmfPackSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/LU
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/QtAlignedMalloc
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/PaStiXSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/StdDeque
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/QR
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/QR/HouseholderQR.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/QR/HouseholderQR_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SPQRSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SPQRSupport/SuiteSparseQRSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc/lapack.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc/lapacke_mangling.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc/Kernel.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc/Image.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc/RealSvd2x2.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc/blas.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/misc/lapacke.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Householder
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Householder/Householder.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Householder/BlockHouseholder.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/KLUSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/KLUSupport/KLUSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/PardisoSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/PardisoSupport/PardisoSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/StlSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/StlSupport/StdList.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/StlSupport/StdDeque.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/StlSupport/details.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SVD
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SVD/BDCSVD.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SVD/SVDBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SVD/JacobiSVD.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SVD/JacobiSVD_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/OrderingMethods
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/OrderingMethods/Ordering.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/OrderingMethods/Amd.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/CholmodSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/CholmodSupport/CholmodSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Transpose.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/SolverBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Product.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/NestByValue.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/CUDA
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/CUDA/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AltiVec
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AltiVec/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MatrixProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MatrixProductCommon.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AltiVec/MatrixProductMMA.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AltiVec/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SVE
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SVE/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SVE/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SVE/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX512
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX512/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX512/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX512/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX512/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/GPU
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/GPU/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/GPU/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/GPU/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/NEON
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/ZVector
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/ZVector/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/ZVector/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/ZVector/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/MSA
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/MSA/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/MSA/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/MSA/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SYCL
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SYCL/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SYCL/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SYCL/InteropHeaders.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SYCL/SyclMemoryModel.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SYCL/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/HIP
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/HIP/hcc
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/HIP/hcc/math_constants.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SSE
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SSE/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/GeneralProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/ForceAlignedAccess.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/NumTraits.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Random.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Ref.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Array.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Reshaped.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/DenseStorage.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Transpositions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Replicate.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Select.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Dot.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/MatrixBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CoreIterators.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Block.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/DenseBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/ArrayBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/NoAlias.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/MapBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/IO.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/ReturnByValue.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Solve.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Redux.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Reverse.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/VectorBlock.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Assign.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Matrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Inverse.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/IndexedView.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/products/Parallelizer.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Map.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Diagonal.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Swap.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/DiagonalProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/Constants.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/IntegralConstant.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/MKL_support.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/Macros.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/Memory.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/NonMPL2.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/util/Meta.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/ConditionEstimator.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CwiseUnaryView.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/StlIterators.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Fuzzy.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/StableNorm.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CommaInitializer.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Visitor.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/SolveTriangular.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/functors
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Stride.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/BooleanRedux.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/BandMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/CoreEvaluators.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/Assign_MKL.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Core/EigenBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Translation.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/arch
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/OrthoMethods.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Scaling.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/AngleAxis.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/EulerAngles.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Transform.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Umeyama.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/RotationBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/ParametrizedLine.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Geometry/Hyperplane.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseRef.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseView.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Jacobi
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/MetisSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/MetisSupport/MetisSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseQR
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseQR/SparseQR.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Cholesky
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Cholesky/LLT.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/Cholesky/LLT_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/UmfPackSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/UmfPackSupport/UmfPackSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU/arch
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU/arch/InverseSize4.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU/FullPivLU.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU/InverseImpl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU/PartialPivLU_LAPACKE.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/LU/Determinant.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/PaStiXSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/PaStiXSupport/PaStiXSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/ReshapedMethods.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SuperLUSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SuperLUSupport/SuperLUSupport.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCholesky
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/StdList
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/SuperLUSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/Eigen/SparseCholesky
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/share/eigen3/cmake/Eigen3Targets.cmake
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/share/eigen3/cmake/UseEigen3.cmake
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/share/eigen3/cmake/Eigen3Config.cmake
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/AdolcForward
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/AlignedVector3
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/ArpackSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/AutoDiff
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/BVH
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/EulerAngles
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/FFT
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/IterativeSolvers
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/KroneckerProduct
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/LevenbergMarquardt
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/MatrixFunctions
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/MoreVectorization
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/MPRealSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/NonLinearOptimization
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/NumericalDiff
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/OpenGLSupport
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/Polynomials
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/Skyline
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/SparseExtra
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/SpecialFunctions
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/Splines
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/AutoDiff
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffScalar.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffVector.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/AutoDiff/AutoDiffJacobian.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/KroneckerProduct
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/KroneckerProduct/KroneckerTensorProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NumericalDiff
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NumericalDiff/NumericalDiff.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/LevenbergMarquardt
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/LevenbergMarquardt/LMcovar.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/LevenbergMarquardt/LevenbergMarquardt.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/LevenbergMarquardt/LMonestep.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/LevenbergMarquardt/LMpar.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/LevenbergMarquardt/LMqrsolv.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Eigenvalues
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Eigenvalues/ArpackSelfAdjointEigenSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Skyline
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Skyline/SkylineMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Skyline/SkylineUtil.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Skyline/SkylineMatrixBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Skyline/SkylineProduct.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Skyline/SkylineInplaceLU.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Skyline/SkylineStorage.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsBFloat16.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/AVX512
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/AVX512/SpecialFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/AVX512/BesselFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/GPU
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/GPU/SpecialFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/NEON
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/NEON/SpecialFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/NEON/BesselFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/AVX
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/AVX/SpecialFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/arch/AVX/BesselFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsPacketMath.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsArrayAPI.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsHalf.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsBFloat16.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsHalf.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsArrayAPI.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsImpl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/HipVectorCompatibility.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SpecialFunctions/BesselFunctionsImpl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/BVH
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/BVH/BVAlgorithms.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/BVH/KdBVH.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/EulerAngles
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/EulerAngles/EulerSystem.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/EulerAngles/EulerAngles.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/MatrixPower.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/MatrixSquareRoot.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/MatrixExponential.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/MatrixLogarithm.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/MatrixFunction.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/StemFunction.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SparseExtra
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SparseExtra/MatrixMarketIterator.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SparseExtra/DynamicSparseMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SparseExtra/BlockSparseMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SparseExtra/RandomSetter.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SparseExtra/MarketIO.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/SparseExtra/BlockOfDynamicSparseMatrix.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/LevenbergMarquardt.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/fdjac1.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/r1mpyq.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/covar.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/chkder.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/r1updt.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/dogleg.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/rwupdt.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/HybridNonLinearSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/qrsolv.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/NonLinearOptimization/lmpar.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MoreVectorization
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/MoreVectorization/MathFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/IterationController.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/IncompleteLU.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/DGMRES.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/Scaling.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/MINRES.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/IDRS.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/IterativeSolvers/GMRES.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Polynomials
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Polynomials/PolynomialSolver.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Polynomials/Companion.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Polynomials/PolynomialUtils.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Splines
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Splines/SplineFwd.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Splines/Spline.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/Splines/SplineFitting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/FFT
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/FFT/ei_kissfft_impl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/src/FFT/ei_fftw_impl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/Tensor
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/TensorSymmetry
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/ThreadPool
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/TensorSymmetry
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/TensorSymmetry/DynamicSymmetry.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/TensorSymmetry/StaticSymmetry.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/TensorSymmetry/Symmetry.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/TensorSymmetry/util
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/TensorSymmetry/util/TemplateGroupTheory.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/EventCount.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/Barrier.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/ThreadYield.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/NonBlockingThreadPool.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/ThreadEnvironment.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/ThreadLocal.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/ThreadPoolInterface.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/RunQueue.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/ThreadPool/ThreadCancel.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCustomOp.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForcedEval.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionThreadPool.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionGpu.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorScanSycl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDevice.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGlobalFunctions.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBlock.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceGpu.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMap.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceThreadPool.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTrace.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReverse.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionBlocking.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorImagePatch.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMorphing.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFFT.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContraction.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExecutor.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionSycl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/Tensor.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBroadcasting.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIntDiv.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInitializer.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConcatenation.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReductionSycl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorScan.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMacros.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReductionGpu.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStriding.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorVolumePatch.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensionList.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorInflation.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorArgMax.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvaluator.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFixedSize.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPadding.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorMeta.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReduction.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConversion.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceDefault.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorChipping.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionMapper.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorTraits.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorCostModel.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGpuHipCudaDefines.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorBase.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorContractionCuda.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorLayoutSwap.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGenerator.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorFunctors.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorForwardDeclarations.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorPatch.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorStorage.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorAssign.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRef.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorUInt128.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorShuffling.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorRandom.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorGpuHipCudaUndefines.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConvolution.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorReductionCuda.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorEvalTo.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorExpr.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceCuda.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorConvolutionSycl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDeviceSycl.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/util
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Meta.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/util/EmulateArray.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/util/CXX11Workarounds.h
+-- Installing: /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image/usr/include/eigen3/unsupported/Eigen/CXX11/src/util/MaxSizeVector.h
+&gt;&gt;&gt; Completed installing dev-cpp/eigen-3.4.0-r3 into /var/tmp/portage/dev-cpp/eigen-3.4.0-r3/image
+
+ <span class="ansi32">*</span> Final size of build directory: 20748 KiB (20.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   9988 KiB ( 9.7 MiB)
+
+
+</pre>
+</body>
+
+</html>
