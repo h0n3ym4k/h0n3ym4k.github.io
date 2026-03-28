@@ -138,6 +138,9 @@ done
 #step 7 - qa_notice.html
 /root/qa_notice.sh
 
+#step 8 - lto_notice.html
+/root/lto_notice.sh
+
 #step 8 - https://h0n3ym4k.github.io/portage-build-log/index.html
 cd /mnt/Downloads/portage-build-log
 
@@ -219,6 +222,11 @@ if [ -e qa_notice.html ];then
 	cat qa_notice.html >> index.html.tmp.1
 fi
 
+#/root/lto_notice.sh
+if [ -e lto_notice.html ];then
+	cat lto_notice.html >> index.html.tmp.1
+fi
+
 echo "<center><h3>All logs, in general</h3></center>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 echo "<a href="kernel.config.log.html">kernel.config.log.html - kernel config</a>" >> index.html.tmp.1
@@ -228,7 +236,7 @@ echo "<br/>" >> index.html.tmp.1
 echo "<a href="01summary.log">01summary.log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
-files2=($(find -iname \*.html ! -iname \*emerge-info.log.html ! -iname genkernel.log.html ! -iname kernel.config.log.html ! -iname index.html ! -iname qa_notice.html ! -iname weekly.html ! -iname world.html |cut -b1,2 --complement))
+files2=($(find -iname \*.html ! -iname \*emerge-info.log.html ! -iname genkernel.log.html ! -iname kernel.config.log.html ! -iname index.html ! -iname qa_notice.html ! -iname lto_notice.html ! -iname weekly.html ! -iname world.html |cut -b1,2 --complement))
 for f in "${files2[@]}"
 do
 	info=$(echo "${f}" | rev | cut -d_ -f1 --complement | rev)
