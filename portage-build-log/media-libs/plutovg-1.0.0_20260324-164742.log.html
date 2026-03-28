@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/plutovg-1.0.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: kangie@gentoo.org games@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'plutovg-1.0.0.tar.gz' to /var/tmp/portage/media-libs/plutovg-1.0.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/plutovg-1.0.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=true --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/media-libs/plutovg-1.0.0/temp/meson.x86_64-pc-linux-gnu.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0 /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0-abi_x86_64.amd64
+The Meson build system
+Version: 1.9.2
+Source dir: /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0
+Build dir: /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0-abi_x86_64.amd64
+Build type: native build
+Project name: plutovg
+Project version: 1.0.0
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 15.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 15.2.1_p20260214 p5) 15.2.1 20260214")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.46.0
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C supports arguments -Wno-sign-compare: YES 
+Compiler for C supports arguments -Wno-unused-function: YES 
+Library m found: YES
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 2.5.1
+Build targets in project: 2
+
+plutovg 1.0.0
+
+  User defined options
+    Native files         : /var/tmp/portage/media-libs/plutovg-1.0.0/temp/meson.x86_64-pc-linux-gnu.ini
+    b_lto                : true
+    b_pch                : false
+    buildtype            : plain
+    libdir               : lib64
+    localstatedir        : /var/lib
+    build.pkg_config_path: /usr/share/pkgconfig
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -l2 -j2
+[1/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-blend.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-blend.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-blend.c.o -c ../plutovg-1.0.0/source/plutovg-blend.c
+[2/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-canvas.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-canvas.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-canvas.c.o -c ../plutovg-1.0.0/source/plutovg-canvas.c
+[3/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-font.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-font.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-font.c.o -c ../plutovg-1.0.0/source/plutovg-font.c
+[4/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-matrix.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-matrix.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-matrix.c.o -c ../plutovg-1.0.0/source/plutovg-matrix.c
+[5/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-paint.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-paint.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-paint.c.o -c ../plutovg-1.0.0/source/plutovg-paint.c
+[6/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-path.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-path.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-path.c.o -c ../plutovg-1.0.0/source/plutovg-path.c
+[7/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-rasterize.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-rasterize.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-rasterize.c.o -c ../plutovg-1.0.0/source/plutovg-rasterize.c
+[8/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-surface.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-surface.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-surface.c.o -c ../plutovg-1.0.0/source/plutovg-surface.c
+[9/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-ft-math.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-ft-math.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-ft-math.c.o -c ../plutovg-1.0.0/source/plutovg-ft-math.c
+[10/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-ft-raster.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-ft-raster.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-ft-raster.c.o -c ../plutovg-1.0.0/source/plutovg-ft-raster.c
+[11/15] x86_64-pc-linux-gnu-gcc -Ilibplutovg.so.1.0.0.p -I. -I../plutovg-1.0.0 -I../plutovg-1.0.0/include -I../plutovg-1.0.0/source -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DPLUTOVG_BUILD -Wno-sign-compare -Wno-unused-function -MD -MQ libplutovg.so.1.0.0.p/source_plutovg-ft-stroker.c.o -MF libplutovg.so.1.0.0.p/source_plutovg-ft-stroker.c.o.d -o libplutovg.so.1.0.0.p/source_plutovg-ft-stroker.c.o -c ../plutovg-1.0.0/source/plutovg-ft-stroker.c
+[12/15] x86_64-pc-linux-gnu-gcc  -o libplutovg.so.1.0.0 libplutovg.so.1.0.0.p/source_plutovg-blend.c.o libplutovg.so.1.0.0.p/source_plutovg-canvas.c.o libplutovg.so.1.0.0.p/source_plutovg-font.c.o libplutovg.so.1.0.0.p/source_plutovg-matrix.c.o libplutovg.so.1.0.0.p/source_plutovg-paint.c.o libplutovg.so.1.0.0.p/source_plutovg-path.c.o libplutovg.so.1.0.0.p/source_plutovg-rasterize.c.o libplutovg.so.1.0.0.p/source_plutovg-surface.c.o libplutovg.so.1.0.0.p/source_plutovg-ft-math.c.o libplutovg.so.1.0.0.p/source_plutovg-ft-raster.c.o libplutovg.so.1.0.0.p/source_plutovg-ft-stroker.c.o -flto -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libplutovg.so.1 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -lm
+[13/15] /usr/lib/python-exec/python3.13/meson --internal symbolextractor /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0-abi_x86_64.amd64 libplutovg.so.1.0.0 libplutovg.so.1.0.0 libplutovg.so.1.0.0.p/libplutovg.so.1.0.0.symbols 
+[14/15] x86_64-pc-linux-gnu-gcc -Iexamples/smiley.p -Iexamples -I../plutovg-1.0.0/examples -I../plutovg-1.0.0/include -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=c99 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ examples/smiley.p/smiley.c.o -MF examples/smiley.p/smiley.c.o.d -o examples/smiley.p/smiley.c.o -c ../plutovg-1.0.0/examples/smiley.c
+[15/15] x86_64-pc-linux-gnu-gcc  -o examples/smiley examples/smiley.p/smiley.c.o -flto -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/..' libplutovg.so.1.0.0
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: media-libs/plutovg-1.0.0
+
+&gt;&gt;&gt; Install media-libs/plutovg-1.0.0 into /var/tmp/portage/media-libs/plutovg-1.0.0/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/media-libs/plutovg-1.0.0/image --no-rebuild
+Installing libplutovg.so.1.0.0 to /var/tmp/portage/media-libs/plutovg-1.0.0/image/usr/lib64
+Installing /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0/include/plutovg.h to /var/tmp/portage/media-libs/plutovg-1.0.0/image/usr/include/plutovg
+Installing /var/tmp/portage/media-libs/plutovg-1.0.0/work/plutovg-1.0.0-abi_x86_64.amd64/meson-private/plutovg.pc to /var/tmp/portage/media-libs/plutovg-1.0.0/image/usr/lib64/pkgconfig
+Installing symlink pointing to libplutovg.so.1.0.0 to /var/tmp/portage/media-libs/plutovg-1.0.0/image/usr/lib64/libplutovg.so.1
+Installing symlink pointing to libplutovg.so.1 to /var/tmp/portage/media-libs/plutovg-1.0.0/image/usr/lib64/libplutovg.so
+&gt;&gt;&gt; Completed installing media-libs/plutovg-1.0.0 into /var/tmp/portage/media-libs/plutovg-1.0.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2948 KiB (2.8 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   572 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libplutovg.so.1.0.0
+
+</pre>
+</body>
+
+</html>
