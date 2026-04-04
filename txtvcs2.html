@@ -107,7 +107,9 @@
       btn.style.marginBottom = '4px';
 
       // Create preview snippet (strip HTML tags and truncate)
-      var previewText = commit.content.replace(/<[^>]+>/g, ''); // Remove HTML tags
+      var tempDiv = document.createElement('div');
+      tempDiv.innerHTML = commit.content;
+      var previewText = tempDiv.textContent || tempDiv.innerText || '';
       if (previewText.length > 100) {
         previewText = previewText.substring(0, 100) + '...';
       }
