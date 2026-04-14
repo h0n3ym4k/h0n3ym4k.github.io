@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ -e /tmp/web.txt ] || [ -e /tmp/mail.txt ];then
+	continue
+else
+	exit 1
+fi
+
 echo
 echo "threat intelligence"
 echo
