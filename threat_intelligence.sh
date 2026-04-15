@@ -1,8 +1,6 @@
 #!/bin/bash
 
-if [ -e /tmp/web.txt ] || [ -e /tmp/mail.txt ];then
-	continue
-else
+if [ ! -e /tmp/web.txt ] || [ ! -e /tmp/mail.txt ];then
 	exit 1
 fi
 
