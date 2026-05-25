@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi35 { color: #E850A8; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    x11-apps/iceauth-1.0.11:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: x11@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'iceauth-1.0.11.tar.xz' to /var/tmp/portage/x11-apps/iceauth-1.0.11/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/x11-apps/iceauth-1.0.11/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/x11-apps/iceauth-1.0.11/work/iceauth-1.0.11 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/x11-apps/iceauth-1.0.11/work/iceauth-1.0.11 ...
+meson setup -Db_lto=true --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/x11-apps/iceauth-1.0.11/temp/meson.x86_64-pc-linux-gnu.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Ddefault_library=shared /var/tmp/portage/x11-apps/iceauth-1.0.11/work/iceauth-1.0.11 /var/tmp/portage/x11-apps/iceauth-1.0.11/work/iceauth-1.0.11-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.9.2
+Source dir: <span class="ansi1">/var/tmp/portage/x11-apps/iceauth-1.0.11/work/iceauth-1.0.11</span>
+Build dir: <span class="ansi1">/var/tmp/portage/x11-apps/iceauth-1.0.11/work/iceauth-1.0.11-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">iceauth</span>
+Project version: <span class="ansi1">1.0.11</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 15.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 15.2.1_p20260214 p5) 15.2.1 20260214")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.46.0
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Compiler for C supports arguments -fno-strict-aliasing: <span class="ansi1 ansi32">YES</span> 
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.5.1</span>
+Run-time dependency <span class="ansi1">xproto</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">7.0.34</span>
+Run-time dependency <span class="ansi1">ice</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.1.2</span>
+Checking for function "<span class="ansi1">reallocarray</span>" : <span class="ansi1 ansi32">YES</span> 
+Configuring <span class="ansi1">config.h</span> using configuration
+Program <span class="ansi1">sed</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/sed)
+Build targets in project: <span class="ansi1">2</span>
+
+iceauth <span class="ansi36">1.0.11</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/x11-apps/iceauth-1.0.11/temp/meson.x86_64-pc-linux-gnu.ini
+    b_lto                : true
+    b_pch                : false
+    buildtype            : plain
+    default_library      : shared
+    libdir               : lib64
+    localstatedir        : /var/lib
+    build.pkg_config_path: /usr/share/pkgconfig
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/x11-apps/iceauth-1.0.11/work/iceauth-1.0.11 ...
+ninja -v -l2 -j2
+[1/4] x86_64-pc-linux-gnu-gcc -Iiceauth.p -I. -I../iceauth-1.0.11 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fno-strict-aliasing -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ iceauth.p/iceauth.c.o -MF iceauth.p/iceauth.c.o.d -o iceauth.p/iceauth.c.o -c ../iceauth-1.0.11/iceauth.c
+[2/4] x86_64-pc-linux-gnu-gcc -Iiceauth.p -I. -I../iceauth-1.0.11 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -fno-strict-aliasing -DHAVE_CONFIG_H -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -MD -MQ iceauth.p/process.c.o -MF iceauth.p/process.c.o.d -o iceauth.p/process.c.o -c ../iceauth-1.0.11/process.c
+<span class="ansi1">../iceauth-1.0.11/process.c:</span> In function ‘<span class="ansi1">catchsig</span>’:
+<span class="ansi1">../iceauth-1.0.11/process.c:489:29:</span> <span class="ansi1 ansi35">warning: </span>ignoring return value of ‘<span class="ansi1">write</span>’ declared with attribute ‘<span class="ansi1">warn_unused_result</span>’ [<span class="ansi1 ansi35">-Wunused-result</span>]
+  489 | #define WRITES(fd, S) (void)<span class="ansi1 ansi35">write((fd), (S), strlen((S)))</span>
+      |                             <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../iceauth-1.0.11/process.c:509:38:</span> <span class="ansi1 ansi36">note: </span>in expansion of macro ‘<span class="ansi1">WRITES</span>’
+  509 |     if (verbose &amp;&amp; iceauth_modified) <span class="ansi1 ansi36">WRITES</span>(STDERR_FILENO, "\r\n");
+      |                                      <span class="ansi1 ansi36">^~~~~~</span>
+<span class="ansi1">../iceauth-1.0.11/process.c:</span> In function ‘<span class="ansi1">auth_finalize</span>’:
+<span class="ansi1">../iceauth-1.0.11/process.c:489:29:</span> <span class="ansi1 ansi35">warning: </span>ignoring return value of ‘<span class="ansi1">write</span>’ declared with attribute ‘<span class="ansi1">warn_unused_result</span>’ [<span class="ansi1 ansi35">-Wunused-result</span>]
+  489 | #define WRITES(fd, S) (void)<span class="ansi1 ansi35">write((fd), (S), strlen((S)))</span>
+      |                             <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../iceauth-1.0.11/process.c:673:17:</span> <span class="ansi1 ansi36">note: </span>in expansion of macro ‘<span class="ansi1">WRITES</span>’
+  673 |                 <span class="ansi1 ansi36">WRITES</span>(STDERR_FILENO, "\nAborting changes to authority file ");
+      |                 <span class="ansi1 ansi36">^~~~~~</span>
+<span class="ansi1">../iceauth-1.0.11/process.c:489:29:</span> <span class="ansi1 ansi35">warning: </span>ignoring return value of ‘<span class="ansi1">write</span>’ declared with attribute ‘<span class="ansi1">warn_unused_result</span>’ [<span class="ansi1 ansi35">-Wunused-result</span>]
+  489 | #define WRITES(fd, S) (void)<span class="ansi1 ansi35">write((fd), (S), strlen((S)))</span>
+      |                             <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../iceauth-1.0.11/process.c:674:17:</span> <span class="ansi1 ansi36">note: </span>in expansion of macro ‘<span class="ansi1">WRITES</span>’
+  674 |                 <span class="ansi1 ansi36">WRITES</span>(STDERR_FILENO, iceauth_filename);
+      |                 <span class="ansi1 ansi36">^~~~~~</span>
+<span class="ansi1">../iceauth-1.0.11/process.c:489:29:</span> <span class="ansi1 ansi35">warning: </span>ignoring return value of ‘<span class="ansi1">write</span>’ declared with attribute ‘<span class="ansi1">warn_unused_result</span>’ [<span class="ansi1 ansi35">-Wunused-result</span>]
+  489 | #define WRITES(fd, S) (void)<span class="ansi1 ansi35">write((fd), (S), strlen((S)))</span>
+      |                             <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../iceauth-1.0.11/process.c:675:17:</span> <span class="ansi1 ansi36">note: </span>in expansion of macro ‘<span class="ansi1">WRITES</span>’
+  675 |                 <span class="ansi1 ansi36">WRITES</span>(STDERR_FILENO, "\n");
+      |                 <span class="ansi1 ansi36">^~~~~~</span>
+[3/4] x86_64-pc-linux-gnu-gcc  -o iceauth iceauth.p/iceauth.c.o iceauth.p/process.c.o -flto -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs /usr/lib64/libICE.so
+[4/4] /usr/lib/python-exec/python3.13/meson --internal exe --capture iceauth.1 -- /usr/bin/sed -e 's/__xorgversion__/"iceauth 1.0.11" "X Version 11"/' ../iceauth-1.0.11/man/iceauth.man
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: x11-apps/iceauth-1.0.11
+
+&gt;&gt;&gt; Install x11-apps/iceauth-1.0.11 into /var/tmp/portage/x11-apps/iceauth-1.0.11/image
+meson install --destdir /var/tmp/portage/x11-apps/iceauth-1.0.11/image --no-rebuild
+Installing iceauth to /var/tmp/portage/x11-apps/iceauth-1.0.11/image/usr/bin
+Installing iceauth.1 to /var/tmp/portage/x11-apps/iceauth-1.0.11/image/usr/share/man/man1
+&gt;&gt;&gt; Completed installing x11-apps/iceauth-1.0.11 into /var/tmp/portage/x11-apps/iceauth-1.0.11/image
+
+ <span class="ansi32">*</span> Final size of build directory: 1284 KiB (1.2 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   124 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/bin/iceauth
+
+</pre>
+</body>
+
+</html>
