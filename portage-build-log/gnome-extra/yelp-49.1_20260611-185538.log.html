@@ -1,0 +1,918 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+.ansi35 { color: #E850A8; }
+.ansi36 { color: #00aaaa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    gnome-extra/yelp-49.1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: gnome@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'yelp-49.1.tar.xz' to /var/tmp/portage/gnome-extra/yelp-49.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/gnome-extra/yelp-49.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1 ...
+meson setup -Db_lto=true --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/gnome-extra/yelp-49.1/temp/meson.x86_64-pc-linux-gnu.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Dlzma=enabled -Dbzip2=enabled /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1 /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build
+<span class="ansi1">The Meson build system</span>
+Version: 1.10.2
+Source dir: <span class="ansi1">/var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1</span>
+Build dir: <span class="ansi1">/var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build</span>
+Build type: <span class="ansi1">native build</span>
+Project name: <span class="ansi1">yelp</span>
+Project version: <span class="ansi1">49.1</span>
+C compiler for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> (gcc 15.2.1 "x86_64-pc-linux-gnu-gcc (Gentoo 15.2.1_p20260214 p5) 15.2.1 20260214")
+C linker for the host machine: <span class="ansi1">x86_64-pc-linux-gnu-gcc</span> ld.bfd 2.46.0
+Host machine cpu family: <span class="ansi1">x86_64</span>
+Host machine cpu: <span class="ansi1">x86_64</span>
+Library <span class="ansi1">m</span> found: <span class="ansi1 ansi32">YES</span>
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.5.1</span>
+Run-time dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.4</span>
+Run-time dependency <span class="ansi1">gio-unix-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.4</span>
+Run-time dependency <span class="ansi1">gtk4-unix-print</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">4.18.6</span>
+Run-time dependency <span class="ansi1">gtk4</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">4.18.6</span>
+Run-time dependency <span class="ansi1">libadwaita-1</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.7.9</span>
+Run-time dependency <span class="ansi1">libxml-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.15.3</span>
+Run-time dependency <span class="ansi1">libxslt</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">1.1.45</span>
+Run-time dependency <span class="ansi1">libexslt</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">0.8.25</span>
+Run-time dependency <span class="ansi1">sqlite3</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">3.53.1</span>
+Run-time dependency <span class="ansi1">webkitgtk-6.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.50.5</span>
+Run-time dependency <span class="ansi1">webkitgtk-web-process-extension-6.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.50.5</span>
+Run-time dependency <span class="ansi1">yelp-xsl</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">42.4</span>
+Run-time dependency <span class="ansi1">liblzma</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">5.8.3</span>
+Program <span class="ansi1">glib-compile-schemas</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-schemas)
+Program <span class="ansi1">desktop-file-validate</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/desktop-file-validate)
+Program <span class="ansi1">appstreamcli</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/appstreamcli)
+Found CMake: <span class="ansi1">/usr/bin/cmake</span> (4.3.3)
+Run-time dependency <span class="ansi1">bzip2</span> found: <span class="ansi1 ansi31">NO</span> (tried pkgconfig)
+Library <span class="ansi1">bz2</span> found: <span class="ansi1 ansi32">YES</span>
+Program <span class="ansi1">itstool</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/itstool)
+Configuring <span class="ansi1">config.h</span> using configuration
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Build-time dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.4</span>
+Program <span class="ansi1">/usr/bin/glib-genmarshal</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-genmarshal)
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.4</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Dependency <span class="ansi1">glib-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.4</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-mkenums</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-mkenums)
+Found pkg-config: <span class="ansi1 ansi32">YES</span> <span class="ansi1">(/usr/bin/x86_64-pc-linux-gnu-pkg-config)</span> <span class="ansi1 ansi34">2.5.1</span>
+Configuring <span class="ansi1">yelp-config.h.in</span> using configuration
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.4</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-compile-resources</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-resources)
+Program <span class="ansi1">gen_yelp_pot.sh</span> found: <span class="ansi1 ansi32">YES</span> (/bin/sh /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/domains/gen_yelp_pot.sh)
+Program <span class="ansi1">gen_yelp_xml.sh</span> found: <span class="ansi1 ansi32">YES</span> (/bin/bash /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/domains/gen_yelp_xml.sh)
+Program <span class="ansi1">msgfmt</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgfmt)
+Configuring <span class="ansi1">catalog</span> using configuration
+Configuring <span class="ansi1">db2html.xsl</span> using configuration
+Configuring <span class="ansi1">links2html.xsl</span> using configuration
+Configuring <span class="ansi1">info2html.xsl</span> using configuration
+Configuring <span class="ansi1">mal2html.xsl</span> using configuration
+Configuring <span class="ansi1">man2html.xsl</span> using configuration
+Configuring <span class="ansi1">yelp-common.xsl</span> using configuration
+Dependency <span class="ansi1">gio-2.0</span> found: <span class="ansi1 ansi32">YES</span> <span class="ansi36">2.84.4</span> <span class="ansi1 ansi34">(cached)</span>
+Program <span class="ansi1">/usr/bin/glib-compile-schemas</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/glib-compile-schemas)
+Program <span class="ansi1">msginit</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msginit)
+Program <span class="ansi1">msgmerge</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/msgmerge)
+Program <span class="ansi1">xgettext</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/xgettext)
+Program <span class="ansi1">gtk4-update-icon-cache</span> found: <span class="ansi1 ansi31">NO</span>
+Program <span class="ansi1">gtk-update-icon-cache</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/gtk-update-icon-cache)
+Program <span class="ansi1">update-desktop-database</span> found: <span class="ansi1 ansi32">YES</span> (/usr/bin/update-desktop-database)
+Build targets in project: <span class="ansi1">126</span>
+
+yelp <span class="ansi36">49.1</span>
+
+  <span class="ansi1">User defined options</span>
+    Native files         : /var/tmp/portage/gnome-extra/yelp-49.1/temp/meson.x86_64-pc-linux-gnu.ini
+    b_lto                : true
+    b_pch                : false
+    buildtype            : plain
+    bzip2                : enabled
+    libdir               : lib64
+    localstatedir        : /var/lib
+    lzma                 : enabled
+    build.pkg_config_path: /usr/share/pkgconfig
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1 ...
+ninja -v -l2 -j2
+[1/158] /usr/bin/glib-genmarshal --quiet --prefix yelp_marshal --internal --output libyelp/yelp-marshal.h --header ../yelp-49.1/libyelp/yelp-marshal.list --pragma-once
+[2/158] /usr/lib/python-exec/python3.14/meson --internal exe --capture libyelp/yelp-types.h -- /usr/bin/glib-mkenums --template /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-types.h.template /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-bookmarks.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-docbook-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-help-list.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-info-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-mallard-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-man-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-man-search.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-settings.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-simple-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-sqlite-storage.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-storage.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-transform.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-uri-builder.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-uri.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-view.h
+[3/158] /usr/bin/glib-genmarshal --quiet --prefix yelp_marshal --internal --output libyelp/yelp-marshal.c --body ../yelp-49.1/libyelp/yelp-marshal.list --include-header yelp-marshal.h
+[4/158] /usr/lib/python-exec/python3.14/meson --internal exe --capture libyelp/yelp-types.c -- /usr/bin/glib-mkenums --template /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-types.c.template /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-bookmarks.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-docbook-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-help-list.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-info-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-mallard-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-man-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-man-search.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-settings.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-simple-document.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-sqlite-storage.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-storage.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-transform.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-uri-builder.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-uri.h /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/../yelp-49.1/libyelp/yelp-view.h
+[5/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-marshal.c.o -MF libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-marshal.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-marshal.c.o -c libyelp/yelp-marshal.c
+[6/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-types.c.o -MF libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-types.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-types.c.o -c libyelp/yelp-types.c
+[7/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-bookmarks.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-bookmarks.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-bookmarks.c.o -c ../yelp-49.1/libyelp/yelp-bookmarks.c
+[8/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-debug.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-debug.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-debug.c.o -c ../yelp-49.1/libyelp/yelp-debug.c
+[9/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-docbook-document.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-docbook-document.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-docbook-document.c.o -c ../yelp-49.1/libyelp/yelp-docbook-document.c
+[10/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-document.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-document.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-document.c.o -c ../yelp-49.1/libyelp/yelp-document.c
+[11/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-error.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-error.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-error.c.o -c ../yelp-49.1/libyelp/yelp-error.c
+[12/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-help-list.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-help-list.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-help-list.c.o -c ../yelp-49.1/libyelp/yelp-help-list.c
+[13/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-info-document.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-info-document.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-info-document.c.o -c ../yelp-49.1/libyelp/yelp-info-document.c
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-document.c:</span> In function ‘<span class="ansi1">info_document_process</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-document.c:375:5:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_foreach</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  375 |     <span class="ansi1 ansi35">gtk_tree_model_foreach</span> (priv-&gt;sections,
+      |     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~</span>
+In file included from <span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtkcellarea.h:30</span>,
+                 from <span class="ansi1">/usr/include/gtk-4.0/gtk/gtk.h:64</span>,
+                 from <span class="ansi1">../yelp-49.1/libyelp/yelp-info-document.c:28</span>:
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:380:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  380 | void              <span class="ansi1 ansi36">gtk_tree_model_foreach</span>         (GtkTreeModel            *model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-document.c:</span> In function ‘<span class="ansi1">info_sections_visit</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-document.c:434:5:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  434 |     <span class="ansi1 ansi35">gtk_tree_model_get</span> (model, iter,
+      |     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:370:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  370 | void              <span class="ansi1 ansi36">gtk_tree_model_get</span>             (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+[14/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-info-parser.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-info-parser.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-info-parser.c.o -c ../yelp-49.1/libyelp/yelp-info-parser.c
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">find_real_top</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:653:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_copy</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  653 |   <span class="ansi1 ansi35">r</span> = gtk_tree_iter_copy (it);
+      |   <span class="ansi1 ansi35">^</span>
+In file included from <span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtkcellarea.h:30</span>,
+                 from <span class="ansi1">/usr/include/gtk-4.0/gtk/gtk.h:64</span>,
+                 from <span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:26</span>:
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:298:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  298 | GtkTreeIter *     <span class="ansi1 ansi36">gtk_tree_iter_copy</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:655:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_iter_parent</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  655 |   <span class="ansi1 ansi35">while</span> (gtk_tree_model_iter_parent (model, tmp, r)) {
+      |   <span class="ansi1 ansi35">^~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:360:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  360 | gboolean          <span class="ansi1 ansi36">gtk_tree_model_iter_parent</span>     (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:656:5:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_free</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  656 |     <span class="ansi1 ansi35">gtk_tree_iter_free</span> (r);
+      |     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:300:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  300 | void              <span class="ansi1 ansi36">gtk_tree_iter_free</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:657:5:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_copy</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  657 |     <span class="ansi1 ansi35">r</span> = gtk_tree_iter_copy (tmp);
+      |     <span class="ansi1 ansi35">^</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:298:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  298 | GtkTreeIter *     <span class="ansi1 ansi36">gtk_tree_iter_copy</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">find_real_sibling</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:677:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_copy</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  677 |   <span class="ansi1 ansi35">r</span> = gtk_tree_iter_copy (it);
+      |   <span class="ansi1 ansi35">^</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:298:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  298 | GtkTreeIter *     <span class="ansi1 ansi36">gtk_tree_iter_copy</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:678:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_copy</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  678 |   <span class="ansi1 ansi35">tmp</span> = gtk_tree_iter_copy (it);
+      |   <span class="ansi1 ansi35">^~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:298:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  298 | GtkTreeIter *     <span class="ansi1 ansi36">gtk_tree_iter_copy</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:680:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get_string_from_iter</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  680 |   <span class="ansi1 ansi35">reftitle</span> = gtk_tree_model_get_string_from_iter (model, comp);
+      |   <span class="ansi1 ansi35">^~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:325:18:</span> <span class="ansi1 ansi36">note: </span>declared here
+  325 | char *           <span class="ansi1 ansi36">gtk_tree_model_get_string_from_iter</span> (GtkTreeModel *tree_model,
+      |                  <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:682:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_iter_parent</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  682 |   <span class="ansi1 ansi35">result</span> = gtk_tree_model_iter_parent (model, r, it);
+      |   <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:360:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  360 | gboolean          <span class="ansi1 ansi36">gtk_tree_model_iter_parent</span>     (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:686:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get_string_from_iter</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  686 |   <span class="ansi1 ansi35">title</span> = gtk_tree_model_get_string_from_iter (model, r);
+      |   <span class="ansi1 ansi35">^~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:325:18:</span> <span class="ansi1 ansi36">note: </span>declared here
+  325 | char *           <span class="ansi1 ansi36">gtk_tree_model_get_string_from_iter</span> (GtkTreeModel *tree_model,
+      |                  <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:689:5:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_free</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  689 |     <span class="ansi1 ansi35">gtk_tree_iter_free</span> (tmp);
+      |     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:300:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  300 | void              <span class="ansi1 ansi36">gtk_tree_iter_free</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:690:5:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_copy</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  690 |     <span class="ansi1 ansi35">tmp</span> = gtk_tree_iter_copy (r);
+      |     <span class="ansi1 ansi35">^~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:298:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  298 | GtkTreeIter *     <span class="ansi1 ansi36">gtk_tree_iter_copy</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:691:5:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_iter_parent</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  691 |     <span class="ansi1 ansi35">result</span> = gtk_tree_model_iter_parent (model, r, tmp);
+      |     <span class="ansi1 ansi35">^~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:360:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  360 | gboolean          <span class="ansi1 ansi36">gtk_tree_model_iter_parent</span>     (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:693:7:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get_string_from_iter</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  693 |       <span class="ansi1 ansi35">title</span> = gtk_tree_model_get_string_from_iter (model, r);
+      |       <span class="ansi1 ansi35">^~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:325:18:</span> <span class="ansi1 ansi36">note: </span>declared here
+  325 | char *           <span class="ansi1 ansi36">gtk_tree_model_get_string_from_iter</span> (GtkTreeModel *tree_model,
+      |                  <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:698:7:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_free</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  698 |       <span class="ansi1 ansi35">gtk_tree_iter_free</span> (tmp);
+      |       <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:300:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  300 | void              <span class="ansi1 ansi36">gtk_tree_iter_free</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:702:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_free</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  702 |   <span class="ansi1 ansi35">gtk_tree_iter_free</span> (r);
+      |   <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:300:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  300 | void              <span class="ansi1 ansi36">gtk_tree_iter_free</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">process_page</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:787:25:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_append</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  787 |                         <span class="ansi1 ansi35">gtk_tree_store_append</span> (tree, iter, NULL);
+      |                         <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~</span>
+In file included from <span class="ansi1">/usr/include/gtk-4.0/gtk/gtk.h:292</span>:
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:131:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+  131 | void          <span class="ansi1 ansi36">gtk_tree_store_append</span>           (GtkTreeStore *tree_store,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:794:21:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_insert_after</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  794 |                     <span class="ansi1 ansi35">gtk_tree_store_insert_after</span> (tree, iter, NULL,
+      |                     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:108:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+  108 | void          <span class="ansi1 ansi36">gtk_tree_store_insert_after</span>     (GtkTreeStore *tree_store,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:796:21:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_free</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  796 |                     <span class="ansi1 ansi35">gtk_tree_iter_free</span> (real);
+      |                     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:300:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  300 | void              <span class="ansi1 ansi36">gtk_tree_iter_free</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:799:21:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_append</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  799 |                     <span class="ansi1 ansi35">gtk_tree_store_append</span> (tree, iter, NULL);
+      |                     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:131:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+  131 | void          <span class="ansi1 ansi36">gtk_tree_store_append</span>           (GtkTreeStore *tree_store,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:805:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_append</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  805 |                 <span class="ansi1 ansi35">gtk_tree_store_append</span> (tree, iter,
+      |                 <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:131:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+  131 | void          <span class="ansi1 ansi36">gtk_tree_store_append</span>           (GtkTreeStore *tree_store,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:819:13:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_insert_after</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  819 |             <span class="ansi1 ansi35">gtk_tree_store_insert_after</span> (tree, iter,
+      |             <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:108:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+  108 | void          <span class="ansi1 ansi36">gtk_tree_store_insert_after</span>     (GtkTreeStore *tree_store,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:822:13:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_free</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  822 |             <span class="ansi1 ansi35">gtk_tree_iter_free</span> (nit);
+      |             <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:300:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  300 | void              <span class="ansi1 ansi36">gtk_tree_iter_free</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:825:13:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_append</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  825 |             <span class="ansi1 ansi35">gtk_tree_store_append</span> (tree, iter, upit);
+      |             <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:131:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+  131 | void          <span class="ansi1 ansi36">gtk_tree_store_append</span>           (GtkTreeStore *tree_store,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:842:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_set</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  842 |         <span class="ansi1 ansi35">gtk_tree_store_set</span> (tree, iter,
+      |         <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:81:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+   81 | void          <span class="ansi1 ansi36">gtk_tree_store_set</span>              (GtkTreeStore *tree_store,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">yelp_info_parser_parse_file</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:954:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_store_new</span>’ is deprecated: Use 'GtkTreeListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  954 |         <span class="ansi1 ansi35">tree</span> = gtk_tree_store_new (INFO_PARSER_N_COLUMNS, G_TYPE_STRING, G_TYPE_STRING,
+      |         <span class="ansi1 ansi35">^~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreestore.h:63:15:</span> <span class="ansi1 ansi36">note: </span>declared here
+   63 | GtkTreeStore *<span class="ansi1 ansi36">gtk_tree_store_new</span>              (int           n_columns,
+      |               <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:957:46:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_iter_free</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  957 |                                              <span class="ansi1 ansi35">(</span>GDestroyNotify) gtk_tree_iter_free);
+      |                                              <span class="ansi1 ansi35">^</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:300:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  300 | void              <span class="ansi1 ansi36">gtk_tree_iter_free</span>             (GtkTreeIter  *iter);
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">parse_tree_level</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:992:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+  992 |                 <span class="ansi1 ansi35">gtk_tree_model_get</span> (GTK_TREE_MODEL (tree), &amp;iter,
+      |                 <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:370:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  370 | void              <span class="ansi1 ansi36">gtk_tree_model_get</span>             (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1021:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_iter_parent</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1021 |                 <span class="ansi1 ansi35">if</span> (gtk_tree_model_iter_parent (GTK_TREE_MODEL (tree), &amp;parent, &amp;iter)) {
+      |                 <span class="ansi1 ansi35">^~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:360:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  360 | gboolean          <span class="ansi1 ansi36">gtk_tree_model_iter_parent</span>     (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1023:21:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1023 |                     <span class="ansi1 ansi35">gtk_tree_model_get</span> (GTK_TREE_MODEL (tree), &amp;parent,
+      |                     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:370:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  370 | void              <span class="ansi1 ansi36">gtk_tree_model_get</span>             (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1034:17:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_iter_children</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1034 |                 <span class="ansi1 ansi35">if</span> (gtk_tree_model_iter_children (GTK_TREE_MODEL (tree),
+      |                 <span class="ansi1 ansi35">^~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:345:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  345 | gboolean          <span class="ansi1 ansi36">gtk_tree_model_iter_children</span>   (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1041:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_iter_next</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1041 |         <span class="ansi1 ansi35">while</span> (gtk_tree_model_iter_next (GTK_TREE_MODEL (tree), &amp;iter));
+      |         <span class="ansi1 ansi35">^~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:342:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  342 | gboolean          <span class="ansi1 ansi36">gtk_tree_model_iter_next</span>       (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">yelp_info_parser_parse_tree</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1067:9:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get_iter_first</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1067 |         <span class="ansi1 ansi35">if</span> (gtk_tree_model_get_iter_first (GTK_TREE_MODEL (tree), &amp;iter))
+      |         <span class="ansi1 ansi35">^~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:328:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  328 | gboolean          <span class="ansi1 ansi36">gtk_tree_model_get_iter_first</span>  (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">resolve_frag_id</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1087:3:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_get</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1087 |   <span class="ansi1 ansi35">gtk_tree_model_get</span> (GTK_TREE_MODEL (model), iter,
+      |   <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:370:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  370 | void              <span class="ansi1 ansi36">gtk_tree_model_get</span>             (GtkTreeModel *tree_model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">yelp_info_parse_menu</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1238:7:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_foreach</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1238 |       <span class="ansi1 ansi35">gtk_tree_model_foreach</span> (GTK_TREE_MODEL (tree), resolve_frag_id, &amp;xref);
+      |       <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:380:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  380 | void              <span class="ansi1 ansi36">gtk_tree_model_foreach</span>         (GtkTreeModel            *model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">info_process_text_notes</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:1489:7:</span> <span class="ansi1 ansi35">warning: </span>‘<span class="ansi1">gtk_tree_model_foreach</span>’ is deprecated: Use 'GListModel' instead [<span class="ansi1 ansi35">-Wdeprecated-declarations</span>]
+ 1489 |       <span class="ansi1 ansi35">gtk_tree_model_foreach</span> (GTK_TREE_MODEL (tree), resolve_frag_id, &amp;frag);
+      |       <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">/usr/include/gtk-4.0/gtk/deprecated/gtktreemodel.h:380:19:</span> <span class="ansi1 ansi36">note: </span>declared here
+  380 | void              <span class="ansi1 ansi36">gtk_tree_model_foreach</span>         (GtkTreeModel            *model,
+      |                   <span class="ansi1 ansi36">^~~~~~~~~~~~~~~~~~~~~~</span>
+In file included from <span class="ansi1">/usr/include/glib-2.0/glib/giochannel.h:36</span>,
+                 from <span class="ansi1">/usr/include/glib-2.0/glib.h:56</span>,
+                 from <span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:25</span>:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:</span> In function ‘<span class="ansi1">open_info_file</span>’:
+<span class="ansi1">/usr/include/glib-2.0/glib/gstring.h:76:5:</span> <span class="ansi1 ansi35">warning: </span>ignoring return value of ‘<span class="ansi1">g_string_free_and_steal</span>’ declared with attribute ‘<span class="ansi1">warn_unused_result</span>’ [<span class="ansi1 ansi35">-Wunused-result</span>]
+   72 |   <span class="ansi1 ansi35">(__builtin_constant_p (free_segment) ?        \</span>
+      |   <span class="ansi1 ansi35">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+   73 | <span class="ansi1 ansi35">    ((free_segment) ?                           \</span>
+      |     <span class="ansi1 ansi35">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+   74 | <span class="ansi1 ansi35">      (g_string_free) ((str), (free_segment)) : \</span>
+      |       <span class="ansi1 ansi35">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+   75 | <span class="ansi1 ansi35">      g_string_free_and_steal (str))            \</span>
+      |       <span class="ansi1 ansi35">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+   76 | <span class="ansi1 ansi35">    :                                           \</span>
+      |     <span class="ansi1 ansi35">^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+   77 | <span class="ansi1 ansi35">    (g_string_free) ((str), (free_segment)))</span>
+      |     <span class="ansi1 ansi35">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>
+<span class="ansi1">../yelp-49.1/libyelp/yelp-info-parser.c:410:5:</span> <span class="ansi1 ansi36">note: </span>in expansion of macro ‘<span class="ansi1">g_string_free</span>’
+  410 |     <span class="ansi1 ansi36">g_string_free</span> (string, FALSE);
+      |     <span class="ansi1 ansi36">^~~~~~~~~~~~~</span>
+[15/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-magic-decompressor.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-magic-decompressor.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-magic-decompressor.c.o -c ../yelp-49.1/libyelp/yelp-magic-decompressor.c
+[16/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-mallard-document.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-mallard-document.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-mallard-document.c.o -c ../yelp-49.1/libyelp/yelp-mallard-document.c
+[17/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-man-document.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-man-document.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-man-document.c.o -c ../yelp-49.1/libyelp/yelp-man-document.c
+[18/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-man-parser.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-man-parser.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-man-parser.c.o -c ../yelp-49.1/libyelp/yelp-man-parser.c
+[19/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-man-search.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-man-search.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-man-search.c.o -c ../yelp-49.1/libyelp/yelp-man-search.c
+[20/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-settings.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-settings.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-settings.c.o -c ../yelp-49.1/libyelp/yelp-settings.c
+[21/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-simple-document.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-simple-document.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-simple-document.c.o -c ../yelp-49.1/libyelp/yelp-simple-document.c
+[22/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-sqlite-storage.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-sqlite-storage.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-sqlite-storage.c.o -c ../yelp-49.1/libyelp/yelp-sqlite-storage.c
+[23/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-storage.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-storage.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-storage.c.o -c ../yelp-49.1/libyelp/yelp-storage.c
+[24/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-transform.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-transform.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-transform.c.o -c ../yelp-49.1/libyelp/yelp-transform.c
+[25/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-uri-builder.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-uri-builder.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-uri-builder.c.o -c ../yelp-49.1/libyelp/yelp-uri-builder.c
+[26/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-uri.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-uri.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-uri.c.o -c ../yelp-49.1/libyelp/yelp-uri.c
+[27/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-view.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-view.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-view.c.o -c ../yelp-49.1/libyelp/yelp-view.c
+<span class="ansi1">../yelp-49.1/libyelp/yelp-view.c:</span> In function ‘<span class="ansi1">view_show_error_page</span>’:
+<span class="ansi1">../yelp-49.1/libyelp/yelp-view.c:1889:19:</span> <span class="ansi1 ansi35">warning: </span>unused variable ‘<span class="ansi1">settings</span>’ [<span class="ansi1 ansi35">-Wunused-variable</span>]
+ 1889 |     YelpSettings *<span class="ansi1 ansi35">settings</span> = yelp_settings_get_default ();
+      |                   <span class="ansi1 ansi35">^~~~~~~~</span>
+[28/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-lzma-decompressor.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-lzma-decompressor.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-lzma-decompressor.c.o -c ../yelp-49.1/libyelp/yelp-lzma-decompressor.c
+[29/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/libyelp-1.so.0.0.0.p -Ilibyelp -I../yelp-49.1/libyelp -I. -I../yelp-49.1 -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gio-unix-2.0 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/libxml2 -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/libyelp-1.so.0.0.0.p/yelp-bz2-decompressor.c.o -MF libyelp/libyelp-1.so.0.0.0.p/yelp-bz2-decompressor.c.o.d -o libyelp/libyelp-1.so.0.0.0.p/yelp-bz2-decompressor.c.o -c ../yelp-49.1/libyelp/yelp-bz2-decompressor.c
+[30/158] x86_64-pc-linux-gnu-gcc  -o libyelp/libyelp-1.so.0.0.0 libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-marshal.c.o libyelp/libyelp-1.so.0.0.0.p/meson-generated_.._yelp-types.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-bookmarks.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-debug.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-docbook-document.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-document.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-error.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-help-list.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-info-document.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-info-parser.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-magic-decompressor.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-mallard-document.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-man-document.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-man-parser.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-man-search.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-settings.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-simple-document.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-sqlite-storage.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-storage.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-transform.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-uri-builder.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-uri.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-view.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-lzma-decompressor.c.o libyelp/libyelp-1.so.0.0.0.p/yelp-bz2-decompressor.c.o -flto=auto -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libyelp-1.so.0 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--start-group -lm /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgtk-4.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libvulkan.so /usr/lib64/libgraphene-1.0.so /usr/lib64/libadwaita-1.so /usr/lib64/libxml2.so /usr/lib64/libxslt.so /usr/lib64/libexslt.so /usr/lib64/libsqlite3.so /usr/lib64/libwebkitgtk-6.0.so /usr/lib64/libsoup-3.0.so /usr/lib64/libgmodule-2.0.so -pthread /usr/lib64/libjavascriptcoregtk-6.0.so /usr/lib64/liblzma.so -lbz2 -Wl,--end-group
+[31/158] /usr/lib/python-exec/python3.14/meson --internal vcstagger src/yelp-config.h.in src/yelp-config.h Devel /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/src @VCS_TAG@ '(.*)' /usr/bin/git rev-parse --short HEAD
+[32/158] /usr/bin/glib-compile-resources ../yelp-49.1/src/yelp.gresource.xml --sourcedir ../yelp-49.1/src --c-name yelp --internal --generate --target src/yelp-resources.c --dependency-file src/yelp-resources.c.d
+[33/158] /usr/bin/glib-compile-resources ../yelp-49.1/src/yelp.gresource.xml --sourcedir ../yelp-49.1/src --c-name yelp --internal --generate --target src/yelp-resources.h
+[34/158] /usr/lib/python-exec/python3.14/meson --internal symbolextractor /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build libyelp/libyelp-1.so.0.0.0 libyelp/libyelp-1.so.0.0.0 libyelp/libyelp-1.so.0.0.0.p/libyelp-1.so.0.0.0.symbols 
+[35/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/web-process-extension/libyelpwebprocessextension.so.p -Ilibyelp/web-process-extension -I../yelp-49.1/libyelp/web-process-extension -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/include/libadwaita-1 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/fribidi -I/usr/include/appstream -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/lib64/libffi/include -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-settings.c.o -MF libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-settings.c.o.d -o libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-settings.c.o -c ../yelp-49.1/libyelp/yelp-settings.c
+[36/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/web-process-extension/libyelpwebprocessextension.so.p -Ilibyelp/web-process-extension -I../yelp-49.1/libyelp/web-process-extension -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/include/libadwaita-1 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/fribidi -I/usr/include/appstream -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/lib64/libffi/include -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri-builder.c.o -MF libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri-builder.c.o.d -o libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri-builder.c.o -c ../yelp-49.1/libyelp/yelp-uri-builder.c
+[37/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/web-process-extension/libyelpwebprocessextension.so.p -Ilibyelp/web-process-extension -I../yelp-49.1/libyelp/web-process-extension -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/include/libadwaita-1 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/fribidi -I/usr/include/appstream -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/lib64/libffi/include -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri.c.o -MF libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri.c.o.d -o libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri.c.o -c ../yelp-49.1/libyelp/yelp-uri.c
+[38/158] x86_64-pc-linux-gnu-gcc -Ilibyelp/web-process-extension/libyelpwebprocessextension.so.p -Ilibyelp/web-process-extension -I../yelp-49.1/libyelp/web-process-extension -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/include/libadwaita-1 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/fribidi -I/usr/include/appstream -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/lib64/libffi/include -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H -MD -MQ libyelp/web-process-extension/libyelpwebprocessextension.so.p/yelp-web-process-extension.c.o -MF libyelp/web-process-extension/libyelpwebprocessextension.so.p/yelp-web-process-extension.c.o.d -o libyelp/web-process-extension/libyelpwebprocessextension.so.p/yelp-web-process-extension.c.o -c ../yelp-49.1/libyelp/web-process-extension/yelp-web-process-extension.c
+[39/158] x86_64-pc-linux-gnu-gcc -Isrc/yelp.p -Isrc -I../yelp-49.1/src -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H '-DG_LOG_DOMAIN="Yelp"' -MD -MQ src/yelp.p/meson-generated_.._yelp-resources.c.o -MF src/yelp.p/meson-generated_.._yelp-resources.c.o.d -o src/yelp.p/meson-generated_.._yelp-resources.c.o -c src/yelp-resources.c
+[40/158] x86_64-pc-linux-gnu-gcc -Isrc/yelp.p -Isrc -I../yelp-49.1/src -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H '-DG_LOG_DOMAIN="Yelp"' -MD -MQ src/yelp.p/yelp-application.c.o -MF src/yelp.p/yelp-application.c.o.d -o src/yelp.p/yelp-application.c.o -c ../yelp-49.1/src/yelp-application.c
+[41/158] x86_64-pc-linux-gnu-gcc -Isrc/yelp.p -Isrc -I../yelp-49.1/src -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H '-DG_LOG_DOMAIN="Yelp"' -MD -MQ src/yelp.p/yelp-search-result.c.o -MF src/yelp.p/yelp-search-result.c.o.d -o src/yelp.p/yelp-search-result.c.o -c ../yelp-49.1/src/yelp-search-result.c
+[42/158] x86_64-pc-linux-gnu-gcc -Isrc/yelp.p -Isrc -I../yelp-49.1/src -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H '-DG_LOG_DOMAIN="Yelp"' -MD -MQ src/yelp.p/yelp-search-entry.c.o -MF src/yelp.p/yelp-search-entry.c.o.d -o src/yelp.p/yelp-search-entry.c.o -c ../yelp-49.1/src/yelp-search-entry.c
+[43/158] x86_64-pc-linux-gnu-gcc -Isrc/yelp.p -Isrc -I../yelp-49.1/src -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H '-DG_LOG_DOMAIN="Yelp"' -MD -MQ src/yelp.p/yelp-window.c.o -MF src/yelp.p/yelp-window.c.o.d -o src/yelp.p/yelp-window.c.o -c ../yelp-49.1/src/yelp-window.c
+[44/158] x86_64-pc-linux-gnu-gcc -Isrc/yelp.p -Isrc -I../yelp-49.1/src -I. -I../yelp-49.1 -Ilibyelp -I../yelp-49.1/libyelp -I/usr/lib64/libffi/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib64/graphene-1.0/include -I/usr/include/libadwaita-1 -I/usr/include/appstream -I/usr/include/webkitgtk-6.0 -I/usr/include/libsoup-3.0 -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -std=gnu89 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -DHAVE_CONFIG_H '-DG_LOG_DOMAIN="Yelp"' -MD -MQ src/yelp.p/yelp.c.o -MF src/yelp.p/yelp.c.o.d -o src/yelp.p/yelp.c.o -c ../yelp-49.1/src/yelp.c
+[45/158] /usr/lib/python-exec/python3.14/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../yelp-49.1/org.gnome.Yelp.desktop.in org.gnome.Yelp.desktop desktop /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/po
+[46/158] x86_64-pc-linux-gnu-gcc  -o libyelp/web-process-extension/libyelpwebprocessextension.so libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-settings.c.o libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri-builder.c.o libyelp/web-process-extension/libyelpwebprocessextension.so.p/.._yelp-uri.c.o libyelp/web-process-extension/libyelpwebprocessextension.so.p/yelp-web-process-extension.c.o -flto=auto -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libyelpwebprocessextension.so -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -Wl,--no-undefined -Wl,--start-group /usr/lib64/libadwaita-1.so /usr/lib64/libgtk-4.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libvulkan.so /usr/lib64/libgraphene-1.0.so /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libwebkitgtk-6.0.so /usr/lib64/libsoup-3.0.so /usr/lib64/libgmodule-2.0.so -pthread /usr/lib64/libjavascriptcoregtk-6.0.so -Wl,--end-group
+[47/158] x86_64-pc-linux-gnu-gcc  -o src/yelp src/yelp.p/meson-generated_.._yelp-resources.c.o src/yelp.p/yelp-application.c.o src/yelp.p/yelp-search-result.c.o src/yelp.p/yelp-search-entry.c.o src/yelp.p/yelp-window.c.o src/yelp.p/yelp.c.o -flto=auto -Wl,--as-needed -Wl,--no-undefined -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs '-Wl,-rpath,$ORIGIN/../libyelp' -Wl,--start-group libyelp/libyelp-1.so.0.0.0 -lm /usr/lib64/libgio-2.0.so /usr/lib64/libgobject-2.0.so /usr/lib64/libglib-2.0.so /usr/lib64/libgtk-4.so /usr/lib64/libpangocairo-1.0.so /usr/lib64/libpango-1.0.so /usr/lib64/libharfbuzz.so /usr/lib64/libgdk_pixbuf-2.0.so /usr/lib64/libcairo-gobject.so /usr/lib64/libcairo.so /usr/lib64/libvulkan.so /usr/lib64/libgraphene-1.0.so /usr/lib64/libadwaita-1.so /usr/lib64/libwebkitgtk-6.0.so /usr/lib64/libsoup-3.0.so /usr/lib64/libgmodule-2.0.so -pthread /usr/lib64/libjavascriptcoregtk-6.0.so -Wl,--end-group
+[48/158] /bin/bash /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/domains/gen_yelp_xml.sh --po-dir /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/po --itstool /usr/bin/itstool --msgfmt /usr/bin/msgfmt --input ../yelp-49.1/data/domains/yelp.xml.in --output data/domains/yelp.xml --target yelp-xml-domain
+[49/158] /usr/lib/python-exec/python3.14/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../yelp-49.1/data/org.gnome.Yelp.metainfo.xml.in data/org.gnome.Yelp.metainfo.xml xml /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/po
+[50/158] /usr/bin/msgfmt -o po/ab/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ab.po
+[51/158] /usr/bin/msgfmt -o po/af/LC_MESSAGES/yelp.mo ../yelp-49.1/po/af.po
+[52/158] /usr/bin/msgfmt -o po/am/LC_MESSAGES/yelp.mo ../yelp-49.1/po/am.po
+[53/158] /usr/bin/msgfmt -o po/an/LC_MESSAGES/yelp.mo ../yelp-49.1/po/an.po
+[54/158] /usr/bin/msgfmt -o po/ar/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ar.po
+[55/158] /usr/bin/msgfmt -o po/as/LC_MESSAGES/yelp.mo ../yelp-49.1/po/as.po
+[56/158] /usr/bin/msgfmt -o po/ast/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ast.po
+[57/158] /usr/bin/msgfmt -o po/az/LC_MESSAGES/yelp.mo ../yelp-49.1/po/az.po
+[58/158] /usr/bin/msgfmt -o po/be/LC_MESSAGES/yelp.mo ../yelp-49.1/po/be.po
+[59/158] /usr/bin/msgfmt -o po/be@latin/LC_MESSAGES/yelp.mo ../yelp-49.1/po/be@latin.po
+[60/158] /usr/bin/msgfmt -o po/bg/LC_MESSAGES/yelp.mo ../yelp-49.1/po/bg.po
+[61/158] /usr/bin/msgfmt -o po/bn/LC_MESSAGES/yelp.mo ../yelp-49.1/po/bn.po
+[62/158] /usr/bin/msgfmt -o po/bn_IN/LC_MESSAGES/yelp.mo ../yelp-49.1/po/bn_IN.po
+[63/158] /usr/bin/msgfmt -o po/br/LC_MESSAGES/yelp.mo ../yelp-49.1/po/br.po
+[64/158] /usr/bin/msgfmt -o po/bs/LC_MESSAGES/yelp.mo ../yelp-49.1/po/bs.po
+[65/158] /usr/bin/msgfmt -o po/ca/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ca.po
+[66/158] /usr/bin/msgfmt -o po/ca@valencia/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ca@valencia.po
+[67/158] /usr/bin/msgfmt -o po/ckb/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ckb.po
+[68/158] /usr/bin/msgfmt -o po/crh/LC_MESSAGES/yelp.mo ../yelp-49.1/po/crh.po
+[69/158] /usr/bin/msgfmt -o po/cs/LC_MESSAGES/yelp.mo ../yelp-49.1/po/cs.po
+[70/158] /usr/bin/msgfmt -o po/cy/LC_MESSAGES/yelp.mo ../yelp-49.1/po/cy.po
+[71/158] /usr/bin/msgfmt -o po/da/LC_MESSAGES/yelp.mo ../yelp-49.1/po/da.po
+[72/158] /usr/bin/msgfmt -o po/de/LC_MESSAGES/yelp.mo ../yelp-49.1/po/de.po
+[73/158] /usr/bin/msgfmt -o po/dz/LC_MESSAGES/yelp.mo ../yelp-49.1/po/dz.po
+[74/158] /usr/bin/msgfmt -o po/el/LC_MESSAGES/yelp.mo ../yelp-49.1/po/el.po
+[75/158] /usr/bin/msgfmt -o po/en_CA/LC_MESSAGES/yelp.mo ../yelp-49.1/po/en_CA.po
+[76/158] /usr/bin/msgfmt -o po/en_GB/LC_MESSAGES/yelp.mo ../yelp-49.1/po/en_GB.po
+[77/158] /usr/bin/msgfmt -o po/eo/LC_MESSAGES/yelp.mo ../yelp-49.1/po/eo.po
+[78/158] /usr/bin/msgfmt -o po/es/LC_MESSAGES/yelp.mo ../yelp-49.1/po/es.po
+[79/158] /usr/bin/msgfmt -o po/et/LC_MESSAGES/yelp.mo ../yelp-49.1/po/et.po
+[80/158] /usr/bin/msgfmt -o po/eu/LC_MESSAGES/yelp.mo ../yelp-49.1/po/eu.po
+[81/158] /usr/bin/msgfmt -o po/fa/LC_MESSAGES/yelp.mo ../yelp-49.1/po/fa.po
+[82/158] /usr/bin/msgfmt -o po/fi/LC_MESSAGES/yelp.mo ../yelp-49.1/po/fi.po
+[83/158] /usr/bin/msgfmt -o po/fr/LC_MESSAGES/yelp.mo ../yelp-49.1/po/fr.po
+[84/158] /usr/bin/msgfmt -o po/fur/LC_MESSAGES/yelp.mo ../yelp-49.1/po/fur.po
+[85/158] /usr/bin/msgfmt -o po/ga/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ga.po
+[86/158] /usr/bin/msgfmt -o po/gd/LC_MESSAGES/yelp.mo ../yelp-49.1/po/gd.po
+[87/158] /usr/bin/msgfmt -o po/gl/LC_MESSAGES/yelp.mo ../yelp-49.1/po/gl.po
+[88/158] /usr/bin/msgfmt -o po/gu/LC_MESSAGES/yelp.mo ../yelp-49.1/po/gu.po
+[89/158] /usr/bin/msgfmt -o po/he/LC_MESSAGES/yelp.mo ../yelp-49.1/po/he.po
+[90/158] /usr/bin/msgfmt -o po/hi/LC_MESSAGES/yelp.mo ../yelp-49.1/po/hi.po
+[91/158] /usr/bin/msgfmt -o po/hr/LC_MESSAGES/yelp.mo ../yelp-49.1/po/hr.po
+[92/158] /usr/bin/msgfmt -o po/hu/LC_MESSAGES/yelp.mo ../yelp-49.1/po/hu.po
+[93/158] /usr/bin/msgfmt -o po/ia/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ia.po
+[94/158] /usr/bin/msgfmt -o po/id/LC_MESSAGES/yelp.mo ../yelp-49.1/po/id.po
+[95/158] /usr/bin/msgfmt -o po/ie/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ie.po
+[96/158] /usr/bin/msgfmt -o po/is/LC_MESSAGES/yelp.mo ../yelp-49.1/po/is.po
+[97/158] /usr/bin/msgfmt -o po/it/LC_MESSAGES/yelp.mo ../yelp-49.1/po/it.po
+[98/158] /usr/bin/msgfmt -o po/ja/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ja.po
+[99/158] /usr/bin/msgfmt -o po/ka/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ka.po
+[100/158] /usr/bin/msgfmt -o po/kab/LC_MESSAGES/yelp.mo ../yelp-49.1/po/kab.po
+[101/158] /usr/bin/msgfmt -o po/kk/LC_MESSAGES/yelp.mo ../yelp-49.1/po/kk.po
+[102/158] /usr/bin/msgfmt -o po/km/LC_MESSAGES/yelp.mo ../yelp-49.1/po/km.po
+[103/158] /usr/bin/msgfmt -o po/kn/LC_MESSAGES/yelp.mo ../yelp-49.1/po/kn.po
+[104/158] /usr/bin/msgfmt -o po/ko/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ko.po
+[105/158] /usr/bin/msgfmt -o po/ks/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ks.po
+[106/158] /usr/bin/msgfmt -o po/ku/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ku.po
+[107/158] /usr/bin/msgfmt -o po/kw/LC_MESSAGES/yelp.mo ../yelp-49.1/po/kw.po
+[108/158] /usr/bin/msgfmt -o po/ky/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ky.po
+[109/158] /usr/bin/msgfmt -o po/la/LC_MESSAGES/yelp.mo ../yelp-49.1/po/la.po
+[110/158] /usr/bin/msgfmt -o po/li/LC_MESSAGES/yelp.mo ../yelp-49.1/po/li.po
+[111/158] /usr/bin/msgfmt -o po/lt/LC_MESSAGES/yelp.mo ../yelp-49.1/po/lt.po
+[112/158] /usr/bin/msgfmt -o po/lv/LC_MESSAGES/yelp.mo ../yelp-49.1/po/lv.po
+[113/158] /usr/bin/msgfmt -o po/mai/LC_MESSAGES/yelp.mo ../yelp-49.1/po/mai.po
+[114/158] /usr/bin/msgfmt -o po/mg/LC_MESSAGES/yelp.mo ../yelp-49.1/po/mg.po
+[115/158] /usr/bin/msgfmt -o po/mk/LC_MESSAGES/yelp.mo ../yelp-49.1/po/mk.po
+[116/158] /usr/bin/msgfmt -o po/ml/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ml.po
+[117/158] /usr/bin/msgfmt -o po/mn/LC_MESSAGES/yelp.mo ../yelp-49.1/po/mn.po
+[118/158] /usr/bin/msgfmt -o po/mr/LC_MESSAGES/yelp.mo ../yelp-49.1/po/mr.po
+[119/158] /usr/bin/msgfmt -o po/ms/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ms.po
+[120/158] /usr/bin/msgfmt -o po/nb/LC_MESSAGES/yelp.mo ../yelp-49.1/po/nb.po
+[121/158] /usr/bin/msgfmt -o po/nds/LC_MESSAGES/yelp.mo ../yelp-49.1/po/nds.po
+[122/158] /usr/bin/msgfmt -o po/ne/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ne.po
+[123/158] /usr/bin/msgfmt -o po/nl/LC_MESSAGES/yelp.mo ../yelp-49.1/po/nl.po
+[124/158] /usr/bin/msgfmt -o po/nn/LC_MESSAGES/yelp.mo ../yelp-49.1/po/nn.po
+[125/158] /usr/bin/msgfmt -o po/nso/LC_MESSAGES/yelp.mo ../yelp-49.1/po/nso.po
+[126/158] /usr/bin/msgfmt -o po/oc/LC_MESSAGES/yelp.mo ../yelp-49.1/po/oc.po
+[127/158] /usr/bin/msgfmt -o po/or/LC_MESSAGES/yelp.mo ../yelp-49.1/po/or.po
+[128/158] /usr/bin/msgfmt -o po/pa/LC_MESSAGES/yelp.mo ../yelp-49.1/po/pa.po
+[129/158] /usr/bin/msgfmt -o po/pl/LC_MESSAGES/yelp.mo ../yelp-49.1/po/pl.po
+[130/158] /usr/bin/msgfmt -o po/ps/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ps.po
+[131/158] /usr/bin/msgfmt -o po/pt/LC_MESSAGES/yelp.mo ../yelp-49.1/po/pt.po
+[132/158] /usr/bin/msgfmt -o po/pt_BR/LC_MESSAGES/yelp.mo ../yelp-49.1/po/pt_BR.po
+[133/158] /usr/bin/msgfmt -o po/ro/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ro.po
+[134/158] /usr/bin/msgfmt -o po/ru/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ru.po
+[135/158] /usr/bin/msgfmt -o po/rw/LC_MESSAGES/yelp.mo ../yelp-49.1/po/rw.po
+[136/158] /usr/bin/msgfmt -o po/si/LC_MESSAGES/yelp.mo ../yelp-49.1/po/si.po
+[137/158] /usr/bin/msgfmt -o po/sk/LC_MESSAGES/yelp.mo ../yelp-49.1/po/sk.po
+[138/158] /usr/bin/msgfmt -o po/sl/LC_MESSAGES/yelp.mo ../yelp-49.1/po/sl.po
+[139/158] /usr/bin/msgfmt -o po/sq/LC_MESSAGES/yelp.mo ../yelp-49.1/po/sq.po
+[140/158] /usr/bin/msgfmt -o po/sr/LC_MESSAGES/yelp.mo ../yelp-49.1/po/sr.po
+[141/158] /usr/bin/msgfmt -o po/sr@latin/LC_MESSAGES/yelp.mo ../yelp-49.1/po/sr@latin.po
+[142/158] /usr/bin/msgfmt -o po/sv/LC_MESSAGES/yelp.mo ../yelp-49.1/po/sv.po
+[143/158] /usr/bin/msgfmt -o po/ta/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ta.po
+[144/158] /usr/bin/msgfmt -o po/te/LC_MESSAGES/yelp.mo ../yelp-49.1/po/te.po
+[145/158] /usr/bin/msgfmt -o po/tg/LC_MESSAGES/yelp.mo ../yelp-49.1/po/tg.po
+[146/158] /usr/bin/msgfmt -o po/th/LC_MESSAGES/yelp.mo ../yelp-49.1/po/th.po
+[147/158] /usr/bin/msgfmt -o po/tr/LC_MESSAGES/yelp.mo ../yelp-49.1/po/tr.po
+[148/158] /usr/bin/msgfmt -o po/ug/LC_MESSAGES/yelp.mo ../yelp-49.1/po/ug.po
+[149/158] /usr/bin/msgfmt -o po/uk/LC_MESSAGES/yelp.mo ../yelp-49.1/po/uk.po
+[150/158] /usr/bin/msgfmt -o po/uz/LC_MESSAGES/yelp.mo ../yelp-49.1/po/uz.po
+[151/158] /usr/bin/msgfmt -o po/uz@cyrillic/LC_MESSAGES/yelp.mo ../yelp-49.1/po/uz@cyrillic.po
+[152/158] /usr/bin/msgfmt -o po/vi/LC_MESSAGES/yelp.mo ../yelp-49.1/po/vi.po
+[153/158] /usr/bin/msgfmt -o po/wa/LC_MESSAGES/yelp.mo ../yelp-49.1/po/wa.po
+[154/158] /usr/bin/msgfmt -o po/xh/LC_MESSAGES/yelp.mo ../yelp-49.1/po/xh.po
+[155/158] /usr/bin/msgfmt -o po/zh_CN/LC_MESSAGES/yelp.mo ../yelp-49.1/po/zh_CN.po
+[156/158] /usr/bin/msgfmt -o po/zh_HK/LC_MESSAGES/yelp.mo ../yelp-49.1/po/zh_HK.po
+[157/158] /usr/bin/msgfmt -o po/zh_TW/LC_MESSAGES/yelp.mo ../yelp-49.1/po/zh_TW.po
+[158/158] /usr/bin/msgfmt -o po/zu/LC_MESSAGES/yelp.mo ../yelp-49.1/po/zu.po
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: gnome-extra/yelp-49.1
+
+&gt;&gt;&gt; Install gnome-extra/yelp-49.1 into /var/tmp/portage/gnome-extra/yelp-49.1/image
+meson install --destdir /var/tmp/portage/gnome-extra/yelp-49.1/image --no-rebuild
+Installing subdir /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isogrk3.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isodia.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isolat2.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/docbookx.dtd to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isogrk2.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isotech.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isogrk1.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isoamsb.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isoamsc.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isocyr2.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isogrk4.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isolat1.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isocyr1.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isoamsn.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isobox.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isoamsa.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isopub.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isoamsr.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isonum.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/dtd/isoamso.ent to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing subdir /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/MathJax.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/config/MMLorHTML.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/config
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/config/yelp.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/config
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/jax.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/MiscMathSymbolsA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/SuppMathOperators.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/MiscTechnical.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/Dingbats.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/SupplementalArrowsA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/GeneralPunctuation.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/MathOperators.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/Arrows.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/Latin1Supplement.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/GeometricShapes.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/CombDiactForSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/SpacingModLetters.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/MiscSymbolsAndArrows.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/MiscMathSymbolsB.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/SupplementalArrowsB.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/LetterlikeSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/element/mml/optable/GreekAndCoptic.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/element/mml/optable
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/NativeMML/config.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/NativeMML
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/NativeMML/jax.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/NativeMML
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/config.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/jax.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/annotation-xml.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/mtable.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/mglyph.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/ms.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/menclose.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/mmultiscripts.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/multiline.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/autoload/maction.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/autoload
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/fontdata-extra.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Caligraphic/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Caligraphic/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Caligraphic/Bold/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Caligraphic/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Size2/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Size2/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Script/Regular/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Script/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Script/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Script/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Script/Regular/Other.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Script/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular/Other.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular/PUA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold/Other.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold/PUA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Fraktur/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Math/Italic/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Math/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Math/BoldItalic/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Math/BoldItalic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Size3/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Size3/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/EnclosedAlphanum.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/LatinExtendedA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/BBBold.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/SuppMathOperators.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/BoxDrawing.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscTechnical.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Dingbats.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/GeneralPunctuation.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MathOperators.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Arrows.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/Latin1Supplement.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/GeometricShapes.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/SpacingModLetters.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscMathSymbolsB.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/PUA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/LetterlikeSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/MiscSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular/GreekAndCoptic.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/AMS/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular/Other.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Typewriter/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/Italic/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/Bold/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/BoldItalic/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Greek/BoldItalic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Size4/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Size4/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Size1/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Size1/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic/GeneralPunctuation.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic/Latin1Supplement.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic/LetterlikeSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular/GeometricShapes.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular/SpacingModLetters.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular/MiscSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/LatinExtendedA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/LatinExtendedB.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/MiscMathSymbolsA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/SuppMathOperators.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/MiscTechnical.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/SupplementalArrowsA.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/GeneralPunctuation.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/MathOperators.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/Arrows.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/Latin1Supplement.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/GeometricShapes.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/CombDiactForSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/SpacingModLetters.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/LetterlikeSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold/MiscSymbols.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/Main/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic/Other.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Italic
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular/Other.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Regular
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold/BasicLatin.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold/Main.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold/Other.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold/CombDiacritMarks.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/output/HTML-CSS/fonts/TeX/SansSerif/Bold
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/config.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/jax.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/h.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/m.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/i.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/fr.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/c.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/t.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/u.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/n.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/scr.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/x.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/k.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/j.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/q.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/p.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/d.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/z.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/y.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/s.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/a.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/o.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/l.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/e.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/opf.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/b.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/v.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/f.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/w.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/r.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/jax/input/MathML/entities/g.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/jax/input/MathML/entities
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/fonts/HTML-CSS/TeX/woff
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/extensions/MathEvents.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/extensions
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/extensions/mml2jax.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/extensions
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/extensions/MathZoom.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/extensions
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/extensions/MathMenu.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/extensions
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/mathjax/extensions/HTML-CSS/handle-floats.js to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/mathjax/extensions/HTML-CSS
+Installing subdir /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/icons to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/icons
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/icons/hicolor/scalable/apps/org.gnome.Yelp.svg to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/icons/hicolor/scalable/apps
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/icons/hicolor/symbolic/apps/org.gnome.Yelp-symbolic.svg to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/icons/hicolor/symbolic/apps
+Installing org.gnome.Yelp.desktop to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/applications
+Installing libyelp/yelp-types.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing libyelp/libyelp-1.so.0.0.0 to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/lib64
+Installing libyelp/web-process-extension/libyelpwebprocessextension.so to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/lib64/yelp-1/web-process-extensions
+Installing src/yelp to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/bin
+Installing data/domains/yelp.xml to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp-xsl/xslt/common/domains
+Installing data/org.gnome.Yelp.metainfo.xml to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/metainfo
+Installing po/ab/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ab/LC_MESSAGES
+Installing po/af/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/af/LC_MESSAGES
+Installing po/am/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/am/LC_MESSAGES
+Installing po/an/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/an/LC_MESSAGES
+Installing po/ar/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ar/LC_MESSAGES
+Installing po/as/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/as/LC_MESSAGES
+Installing po/ast/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ast/LC_MESSAGES
+Installing po/az/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/az/LC_MESSAGES
+Installing po/be/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/be/LC_MESSAGES
+Installing po/be@latin/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/be@latin/LC_MESSAGES
+Installing po/bg/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/bg/LC_MESSAGES
+Installing po/bn/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/bn/LC_MESSAGES
+Installing po/bn_IN/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/bn_IN/LC_MESSAGES
+Installing po/br/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/br/LC_MESSAGES
+Installing po/bs/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/bs/LC_MESSAGES
+Installing po/ca/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ca/LC_MESSAGES
+Installing po/ca@valencia/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ca@valencia/LC_MESSAGES
+Installing po/ckb/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ckb/LC_MESSAGES
+Installing po/crh/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/crh/LC_MESSAGES
+Installing po/cs/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/cs/LC_MESSAGES
+Installing po/cy/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/cy/LC_MESSAGES
+Installing po/da/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/da/LC_MESSAGES
+Installing po/de/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/de/LC_MESSAGES
+Installing po/dz/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/dz/LC_MESSAGES
+Installing po/el/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/el/LC_MESSAGES
+Installing po/en_CA/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/en_CA/LC_MESSAGES
+Installing po/en_GB/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/en_GB/LC_MESSAGES
+Installing po/eo/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/eo/LC_MESSAGES
+Installing po/es/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/es/LC_MESSAGES
+Installing po/et/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/et/LC_MESSAGES
+Installing po/eu/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/eu/LC_MESSAGES
+Installing po/fa/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/fa/LC_MESSAGES
+Installing po/fi/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/fi/LC_MESSAGES
+Installing po/fr/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/fr/LC_MESSAGES
+Installing po/fur/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/fur/LC_MESSAGES
+Installing po/ga/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ga/LC_MESSAGES
+Installing po/gd/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/gd/LC_MESSAGES
+Installing po/gl/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/gl/LC_MESSAGES
+Installing po/gu/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/gu/LC_MESSAGES
+Installing po/he/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/he/LC_MESSAGES
+Installing po/hi/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/hi/LC_MESSAGES
+Installing po/hr/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/hr/LC_MESSAGES
+Installing po/hu/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/hu/LC_MESSAGES
+Installing po/ia/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ia/LC_MESSAGES
+Installing po/id/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/id/LC_MESSAGES
+Installing po/ie/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ie/LC_MESSAGES
+Installing po/is/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/is/LC_MESSAGES
+Installing po/it/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/it/LC_MESSAGES
+Installing po/ja/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ja/LC_MESSAGES
+Installing po/ka/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ka/LC_MESSAGES
+Installing po/kab/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/kab/LC_MESSAGES
+Installing po/kk/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/kk/LC_MESSAGES
+Installing po/km/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/km/LC_MESSAGES
+Installing po/kn/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/kn/LC_MESSAGES
+Installing po/ko/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ko/LC_MESSAGES
+Installing po/ks/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ks/LC_MESSAGES
+Installing po/ku/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ku/LC_MESSAGES
+Installing po/kw/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/kw/LC_MESSAGES
+Installing po/ky/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ky/LC_MESSAGES
+Installing po/la/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/la/LC_MESSAGES
+Installing po/li/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/li/LC_MESSAGES
+Installing po/lt/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/lt/LC_MESSAGES
+Installing po/lv/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/lv/LC_MESSAGES
+Installing po/mai/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/mai/LC_MESSAGES
+Installing po/mg/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/mg/LC_MESSAGES
+Installing po/mk/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/mk/LC_MESSAGES
+Installing po/ml/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ml/LC_MESSAGES
+Installing po/mn/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/mn/LC_MESSAGES
+Installing po/mr/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/mr/LC_MESSAGES
+Installing po/ms/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ms/LC_MESSAGES
+Installing po/nb/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/nb/LC_MESSAGES
+Installing po/nds/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/nds/LC_MESSAGES
+Installing po/ne/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ne/LC_MESSAGES
+Installing po/nl/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/nl/LC_MESSAGES
+Installing po/nn/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/nn/LC_MESSAGES
+Installing po/nso/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/nso/LC_MESSAGES
+Installing po/oc/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/oc/LC_MESSAGES
+Installing po/or/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/or/LC_MESSAGES
+Installing po/pa/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/pa/LC_MESSAGES
+Installing po/pl/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/pl/LC_MESSAGES
+Installing po/ps/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ps/LC_MESSAGES
+Installing po/pt/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/pt/LC_MESSAGES
+Installing po/pt_BR/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/pt_BR/LC_MESSAGES
+Installing po/ro/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ro/LC_MESSAGES
+Installing po/ru/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ru/LC_MESSAGES
+Installing po/rw/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/rw/LC_MESSAGES
+Installing po/si/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/si/LC_MESSAGES
+Installing po/sk/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/sk/LC_MESSAGES
+Installing po/sl/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/sl/LC_MESSAGES
+Installing po/sq/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/sq/LC_MESSAGES
+Installing po/sr/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/sr/LC_MESSAGES
+Installing po/sr@latin/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/sr@latin/LC_MESSAGES
+Installing po/sv/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/sv/LC_MESSAGES
+Installing po/ta/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ta/LC_MESSAGES
+Installing po/te/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/te/LC_MESSAGES
+Installing po/tg/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/tg/LC_MESSAGES
+Installing po/th/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/th/LC_MESSAGES
+Installing po/tr/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/tr/LC_MESSAGES
+Installing po/ug/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/ug/LC_MESSAGES
+Installing po/uk/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/uk/LC_MESSAGES
+Installing po/uz/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/uz/LC_MESSAGES
+Installing po/uz@cyrillic/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/uz@cyrillic/LC_MESSAGES
+Installing po/vi/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/vi/LC_MESSAGES
+Installing po/wa/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/wa/LC_MESSAGES
+Installing po/xh/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/xh/LC_MESSAGES
+Installing po/zh_CN/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/zh_CN/LC_MESSAGES
+Installing po/zh_HK/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/zh_HK/LC_MESSAGES
+Installing po/zh_TW/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/zh_TW/LC_MESSAGES
+Installing po/zu/LC_MESSAGES/yelp.mo to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/locale/zu/LC_MESSAGES
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-bookmarks.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-docbook-document.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-document.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-help-list.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-info-document.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-mallard-document.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-man-document.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-man-search.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-settings.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-simple-document.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-sqlite-storage.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-storage.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-transform.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-uri-builder.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-uri.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/libyelp/yelp-view.h to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/include/libyelp-1
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/meson-private/libyelp-1.pc to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/lib64/pkgconfig
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/data/dtd/catalog to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/dtd
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/data/xslt/db2html.xsl to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/xslt
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/data/xslt/links2html.xsl to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/xslt
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/data/xslt/info2html.xsl to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/xslt
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/data/xslt/mal2html.xsl to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/xslt
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/data/xslt/man2html.xsl to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/xslt
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1-build/data/xslt/yelp-common.xsl to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/yelp/xslt
+Installing /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/data/org.gnome.yelp.gschema.xml to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/share/glib-2.0/schemas
+Installing symlink pointing to libyelp-1.so.0.0.0 to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/lib64/libyelp-1.so.0
+Installing symlink pointing to libyelp-1.so.0 to /var/tmp/portage/gnome-extra/yelp-49.1/image/usr/lib64/libyelp-1.so
+Running custom install script '/bin/bash /var/tmp/portage/gnome-extra/yelp-49.1/work/yelp-49.1/src/link-gnome-help.sh'
+Skipping custom install script because DESTDIR is set '/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas'
+Skipping custom install script because DESTDIR is set '/usr/bin/gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor'
+Skipping custom install script because DESTDIR is set '/usr/bin/update-desktop-database -q /usr/share/applications'
+&gt;&gt;&gt; Completed installing gnome-extra/yelp-49.1 into /var/tmp/portage/gnome-extra/yelp-49.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 16492 KiB (16.1 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   4960 KiB ( 4.8 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libyelp-1.so.0.0.0
+   /usr/lib64/yelp-1/web-process-extensions/libyelpwebprocessextension.so
+   /usr/bin/yelp
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+
+</pre>
+</body>
+
+</html>
