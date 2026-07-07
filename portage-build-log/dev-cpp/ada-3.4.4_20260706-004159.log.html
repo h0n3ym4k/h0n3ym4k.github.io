@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-cpp/ada-3.4.4:0/3
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: esteve.varela@gmail.com proxy-maint@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'ada-3.4.4.tar.gz' to /var/tmp/portage/dev-cpp/ada-3.4.4/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-cpp/ada-3.4.4/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build"
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build"
+cmake -C /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DADA_TESTING=NO -DADA_TOOLS=NO -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build/gentoo_toolchain.cmake /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4
+loading initial cache file /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build/gentoo_common_config.cmake
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/x86_64-pc-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Compiler ID : GNU
+-- CMAKE_BUILD_TYPE : RelWithDebInfo
+-- Assuming GCC-like compiler.
+-- Found Python3: /usr/bin/python3 (found version "3.14.6") found components: Interpreter
+-- Python found, we are going to amalgamate.py.
+-- &lt;&lt;&lt; Gentoo configuration &gt;&gt;&gt;
+Build type      RelWithDebInfo
+Install path    /usr
+Compiler flags:
+C               -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto
+C++             -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto
+Linker flags:
+Executable      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto
+Module          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto
+Shared          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto
+
+-- Configuring done (1.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4 ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build"
+ninja -v -l2 -j2
+[1/3] /usr/bin/x86_64-pc-linux-gnu-g++ -DADA_INCLUDE_URL_PATTERN=1 -Dada_EXPORTS -I/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4/src -I/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4/include  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -std=c++20 -fPIC -Wall -Wextra -Weffc++ -Wsuggest-override -Wfatal-errors -Wsign-compare -Wshadow -Wwrite-strings -Wpointer-arith -Winit-self -Wconversion -Wno-sign-conversion -mno-avx256-split-unaligned-load -mno-avx256-split-unaligned-store -MD -MT src/CMakeFiles/ada.dir/ada.cpp.o -MF src/CMakeFiles/ada.dir/ada.cpp.o.d -o src/CMakeFiles/ada.dir/ada.cpp.o -c /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4/src/ada.cpp
+[2/3] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-g++ -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto  -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto -Wl,--dependency-file=src/CMakeFiles/ada.dir/link.d -Wl,-soname,libada.so.3 -o src/libada.so.3.4.4 src/CMakeFiles/ada.dir/ada.cpp.o   &amp;&amp; :
+[3/3] /usr/bin/cmake -E cmake_symlink_library src/libada.so.3.4.4  src/libada.so.3 src/libada.so &amp;&amp; :
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-cpp/ada-3.4.4
+
+&gt;&gt;&gt; Install dev-cpp/ada-3.4.4 into /var/tmp/portage/dev-cpp/ada-3.4.4/image
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build"
+ninja -v -l2 -j2 install
+[0/1] cd /var/tmp/portage/dev-cpp/ada-3.4.4/work/ada-3.4.4_build &amp;&amp; /usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada_c.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/checkers.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_base.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/common_defs.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/scheme.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/errors.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/implementation-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_pattern_helpers-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_pattern.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_search_params.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/character_sets.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_aggregator-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_pattern_helpers.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/unicode-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_components.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_pattern-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/encoding_type.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/ada_idna.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/log.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/scheme-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_search_params-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/helpers.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_base-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/unicode.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/parser-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_components-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/ada_version.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/character_sets-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/serializers.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_pattern_regex.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/checkers-inl.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_aggregator.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/parser.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/state.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/expected.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/implementation.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/include/ada/url_pattern_init.h
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/libada.so.3.4.4
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/libada.so.3
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/libada.so
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/cmake/ada/ada-config.cmake
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/cmake/ada/ada-config-version.cmake
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/cmake/ada/ada_targets.cmake
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/cmake/ada/ada_targets-relwithdebinfo.cmake
+-- Up-to-date: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/cmake/ada/ada_targets.cmake
+-- Up-to-date: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/cmake/ada/ada_targets-relwithdebinfo.cmake
+-- Installing: /var/tmp/portage/dev-cpp/ada-3.4.4/image/usr/lib64/pkgconfig/ada.pc
+&gt;&gt;&gt; Completed installing dev-cpp/ada-3.4.4 into /var/tmp/portage/dev-cpp/ada-3.4.4/image
+
+ <span class="ansi32">*</span> Final size of build directory: 6936 KiB (6.7 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:  1340 KiB (1.3 MiB)
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libada.so.3.4.4
+
+</pre>
+</body>
+
+</html>
