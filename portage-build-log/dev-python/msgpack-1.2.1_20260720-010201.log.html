@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-python/msgpack-1.2.1:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: python@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux native-extensions python_targets_python3_14
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'msgpack-1.2.1.tar.gz' to /var/tmp/portage/dev-python/msgpack-1.2.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-python/msgpack-1.2.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1 ...
+ <span class="ansi32">*</span> Build system packages:
+ <span class="ansi32">*</span>   dev-python/gpep517            : 19
+ <span class="ansi32">*</span>   dev-python/installer          : 1.0.1
+ <span class="ansi32">*</span>   dev-python/cython             : 3.2.5-r1
+ <span class="ansi32">*</span>   dev-python/setuptools         : 82.0.1
+ <span class="ansi32">*</span>   dev-python/setuptools-rust    : 
+ <span class="ansi32">*</span>   dev-python/setuptools-scm     : 10.0.5
+ <span class="ansi32">*</span>   dev-python/wheel              : 0.47.0
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1 ...
+ <span class="ansi32">*</span> python3_14: running distutils-r1_run_phase python_configure
+Compiling /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1/msgpack/_cmsgpack.pyx
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1 ...
+ <span class="ansi32">*</span> python3_14: running distutils-r1_run_phase distutils-r1_python_compile
+ <span class="ansi32">*</span>   Building the wheel for msgpack-1.2.1 via setuptools.build_meta
+python3.14 -m gpep517 build-wheel --prefix=/usr --backend setuptools.build_meta --output-fd 3 --wheel-dir /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/wheel
+2026-07-20 09:02:08,988 gpep517 INFO Building wheel via backend setuptools.build_meta
+[07/20/26 09:02:09] WARNING  toml section missing PosixPath('pyproject.toml') does not contain any of the tool sections:             _pyproject_reading.py:235
+                             ['setuptools_scm', 'vcs-versioning']                                                                                             
+2026-07-20 09:02:09,399 root INFO running bdist_wheel
+2026-07-20 09:02:09,465 root INFO running build
+2026-07-20 09:02:09,482 root INFO running build_py
+2026-07-20 09:02:09,483 root INFO creating /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack
+2026-07-20 09:02:09,483 root INFO copying msgpack/ext.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack
+2026-07-20 09:02:09,484 root INFO copying msgpack/exceptions.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack
+2026-07-20 09:02:09,484 root INFO copying msgpack/fallback.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack
+2026-07-20 09:02:09,485 root INFO copying msgpack/__init__.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack
+2026-07-20 09:02:09,485 root WARNING warning: build_py: byte-compiling is disabled, skipping.
+
+2026-07-20 09:02:09,486 root INFO running build_ext
+2026-07-20 09:02:09,728 root INFO building 'msgpack._cmsgpack' extension
+2026-07-20 09:02:09,729 root INFO creating /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/temp.linux-x86_64-cpython-314/msgpack
+2026-07-20 09:02:09,729 root INFO x86_64-pc-linux-gnu-gcc -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -DNDEBUG -fPIC -I. -I/usr/include/python3.14 -c msgpack/_cmsgpack.c -o /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/temp.linux-x86_64-cpython-314/msgpack/_cmsgpack.o
+2026-07-20 09:02:10,694 root INFO x86_64-pc-linux-gnu-gcc -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -DNDEBUG /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/temp.linux-x86_64-cpython-314/msgpack/_cmsgpack.o -L/usr/lib64 -o /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack/_cmsgpack.cpython-314-x86_64-linux-gnu.so
+2026-07-20 09:02:13,289 root INFO installing to /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel
+2026-07-20 09:02:13,289 root INFO running install
+2026-07-20 09:02:13,313 root INFO running install_lib
+2026-07-20 09:02:13,332 root INFO creating /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel
+2026-07-20 09:02:13,333 root INFO creating /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/msgpack
+2026-07-20 09:02:13,333 root INFO copying /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack/ext.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/./msgpack
+2026-07-20 09:02:13,334 root INFO copying /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack/exceptions.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/./msgpack
+2026-07-20 09:02:13,335 root INFO copying /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack/fallback.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/./msgpack
+2026-07-20 09:02:13,335 root INFO copying /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack/_cmsgpack.cpython-314-x86_64-linux-gnu.so -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/./msgpack
+2026-07-20 09:02:13,336 root INFO copying /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/lib.linux-x86_64-cpython-314/msgpack/__init__.py -&gt; /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/./msgpack
+2026-07-20 09:02:13,337 root WARNING warning: install_lib: byte-compiling is disabled, skipping.
+
+2026-07-20 09:02:13,337 root INFO running install_egg_info
+2026-07-20 09:02:13,357 root INFO running egg_info
+2026-07-20 09:02:13,379 root INFO writing msgpack.egg-info/PKG-INFO
+2026-07-20 09:02:13,380 root INFO writing dependency_links to msgpack.egg-info/dependency_links.txt
+2026-07-20 09:02:13,381 root INFO writing top-level names to msgpack.egg-info/top_level.txt
+/usr/lib/python3.14/site-packages/vcs_versioning/overrides.py:609: UserWarning: No GlobalOverrides context is active. Auto-creating one with SETUPTOOLS_SCM prefix for backwards compatibility. Consider using 'with GlobalOverrides.from_env("YOUR_TOOL"):' explicitly.
+  return get_active_overrides().subprocess_timeout
+[07/20/26 09:02:13] ERROR    listing git files failed - pretending there aren't any                                                                 _git.py:37
+2026-07-20 09:02:13,476 root INFO reading manifest file 'msgpack.egg-info/SOURCES.txt'
+2026-07-20 09:02:13,478 root INFO reading manifest template 'MANIFEST.in'
+2026-07-20 09:02:13,487 root INFO adding license file 'COPYING'
+2026-07-20 09:02:13,491 root INFO writing manifest file 'msgpack.egg-info/SOURCES.txt'
+2026-07-20 09:02:13,492 root INFO Copying msgpack.egg-info to /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/./msgpack-1.2.1-py3.14.egg-info
+2026-07-20 09:02:13,495 root INFO running install_scripts
+2026-07-20 09:02:13,529 root INFO creating /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel/msgpack-1.2.1.dist-info/WHEEL
+2026-07-20 09:02:13,530 wheel INFO creating '/var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/wheel/.tmp-9auu_m_4/msgpack-1.2.1-cp314-cp314-linux_x86_64.whl' and adding '/var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel' to it
+2026-07-20 09:02:13,531 wheel INFO adding 'msgpack/__init__.py'
+2026-07-20 09:02:13,533 wheel INFO adding 'msgpack/_cmsgpack.cpython-314-x86_64-linux-gnu.so'
+2026-07-20 09:02:13,534 wheel INFO adding 'msgpack/exceptions.py'
+2026-07-20 09:02:13,535 wheel INFO adding 'msgpack/ext.py'
+2026-07-20 09:02:13,535 wheel INFO adding 'msgpack/fallback.py'
+2026-07-20 09:02:13,535 wheel INFO adding 'msgpack-1.2.1.dist-info/licenses/COPYING'
+2026-07-20 09:02:13,536 wheel INFO adding 'msgpack-1.2.1.dist-info/METADATA'
+2026-07-20 09:02:13,537 wheel INFO adding 'msgpack-1.2.1.dist-info/WHEEL'
+2026-07-20 09:02:13,537 wheel INFO adding 'msgpack-1.2.1.dist-info/top_level.txt'
+2026-07-20 09:02:13,537 wheel INFO adding 'msgpack-1.2.1.dist-info/RECORD'
+2026-07-20 09:02:13,538 root INFO removing /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/build0/bdist.linux-x86_64/wheel
+2026-07-20 09:02:13,540 gpep517 INFO The backend produced /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/wheel/msgpack-1.2.1-cp314-cp314-linux_x86_64.whl
+ <span class="ansi32">*</span>   Installing msgpack-1.2.1-cp314-cp314-linux_x86_64.whl to /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/install
+python3.14 -m gpep517 install-wheel --destdir=/var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/install --interpreter=/usr/bin/python3.14 --prefix=/usr --optimize=all /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/wheel/msgpack-1.2.1-cp314-cp314-linux_x86_64.whl
+2026-07-20 09:02:13,844 gpep517 INFO Installing /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/wheel/msgpack-1.2.1-cp314-cp314-linux_x86_64.whl into /var/tmp/portage/dev-python/msgpack-1.2.1/work/msgpack-1.2.1-python3_14/install
+2026-07-20 09:02:13,911 gpep517 INFO Installation complete
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-python/msgpack-1.2.1
+
+&gt;&gt;&gt; Install dev-python/msgpack-1.2.1 into /var/tmp/portage/dev-python/msgpack-1.2.1/image
+ <span class="ansi32">*</span> python3_14: running distutils-r1_run_phase distutils-r1_python_install
+ <span class="ansi32">*</span> Using python3.14 in global scope
+ <span class="ansi32">*</span> python3_14: running distutils-r1_run_phase distutils-r1_python_install_all
+&gt;&gt;&gt; Completed installing dev-python/msgpack-1.2.1 into /var/tmp/portage/dev-python/msgpack-1.2.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2628 KiB (2.5 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   504 KiB
+
+ <span class="ansi32">*</span> Verifying compiled files for python3.14
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib/python3.14/site-packages/msgpack/_cmsgpack.cpython-314-x86_64-linux-gnu.so
+
+</pre>
+</body>
+
+</html>
