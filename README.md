@@ -32,8 +32,7 @@ I am RHCE since 2014. I am ISC2 SSCP since 2018.
 |Year of qualification attained|Qualification|School/Institution|
 |------|------|------|
 |1993-2000|Completed F.1-F.7|Rhenish Church Pang Hok-ko Memorial College|
-|2000-2002|Completed Yr 1 – 2 in HD in Computer System Admin|HKIVE (TY)
-|2003-2005|Completed Final Year HD in Computing (IMIS Level 3 equivalent)|HKCI|
+
 
 # Academic Background Details
 |Examination|Subject|Grade|
