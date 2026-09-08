@@ -1,0 +1,2300 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=900, initial-scale=1'>
+    <title>qdsp6sw_dtbs.elf</title>
+    <style>
+      html {
+        font-family: monospace;
+      }
+      #headertable {
+        width: 100%;
+      }
+      #rightmenu {
+        vertical-align: top;
+        text-align: right;
+        float: right;
+      }
+      #credits {
+        color: #ddd;
+        text-decoration: none;
+        margin-bottom: 0.5em;
+        display: block;
+      }
+      #credits:hover {
+        color: #000;
+      }
+      #arrow_opacity_range {
+        width: 8em;
+      }
+      .right_hidden {
+        text-align: left;
+        display: none;
+      }
+      .textbutton {
+        color: #222;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0.5em;
+      }
+      .textbutton::before {
+        content: "[";
+      }
+      .textbutton::after {
+        content: "]";
+      }
+      .textbutton:hover {
+        color: #922;
+      }
+      .textbutton:active {
+        color: #d11;
+      }
+      .textbutton:hover::before {
+        color: #222;
+      }
+      .textbutton:hover::after {
+        color: #222;
+      }
+      label, input {
+        vertical-align: middle;
+      }
+      .legend_rect {
+        float: left;
+        margin-right: 0.4em;
+        width: 3em;
+        height: 1.5em;
+        border: 1px solid rgba(0, 0, 0, .2);
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      #help > p {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        width: 29em;
+      }
+      #help > ul {
+        margin-top: 0;
+      }
+      #help > p + p {
+        margin-top: 1em;
+      }
+      li {
+        clear: left;
+        height: 2em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .number {
+        text-decoration: underline dotted #888;
+      }
+      #desc {
+        width: 250px;
+      }
+      .infotables {
+        padding: 0;
+        display: block;
+      }
+      .conceal {
+        display: none;
+        border: 1px solid #000;
+        max-width: 600px;
+        margin-bottom: 1em;
+      }
+      .conceal div {
+        word-break: break-word;
+      }
+      .indirect .phdr_itable::after {
+        content: " (references this segment)";
+      }
+      .indirect .shdr_itable::after {
+        content: " (references this section)";
+      }
+      .phdr_itable::before {
+        content: "Program header";
+      }
+      .shdr_itable::before {
+        content: "Section header";
+      }
+      .phdr_itable {
+        text-align: left;
+      }
+      .shdr_itable {
+        text-align: left;
+      }
+      .segment_itable::before {
+        content: "Segment";
+      }
+      .section_itable::before {
+        content: "Section";
+      }
+      .segment_itable {
+        text-align: left;
+      }
+      .section_itable {
+        text-align: left;
+      }
+      #offsets {
+        display: inline-block;
+        text-align: right;
+        white-space: pre;
+      }
+      #bytes {
+        border: 1px solid;
+        display: inline-block;
+        word-break: break-word;
+        /* 16 bytes * (2 chars per byte + 1 space) - 1 final space */
+        width: 47ch;
+        white-space: pre;
+      }
+      #ascii {
+        border: 1px solid;
+        display: inline-block;
+        width: 16ch;
+        white-space: pre;
+      }
+      #vmap {
+        border: 1px solid;
+        display: inline-block;
+        width: 47ch;
+        vertical-align: top;
+        position: sticky;
+        top: 8px;
+      }
+      #sticky_table {
+        display: inline-block;
+        vertical-align: top;
+        position: sticky;
+        top: 8px;
+      }
+      #desc, .itable {
+        vertical-align: top;
+      }
+      .hover:hover {
+        background-color: #ee9;
+      }
+
+      .ident {
+        background-color: #e99;
+      }
+      /* highlight fields */
+      .ident:hover > span {
+        background-color: #ebb;
+      }
+      /* Duplicate of .hover:hover with more specifity. Used for elements like `#magic', for whom
+       * rule `.ident:hover > span' would override rule `.hover:hover' */
+      .ident:hover > span:hover {
+        background-color: #ee9;
+      }
+
+      /* same for .ehdr, but we also don't want to highlight .ident */
+      .ehdr {
+        background-color: #99e;
+      }
+      .ehdr:hover > span:not(.ident) {
+        background-color: #bbe;
+      }
+      .ehdr:hover > span:not(.ident):hover {
+        background-color: #ee9;
+      }
+
+      .phdr {
+        background-color: #eb9;
+      }
+      .phdr:hover > span {
+        background-color: #ed9;
+      }
+      .phdr:hover > span:hover {
+        background-color: #ef9;
+      }
+
+      .shdr {
+        background-color: #9be;
+      }
+      .shdr:hover > span {
+        background-color: #9de;
+      }
+      .shdr:hover > span:hover {
+        background-color: #9fe;
+      }
+
+      .segment {
+        background-color: #f99;
+      }
+      .section {
+        background-color: #f9f;
+      }
+      /* there are only sections inside segments due to code */
+      .segment > .section, .segm_sect_legend {
+        background: repeating-linear-gradient(
+          -45deg,
+          #f99,
+          #f99 10px,
+          #f9f 10px,
+          #f9f 20px
+        );
+      }
+      /* another duplicate of .hover:hover with more specifity */
+      .segment > .section:hover {
+        background: initial;
+        background-color: #ee9;
+      }
+
+      .segment > .segment_subrange:hover {
+        background: initial;
+        background-color: #f59;
+      }
+
+      svg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width='100%' height='100%'>
+      <defs>
+        <marker id='arrowhead' viewBox='0 0 10 10' refX='10' refY='5' markerWidth='10' markerHeight='10' orient='auto'>
+          <path d='M 0 0 L 10 5 L 0 10 z' />
+        </marker>
+      </defs>
+      <g id='arrows' stroke='black' stroke-width='1' marker-end='url(#arrowhead)'></g>
+    </svg>
+    <div id='rightmenu'>
+      <a id='credits' href='https://github.com/rbakbashev/elfcat'>generated with elfcat 0.1.10</a>
+      <button class='textbutton' id='settings_toggle'>Settings</button>
+      <button class='textbutton' id='help_toggle'>Help</button>
+      <div class='right_hidden' id='settings'>
+        <label for='arrow_opacity_range'>Arrow opacity:</label>
+        <input type='range' id='arrow_opacity_range' min='0' max='100' value='100'>
+      </div>
+      <div class='right_hidden' id='help'>
+        <p>The leftmost column shows offsets within the file. The middle column is the file dump. It has ELF structs, sections and segments highlighted. Some fields that reference areas in the file are clickable and connected with arrows. The rightmost column shows printable ASCII characters corresponding to the file bytes.</p>
+        <p>Legend</p>
+        <ul>
+          <li><span class='legend_rect ident'></span>ELF Identification</li>
+          <li><span class='legend_rect ehdr'></span>ELF Header</li>
+          <li><span class='legend_rect phdr'></span>Program Header</li>
+          <li><span class='legend_rect shdr'></span>Section Header</li>
+          <li><span class='legend_rect segment'></span>Segment</li>
+          <li><span class='legend_rect section'></span>Section</li>
+          <li><span class='legend_rect segm_sect_legend'></span>Segment &amp; Section overlap</li>
+        </ul>
+      </div>
+    </div>
+    <table>
+      <tr class='fileinfo_file_name'> <td>File name:</td> <td>/usr/lib/firmware/qcom/qdu100/qdsp6sw_dtbs.elf</td> </tr>
+      <tr class='fileinfo_file_size'> <td>File size:</td> <td>7.8 KiB (7992 B)</td> </tr>
+      <tr class='fileinfo_class'> <td>Object class:</td> <td>32-bit</td> </tr>
+      <tr class='fileinfo_data'> <td>Data encoding:</td> <td>Little endian</td> </tr>
+      <tr class='fileinfo_abi'> <td>ABI:</td> <td>SysV</td> </tr>
+      <tr class='fileinfo_e_type'> <td>Type:</td> <td>Executable file (EXEC)</td> </tr>
+      <tr class='fileinfo_e_machine'> <td>Architecture:</td> <td>AT&T WE 32100</td> </tr>
+      <tr class='fileinfo_e_entry'> <td>Entrypoint:</td> <td><span class='number' title='2663383040'>0x9ec00000</span></td> </tr>
+      <tr class='fileinfo_ph'> <td>Program headers:</td> <td><span title='0x3' class='number fileinfo_e_phnum'>3</span> * <span title='0x20' class='number fileinfo_e_phentsize'>32</span> @ <span title='0x34' class='number fileinfo_e_phoff'>52</span></td> </tr>
+      <tr class='fileinfo_sh'> <td>Section headers:</td> <td><span title='0x0' class='number fileinfo_e_shnum'>0</span> * <span title='0x0' class='number fileinfo_e_shentsize'>0</span> @ <span title='0x0' class='number fileinfo_e_shoff'>0</span></td> </tr>
+      <tr class='fileinfo_e_flags'> <td>Flags:</td> <td>0x5</td> </tr>
+    </table>
+    <div id='offsets'>0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+a0
+b0
+c0
+d0
+e0
+f0
+100
+110
+120
+130
+140
+150
+160
+170
+180
+190
+1a0
+1b0
+1c0
+1d0
+1e0
+1f0
+200
+210
+220
+230
+240
+250
+260
+270
+280
+290
+2a0
+2b0
+2c0
+2d0
+2e0
+2f0
+300
+310
+320
+330
+340
+350
+360
+370
+380
+390
+3a0
+3b0
+3c0
+3d0
+3e0
+3f0
+400
+410
+420
+430
+440
+450
+460
+470
+480
+490
+4a0
+4b0
+4c0
+4d0
+4e0
+4f0
+500
+510
+520
+530
+540
+550
+560
+570
+580
+590
+5a0
+5b0
+5c0
+5d0
+5e0
+5f0
+600
+610
+620
+630
+640
+650
+660
+670
+680
+690
+6a0
+6b0
+6c0
+6d0
+6e0
+6f0
+700
+710
+720
+730
+740
+750
+760
+770
+780
+790
+7a0
+7b0
+7c0
+7d0
+7e0
+7f0
+800
+810
+820
+830
+840
+850
+860
+870
+880
+890
+8a0
+8b0
+8c0
+8d0
+8e0
+8f0
+900
+910
+920
+930
+940
+950
+960
+970
+980
+990
+9a0
+9b0
+9c0
+9d0
+9e0
+9f0
+a00
+a10
+a20
+a30
+a40
+a50
+a60
+a70
+a80
+a90
+aa0
+ab0
+ac0
+ad0
+ae0
+af0
+b00
+b10
+b20
+b30
+b40
+b50
+b60
+b70
+b80
+b90
+ba0
+bb0
+bc0
+bd0
+be0
+bf0
+c00
+c10
+c20
+c30
+c40
+c50
+c60
+c70
+c80
+c90
+ca0
+cb0
+cc0
+cd0
+ce0
+cf0
+d00
+d10
+d20
+d30
+d40
+d50
+d60
+d70
+d80
+d90
+da0
+db0
+dc0
+dd0
+de0
+df0
+e00
+e10
+e20
+e30
+e40
+e50
+e60
+e70
+e80
+e90
+ea0
+eb0
+ec0
+ed0
+ee0
+ef0
+f00
+f10
+f20
+f30
+f40
+f50
+f60
+f70
+f80
+f90
+fa0
+fb0
+fc0
+fd0
+fe0
+ff0
+1000
+1010
+1020
+1030
+1040
+1050
+1060
+1070
+1080
+1090
+10a0
+10b0
+10c0
+10d0
+10e0
+10f0
+1100
+1110
+1120
+1130
+1140
+1150
+1160
+1170
+1180
+1190
+11a0
+11b0
+11c0
+11d0
+11e0
+11f0
+1200
+1210
+1220
+1230
+1240
+1250
+1260
+1270
+1280
+1290
+12a0
+12b0
+12c0
+12d0
+12e0
+12f0
+1300
+1310
+1320
+1330
+1340
+1350
+1360
+1370
+1380
+1390
+13a0
+13b0
+13c0
+13d0
+13e0
+13f0
+1400
+1410
+1420
+1430
+1440
+1450
+1460
+1470
+1480
+1490
+14a0
+14b0
+14c0
+14d0
+14e0
+14f0
+1500
+1510
+1520
+1530
+1540
+1550
+1560
+1570
+1580
+1590
+15a0
+15b0
+15c0
+15d0
+15e0
+15f0
+1600
+1610
+1620
+1630
+1640
+1650
+1660
+1670
+1680
+1690
+16a0
+16b0
+16c0
+16d0
+16e0
+16f0
+1700
+1710
+1720
+1730
+1740
+1750
+1760
+1770
+1780
+1790
+17a0
+17b0
+17c0
+17d0
+17e0
+17f0
+1800
+1810
+1820
+1830
+1840
+1850
+1860
+1870
+1880
+1890
+18a0
+18b0
+18c0
+18d0
+18e0
+18f0
+1900
+1910
+1920
+1930
+1940
+1950
+1960
+1970
+1980
+1990
+19a0
+19b0
+19c0
+19d0
+19e0
+19f0
+1a00
+1a10
+1a20
+1a30
+1a40
+1a50
+1a60
+1a70
+1a80
+1a90
+1aa0
+1ab0
+1ac0
+1ad0
+1ae0
+1af0
+1b00
+1b10
+1b20
+1b30
+1b40
+1b50
+1b60
+1b70
+1b80
+1b90
+1ba0
+1bb0
+1bc0
+1bd0
+1be0
+1bf0
+1c00
+1c10
+1c20
+1c30
+1c40
+1c50
+1c60
+1c70
+1c80
+1c90
+1ca0
+1cb0
+1cc0
+1cd0
+1ce0
+1cf0
+1d00
+1d10
+1d20
+1d30
+1d40
+1d50
+1d60
+1d70
+1d80
+1d90
+1da0
+1db0
+1dc0
+1dd0
+1de0
+1df0
+1e00
+1e10
+1e20
+1e30
+1e40
+1e50
+1e60
+1e70
+1e80
+1e90
+1ea0
+1eb0
+1ec0
+1ed0
+1ee0
+1ef0
+1f00
+1f10
+1f20
+1f30</div>
+    <div id='bytes'><span class='ehdr'><span class='ident'><span class='magic'>7f &nbsp;E &nbsp;L &nbsp;F</span> <span class='class'>01</span> <span class='data'>01</span> <span class='ver'>01</span> <span class='abi'>00</span> <span class='abi_ver'>00</span> <span class='pad'>00 00 00 00 00 00 00</span></span>
+<span class='e_type'>02 00</span> <span class='e_machine'>01 00</span> <span class='e_version'>01 00 00 00</span> <span class='e_entry'>00 00 c0 9e</span> <span class='e_phoff'>34 00 00 00</span>
+<span class='e_shoff'>00 00 00 00</span> <span class='e_flags'>05 00 00 00</span> <span class='e_ehsize'>34 00</span> <span class='e_phentsize'>20 00</span> <span class='e_phnum'>03 00</span> <span class='e_shentsize'>00 00</span>
+<span class='e_shnum'>00 00</span> <span class='e_shstrndx'>00 00</span></span> <span class='bin_phdr0 phdr'><span class='p_type'>00 00 00 00</span> <span class='p_offset'>00 00 00 00</span> <span class='p_vaddr'>00 00 00 00</span>
+<span class='p_paddr'>00 00 00 00</span> <span class='p_filesz'>94 00 00 00</span> <span class='p_memsz'>00 00 00 00</span> <span class='p_flags'>00 00 00 07</span>
+<span class='p_align'>00 00 00 00</span></span> <span class='bin_phdr1 phdr'><span class='p_type'>01 00 00 00</span> <span class='p_offset'>94 00 00 00</span> <span class='p_vaddr'>00 00 c0 9e</span>
+<span class='p_paddr'>00 00 c0 9e</span> <span class='p_filesz'>00 04 00 00</span> <span class='p_memsz'>00 04 00 00</span> <span class='p_flags'>07 00 00 09</span>
+<span class='p_align'>01 00 00 00</span></span> <span class='bin_phdr2 phdr'><span class='p_type'>00 00 00 00</span> <span class='p_offset'>00 10 00 00</span> <span class='p_vaddr'>00 00 00 00</span>
+<span class='p_paddr'>00 00 00 00</span> <span class='p_filesz'>38 0f 00 00</span> <span class='p_memsz'>38 0f 00 00</span> <span class='p_flags'>00 00 00 02</span>
+<span class='p_align'>00 10 00 00</span></span> <span class='bin_segment1 segment'>43 46 47 4c 02 00 02 00 74 00 00 00
+00 00 00 00 74 00 00 00 c4 01 00 00 00 00 00 01
+00 00 86 00 00 00 00 00 00 00 00 00 0b 00 00 00
+64 65 66 61 75 6c 74 2e 64 74 62 00 00 00 00 00
+00 00 00 00 38 02 00 00 c8 01 00 00 00 00 00 01
+1b 02 86 00 00 00 00 00 00 01 00 0f 11 00 00 00
+70 6c 61 74 66 6f 72 6d 2d 72 75 6d 69 2e 64 74
+62 00 00 00 00 00 00 00 d0 0d fe ed 00 00 01 c2
+00 00 00 38 00 00 01 80 00 00 00 28 00 00 00 11
+00 00 00 10 00 00 00 00 00 00 00 42 00 00 01 48
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 01 00 00 00 00 00 00 00 03 00 00 00 10
+00 00 00 00 71 63 6f 6d 2c 6c 61 73 73 65 6e 2d
+69 64 70 00 00 00 00 03 00 00 00 25 00 00 00 06
+71 63 6f 6d 2c 6c 61 73 73 65 6e 2d 69 64 70 00
+71 63 6f 6d 2c 6c 61 73 73 65 6e 00 71 63 6f 6d
+2c 69 64 70 00 00 00 00 00 00 00 03 00 00 00 04
+00 00 00 11 00 00 00 02 00 00 00 03 00 00 00 04
+00 00 00 20 00 00 00 02 00 00 00 01 73 6f 63 00
+00 00 00 03 00 00 00 04 00 00 00 11 00 00 00 01
+00 00 00 03 00 00 00 04 00 00 00 20 00 00 00 01
+00 00 00 03 00 00 00 04 00 00 00 2c 00 00 00 01
+00 00 00 02 00 00 00 01 73 77 00 00 00 00 00 03
+00 00 00 04 00 00 00 2c 00 00 00 02 00 00 00 01
+63 6f 72 65 00 00 00 00 00 00 00 01 62 6f 6f 74
+00 00 00 00 00 00 00 03 00 00 00 0c 00 00 00 34
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02
+00 00 00 02 00 00 00 02 00 00 00 01 5f 5f 73 79
+6d 62 6f 6c 73 5f 5f 00 00 00 00 03 00 00 00 05
+00 00 00 3b 2f 73 6f 63 00 00 00 00 00 00 00 03
+00 00 00 04 00 00 00 3f 2f 73 77 00 00 00 00 02
+00 00 00 02 00 00 00 09 6d 6f 64 65 6c 00 63 6f
+6d 70 61 74 69 62 6c 65 00 23 61 64 64 72 65 73
+73 2d 63 65 6c 6c 73 00 23 73 69 7a 65 2d 63 65
+6c 6c 73 00 70 68 61 6e 64 6c 65 00 63 6f 6e 66
+69 67 00 73 6f 63 00 73 77 00 00 00 d0 0d fe ed
+00 00 01 c6 00 00 00 38 00 00 01 84 00 00 00 28
+00 00 00 11 00 00 00 10 00 00 00 00 00 00 00 42
+00 00 01 4c 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 03
+00 00 00 11 00 00 00 00 71 63 6f 6d 2c 6c 61 73
+73 65 6e 2d 72 75 6d 69 00 00 00 00 00 00 00 03
+00 00 00 27 00 00 00 06 71 63 6f 6d 2c 6c 61 73
+73 65 6e 2d 72 75 6d 69 00 71 63 6f 6d 2c 6c 61
+73 73 65 6e 00 71 63 6f 6d 2c 72 75 6d 69 00 00
+00 00 00 03 00 00 00 04 00 00 00 11 00 00 00 02
+00 00 00 03 00 00 00 04 00 00 00 20 00 00 00 02
+00 00 00 01 73 6f 63 00 00 00 00 03 00 00 00 04
+00 00 00 11 00 00 00 01 00 00 00 03 00 00 00 04
+00 00 00 20 00 00 00 01 00 00 00 03 00 00 00 04
+00 00 00 2c 00 00 00 01 00 00 00 02 00 00 00 01
+73 77 00 00 00 00 00 03 00 00 00 04 00 00 00 2c
+00 00 00 02 00 00 00 01 63 6f 72 65 00 00 00 00
+00 00 00 01 62 6f 6f 74 00 00 00 00 00 00 00 03
+00 00 00 0c 00 00 00 34 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 02 00 00 00 02 00 00 00 02
+00 00 00 01 5f 5f 73 79 6d 62 6f 6c 73 5f 5f 00
+00 00 00 03 00 00 00 05 00 00 00 3b 2f 73 6f 63
+00 00 00 00 00 00 00 03 00 00 00 04 00 00 00 3f
+2f 73 77 00 00 00 00 02 00 00 00 02 00 00 00 09
+6d 6f 64 65 6c 00 63 6f 6d 70 61 74 69 62 6c 65
+00 23 61 64 64 72 65 73 73 2d 63 65 6c 6c 73 00
+23 73 69 7a 65 2d 63 65 6c 6c 73 00 70 68 61 6e
+64 6c 65 00 63 6f 6e 66 69 67 00 73 6f 63 00 73
+77 00 00 00</span> 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+<span class='bin_segment2 segment'>00 00 00 00 07 00 00 00 18 00 00 00 00 00 00 00
+e0 00 00 00 90 00 00 00 00 00 00 00 00 00 00 00
+68 00 00 00 20 0d 00 00 00 00 00 00 00 00 00 00
+51 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00
+02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+07 a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 56 55 15 00
+6c 2a 21 d4 6c 7f 09 6a 0c 01 7f 60 53 fa 9a ba
+a0 ff 32 5a 46 e6 4d ab fc c0 d9 ba a1 fc d9 ea
+61 89 c8 f0 12 71 be d3 80 e5 a2 c2 f8 42 4e c1
+86 17 1d e8 0c c8 75 97 60 31 61 b4 0c 97 be e1
+7e b3 80 a1 6a 0a 79 db 46 5a 23 f4 c8 4a a7 ed
+6c 17 f9 3b fd fe 91 32 3c c4 29 ef 9b d4 fc 68
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+30 66 02 31 00 9d 4c be 10 f0 51 ab c1 29 63 31
+45 70 95 29 4a 20 af 63 46 ec df e6 cc 18 d9 1b
+5b 5d d6 16 9f 1a aa ec 12 50 45 5b 9a 35 d4 63
+dd 39 7d ba 96 02 31 00 92 2a e4 7f f5 01 4c c4
+72 32 08 ab 60 0c 81 63 95 42 9f 9c d4 7d 97 db
+92 d2 1b ee e0 79 5d fe 46 7c 1f b6 0c ec 97 e6
+90 f7 c5 52 e5 26 7b 74 30 82 02 95 30 82 02 1b
+a0 03 02 01 02 02 01 01 30 0a 06 08 2a 86 48 ce
+3d 04 03 03 30 81 b2 31 0b 30 09 06 03 55 04 06
+13 02 55 53 31 2c 30 2a 06 03 55 04 03 13 23 53
+45 43 54 4f 4f 4c 53 20 53 45 43 50 33 38 34 52
+31 20 43 55 52 56 45 20 54 45 53 54 20 52 4f 4f
+54 30 31 12 30 10 06 03 55 04 07 13 09 53 61 6e
+20 44 69 65 67 6f 31 11 30 0f 06 03 55 04 0a 13
+08 51 55 41 4c 43 4f 4d 4d 31 1a 30 18 06 03 55
+04 0b 13 11 43 44 4d 41 20 54 65 63 68 6e 6f 6c
+6f 67 69 65 73 31 32 30 30 06 03 55 04 0b 13 29
+47 65 6e 65 72 61 6c 20 55 73 65 20 54 65 73 74
+20 4b 65 79 20 30 20 28 66 6f 72 20 74 65 73 74
+69 6e 67 20 6f 6e 6c 79 29 30 1e 17 0d 32 35 30
+36 33 30 31 38 34 34 32 35 5a 17 0d 34 35 30 36
+32 35 31 38 34 34 32 35 5a 30 66 31 0b 30 09 06
+03 55 04 06 13 02 55 53 31 13 30 11 06 03 55 04
+08 13 0a 43 61 6c 69 66 6f 72 6e 69 61 31 1b 30
+19 06 03 55 04 03 13 12 53 65 63 54 6f 6f 6c 73
+20 54 65 73 74 20 55 73 65 72 31 11 30 0f 06 03
+55 04 0a 13 08 53 65 63 54 6f 6f 6c 73 31 12 30
+10 06 03 55 04 07 13 09 53 61 6e 20 44 69 65 67
+6f 30 76 30 10 06 07 2a 86 48 ce 3d 02 01 06 05
+2b 81 04 00 22 03 62 00 04 d5 05 10 3e 59 4b c5
+9c f7 0c 51 00 e6 39 d0 65 5c 16 5f 40 fc 18 6b
+88 8d d8 f3 99 58 f6 b7 85 38 b6 c5 aa 99 42 e6
+81 c7 fa db 1d a2 b9 dc 56 45 6a 85 ea 20 9a cf
+e8 e3 37 86 1b 8e c1 38 59 2d 09 fa 8c 05 dc f3
+74 83 62 00 64 54 fd 9b 5e 1d f8 17 0a 05 92 6e
+f2 97 03 ad 13 30 c6 ed 1c a3 50 30 4e 30 1f 06
+03 55 1d 23 04 18 30 16 80 14 96 01 f6 77 fb b7
+98 44 4d 32 a8 05 40 74 58 cf 99 82 4c 9a 30 09
+06 03 55 1d 13 04 02 30 00 30 0b 06 03 55 1d 0f
+04 04 03 02 07 80 30 13 06 03 55 1d 25 04 0c 30
+0a 06 08 2b 06 01 05 05 07 03 03 30 0a 06 08 2a
+86 48 ce 3d 04 03 03 03 68 00 30 65 02 31 00 e3
+ba 9b be 9f ff 33 c3 f3 c7 47 85 7b 37 a6 cf 12
+6f d7 f2 fe 0b 59 13 4a e0 28 4d 88 8b e2 6f b1
+fe 26 07 a2 eb 70 62 0c 4d 59 f5 f1 e4 76 4f 02
+30 13 12 46 a5 93 40 a4 84 e1 05 a8 46 5a 18 7c
+7b db 68 ae 5d 41 63 44 c4 79 50 00 e6 7e 04 2a
+e7 12 47 5a 8f ad 74 52 ff 58 33 1c 24 fe 91 3c
+e5 30 82 02 f0 30 82 02 75 a0 03 02 01 02 02 01
+01 30 0a 06 08 2a 86 48 ce 3d 04 03 03 30 81 af
+31 0b 30 09 06 03 55 04 06 13 02 55 53 31 2b 30
+29 06 03 55 04 03 13 22 53 45 43 54 4f 4f 4c 53
+20 53 45 43 50 33 38 34 52 31 20 43 55 52 56 45
+20 54 45 53 54 20 52 4f 4f 54 31 12 30 10 06 03
+55 04 07 13 09 53 61 6e 20 44 69 65 67 6f 31 11
+30 0f 06 03 55 04 0a 13 08 51 55 41 4c 43 4f 4d
+4d 31 1a 30 18 06 03 55 04 0b 13 11 43 44 4d 41
+20 54 65 63 68 6e 6f 6c 6f 67 69 65 73 31 30 30
+2e 06 03 55 04 0b 13 27 47 65 6e 65 72 61 6c 20
+55 73 65 20 54 65 73 74 20 4b 65 79 20 28 66 6f
+72 20 74 65 73 74 69 6e 67 20 6f 6e 6c 79 29 30
+1e 17 0d 31 36 30 33 32 31 32 31 35 32 31 35 5a
+17 0d 33 36 30 33 31 36 32 31 35 32 31 35 5a 30
+81 b2 31 0b 30 09 06 03 55 04 06 13 02 55 53 31
+2c 30 2a 06 03 55 04 03 13 23 53 45 43 54 4f 4f
+4c 53 20 53 45 43 50 33 38 34 52 31 20 43 55 52
+56 45 20 54 45 53 54 20 52 4f 4f 54 30 31 12 30
+10 06 03 55 04 07 13 09 53 61 6e 20 44 69 65 67
+6f 31 11 30 0f 06 03 55 04 0a 13 08 51 55 41 4c
+43 4f 4d 4d 31 1a 30 18 06 03 55 04 0b 13 11 43
+44 4d 41 20 54 65 63 68 6e 6f 6c 6f 67 69 65 73
+31 32 30 30 06 03 55 04 0b 13 29 47 65 6e 65 72
+61 6c 20 55 73 65 20 54 65 73 74 20 4b 65 79 20
+30 20 28 66 6f 72 20 74 65 73 74 69 6e 67 20 6f
+6e 6c 79 29 30 76 30 10 06 07 2a 86 48 ce 3d 02
+01 06 05 2b 81 04 00 22 03 62 00 04 82 54 1b a1
+7d cb 1c b3 14 49 25 bb a1 ac 4f 93 5b d1 48 f8
+fc d3 70 86 1d b8 bb 81 5d a9 d5 04 20 66 b7 7b
+f2 49 2f 43 23 f2 39 67 40 ea 71 dd 4b 78 82 3f
+12 6a 45 8c 9c d3 79 18 41 73 90 d4 9c 68 b7 27
+88 24 2c 1a b5 b5 ef 11 04 48 0a 70 65 fb 9e e8
+79 ee 12 70 79 0e cb 50 35 14 a5 19 a3 60 30 5e
+30 1f 06 03 55 1d 23 04 18 30 16 80 14 6f 13 87
+71 b7 27 c8 c4 0c 01 73 eb 09 d6 9f 15 3e 71 bf
+62 30 1d 06 03 55 1d 0e 04 16 04 14 96 01 f6 77
+fb b7 98 44 4d 32 a8 05 40 74 58 cf 99 82 4c 9a
+30 0f 06 03 55 1d 13 04 08 30 06 01 01 ff 02 01
+00 30 0b 06 03 55 1d 0f 04 04 03 02 01 06 30 0a
+06 08 2a 86 48 ce 3d 04 03 03 03 69 00 30 66 02
+31 00 90 c2 82 1f 5f 04 48 10 b2 ad 39 19 3c da
+7d f4 cf de 09 cd a3 a3 ba d8 da d3 62 82 3a 76
+e0 a3 ae 02 5e 05 36 b6 e4 2b 3c d1 5b 00 ff f3
+02 36 02 31 00 f2 66 74 e8 c3 e8 b4 57 7a 63 76
+fe c5 be 83 24 dc ec d6 b1 28 39 c5 09 b5 0c 40
+d9 1e 7f 6e bc 01 ca c0 de 29 66 84 a3 3e 94 19
+46 8d df b2 34 30 82 02 c8 30 82 02 4e a0 03 02
+01 02 02 01 01 30 0a 06 08 2a 86 48 ce 3d 04 03
+03 30 81 af 31 0b 30 09 06 03 55 04 06 13 02 55
+53 31 2b 30 29 06 03 55 04 03 13 22 53 45 43 54
+4f 4f 4c 53 20 53 45 43 50 33 38 34 52 31 20 43
+55 52 56 45 20 54 45 53 54 20 52 4f 4f 54 31 12
+30 10 06 03 55 04 07 13 09 53 61 6e 20 44 69 65
+67 6f 31 11 30 0f 06 03 55 04 0a 13 08 51 55 41
+4c 43 4f 4d 4d 31 1a 30 18 06 03 55 04 0b 13 11
+43 44 4d 41 20 54 65 63 68 6e 6f 6c 6f 67 69 65
+73 31 30 30 2e 06 03 55 04 0b 13 27 47 65 6e 65
+72 61 6c 20 55 73 65 20 54 65 73 74 20 4b 65 79
+20 28 66 6f 72 20 74 65 73 74 69 6e 67 20 6f 6e
+6c 79 29 30 1e 17 0d 31 36 30 33 32 31 32 31 35
+32 31 31 5a 17 0d 33 36 30 33 31 36 32 31 35 32
+31 31 5a 30 81 af 31 0b 30 09 06 03 55 04 06 13
+02 55 53 31 2b 30 29 06 03 55 04 03 13 22 53 45
+43 54 4f 4f 4c 53 20 53 45 43 50 33 38 34 52 31
+20 43 55 52 56 45 20 54 45 53 54 20 52 4f 4f 54
+31 12 30 10 06 03 55 04 07 13 09 53 61 6e 20 44
+69 65 67 6f 31 11 30 0f 06 03 55 04 0a 13 08 51
+55 41 4c 43 4f 4d 4d 31 1a 30 18 06 03 55 04 0b
+13 11 43 44 4d 41 20 54 65 63 68 6e 6f 6c 6f 67
+69 65 73 31 30 30 2e 06 03 55 04 0b 13 27 47 65
+6e 65 72 61 6c 20 55 73 65 20 54 65 73 74 20 4b
+65 79 20 28 66 6f 72 20 74 65 73 74 69 6e 67 20
+6f 6e 6c 79 29 30 76 30 10 06 07 2a 86 48 ce 3d
+02 01 06 05 2b 81 04 00 22 03 62 00 04 33 bb a4
+78 9d 7e d7 0d c6 d2 a9 e0 07 c1 dc 2f d7 a4 7b
+97 fe df 50 79 ba 6a 68 60 db d7 37 5f d3 ec a4
+8e a8 eb b8 6a 5e 91 da 4b 31 6f a2 24 d9 6c 54
+67 0c 5d b3 8d ca d8 a1 8d 5b ce 53 51 8f 71 36
+20 11 2f e4 50 5a af 90 bd a8 6f ec 54 3a de a7
+b8 25 69 0e dd 31 3e 7d b2 84 e0 96 60 a3 3c 30
+3a 30 1d 06 03 55 1d 0e 04 16 04 14 6f 13 87 71
+b7 27 c8 c4 0c 01 73 eb 09 d6 9f 15 3e 71 bf 62
+30 0c 06 03 55 1d 13 04 05 30 03 01 01 ff 30 0b
+06 03 55 1d 0f 04 04 03 02 01 06 30 0a 06 08 2a
+86 48 ce 3d 04 03 03 03 68 00 30 65 02 30 75 ac
+28 a4 19 43 39 bc 75 9d e6 ae e7 54 28 26 96 5c
+a8 4c 3c 8d 74 ae 17 e6 05 c7 42 76 17 8d e3 df
+c9 bf a6 78 4a 82 d3 dc 80 73 16 36 55 d6 02 31
+00 f7 48 e3 be 2f 90 68 15 23 38 6f 26 26 0a 8e
+0f fc 0b 95 e6 3e 1d 47 05 61 87 8d 05 9e 54 06
+a0 d7 8d 29 c5 e7 2c 24 b7 1f d2 d0 57 f5 bf 8d
+80 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff
+ff ff ff ff ff ff ff ff</span></div>
+    <div id='ascii'>.ELF............
+............4...
+........4.......
+................
+................
+................
+................
+................
+....8...8.......
+....CFGL....t...
+....t...........
+................
+default.dtb.....
+....8...........
+................
+platform-rumi.dt
+b...............
+...8.......(....
+...........B...H
+................
+................
+....qcom,lassen-
+idp........%....
+qcom,lassen-idp.
+qcom,lassen.qcom
+,idp............
+................
+............soc.
+................
+................
+...........,....
+........sw......
+.......,........
+core........boot
+...............4
+................
+............__sy
+mbols__.........
+...;/soc........
+.......?/sw.....
+........model.co
+mpatible.#addres
+s-cells.#size-ce
+lls.phandle.conf
+ig.soc.sw.......
+.......8.......(
+...............B
+...L............
+................
+........qcom,las
+sen-rumi........
+...&apos;....qcom,las
+sen-rumi.qcom,la
+ssen.qcom,rumi..
+................
+................
+....soc.........
+................
+................
+...,............
+sw.............,
+........core....
+....boot........
+.......4........
+................
+....__symbols__.
+...........;/soc
+...............?
+/sw.............
+model.compatible
+.#address-cells.
+#size-cells.phan
+dle.config.soc.s
+w...............
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+h...............
+Q...............
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+............VU..
+l*!.l..j...`S...
+..2ZF.M.........
+a....q.......BN.
+......u.`1a.....
+~...j.y.FZ#..J..
+l..;...2&lt;.)....h
+................
+................
+................
+0f.1..L...Q..)c1
+Ep.)J..cF.......
+[].......PE[.5.c
+.9}...1..*....L.
+r2..`..c.B...}..
+.....y].F|......
+...R.&amp;{t0...0...
+........0...*.H.
+=...0..1.0...U..
+..US1,0*..U...#S
+ECTOOLS.SECP384R
+1.CURVE.TEST.ROO
+T01.0...U....San
+.Diego1.0...U...
+.QUALCOMM1.0...U
+....CDMA.Technol
+ogies1200..U...)
+General.Use.Test
+.Key.0.(for.test
+ing.only)0...250
+630184425Z..4506
+25184425Z0f1.0..
+.U....US1.0...U.
+...California1.0
+...U....SecTools
+.Test.User1.0...
+U....SecTools1.0
+...U....San.Dieg
+o0v0...*.H.=....
++...&quot;.b.....&gt;YK.
+...Q..9.e\._@..k
+.....X...8....B.
+........VEj.....
+..7....8Y-......
+t.b.dT..^......n
+.....0....P0N0..
+.U.#..0......w..
+.DM2..@tX...L.0.
+..U....0.0...U..
+......0...U.%..0
+...+.......0...*
+.H.=....h.0e.1..
+.....3...G.{7...
+o....Y.J.(M...o.
+.&amp;...pb.MY...vO.
+0..F..@.....FZ.|
+{.h.]AcD.yP..~.*
+..GZ..tR.X3.$..&lt;
+.0...0..u.......
+.0...*.H.=...0..
+1.0...U....US1+0
+)..U...&quot;SECTOOLS
+.SECP384R1.CURVE
+.TEST.ROOT1.0...
+U....San.Diego1.
+0...U....QUALCOM
+M1.0...U....CDMA
+.Technologies100
+...U...&apos;General.
+Use.Test.Key.(fo
+r.testing.only)0
+...160321215215Z
+..360316215215Z0
+..1.0...U....US1
+,0*..U...#SECTOO
+LS.SECP384R1.CUR
+VE.TEST.ROOT01.0
+...U....San.Dieg
+o1.0...U....QUAL
+COMM1.0...U....C
+DMA.Technologies
+1200..U...)Gener
+al.Use.Test.Key.
+0.(for.testing.o
+nly)0v0...*.H.=.
+...+...&quot;.b...T..
+}....I%...O.[.H.
+..p.....]....f.{
+.I/C#.9g@.q.Kx.?
+.jE...y.As...h.&apos;
+.$,......H.pe...
+y..py..P5....`0^
+0...U.#..0...o..
+q.&apos;....s.....&gt;q.
+b0...U.........w
+...DM2..@tX...L.
+0...U....0......
+.0...U........0.
+..*.H.=....i.0f.
+1....._.H...9.&lt;.
+}...........b.:v
+....^.6..+&lt;.[...
+.6.1..ft....Wzcv
+....$....(9....@
+...n.....)f..&gt;..
+F...40...0..N...
+.....0...*.H.=..
+.0..1.0...U....U
+S1+0)..U...&quot;SECT
+OOLS.SECP384R1.C
+URVE.TEST.ROOT1.
+0...U....San.Die
+go1.0...U....QUA
+LCOMM1.0...U....
+CDMA.Technologie
+s100...U...&apos;Gene
+ral.Use.Test.Key
+.(for.testing.on
+ly)0...160321215
+211Z..3603162152
+11Z0..1.0...U...
+.US1+0)..U...&quot;SE
+CTOOLS.SECP384R1
+.CURVE.TEST.ROOT
+1.0...U....San.D
+iego1.0...U....Q
+UALCOMM1.0...U..
+..CDMA.Technolog
+ies100...U...&apos;Ge
+neral.Use.Test.K
+ey.(for.testing.
+only)0v0...*.H.=
+....+...&quot;.b..3..
+x.~........./..{
+...Py.jh`..7_...
+....j^..K1o.$.lT
+g.]......[.SQ.q6
+../.PZ....o.T:..
+.%i..1&gt;}....`.&lt;0
+:0...U......o..q
+.&apos;....s.....&gt;q.b
+0...U....0....0.
+..U........0...*
+.H.=....h.0e.0u.
+(..C9.u....T(&amp;.\
+.L&lt;.t.....Bv....
+...xJ....s.6U..1
+..H../.h.#8o&amp;&amp;..
+.....&gt;.G.a....T.
+...)..,$....W...
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+................
+........</div>
+    <table id='sticky_table' cellspacing='0'>
+      <tr>
+        <td id='desc'></td>
+        <td class='infotables'>
+          <table class='conceal itable' id='info_phdr0'>
+          <th colspan='2' class='phdr_itable'></th>
+            <tr> <td>Type:</td> <td>NULL</td> </tr>
+            <tr> <td>Flags:</td> <td></td> </tr>
+            <tr> <td>Offset in file:</td> <td><span class='number' title='0'>0x0</span></td> </tr>
+            <tr> <td>Size in file:</td> <td><span class='number' title='0x94'>148</span></td> </tr>
+            <tr> <td>Vaddr in memory:</td> <td><span class='number' title='0'>0x0</span></td> </tr>
+            <tr> <td>Size in memory:</td> <td><span class='number' title='0x0'>0</span></td> </tr>
+            <tr> <td>Alignment:</td> <td><span class='number' title='0'>0x0</span></td> </tr>
+          </table>
+          <table class='conceal itable' id='info_phdr1'>
+          <th colspan='2' class='phdr_itable'></th>
+            <tr> <td>Type:</td> <td>LOAD</td> </tr>
+            <tr> <td>Flags:</td> <td>RWX</td> </tr>
+            <tr> <td>Offset in file:</td> <td><span class='number' title='148'>0x94</span></td> </tr>
+            <tr> <td>Size in file:</td> <td><span class='number' title='0x400'>1024 (1.0 KiB)</span></td> </tr>
+            <tr> <td>Vaddr in memory:</td> <td><span class='number' title='2663383040'>0x9ec00000</span></td> </tr>
+            <tr> <td>Size in memory:</td> <td><span class='number' title='0x400'>1024 (1.0 KiB)</span></td> </tr>
+            <tr> <td>Alignment:</td> <td><span class='number' title='1'>0x1</span></td> </tr>
+          </table>
+          <table class='conceal itable' id='info_phdr2'>
+          <th colspan='2' class='phdr_itable'></th>
+            <tr> <td>Type:</td> <td>NULL</td> </tr>
+            <tr> <td>Flags:</td> <td></td> </tr>
+            <tr> <td>Offset in file:</td> <td><span class='number' title='4096'>0x1000</span></td> </tr>
+            <tr> <td>Size in file:</td> <td><span class='number' title='0xf38'>3896 (3.8 KiB)</span></td> </tr>
+            <tr> <td>Vaddr in memory:</td> <td><span class='number' title='0'>0x0</span></td> </tr>
+            <tr> <td>Size in memory:</td> <td><span class='number' title='0xf38'>3896 (3.8 KiB)</span></td> </tr>
+            <tr> <td>Alignment:</td> <td><span class='number' title='4096'>0x1000</span></td> </tr>
+          </table>
+        </td>
+        <td class='infotables'>
+          <table class='conceal itable' id='info_segment0'>
+          <th colspan='2' class='segment_itable'></th>
+            <tr> <td>Type:</td> <td>NULL</td> </tr>
+            <tr> <td>Size in file:</td> <td><span class='number' title='0x94'>148</span></td> </tr>
+            <tr> <td>Size in memory:</td> <td><span class='number' title='0x0'>0</span></td> </tr>
+          </table>
+          <table class='conceal itable' id='info_segment1'>
+          <th colspan='2' class='segment_itable'></th>
+            <tr> <td>Type:</td> <td>LOAD</td> </tr>
+            <tr> <td>Size in file:</td> <td><span class='number' title='0x400'>1024 (1.0 KiB)</span></td> </tr>
+            <tr> <td>Size in memory:</td> <td><span class='number' title='0x400'>1024 (1.0 KiB)</span></td> </tr>
+          </table>
+          <table class='conceal itable' id='info_segment2'>
+          <th colspan='2' class='segment_itable'></th>
+            <tr> <td>Type:</td> <td>NULL</td> </tr>
+            <tr> <td>Size in file:</td> <td><span class='number' title='0xf38'>3896 (3.8 KiB)</span></td> </tr>
+            <tr> <td>Size in memory:</td> <td><span class='number' title='0xf38'>3896 (3.8 KiB)</span></td> </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script type='text/javascript'>
+      let color = "#ee9";
+
+      function addPairHighlighting(elem, depElem) {
+          elem.addEventListener("mouseenter", function(event) {
+              event.target.style.backgroundColor = color;
+              depElem.style.backgroundColor = color;
+          }, false);
+
+          elem.addEventListener("mouseleave", function(event) {
+              event.target.style.backgroundColor = "";
+              depElem.style.backgroundColor = "";
+          }, false);
+      }
+
+      function highlightClasses(primaryClass, secondaryClass) {
+          let primaryElems = document.getElementsByClassName(primaryClass);
+          let secondaryElems = document.getElementsByClassName(secondaryClass);
+
+          if (primaryElems.length === 0 || secondaryElems.length === 0) {
+              return;
+          }
+
+          let primaryElem = primaryElems[0];
+          let secondaryElem = secondaryElems[0];
+
+          addPairHighlighting(primaryElem, secondaryElem);
+          addPairHighlighting(secondaryElem, primaryElem);
+      }
+
+      highlightClasses('fileinfo_class', 'class')
+      highlightClasses('fileinfo_data', 'data')
+      highlightClasses('fileinfo_abi', 'abi')
+      highlightClasses('fileinfo_abi_ver', 'abi_ver')
+      highlightClasses('fileinfo_e_type', 'e_type')
+      highlightClasses('fileinfo_e_machine', 'e_machine')
+      highlightClasses('fileinfo_e_entry', 'e_entry')
+      highlightClasses('fileinfo_e_phoff', 'e_phoff')
+      highlightClasses('fileinfo_e_shoff', 'e_shoff')
+      highlightClasses('fileinfo_e_flags', 'e_flags')
+      highlightClasses('fileinfo_e_ehsize', 'e_ehsize')
+      highlightClasses('fileinfo_e_phentsize', 'e_phentsize')
+      highlightClasses('fileinfo_e_phnum', 'e_phnum')
+      highlightClasses('fileinfo_e_shentsize', 'e_shentsize')
+      highlightClasses('fileinfo_e_shnum', 'e_shnum')
+      highlightClasses('fileinfo_e_shstrndx', 'e_shstrndx')
+    </script>
+    <script type='text/javascript'>
+      let label = document.getElementById('desc')
+      let descriptions = {
+          ehdr:         "ELF file header (ehdr)",
+          ident:        "Identifier (e_ident)",
+          magic:        "Magic (EI_MAG0 .. EI_MAG3)",
+          class:        "Object file class (EI_CLASS)",
+          data:         "Data encoding (EI_DATA)",
+          ver:          "File version, should be 1 (EI_VERSION)",
+          abi:          "ABI (EI_OSABI)",
+          abi_ver:      "ABI version, should be 0 for SysV (EI_ABIVERSION)",
+          pad:          "Identifier padding",
+          e_type:       "Object file type (e_type)",
+          e_machine:    "Object file type (e_machine)",
+          e_version:    "File version, should be 1 (e_version)",
+          e_entry:      "Entrypoint vaddr (e_entry)",
+          e_phoff:      "Offset in file to program header table (e_phoff)",
+          e_shoff:      "Offset in file to section header table (e_shoff)",
+          e_flags:      "Processor-specific flags (e_flags)",
+          e_ehsize:     "Size of ELF file header (e_ehsize)",
+          e_phentsize:  "Size of a program header table entry (e_phentsize)",
+          e_phnum:      "Number of program header table entries (e_phnum)",
+          e_shentsize:  "Size of a section header table entry (e_shentsize)",
+          e_shnum:      "Number of section header table entries (e_shnum)",
+          e_shstrndx:   "What section is a string table (e_shstrndx)",
+          phdr:         "Program header",
+          p_type:       "Segment type (p_type)",
+          p_flags:      "Segment flags (p_flags)",
+          p_offset:     "Offset in file (p_offset)",
+          p_vaddr:      "Virtual address in memory (p_vaddr)",
+          p_paddr:      "Reserved for physical address in memory (p_paddr)",
+          p_filesz:     "Size of segment in file (p_filesz)",
+          p_memsz:      "Size of segment in memory (p_memsz)",
+          p_align:      "Alignment (p_align)",
+          segment:      "Segment",
+          shdr:         "Section header",
+          sh_name:      "Offset to the section name string table containing this section name (sh_name)",
+          sh_type:      "Section type (sh_type)",
+          sh_flags:     "Section flags (sh_flags)",
+          sh_addr:      "Virtual address in memory. Should be 0 if not put into memory (sh_addr)",
+          sh_offset:    "Offset in file (sh_offset)",
+          sh_size:      "Section size. Also size in file unless type is SHT_NOBITS (sh_size)",
+          sh_link:      "Section index of an associated section (sh_link)",
+          sh_info:      "Additional information about section (sh_info)",
+          sh_addralign: "Address alignment of the section (sh_addralign)",
+          sh_entsize:   "Size of each entry if section has table of fixed-size entries (sh_entsize)",
+          section:      "Section",
+          section_in_segment: "Section in segment",
+      }
+      let separator = "<br>&#x2193<br>";
+
+      function stripFileInfoPrefix(str) {
+          return str.replace("fileinfo_", "");
+      }
+
+      function stripInfoPrefix(str) {
+          return str.replace("info_", "");
+      }
+
+      function stripBinPrefix(str) {
+          return str.replace("bin_", "");
+      }
+
+      function getDesc(cl) {
+          if (cl === "") {
+              return null;
+          }
+
+          if (descriptions[cl] !== undefined) {
+              return descriptions[cl];
+          }
+
+          if (descriptions[stripFileInfoPrefix(cl)] !== undefined) {
+              return descriptions[stripFileInfoPrefix(cl)];
+          }
+
+          if (descriptions[stripInfoPrefix(cl)] !== undefined) {
+              return descriptions[stripInfoPrefix(cl)];
+          }
+
+          if (descriptions[stripBinPrefix(cl)] !== undefined) {
+              return descriptions[stripBinPrefix(cl)];
+          }
+
+          return null;
+      }
+
+      function iterateParents(el) {
+          let txt = "";
+          let keywords = [];
+
+          do {
+              let classList = el.classList;
+              if (classList !== undefined) {
+                  for (let i = 0; i < classList.length; ++i) {
+                      keywords.push(classList[i]);
+                  }
+              }
+
+              el = el.parentNode;
+          } while (el !== null && el.tagName !== "HTML")
+
+          // fix all occurences where segments and sections overlap.
+          // once again we are relying on programming by which sections are always inside segments.
+          // also, this is O(n^2) ugly.
+          let i = 1;
+          while (i < keywords.length) {
+              if (keywords[i] !== 'segment') {
+                  ++i;
+                  continue;
+              }
+
+              let have_section_before = false;
+              let j = 0;
+              for (; j < i; ++j) {
+                  if (keywords[j] == 'section') {
+                      have_section_before = true;
+                      break;
+                  }
+              }
+
+              if (have_section_before) {
+                  keywords[i] = 'section_in_segment';
+                  keywords.splice(j, 1);
+              } else {
+                  ++i;
+              }
+          }
+
+          for (let i = 0; i < keywords.length; ++i) {
+              let keyword = keywords[i];
+              let desc = getDesc(keyword);
+
+              if (desc !== null) {
+                  if (txt === "") {
+                      txt = desc;
+                  } else {
+                      txt = desc + separator + txt;
+                  }
+              }
+          }
+
+          return txt;
+      }
+
+      document.addEventListener("mouseover", function (e) {
+          let event = e || window.event;
+
+          let target = event.target || event.srcElement;
+
+          if (!target.classList.contains('legend_rect')) {
+              document.getElementById('desc').innerHTML = iterateParents(target);
+          }
+      }, false);
+    </script>
+    <script type='text/javascript'>
+      let prevShownTables = [];
+
+      function getFirstClass(el) {
+          let cls = el.classList[0];
+
+          if (cls === undefined) {
+              return "";
+          } else {
+              return cls;
+          }
+      }
+
+      function listOfParents(el) {
+          let list = [getFirstClass(el)];
+
+          while (el.tagName !== "HTML") {
+              el = el.parentNode;
+
+              list.unshift(getFirstClass(el));
+          }
+
+          return list;
+      }
+
+      function hidePreviousTables() {
+          for (let i = 0; i < prevShownTables.length; ++i) {
+              prevShownTables[i].style.display = "none";
+              prevShownTables[i].classList.remove("indirect");
+          }
+      }
+
+      function showIfMatches(cl, prefix, newPrefix, indirect = false) {
+          if (!cl.startsWith(prefix)) {
+              return;
+          }
+
+          let tableId = cl.replace(prefix, newPrefix);
+          let table = document.getElementById(tableId);
+
+          if (table === null) {
+              return;
+          }
+
+          table.style.display = "block";
+
+          if (indirect) {
+              table.classList.add("indirect");
+          } else {
+              table.classList.remove("indirect");
+          }
+
+          prevShownTables.push(table);
+      }
+
+      document.addEventListener("mouseover", function (e) {
+          let event = e || window.event;
+          let target = event.target || event.srcElement;
+          let parents = listOfParents(target);
+          let cleared = false;
+          const prefix = 'bin_';
+
+          for (let i = 0; i < parents.length; i++) {
+              let cl = parents[i];
+
+              if (!cl.startsWith(prefix)) {
+                  continue;
+              }
+
+              if (!cleared) {
+                  cleared = true;
+                  hidePreviousTables();
+              }
+
+              showIfMatches(cl, prefix, "info_");
+              showIfMatches(cl, "bin_segment", "info_phdr", true);
+              showIfMatches(cl, "bin_section", "info_shdr", true);
+          }
+      }, false);
+    </script>
+    <script type='text/javascript'>
+      let fileLen = 7992
+      function populateOffsets(columns) {
+          let rows = Math.ceil(fileLen / columns);
+          let elements = "";
+          let offset = 0;
+
+          for (let i = 0; i < rows; ++i) {
+              elements += offset.toString(16) + "</br>\n";
+              offset += columns;
+          }
+
+          document.getElementById('offsets').innerHTML = elements;
+      }
+    </script>
+    <script type='text/javascript'>
+      const arrows = document.getElementById('arrows');
+      let connections = [];
+      let batchElems = '';
+
+      function getAbsPosition(elem) {
+          let x = 0, y = 0;
+
+          do {
+              x += elem.offsetLeft || 0;
+              y += elem.offsetTop || 0;
+
+              elem = elem.offsetParent;
+          } while (elem);
+
+          return {
+              x: x,
+              y: y
+          };
+      }
+
+      function getBoundingBoxSizes(elem) {
+          let rect = elem.getBoundingClientRect();
+
+          return {
+              w: rect.width || elem.offsetWidth,
+              h: rect.height || elem.offsetHeight
+          };
+      }
+
+      function addSvgArrow(elem1, elem2) {
+          let off1 = getAbsPosition(elem1);
+          let off2 = getAbsPosition(elem2);
+
+          let bb1 = getBoundingBoxSizes(elem1);
+
+          let x1 = off1.x + bb1.w / 2;
+          let y1 = off1.y;
+
+          let x2 = off2.x;
+          let y2 = off2.y;
+
+          batchElems += '<line x1="' + x1 + '" y1="' + y1 + '" '
+                            + 'x2="' + x2 + '" y2="' + y2 + '"/>';
+      }
+
+      function jumpToElem(elem) {
+          elem.scrollIntoView();
+      }
+
+      function setJumpCallback(elemFrom, elemTo) {
+          elemFrom.addEventListener("click", function(e) {
+              jumpToElem(elemTo);
+          }, true);
+      }
+
+      function connect(sel1, sel2) {
+          let elem1 = document.querySelector(sel1);
+          let elem2 = document.querySelector(sel2);
+
+          if (elem1 === null || elem2 === null) {
+              return;
+          }
+
+          connections.push([elem1, elem2]);
+
+          addSvgArrow(elem1, elem2);
+
+          setJumpCallback(elem1, elem2);
+          setJumpCallback(elem2, elem1);
+      }
+
+      function clearArrows() {
+          batchElems = '';
+
+          arrows.innerHTML = '';
+      }
+
+      function pushArrowElems() {
+          arrows.innerHTML = batchElems;
+      }
+
+      function redrawArrows() {
+          clearArrows();
+
+          for (let i = 0; i < connections.length; ++i) {
+              let conn = connections[i];
+
+              addSvgArrow(conn[0], conn[1]);
+          }
+
+          pushArrowElems();
+      }
+
+      window.onresize = function() {
+          redrawArrows();
+      }
+
+      connect('.e_phoff', '.bin_phdr0');
+      connect('.e_shoff', '.bin_shdr0');
+      connect('.bin_phdr0 > .p_offset', '.bin_segment0');
+      connect('.bin_phdr1 > .p_offset', '.bin_segment1');
+      connect('.bin_phdr2 > .p_offset', '.bin_segment2');
+      pushArrowElems();
+    </script>
+    <script type='text/javascript'>
+      const settings = document.getElementById('settings');
+      const help = document.getElementById('help');
+      const arrow_input = document.getElementById('arrow_opacity_range');
+      /* const arrows is reused from arrows.js */
+
+      function toggleVisibility(elem) {
+          if (elem.style.display === "none" || elem.style.display === "") {
+              elem.style.display = "block";
+          } else {
+              elem.style.display = "none";
+          }
+      }
+
+      document.getElementById('settings_toggle').onclick = function() {
+          toggleVisibility(settings);
+
+          help.style.display = "none";
+      }
+
+      document.getElementById('help_toggle').onclick = function() {
+          toggleVisibility(help);
+
+          settings.style.display = "none";
+      }
+
+      function setArrowOpacity(e) {
+          arrows.style.opacity = e.target.valueAsNumber / 100;
+      }
+
+      arrow_input.addEventListener('change', setArrowOpacity);
+      arrow_input.addEventListener('input', setArrowOpacity);
+    </script>
+  </body>
+</html>
