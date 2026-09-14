@@ -1,0 +1,115 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    dev-libs/blake3-1.8.5:0/0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: bacs@librecast.net proxy-maint@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'blake3-1.8.5.tar.gz' to /var/tmp/portage/dev-libs/blake3-1.8.5/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/dev-libs/blake3-1.8.5/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c ...
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+  <span class="ansi1 ansi34">[ </span><span class="ansi1 ansi32">ok</span><span class="ansi1 ansi34"> ]</span>
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build"
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build"
+cmake -C /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build/gentoo_common_config.cmake -G Ninja -DCMAKE_INSTALL_PREFIX=/usr -DBLAKE3_BUILD_TESTING=no -DBLAKE3_USE_TBB=OFF -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build/gentoo_toolchain.cmake /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c
+loading initial cache file /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build/gentoo_common_config.cmake
+-- The C compiler identification is GNU 15.3.0
+-- The CXX compiler identification is GNU 15.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/x86_64-pc-linux-gnu-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/x86_64-pc-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/x86_64-pc-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- BLAKE3 SIMD configuration: x86_64
+-- 
+ * AMD64 assembly, The library uses hand written amd64 SIMD assembly.
+
+-- &lt;&lt;&lt; Gentoo configuration &gt;&gt;&gt;
+Build type      RelWithDebInfo
+Install path    /usr
+Compiler flags:
+C               -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto
+C++             -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto
+Linker flags:
+Executable      -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto
+Module          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto
+Shared          -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto
+
+-- Configuring done (1.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c ...
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build"
+ninja -v -l2 -j2
+[1/9] /usr/bin/x86_64-pc-linux-gnu-gcc -DBLAKE3_DLL -DBLAKE3_DLL_EXPORTS -Dblake3_EXPORTS -I/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -std=c2x -fPIC -fvisibility=hidden -MD -MT CMakeFiles/blake3.dir/blake3.c.o -MF CMakeFiles/blake3.dir/blake3.c.o.d -o CMakeFiles/blake3.dir/blake3.c.o -c /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c/blake3.c
+[2/9] /usr/bin/x86_64-pc-linux-gnu-gcc -DBLAKE3_DLL -DBLAKE3_DLL_EXPORTS -Dblake3_EXPORTS -I/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -std=c2x -fPIC -fvisibility=hidden -MD -MT CMakeFiles/blake3.dir/blake3_dispatch.c.o -MF CMakeFiles/blake3.dir/blake3_dispatch.c.o.d -o CMakeFiles/blake3.dir/blake3_dispatch.c.o -c /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c/blake3_dispatch.c
+[3/9] /usr/bin/x86_64-pc-linux-gnu-gcc -DBLAKE3_DLL -DBLAKE3_DLL_EXPORTS -Dblake3_EXPORTS -I/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -std=c2x -fPIC -fvisibility=hidden -MD -MT CMakeFiles/blake3.dir/blake3_portable.c.o -MF CMakeFiles/blake3.dir/blake3_portable.c.o.d -o CMakeFiles/blake3.dir/blake3_portable.c.o -c /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c/blake3_portable.c
+[4/9] /usr/bin/x86_64-pc-linux-gnu-gcc -DBLAKE3_DLL -DBLAKE3_DLL_EXPORTS -Dblake3_EXPORTS -I/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -fPIC -MD -MT CMakeFiles/blake3.dir/blake3_avx2_x86-64_unix.S.o -MF CMakeFiles/blake3.dir/blake3_avx2_x86-64_unix.S.o.d -o CMakeFiles/blake3.dir/blake3_avx2_x86-64_unix.S.o -c /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c/blake3_avx2_x86-64_unix.S
+[5/9] /usr/bin/x86_64-pc-linux-gnu-gcc -DBLAKE3_DLL -DBLAKE3_DLL_EXPORTS -Dblake3_EXPORTS -I/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -fPIC -MD -MT CMakeFiles/blake3.dir/blake3_avx512_x86-64_unix.S.o -MF CMakeFiles/blake3.dir/blake3_avx512_x86-64_unix.S.o.d -o CMakeFiles/blake3.dir/blake3_avx512_x86-64_unix.S.o -c /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c/blake3_avx512_x86-64_unix.S
+[6/9] /usr/bin/x86_64-pc-linux-gnu-gcc -DBLAKE3_DLL -DBLAKE3_DLL_EXPORTS -Dblake3_EXPORTS -I/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -fPIC -MD -MT CMakeFiles/blake3.dir/blake3_sse2_x86-64_unix.S.o -MF CMakeFiles/blake3.dir/blake3_sse2_x86-64_unix.S.o.d -o CMakeFiles/blake3.dir/blake3_sse2_x86-64_unix.S.o -c /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c/blake3_sse2_x86-64_unix.S
+[7/9] /usr/bin/x86_64-pc-linux-gnu-gcc -DBLAKE3_DLL -DBLAKE3_DLL_EXPORTS -Dblake3_EXPORTS -I/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c  -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto -fPIC -MD -MT CMakeFiles/blake3.dir/blake3_sse41_x86-64_unix.S.o -MF CMakeFiles/blake3.dir/blake3_sse41_x86-64_unix.S.o.d -o CMakeFiles/blake3.dir/blake3_sse41_x86-64_unix.S.o -c /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c/blake3_sse41_x86-64_unix.S
+[8/9] : &amp;&amp; /usr/bin/x86_64-pc-linux-gnu-gcc -fPIC -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -flto=auto  -shared -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs -flto=auto -Wl,--dependency-file=CMakeFiles/blake3.dir/link.d -Wl,-soname,libblake3.so.0 -o libblake3.so.1.8.5 CMakeFiles/blake3.dir/blake3.c.o CMakeFiles/blake3.dir/blake3_dispatch.c.o CMakeFiles/blake3.dir/blake3_portable.c.o CMakeFiles/blake3.dir/blake3_avx2_x86-64_unix.S.o CMakeFiles/blake3.dir/blake3_avx512_x86-64_unix.S.o CMakeFiles/blake3.dir/blake3_sse2_x86-64_unix.S.o CMakeFiles/blake3.dir/blake3_sse41_x86-64_unix.S.o   &amp;&amp; :
+[9/9] /usr/bin/cmake -E cmake_symlink_library libblake3.so.1.8.5  libblake3.so.0 libblake3.so &amp;&amp; :
+&gt;&gt;&gt; Source compiled.
+ <span class="ansi32">*</span> Skipping make test/check due to ebuild restriction.
+&gt;&gt;&gt; Test phase [disabled because of RESTRICT=test]: dev-libs/blake3-1.8.5
+
+&gt;&gt;&gt; Install dev-libs/blake3-1.8.5 into /var/tmp/portage/dev-libs/blake3-1.8.5/image
+ <span class="ansi32">*</span> Source directory (CMAKE_USE_DIR): "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c"
+ <span class="ansi32">*</span> Build directory  (BUILD_DIR):     "/var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build"
+ninja -v -l2 -j2 install
+[0/1] cd /var/tmp/portage/dev-libs/blake3-1.8.5/work/BLAKE3-1.8.5/c_build &amp;&amp; /usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/include/blake3.h
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/libblake3.so.1.8.5
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/libblake3.so.0
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/libblake3.so
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/cmake/blake3/blake3-targets.cmake
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/cmake/blake3/blake3-targets-relwithdebinfo.cmake
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/cmake/blake3/blake3-config.cmake
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/cmake/blake3/blake3-config-version.cmake
+-- Installing: /var/tmp/portage/dev-libs/blake3-1.8.5/image/usr/lib64/pkgconfig/libblake3.pc
+&gt;&gt;&gt; Completed installing dev-libs/blake3-1.8.5 into /var/tmp/portage/dev-libs/blake3-1.8.5/image
+
+ <span class="ansi32">*</span> Final size of build directory: 2996 KiB (2.9 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   184 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libblake3.so.1.8.5
+
+</pre>
+</body>
+
+</html>
