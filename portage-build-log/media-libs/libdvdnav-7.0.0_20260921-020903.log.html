@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/libdvdnav-7.0.0:0
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: media-video@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'libdvdnav-7.0.0.tar.xz' to /var/tmp/portage/media-libs/libdvdnav-7.0.0/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/libdvdnav-7.0.0/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=true --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/media-libs/libdvdnav-7.0.0/temp/meson.x86_64-pc-linux-gnu.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Ddefault_library=shared /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0 /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0-abi_x86_64.amd64
+The Meson build system
+Version: 1.11.2
+Source dir: /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0
+Build dir: /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0-abi_x86_64.amd64
+Build type: native build
+Project name: libdvdnav
+Project version: 7.0.0
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 15.3.0 "x86_64-pc-linux-gnu-gcc (Gentoo 15.3.0 p8) 15.3.0")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.46.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Has header "dlfcn.h" : YES 
+Has header "inttypes.h" : YES 
+Has header "memory.h" : YES 
+Has header "stdint.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "strings.h" : YES 
+Has header "string.h" : YES 
+Has header "sys/stat.h" : YES 
+Has header "sys/types.h" : YES 
+Has header "unistd.h" : YES 
+Checking for function "gettimeofday" : YES 
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 3.0.7
+Run-time dependency dvdread found: YES 7.0.1
+Run-time dependency threads found: YES
+Compiler for C supports arguments -mno-ms-bitfields: YES 
+Compiler for C supports arguments -Wsign-compare: YES 
+Configuring config.h using configuration
+Configuring version.h using configuration
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 3.0.7
+Build targets in project: 1
+
+libdvdnav 7.0.0
+
+  User defined options
+    Native files         : /var/tmp/portage/media-libs/libdvdnav-7.0.0/temp/meson.x86_64-pc-linux-gnu.ini
+    b_lto                : true
+    b_pch                : false
+    buildtype            : plain
+    default_library      : shared
+    libdir               : lib64
+    localstatedir        : /var/lib
+    build.pkg_config_path: /usr/share/pkgconfig
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -l2 -j2
+[1/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/dvdnav.c.o -MF src/libdvdnav.so.4.4.0.p/dvdnav.c.o.d -o src/libdvdnav.so.4.4.0.p/dvdnav.c.o -c ../libdvdnav-7.0.0/src/dvdnav.c
+[2/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/highlight.c.o -MF src/libdvdnav.so.4.4.0.p/highlight.c.o.d -o src/libdvdnav.so.4.4.0.p/highlight.c.o -c ../libdvdnav-7.0.0/src/highlight.c
+[3/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/logger.c.o -MF src/libdvdnav.so.4.4.0.p/logger.c.o.d -o src/libdvdnav.so.4.4.0.p/logger.c.o -c ../libdvdnav-7.0.0/src/logger.c
+[4/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/navigation.c.o -MF src/libdvdnav.so.4.4.0.p/navigation.c.o.d -o src/libdvdnav.so.4.4.0.p/navigation.c.o -c ../libdvdnav-7.0.0/src/navigation.c
+../libdvdnav-7.0.0/src/navigation.c: In function ‘dvdnav_part_play_auto_stop’:
+../libdvdnav-7.0.0/src/navigation.c:265:66: warning: unused parameter ‘parts_to_play’ [-Wunused-parameter]
+  265 |                                            int32_t part, int32_t parts_to_play) {
+      |                                                          ~~~~~~~~^~~~~~~~~~~~~
+../libdvdnav-7.0.0/src/navigation.c: In function ‘dvdnav_time_play’:
+../libdvdnav-7.0.0/src/navigation.c:272:58: warning: unused parameter ‘title’ [-Wunused-parameter]
+  272 | dvdnav_status_t dvdnav_time_play(dvdnav_t *this, int32_t title,
+      |                                                  ~~~~~~~~^~~~~
+../libdvdnav-7.0.0/src/navigation.c:273:43: warning: unused parameter ‘time’ [-Wunused-parameter]
+  273 |                                  uint64_t time) {
+      |                                  ~~~~~~~~~^~~~
+[5/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/read_cache.c.o -MF src/libdvdnav.so.4.4.0.p/read_cache.c.o.d -o src/libdvdnav.so.4.4.0.p/read_cache.c.o -c ../libdvdnav-7.0.0/src/read_cache.c
+[6/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/searching.c.o -MF src/libdvdnav.so.4.4.0.p/searching.c.o.d -o src/libdvdnav.so.4.4.0.p/searching.c.o -c ../libdvdnav-7.0.0/src/searching.c
+[7/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/settings.c.o -MF src/libdvdnav.so.4.4.0.p/settings.c.o.d -o src/libdvdnav.so.4.4.0.p/settings.c.o -c ../libdvdnav-7.0.0/src/settings.c
+[8/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/vm_decoder.c.o -MF src/libdvdnav.so.4.4.0.p/vm_decoder.c.o.d -o src/libdvdnav.so.4.4.0.p/vm_decoder.c.o -c ../libdvdnav-7.0.0/src/vm/decoder.c
+[9/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/vm_getset.c.o -MF src/libdvdnav.so.4.4.0.p/vm_getset.c.o.d -o src/libdvdnav.so.4.4.0.p/vm_getset.c.o -c ../libdvdnav-7.0.0/src/vm/getset.c
+[10/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/vm_play.c.o -MF src/libdvdnav.so.4.4.0.p/vm_play.c.o.d -o src/libdvdnav.so.4.4.0.p/vm_play.c.o -c ../libdvdnav-7.0.0/src/vm/play.c
+[11/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/vm_vm.c.o -MF src/libdvdnav.so.4.4.0.p/vm_vm.c.o.d -o src/libdvdnav.so.4.4.0.p/vm_vm.c.o -c ../libdvdnav-7.0.0/src/vm/vm.c
+[12/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/vm_vmcmd.c.o -MF src/libdvdnav.so.4.4.0.p/vm_vmcmd.c.o.d -o src/libdvdnav.so.4.4.0.p/vm_vmcmd.c.o -c ../libdvdnav-7.0.0/src/vm/vmcmd.c
+[13/14] x86_64-pc-linux-gnu-gcc -Isrc/libdvdnav.so.4.4.0.p -Isrc -I../libdvdnav-7.0.0/src -I. -I../libdvdnav-7.0.0 -Isrc/dvdnav -I../libdvdnav-7.0.0/src/dvdnav -I../libdvdnav-7.0.0/src/vm -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -DHAVE_CONFIG_H -mno-ms-bitfields -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -pthread -DDVDNAV_API_EXPORT -MD -MQ src/libdvdnav.so.4.4.0.p/vm_vmget.c.o -MF src/libdvdnav.so.4.4.0.p/vm_vmget.c.o.d -o src/libdvdnav.so.4.4.0.p/vm_vmget.c.o -c ../libdvdnav-7.0.0/src/vm/vmget.c
+[14/14] x86_64-pc-linux-gnu-gcc  -o src/libdvdnav.so.4.4.0 src/libdvdnav.so.4.4.0.p/dvdnav.c.o src/libdvdnav.so.4.4.0.p/highlight.c.o src/libdvdnav.so.4.4.0.p/logger.c.o src/libdvdnav.so.4.4.0.p/navigation.c.o src/libdvdnav.so.4.4.0.p/read_cache.c.o src/libdvdnav.so.4.4.0.p/searching.c.o src/libdvdnav.so.4.4.0.p/settings.c.o src/libdvdnav.so.4.4.0.p/vm_decoder.c.o src/libdvdnav.so.4.4.0.p/vm_getset.c.o src/libdvdnav.so.4.4.0.p/vm_play.c.o src/libdvdnav.so.4.4.0.p/vm_vm.c.o src/libdvdnav.so.4.4.0.p/vm_vmcmd.c.o src/libdvdnav.so.4.4.0.p/vm_vmget.c.o -flto=auto -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libdvdnav.so.4 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs /usr/lib64/libdvdread.so -pthread
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: media-libs/libdvdnav-7.0.0
+
+&gt;&gt;&gt; Install media-libs/libdvdnav-7.0.0 into /var/tmp/portage/media-libs/libdvdnav-7.0.0/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/media-libs/libdvdnav-7.0.0/image --no-rebuild
+Installing src/libdvdnav.so.4.4.0 to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/lib64
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0/src/dvdnav/dvdnav.h to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/include/dvdnav
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0/src/dvdnav/dvdnav_events.h to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/include/dvdnav
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0/src/dvdnav/dvd_types.h to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/include/dvdnav
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0-abi_x86_64.amd64/src/dvdnav/version.h to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/include/dvdnav
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0/AUTHORS to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/share/doc/libdvdnav-7.0.0
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0/ChangeLog to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/share/doc/libdvdnav-7.0.0
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0/README.md to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/share/doc/libdvdnav-7.0.0
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0/TODO to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/share/doc/libdvdnav-7.0.0
+Installing /var/tmp/portage/media-libs/libdvdnav-7.0.0/work/libdvdnav-7.0.0-abi_x86_64.amd64/meson-private/dvdnav.pc to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/lib64/pkgconfig
+Installing symlink pointing to libdvdnav.so.4.4.0 to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/lib64/libdvdnav.so.4
+Installing symlink pointing to libdvdnav.so.4 to /var/tmp/portage/media-libs/libdvdnav-7.0.0/image/usr/lib64/libdvdnav.so
+&gt;&gt;&gt; Completed installing media-libs/libdvdnav-7.0.0 into /var/tmp/portage/media-libs/libdvdnav-7.0.0/image
+
+ <span class="ansi32">*</span> Final size of build directory: 1692 KiB (1.6 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   232 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libdvdnav.so.4.4.0
+
+</pre>
+</body>
+
+</html>

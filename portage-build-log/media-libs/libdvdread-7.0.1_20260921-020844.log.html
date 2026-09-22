@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi32 { color: #00aa00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+<span class="ansi32"> * </span>Package:    media-libs/libdvdread-7.0.1:0/8
+<span class="ansi32"> * </span>Repository: gentoo
+<span class="ansi32"> * </span>Maintainer: media-video@gentoo.org
+<span class="ansi32"> * </span>USE:        abi_x86_64 amd64 css elibc_glibc kernel_linux
+<span class="ansi32"> * </span>FEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+&gt;&gt;&gt; Unpacking source...
+&gt;&gt;&gt; Unpacking 'libdvdread-7.0.1.tar.xz' to /var/tmp/portage/media-libs/libdvdread-7.0.1/work
+&gt;&gt;&gt; Source unpacked in /var/tmp/portage/media-libs/libdvdread-7.0.1/work
+&gt;&gt;&gt; Preparing source in /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1 ...
+&gt;&gt;&gt; Source prepared.
+&gt;&gt;&gt; Configuring source in /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_configure
+meson setup -Db_lto=true --libdir lib64 --localstatedir /var/lib --prefix /usr --sysconfdir /etc --wrap-mode nodownload --build.pkg-config-path /usr/share/pkgconfig --pkg-config-path /usr/share/pkgconfig --native-file /var/tmp/portage/media-libs/libdvdread-7.0.1/temp/meson.x86_64-pc-linux-gnu.ini -Db_pch=false -Dwerror=false -Dbuildtype=plain -Ddefault_library=shared -Dlibdvdcss=enabled /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1 /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1-abi_x86_64.amd64
+The Meson build system
+Version: 1.11.2
+Source dir: /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1
+Build dir: /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1-abi_x86_64.amd64
+Build type: native build
+Project name: libdvdread
+Project version: 7.0.1
+C compiler for the host machine: x86_64-pc-linux-gnu-gcc (gcc 15.3.0 "x86_64-pc-linux-gnu-gcc (Gentoo 15.3.0 p8) 15.3.0")
+C linker for the host machine: x86_64-pc-linux-gnu-gcc ld.bfd 2.46.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Has header "sys/param.h" : YES 
+Has header "limits.h" : YES 
+Compiler for C supports function attribute unused: YES 
+Checking for function "getmntent_r" : YES 
+Checking for function "strerror_r" : YES 
+Checking if "_Static_assert" compiles: YES 
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 3.0.7
+Run-time dependency libdvdcss found: YES 1.4.3
+Has header "dvdcss/dvdcpxm.h" with dependency libdvdcss: NO 
+Compiler for C supports arguments -Wsign-compare: YES 
+Configuring config.h using configuration
+Configuring version.h using configuration
+Found pkg-config: YES (/usr/bin/x86_64-pc-linux-gnu-pkg-config) 3.0.7
+Build targets in project: 1
+
+libdvdread 7.0.1
+
+  User defined options
+    Native files         : /var/tmp/portage/media-libs/libdvdread-7.0.1/temp/meson.x86_64-pc-linux-gnu.ini
+    b_lto                : true
+    b_pch                : false
+    buildtype            : plain
+    default_library      : shared
+    libdir               : lib64
+    libdvdcss            : enabled
+    localstatedir        : /var/lib
+    build.pkg_config_path: /usr/share/pkgconfig
+    pkg_config_path      : /usr/share/pkgconfig
+    prefix               : /usr
+    sysconfdir           : /etc
+    werror               : false
+    wrap_mode            : nodownload
+
+Found ninja-1.13.2 at /usr/bin/ninja
+&gt;&gt;&gt; Source configured.
+&gt;&gt;&gt; Compiling source in /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1 ...
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_compile
+ninja -v -l2 -j2
+[1/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/bitreader.c.o -MF src/libdvdread.so.8.1.0.p/bitreader.c.o.d -o src/libdvdread.so.8.1.0.p/bitreader.c.o -c ../libdvdread-7.0.1/src/bitreader.c
+[2/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/dvd_input.c.o -MF src/libdvdread.so.8.1.0.p/dvd_input.c.o.d -o src/libdvdread.so.8.1.0.p/dvd_input.c.o -c ../libdvdread-7.0.1/src/dvd_input.c
+[3/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/dvd_reader.c.o -MF src/libdvdread.so.8.1.0.p/dvd_reader.c.o.d -o src/libdvdread.so.8.1.0.p/dvd_reader.c.o -c ../libdvdread-7.0.1/src/dvd_reader.c
+[4/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/dvd_udf.c.o -MF src/libdvdread.so.8.1.0.p/dvd_udf.c.o.d -o src/libdvdread.so.8.1.0.p/dvd_udf.c.o -c ../libdvdread-7.0.1/src/dvd_udf.c
+[5/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/ifo_print.c.o -MF src/libdvdread.so.8.1.0.p/ifo_print.c.o.d -o src/libdvdread.so.8.1.0.p/ifo_print.c.o -c ../libdvdread-7.0.1/src/ifo_print.c
+[6/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/ifo_read.c.o -MF src/libdvdread.so.8.1.0.p/ifo_read.c.o.d -o src/libdvdread.so.8.1.0.p/ifo_read.c.o -c ../libdvdread-7.0.1/src/ifo_read.c
+../libdvdread-7.0.1/src/ifo_read.c: In function ‘ifoRead_PGC_COMMAND_TBL’:
+../libdvdread-7.0.1/src/ifo_read.c:1270:38: warning: comparison of integer expressions of different signedness: ‘unsigned int’ and ‘int’ [-Wsign-compare]
+ 1270 |               + PGC_COMMAND_TBL_SIZE &lt;= cmd_tbl-&gt;last_byte + 1);
+      |                                      ^~
+../libdvdread-7.0.1/src/ifo_read.c:56:8: note: in definition of macro ‘CHECK_VALUE’
+   56 |   if(!(arg)) {\
+      |        ^~~
+../libdvdread-7.0.1/src/ifo_read.c: In function ‘ifoRead_PGCIT_internal’:
+../libdvdread-7.0.1/src/ifo_read.c:2470:21: warning: taking address of packed member of ‘struct &lt;anonymous&gt;’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2470 |         ifoFree_PGC(&amp;pgcit-&gt;pgci_srp[j].pgc);
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+../libdvdread-7.0.1/src/ifo_read.c: In function ‘ifoFree_PGCIT_internal’:
+../libdvdread-7.0.1/src/ifo_read.c:2496:19: warning: taking address of packed member of ‘struct &lt;anonymous&gt;’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2496 |       ifoFree_PGC(&amp;(*pgcit)-&gt;pgci_srp[i].pgc);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../libdvdread-7.0.1/src/ifo_read.c: In function ‘ifoRead_PGCI_UT’:
+../libdvdread-7.0.1/src/ifo_read.c:2628:32: warning: taking address of packed member of ‘struct &lt;anonymous&gt;’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2628 |         ifoFree_PGCIT_internal(&amp;pgci_ut-&gt;lu[j].pgcit);
+      |                                ^~~~~~~~~~~~~~~~~~~~~
+../libdvdread-7.0.1/src/ifo_read.c:2641:32: warning: taking address of packed member of ‘struct &lt;anonymous&gt;’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2641 |         ifoFree_PGCIT_internal(&amp;pgci_ut-&gt;lu[j].pgcit);
+      |                                ^~~~~~~~~~~~~~~~~~~~~
+../libdvdread-7.0.1/src/ifo_read.c: In function ‘ifoFree_PGCI_UT’:
+../libdvdread-7.0.1/src/ifo_read.c:2664:30: warning: taking address of packed member of ‘struct &lt;anonymous&gt;’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2664 |       ifoFree_PGCIT_internal(&amp;ifofile-&gt;pgci_ut-&gt;lu[i].pgcit);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[7/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/logger.c.o -MF src/libdvdread.so.8.1.0.p/logger.c.o.d -o src/libdvdread.so.8.1.0.p/logger.c.o -c ../libdvdread-7.0.1/src/logger.c
+[8/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/md5.c.o -MF src/libdvdread.so.8.1.0.p/md5.c.o.d -o src/libdvdread.so.8.1.0.p/md5.c.o -c ../libdvdread-7.0.1/src/md5.c
+[9/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/nav_print.c.o -MF src/libdvdread.so.8.1.0.p/nav_print.c.o.d -o src/libdvdread.so.8.1.0.p/nav_print.c.o -c ../libdvdread-7.0.1/src/nav_print.c
+[10/11] x86_64-pc-linux-gnu-gcc -Isrc/libdvdread.so.8.1.0.p -Isrc -I../libdvdread-7.0.1/src -I. -I../libdvdread-7.0.1 -Isrc/dvdread -I../libdvdread-7.0.1/src/dvdread -I/usr/include/dvdcss -fvisibility=hidden -flto=auto -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c11 -Wsign-compare -D_DEFAULT_SOURCE -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -fPIC -DDVDREAD_API_EXPORT -MD -MQ src/libdvdread.so.8.1.0.p/nav_read.c.o -MF src/libdvdread.so.8.1.0.p/nav_read.c.o.d -o src/libdvdread.so.8.1.0.p/nav_read.c.o -c ../libdvdread-7.0.1/src/nav_read.c
+[11/11] x86_64-pc-linux-gnu-gcc  -o src/libdvdread.so.8.1.0 src/libdvdread.so.8.1.0.p/bitreader.c.o src/libdvdread.so.8.1.0.p/dvd_input.c.o src/libdvdread.so.8.1.0.p/dvd_reader.c.o src/libdvdread.so.8.1.0.p/dvd_udf.c.o src/libdvdread.so.8.1.0.p/ifo_print.c.o src/libdvdread.so.8.1.0.p/ifo_read.c.o src/libdvdread.so.8.1.0.p/logger.c.o src/libdvdread.so.8.1.0.p/md5.c.o src/libdvdread.so.8.1.0.p/nav_print.c.o src/libdvdread.so.8.1.0.p/nav_read.c.o -flto=auto -Wl,--as-needed -Wl,--no-undefined -shared -fPIC -Wl,-soname,libdvdread.so.8 -O3 -march=native -mtune=native -fomit-frame-pointer -pipe -Wl,-O1 -Wl,--as-needed -Wl,-z,pack-relative-relocs /usr/lib64/libdvdcss.so
+&gt;&gt;&gt; Source compiled.
+&gt;&gt;&gt; Test phase [not enabled]: media-libs/libdvdread-7.0.1
+
+&gt;&gt;&gt; Install media-libs/libdvdread-7.0.1 into /var/tmp/portage/media-libs/libdvdread-7.0.1/image
+ <span class="ansi32">*</span> abi_x86_64.amd64: running multilib-minimal_abi_src_install
+meson install --destdir /var/tmp/portage/media-libs/libdvdread-7.0.1/image --no-rebuild
+Installing src/libdvdread.so.8.1.0 to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/lib64
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/attributes.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/bitreader.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/dvd_reader.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/dvd_udf.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/ifo_print.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/ifo_read.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/ifo_types.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/nav_print.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/nav_read.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/src/dvdread/nav_types.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1-abi_x86_64.amd64/src/dvdread/version.h to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/include/dvdread
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/AUTHORS to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/share/doc/libdvdread-7.0.1
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/NEWS to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/share/doc/libdvdread-7.0.1
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/README.md to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/share/doc/libdvdread-7.0.1
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1/TODO to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/share/doc/libdvdread-7.0.1
+Installing /var/tmp/portage/media-libs/libdvdread-7.0.1/work/libdvdread-7.0.1-abi_x86_64.amd64/meson-private/dvdread.pc to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/lib64/pkgconfig
+Installing symlink pointing to libdvdread.so.8.1.0 to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/lib64/libdvdread.so.8
+Installing symlink pointing to libdvdread.so.8 to /var/tmp/portage/media-libs/libdvdread-7.0.1/image/usr/lib64/libdvdread.so
+&gt;&gt;&gt; Completed installing media-libs/libdvdread-7.0.1 into /var/tmp/portage/media-libs/libdvdread-7.0.1/image
+
+ <span class="ansi32">*</span> Final size of build directory: 1716 KiB (1.6 MiB)
+ <span class="ansi32">*</span> Final size of installed tree:   340 KiB
+
+strip: x86_64-pc-linux-gnu-strip --strip-unneeded -N __gentoo_check_ldflags__ -R .comment -R .GCC.command.line -R .note.gnu.gold-version
+   /usr/lib64/libdvdread.so.8.1.0
+
+</pre>
+</body>
+
+</html>
