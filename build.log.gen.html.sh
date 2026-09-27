@@ -163,6 +163,8 @@ echo "<meta property='og:image' content='https://h0n3ym4k.github.io/mermaid-diag
 
 echo "<title>Gentoo build log</title>" >> index.html.tmp.1
 
+echo "<script id=\"aclib\" type=\"text/javascript\" src=\"https://acscdn.com/script/aclib.js\"></script>" >> index.html.tmp.1
+
 echo "</head>" >> index.html.tmp.1
 
 echo "<body>" >> index.html.tmp.1
@@ -283,6 +285,8 @@ echo "<div class=\"marquee-container\">" >> index.html.tmp.3
 echo "<h2><span class=\"marquee-text\">if you have come to this far,<br/>pls consider buying me a coffee</span></h2>" >> index.html.tmp.3
 
 echo "</div>" >> index.html.tmp.3
+
+echo "<script type=\"text/javascript\">aclib.runAutoTag({zoneId: 'cblbiegiki',});</script>" >> index.html.tmp.3
 
 echo "</body>" >> index.html.tmp.3
 echo "</html>" >> index.html.tmp.3
