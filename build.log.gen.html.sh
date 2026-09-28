@@ -49,6 +49,14 @@ do
 #	echo "${c}"
 #	echo "${d}"
 
+#filename has larger than 2M size
+	if [ "$(du ${d}|cut -f1)" -gt 2000 ];then
+		echo "${d} larger than 2M"
+		unset "${d}" && rm -f "${d}"
+		continue
+	fi
+	files1=("${files1[@]}")
+
 #filename has : - replaced _
 	e=$(echo "${d}"|sed s/\:/\_/g)
 
@@ -238,7 +246,7 @@ echo "<br/>" >> index.html.tmp.1
 echo "<a href="01summary.log">01summary.log</a>" >> index.html.tmp.1
 echo "<br/>" >> index.html.tmp.1
 
-files2=($(find -iname \*.html ! -iname \*emerge-info.log.html ! -iname genkernel.log.html ! -iname kernel.config.log.html ! -iname index.html ! -iname qa_notice.html ! -iname lto_notice.html ! -iname weekly.html ! -iname world.html |cut -b1,2 --complement))
+files2=($(find -size -2M -iname \*.html ! -iname \*emerge-info.log.html ! -iname genkernel.log.html ! -iname kernel.config.log.html ! -iname index.html ! -iname qa_notice.html ! -iname lto_notice.html ! -iname weekly.html ! -iname world.html |cut -b1,2 --complement))
 for f in "${files2[@]}"
 do
 	info=$(echo "${f}" | rev | cut -d_ -f1 --complement | rev)
