@@ -167,13 +167,9 @@ echo "<meta property='og:image' content='https://h0n3ym4k.github.io/mermaid-diag
 
 echo "<title>Gentoo build log</title>" >> index.html.tmp.1
 
-echo "<script id=\"aclib\" type=\"text/javascript\" src=\"https://acscdn.com/script/aclib.js\"></script>" >> index.html.tmp.1
-
 echo "</head>" >> index.html.tmp.1
 
 echo "<body>" >> index.html.tmp.1
-
-echo "<script type=\"text/javascript\">aclib.runAutoTag({zoneId: 'cblbiegiki',});</script>" >> index.html.tmp.1
 
 echo "<center><h1>Gentoo build.log</h1></center>" >> index.html.tmp.1
 
@@ -195,6 +191,9 @@ echo "<center><h2><p class='blink'>if you cannot resist your own temptation comi
 
 #echo "<a href="https://ko-fi.com/98036119lmak">https://ko-fi.com/98036119lmak - Support smile</a>" >> index.html.tmp.1
 echo "<iframe id='kofiframe' src='https://ko-fi.com/98036119lmak/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='98036119lmak'></iframe>" >> index.html.tmp.1
+
+#cloudpanel.io
+echo "<iframe src=\"https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fhoneymak.1981%2Fposts%2Fpfbid0nLkV5FG3o7pZvQ8Vqxncj1oUdmaJK3KNTmRxi9NjQxQbJ8d6xuDyoSjkwqwNmdspl&show_text=true&width=500\" width=\"500\" height=\"509\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>" >> index.html.tmp.1
 
 #echo "<iframe id='fbiframe' src='https://h0n3ym4k.github.io/fb.html' width='100%' height='400px' style='border:0' title='fb msg'></iframe>" >> index.html.tmp.1
 echo "<center><h2><a href="https://m.me/freelance.setup.linux" target="_blank"><img src="/fb.png" height="80" width="80">facebook messenger page</a></h2></center>" >> index.html.tmp.1
