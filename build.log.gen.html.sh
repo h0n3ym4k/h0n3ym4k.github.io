@@ -173,6 +173,8 @@ echo "</head>" >> index.html.tmp.1
 
 echo "<body>" >> index.html.tmp.1
 
+echo "<script type=\"text/javascript\">aclib.runAutoTag({zoneId: 'cblbiegiki',});</script>" >> index.html.tmp.1
+
 echo "<center><h1>Gentoo build.log</h1></center>" >> index.html.tmp.1
 
 echo "<style>" >> index.html.tmp.1
@@ -292,7 +294,6 @@ echo "<h2><span class=\"marquee-text\">if you have come to this far,<br/>pls con
 
 echo "</div>" >> index.html.tmp.3
 
-echo "<script type=\"text/javascript\">aclib.runAutoTag({zoneId: 'cblbiegiki',});</script>" >> index.html.tmp.3
 
 echo "</body>" >> index.html.tmp.3
 echo "</html>" >> index.html.tmp.3
