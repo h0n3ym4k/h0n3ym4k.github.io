@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-HK" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Systems Administration & Infrastructure Specialist | 20+ Yrs Exp</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Config for Custom Colors & Fonts -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            900: '#14532d',
+                        },
+                        cyber: {
+                            black: '#080c10',
+                            dark: '#0d1117',
+                            card: '#161b22',
+                            border: '#30363d',
+                            accent: '#3fb950',
+                            neon: '#00f0ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome & Lucide Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #080c10;
+            color: #e6edf3;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Scanline Overlay Effect */
+        .scanlines {
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0, 0, 0, 0.25) 50%,
+                rgba(0, 0, 0, 0.25)
+            );
+            background-size: 100% 4px;
+        }
+
+        /* Subtle Grid Pattern */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(63, 185, 80, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(63, 185, 80, 0.15);
+        }
+
+        /* Neon Glow Utility */
+        .glow-accent {
+            box-shadow: 0 0 15px rgba(63, 185, 80, 0.3);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #3fb950 0%, #00f0ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Typing Cursor Animation */
+        .cursor-blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen selection:bg-brand-500 selection:text-black">
+
+    <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+    <div class="fixed inset-0 scanlines pointer-events-none z-10 opacity-30"></div>
+    
+    <!-- Top Glowing Gradient Spotlights -->
+    <div class="fixed -top-40 -left-40 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="fixed top-1/3 -right-40 w-96 h-96 bg-cyber-neon/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <header class="sticky top-0 z-50 glass-card border-b border-cyber-border/50 px-6 py-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-lg bg-cyber-dark border border-brand-500/40 flex items-center justify-center text-brand-500 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-terminal text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-mono font-bold text-lg text-white tracking-wider">SYSTEMS<span class="text-brand-500">.SH</span></span>
+                    <span class="block text-xs text-gray-400 font-mono">root@infrastructure:~#</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="text-gray-300 hover:text-brand-500 transition-colors">資歷概覽</a>
+                <a href="#services" class="text-gray-300 hover:text-brand-500 transition-colors">服務項目</a>
+                <a href="#distros" class="text-gray-300 hover:text-brand-500 transition-colors">Linux 發行版</a>
+                <a href="#pricing" class="text-gray-300 hover:text-brand-500 transition-colors">服務報價</a>
+                <a href="#contact" class="text-gray-300 hover:text-brand-500 transition-colors">即時聯絡</a>
+            </nav>
+
+            <!-- Quick Action CTA -->
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/85298036119?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20Linux%20Systems%20Services" 
+                   target="_blank"
+                   class="px-4 py-2 text-xs md:text-sm font-mono rounded-lg bg-brand-500/10 hover:bg-brand-500/20 text-brand-500 border border-brand-500/30 flex items-center space-x-2 transition-all">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>WhatsApp 報價</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-20">
+        <section id="about" class="pt-20 pb-16 px-6 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left: Text Information -->
+                <div class="md:col-span-7 space-y-6">
+                    <!-- Experience Badge -->
+                    <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-500 text-xs font-mono">
+                        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                        <span>OVER 20+ YEARS EXP IN IT & SYSTEMS</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Linux Systems Administration <br>
+                        <span class="text-gradient">Bash | SSH Empire</span>
+                    </h1>
+
+                    <p class="text-gray-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        提供專業 Linux 伺服器架設、系統維運、自動化腳本開發與跨平台網路維護服務。憑藉超過 20 年實戰經驗，為企業與個人打造極致穩定、安全無虞的伺服器基礎架構。
+                    </p>
+
+                    <!-- Interactive Terminal Box -->
+                    <div class="glass-card rounded-xl p-4 font-mono text-sm border border-cyber-border my-6">
+                        <div class="flex items-center space-x-2 mb-3 pb-2 border-b border-cyber-border/60">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                            <span class="text-xs text-gray-400 ml-2">sysadmin@core-node:~</span>
+                        </div>
+                        <div class="space-y-1.5 text-gray-300">
+                            <p class="text-gray-400"><span class="text-brand-500">$</span> whoami</p>
+                            <p class="text-white pl-4">Veteran Senior Systems Architect & Linux Admin</p>
+                            <p class="text-gray-400"><span class="text-brand-500">$</span> uptime</p>
+                            <p class="text-brand-500 pl-4">20+ years, 0 downtime mindset</p>
+                            <p class="text-gray-400"><span class="text-brand-500">$</span> active_skills --list</p>
+                            <p class="text-cyan-400 pl-4">[Linux Setup, Bash Automation, Windows Core, SSH Hardening, Network Architecture]</p>
+                            <p class="text-gray-400"><span class="text-brand-500">$</span> <span id="typed-text"></span><span class="cursor-blink text-brand-500">█</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#contact" class="px-6 py-3 rounded-lg bg-brand-500 hover:bg-brand-600 text-black font-semibold text-sm transition-all flex items-center space-x-2 shadow-lg shadow-brand-500/20">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>立即諮詢 / 取得報價</span>
+                        </a>
+                        <button onclick="togglePricingModal()" class="px-6 py-3 rounded-lg glass-card hover:bg-cyber-card/80 text-white font-medium text-sm border border-cyber-border transition-all flex items-center space-x-2">
+                            <i class="fa-solid fa-calculator text-brand-500"></i>
+                            <span>檢視一般服務價目表</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Visual Tech Card & Network Node -->
+                <div class="md:col-span-5">
+                    <div class="relative">
+                        <!-- Decorative Glow -->
+                        <div class="absolute inset-0 bg-brand-500/10 rounded-2xl filter blur-xl"></div>
+                        
+                        <div class="relative glass-card rounded-2xl p-6 border border-cyber-border space-y-6">
+                            <div class="flex items-center justify-between pb-4 border-b border-cyber-border">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-12 h-12 rounded-xl bg-cyber-dark flex items-center justify-center text-brand-500 text-2xl border border-brand-500/30">
+                                        <i class="fa-solid fa-server"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-white font-semibold">Infrastructure Overview</h3>
+                                        <p class="text-xs text-gray-400">High Availability & Security</p>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 text-xs rounded bg-emerald-500/10 text-emerald-400 font-mono">STATUS: ONLINE</span>
+                            </div>
+
+                            <!-- Stat Grid -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-3 rounded-lg bg-cyber-dark/80 border border-cyber-border/50">
+                                    <span class="block text-xs text-gray-400 font-mono">EXPERIENCE</span>
+                                    <span class="text-xl font-bold text-white font-mono">20+ Years</span>
+                                </div>
+                                <div class="p-3 rounded-lg bg-cyber-dark/80 border border-cyber-border/50">
+                                    <span class="block text-xs text-gray-400 font-mono">DISTROS SUPPORTED</span>
+                                    <span class="text-xl font-bold text-cyber-neon font-mono">All Flavors</span>
+                                </div>
+                                <div class="p-3 rounded-lg bg-cyber-dark/80 border border-cyber-border/50">
+                                    <span class="block text-xs text-gray-400 font-mono">BASH SCRIPTING</span>
+                                    <span class="text-xl font-bold text-brand-500 font-mono">Custom/Advanced</span>
+                                </div>
+                                <div class="p-3 rounded-lg bg-cyber-dark/80 border border-cyber-border/50">
+                                    <span class="block text-xs text-gray-400 font-mono">SECURITY</span>
+                                    <span class="text-xl font-bold text-amber-400 font-mono">SSH Hardened</span>
+                                </div>
+                            </div>
+
+                            <!-- Feature Tags -->
+                            <div class="space-y-2">
+                                <span class="text-xs font-mono text-gray-400">CORE COMPETENCIES</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 rounded-md bg-cyber-dark text-gray-300 text-xs font-mono border border-cyber-border">Computer Systems</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-cyber-dark text-gray-300 text-xs font-mono border border-cyber-border">Linux Administration</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-cyber-dark text-gray-300 text-xs font-mono border border-cyber-border">Windows Networks</span>
+                                    <span class="px-2.5 py-1 rounded-md bg-cyber-dark text-gray-300 text-xs font-mono border border-cyber-border">SSH Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="services" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border/40">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-mono text-brand-500 tracking-widest uppercase">WHAT WE DO</h2>
+                <p class="text-3xl font-bold text-white">專業系統與架構服務</p>
+                <p class="text-gray-400 text-sm">從基礎伺服器安裝到複雜自動化維運，提供一站式技術支援</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl relative group transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Linux Setup & Config</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        各版本 Linux 系統建置、環境初始化優化、Web/DB 伺服器部署與套件版本管理，打造極致穩定運行環境。
+                    </p>
+                    <ul class="text-xs font-mono space-y-2 text-gray-300">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-500"></i><span>系統初始化與效能調校</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-500"></i><span>服務建置 (Nginx/Apache/MySQL等)</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-500"></i><span>磁碟陣列 RAID & LVM 配置</span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl relative group transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-cyber-neon/10 border border-cyber-neon/30 flex items-center justify-center text-cyber-neon text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Bash Scripting & Automation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        客製化 Bash 腳本撰寫，將繁瑣維運流程自動化。備份排程、系統狀態監控、日誌分析一鍵搞定。
+                    </p>
+                    <ul class="text-xs font-mono space-y-2 text-gray-300">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyber-neon"></i><span>自動化數據備份與遠端異地同步</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyber-neon"></i><span>伺服器異常自動告警腳本</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-cyber-neon"></i><span>批次系統維護與指令執行</span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl relative group transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">SSH Empire & Security</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        資安防禦與 SSH 金鑰鏈管理。強化伺服器存取權限控管、IPtables/NFTables 防火牆設定與漏洞防範。
+                    </p>
+                    <ul class="text-xs font-mono space-y-2 text-gray-300">
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-purple-400"></i><span>SSH 密鑰認證與端口安全堡壘</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-purple-400"></i><span>防火牆 (UFW/iptables) 規則規劃</span></li>
+                        <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-purple-400"></i><span>Fail2ban 與資安攻擊防禦</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="distros" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border/40 bg-cyber-dark/30 rounded-3xl my-10">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <h2 class="text-xs font-mono text-cyber-neon tracking-widest uppercase">DISTRIBUTION ARCHITECTURE</h2>
+                <p class="text-3xl font-bold text-white">支援廣泛 Linux 發行版</p>
+                <p class="text-gray-400 text-sm">熟悉各類 Linux 版本架構，滿足各種伺服器與邊緣運算需求</p>
+            </div>
+
+            <!-- Distro Cards Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+                <!-- Fedora -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center text-center space-y-3 hover:border-blue-500/50 transition-colors">
+                    <i class="fa-brands fa-fedora text-4xl text-blue-400"></i>
+                    <span class="font-mono text-sm font-semibold text-white">Fedora</span>
+                    <span class="text-xs text-gray-400">RedHat Ecosystem</span>
+                </div>
+                <!-- Ubuntu -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center text-center space-y-3 hover:border-orange-500/50 transition-colors">
+                    <i class="fa-brands fa-ubuntu text-4xl text-orange-500"></i>
+                    <span class="font-mono text-sm font-semibold text-white">Ubuntu</span>
+                    <span class="text-xs text-gray-400">Server & Desktop</span>
+                </div>
+                <!-- Gentoo -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center text-center space-y-3 hover:border-purple-500/50 transition-colors">
+                    <i class="fa-solid fa-cube text-4xl text-purple-400"></i>
+                    <span class="font-mono text-sm font-semibold text-white">Gentoo</span>
+                    <span class="text-xs text-gray-400">Source Compile</span>
+                </div>
+                <!-- RPi -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center text-center space-y-3 hover:border-red-500/50 transition-colors">
+                    <i class="fa-brands fa-raspberry-pi text-4xl text-red-500"></i>
+                    <span class="font-mono text-sm font-semibold text-white">Raspberry Pi</span>
+                    <span class="text-xs text-gray-400">ARM Embedded</span>
+                </div>
+                <!-- Any Distro -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center text-center space-y-3 hover:border-brand-500/50 transition-colors col-span-2 sm:col-span-1">
+                    <i class="fa-solid fa-network-wired text-4xl text-brand-500"></i>
+                    <span class="font-mono text-sm font-semibold text-white">Any Other Distro</span>
+                    <span class="text-xs text-gray-400">Arch, Debian, Rocky...</span>
+                </div>
+            </div>
+            <p class="text-center font-mono text-xs text-gray-400 mt-8">
+                <i class="fa-solid fa-quote-left text-brand-500 mr-1"></i> "...and else other linux, you name it."
+            </p>
+        </section>
+
+        <section id="pricing" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border/40">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-mono text-brand-500 tracking-widest uppercase">TRANSPARENT PRICING</h2>
+                <p class="text-3xl font-bold text-white">自由接案與服務費率估價</p>
+                <p class="text-gray-400 text-sm">提供靈活按次或按項目的透明化收費方案</p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Basic Setup Plan -->
+                <div class="glass-card p-8 rounded-2xl border border-cyber-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-mono bg-brand-500/10 text-brand-500 border border-brand-500/20">BASIC SETUP</span>
+                            <span class="text-xs text-gray-400 font-mono">freelance.setup.linux</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">基礎 Linux 環境建置</h3>
+                        <p class="text-gray-400 text-sm mb-6">適合單台伺服器初始化安裝、基礎網路與服務設定。</p>
+                        
+                        <div class="space-y-3 mb-8 text-sm">
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>作業系統不安裝/全新安裝與磁碟分割</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>基礎防火牆 (UFW/IPTables) 配置</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>SSH 安全加固與密鑰登入設定</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>基礎 Web/FTP/DNS 等單一服務架設</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/85298036119?text=Hi,%20I'm%20interested%20in%20Basic%20Linux%20Setup" target="_blank" class="w-full py-3 rounded-lg text-center bg-cyber-dark hover:bg-cyber-border text-white border border-cyber-border font-medium transition-all text-sm">
+                        洽詢此方案
+                    </a>
+                </div>
+
+                <!-- Custom Scripting & Enterprise Plan -->
+                <div class="glass-card p-8 rounded-2xl border border-brand-500/40 relative flex flex-col justify-between bg-gradient-to-b from-brand-500/5 to-transparent">
+                    <div class="absolute -top-3 right-6 px-3 py-1 bg-brand-500 text-black text-xs font-bold rounded-full uppercase tracking-wider">
+                        RECOMMENDED
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-mono bg-cyber-neon/10 text-cyber-neon border border-cyber-neon/20">ADVANCED / ADV</span>
+                            <span class="text-xs text-gray-400 font-mono">ssh.empire.custom</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">高階自動化 & 資安維護</h3>
+                        <p class="text-gray-400 text-sm mb-6">適合企業或複雜伺服器集群、自動化 Bash 腳本撰寫與維護。</p>
+                        
+                        <div class="space-y-3 mb-8 text-sm">
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>包含基礎建置所有項目</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>客製化 Bash 自動化維運與備份腳本</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>多主機 SSH 網絡架構與權限管控</span>
+                            </div>
+                            <div class="flex items-center space-x-3 text-gray-300">
+                                <i class="fa-solid fa-check text-brand-500"></i>
+                                <span>故障排查 (Troubleshooting) 與效能瓶頸優化</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/85298036119?text=Hi,%20I'm%20interested%20in%20Advanced%20Linux%20Automation" target="_blank" class="w-full py-3 rounded-lg text-center bg-brand-500 hover:bg-brand-600 text-black font-semibold transition-all text-sm shadow-lg shadow-brand-500/20">
+                        取得客製化報價
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 px-6 max-w-7xl mx-auto border-t border-cyber-border/40">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                
+                <!-- Contact Info Left -->
+                <div class="md:col-span-6 space-y-6">
+                    <div class="space-y-2">
+                        <h2 class="text-xs font-mono text-brand-500 tracking-widest uppercase">DIRECT CONTACT</h2>
+                        <h3 class="text-3xl font-bold text-white">立即諮詢專家</h3>
+                        <p class="text-gray-400 text-sm">歡迎透過 WhatsApp、Facebook Messenger 或 Email 與我直接對接項目需求。</p>
+                    </div>
+
+                    <!-- Instant Messaging Buttons -->
+                    <div class="space-y-4">
+                        <!-- WhatsApp Link -->
+                        <a href="https://wa.me/85298036119?text=Whatsapp%20msg%20for%20quote" 
+                           target="_blank" 
+                           class="flex items-center justify-between p-4 rounded-xl glass-card border border-emerald-500/30 hover:border-emerald-500 transition-all group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl group-hover:scale-110 transition-transform">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-white font-semibold">WhatsApp 即時通訊</span>
+                                    <span class="text-xs text-gray-400">Click to send direct message for quote</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all"></i>
+                        </a>
+
+                        <!-- Facebook Messenger Link -->
+                        <a href="https://m.me/98036119" 
+                           target="_blank" 
+                           class="flex items-center justify-between p-4 rounded-xl glass-card border border-blue-500/30 hover:border-blue-500 transition-all group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-2xl group-hover:scale-110 transition-transform">
+                                    <i class="fa-brands fa-facebook-messenger"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-white font-semibold">Facebook Messenger</span>
+                                    <span class="text-xs text-gray-400">FB 專頁對話</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-blue-400 group-hover:translate-x-1 transition-all"></i>
+                        </a>
+                    </div>
+
+                    <!-- Email List Section with Copy Buttons -->
+                    <div class="pt-4 space-y-3">
+                        <span class="text-xs font-mono text-gray-400 uppercase tracking-wider block">Business Emails</span>
+                        
+                        <!-- Email Item 1 -->
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-cyber-dark border border-cyber-border">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-regular fa-envelope text-brand-500"></i>
+                                <span class="font-mono text-xs sm:text-sm text-gray-200">info@98036119lmak.ftp.sh</span>
+                            </div>
+                            <button onclick="copyToClipboard('info@98036119lmak.ftp.sh')" class="text-xs text-gray-400 hover:text-brand-500 px-2 py-1 rounded border border-cyber-border hover:border-brand-500 transition-colors">
+                                <i class="fa-regular fa-copy mr-1"></i>複製
+                            </button>
+                        </div>
+
+                        <!-- Email Item 2 -->
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-cyber-dark border border-cyber-border">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-regular fa-envelope text-brand-500"></i>
+                                <span class="font-mono text-xs sm:text-sm text-gray-200">98036119lmak@gmail.com</span>
+                            </div>
+                            <button onclick="copyToClipboard('98036119lmak@gmail.com')" class="text-xs text-gray-400 hover:text-brand-500 px-2 py-1 rounded border border-cyber-border hover:border-brand-500 transition-colors">
+                                <i class="fa-regular fa-copy mr-1"></i>複製
+                            </button>
+                        </div>
+
+                        <!-- Email Item 3 -->
+                        <div class="flex items-center justify-between p-3 rounded-lg bg-cyber-dark border border-cyber-border">
+                            <div class="flex items-center space-x-3">
+                                <i class="fa-regular fa-envelope text-brand-500"></i>
+                                <span class="font-mono text-xs sm:text-sm text-gray-200">superscale.systems@gmail.com</span>
+                            </div>
+                            <button onclick="copyToClipboard('superscale.systems@gmail.com')" class="text-xs text-gray-400 hover:text-brand-500 px-2 py-1 rounded border border-cyber-border hover:border-brand-500 transition-colors">
+                                <i class="fa-regular fa-copy mr-1"></i>複製
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Right: Interactive QR Code Card -->
+                <div class="md:col-span-6 flex justify-center">
+                    <div class="glass-card p-8 rounded-2xl border border-cyber-border text-center max-w-sm w-full space-y-6">
+                        <div class="space-y-1">
+                            <h4 class="font-semibold text-white">Scan to Connect</h4>
+                            <p class="text-xs text-gray-400 font-mono">WhatsApp 掃碼快速聯絡</p>
+                        </div>
+
+                        <!-- Styled QR Code Canvas/Display -->
+                        <div class="bg-white p-4 rounded-xl inline-block shadow-xl border-4 border-cyber-dark">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/85298036119" 
+                                 alt="WhatsApp QR Code" 
+                                 class="w-48 h-48 mx-auto"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/200x200/ffffff/000000?text=QR+Code';">
+                        </div>
+
+                        <div class="text-xs text-gray-400 font-mono space-y-1">
+                            <p class="text-brand-500 font-bold">20+ YRS IT SPECIALIST</p>
+                            <p>Fast Response & Technical Support</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-cyber-border/60 py-8 px-6 text-center text-xs font-mono text-gray-400 z-20 relative">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                © <span id="year"></span> Linux Systems Administration & Shell Empire. All Rights Reserved.
+            </div>
+            <div class="flex space-x-4 text-gray-400">
+                <span>Fedora</span> • <span>Ubuntu</span> • <span>Gentoo</span> • <span>RPi</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="pricing-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="glass-card max-w-lg w-full rounded-2xl border border-cyber-border p-6 space-y-6 relative">
+            <button onclick="togglePricingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="space-y-2">
+                <span class="text-xs font-mono text-brand-500">freelance.setup.linux</span>
+                <h3 class="text-xl font-bold text-white">一般服務報價參考</h3>
+                <p class="text-xs text-gray-400">根據不同需求調整最終費用，歡迎敲訊諮詢細節。</p>
+            </div>
+
+            <div class="space-y-3 font-mono text-xs">
+                <div class="p-3 rounded bg-cyber-dark border border-cyber-border flex justify-between items-center">
+                    <span>Linux OS Setup & Hardening</span>
+                    <span class="text-brand-500">歡迎洽詢</span>
+                </div>
+                <div class="p-3 rounded bg-cyber-dark border border-cyber-border flex justify-between items-center">
+                    <span>Custom Bash Automation Script</span>
+                    <span class="text-brand-500">按需求報價</span>
+                </div>
+                <div class="p-3 rounded bg-cyber-dark border border-cyber-border flex justify-between items-center">
+                    <span>Network & SSH Key Architecture</span>
+                    <span class="text-brand-500">按項目算</span>
+                </div>
+                <div class="p-3 rounded bg-cyber-dark border border-cyber-border flex justify-between items-center">
+                    <span>Emergency Troubleshooting</span>
+                    <span class="text-amber-400">即時評估</span>
+                </div>
+            </div>
+
+            <a href="https://wa.me/85298036119?text=Hello,%20I'd%20like%20to%20ask%20about%20general%20pricing" 
+               target="_blank" 
+               class="block w-full py-3 rounded-lg text-center bg-brand-500 hover:bg-brand-600 text-black font-semibold text-sm transition-all">
+                直接透過 WhatsApp 獲取免費估價
+            </a>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-500 text-black px-4 py-3 rounded-lg font-mono text-xs font-bold shadow-xl flex items-center space-x-2">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-message">已複製到剪貼簿！</span>
+    </div>
+
+    <script>
+        // Dynamic Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Terminal Typing Effect
+        const commands = [
+            "systemctl status sshd.service",
+            "bash ./deploy_server.sh --optimize",
+            "uptime --pretty",
+            "cat /etc/os-release"
+        ];
+        let cmdIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        const typedElement = document.getElementById('typed-text');
+
+        function typeEffect() {
+            const currentCmd = commands[cmdIdx];
+            if (isDeleting) {
+                typedElement.textContent = currentCmd.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                typedElement.textContent = currentCmd.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIdx === currentCmd.length) {
+                typeSpeed = 2000; // Pause at end
+                isDeleting = true;
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                cmdIdx = (cmdIdx + 1) % commands.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // Start typing on load
+        window.onload = function() {
+            typeEffect();
+        };
+
+        // Clipboard Copy Helper
+        function copyToClipboard(text) {
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            showToast("已成功複製 Email 地址！");
+        }
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Pricing Modal Toggle
+        function togglePricingModal() {
+            const modal = document.getElementById('pricing-modal');
+            modal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
