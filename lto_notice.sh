@@ -3,7 +3,7 @@ cd /mnt/Downloads/portage-build-log
 
 rm -f lto_notice.html
 
-echo "<table style='background-color:#03FCEC'>" >> lto_notice.html.tmp.1
+echo "<table style='background-color:#03FCEC'>" > lto_notice.html.tmp.1
 echo "<tr>" >> lto_notice.html.tmp.1
 echo "<th>gcc -flto=auto</th>" >> lto_notice.html.tmp.1
 echo "</tr>" >> lto_notice.html.tmp.1
@@ -11,6 +11,8 @@ echo "</tr>" >> lto_notice.html.tmp.1
 echo "<tr><td>" >> lto_notice.html.tmp.1
 
 files1=($(egrep -rl ' -flto=auto ' *))
+
+echo > lto_notice.html.tmp.2
 
 for f in "${files1[@]}"
 do
@@ -24,7 +26,7 @@ do
 	echo "<br/>" >> lto_notice.html.tmp.2
 done
 
-echo "</td></tr>" >> lto_notice.html.tmp.3
+echo "</td></tr>" > lto_notice.html.tmp.3
 echo "</table>" >> lto_notice.html.tmp.3
 
 cat lto_notice.html.tmp.1 > lto_notice.html
