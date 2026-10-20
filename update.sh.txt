@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ "${1}" == 'k' ];then
+	echo "${1}"
+#	emerge world -Duf
+	emerge world -Du
+	echo "./build.log.gen.html.sh" | mail -s 'weekly-update completed' root
+fi
+
+if [ "${1}" == 'w' ];then
+	echo "${1}"
+#	emerge world -Deuf
+	emerge world -Deu
+	echo "./build.log.gen.html.sh w" | mail -s 'world-rebuild completed' root
+fi
